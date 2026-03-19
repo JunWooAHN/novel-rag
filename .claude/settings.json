@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Write(webnovel-writer/**)",
+      "Edit(webnovel-writer/**)"
+    ]
+  },
+  "extraKnownMarketplaces": {
+    "webnovel-writer-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "lingfengQAQ/webnovel-writer"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "webnovel-writer@webnovel-writer-marketplace": true
+  }
+}
