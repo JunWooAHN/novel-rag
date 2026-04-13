@@ -24,9 +24,9 @@ cat "${CLAUDE_PLUGIN_ROOT}/skills/webnovel-query/references/system-data-flow.md"
 ### 디렉토리 구조
 ```
 프로젝트 루트/
-├── 正文/           # 장 파일
-├── 大纲/           # 권별 개요/장별 개요
-├── 设定集/         # 세계관/능력체계/캐릭터카드
+├── chapters/       # 장 파일
+├── outline/        # 권별 개요/장별 개요
+├── settings/       # 세계관/능력체계/캐릭터카드
 └── .webnovel/
     ├── state.json          # 권위 상태
     ├── workflow_state.json # 워크플로 브레이크포인트

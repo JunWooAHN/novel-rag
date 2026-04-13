@@ -9,5 +9,5 @@
 - Step 5：`references/step-5-debt-switch.md`
 
 설명:
-- Step 2B 请读取 `references/style-adapter.md`
-- Step 4 请读取 `references/polish-guide.md` 与 `references/writing/typesetting.md`
+- Step 2B는 `references/style-adapter.md`를 참조하세요
+- Step 4는 `references/polish-guide.md` 및 `references/writing/typesetting.md`를 참조하세요

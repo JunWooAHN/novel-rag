@@ -16,7 +16,7 @@ VERSION_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
 README_ROW_PATTERN = re.compile(
     r"^\| \*\*v(?P<version>[^\s*]+)(?P<current> \(현재\))?\*\* \| (?P<notes>.*) \|$"
 )
-README_HEADER = "| 版本 | 说明 |"
+README_HEADER = "| 버전 | 설명 |"
 README_SEPARATOR = "|------|------|"
 
 

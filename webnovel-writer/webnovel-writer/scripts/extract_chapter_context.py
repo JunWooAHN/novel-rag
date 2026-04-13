@@ -55,7 +55,7 @@ _RAG_TRIGGER_KEYWORDS = (
 
 
 def find_project_root(start_path: Path | None = None) -> Path:
-    """실제 책 프로젝트 루트 분석（포함 `.webnovel/state.json` 디렉토리）。"""
+    """실제 책 프로젝트 루트 분석 (`.webnovel/state.json` 포함 디렉토리)."""
     from project_locator import resolve_project_root
 
     if start_path is None:
@@ -89,7 +89,7 @@ def extract_chapter_summary(project_root: Path, chapter_num: int) -> str:
 
     chapter_file = find_chapter_file(project_root, chapter_num)
     if not chapter_file or not chapter_file.exists():
-        return f"⚠️ 第{chapter_num}챕터 파일이 존재하지 않음"
+        return f"⚠️ chapter {chapter_num} 파일이 존재하지 않음"
 
     content = chapter_file.read_text(encoding="utf-8")
 
@@ -119,7 +119,7 @@ def extract_state_summary(project_root: Path) -> str:
     if "progress" in state:
         progress = state["progress"]
         summary_parts.append(
-            f"**진행**: 第{progress.get('current_chapter', '?')}章 / {progress.get('total_words', '?')}자"
+            f"**진행**: chapter {progress.get('current_chapter', '?')} / {progress.get('total_words', '?')}자"
         )
 
     if "protagonist_state" in state:
@@ -188,7 +188,7 @@ def _build_rag_query(outline: str, chapter_num: int, min_chars: int, max_chars: 
         topic = "스토리 핵심 단서"
 
     clean_max = max(40, int(max_chars))
-    return f"第{chapter_num}章 {topic}：{plain[:clean_max]}"
+    return f"chapter {chapter_num} {topic}: {plain[:clean_max]}"
 
 
 def _search_with_rag(
@@ -324,7 +324,7 @@ def build_chapter_context_payload(project_root: Path, chapter_num: int) -> Dict[
     prev_summaries = []
     for prev_ch in range(max(1, chapter_num - 2), chapter_num):
         summary = extract_chapter_summary(project_root, prev_ch)
-        prev_summaries.append(f"### 第{prev_ch}챕터 요약\n{summary}")
+        prev_summaries.append(f"### chapter {prev_ch} 요약\n{summary}")
 
     state_summary = extract_state_summary(project_root)
     contract_context = _load_contract_context(project_root, chapter_num)
@@ -348,7 +348,7 @@ def _render_text(payload: Dict[str, Any]) -> str:
     chapter_num = payload.get("chapter")
     lines: List[str] = []
 
-    lines.append(f"# 第 {chapter_num} 챕터 창작 컨텍스트")
+    lines.append(f"# chapter {chapter_num} 창작 컨텍스트")
     lines.append("")
 
     lines.append("## 이번 챕터 개요")
@@ -485,7 +485,7 @@ def _render_text(payload: Dict[str, Any]) -> str:
     rag_assist = payload.get("rag_assist") or {}
     hits = rag_assist.get("hits") or []
     if rag_assist.get("invoked") and hits:
-        lines.append("## RAG 检索단서")
+        lines.append("## RAG 검색 단서")
         lines.append("")
         lines.append(f"- 모드: {rag_assist.get('mode')}")
         lines.append(f"- 인텐트: {rag_assist.get('intent')}")

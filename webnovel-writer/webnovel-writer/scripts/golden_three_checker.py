@@ -10,9 +10,9 @@ v2.0 주요 업그레이드：
 - 구조화된 평가 Prompt 생성, XML 평가 결과 파싱
 
 핵심 체크포인트：
-- 第 1 章：300 자 이내 주인공 등장 + 골든핑거 단서 + 강한 갈등 오프닝
-- 第 2 章：골든핑거 시연 + 첫 번째 소규모 승리 + 즉시 카타르시스
-- 第 3 章：서스펜스 후크 + 다음 단계 예고 + 카타르시스 밀도 >= 1
+- 제1챕터：300 자 이내 주인공 등장 + 골든핑거 단서 + 강한 갈등 오프닝
+- 제2챕터：골든핑거 시연 + 첫 번째 소규모 승리 + 즉시 카타르시스
+- 제3챕터：서스펜스 후크 + 다음 단계 예고 + 카타르시스 밀도 >= 1
 
 사용법：
 python golden_three_checker.py --auto                    # 빠른 키워드 모드
@@ -68,17 +68,17 @@ LLM_EVALUATION_PROMPT = """당신은 웹소설 편집자로, 소설 오프닝의
 
 ## 평가 대상 내용
 
-### 第 1 章
+### 제1챕터
 ```
 {chapter1_content}
 ```
 
-### 第 2 章
+### 제2챕터
 ```
 {chapter2_content}
 ```
 
-### 第 3 章
+### 제3챕터
 ```
 {chapter3_content}
 ```
@@ -92,7 +92,7 @@ LLM_EVALUATION_PROMPT = """당신은 웹소설 편집자로, 소설 오프닝의
 ```xml
 <golden_three_assessment>
   <chapter num="1">
-    <check name="主角300자内出场" passed="true|false" score="0-100">
+    <check name="주인공 300자 이내 등장" passed="true|false" score="0-100">
       <evidence>구체적 증거/원문 인용</evidence>
       <suggestion>미통과 시, 개선 제안 제시</suggestion>
     </check>
@@ -137,7 +137,7 @@ LLM_EVALUATION_PROMPT = """당신은 웹소설 편집자로, 소설 오프닝의
   </chapter>
 
   <overall_score>0-100</overall_score>
-  <verdict>우수|양호|需改进|严重不足</verdict>
+  <verdict>우수|양호|개선필요|심각부족</verdict>
   <top_issues>
     <issue priority="1">가장 개선이 필요한 문제</issue>
     <issue priority="2">부차적 문제</issue>
@@ -168,7 +168,7 @@ class GoldenThreeChecker:
         self.chapters: List[Dict[str, Any]] = []
         self.results: Dict[str, Any] = {
             "mode": mode,
-            "ch1": {"主角300자内出场": False, "골든핑거 단서": False, "강한 갈등 오프닝": False, "상세": {}},
+            "ch1": {"주인공 300자 이내 등장": False, "골든핑거 단서": False, "강한 갈등 오프닝": False, "상세": {}},
             "ch2": {"골든핑거 시연": False, "첫 번째 소규모 승리": False, "즉시 카타르시스": False, "상세": {}},
             "ch3": {"서스펜스 후크": False, "다음 단계 예고": False, "카타르시스 밀도>=1": False, "상세": {}},
         }
@@ -197,27 +197,27 @@ class GoldenThreeChecker:
         content = self.chapters[0]["content"]
         first_300_chars = content[:300]
 
-        # 检查1: 주인공 300자 이내 등장
-        protagonist_keywords = ["林天", "我", "主角", "少年", "他", "叶凡", "萧炎", "楚枫"]
+        # 검사1: 주인공 300자 이내 등장
+        protagonist_keywords = ["주인공", "나", "소년", "그", "그녀", "청년", "소녀", "용사"]
         for keyword in protagonist_keywords:
             if keyword in first_300_chars:
-                self.results["ch1"]["主角300자内出场"] = True
+                self.results["ch1"]["주인공 300자 이내 등장"] = True
                 self.results["ch1"]["상세"]["주인공 등장 키워드"] = keyword
                 break
 
-        # 检查2: 골든핑거 단서
+        # 검사2: 골든핑거 단서
         golden_finger_keywords = [
-            "系统", "空间", "重生", "穿越", "戒指", "老爷爷",
-            "器灵", "传承", "血脉", "觉醒", "签到", "퀘스트", "面板", "属性"
+            "시스템", "공간", "환생", "회귀", "반지", "노인",
+            "정령", "전승", "혈맥", "각성", "출석", "퀘스트", "패널", "속성"
         ]
         found = [kw for kw in golden_finger_keywords if kw in content]
         self.results["ch1"]["골든핑거 단서"] = len(found) > 0
         self.results["ch1"]["상세"]["골든핑거 키워드"] = found
 
-        # 检查3: 강한 갈등 오프닝
+        # 검사3: 강한 갈등 오프닝
         conflict_keywords = [
-            "退婚", "羞辱", "嘲讽", "废物", "落魄", "危机",
-            "追杀", "绝境", "被困", "重伤", "濒死", "灭族"
+            "파혼", "모욕", "조롱", "폐물", "몰락", "위기",
+            "추격", "절체절명", "갇히", "중상", "빈사", "멸족"
         ]
         found = [kw for kw in conflict_keywords if kw in content]
         self.results["ch1"]["강한 갈등 오프닝"] = len(found) > 0
@@ -227,17 +227,17 @@ class GoldenThreeChecker:
         """제2챕터 검사(키워드 모드)"""
         content = self.chapters[1]["content"]
 
-        system_display_keywords = ["【", "╔", "姓名", "경지", "力量", "属性", "获得", "奖励", "升级"]
+        system_display_keywords = ["【", "╔", "이름", "경지", "힘", "속성", "획득", "보상", "승급"]
         found = [kw for kw in system_display_keywords if kw in content]
         self.results["ch2"]["골든핑거 시연"] = len(found) >= 2
         self.results["ch2"]["상세"]["시연 키워드"] = found
 
-        victory_keywords = ["击败", "胜利", "获胜", "成功", "통과", "突破", "秒杀", "碾压"]
+        victory_keywords = ["격파", "승리", "승전", "성공", "통과", "돌파", "일격", "압도"]
         found = [kw for kw in victory_keywords if kw in content]
         self.results["ch2"]["첫 번째 소규모 승리"] = len(found) > 0
         self.results["ch2"]["상세"]["승리 키워드"] = found
 
-        cool_keywords = ["震惊", "不可能", "怎么会", "全场哗然", "目瞪口呆", "难以置信"]
+        cool_keywords = ["경악", "불가능", "어떻게", "술렁", "경탄", "믿을 수 없"]
         found = [kw for kw in cool_keywords if kw in content]
         self.results["ch2"]["즉시 카타르시스"] = len(found) >= 2
         self.results["ch2"]["상세"]["카타르시스 키워드"] = found
@@ -247,17 +247,17 @@ class GoldenThreeChecker:
         content = self.chapters[2]["content"]
         last_300_chars = content[-300:]
 
-        suspense_keywords = ["？", "！", "危机", "即将", "突然", "就在这时", "阴影", "杀机"]
+        suspense_keywords = ["?", "!", "위기", "곧", "갑자기", "바로 그때", "그림자", "살기"]
         found = [kw for kw in suspense_keywords if kw in last_300_chars]
         self.results["ch3"]["서스펜스 후크"] = len(found) >= 2
         self.results["ch3"]["상세"]["서스펜스 키워드"] = found
 
-        preview_keywords = ["秘境", "大比", "选拔", "试炼", "퀘스트", "挑战", "前往", "即将"]
+        preview_keywords = ["비경", "대회", "선발", "시련", "퀘스트", "도전", "향하", "곧"]
         found = [kw for kw in preview_keywords if kw in content]
         self.results["ch3"]["다음 단계 예고"] = len(found) > 0
         self.results["ch3"]["상세"]["예고 키워드"] = found
 
-        cool_count = sum(content.count(kw) for kw in ["震惊", "不可能", "全场哗然", "天才", "击败", "获得"])
+        cool_count = sum(content.count(kw) for kw in ["경악", "불가능", "술렁", "천재", "격파", "획득"])
         self.results["ch3"]["카타르시스 밀도>=1"] = cool_count >= 1
         self.results["ch3"]["상세"]["카타르시스 통계"] = cool_count
 
@@ -373,16 +373,16 @@ class GoldenThreeChecker:
         report.append("=" * 60)
         report.append(f"\n전체 점수: {score:.1f}% ({passed}/{total} 항목 통과)\n")
 
-        # 第 1 章
+        # 제1챕터
         report.append("-" * 60)
-        report.append("【第 1 章】검사 결과")
+        report.append("【제1챕터】검사 결과")
         report.append("-" * 60)
-        for check_name in ["主角300자内出场", "골든핑거 단서", "강한 갈등 오프닝"]:
+        for check_name in ["주인공 300자 이내 등장", "골든핑거 단서", "강한 갈등 오프닝"]:
             passed = self.results["ch1"].get(check_name, False)
             icon = "✅" if passed else "❌"
             report.append(f"{icon} {check_name}: {'통과' if passed else '미통과'}")
 
-            # 显示상세信息
+            # 상세 정보 표시
             detail = self.results["ch1"]["상세"].get(check_name)
             if isinstance(detail, dict):
                 if detail.get("evidence"):
@@ -392,9 +392,9 @@ class GoldenThreeChecker:
             elif isinstance(detail, list) and detail:
                 report.append(f"   └─ 키워드: {', '.join(detail[:5])}")
 
-        # 第 2 章
+        # 제2챕터
         report.append("\n" + "-" * 60)
-        report.append("【第 2 章】검사 결과")
+        report.append("【제2챕터】검사 결과")
         report.append("-" * 60)
         for check_name in ["골든핑거 시연", "첫 번째 소규모 승리", "즉시 카타르시스"]:
             passed = self.results["ch2"].get(check_name, False)
@@ -406,9 +406,9 @@ class GoldenThreeChecker:
             elif isinstance(detail, list) and detail:
                 report.append(f"   └─ 키워드: {', '.join(detail[:5])}")
 
-        # 第 3 章
+        # 제3챕터
         report.append("\n" + "-" * 60)
-        report.append("【第 3 章】검사 결과")
+        report.append("【제3챕터】검사 결과")
         report.append("-" * 60)
         for check_name in ["서스펜스 후크", "다음 단계 예고", "카타르시스 밀도>=1"]:
             passed = self.results["ch3"].get(check_name, False)
@@ -430,7 +430,7 @@ class GoldenThreeChecker:
         else:
             report.append("\n✅ 좋습니다! 오프닝이 골든 3챕터 기준에 부합")
 
-        # LLM 모드的额外信息
+        # LLM 모드 추가 정보
         if self.mode == "llm" and self.results.get("top_issues"):
             report.append("\n우선 수정：")
             for issue in self.results["top_issues"]:
@@ -444,9 +444,9 @@ class GoldenThreeChecker:
         print("챕터 로딩 중...")
         self.load_chapters()
 
-        print(f"✅ 로드 완료 {len(self.chapters)} 章")
+        print(f"✅ 로드 완료 {len(self.chapters)} 챕터")
         for ch in self.chapters:
-            print(f"   - 第 {ch['number']} 章: {ch['word_count']} 자")
+            print(f"   - 제{ch['number']}챕터: {ch['word_count']} 자")
         print(f"\n검사 실행 중 (모드: {self.mode})...\n")
 
         if self.mode == "keyword":
@@ -465,7 +465,7 @@ class GoldenThreeChecker:
             print(prompt[:2000] + "\n...[내용이 잘림, 전체 버전은 출력 파일 참조]...")
             print("\n--- PROMPT END ---\n")
 
-            # 저장完整 prompt
+            # 전체 prompt 저장
             output_dir = Path(".webnovel")
             output_dir.mkdir(exist_ok=True)
             prompt_file = output_dir / "golden_three_prompt.md"
@@ -552,7 +552,7 @@ def main():
         print(f"📄 처음 3챕터 감지 완료: {', '.join(Path(f).name for f in chapter_files)}\n")
     else:
         if len(args.chapter_files) < 3:
-            print("사용법: python golden_three_checker.py <第1章路径> <第2章路径> <第3章路径>")
+            print("사용법: python golden_three_checker.py <제1챕터경로> <제2챕터경로> <제3챕터경로>")
             sys.exit(1)
         chapter_files = args.chapter_files[:3]
 

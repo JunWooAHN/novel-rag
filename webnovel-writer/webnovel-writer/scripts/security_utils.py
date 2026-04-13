@@ -60,7 +60,7 @@ def sanitize_filename(name: str, max_length: int = 100) -> str:
     safe_name = safe_name.replace('/', '_').replace('\\', '_')
 
     # Step 3: 안전한 문자만 유지
-    # 允许：中文(\u4e00-\u9fff)、자母(a-zA-Z)、数자(0-9)、下划线(_)、连자符(-)
+    # 허용: 한중일 문자(\u4e00-\u9fff), 알파벳(a-zA-Z), 숫자(0-9), 밑줄(_), 하이픈(-)
     safe_name = re.sub(r'[^\w\u4e00-\u9fff-]', '_', safe_name)
 
     # Step 4: 연속 밑줄 제거(미화)
@@ -145,7 +145,7 @@ def create_secure_directory(path: str, mode: int = 0o700) -> Path:
         mode: 권한 모드（기본값0o700，소유자만 읽기/쓰기/실행 가능）
 
     Returns:
-        Path对象
+        Path 객체
 
     예시:
         >>> create_secure_directory('.webnovel')
@@ -166,7 +166,7 @@ def create_secure_directory(path: str, mode: int = 0o700) -> Path:
         os.makedirs(path, mode=mode, exist_ok=True)
 
     # 이중 안전: 권한 명시적 설정(일부 시스템에서 makedirs의 mode 매개변수 무시 가능)
-    if os.name != 'nt':  # Unix系统（Linux/macOS）
+    if os.name != 'nt':  # Unix 시스템（Linux/macOS）
         os.chmod(path, mode)
 
     return path_obj
@@ -224,7 +224,7 @@ def validate_integer_input(value: str, field_name: str) -> int:
 
 
 # ============================================================================
-# Git 环境检测（优雅降级지원）
+# Git 환경 감지（우아한 폴백 지원）
 # ============================================================================
 
 # Git 가용성 감지 결과 캐시
@@ -236,9 +236,9 @@ def is_git_available() -> bool:
     Git 사용 가능 여부 감지
 
     Returns:
-        bool: Git 是否可用
+        bool: Git 사용 가능 여부
 
-    说明：
+    설명：
         - 감지 결과가 캐시되어 중복 감지 방지
         - Git 없는 환경에서의 우아한 폴백 지원에 사용
     """
@@ -285,7 +285,7 @@ def git_graceful_operation(
     args: list,
     cwd: Union[str, Path],
     *,
-    fallback_msg: str = "Git 사용 불가，跳过版本控制操作"
+    fallback_msg: str = "Git 사용 불가, 버전 관리 작업 건너뜀"
 ) -> tuple:
     """
     우아한 Git 작업 실행(Git 사용 불가 시 조용히 폴백)
@@ -359,7 +359,7 @@ def atomic_write_json(
     1. 임시 파일에 쓰기(같은 디렉토리, 같은 파일 시스템 보장)
     2. 선택: filelock으로 배타적 잠금 획득
     3. 선택: 원본 파일 백업
-    4. 원자적 이름 변경（os.replace 在 POSIX 上是原子的）
+    4. 원자적 이름 변경（os.replace는 POSIX에서 원자적）
 
     Args:
         file_path: 대상 파일 경로
@@ -519,7 +519,7 @@ def _run_self_tests():
     assert sanitize_filename("C:\\Windows\\System32") == "System32", "Windows경로 테스트 실패"
     assert sanitize_filename("일반 캐릭터 이름") == "일반 캐릭터 이름", "중국어 테스트 실패"
     assert sanitize_filename("/tmp/../../../../../etc/hosts") == "hosts", "복잡한 경로 탐색 테스트 실패"
-    assert sanitize_filename("test///file...name") == "file_name", "특수 문자 테스트 실패"  # . 会被替换
+    assert sanitize_filename("test///file...name") == "file_name", "특수 문자 테스트 실패"  # .은 대체됨
     print("  ✅ sanitize_filename: 모든 테스트 통과")
 
     # Test 2: sanitize_commit_message
@@ -528,9 +528,9 @@ def _run_self_tests():
     assert "--author" not in result, "Git플래그 미제거"
     assert "Attacker" in result, "내용이 잘못 제거됨"
 
-    assert sanitize_commit_message("--amend Chapter 1") == "Chapter 1", "Git플래그 테스트 실패"  # --amend被完全移除
+    assert sanitize_commit_message("--amend Chapter 1") == "Chapter 1", "Git플래그 테스트 실패"  # --amend 완전 제거됨
     assert "'" not in sanitize_commit_message("Test'message"), "따옴표 테스트 실패"
-    assert sanitize_commit_message("-m Test") == "m Test", "단일 문자 플래그 테스트 실패"  # -m被移除后是"m Test"
+    assert sanitize_commit_message("-m Test") == "m Test", "단일 문자 플래그 테스트 실패"  # -m 제거 후 "m Test"
     print("  ✅ sanitize_commit_message: 모든 테스트 통과")
 
     # Test 3: validate_integer_input
@@ -547,22 +547,22 @@ def _run_self_tests():
     test_dir = Path(tf.mkdtemp())
     test_file = test_dir / "test_state.json"
 
-    # 写入测试
-    test_data = {"chapter": 10, "중국어 키": "중국어 값"}
+    # 쓰기 테스트
+    test_data = {"chapter": 10, "한국어 키": "한국어 값"}
     atomic_write_json(test_file, test_data, use_lock=False, backup=False)
     assert test_file.exists(), "원자적 쓰기가 파일을 생성하지 않음"
 
-    # 读取검증
+    # 읽기 검증
     with open(test_file, 'r', encoding='utf-8') as f:
         loaded = json.load(f)
     assert loaded == test_data, "원자적 쓰기 데이터 불일치"
 
-    # 备份测试
+    # 백업 테스트
     atomic_write_json(test_file, {"updated": True}, use_lock=False, backup=True)
     backup_file = test_file.with_suffix('.json.bak')
     assert backup_file.exists(), "백업 미생성"
 
-    # 恢复测试
+    # 복구 테스트
     restore_from_backup(test_file)
     with open(test_file, 'r', encoding='utf-8') as f:
         restored = json.load(f)
@@ -581,7 +581,7 @@ def _run_self_tests():
 
 
 if __name__ == "__main__":
-    # Windows UTF-8 인코딩 수정（必须在打印前执行）
+    # Windows UTF-8 인코딩 수정（반드시 출력 전에 실행）
     if sys.platform == "win32":
         enable_windows_utf8_stdio()
 

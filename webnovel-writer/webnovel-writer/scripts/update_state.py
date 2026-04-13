@@ -2,25 +2,25 @@
 """
 안전한 state.json 업데이트 스크립트
 
-功能：
+기능:
 1. 구조화된 state.json 업데이트 인터페이스 제공
 2. JSON 형식 및 데이터 무결성 자동 검증
 3. 자동 백업(타임스탬프 포함)
 4. 부분 업데이트 지원(다른 필드에 영향 없음)
 5. 원자적 작업(전부 성공 아니면 전부 롤백)
 
-使用方式：
+사용 방법:
   # 주인공 상태 업데이트
-  python update_state.py --protagonist-power "金丹" 3 "雷劫"
+  python update_state.py --protagonist-power "realm_name" 3 "bottleneck"
 
   # 인간관계 업데이트
-  python update_state.py --relationship "李雪" affection 95
+  python update_state.py --relationship "character_name" affection 95
 
   # 복선 기록
-  python update_state.py --add-foreshadowing "神秘玉佩的秘密" "미회수"
+  python update_state.py --add-foreshadowing "foreshadowing_content" "미회수"
 
   # 복선 회수
-  python update_state.py --resolve-foreshadowing "天雷果的下落" 45
+  python update_state.py --resolve-foreshadowing "foreshadowing_content" 45
 
   # 진행 업데이트
   python update_state.py --progress 45 198765
@@ -30,17 +30,17 @@
 
   # 조합 업데이트(원자적)
   python update_state.py \
-    --protagonist-power "金丹" 3 "雷劫" \
+    --protagonist-power "realm_name" 3 "bottleneck" \
     --progress 45 198765 \
-    --relationship "李雪" affection 95 \
-    --add-foreshadowing "神秘玉佩" "미회수"
+    --relationship "character_name" affection 95 \
+    --add-foreshadowing "foreshadowing_content" "미회수"
 
-보안 특성：
-  - 원본 파일 자동 백업（.backup_TIMESTAMP.json）
-  - JSON 格式검증
+보안 특성:
+  - 원본 파일 자동 백업 (.backup_TIMESTAMP.json)
+  - JSON 형식 검증
   - Schema 무결성 검사
   - 원자적 작업(실패 시 자동 롤백)
-  - Dry-run 모드（--dry-run）
+  - Dry-run 모드 (--dry-run)
 """
 
 import json
@@ -78,7 +78,7 @@ class StateUpdater:
         self.state = None
 
     def _validate_schema(self, state: Dict) -> bool:
-        """state.json의 기본 구조 검증（v5.0 도입,v5.4 유지）"""
+        """state.json의 기본 구조 검증 (v5.0 도입, v5.4 유지)"""
         required_keys = [
             "project_info",
             "progress",
@@ -96,14 +96,14 @@ class StateUpdater:
 
         # 중첩 구조 검증(두 가지 형식 지원: 중첩 및 플랫)
         ps = state["protagonist_state"]
-        # power 필드：지원 power.realm 或直接 realm
+        # power 필드: power.realm 또는 직접 realm 지원
         has_nested_power = "power" in ps and isinstance(ps.get("power"), dict)
         has_flat_power = "realm" in ps
         if not (has_nested_power or has_flat_power):
-            print(f"❌ 누락 protagonist_state.power 或 protagonist_state.realm 필드")
+            print(f"❌ protagonist_state.power 또는 protagonist_state.realm 필드 누락")
             return False
 
-        # location 필드：지원 location.current 或直接 location
+        # location 필드: location.current 또는 직접 location 지원
         has_nested_location = isinstance(ps.get("location"), dict) and "current" in ps.get("location", {})
         has_flat_location = isinstance(ps.get("location"), str)
         if not (has_nested_location or has_flat_location):
@@ -180,8 +180,8 @@ class StateUpdater:
     def save(self) -> bool:
         """업데이트된 state.json 저장(원자적 쓰기)"""
         if self.dry_run:
-            print("\n⚠️  Dry-run 모드，不执行实际写入")
-            print("\n📄 업데이트 후 내용 미리보기：")
+            print("\n⚠️  Dry-run 모드, 실제 쓰기 미실행")
+            print("\n📄 업데이트 후 내용 미리보기:")
             print(json.dumps(self.state, ensure_ascii=False, indent=2))
             return True
 
@@ -230,7 +230,7 @@ class StateUpdater:
             # 플랫 형식
             ps["location"] = location
             ps["location_since_chapter"] = chapter
-        print(f"📝 주인공 위치 업데이트: {location}（第{chapter}章）")
+        print(f"📝 주인공 위치 업데이트: {location} (chapter {chapter})")
 
     def update_golden_finger(self, name: str, level: int, cooldown: int):
         """골든핑거 상태 업데이트"""
@@ -244,7 +244,7 @@ class StateUpdater:
         golden_finger["name"] = name
         golden_finger["level"] = level
         golden_finger["cooldown"] = cooldown
-        print(f"📝 골든핑거 업데이트: {name} Lv.{level}, 쿨다운: {cooldown}天")
+        print(f"📝 골든핑거 업데이트: {name} Lv.{level}, 쿨다운: {cooldown}일")
 
     def update_relationship(self, char_name: str, key: str, value: Any):
         """인간관계 업데이트"""
@@ -259,19 +259,19 @@ class StateUpdater:
         if "foreshadowing" not in self.state["plot_threads"]:
             self.state["plot_threads"]["foreshadowing"] = []
 
-        # 检查是否완료存在
+        # 이미 존재하는지 확인
         for item in self.state["plot_threads"]["foreshadowing"]:
             if item.get("content") == content:
                 print(f"⚠️  복선이 이미 존재: {content}")
                 return
 
-        # 상태 정규화, 방지 "待회수/进行中/active/pending" 등의 혼용으로 인한 다운스트림 필터링 누락
+        # 상태 정규화, "미회수/active/pending" 등의 혼용으로 인한 다운스트림 필터링 누락 방지
         status = normalize_foreshadowing_status(status)
 
         planted_chapter = int(self.state.get("progress", {}).get("current_chapter", 0) or 0)
         if planted_chapter <= 0:
             planted_chapter = 1
-            print("? 유효한 것을 찾을 수 없음 progress.current_chapter，기본값 planted_chapter=1")
+            print("? progress.current_chapter를 찾을 수 없음, 기본값 planted_chapter=1")
 
         target_chapter = planted_chapter + 100
 
@@ -283,7 +283,7 @@ class StateUpdater:
             "target_chapter": target_chapter,
             "tier": "서브"
         })
-        print(f"📝 복선 추가: {content}（{status}）")
+        print(f"📝 복선 추가: {content} ({status})")
 
     def resolve_foreshadowing(self, content: str, chapter: int):
         """복선 회수"""
@@ -297,27 +297,27 @@ class StateUpdater:
                 item["resolved_chapter"] = chapter
                 item["resolved_at"] = datetime.now().strftime("%Y-%m-%d")
                 normalize_state_runtime_sections(self.state)
-                print(f"📝 복선 회수: {content}（第{chapter}章）")
+                print(f"📝 복선 회수: {content} (chapter {chapter})")
                 return
 
         print(f"⚠️  복선을 찾을 수 없음: {content}")
 
     def update_progress(self, current_chapter: int, total_words: int):
-        """更新창작 진행률"""
+        """창작 진행률 업데이트"""
         self.state["progress"]["current_chapter"] = current_chapter
         self.state["progress"]["total_words"] = total_words
         self.state["progress"]["last_updated"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(f"📝 진행 업데이트: 第{current_chapter}章, 총 글자 수: {total_words}")
+        print(f"📝 진행 업데이트: chapter {current_chapter}, 총 글자 수: {total_words}")
 
     def mark_volume_planned(self, volume: int, chapters_range: str):
         """권 계획 완료 표시"""
         if "volumes_planned" not in self.state["progress"]:
             self.state["progress"]["volumes_planned"] = []
 
-        # 检查是否완료存在
+        # 이미 존재하는지 확인
         for item in self.state["progress"]["volumes_planned"]:
             if item.get("volume") == volume:
-                print(f"⚠️  第{volume}卷계획됨, 챕터 범위 업데이트")
+                print(f"⚠️  제{volume}권 이미 계획됨, 챕터 범위 업데이트")
                 item["chapters_range"] = chapters_range
                 item["updated_at"] = datetime.now().strftime("%Y-%m-%d")
                 return
@@ -327,7 +327,7 @@ class StateUpdater:
             "chapters_range": chapters_range,
             "planned_at": datetime.now().strftime("%Y-%m-%d")
         })
-        print(f"📝 제{volume}권 계획 완료: 第{chapters_range}章")
+        print(f"📝 제{volume}권 계획 완료: chapter {chapters_range}")
 
     def add_review_checkpoint(self, chapters_range: str, report_file: str):
         """검토 기록 추가"""
@@ -339,14 +339,14 @@ class StateUpdater:
             "report": report_file,
             "reviewed_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         })
-        print(f"📝 검토 기록 추가: 第{chapters_range}章 → {report_file}")
+        print(f"📝 검토 기록 추가: chapter {chapters_range} → {report_file}")
 
     def update_strand_tracker(self, strand: str, chapter: int):
         """주도적 스토리 라인 업데이트(Strand Weave 시스템)"""
         # strand 매개변수 검증
         valid_strands = ["quest", "fire", "constellation"]
         if strand.lower() not in valid_strands:
-            print(f"❌ 잘못된 스토리 라인 유형: {strand}（유효한 값: quest, fire, constellation）")
+            print(f"❌ 잘못된 스토리 라인 유형: {strand} (유효한 값: quest, fire, constellation)")
             return False
 
         strand = strand.lower()
@@ -385,8 +385,8 @@ class StateUpdater:
             tracker["history"] = tracker["history"][-50:]
 
         print(f"✅ strand_tracker 업데이트 완료")
-        print(f"   - 第{chapter}챕터 주도적 스토리 라인: {strand}")
-        print(f"   - 해당 스토리 라인 연속{tracker['chapters_since_switch']}章")
+        print(f"   - chapter {chapter} 주도적 스토리 라인: {strand}")
+        print(f"   - 해당 스토리 라인 연속 {tracker['chapters_since_switch']}챕터")
 
         return True
 
@@ -395,18 +395,18 @@ def main():
         description="state.json 안전 업데이트",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-예시：
+예시:
   # 주인공 전투력 업데이트
-  python update_state.py --protagonist-power "金丹" 3 "雷劫"
+  python update_state.py --protagonist-power "realm_name" 3 "bottleneck"
 
   # 인간관계 업데이트
-  python update_state.py --relationship "李雪" affection 95
+  python update_state.py --relationship "character_name" affection 95
 
   # 복선 추가
-  python update_state.py --add-foreshadowing "神秘玉佩的秘密" "미회수"
+  python update_state.py --add-foreshadowing "foreshadowing_content" "미회수"
 
   # 복선 회수
-  python update_state.py --resolve-foreshadowing "天雷果的下落" 45
+  python update_state.py --resolve-foreshadowing "foreshadowing_content" 45
 
   # 진행 업데이트
   python update_state.py --progress 45 198765
@@ -416,9 +416,9 @@ def main():
 
   # 조합 업데이트(원자적)
   python update_state.py \
-    --protagonist-power "金丹" 3 "雷劫" \
+    --protagonist-power "realm_name" 3 "bottleneck" \
     --progress 45 198765 \
-    --relationship "李雪" affection 95
+    --relationship "character_name" affection 95
         """
     )
 
@@ -440,7 +440,7 @@ def main():
         help='미리보기 모드, 실제 쓰기 미실행'
     )
 
-    # 主角상태更新
+    # 주인공 상태 업데이트
     parser.add_argument(
         '--protagonist-power',
         nargs=3,
@@ -462,7 +462,7 @@ def main():
         help='골든핑거 업데이트(이름 등급 쿨다운 일수)'
     )
 
-    # 인간관계更新
+    # 인간관계 업데이트
     parser.add_argument(
         '--relationship',
         nargs=3,
@@ -471,7 +471,7 @@ def main():
         help='인간관계 업데이트(캐릭터 이름 속성 값)'
     )
 
-    # 복선管理
+    # 복선 관리
     parser.add_argument(
         '--add-foreshadowing',
         nargs=2,
@@ -486,7 +486,7 @@ def main():
         help='복선 회수(내용 챕터 번호)'
     )
 
-    # 진행更新
+    # 진행 업데이트
     parser.add_argument(
         '--progress',
         nargs=2,
@@ -495,7 +495,7 @@ def main():
         help='진행 업데이트(현재 챕터 총 글자 수)'
     )
 
-    # 卷规划
+    # 권 계획
     parser.add_argument(
         '--volume-planned',
         type=int,
@@ -506,10 +506,10 @@ def main():
     parser.add_argument(
         '--chapters-range',
         metavar='RANGE',
-        help='챕터 범위（如 "1-100"）'
+        help='챕터 범위 (예: "1-100")'
     )
 
-    # 审查记录
+    # 검토 기록
     parser.add_argument(
         '--add-review',
         nargs=2,

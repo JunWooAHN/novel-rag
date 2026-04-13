@@ -92,9 +92,9 @@ def validate_data_agent_output(payload: Dict[str, Any]) -> DataAgentOutput:
 def format_validation_error(exc: ValidationError) -> Dict[str, Any]:
     return {
         "code": "SCHEMA_VALIDATION_FAILED",
-        "message": "数据结构校验실패",
+        "message": "데이터 구조 검증 실패",
         "details": {"errors": exc.errors()},
-        "suggestion": "请检查 data-agent 输出필드是否完整且类型正确",
+        "suggestion": "data-agent 출력 필드가 완전하고 유형이 올바른지 확인하세요",
     }
 
 

@@ -8,7 +8,7 @@ allowed-tools: Read Grep Write Edit Bash Task AskUserQuestion
 
 ## Project Root Guard (반드시 먼저 확인)
 
-- Claude Code의 "작업 영역 루트 디렉토리"가 반드시 "책 프로젝트 루트 디렉토리"와 같지는 않습니다. 일반적인 구조: 작업 영역이 `D:\wk\xiaoshuo`이고, 책 프로젝트가 `D:\wk\xiaoshuo\凡人资本论`인 경우.
+- Claude Code의 "작업 영역 루트 디렉토리"가 반드시 "책 프로젝트 루트 디렉토리"와 같지는 않습니다. 일반적인 구조: 작업 영역이 `D:\wk\소설`이고, 책 프로젝트가 `D:\wk\소설\범인자본론`인 경우.
 - 반드시 실제 책 프로젝트 루트(반드시 `.webnovel/state.json` 포함)를 먼저 해석한 후, 이후 모든 읽기/쓰기 경로를 해당 디렉토리 기준으로 합니다.
 
 환경 설정 (bash 명령 실행 전):
@@ -117,7 +117,7 @@ cat "$PROJECT_ROOT/.webnovel/state.json"
 
 ## Step 4: 심사 보고서 생성
 
-저장 위치: `审查报告/第{start}-{end}章审查报告.md`
+저장 위치: `reviews/chapter_{start}-{end}_review.md`
 
 **보고서 구조 (간결판)**:
 ```markdown
@@ -152,7 +152,7 @@ cat "$PROJECT_ROOT/.webnovel/state.json"
   },
   "severity_counts": {"critical": 1, "high": 2, "medium": 3, "low": 1},
   "critical_issues": ["설정 자기 모순"],
-  "report_file": "审查报告/第{start}-{end}章审查报告.md",
+  "report_file": "reviews/chapter_{start}-{end}_review.md",
   "notes": ""
 }
 ```
@@ -169,7 +169,7 @@ python "${SCRIPTS_DIR}/webnovel.py" --project-root "${PROJECT_ROOT}" index save-
 
 심사 보고서 기록을 `state.json.review_checkpoints`에 기록하여 후속 추적 및 역추적에 사용합니다 (`update_state.py --add-review` 의존):
 ```bash
-python "${SCRIPTS_DIR}/webnovel.py" --project-root "${PROJECT_ROOT}" update-state -- --add-review "{start}-{end}" "审查报告/第{start}-{end}章审查报告.md"
+python "${SCRIPTS_DIR}/webnovel.py" --project-root "${PROJECT_ROOT}" update-state -- --add-review "{start}-{end}" "reviews/chapter_{start}-{end}_review.md"
 ```
 
 ## Step 7: 핵심 문제 처리

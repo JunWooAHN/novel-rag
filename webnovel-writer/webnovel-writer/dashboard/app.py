@@ -341,10 +341,10 @@ def create_app(project_root: str | Path | None = None) -> FastAPI:
 
     @app.get("/api/files/tree")
     def file_tree():
-        """正文/, 大纲/, 设定集/ 세 디렉토리의 트리 구조를 나열합니다."""
+        """chapters/, outline/, settings/ 세 디렉토리의 트리 구조를 나열합니다."""
         root = _get_project_root()
         result = {}
-        for folder_name in ("正文", "大纲", "设定集"):
+        for folder_name in ("chapters", "outline", "settings"):
             folder = root / folder_name
             if not folder.is_dir():
                 result[folder_name] = []
@@ -354,14 +354,14 @@ def create_app(project_root: str | Path | None = None) -> FastAPI:
 
     @app.get("/api/files/read")
     def file_read(path: str):
-        """파일 내용을 읽기 전용으로 읽습니다 (正文/大纲/设定集 디렉토리 한정)."""
+        """파일 내용을 읽기 전용으로 읽습니다 (chapters/outline/settings 디렉토리 한정)."""
         root = _get_project_root()
         resolved = safe_resolve(root, path)
 
         # 이중 제한: 세 가지 디렉토리만 허용
-        allowed_parents = [root / n for n in ("正文", "大纲", "设定集")]
+        allowed_parents = [root / n for n in ("chapters", "outline", "settings")]
         if not any(_is_child(resolved, p) for p in allowed_parents):
-            raise HTTPException(403, "正文/大纲/设定集 디렉토리의 파일만 읽을 수 있습니다")
+            raise HTTPException(403, "chapters/outline/settings 디렉토리의 파일만 읽을 수 있습니다")
 
         if not resolved.is_file():
             raise HTTPException(404, "파일이 존재하지 않습니다")

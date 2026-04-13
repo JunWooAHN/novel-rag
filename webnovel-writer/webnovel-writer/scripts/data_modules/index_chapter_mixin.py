@@ -13,7 +13,7 @@ from typing import Any, Dict, List, Optional
 
 class IndexChapterMixin:
     def add_chapter(self, meta: ChapterMeta):
-        """添加/更新챕터元数据"""
+        """챕터 메타데이터 추가/수정"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -34,7 +34,7 @@ class IndexChapterMixin:
             conn.commit()
 
     def get_chapter(self, chapter: int) -> Optional[Dict]:
-        """获取챕터元数据"""
+        """챕터 메타데이터 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM chapters WHERE chapter = ?", (chapter,))
@@ -44,7 +44,7 @@ class IndexChapterMixin:
             return None
 
     def get_recent_chapters(self, limit: int = None) -> List[Dict]:
-        """获取최근챕터"""
+        """최근 챕터 조회"""
         if limit is None:
             limit = self.config.query_recent_chapters_limit
         with self._get_conn() as conn:
@@ -62,17 +62,17 @@ class IndexChapterMixin:
                 for row in cursor.fetchall()
             ]
 
-    # ==================== 场景操作 ====================
+    # ==================== 장면 관리 ====================
 
     def add_scenes(self, chapter: int, scenes: List[SceneMeta]):
-        """添加챕터场景"""
+        """챕터 장면 추가"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
 
-            # 先삭제该챕터旧场景
+            # 먼저 해당 챕터의 기존 장면 삭제
             cursor.execute("DELETE FROM scenes WHERE chapter = ?", (chapter,))
 
-            # 插入新场景
+            # 새 장면 삽입
             for scene in scenes:
                 cursor.execute(
                     """
@@ -94,7 +94,7 @@ class IndexChapterMixin:
             conn.commit()
 
     def get_scenes(self, chapter: int) -> List[Dict]:
-        """获取챕터场景"""
+        """챕터 장면 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -111,7 +111,7 @@ class IndexChapterMixin:
             ]
 
     def search_scenes_by_location(self, location: str, limit: int = None) -> List[Dict]:
-        """按장소搜索场景"""
+        """장소별 장면 검색"""
         if limit is None:
             limit = self.config.query_scenes_by_location_limit
         with self._get_conn() as conn:
@@ -130,7 +130,7 @@ class IndexChapterMixin:
                 for row in cursor.fetchall()
             ]
 
-    # ==================== 出场记录操作 ====================
+    # ==================== 등장 기록 관리 ====================
 
     def record_appearance(
         self,
@@ -140,26 +140,26 @@ class IndexChapterMixin:
         confidence: float = 1.0,
         skip_if_exists: bool = False,
     ):
-        """记录实体出场
+        """엔티티 등장 기록
 
         Args:
             entity_id: 엔티티 ID
             chapter: 챕터 번호
-            mentions: 提及列表
-            confidence: 置信度
-            skip_if_exists: 如果为True，当记录완료存在时跳过（避免覆盖완료有mentions）
+            mentions: 언급 목록
+            confidence: 신뢰도
+            skip_if_exists: True이면 기록이 이미 존재할 때 건너뜀 (기존 mentions 덮어쓰기 방지)
         """
         with self._get_conn() as conn:
             cursor = conn.cursor()
 
             if skip_if_exists:
-                # 先检查是否완료存在
+                # 먼저 이미 존재하는지 확인
                 cursor.execute(
                     "SELECT 1 FROM appearances WHERE entity_id = ? AND chapter = ?",
                     (entity_id, chapter),
                 )
                 if cursor.fetchone():
-                    return  # 완료存在，跳过
+                    return  # 이미 존재, 건너뜀
 
             cursor.execute(
                 """
@@ -177,7 +177,7 @@ class IndexChapterMixin:
             conn.commit()
 
     def get_entity_appearances(self, entity_id: str, limit: int = None) -> List[Dict]:
-        """获取实体出场记录"""
+        """엔티티 등장 기록 조회"""
         if limit is None:
             limit = self.config.query_entity_appearances_limit
         with self._get_conn() as conn:
@@ -197,7 +197,7 @@ class IndexChapterMixin:
             ]
 
     def get_recent_appearances(self, limit: int = None) -> List[Dict]:
-        """获取최근出场的实体"""
+        """최근 등장한 엔티티 조회"""
         if limit is None:
             limit = self.config.query_recent_appearances_limit
         with self._get_conn() as conn:
@@ -215,7 +215,7 @@ class IndexChapterMixin:
             return [dict(row) for row in cursor.fetchall()]
 
     def get_chapter_appearances(self, chapter: int) -> List[Dict]:
-        """获取某章所有出场实体"""
+        """특정 챕터의 모든 등장 엔티티 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -231,7 +231,7 @@ class IndexChapterMixin:
                 for row in cursor.fetchall()
             ]
 
-    # ==================== v5.1 实体操作 ====================
+    # ==================== v5.1 엔티티 관리 ====================
 
     def process_chapter_data(
         self,
@@ -243,18 +243,18 @@ class IndexChapterMixin:
         scenes: List[Dict],
     ) -> Dict[str, int]:
         """
-        处理챕터数据，批量写入索引
+        챕터 데이터 처리, 인덱스에 일괄 기록
 
-        반환写入통계
+        반환: 기록 통계
         """
         from .index_manager import ChapterMeta, SceneMeta
 
         stats = {"chapters": 0, "scenes": 0, "appearances": 0}
 
-        # 추출出场캐릭터
+        # 등장 캐릭터 추출
         characters = [e.get("id") for e in entities if e.get("type") == "캐릭터"]
 
-        # 写入챕터元数据
+        # 챕터 메타데이터 기록
         self.add_chapter(
             ChapterMeta(
                 chapter=chapter,
@@ -262,12 +262,12 @@ class IndexChapterMixin:
                 location=location,
                 word_count=word_count,
                 characters=characters,
-                summary="",  # 可后续由 Data Agent 生成
+                summary="",  # 추후 Data Agent가 생성 가능
             )
         )
         stats["chapters"] = 1
 
-        # 写入场景
+        # 장면 기록
         scene_metas = []
         for s in scenes:
             scene_metas.append(
@@ -284,7 +284,7 @@ class IndexChapterMixin:
         self.add_scenes(chapter, scene_metas)
         stats["scenes"] = len(scene_metas)
 
-        # 写入出场记录
+        # 등장 기록 작성
         for entity in entities:
             entity_id = entity.get("id")
             if entity_id and entity_id != "NEW":
@@ -298,5 +298,5 @@ class IndexChapterMixin:
 
         return stats
 
-    # ==================== 辅助方法 ====================
+    # ==================== 보조 메서드 ====================
 

@@ -45,13 +45,13 @@ def test_ensure_state_schema_and_progress(temp_project):
 def test_add_update_entities_and_alias(temp_project):
     manager = StateManager(temp_project, enable_sqlite_sync=False)
 
-    entity = EntityState(id="xiaoyan", name="萧炎", type="캐릭터", tier="핵심", aliases=["炎帝"])
+    entity = EntityState(id="xiaoyan", name="소염", type="캐릭터", tier="핵심", aliases=["염제"])
     assert manager.add_entity(entity) is True
     assert manager.add_entity(entity) is False
 
-    manager.update_entity("xiaoyan", {"current": {"realm": "斗师"}})
+    manager.update_entity("xiaoyan", {"current": {"realm": "투사"}})
     updated = manager.get_entity("xiaoyan")
-    assert updated["current"]["realm"] == "斗师"
+    assert updated["current"]["realm"] == "투사"
 
     assert manager.get_entity_type("xiaoyan") == "캐릭터"
     assert manager.get_entity_type("missing") is None
@@ -61,12 +61,12 @@ def test_add_update_entities_and_alias(temp_project):
     assert "xiaoyan" in manager.get_entities_by_tier("핵심")
 
     # unknown type update
-    assert manager.update_entity("missing", {"current": {"realm": "斗者"}}, "캐릭터") is False
+    assert manager.update_entity("missing", {"current": {"realm": "투자"}}, "캐릭터") is False
 
 
 def test_update_entity_appearance_and_relationships(temp_project):
     manager = StateManager(temp_project, enable_sqlite_sync=False)
-    manager.add_entity(EntityState(id="xiaoyan", name="萧炎", type="캐릭터"))
+    manager.add_entity(EntityState(id="xiaoyan", name="소염", type="캐릭터"))
 
     manager.update_entity_appearance("xiaoyan", 5, "캐릭터")
     entity = manager.get_entity("xiaoyan")
@@ -76,7 +76,7 @@ def test_update_entity_appearance_and_relationships(temp_project):
     # unknown entity should no-op
     manager.update_entity_appearance("missing", 3, "캐릭터")
 
-    manager.add_relationship("xiaoyan", "yaolao", "사제", "收徒", 1)
+    manager.add_relationship("xiaoyan", "yaolao", "사제", "제자 수련", 1)
     rels = manager.get_relationships("xiaoyan")
     assert len(rels) == 1
 
@@ -87,13 +87,13 @@ def test_disambiguation_and_save_state(temp_project):
         1,
         [
             {
-                "mention": "宗主",
+                "mention": "종주",
                 "candidates": ["zongzhu", "lintian"],
                 "suggested": "zongzhu",
                 "confidence": 0.4,
             },
             {
-                "mention": "萧炎",
+                "mention": "소염",
                 "candidates": [{"type": "캐릭터", "id": "xiaoyan"}],
                 "suggested": "xiaoyan",
                 "confidence": 0.6,
@@ -101,7 +101,7 @@ def test_disambiguation_and_save_state(temp_project):
         ],
     )
     assert any("수동 확인 필요" in w for w in warnings)
-    assert any("消歧경고" in w for w in warnings)
+    assert any("모호성해소경고" in w for w in warnings)
 
     manager.save_state()
     assert temp_project.state_file.exists()
@@ -115,8 +115,8 @@ def test_save_state_no_pending(temp_project):
 
 def test_save_state_with_sqlite_sync_and_protagonist(temp_project):
     manager = StateManager(temp_project)
-    manager.add_entity(EntityState(id="xiaoyan", name="萧炎", type="캐릭터", tier="핵심"))
-    manager.update_entity("xiaoyan", {"current": {"realm": "斗师", "location": "天云宗"}})
+    manager.add_entity(EntityState(id="xiaoyan", name="소염", type="캐릭터", tier="핵심"))
+    manager.update_entity("xiaoyan", {"current": {"realm": "투사", "location": "천운종"}})
     manager.update_progress(10, words=500)
     manager.save_state()
 
@@ -124,15 +124,15 @@ def test_save_state_with_sqlite_sync_and_protagonist(temp_project):
     assert state.get("_migrated_to_sqlite") is True
     assert state.get("progress", {}).get("current_chapter") == 10
 
-    # 标记为主角并同步
+    # 주인공으로 표시 및 동기화
     idx = IndexManager(temp_project)
     idx.upsert_entity(
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             tier="핵심",
-            current={"realm": "斗王", "location": "天云宗"},
+            current={"realm": "투왕", "location": "천운종"},
             first_appearance=1,
             last_appearance=10,
             is_protagonist=True,
@@ -140,18 +140,18 @@ def test_save_state_with_sqlite_sync_and_protagonist(temp_project):
         update_metadata=True,
     )
     manager.sync_protagonist_from_entity()
-    assert manager._state.get("protagonist_state", {}).get("power", {}).get("realm") == "斗王"
+    assert manager._state.get("protagonist_state", {}).get("power", {}).get("realm") == "투왕"
 
     manager._state["protagonist_state"] = {
-        "power": {"realm": "斗皇", "layer": 2},
-        "location": {"current": "中州"},
+        "power": {"realm": "투황", "layer": 2},
+        "location": {"current": "중주"},
     }
     manager._state.setdefault("entities_v3", {"캐릭터": {}})
     manager._state["entities_v3"]["캐릭터"]["xiaoyan"] = {
-        "canonical_name": "萧炎",
+        "canonical_name": "소염",
         "tier": "핵심",
         "desc": "",
-        "current": {"realm": "斗王", "location": "天云宗"},
+        "current": {"realm": "투왕", "location": "천운종"},
         "first_appearance": 1,
         "last_appearance": 10,
         "history": [],
@@ -159,7 +159,7 @@ def test_save_state_with_sqlite_sync_and_protagonist(temp_project):
     manager.sync_protagonist_to_entity("xiaoyan")
     manager.save_state()
     updated = idx.get_entity("xiaoyan")
-    assert updated["current_json"]["realm"] == "斗皇"
+    assert updated["current_json"]["realm"] == "투황"
 
     # export context
     exported = manager.export_for_context()
@@ -168,32 +168,32 @@ def test_save_state_with_sqlite_sync_and_protagonist(temp_project):
 
 def test_process_chapter_result_and_sqlite_sync(temp_project):
     manager = StateManager(temp_project)
-    manager.add_entity(EntityState(id="xiaoyan", name="萧炎", type="캐릭터", tier="핵심"))
+    manager.add_entity(EntityState(id="xiaoyan", name="소염", type="캐릭터", tier="핵심"))
 
     result = {
         "entities_appeared": [
-            {"id": "xiaoyan", "type": "캐릭터", "mentions": ["萧炎"], "confidence": 0.9}
+            {"id": "xiaoyan", "type": "캐릭터", "mentions": ["소염"], "confidence": 0.9}
         ],
         "entities_new": [
             {
                 "suggested_id": "yaolao",
-                "name": "药老",
+                "name": "약로",
                 "type": "캐릭터",
-                "tier": "重要",
-                "mentions": ["药老"],
-                "aliases": ["药老先生"],
+                "tier": "중요",
+                "mentions": ["약로"],
+                "aliases": ["약로선생"],
             }
         ],
         "state_changes": [
-            {"entity_id": "xiaoyan", "field": "realm", "old": "斗者", "new": "斗师", "reason": "突破"}
+            {"entity_id": "xiaoyan", "field": "realm", "old": "투자", "new": "투사", "reason": "돌파"}
         ],
         "relationships_new": [
-            {"from": "xiaoyan", "to": "yaolao", "type": "사제", "description": "收徒"}
+            {"from": "xiaoyan", "to": "yaolao", "type": "사제", "description": "제자 수련"}
         ],
         "uncertain": [
-            {"mention": "宗主", "candidates": ["zongzhu", "lintian"], "suggested": "zongzhu", "confidence": 0.2},
+            {"mention": "종주", "candidates": ["zongzhu", "lintian"], "suggested": "zongzhu", "confidence": 0.2},
             {
-                "mention": "萧炎",
+                "mention": "소염",
                 "candidates": [{"type": "캐릭터", "id": "xiaoyan"}],
                 "suggested": "xiaoyan",
                 "confidence": 0.8,
@@ -204,7 +204,7 @@ def test_process_chapter_result_and_sqlite_sync(temp_project):
     }
     warnings = manager.process_chapter_result(12, result)
     assert any("수동 확인 필요" in w for w in warnings)
-    assert any("消歧경고" in w for w in warnings)
+    assert any("모호성해소경고" in w for w in warnings)
 
     manager.save_state()
 
@@ -221,9 +221,9 @@ def test_process_chapter_result_and_sqlite_sync(temp_project):
 
 def test_export_context_and_protagonist_alias(temp_project):
     manager = StateManager(temp_project, enable_sqlite_sync=False)
-    manager.add_entity(EntityState(id="xiaoyan", name="萧炎", type="캐릭터", tier="핵심"))
-    manager._state["disambiguation_warnings"] = [{"chapter": 1, "mention": "萧炎"}]
-    manager._state["disambiguation_pending"] = [{"chapter": 2, "mention": "宗主"}]
+    manager.add_entity(EntityState(id="xiaoyan", name="소염", type="캐릭터", tier="핵심"))
+    manager._state["disambiguation_warnings"] = [{"chapter": 1, "mention": "소염"}]
+    manager._state["disambiguation_pending"] = [{"chapter": 2, "mention": "종주"}]
 
     exported = manager.export_for_context()
     assert "xiaoyan" in exported.get("entities", {})
@@ -236,7 +236,7 @@ def test_export_context_and_protagonist_alias(temp_project):
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             tier="핵심",
             current={},
             first_appearance=1,
@@ -245,15 +245,15 @@ def test_export_context_and_protagonist_alias(temp_project):
         ),
         update_metadata=True,
     )
-    idx.register_alias("小炎子", "xiaoyan", "캐릭터")
-    manager_sql._state["protagonist_state"] = {"name": "小炎子"}
+    idx.register_alias("소염자", "xiaoyan", "캐릭터")
+    manager_sql._state["protagonist_state"] = {"name": "소염자"}
     assert manager_sql.get_protagonist_entity_id() == "xiaoyan"
 
     idx.upsert_entity(
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             tier="핵심",
             current={},
             first_appearance=1,
@@ -272,9 +272,9 @@ def test_sqlite_metadata_update_and_alias_sync(temp_project):
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             tier="핵심",
-            current={"realm": "斗者"},
+            current={"realm": "투자"},
             first_appearance=1,
             last_appearance=1,
             is_protagonist=False,
@@ -283,10 +283,10 @@ def test_sqlite_metadata_update_and_alias_sync(temp_project):
 
     manager._state.setdefault("entities_v3", {"캐릭터": {}})
     manager._state["entities_v3"]["캐릭터"]["xiaoyan"] = {
-        "canonical_name": "萧炎",
+        "canonical_name": "소염",
         "tier": "핵심",
         "desc": "",
-        "current": {"realm": "斗者"},
+        "current": {"realm": "투자"},
         "first_appearance": 1,
         "last_appearance": 1,
         "history": [],
@@ -294,24 +294,24 @@ def test_sqlite_metadata_update_and_alias_sync(temp_project):
 
     manager.update_entity(
         "xiaoyan",
-        {"canonical_name": "萧炎·新", "tier": "重要", "current": {"realm": "斗王"}},
+        {"canonical_name": "소염·신", "tier": "중요", "current": {"realm": "투왕"}},
         "캐릭터",
     )
-    manager.update_entity("xiaoyan", {"location": "中州"}, "캐릭터")
+    manager.update_entity("xiaoyan", {"location": "중주"}, "캐릭터")
     manager.update_entity_appearance("xiaoyan", 2, "캐릭터")
-    manager._pending_alias_entries["小炎子"] = [{"type": "캐릭터", "id": "xiaoyan"}]
+    manager._pending_alias_entries["소염자"] = [{"type": "캐릭터", "id": "xiaoyan"}]
 
     manager.save_state()
 
     updated = idx.get_entity("xiaoyan")
-    assert updated["canonical_name"] == "萧炎·新"
-    assert updated["current_json"]["realm"] == "斗王"
-    assert updated["current_json"]["location"] == "中州"
+    assert updated["canonical_name"] == "소염·신"
+    assert updated["current_json"]["realm"] == "투왕"
+    assert updated["current_json"]["location"] == "중주"
     assert updated["last_appearance"] == 2
 
     aliases = idx.get_entity_aliases("xiaoyan")
-    assert "萧炎·新" in aliases
-    assert "小炎子" in aliases
+    assert "소염·신" in aliases
+    assert "소염자" in aliases
 
 
 def test_ensure_state_schema_invalid_inputs(temp_project):
@@ -334,8 +334,8 @@ def test_ensure_state_schema_invalid_inputs(temp_project):
 def test_save_state_preserves_sqlite_pending_on_sync_failure(temp_project):
     manager = StateManager(temp_project)
 
-    manager.add_entity(EntityState(id="e1", name="测试캐릭터", type="캐릭터", first_appearance=1, last_appearance=1))
-    manager.update_entity("e1", {"current": {"realm": "炼气"}}, "캐릭터")
+    manager.add_entity(EntityState(id="e1", name="테스트캐릭터", type="캐릭터", first_appearance=1, last_appearance=1))
+    manager.update_entity("e1", {"current": {"realm": "연기"}}, "캐릭터")
 
     class _BrokenSQLManager:
         def process_chapter_entities(self, **kwargs):
@@ -349,7 +349,7 @@ def test_save_state_preserves_sqlite_pending_on_sync_failure(temp_project):
     state = json.loads(temp_project.state_file.read_text(encoding="utf-8"))
     assert state.get("_migrated_to_sqlite") is True
 
-    # SQLite 同步실패后，SQLite 相关 pending 不应被清空，便于后续重试
+    # SQLite 동기화 실패 후, SQLite 관련 pending은 후속 재시도를 위해 비워지지 않아야 함
     assert manager._pending_entity_patches
     assert manager._pending_sqlite_data.get("chapter") == 1
 
@@ -407,11 +407,11 @@ def test_sync_to_sqlite_exceptions_and_no_sql_manager(temp_project, monkeypatch)
 def test_entity_fallbacks_and_updates(temp_project):
     manager = StateManager(temp_project, enable_sqlite_sync=False)
 
-    manager.add_entity(EntityState(id="hero", name="主角", type="알 수 없음", tier="핵심"))
-    manager.add_entity(EntityState(id="place", name="乌坦城", type="장소", tier="重要"))
+    manager.add_entity(EntityState(id="hero", name="주인공", type="알 수 없음", tier="핵심"))
+    manager.add_entity(EntityState(id="place", name="오탄성", type="장소", tier="중요"))
 
-    assert manager.get_entity("hero", "캐릭터")["canonical_name"] == "主角"
-    assert manager.get_entity("place")["canonical_name"] == "乌坦城"
+    assert manager.get_entity("hero", "캐릭터")["canonical_name"] == "주인공"
+    assert manager.get_entity("place")["canonical_name"] == "오탄성"
     assert manager.get_entity_type("place") == "장소"
 
     assert "hero" in manager.get_entities_by_type("캐릭터")
@@ -423,7 +423,7 @@ def test_entity_fallbacks_and_updates(temp_project):
     manager.update_entity("hero", {"attributes": {"hp": 1}}, "캐릭터")
     manager._state["entities_v3"]["캐릭터"]["hero"].pop("current", None)
     manager.update_entity("hero", {"current": {"mp": 2}}, "캐릭터")
-    manager.update_entity("hero", {"tier": "重要"}, "캐릭터")
+    manager.update_entity("hero", {"tier": "중요"}, "캐릭터")
 
     manager._state["entities_v3"] = "bad"
     manager.update_entity_appearance("hero", 1, "캐릭터")
@@ -435,14 +435,14 @@ def test_entity_fallbacks_and_updates(temp_project):
 def test_register_alias_internal_and_get_all_entities_sqlite(temp_project):
     manager = StateManager(temp_project)
     manager._register_alias_internal("xiaoyan", "캐릭터", "")
-    manager._register_alias_internal("xiaoyan", "캐릭터", "萧炎")
+    manager._register_alias_internal("xiaoyan", "캐릭터", "소염")
 
     idx = IndexManager(temp_project)
     idx.upsert_entity(
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             tier="핵심",
             current={},
             first_appearance=1,
@@ -461,14 +461,14 @@ def test_record_disambiguation_and_process_chapter_existing(temp_project):
         [
             "bad",
             {"mention": "", "confidence": 0.1},
-            {"mention": "宗主", "confidence": "bad", "adopted": "zongzhu"},
+            {"mention": "종주", "confidence": "bad", "adopted": "zongzhu"},
         ],
     )
     assert warnings
 
-    manager.add_entity(EntityState(id="xiaoyan", name="萧炎", type="캐릭터"))
-    warnings = manager.process_chapter_result(2, {"entities_new": [{"id": "xiaoyan", "name": "萧炎"}]})
-    assert any("实体완료存在" in w for w in warnings)
+    manager.add_entity(EntityState(id="xiaoyan", name="소염", type="캐릭터"))
+    warnings = manager.process_chapter_result(2, {"entities_new": [{"id": "xiaoyan", "name": "소염"}]})
+    assert any("엔티티 이미 존재" in w for w in warnings)
 
 
 def test_sync_protagonist_from_string_and_empty_updates(temp_project):
@@ -480,11 +480,11 @@ def test_sync_protagonist_from_string_and_empty_updates(temp_project):
     }
     manager._state["entities_v3"]["캐릭터"]["hero"] = {
         "current": None,
-        "current_json": json.dumps({"realm": "斗师", "layer": 2, "location": "乌坦城", "last_chapter": 3}),
+        "current_json": json.dumps({"realm": "투사", "layer": 2, "location": "오탄성", "last_chapter": 3}),
     }
     manager.sync_protagonist_from_entity("bad")
     manager.sync_protagonist_from_entity("hero")
-    assert manager._state["protagonist_state"]["power"]["realm"] == "斗师"
+    assert manager._state["protagonist_state"]["power"]["realm"] == "투사"
 
     manager._state["protagonist_state"] = {}
     manager.sync_protagonist_to_entity()
@@ -496,7 +496,7 @@ def test_state_manager_cli_commands(temp_project, monkeypatch, capsys):
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             tier="핵심",
             current={},
             first_appearance=1,

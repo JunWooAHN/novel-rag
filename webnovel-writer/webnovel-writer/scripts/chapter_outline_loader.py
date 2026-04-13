@@ -74,10 +74,10 @@ def volume_num_for_chapter_from_state(project_root: Path, chapter_num: int) -> i
 
 def _find_split_outline_file(outline_dir: Path, chapter_num: int) -> Path | None:
     patterns = [
-        f"第{chapter_num}章*.md",
-        f"第{chapter_num:02d}章*.md",
-        f"第{chapter_num:03d}章*.md",
-        f"第{chapter_num:04d}章*.md",
+        f"chapter_{chapter_num}*.md",
+        f"chapter_{chapter_num:02d}*.md",
+        f"chapter_{chapter_num:03d}*.md",
+        f"chapter_{chapter_num:04d}*.md",
     ]
     for pattern in patterns:
         matches = sorted(outline_dir.glob(pattern))
@@ -87,20 +87,20 @@ def _find_split_outline_file(outline_dir: Path, chapter_num: int) -> Path | None
 
 
 def _find_volume_outline_file(project_root: Path, chapter_num: int) -> Path | None:
-    outline_dir = project_root / "大纲"
+    outline_dir = project_root / "outline"
     volume_num = volume_num_for_chapter_from_state(project_root, chapter_num) or volume_num_for_chapter(chapter_num)
     candidates = [
-        outline_dir / f"第{volume_num}卷-상세大纲.md",
-        outline_dir / f"第{volume_num}卷 - 상세大纲.md",
-        outline_dir / f"第{volume_num}卷 상세大纲.md",
+        outline_dir / f"vol_{volume_num}-detailed.md",
+        outline_dir / f"vol_{volume_num} - detailed.md",
+        outline_dir / f"vol_{volume_num} detailed.md",
     ]
     return next((path for path in candidates if path.exists()), None)
 
 
 def _extract_outline_section(content: str, chapter_num: int) -> str | None:
     patterns = [
-        rf"###\s*第\s*{chapter_num}\s*章[：:]\s*(.+?)(?=###\s*第\s*\d+\s*章|##\s|$)",
-        rf"###\s*第{chapter_num}章[：:]\s*(.+?)(?=###\s*第\d+章|##\s|$)",
+        rf"###\s*chapter\s*{chapter_num}[：:]\s*(.+?)(?=###\s*chapter\s*\d+|##\s|$)",
+        rf"###\s*chapter_{chapter_num}[：:]\s*(.+?)(?=###\s*chapter_\d+|##\s|$)",
     ]
     for pattern in patterns:
         match = re.search(pattern, content, re.DOTALL)
@@ -110,7 +110,7 @@ def _extract_outline_section(content: str, chapter_num: int) -> str | None:
 
 
 def load_chapter_outline(project_root: Path, chapter_num: int, max_chars: int | None = 1500) -> str:
-    outline_dir = project_root / "大纲"
+    outline_dir = project_root / "outline"
 
     split_outline = _find_split_outline_file(outline_dir, chapter_num)
     if split_outline is not None:
@@ -118,12 +118,12 @@ def load_chapter_outline(project_root: Path, chapter_num: int, max_chars: int | 
 
     volume_outline = _find_volume_outline_file(project_root, chapter_num)
     if volume_outline is None:
-        return f"⚠️ 大纲파일이 존재하지 않음：第 {chapter_num} 章"
+        return f"⚠️ 개요 파일이 존재하지 않음: chapter {chapter_num}"
 
     outline = _extract_outline_section(volume_outline.read_text(encoding="utf-8"), chapter_num)
     if outline is None:
-        return f"⚠️ 찾을 수 없음第 {chapter_num} 章的大纲"
+        return f"⚠️ chapter {chapter_num}의 개요를 찾을 수 없음"
 
     if max_chars and len(outline) > max_chars:
-        return outline[:max_chars] + "\n...(완료截断)"
+        return outline[:max_chars] + "\n...(truncated)"
     return outline

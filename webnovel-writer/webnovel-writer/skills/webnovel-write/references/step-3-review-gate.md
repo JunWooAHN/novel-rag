@@ -1,49 +1,49 @@
 # Step 3 Review Gate
 
-## 调用约束（硬规则）
+## 호출 제약 (경성 규칙)
 
-- 必须使用 `Task` 调用审查 subagent，禁止主流程直接内联“自审结论”。
-- 审查任务可并行发起，必须在全部返回后统一聚合。
-- `overall_score` 必须来自聚合结果，不可主观估分。
-- 单章写作场景下，统一传入：`{chapter, chapter_file, project_root}`。
+- 반드시 `Task`로 검토 subagent를 호출해야 하며, 주 프로세스에서 직접 인라인 "자체 검토 결론"을 내리는 것은 금지.
+- 검토 태스크는 병렬 발행 가능하나, 반드시 전부 반환된 후 통합 집계해야 함.
+- `overall_score`는 반드시 집계 결과에서 산출해야 하며, 주관적 추정 점수 불가.
+- 단일 챕터 집필 시나리오에서, 통일적으로 전달: `{chapter, chapter_file, project_root}`.
 
-## 审查路由模式
+## 검토 라우팅 모드
 
-- 标准/`--fast`：`auto` 路由（核心 3 个 + 条件命中）。
-- `--minimal`：固定核心 3 个（不启用条件审查器）。
+- 표준/`--fast`: `auto` 라우팅 (핵심 3개 + 조건 적중).
+- `--minimal`: 고정 핵심 3개 (조건 검토기 미활성).
 
-核心审查器（始终执行）：
+핵심 검토기 (항상 실행):
 - `consistency-checker`
 - `continuity-checker`
 - `ooc-checker`
 
-条件审查器（仅 `auto` 命中时执行）：
+조건 검토기 (`auto` 적중 시에만 실행):
 - `reader-pull-checker`
 - `high-point-checker`
 - `pacing-checker`
 
-## Auto 路由判定信号
+## Auto 라우팅 판정 신호
 
-输入信号来源：
-1. Step 1.5 合同（是否过渡章、追读力设计、核心冲突）。
-2. 本章正文（战斗/反转/高光/章末未闭合问题等信号）。
-3. 大纲标签（关键章/高潮章/卷末章/转场章）。
-4. 最近章节节奏（连续主线、情感线断档、世界观线断档）。
+입력 신호 출처:
+1. Step 1.5 계약서 (과도 챕터 여부, 추독력 설계, 핵심 충돌).
+2. 본 챕터 본문 (전투/반전/하이라이트/챕터 말 미종결 문제 등 신호).
+3. outline 태그 (핵심 챕터/클라이맥스 챕터/권말 챕터/전환 챕터).
+4. 최근 챕터 리듬 (연속 주선, 감정선 단절, 세계관선 단절).
 
-路由规则：
-- `reader-pull-checker`：当满足任一条件时启用
-  - 非过渡章；
-  - 有明确未闭合问题/期待锚点；
-  - 用户显式要求“追读力审查”。
-- `high-point-checker`：当满足任一条件时启用
-  - 关键章/高潮章/卷末章；
-  - 正文出现战斗、反杀、打脸、身份揭露、大反转等高光信号。
-- `pacing-checker`：当满足任一条件时启用
-  - 章号 >= 10；
-  - 最近章节存在明显节奏失衡风险；
-  - 用户显式要求“节奏审查”。
+라우팅 규칙:
+- `reader-pull-checker`: 다음 조건 중 하나라도 충족 시 활성화
+  - 비과도 챕터;
+  - 명확한 미종결 문제/기대 앵커 포인트 존재;
+  - 사용자가 명시적으로 "추독력 검토" 요청.
+- `high-point-checker`: 다음 조건 중 하나라도 충족 시 활성화
+  - 핵심 챕터/클라이맥스 챕터/권말 챕터;
+  - 본문에 전투, 역전, 체면 깎기, 정체 폭로, 대반전 등 하이라이트 신호 출현.
+- `pacing-checker`: 다음 조건 중 하나라도 충족 시 활성화
+  - 화 번호 >= 10;
+  - 최근 챕터에 명확한 리듬 불균형 위험 존재;
+  - 사용자가 명시적으로 "리듬 검토" 요청.
 
-## Task 调用模板（示意）
+## Task 호출 템플릿 (예시)
 
 ```text
 selected = ["consistency-checker", "continuity-checker", "ooc-checker"]
@@ -56,82 +56,82 @@ if mode != "minimal":
 parallel Task(agent, {chapter, chapter_file, project_root}) for agent in selected
 ```
 
-## 输出契约（统一）
+## 출력 계약 (통일)
 
-每个 checker 返回值必须遵循 `${CLAUDE_PLUGIN_ROOT}/references/checker-output-schema.md`：
-- 必含：`agent`、`chapter`、`overall_score`、`pass`、`issues`、`metrics`、`summary`
-- 允许扩展字段（如 `hard_violations`、`soft_suggestions`），但不得替代必填字段
+각 checker 반환값은 반드시 `${CLAUDE_PLUGIN_ROOT}/references/checker-output-schema.md`를 준수:
+- 필수 포함: `agent`, `chapter`, `overall_score`, `pass`, `issues`, `metrics`, `summary`
+- 확장 필드 허용 (예: `hard_violations`, `soft_suggestions`), 단 필수 필드를 대체해서는 안 됨
 
-聚合输出最小字段：
-- `chapter`（单章）
-- `start_chapter`、`end_chapter`（单章时二者都等于 `chapter`）
+집계 출력 최소 필드:
+- `chapter` (단일 챕터)
+- `start_chapter`, `end_chapter` (단일 챕터 시 둘 다 `chapter`와 동일)
 - `selected_checkers`
 - `overall_score`
 - `severity_counts`
 - `critical_issues`
-- `issues`（扁平化聚合）
-- `dimension_scores`（按已启用 checker 计算）
+- `issues` (플랫화 집계)
+- `dimension_scores` (활성화된 checker 기준 계산)
 
-## 汇总输出模板
+## 요약 출력 템플릿
 
 ```text
-审查汇总 - 第 {chapter_num} 章
-- 已启用审查器: {list}
-- 严重问题: {N} 个
-- 高优先级问题: {N} 个
-- 综合评分: {score}
-- 可进入润色: {是/否}
+검토 요약 - 제 {chapter_num} 화
+- 활성화된 검토기: {list}
+- 심각한 문제: {N} 개
+- 높은 우선순위 문제: {N} 개
+- 종합 평점: {score}
+- 윤색 진입 가능: {예/아니오}
 ```
 
-## 审查指标落库（必做）
+## 검토 지표 저장 (필수)
 
 ```bash
 python -X utf8 "${SCRIPTS_DIR}/webnovel.py" --project-root "${PROJECT_ROOT}" index save-review-metrics --data "@${PROJECT_ROOT}/.webnovel/tmp/review_metrics.json"
 ```
 
-review_metrics 文件字段约束（当前工作流约定只传以下字段）：
-- `start_chapter`（int）、`end_chapter`（int）：单章时二者相等
-- `overall_score`（float）：必填
-- `dimension_scores`（Dict[str, float]）：按已启用 checker 计算
-- `severity_counts`（Dict[str, int]）：键为 critical / high / medium / low
-- `critical_issues`（List[str]）
-- `report_file`（str）
-- `notes`（str）：在当前执行契约中必须是单个字符串；`selected_checkers`、`timeline_gate`、`anti_ai_force_check` 等扩展信息统一压成单行文本写入此字段，不得作为独立顶层键传入
-- 当前工作流不额外传入其它顶层字段；脚本侧未在此处做新增硬校验
+review_metrics 파일 필드 제약 (현재 워크플로우 약정에서 아래 필드만 전달):
+- `start_chapter` (int), `end_chapter` (int): 단일 챕터 시 둘 다 동일
+- `overall_score` (float): 필수
+- `dimension_scores` (Dict[str, float]): 활성화된 checker 기준 계산
+- `severity_counts` (Dict[str, int]): 키는 critical / high / medium / low
+- `critical_issues` (List[str])
+- `report_file` (str)
+- `notes` (str): 현재 실행 계약에서 반드시 단일 문자열이어야 함; `selected_checkers`, `timeline_gate`, `anti_ai_force_check` 등 확장 정보는 통합하여 한 줄 텍스트로 이 필드에 기록하며, 독립 최상위 키로 전달 금지
+- 현재 워크플로우에서 다른 최상위 필드는 추가 전달하지 않음; 스크립트 측에서 여기에 신규 경성 검증을 추가하지 않음
 
-## 进入 Step 4 前闸门
+## Step 4 진입 전 게이트
 
-- `overall_score` 已生成。
-- `save-review-metrics` 已成功。
-- 审查报告中的 `issues`、`severity_counts` 可被 Step 4 直接消费。
-- **时间线闸门（新增）**：若存在 `TIMELINE_ISSUE` 且 `severity >= high`，禁止进入 Step 4/5，必须先修复。
+- `overall_score` 생성 완료.
+- `save-review-metrics` 성공 완료.
+- 검토 보고서의 `issues`, `severity_counts`를 Step 4에서 직접 소비 가능.
+- **타임라인 게이트 (신규)**: `TIMELINE_ISSUE`가 존재하고 `severity >= high`이면, Step 4/5 진입 금지, 반드시 먼저 수정 필요.
 
-### 时间线闸门规则
+### 타임라인 게이트 규칙
 
-**Hard Block（必须修复才能继续）**：
-- `TIMELINE_ISSUE` + `severity = critical`（倒计时算术错误）
-- `TIMELINE_ISSUE` + `severity = high`（事件先后矛盾/年龄冲突/时间回跳/大跨度无过渡）
+**Hard Block (수정 후에야 계속 가능)**:
+- `TIMELINE_ISSUE` + `severity = critical` (카운트다운 산술 오류)
+- `TIMELINE_ISSUE` + `severity = high` (사건 전후 모순/나이 충돌/시간 역행/대폭 시간 도약 무과도)
 
-**Soft Warning（建议修复但可继续）**：
-- `TIMELINE_ISSUE` + `severity = medium`（时间锚点缺失）
-- `TIMELINE_ISSUE` + `severity = low`（轻微时间模糊）
+**Soft Warning (수정 권장이나 계속 가능)**:
+- `TIMELINE_ISSUE` + `severity = medium` (시간 앵커 포인트 누락)
+- `TIMELINE_ISSUE` + `severity = low` (경미한 시간 모호)
 
-**闸门判定逻辑**：
+**게이트 판정 로직**:
 ```text
 timeline_issues = filter(issues, type="TIMELINE_ISSUE")
 critical_timeline = filter(timeline_issues, severity in ["critical", "high"])
 
 if len(critical_timeline) > 0:
-    BLOCK: "存在 {len(critical_timeline)} 个严重时间线问题，必须修复后才能进入润色步骤"
+    BLOCK: "{len(critical_timeline)}개의 심각한 타임라인 문제가 존재하며, 수정 후에야 윤색 단계에 진입 가능"
     for issue in critical_timeline:
-        print(f"- 第{issue.chapter}章: {issue.description}")
+        print(f"- 제{issue.chapter}화: {issue.description}")
     return BLOCKED
 else:
-    通过: "时间线检查通过"
+    통과: "타임라인 검사 통과"
 ```
 
-**修复指引**：
-- 倒计时错误 → 修正倒计时推进，确保 D-N → D-(N-1) 连续
-- 时间回跳 → 添加闪回标记，或调整时间锚点
-- 大跨度无过渡 → 添加时间过渡句/段，或插入过渡章
-- 事件先后矛盾 → 调整事件发生顺序或添加时间跳跃说明
+**수정 안내**:
+- 카운트다운 오류 → 카운트다운 진행 수정, D-N → D-(N-1) 연속성 확보
+- 시간 역행 → 플래시백 표시 추가, 또는 시간 앵커 포인트 조정
+- 대폭 시간 도약 무과도 → 시간 과도 문구/단락 추가, 또는 과도 챕터 삽입
+- 사건 전후 모순 → 사건 발생 순서 조정 또는 시간 도약 설명 추가

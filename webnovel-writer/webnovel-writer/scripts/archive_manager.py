@@ -23,7 +23,7 @@ state.json 데이터 아카이브 관리 스크립트
   python archive_manager.py --force
 
   # 특정 캐릭터 복구
-  python archive_manager.py --restore-character "李雪"
+  python archive_manager.py --restore-character "character_name"
 
   # 아카이브 통계 조회
   python archive_manager.py --stats
@@ -262,7 +262,7 @@ class ArchiveManager:
                 except (TypeError, ValueError):
                     pass
 
-            # 폴백: report 파일명에서 "Ch5-6" 또는 "第005-006" 추출
+            # 폴백: report 파일명에서 "Ch5-6" 또는 "chapter_005-006" 추출
             report = review.get("report")
             if isinstance(report, str):
                 import re
@@ -272,7 +272,7 @@ class ArchiveManager:
                         return int(m.group(2))
                     except ValueError:
                         pass
-                m = re.search(r"第(\d+)[-–—](\d+)章", report)
+                m = re.search(r"chapter_(\d+)[-–—](\d+)", report)
                 if m:
                     try:
                         return int(m.group(2))

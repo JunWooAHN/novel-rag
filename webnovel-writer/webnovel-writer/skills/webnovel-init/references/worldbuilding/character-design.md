@@ -93,7 +93,7 @@
 
 ## 🛠️ 인물 카드 템플릿 (Character Sheet)
 
-`/webnovel-init`에서 생성된 `设定集/주인공카드.md`에 다음이 포함되어야 합니다:
+`/webnovel-init`에서 생성된 `settings/protagonist.md`에 다음이 포함되어야 합니다:
 
 ```markdown
 **이름**: 임천

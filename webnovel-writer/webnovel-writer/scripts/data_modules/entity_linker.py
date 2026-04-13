@@ -5,7 +5,7 @@ Entity Linker - 엔티티 소명 보조 모듈 (v5.4)
 
 Data Agent에 엔티티 소명 보조 기능 제공：
 - 신뢰도 판단
-- 별칭 인덱스 관리 (통과 index.db aliases 表)
+- 별칭 인덱스 관리 (index.db aliases 테이블 사용)
 - 소명 결과 기록
 
 v5.1 변경（v5.4 유지）:
@@ -190,25 +190,25 @@ def main():
 
     subparsers = parser.add_subparsers(dest="command")
 
-    # 注册별칭
+    # 별칭 등록
     register_parser = subparsers.add_parser("register-alias")
     register_parser.add_argument("--entity", required=True, help="엔티티 ID")
     register_parser.add_argument("--alias", required=True, help="별칭")
     register_parser.add_argument("--type", default="캐릭터", help="엔티티 유형(기본: 캐릭터)")
 
-    # 查找별칭
+    # 별칭 검색
     lookup_parser = subparsers.add_parser("lookup")
     lookup_parser.add_argument("--mention", required=True, help="언급 텍스트")
     lookup_parser.add_argument("--type", help="유형별 필터링")
 
-    # 查找所有匹配（一对多）
+    # 모든 매칭 검색（일대다）
     lookup_all_parser = subparsers.add_parser("lookup-all")
     lookup_all_parser.add_argument("--mention", required=True, help="언급 텍스트")
 
-    # 列出별칭
+    # 별칭 목록
     list_parser = subparsers.add_parser("list-aliases")
     list_parser.add_argument("--entity", required=True, help="엔티티 ID")
-    list_parser.add_argument("--type", help="实体类型")
+    list_parser.add_argument("--type", help="엔티티 유형")
 
     argv = normalize_global_project_root(sys.argv[1:])
     args = parser.parse_args(argv)
@@ -216,7 +216,7 @@ def main():
     # 초기화
     config = None
     if args.project_root:
-        # 允许传入“工作区根目录”，统一解析到真正的 book project_root（必须포함 .webnovel/state.json）
+        # “워크스페이스 루트 디렉토리” 전달 허용, 실제 book project_root로 통합 해석（반드시 .webnovel/state.json 포함）
         from project_locator import resolve_project_root
         from .config import DataModulesConfig
 

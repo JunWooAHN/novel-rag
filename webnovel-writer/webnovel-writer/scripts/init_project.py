@@ -8,9 +8,9 @@
 - 생성/업데이트 .webnovel/state.json（런타임 소스 오브 트루스）
 - 기본 설정집 및 개요 템플릿 파일 생성（/webnovel-plan 및 /webnovel-write 사용을 위해）
 
-说明：
-- 该脚本是命令 /webnovel-init 的“唯一允许的文件生成入口”（명령 문서와 일관성 유지）。
-- 生成的内容以“模板骨架”为主，AI/작가의 후속 보완을 위해；모든 핵심 파일의 존재를 보장。
+설명：
+- 이 스크립트는 /webnovel-init 명령의 "유일한 파일 생성 진입점"입니다（명령 문서와 일관성 유지）.
+- 생성되는 콘텐츠는 "템플릿 골격" 위주이며, AI/작가의 후속 보완을 위해 모든 핵심 파일의 존재를 보장합니다.
 """
 
 from __future__ import annotations
@@ -62,21 +62,21 @@ def _split_genre_keys(genre: str) -> list[str]:
 
 def _normalize_genre_key(key: str) -> str:
     aliases = {
-        "修仙/玄幻": "修仙",
-        "玄幻修仙": "修仙",
-        "玄幻": "修仙",
-        "修真": "修仙",
-        "都市修真": "都市异能",
-        "都市高武": "高武",
-        "都市奇闻": "都市脑洞",
-        "古言脑洞": "古言",
-        "游戏电竞": "电竞",
-        "电竞文": "电竞",
-        "直播": "直播文",
-        "直播带货": "直播文",
-        "主播": "直播文",
-        "克系": "克苏鲁",
-        "克系悬疑": "克苏鲁",
+        "수선/현판타지": "수선",
+        "현판타지수선": "수선",
+        "현판타지": "수선",
+        "수진": "수선",
+        "도시수진": "도시이능",
+        "도시고무": "고무",
+        "도시기문": "도시기발",
+        "고대기발": "고대로맨스",
+        "게임e스포츠": "e스포츠",
+        "e스포츠문": "e스포츠",
+        "방송": "방송문",
+        "라방": "방송문",
+        "스트리머": "방송문",
+        "크계": "크툴루",
+        "크계서스펜스": "크툴루",
     }
     return aliases.get(key, key)
 
@@ -115,22 +115,22 @@ def _render_team_rows(names: List[str], roles: List[str]) -> List[str]:
     rows = []
     for idx, name in enumerate(names):
         role = roles[idx] if idx < len(roles) else ""
-        rows.append(f"| {name} | {role or '메인 스토리/副线'} | | | |")
+        rows.append(f"| {name} | {role or '메인 스토리/서브 라인'} | | | |")
     return rows
 
 
 def _ensure_state_schema(state: Dict[str, Any]) -> Dict[str, Any]:
-    """state.json이 갖추도록 보장 v5.1 아키텍처에 필요한 필드 집합（v5.4 유지）。
+    """state.json이 v5.1 아키텍처에 필요한 필드 집합을 갖추도록 보장（v5.4 유지）.
 
     v5.1 변경:
-    - entities_v3 和 alias_index index.db로 마이그레이션됨, state.json에 더 이상 저장하지 않음
-    - structured_relationships index.db relationships 테이블로 마이그레이션됨
+    - entities_v3 및 alias_index가 index.db로 마이그레이션됨, state.json에 더 이상 저장하지 않음
+    - structured_relationships가 index.db relationships 테이블로 마이그레이션됨
     - state.json 간결하게 유지 (< 5KB)
     """
     state.setdefault("project_info", {})
     state.setdefault("progress", {})
     state.setdefault("protagonist_state", {})
-    state.setdefault("relationships", {})  # update_state.py 필요此필드
+    state.setdefault("relationships", {})  # update_state.py에서 이 필드 필요
     state.setdefault("disambiguation_warnings", [])
     state.setdefault("disambiguation_pending", [])
     state.setdefault("world_settings", {"power_system": [], "factions": [], "locations": []})
@@ -148,8 +148,8 @@ def _ensure_state_schema(state: Dict[str, Any]) -> Dict[str, Any]:
             "history": [],
         },
     )
-    # v5.1: entities_v3, alias_index, structured_relationships 완료迁移到 index.db
-    # 不再在 state.json 中초기화这些필드
+    # v5.1: entities_v3, alias_index, structured_relationships는 index.db로 마이그레이션 완료
+    # 더 이상 state.json에서 이 필드들을 초기화하지 않음
 
     # progress schema evolution
     state["progress"].setdefault("current_chapter", 0)
@@ -173,11 +173,11 @@ def _ensure_state_schema(state: Dict[str, Any]) -> Dict[str, Any]:
 def _build_master_outline(target_chapters: int, *, chapters_per_volume: int = 50) -> str:
     volumes = (target_chapters - 1) // chapters_per_volume + 1 if target_chapters > 0 else 1
     lines: list[str] = [
-        "# 总纲",
+        "# Master Outline",
         "",
-        "> 本文件为“总纲骨架”，用于 /webnovel-plan 细化为卷大纲와章纲。",
+        "> 이 파일은 총강 골격이며, /webnovel-plan으로 권별 개요와 장별 개요로 세분화합니다.",
         "",
-        "## 卷结构",
+        "## Volume Structure",
         "",
     ]
 
@@ -186,12 +186,12 @@ def _build_master_outline(target_chapters: int, *, chapters_per_volume: int = 50
         end = min(v * chapters_per_volume, target_chapters)
         lines.extend(
             [
-                f"### 第{v}卷（第{start}-{end}章）",
-                "- 핵심충돌：",
-                "- 关键爽点：",
-                "- 卷末高潮：",
-                "- 主要登场캐릭터：",
-                "- 关键복선（埋/收）：",
+                f"### Vol {v} (chapter {start}-{end})",
+                "- 핵심충돌:",
+                "- 핵심 쾌감포인트:",
+                "- 권말 클라이맥스:",
+                "- 주요 등장 캐릭터:",
+                "- 핵심 복선 (매설/회수):",
                 "",
             ]
         )
@@ -200,11 +200,11 @@ def _build_master_outline(target_chapters: int, *, chapters_per_volume: int = 50
 
 
 def _inject_volume_rows(template_text: str, target_chapters: int, *, chapters_per_volume: int = 50) -> str:
-    """在总纲模板的卷表中注入卷行（若存在表头）。"""
+    """총강 템플릿의 권 테이블에 권 행을 주입."""
     lines = template_text.splitlines()
     header_idx = None
     for i, line in enumerate(lines):
-        if line.strip().startswith("| 卷号"):
+        if line.strip().startswith("| Vol") or line.strip().startswith("| 권번호"):
             header_idx = i
             break
     if header_idx is None:
@@ -216,9 +216,9 @@ def _inject_volume_rows(template_text: str, target_chapters: int, *, chapters_pe
     for v in range(1, volumes + 1):
         start = (v - 1) * chapters_per_volume + 1
         end = min(v * chapters_per_volume, target_chapters)
-        rows.append(f"| {v} | | 第{start}-{end}章 | | |")
+        rows.append(f"| {v} | | chapter {start}-{end} | | |")
 
-    # 避免重复插入（若模板완료有数据行）
+    # 중복 삽입 방지 (템플릿에 이미 데이터 행이 있는 경우)
     existing = {line.strip() for line in lines}
     rows = [r for r in rows if r.strip() not in existing]
     return "\n".join(lines[:insert_idx] + rows + lines[insert_idx:])
@@ -267,19 +267,19 @@ def init_project(
         raise SystemExit("Refusing to initialize a project inside .claude. Choose a different directory.")
     project_path.mkdir(parents=True, exist_ok=True)
 
-    # 目录结构（同时兼容“卷目录”와后续扩展）
+    # Directory structure (supports volume layout and future extensions)
     directories = [
         ".webnovel/backups",
         ".webnovel/archive",
         ".webnovel/summaries",
-        "设定集/角色库/主要角色",
-        "设定集/角色库/次要角色",
-        "设定集/角色库/反派角色",
-        "设定集/物品库",
-        "设定集/其他设定",
-        "大纲",
-        "正文/第1卷",
-        "审查报告",
+        "settings/characters/main",
+        "settings/characters/minor",
+        "settings/characters/villain",
+        "settings/items",
+        "settings/misc",
+        "outline",
+        "chapters/vol_1",
+        "reviews",
     ]
     for dir_path in directories:
         (project_path / dir_path).mkdir(parents=True, exist_ok=True)
@@ -304,7 +304,7 @@ def init_project(
             "created_at": created_at,
             "target_words": int(target_words),
             "target_chapters": int(target_chapters),
-            # 下面필드属于“초기화元信息”，不影响실행时脚本
+            # 아래 필드는 "초기화 메타 정보"로, 런타임 스크립트에 영향 없음
             "golden_finger_name": golden_finger_name,
             "golden_finger_type": golden_finger_type,
             "golden_finger_style": golden_finger_style,
@@ -370,15 +370,15 @@ def init_project(
             genre_templates.append(template_text.strip())
     genre_template = "\n\n---\n\n".join(genre_templates)
     golden_finger_templates = _read_text_if_exists(templates_dir / "golden-finger-templates.md")
-    output_worldview = _read_text_if_exists(output_templates_dir / "设定集-세계관.md")
-    output_power = _read_text_if_exists(output_templates_dir / "设定集-力量体系.md")
-    output_protagonist = _read_text_if_exists(output_templates_dir / "设定集-主角卡.md")
-    output_heroine = _read_text_if_exists(output_templates_dir / "设定集-女主卡.md")
-    output_team = _read_text_if_exists(output_templates_dir / "设定集-主角组.md")
-    output_golden_finger = _read_text_if_exists(output_templates_dir / "设定集-골든핑거.md")
-    output_outline = _read_text_if_exists(output_templates_dir / "大纲-总纲.md")
-    output_fusion = _read_text_if_exists(output_templates_dir / "복합 장르-融合逻辑.md")
-    output_antagonist = _read_text_if_exists(output_templates_dir / "设定集-反派设计.md")
+    output_worldview = _read_text_if_exists(output_templates_dir / "settings-worldview.md")
+    output_power = _read_text_if_exists(output_templates_dir / "settings-power-system.md")
+    output_protagonist = _read_text_if_exists(output_templates_dir / "settings-protagonist.md")
+    output_heroine = _read_text_if_exists(output_templates_dir / "settings-heroine.md")
+    output_team = _read_text_if_exists(output_templates_dir / "settings-team.md")
+    output_golden_finger = _read_text_if_exists(output_templates_dir / "settings-golden-finger.md")
+    output_outline = _read_text_if_exists(output_templates_dir / "outline-master.md")
+    output_fusion = _read_text_if_exists(output_templates_dir / "settings-genre-fusion.md")
+    output_antagonist = _read_text_if_exists(output_templates_dir / "settings-antagonist.md")
 
     # 기본 파일(결여 시에만 생성, 기존 내용 덮어쓰기 방지)
     now = datetime.now().strftime("%Y-%m-%d")
@@ -389,40 +389,40 @@ def init_project(
             [
                 "# 세계관",
                 "",
-                f"> 项目：{title}｜장르：{genre}｜创建：{now}",
+                f"> 프로젝트：{title}｜장르：{genre}｜생성：{now}",
                 "",
-                "## 一句话세계관",
-                "- （用一句话说明世界的핵심规则와卖点）",
+                "## 한 줄 세계관",
+                "- （한 줄로 세계의 핵심 규칙과 셀링포인트를 설명）",
                 "",
-                "## 핵심规则（设定即物理）",
-                "- 规则1：",
-                "- 规则2：",
-                "- 规则3：",
+                "## 핵심 규칙（설정이 곧 물리）",
+                "- 규칙1：",
+                "- 규칙2：",
+                "- 규칙3：",
                 "",
-                "## 세력와地理（简版）",
-                "- 主要세력：",
-                "- 关键장소：",
+                "## 세력과 지리（간략판）",
+                "- 주요 세력：",
+                "- 핵심 장소：",
                 "",
-                "## 参考장르模板（可删/可改）",
+                "## 참고 장르 템플릿（삭제/수정 가능）",
                 "",
-                (genre_template.strip() + "\n") if genre_template else "（찾을 수 없음对应장르模板，可自行补充）\n",
+                (genre_template.strip() + "\n") if genre_template else "（해당 장르 템플릿을 찾을 수 없음, 직접 보충 가능）\n",
             ]
         ).rstrip() + "\n"
     else:
         worldview_content = _apply_label_replacements(
             worldview_content,
             {
-                "大陆/位面수량": world_scale,
+                "대륙/차원 수량": world_scale,
                 "핵심세력": factions,
                 "사회 계층": social_class,
-                "자원 분배规则": resource_distribution,
+                "자원 분배 규칙": resource_distribution,
                 "문파/조직 계층": sect_hierarchy,
                 "화폐 체계": currency_system,
-                "兑换规则": currency_exchange,
+                "환전 규칙": currency_exchange,
             },
         )
     _write_text_if_missing(
-        project_path / "设定集" / "세계관.md",
+        project_path / "settings" / "worldview.md",
         worldview_content,
     )
 
@@ -430,21 +430,21 @@ def init_project(
     if not power_content:
         power_content = "\n".join(
             [
-                "# 力量体系",
+                "# 능력 체계",
                 "",
-                f"> 项目：{title}｜장르：{genre}｜创建：{now}",
+                f"> 프로젝트：{title}｜장르：{genre}｜생성：{now}",
                 "",
-                "## 등급/경지划分",
-                "- （列出从弱到强的등급，포함突破건件와代价）",
+                "## 등급/경지 구분",
+                "- （약한 것부터 강한 것까지 등급을 나열하고, 돌파 조건과 대가를 포함）",
                 "",
-                "## 技能/招式规则",
-                "- 获得方式：",
-                "- 成本와副作用：",
-                "- 进阶와组合：",
+                "## 기술/초식 규칙",
+                "- 획득 방식：",
+                "- 비용과 부작용：",
+                "- 승급과 조합：",
                 "",
-                "## 禁止事项（防崩坏）",
-                "- 未达등급不得使用高阶能力（设定即物理）",
-                "- 신규能力必须申报并入库（发明需申报）",
+                "## 금지 사항（설정 붕괴 방지）",
+                "- 등급 미달 시 고급 능력 사용 불가（설정이 곧 물리）",
+                "- 신규 능력은 반드시 신고 후 등록（발명 시 신고 필요）",
                 "",
             ]
         ).rstrip() + "\n"
@@ -452,13 +452,13 @@ def init_project(
         power_content = _apply_label_replacements(
             power_content,
             {
-                "体系类型": power_system_type,
+                "체계 유형": power_system_type,
                 "전형적인 경지 체인（선택）": cultivation_chain,
                 "소경지 구분": cultivation_subtiers,
             },
         )
     _write_text_if_missing(
-        project_path / "设定集" / "力量体系.md",
+        project_path / "settings" / "power-system.md",
         power_content,
     )
 
@@ -466,25 +466,25 @@ def init_project(
     if not protagonist_content:
         protagonist_content = "\n".join(
             [
-                "# 主角卡",
+                "# 주인공 카드",
                 "",
-                f"> 主角：{protagonist_name or '（작성 예정）'}｜项目：{title}｜创建：{now}",
+                f"> 주인공：{protagonist_name or '（작성 예정）'}｜프로젝트：{title}｜생성：{now}",
                 "",
-                "## 三要素",
-                f"- 欲望：{protagonist_desire or '（작성 예정）'}",
-                f"- 弱点：{protagonist_flaw or '（작성 예정）'}",
-                f"- 명设类型：{protagonist_archetype or '（작성 예정）'}",
+                "## 3요소",
+                f"- 욕망：{protagonist_desire or '（작성 예정）'}",
+                f"- 결함：{protagonist_flaw or '（작성 예정）'}",
+                f"- 캐릭터 유형：{protagonist_archetype or '（작성 예정）'}",
                 "",
-                "## 初始상태（开局）",
+                "## 초기 상태（오프닝）",
                 "- 신분：",
-                "- 资源：",
-                "- 约束：",
+                "- 자원：",
+                "- 제약：",
                 "",
-                "## 골든핑거概览",
-                f"- 称呼：{golden_finger_name or '（작성 예정）'}",
-                f"- 类型：{golden_finger_type or '（작성 예정）'}",
-                f"- 风格：{golden_finger_style or '（작성 예정）'}",
-                "- 成长曲线：",
+                "## 골든핑거 개요",
+                f"- 호칭：{golden_finger_name or '（작성 예정）'}",
+                f"- 유형：{golden_finger_type or '（작성 예정）'}",
+                f"- 스타일：{golden_finger_style or '（작성 예정）'}",
+                "- 성장 곡선：",
                 "",
             ]
         ).rstrip() + "\n"
@@ -492,13 +492,13 @@ def init_project(
         protagonist_content = _apply_label_replacements(
             protagonist_content,
             {
-                "姓名": protagonist_name,
-                "真正渴望（可能不自知）": protagonist_desire,
-                "性格缺陷": protagonist_flaw,
+                "이름": protagonist_name,
+                "진정한 갈망（본인이 모를 수 있음）": protagonist_desire,
+                "성격 결함": protagonist_flaw,
             },
         )
     _write_text_if_missing(
-        project_path / "设定集" / "主角卡.md",
+        project_path / "settings" / "protagonist.md",
         protagonist_content,
     )
 
@@ -507,11 +507,11 @@ def init_project(
         heroine_content = _apply_label_replacements(
             heroine_content,
             {
-                "姓名": heroine_names,
-                "와主角관계定位（对手/盟友/共谋/牵制）": heroine_role,
+                "이름": heroine_names,
+                "주인공과의 관계 포지션（라이벌/동맹/공모/견제）": heroine_role,
             },
         )
-        _write_text_if_missing(project_path / "设定集" / "女主卡.md", heroine_content)
+        _write_text_if_missing(project_path / "settings" / "heroine.md", heroine_content)
 
     team_content = output_team.strip() if output_team else ""
     if team_content:
@@ -523,16 +523,16 @@ def init_project(
             replaced = False
             out_lines: List[str] = []
             for line in lines:
-                if line.strip().startswith("| 主角A"):
+                if line.strip().startswith("| 주인공A"):
                     out_lines.extend(new_rows)
                     replaced = True
                     continue
-                if replaced and line.strip().startswith("| 主角"):
+                if replaced and line.strip().startswith("| 주인공"):
                     continue
                 out_lines.append(line)
             team_content = "\n".join(out_lines)
         _write_text_if_missing(
-            project_path / "设定集" / "主角组.md",
+            project_path / "settings" / "team.md",
             team_content,
         )
 
@@ -540,49 +540,49 @@ def init_project(
     if not golden_finger_content:
         golden_finger_content = "\n".join(
             [
-                "# 골든핑거设计",
+                "# 골든핑거 설계",
                 "",
-                f"> 项目：{title}｜장르：{genre}｜创建：{now}",
+                f"> 프로젝트：{title}｜장르：{genre}｜생성：{now}",
                 "",
-                "## 选型",
-                f"- 称呼：{golden_finger_name or '（작성 예정）'}",
-                f"- 类型：{golden_finger_type or '（작성 예정）'}",
-                f"- 风格：{golden_finger_style or '（작성 예정）'}",
+                "## 선택",
+                f"- 호칭：{golden_finger_name or '（작성 예정）'}",
+                f"- 유형：{golden_finger_type or '（작성 예정）'}",
+                f"- 스타일：{golden_finger_style or '（작성 예정）'}",
                 "",
-                "## 规则（必须写清）",
-                "- 触发건件：",
-                "- 쿨다운/代价：",
-                "- 上限：",
-                "- 反噬/风险：",
+                "## 규칙（반드시 명시）",
+                "- 발동 조건：",
+                "- 쿨다운/대가：",
+                "- 상한：",
+                "- 반작용/리스크：",
                 "",
-                "## 成长曲线（챕터规划）",
+                "## 성장 곡선（챕터 계획）",
                 "- Lv1：",
                 "- Lv2：",
                 "- Lv3：",
                 "",
-                "## 模板参考（可删/可改）",
+                "## 템플릿 참고（삭제/수정 가능）",
                 "",
-                (golden_finger_templates.strip() + "\n") if golden_finger_templates else "（찾을 수 없음골든핑거模板库）\n",
+                (golden_finger_templates.strip() + "\n") if golden_finger_templates else "（골든핑거 템플릿 라이브러리를 찾을 수 없음）\n",
             ]
         ).rstrip() + "\n"
     else:
         golden_finger_content = _apply_label_replacements(
             golden_finger_content,
             {
-                "类型": golden_finger_type,
-                "读者可见度": gf_visibility,
-                "不可逆代价": gf_irreversible_cost,
+                "유형": golden_finger_type,
+                "독자 가시성": gf_visibility,
+                "불가역적 대가": gf_irreversible_cost,
             },
         )
     _write_text_if_missing(
-        project_path / "设定集" / "골든핑거设计.md",
+        project_path / "settings" / "golden-finger.md",
         golden_finger_content,
     )
 
     fusion_content = output_fusion.strip() if output_fusion else ""
     if fusion_content:
         _write_text_if_missing(
-            project_path / "设定集" / "복합 장르-融合逻辑.md",
+            project_path / "settings" / "genre-fusion.md",
             fusion_content,
         )
 
@@ -590,15 +590,15 @@ def init_project(
     if not antagonist_content:
         antagonist_content = "\n".join(
             [
-                "# 反派设计",
+                "# 악역 설계",
                 "",
-                f"> 项目：{title}｜创建：{now}",
+                f"> 프로젝트：{title}｜생성：{now}",
                 "",
-                f"- 反派등급：{antagonist_level or '（작성 예정）'}",
-                "- 动机：",
-                "- 资源/세력：",
-                "- 와主角的镜像관계：",
-                "- 终局：",
+                f"- 악역 등급：{antagonist_level or '（작성 예정）'}",
+                "- 동기：",
+                "- 자원/세력：",
+                "- 주인공과의 거울상 관계：",
+                "- 결말：",
                 "",
             ]
         ).rstrip() + "\n"
@@ -608,50 +608,50 @@ def init_project(
             lines = antagonist_content.splitlines()
             out_lines = []
             for line in lines:
-                if line.strip().startswith("| 小反派"):
-                    name = tier_map.get("小反派", "")
-                    out_lines.append(f"| 小反派 | {name} | 前期 | | |")
+                if line.strip().startswith("| 소반파"):
+                    name = tier_map.get("소반파", "")
+                    out_lines.append(f"| 소반파 | {name} | 전기 | | |")
                     continue
-                if line.strip().startswith("| 中反派"):
-                    name = tier_map.get("中反派", "")
-                    out_lines.append(f"| 中反派 | {name} | 中期 | | |")
+                if line.strip().startswith("| 중반파"):
+                    name = tier_map.get("중반파", "")
+                    out_lines.append(f"| 중반파 | {name} | 중기 | | |")
                     continue
-                if line.strip().startswith("| 大反派"):
-                    name = tier_map.get("大反派", "")
-                    out_lines.append(f"| 大反派 | {name} | 后期 | | |")
+                if line.strip().startswith("| 대반파"):
+                    name = tier_map.get("대반파", "")
+                    out_lines.append(f"| 대반파 | {name} | 후기 | | |")
                     continue
                 out_lines.append(line)
             antagonist_content = "\n".join(out_lines)
-    _write_text_if_missing(project_path / "设定集" / "反派设计.md", antagonist_content)
+    _write_text_if_missing(project_path / "settings" / "antagonist.md", antagonist_content)
 
     outline_content = output_outline.strip() if output_outline else ""
     if outline_content:
         outline_content = _inject_volume_rows(outline_content, int(target_chapters)).rstrip() + "\n"
     else:
         outline_content = _build_master_outline(int(target_chapters))
-    _write_text_if_missing(project_path / "大纲" / "总纲.md", outline_content)
+    _write_text_if_missing(project_path / "outline" / "master.md", outline_content)
 
     _write_text_if_missing(
-        project_path / "大纲" / "爽点规划.md",
+        project_path / "outline" / "highlights.md",
         "\n".join(
             [
-                "# 爽点规划",
+                "# 쾌감포인트 계획",
                 "",
-                f"> 项目：{title}｜장르：{genre}｜创建：{now}",
+                f"> 프로젝트：{title}｜장르：{genre}｜생성：{now}",
                 "",
-                "## 핵심卖点（来自초기화输入）",
-                f"- {core_selling_points or '（작성 예정，제안 1-3 건，用逗号分隔）'}",
+                "## 핵심 셀링포인트（초기화 입력에서 가져옴）",
+                f"- {core_selling_points or '（작성 예정, 1-3건 제안, 쉼표로 구분）'}",
                 "",
-                "## 密度목표（제안）",
-                "- 每章至少 1 个小爽点",
-                "- 每 5 章至少 1 个大爽点",
+                "## 밀도 목표（제안）",
+                "- 매 챕터 최소 1개 소 쾌감포인트",
+                "- 매 5챕터 최소 1개 대 쾌감포인트",
                 "",
-                "## 分布表（예시，可改）",
+                "## 분포표（예시, 수정 가능）",
                 "",
-                "| 챕터 범위 | 主导爽点类型 | 备注 |",
+                "| 챕터 범위 | 주도 쾌감포인트 유형 | 비고 |",
                 "|---|---|---|",
-                "| 1-5 | 골든핑거/打脸/反转 | 开篇钩子 + 立명设 |",
-                "| 6-10 | 升级/收获 | 进入메인 스토리节奏 |",
+                "| 1-5 | 골든핑거/체면 구기기/반전 | 오프닝 훅 + 캐릭터 확립 |",
+                "| 6-10 | 레벨업/보상 | 메인 스토리 리듬 진입 |",
                 "",
             ]
         ),
@@ -746,12 +746,12 @@ __pycache__/
     print(f"\nProject initialized at: {project_path}")
     print("Key files:")
     print(" - .webnovel/state.json")
-    print(" - 设定集/세계관.md")
-    print(" - 设定集/力量体系.md")
-    print(" - 设定集/主角卡.md")
-    print(" - 设定集/골든핑거设计.md")
-    print(" - 大纲/总纲.md")
-    print(" - 大纲/爽点规划.md")
+    print(" - settings/worldview.md")
+    print(" - settings/power-system.md")
+    print(" - settings/protagonist.md")
+    print(" - settings/golden-finger.md")
+    print(" - outline/master.md")
+    print(" - outline/highlights.md")
 
 
 def main() -> None:
@@ -760,7 +760,7 @@ def main() -> None:
     parser.add_argument("title", help="소설 제목")
     parser.add_argument(
         "genre",
-        help="장르 유형（可用“+”组合，如：都市脑洞+规则怪谈；예시：修仙/系统流/都市异能/古言/现实장르）",
+        help="장르 유형（'+'로 조합 가능, 예: 도시기발+규칙괴담; 예시: 수선/시스템류/도시이능/고대로맨스/현실장르）",
     )
 
     parser.add_argument("--protagonist-name", default="", help="주인공 이름")
@@ -768,8 +768,8 @@ def main() -> None:
     parser.add_argument("--target-chapters", type=int, default=600, help="목표 총 챕터 수（기본값 600）")
 
     parser.add_argument("--golden-finger-name", default="", help="골든핑거 호칭/시스템명(독자에게 보이는 코드명 권장)")
-    parser.add_argument("--golden-finger-type", default="", help="골든핑거 유형（如 系统流/鉴定流/签到流）")
-    parser.add_argument("--golden-finger-style", default="", help="골든핑거 스타일（如 冷漠工具型/毒舌吐槽型）")
+    parser.add_argument("--golden-finger-type", default="", help="골든핑거 유형（예: 시스템류/감정류/출석류）")
+    parser.add_argument("--golden-finger-style", default="", help="골든핑거 스타일（예: 냉담 도구형/독설 츳코미형）")
     parser.add_argument("--core-selling-points", default="", help="핵심 셀링포인트(쉼표 구분)")
     parser.add_argument("--protagonist-structure", default="", help="주인공 구조(단일 주인공/다중 주인공)")
     parser.add_argument("--heroine-config", default="", help="여주인공 설정(여주 없음/단일 여주/다중 여주)")
@@ -777,7 +777,7 @@ def main() -> None:
     parser.add_argument("--heroine-role", default="", help="여주인공 포지션(커리어 라인/감정 라인/대립 라인)")
     parser.add_argument("--co-protagonists", default="", help="다중 주인공 이름(쉼표 구분)")
     parser.add_argument("--co-protagonist-roles", default="", help="다중 주인공 포지션(쉼표 구분)")
-    parser.add_argument("--antagonist-tiers", default="", help="악역 계층화（如 小反派:张三;中反派:李四;大反派:王五）")
+    parser.add_argument("--antagonist-tiers", default="", help="악역 계층화（예: 소반파:홍길동;중반파:이몽룡;대반파:변학도）")
     parser.add_argument("--world-scale", default="", help="세계 규모")
     parser.add_argument("--factions", default="", help="세력 구도/핵심 세력")
     parser.add_argument("--power-system-type", default="", help="전투력 체계 유형")
@@ -789,9 +789,9 @@ def main() -> None:
     parser.add_argument("--currency-exchange", default="", help="화폐 환전/액면가 규칙")
     parser.add_argument("--sect-hierarchy", default="", help="문파/조직 계층")
     parser.add_argument("--cultivation-chain", default="", help="전형적인 경지 체인")
-    parser.add_argument("--cultivation-subtiers", default="", help="소경지 구분（初/中/后/巅 等）")
+    parser.add_argument("--cultivation-subtiers", default="", help="소경지 구분（초/중/후/정점 등）")
 
-    # 深度모드선택매개변수（用于预填模板）
+    # 심층 모드 선택 매개변수（템플릿 사전 입력용）
     parser.add_argument("--protagonist-desire", default="", help="주인공 핵심 욕망(심층 모드)")
     parser.add_argument("--protagonist-flaw", default="", help="주인공 성격 약점(심층 모드)")
     parser.add_argument("--protagonist-archetype", default="", help="주인공 캐릭터 유형(심층 모드)")

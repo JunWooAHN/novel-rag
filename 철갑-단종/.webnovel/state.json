@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "title": "철갑 단종",
+    "genre": "역사기발",
+    "created_at": "2026-04-08",
+    "target_words": 300000,
+    "target_chapters": 150,
+    "golden_finger_name": "HEMA/야금 지식",
+    "golden_finger_type": "지식 특화형",
+    "golden_finger_style": "하드코어",
+    "core_selling_points": "HEMA 덕후가 단종이 되어 쇠를 두드리고 삼촌을 직접 베며 급격히 미쳐가는 대체역사",
+    "protagonist_structure": "단일 주인공",
+    "heroine_config": "서브 로맨스",
+    "heroine_names": "",
+    "heroine_role": "정략결혼 등 역사 인물 기반",
+    "co_protagonists": "",
+    "co_protagonist_roles": "",
+    "antagonist_tiers": "{\"소\":\"조선 내부 반대파\",\"중\":\"수양대군(직접 참수)\",\"대\":\"홍치제 시대 명나라\"}",
+    "world_scale": "전 세계",
+    "factions": "조선 왕권파 vs 외부 세력(여진/일본/명)",
+    "power_system_type": "기술 문명 (철강/콘크리트/HEMA)",
+    "social_class": "조선 신분제 기반",
+    "resource_distribution": "철광석/초석/목재 중심",
+    "gf_visibility": "세종·문종의 피를 이은 천재로 인식",
+    "gf_irreversible_cost": "전장 경험으로 인한 급격한 정신 붕괴(소시오패스화)",
+    "target_reader": "역사 대체역사/밀리터리/사이다물 독자",
+    "platform": "한국 웹소설 플랫폼",
+    "currency_system": "",
+    "currency_exchange": "",
+    "sect_hierarchy": "",
+    "cultivation_chain": "",
+    "cultivation_subtiers": ""
+  },
+  "progress": {
+    "current_chapter": 0,
+    "total_words": 0,
+    "last_updated": "2026-04-08 17:34:55",
+    "volumes_completed": [],
+    "current_volume": 1,
+    "volumes_planned": []
+  },
+  "protagonist_state": {
+    "name": "대붕이(단종)",
+    "power": {
+      "realm": "",
+      "layer": 1,
+      "bottleneck": ""
+    },
+    "location": {
+      "current": "",
+      "last_chapter": 0
+    },
+    "golden_finger": {
+      "name": "HEMA/야금 지식",
+      "level": 1,
+      "cooldown": 0,
+      "skills": []
+    },
+    "attributes": {}
+  },
+  "relationships": {},
+  "disambiguation_warnings": [],
+  "disambiguation_pending": [],
+  "world_settings": {
+    "power_system": [],
+    "factions": [],
+    "locations": []
+  },
+  "plot_threads": {
+    "active_threads": [],
+    "foreshadowing": []
+  },
+  "review_checkpoints": [],
+  "chapter_meta": {},
+  "strand_tracker": {
+    "last_quest_chapter": 0,
+    "last_fire_chapter": 0,
+    "last_constellation_chapter": 0,
+    "current_dominant": "quest",
+    "chapters_since_switch": 0,
+    "history": []
+  }
+}

@@ -107,7 +107,7 @@ def _build_risk_flags(
     critical_total = _to_int(severity_totals.get("critical"))
     high_total = _to_int(severity_totals.get("high"))
     if critical_total > 0:
-        flags.append(f"存在 {critical_total} 개 critical 문제, 최우선 수정 우선순위로 설정 권장.")
+        flags.append(f"{critical_total}개 critical 문제 존재, 최우선 수정 우선순위로 설정 권장.")
     elif high_total >= 5:
         flags.append(f"high 문제 누적 {high_total} 개, 일괄 수정 전담 권장.")
 
@@ -213,7 +213,7 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.project_root:
-        # 允许传入“工作区根目录”，统一解析到真正的 book project_root
+        # “워크스페이스 루트 디렉토리” 전달 허용, 실제 book project_root로 통합 해석
         project_root = resolve_project_root(args.project_root)
     else:
         project_root = resolve_project_root()

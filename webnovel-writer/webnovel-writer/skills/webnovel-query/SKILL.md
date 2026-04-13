@@ -8,7 +8,7 @@ allowed-tools: Read Grep Bash AskUserQuestion
 
 ## Project Root Guard (반드시 먼저 확인)
 
-- Claude Code의 "작업 영역 루트 디렉토리"가 반드시 "책 프로젝트 루트 디렉토리"와 같지는 않습니다. 일반적인 구조: 작업 영역이 `D:\wk\xiaoshuo`이고, 책 프로젝트가 `D:\wk\xiaoshuo\凡人资本论`인 경우.
+- Claude Code의 "작업 영역 루트 디렉토리"가 반드시 "책 프로젝트 루트 디렉토리"와 같지는 않습니다. 일반적인 구조: 작업 영역이 `D:\wk\소설`이고, 책 프로젝트가 `D:\wk\소설\범인자본론`인 경우.
 - 반드시 실제 책 프로젝트 루트(반드시 `.webnovel/state.json` 포함)를 먼저 해석한 후, 이후 모든 읽기/쓰기 경로를 해당 디렉토리 기준으로 합니다.
 - 플러그인 디렉토리 `${CLAUDE_PLUGIN_ROOT}/` 하위에서 프로젝트 파일을 읽거나 쓰는 것을 **금지**합니다.
 
@@ -118,11 +118,11 @@ cat "$PROJECT_ROOT/.webnovel/state.json"
 
 | 키워드 | 검색 대상 |
 |--------|---------|
-| 캐릭터/주인공/조연 | 主角卡.md, 角色库/ |
-| 경계/실력 | 力量体系.md |
-| 종문/세력 | 世界观.md |
-| 아이템/보물 | 物品库/ |
-| 장소/비경 | 世界观.md |
+| 캐릭터/주인공/조연 | protagonist.md, characters/ |
+| 경계/실력 | power-system.md |
+| 종문/세력 | worldview.md |
+| 아이템/보물 | items/ |
+| 장소/비경 | worldview.md |
 
 ### 복선 긴급도 분석
 

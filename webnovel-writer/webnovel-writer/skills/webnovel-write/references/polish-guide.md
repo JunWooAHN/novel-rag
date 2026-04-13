@@ -23,7 +23,7 @@ Step 2B를 이미 실행했다면, 본 단계에서 전량 문체 개작을 반�
 
 ```json
 {
-  "chapter_file": "正文/第0123章-章节标题.md",
+  "chapter_file": "chapters/chapter_0123-챕터제목.md",
   "overall_score": 82,
   "issues": [
     {"agent": "consistency-checker", "type": "POWER_CONFLICT", "severity": "critical", "location": "제6단락", "suggestion": "경지 월권"},
@@ -33,7 +33,7 @@ Step 2B를 이미 실행했다면, 본 단계에서 전량 문체 개작을 반�
 }
 ```
 
-`chapter_file`은 반드시 현재 챕터의 실제 파일 경로여야 합니다. 프로젝트가 제목 포함 파일명으로 아직 마이그레이션하지 않은 경우 `正文/第0123章.md`도 전달 가능합니다.
+`chapter_file`은 반드시 현재 챕터의 실제 파일 경로여야 합니다. 프로젝트가 제목 포함 파일명으로 아직 마이그레이션하지 않은 경우 `chapters/chapter_0123.md`도 전달 가능합니다.
 
 ## 2. 실행 순서 (반드시 순서대로)
 

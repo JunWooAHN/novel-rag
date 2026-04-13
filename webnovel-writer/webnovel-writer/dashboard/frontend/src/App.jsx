@@ -129,7 +129,7 @@ function DashboardPage({ data }) {
 
     const unresolvedForeshadow = foreshadowing.filter(f => {
         const s = (f.status || '').toLowerCase()
-        return s !== '已回收' && s !== '已兑现' && s !== 'resolved'
+        return s !== '회수됨' && s !== '실현됨' && s !== 'resolved'
     })
 
     // Strand 히스토리 통계
@@ -357,8 +357,8 @@ function GraphPage() {
         ]).then(([rels, ents]) => {
             setRelationships(rels)
             const typeColors = {
-                '角色': '#4f8ff7', '地点': '#34d399', '星球': '#22d3ee', '神仙': '#f59e0b',
-                '势力': '#8b5cf6', '招式': '#ef4444', '法宝': '#ec4899'
+                '캐릭터': '#4f8ff7', '장소': '#34d399', '물품': '#22d3ee', '세력': '#f59e0b',
+                '초식': '#8b5cf6'
             }
             const relatedIds = new Set()
             rels.forEach(r => { relatedIds.add(r.from_entity); relatedIds.add(r.to_entity) })

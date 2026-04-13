@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-RAG Adapter - RAG 检索适配模块
+RAG Adapter - RAG 검색 어댑터 모듈
 
-封装向量检索功能：
-- 向量嵌入 (调用 Modal API)
-- 语义搜索
-- 重排序
-- 混合检索 (向量 + BM25)
+벡터 검색 기능 캡슐화:
+- 벡터 임베딩 (Modal API 호출)
+- 시맨틱 검색
+- 리랭킹
+- 하이브리드 검색 (벡터 + BM25)
 """
 
 import asyncio
@@ -53,7 +53,7 @@ VECTOR_REQUIRED_COLUMNS = (
 
 @dataclass
 class SearchResult:
-    """搜索结果"""
+    """검색 결과"""
     chunk_id: str
     chapter: int
     scene_index: int
@@ -66,7 +66,7 @@ class SearchResult:
 
 
 class RAGAdapter:
-    """RAG 检索适配器"""
+    """RAG 검색 어댑터"""
 
     def __init__(self, config=None):
         self.config = config or get_config()
@@ -88,7 +88,7 @@ class RAGAdapter:
             self._degraded_mode_reason = "embedding_auth_failed"
 
     def _init_db(self):
-        """초기화向量数据库"""
+        """벡터 DB 초기화"""
         self.config.ensure_dirs()
         needs_migration, existing_cols = self._inspect_vectors_schema()
         if needs_migration:
@@ -99,15 +99,15 @@ class RAGAdapter:
                     self._rebuild_vectors_table(cursor, existing_cols)
                     conn.commit()
                 logger.warning(
-                    "vectors 表结构완료迁移（备份: %s）",
+                    "vectors 테이블 구조 마이그레이션 완료 (백업: %s)",
                     str(backup_path),
                 )
             except Exception:
                 try:
                     self._restore_vector_db_from_backup(backup_path)
-                    logger.error("vectors 表迁移실패，백업에서 복구 완료: %s", str(backup_path))
+                    logger.error("vectors 테이블 마이그레이션 실패, 백업에서 복구 완료: %s", str(backup_path))
                 except Exception as restore_exc:
-                    logger.exception("vectors 表迁移실패，且恢复백업 실패: %s", restore_exc)
+                    logger.exception("vectors 테이블 마이그레이션 실패, 백업 복구도 실패: %s", restore_exc)
                 raise
 
         with self._get_conn() as conn:
@@ -204,7 +204,7 @@ class RAGAdapter:
         )
 
     def _ensure_tables(self, cursor) -> None:
-        # 向量스토리지表
+        # 벡터 저장 테이블
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS vectors (
                 chunk_id TEXT PRIMARY KEY,
@@ -219,7 +219,7 @@ class RAGAdapter:
             )
         """)
 
-        # BM25 倒排索引表
+        # BM25 역색인 테이블
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS bm25_index (
                 term TEXT,
@@ -229,7 +229,7 @@ class RAGAdapter:
             )
         """)
 
-        # 文档통계表
+        # 문서 통계 테이블
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS doc_stats (
                 chunk_id TEXT PRIMARY KEY,
@@ -237,7 +237,7 @@ class RAGAdapter:
             )
         """)
 
-        # 创建索引
+        # 인덱스 생성
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_vectors_chapter ON vectors(chapter)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_vectors_parent ON vectors(parent_chunk_id)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_vectors_type ON vectors(chunk_type)")
@@ -245,7 +245,7 @@ class RAGAdapter:
 
     @contextmanager
     def _get_conn(self):
-        """获取数据库连接（确保关闭，避免 Windows 下文件句柄泄漏）"""
+        """DB 연결 획득 (닫기 보장, Windows에서 파일 핸들 누수 방지)"""
         conn = sqlite3.connect(str(self.config.vector_db))
         try:
             yield conn
@@ -313,7 +313,7 @@ class RAGAdapter:
         if not chunk_ids:
             return []
 
-        # SQLite 매개변수수량限制（기본값 999），这里做分片쿼리
+        # SQLite 매개변수 수량 제한 (기본값 999), 분할 쿼리 수행
         def _chunks(xs: List[str], size: int = 500):
             it = iter(xs)
             while True:
@@ -374,39 +374,39 @@ class RAGAdapter:
         results.sort(key=lambda x: x.score, reverse=True)
         return results[:top_k]
 
-    # ==================== 向量스토리지 ====================
+    # ==================== 벡터 저장 ====================
 
     async def store_chunks(self, chunks: List[Dict]) -> int:
         """
-        스토리지场景切片的向量
+        장면 chunk의 벡터를 저장
 
-        chunks 格式:
+        chunks 형식:
         [
             {
                 "chapter": 100,
                 "scene_index": 1,
-                "content": "场景内容...",
+                "content": "장면 내용...",
                 "chunk_type": "scene",
                 "parent_chunk_id": "ch0100_summary",
-                "source_file": "正文/第0100章.md#scene_1"
+                "source_file": "chapters/chapter_0100.md#scene_1"
             }
         ]
 
-        반환스토리지수량
+        반환: 저장 수량
         """
         if not chunks:
             return 0
 
-        # 추출内容用于嵌入
+        # 임베딩을 위한 내용 추출
         contents = [c.get("content", "") for c in chunks]
 
-        # 调用 API 获取嵌入向量（可能포함 None 表示실패）
+        # API 호출로 임베딩 벡터 획득 (None은 실패를 의미할 수 있음)
         embeddings = await self.api_client.embed_batch(contents)
 
         if not embeddings:
             return 0
 
-        # 스토리지到数据库（跳过嵌入실패的 chunk）
+        # DB에 저장 (임베딩 실패한 chunk는 건너뜀)
         stored = 0
         skipped = 0
         errors = []
@@ -415,7 +415,7 @@ class RAGAdapter:
 
             for chunk, embedding in zip(chunks, embeddings):
                 if embedding is None:
-                    # 嵌入실패，跳过该 chunk（仅스토리지 BM25 索引供키워드检索）
+                    # 임베딩 실패, 해당 chunk 건너뜀 (BM25 인덱스만 저장하여 키워드 검색 지원)
                     skipped += 1
                     chunk_id = chunk.get("chunk_id")
                     if not chunk_id:
@@ -437,7 +437,7 @@ class RAGAdapter:
                     else:
                         chunk_id = f"ch{int(chunk['chapter']):04d}_s{int(chunk['scene_index'])}"
 
-                # 将向量序列化为 bytes
+                # 벡터를 bytes로 직렬화
                 embedding_bytes = self._serialize_embedding(embedding)
 
                 cursor.execute("""
@@ -455,7 +455,7 @@ class RAGAdapter:
                     chunk.get("source_file"),
                 ))
 
-                # 同时更新 BM25 索引
+                # BM25 인덱스도 동시에 수정
                 try:
                     self._update_bm25_index(cursor, chunk_id, chunk.get("content", ""))
                 except Exception as e:
@@ -469,7 +469,7 @@ class RAGAdapter:
                 logger.error("SQLite commit failed: %s", e)
                 errors.append(f"SQLite commit failed: {e}")
 
-        # 输出경고日志
+        # 경고 로그 출력
         if skipped > 0:
             logger.warning(
                 "Vector embedding: %s stored, %s skipped (embedding failed)",
@@ -478,18 +478,18 @@ class RAGAdapter:
             )
         if errors:
 
-            for err in errors[:5]:  # 最多显示5건
+            for err in errors[:5]:  # 최대 5건 표시
                 logger.warning("%s", err)
 
         return stored
 
     def _serialize_embedding(self, embedding: List[float]) -> bytes:
-        """序列化向量"""
+        """벡터 직렬화"""
         import struct
         return struct.pack(f"{len(embedding)}f", *embedding)
 
     def _deserialize_embedding(self, data: bytes) -> List[float]:
-        """反序列化向量"""
+        """벡터 역직렬화"""
         import struct
         count = len(data) // 4
         return list(struct.unpack(f"{count}f", data))
@@ -515,33 +515,33 @@ class RAGAdapter:
         except Exception as exc:
             logger.warning("failed to log rag query: %s", exc)
 
-    # ==================== BM25 索引 ====================
+    # ==================== BM25 인덱스 ====================
 
     def _tokenize(self, text: str) -> List[str]:
-        """简单分词（中文按자符，英文按单词）"""
-        # 中文자符
+        """간단 토큰화 (중국어는 글자 단위, 영어는 단어 단위)"""
+        # 중국어 글자
         chinese = re.findall(r'[\u4e00-\u9fff]+', text)
         chinese_chars = list("".join(chinese))
 
-        # 英文单词
+        # 영어 단어
         english = re.findall(r'[a-zA-Z]+', text.lower())
 
         return chinese_chars + english
 
     def _update_bm25_index(self, cursor, chunk_id: str, content: str):
-        """更新 BM25 索引"""
-        # 삭제旧索引
+        """BM25 인덱스 수정"""
+        # 기존 인덱스 삭제
         cursor.execute("DELETE FROM bm25_index WHERE chunk_id = ?", (chunk_id,))
         cursor.execute("DELETE FROM doc_stats WHERE chunk_id = ?", (chunk_id,))
 
-        # 分词
+        # 토큰화
         tokens = self._tokenize(content)
         doc_length = len(tokens)
 
-        # 计算词频
+        # 단어 빈도 계산
         tf_counter = Counter(tokens)
 
-        # 插入倒排索引
+        # 역색인 삽입
         for term, count in tf_counter.items():
             tf = count / doc_length if doc_length > 0 else 0
             cursor.execute("""
@@ -549,13 +549,13 @@ class RAGAdapter:
                 VALUES (?, ?, ?)
             """, (term, chunk_id, tf))
 
-        # 更新文档통계
+        # 문서 통계 수정
         cursor.execute("""
             INSERT INTO doc_stats (chunk_id, doc_length)
             VALUES (?, ?)
         """, (chunk_id, doc_length))
 
-    # ==================== 向量检索 ====================
+    # ==================== 벡터 검색 ====================
 
     async def vector_search(
         self,
@@ -565,11 +565,11 @@ class RAGAdapter:
         log_query: bool = True,
         chapter: int | None = None,
     ) -> List[SearchResult]:
-        """向量相似度搜索"""
+        """벡터 유사도 검색"""
         top_k = top_k or self.config.vector_top_k
         start_time = time.perf_counter()
 
-        # 获取쿼리向量
+        # 쿼리 벡터 획득
         query_embeddings = await self.api_client.embed([query])
         if not query_embeddings:
             self._update_degraded_mode()
@@ -579,7 +579,7 @@ class RAGAdapter:
 
         query_embedding = query_embeddings[0]
 
-        # 从数据库读取所有向量并计算相似度
+        # DB에서 모든 벡터를 읽어 유사도 계산
         with self._get_conn() as conn:
             cursor = conn.cursor()
             if chunk_type and chapter is not None:
@@ -626,7 +626,7 @@ class RAGAdapter:
                     continue
                 embedding = self._deserialize_embedding(embedding_bytes)
 
-                # 计算余弦相似度
+                # 코사인 유사도 계산
                 score = self._cosine_similarity(query_embedding, embedding)
 
                 results.append(SearchResult(
@@ -641,7 +641,7 @@ class RAGAdapter:
                     source_file=source_file,
                 ))
 
-        # 排序并반환 top_k
+        # 정렬 후 top_k 반환
         results.sort(key=lambda x: x.score, reverse=True)
         results = results[:top_k]
         if log_query:
@@ -650,7 +650,7 @@ class RAGAdapter:
         return results
 
     def _cosine_similarity(self, a: List[float], b: List[float]) -> float:
-        """计算余弦相似度"""
+        """코사인 유사도 계산"""
         dot_product = sum(x * y for x, y in zip(a, b))
         norm_a = math.sqrt(sum(x * x for x in a))
         norm_b = math.sqrt(sum(x * x for x in b))
@@ -658,7 +658,7 @@ class RAGAdapter:
             return 0.0
         return dot_product / (norm_a * norm_b)
 
-    # ==================== BM25 检索 ====================
+    # ==================== BM25 검색 ====================
 
     def bm25_search(
         self,
@@ -670,7 +670,7 @@ class RAGAdapter:
         log_query: bool = True,
         chapter: int | None = None,
     ) -> List[SearchResult]:
-        """BM25 키워드搜索"""
+        """BM25 키워드 검색"""
         top_k = top_k or self.config.bm25_top_k
         start_time = time.perf_counter()
 
@@ -681,17 +681,17 @@ class RAGAdapter:
         with self._get_conn() as conn:
             cursor = conn.cursor()
 
-            # 获取文档总数和平均长度
+            # 문서 총 수와 평균 길이 획득
             cursor.execute("SELECT COUNT(*), AVG(doc_length) FROM doc_stats")
             row = cursor.fetchone()
             total_docs = row[0] or 1
             avg_doc_length = row[1] or 1
 
-            # 计算每个文档的 BM25 점수
+            # 각 문서의 BM25 점수 계산
             doc_scores = {}
 
             for term in set(query_terms):
-                # 获取포함该词的文档
+                # 해당 단어를 포함하는 문서 조회
                 cursor.execute("""
                     SELECT b.chunk_id, b.tf, d.doc_length
                     FROM bm25_index b
@@ -709,14 +709,14 @@ class RAGAdapter:
                 idf = math.log((total_docs - df + 0.5) / (df + 0.5) + 1)
 
                 for chunk_id, tf, doc_length in docs_with_term:
-                    # BM25 公式
+                    # BM25 공식
                     score = idf * (tf * (k1 + 1)) / (tf + k1 * (1 - b + b * doc_length / avg_doc_length))
 
                     if chunk_id not in doc_scores:
                         doc_scores[chunk_id] = 0
                     doc_scores[chunk_id] += score
 
-            # 获取文档内容
+            # 문서 내용 조회
             results = []
             for chunk_id, score in doc_scores.items():
                 if chunk_type and chapter is not None:
@@ -777,14 +777,14 @@ class RAGAdapter:
         return results
 
     def _extract_query_seed_entities(self, query: str) -> List[str]:
-        """从쿼리中추출种子实体（통과별칭和实体 ID 匹配）。"""
+        """쿼리에서 시드 엔티티를 추출 (별칭 및 엔티티 ID 매칭)."""
         tokens = set(re.findall(r"[\u4e00-\u9fff]{2,8}|[A-Za-z][A-Za-z0-9_]{1,24}", query))
         entity_ids: List[str] = []
         for token in tokens:
             if len(entity_ids) >= int(self.config.graph_rag_max_expanded_entities):
                 break
 
-            # 1) 통과별칭匹配
+            # 1) 별칭으로 매칭
             alias_hits = self.index_manager.get_entities_by_alias(token)
             for hit in alias_hits:
                 entity_id = str(hit.get("id") or "").strip()
@@ -794,7 +794,7 @@ class RAGAdapter:
             if len(entity_ids) >= int(self.config.graph_rag_max_expanded_entities):
                 break
 
-            # 2) 통과实体 ID 直匹配
+            # 2) 엔티티 ID로 직접 매칭
             entity = self.index_manager.get_entity(token)
             if entity:
                 entity_id = str(entity.get("id") or "").strip()
@@ -804,7 +804,7 @@ class RAGAdapter:
         return entity_ids[: int(self.config.graph_rag_max_expanded_entities)]
 
     def _normalize_entity_ids(self, candidates: List[str]) -> List[str]:
-        """将输入实体候选（이름/별칭/ID）规范化为实体 ID 列表。"""
+        """입력 엔티티 후보 (이름/별칭/ID)를 엔티티 ID 목록으로 정규화."""
         ids: List[str] = []
         for token in candidates:
             candidate = str(token or "").strip()
@@ -824,7 +824,7 @@ class RAGAdapter:
         return ids[: int(self.config.graph_rag_max_expanded_entities)]
 
     def _expand_related_entities(self, seed_entities: List[str], hops: int | None = None) -> List[str]:
-        """基于관계图扩展相关实体。"""
+        """관계 그래프를 기반으로 관련 엔티티를 확장."""
         max_entities = int(self.config.graph_rag_max_expanded_entities)
         hops = max(1, int(hops or self.config.graph_rag_expand_hops))
         expanded: List[str] = []
@@ -855,7 +855,7 @@ class RAGAdapter:
         chapter: int | None = None,
         limit: int | None = None,
     ) -> List[str]:
-        """根据实体이름/별칭在向量库正文中筛选候选 chunk。"""
+        """엔티티 이름/별칭으로 벡터 DB 본문에서 후보 chunk를 필터링."""
         if not entity_ids:
             return []
 
@@ -918,7 +918,7 @@ class RAGAdapter:
         top_k: int,
         chunk_type: str | None = None,
     ) -> List[SearchResult]:
-        """在指定候选 chunk 范围内执行向量检索。"""
+        """지정된 후보 chunk 범위 내에서 벡터 검색 실행."""
         if not chunk_ids:
             return []
 
@@ -947,7 +947,7 @@ class RAGAdapter:
         related_terms: set[str],
         max_chapter: int,
     ) -> float:
-        """为图谱候选增加先验分。"""
+        """그래프 후보에 사전 확률 점수 추가."""
         score = float(result.score)
         content = str(result.content or "")
 
@@ -974,11 +974,11 @@ class RAGAdapter:
         log_query: bool = True,
     ) -> List[SearchResult]:
         """
-        图谱增强混合检索：
-        1) 先走现有 hybrid 作为基础召回；
-        2) 基于实体관계图扩展候选；
-        3) 向量重算 + 图谱先验融合；
-        4) rerank 产出最终结果。
+        그래프 강화 하이브리드 검색:
+        1) 기존 hybrid를 기본 리콜로 먼저 실행;
+        2) 엔티티 관계 그래프로 후보 확장;
+        3) 벡터 재계산 + 그래프 사전 확률 융합;
+        4) rerank로 최종 결과 산출.
         """
         start_time = time.perf_counter()
 
@@ -1023,7 +1023,7 @@ class RAGAdapter:
             chunk_type=chunk_type,
         )
 
-        # 构建实体术语集用于先验分
+        # 사전 확률 점수용 엔티티 용어 집합 구성
         seed_terms: set[str] = set()
         related_terms: set[str] = set()
         for idx, entity_id in enumerate(expanded_entities):
@@ -1107,7 +1107,7 @@ class RAGAdapter:
         center_entities: Optional[List[str]] = None,
         filters: Optional[Dict[str, Any]] = None,
     ) -> List[SearchResult]:
-        """统一检索入口。"""
+        """통합 검색 진입점."""
         strategy = str(strategy or "auto").lower()
         if filters and chapter is None:
             try:
@@ -1125,7 +1125,7 @@ class RAGAdapter:
                 strategy = "hybrid"
 
         if strategy not in {"vector", "bm25", "backtrack", "graph_hybrid", "hybrid"}:
-            # 알 수 없음策略统一降级 hybrid，避免调用方传错매개변수导致中断。
+            # 알 수 없는 전략은 hybrid로 통일 다운그레이드, 호출측 잘못된 매개변수로 인한 중단 방지.
             strategy = "hybrid"
 
         if strategy == "vector":
@@ -1151,7 +1151,7 @@ class RAGAdapter:
             chapter=chapter,
         )
 
-    # ==================== 混合检索 ====================
+    # ==================== 하이브리드 검색 ====================
 
     async def hybrid_search(
         self,
@@ -1164,25 +1164,25 @@ class RAGAdapter:
         log_query: bool = True,
     ) -> List[SearchResult]:
         """
-        混合检索：向量 + BM25 + RRF 融合 + Rerank
+        하이브리드 검색: 벡터 + BM25 + RRF 융합 + Rerank
 
-        步骤:
-        1. 向量检索 top_k
-        2. BM25 检索 top_k
-        3. RRF 融合
-        4. Rerank 精排
+        단계:
+        1. 벡터 검색 top_k
+        2. BM25 검색 top_k
+        3. RRF 융합
+        4. Rerank 정밀 정렬
         """
         vector_top_k = vector_top_k or self.config.vector_top_k
         bm25_top_k = bm25_top_k or self.config.bm25_top_k
         rerank_top_n = rerank_top_n or self.config.rerank_top_n
         start_time = time.perf_counter()
 
-        # 小规模：全表向量扫描（召回更稳）；大规模：预筛选避免 O(n) 扫描拖慢
+        # 소규모: 전체 테이블 벡터 스캔 (리콜 안정적); 대규모: 사전 필터링으로 O(n) 스캔 지연 방지
         vectors_count = await asyncio.to_thread(self._get_vectors_count)
         use_full_scan = vectors_count <= int(self.config.vector_full_scan_max_vectors)
 
         if use_full_scan:
-            # 并行执行向量和 BM25 检索
+            # 벡터 및 BM25 검색 병렬 실행
             vector_results, bm25_results = await asyncio.gather(
                 self.vector_search(query, vector_top_k, chunk_type=chunk_type, log_query=False, chapter=chapter),
                 asyncio.to_thread(self.bm25_search, query, bm25_top_k, 1.5, 0.75, chunk_type, False, chapter),
@@ -1240,10 +1240,10 @@ class RAGAdapter:
                 top_k=int(vector_top_k),
             )
 
-            # BM25 结果用于融合时只取 top_k
+            # BM25 결과는 융합 시 top_k만 사용
             bm25_results = list(bm25_candidates_results)[: int(bm25_top_k)]
 
-        # RRF 融合
+        # RRF 융합
         rrf_scores = {}
         k = self.config.rrf_k
 
@@ -1257,14 +1257,14 @@ class RAGAdapter:
                 rrf_scores[result.chunk_id] = {"result": result, "score": 0}
             rrf_scores[result.chunk_id]["score"] += 1 / (k + rank + 1)
 
-        # 按 RRF 점수排序
+        # RRF 점수로 정렬
         sorted_results = sorted(
             rrf_scores.values(),
             key=lambda x: x["score"],
             reverse=True
         )
 
-        # 取 top candidates 进行 rerank
+        # 상위 후보를 rerank 수행
         candidates = [item["result"] for item in sorted_results[:rerank_top_n * 2]]
 
         if not candidates:
@@ -1274,19 +1274,19 @@ class RAGAdapter:
                 self._log_query(query, "hybrid", final_results, latency_ms, chapter=chapter)
             return final_results
 
-        # 调用 Rerank API
+        # Rerank API 호출
         documents = [c.content for c in candidates]
         rerank_results = await self.api_client.rerank(query, documents, top_n=rerank_top_n)
 
         if not rerank_results:
-            # Rerank 실패，반환 RRF 结果
+            # Rerank 실패, RRF 결과 반환
             final_results = [item["result"] for item in sorted_results[:rerank_top_n]]
             latency_ms = int((time.perf_counter() - start_time) * 1000)
             if log_query:
                 self._log_query(query, "hybrid", final_results, latency_ms, chapter=chapter)
             return final_results
 
-        # 组装最终结果
+        # 최종 결과 조립
         final_results = []
         for r in rerank_results:
             idx = r.get("index", 0)
@@ -1366,7 +1366,7 @@ class RAGAdapter:
     # ==================== 통계 ====================
 
     def get_stats(self) -> Dict[str, int]:
-        """获取 RAG 통계"""
+        """RAG 통계 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
 
@@ -1399,16 +1399,16 @@ def main():
 
     subparsers = parser.add_subparsers(dest="command")
 
-    # 获取통계
+    # 통계 조회
     subparsers.add_parser("stats")
 
-    # 写入索引
+    # 인덱스 기록
     index_parser = subparsers.add_parser("index-chapter")
     index_parser.add_argument("--chapter", type=int, required=True)
-    index_parser.add_argument("--scenes", required=True, help="JSON 格式的场景列表")
-    index_parser.add_argument("--summary", required=False, help="챕터摘要文本")
+    index_parser.add_argument("--scenes", required=True, help="JSON 형식의 장면 목록")
+    index_parser.add_argument("--summary", required=False, help="챕터 요약 텍스트")
 
-    # 搜索
+    # 검색
     search_parser = subparsers.add_parser("search")
     search_parser.add_argument("--query", required=True)
     search_parser.add_argument(
@@ -1421,7 +1421,7 @@ def main():
     search_parser.add_argument(
         "--center-entities",
         required=False,
-        help="中心实体列表（JSON 数组或逗号分隔）",
+        help="중심 엔티티 목록 (JSON 배열 또는 쉼표 구분)",
     )
 
     argv = normalize_global_project_root(sys.argv[1:])
@@ -1431,7 +1431,7 @@ def main():
     # 초기화
     config = None
     if args.project_root:
-        # 允许传入“工作区根目录”，统一解析到真正的 book project_root（必须포함 .webnovel/state.json）
+        # “워크스페이스 루트 디렉토리”를 전달받아 실제 book project_root로 통일 해석 (.webnovel/state.json 포함 필수)
         from project_locator import resolve_project_root
         from .config import DataModulesConfig
 
@@ -1509,7 +1509,7 @@ def main():
                     "chunk_type": "scene",
                     "parent_chunk_id": parent_chunk_id,
                     "chunk_id": chunk_id,
-                    "source_file": f"正文/第{args.chapter:04d}章.md#scene_{int(scene_index)}",
+                    "source_file": f"chapters/chapter_{args.chapter:04d}.md#scene_{int(scene_index)}",
                 }
             )
 

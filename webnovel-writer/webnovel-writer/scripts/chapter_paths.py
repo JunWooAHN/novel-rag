@@ -3,8 +3,8 @@
 Chapter file path helpers.
 
 This project has seen multiple chapter filename conventions:
-1) Legacy flat layout: 正文/第0007章.md
-2) Volume layout:    正文/第1卷/第007章-챕터 제목.md
+1) Legacy flat layout: chapters/chapter_0007.md
+2) Volume layout:    chapters/vol_1/chapter_007-title.md
 
 To keep scripts robust, always resolve chapter files via these helpers instead of hardcoding a format.
 """
@@ -16,9 +16,9 @@ from pathlib import Path
 from typing import Optional
 
 
-_CHAPTER_NUM_RE = re.compile(r"第(?P<num>\d+)章")
-_OUTLINE_HEADING_RE = re.compile(r"^#{1,6}\s*第\s*(?P<num>\d+)\s*章[：:]\s*(?P<title>.+?)\s*$", re.MULTILINE)
-_SPLIT_OUTLINE_FILENAME_RE = re.compile(r"^第0*(?P<num>\d+)章[-—_ ]+(?P<title>.+?)\.md$")
+_CHAPTER_NUM_RE = re.compile(r"chapter_(?P<num>\d+)")
+_OUTLINE_HEADING_RE = re.compile(r"^#{1,6}\s*chapter\s*(?P<num>\d+)[：:]\s*(?P<title>.+?)\s*$", re.MULTILINE)
+_SPLIT_OUTLINE_FILENAME_RE = re.compile(r"^chapter_0*(?P<num>\d+)[-—_ ]+(?P<title>.+?)\.md$")
 
 
 def volume_num_for_chapter(chapter_num: int, *, chapters_per_volume: int = 50) -> int:
@@ -61,10 +61,10 @@ def _extract_title_from_outline_text(outline_text: str, chapter_num: int) -> str
 
 def _extract_title_from_split_outline_filename(outline_dir: Path, chapter_num: int) -> str:
     patterns = [
-        f"第{chapter_num}章*.md",
-        f"第{chapter_num:02d}章*.md",
-        f"第{chapter_num:03d}章*.md",
-        f"第{chapter_num:04d}章*.md",
+        f"chapter_{chapter_num}*.md",
+        f"chapter_{chapter_num:02d}*.md",
+        f"chapter_{chapter_num:03d}*.md",
+        f"chapter_{chapter_num:04d}*.md",
     ]
     for pattern in patterns:
         for path in sorted(outline_dir.glob(pattern)):
@@ -80,7 +80,7 @@ def _extract_title_from_split_outline_filename(outline_dir: Path, chapter_num: i
 
 
 def extract_chapter_title(project_root: Path, chapter_num: int) -> str:
-    """从상세大纲추출챕터 제목，用于生成更直观的챕터文件名。"""
+    """상세 개요에서 챕터 제목을 추출하여 보다 직관적인 챕터 파일명을 생성."""
     try:
         from chapter_outline_loader import load_chapter_outline
     except ImportError:  # pragma: no cover
@@ -92,7 +92,7 @@ def extract_chapter_title(project_root: Path, chapter_num: int) -> str:
         if title:
             return title
 
-    outline_dir = project_root / "大纲"
+    outline_dir = project_root / "outline"
     if outline_dir.exists():
         return _extract_title_from_split_outline_filename(outline_dir, chapter_num)
     return ""
@@ -102,32 +102,32 @@ def _build_chapter_filename(project_root: Path, chapter_num: int, *, use_volume_
     padded = f"{chapter_num:03d}" if use_volume_layout else f"{chapter_num:04d}"
     title = extract_chapter_title(project_root, chapter_num)
     if title:
-        return f"第{padded}章-{title}.md"
-    return f"第{padded}章.md"
+        return f"chapter_{padded}-{title}.md"
+    return f"chapter_{padded}.md"
 
 
 def find_chapter_file(project_root: Path, chapter_num: int) -> Optional[Path]:
     """
-    Find an existing chapter file for chapter_num under project_root/正文.
+    Find an existing chapter file for chapter_num under project_root/chapters.
     Returns the first match (stable sorted order) or None if not found.
     """
-    chapters_dir = project_root / "正文"
+    chapters_dir = project_root / "chapters"
     if not chapters_dir.exists():
         return None
 
-    legacy = chapters_dir / f"第{chapter_num:04d}章.md"
+    legacy = chapters_dir / f"chapter_{chapter_num:04d}.md"
     if legacy.exists():
         return legacy
 
-    vol_dir = chapters_dir / f"第{volume_num_for_chapter(chapter_num)}卷"
+    vol_dir = chapters_dir / f"vol_{volume_num_for_chapter(chapter_num)}"
     if vol_dir.exists():
-        candidates = sorted(vol_dir.glob(f"第{chapter_num:03d}章*.md")) + sorted(vol_dir.glob(f"第{chapter_num:04d}章*.md"))
+        candidates = sorted(vol_dir.glob(f"chapter_{chapter_num:03d}*.md")) + sorted(vol_dir.glob(f"chapter_{chapter_num:04d}*.md"))
         for c in candidates:
             if c.is_file():
                 return c
 
-    # Fallback: search anywhere under 正文/ (supports custom layouts)
-    candidates = sorted(chapters_dir.rglob(f"第{chapter_num:03d}章*.md")) + sorted(chapters_dir.rglob(f"第{chapter_num:04d}章*.md"))
+    # Fallback: search anywhere under chapters/ (supports custom layouts)
+    candidates = sorted(chapters_dir.rglob(f"chapter_{chapter_num:03d}*.md")) + sorted(chapters_dir.rglob(f"chapter_{chapter_num:04d}*.md"))
     for c in candidates:
         if c.is_file():
             return c
@@ -142,14 +142,14 @@ def default_chapter_draft_path(project_root: Path, chapter_num: int, *, use_volu
     Args:
         project_root: 프로젝트 루트 디렉토리
         chapter_num: 챕터 번호
-        use_volume_layout: True 使用卷布局 (正文/第N卷/第NNN章-챕터 제목.md)，False 使用平坦布局 (正文/第NNNN章-챕터 제목.md)
+        use_volume_layout: True uses volume layout (chapters/vol_N/chapter_NNN-title.md), False uses flat layout (chapters/chapter_NNNN-title.md)
 
     Default is flat layout. If the detailed outline already has a chapter title,
     append it to the filename for better discoverability.
     """
     if use_volume_layout:
-        vol_dir = project_root / "正文" / f"第{volume_num_for_chapter(chapter_num)}卷"
+        vol_dir = project_root / "chapters" / f"vol_{volume_num_for_chapter(chapter_num)}"
         return vol_dir / _build_chapter_filename(project_root, chapter_num, use_volume_layout=True)
     else:
-        return project_root / "正文" / _build_chapter_filename(project_root, chapter_num, use_volume_layout=False)
+        return project_root / "chapters" / _build_chapter_filename(project_root, chapter_num, use_volume_layout=False)
 

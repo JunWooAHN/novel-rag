@@ -8,7 +8,7 @@ allowed-tools: Read Write Edit Grep Bash Task
 
 ## 목표
 
-- 안정적인 프로세스로 출판 가능한 장을 산출합니다: 우선 `正文/第{NNNN}章-{title_safe}.md` 사용, 제목이 없을 경우 `正文/第{NNNN}章.md`으로 대체합니다.
+- 안정적인 프로세스로 출판 가능한 장을 산출합니다: 우선 `chapters/chapter_{NNNN}-{title_safe}.md` 사용, 제목이 없을 경우 `chapters/chapter_{NNNN}.md`으로 대체합니다.
 - 기본 장 자수 목표: 2000-2500 (사용자나 개요에서 명시적으로 덮어쓸 경우 해당 약정을 따름).
 - 심사, 윤색, 데이터 역기입의 완전한 폐쇄 루프를 보장하여 "쓰고 나면 바로 컨텍스트가 유실되는" 상황을 방지합니다.
 - 후속 장에서 바로 소비할 수 있는 구조화 데이터를 출력합니다: `review_metrics`, `summaries`, `chapter_meta`.
@@ -28,7 +28,7 @@ allowed-tools: Read Write Edit Grep Bash Task
 - `/webnovel-write --minimal`: Step 1 → 2A → 3 (기본 심사 3개만) → 4 → 5 → 6
 
 최소 산출물 (모든 모드):
-- `正文/第{NNNN}章-{title_safe}.md` 또는 `正文/第{NNNN}章.md`
+- `chapters/chapter_{NNNN}-{title_safe}.md` 또는 `chapters/chapter_{NNNN}.md`
 - `index.db.review_metrics` 새 레코드 (`overall_score` 포함)
 - `.webnovel/summaries/ch{NNNN}.md`
 - `.webnovel/state.json`의 진행 상황 및 `chapter_meta` 업데이트
@@ -112,10 +112,10 @@ allowed-tools: Read Write Edit Grep Bash Task
 
 필수 수행:
 - 실제 책 프로젝트 루트 (book project_root) 해석: 반드시 `.webnovel/state.json` 포함.
-- 핵심 입력 검증: `大纲/总纲.md`, `${CLAUDE_PLUGIN_ROOT}/scripts/extract_chapter_context.py` 존재.
+- 핵심 입력 검증: `outline/master.md`, `${CLAUDE_PLUGIN_ROOT}/scripts/extract_chapter_context.py` 존재.
 - 변수 정규화:
-  - `WORKSPACE_ROOT`: Claude Code가 연 작업 영역 루트 디렉토리 (책 프로젝트의 상위 디렉토리일 수 있음, 예: `D:\wk\xiaoshuo`)
-  - `PROJECT_ROOT`: 실제 책 프로젝트 루트 디렉토리 (반드시 `.webnovel/state.json` 포함, 예: `D:\wk\xiaoshuo\凡人资本论`)
+  - `WORKSPACE_ROOT`: Claude Code가 연 작업 영역 루트 디렉토리 (책 프로젝트의 상위 디렉토리일 수 있음, 예: `D:\wk\소설`)
+  - `PROJECT_ROOT`: 실제 책 프로젝트 루트 디렉토리 (반드시 `.webnovel/state.json` 포함, 예: `D:\wk\소설\범인자본론`)
   - `SKILL_ROOT`: skill 위치 디렉토리 (고정 `${CLAUDE_PLUGIN_ROOT}/skills/webnovel-write`)
   - `SCRIPTS_DIR`: 스크립트 디렉토리 (고정 `${CLAUDE_PLUGIN_ROOT}/scripts`)
   - `chapter_num`: 현재 장 번호 (정수)
@@ -177,16 +177,16 @@ cat "${SKILL_ROOT}/../../references/shared/core-constraints.md"
 ```
 
 하드 요구:
-- 순수 본문만 장 파일에 출력합니다. 상세 개요에 장 이름이 있으면 우선 `正文/第{chapter_padded}章-{title_safe}.md` 사용, 없으면 `正文/第{chapter_padded}章.md`으로 대체합니다.
+- 순수 본문만 장 파일에 출력합니다. 상세 개요에 장 이름이 있으면 우선 `chapters/chapter_{chapter_padded}-{title_safe}.md` 사용, 없으면 `chapters/chapter_{chapter_padded}.md`으로 대체합니다.
 - 기본 2000-2500자 기준으로 실행합니다. 개요에서 핵심 전투 장/클라이맥스 장/권말 장으로 표시되었거나 사용자가 명시적으로 지정한 경우 개요/사용자 우선으로 따릅니다.
 - 자리표시자 본문 금지 (예: `[TODO]`, `[보충 필요]`).
 - 이어받기 관계 유지: 전장에 명확한 훅이 있으면, 이번 장에서 반드시 응답합니다 (부분 실현 가능).
 
-중국어 사고 집필 제약 (하드 규칙):
-- **"영어 먼저 중국어 나중" 금지**: 먼저 영어 공학적 골격 (예: ABCDE 분단, Summary/Conclusion 프레임워크)으로 내용을 구성한 후 중국어로 번역하면 안 됩니다.
-- **중국어 서사 단위 우선**: "동작, 반응, 대가, 감정, 장면, 관계 이동"을 기본 서사 단위로 하며, 영어 구조 태그로 본문 생성을 구동하지 않습니다.
+한국어 사고 집필 제약 (하드 규칙):
+- **"영어 먼저 한국어 나중" 금지**: 먼저 영어 공학적 골격 (예: ABCDE 분단, Summary/Conclusion 프레임워크)으로 내용을 구성한 후 한국어로 번역하면 안 됩니다.
+- **한국어 서사 단위 우선**: "동작, 반응, 대가, 감정, 장면, 관계 이동"을 기본 서사 단위로 하며, 영어 구조 태그로 본문 생성을 구동하지 않습니다.
 - **영어 결론 화법 금지**: 본문, 심사 설명, 윤색 설명, 변경 요약, 최종 보고서에서 Overall / PASS / FAIL / Summary / Conclusion 등 영어 결론 제목이 나오면 안 됩니다.
-- **영어는 머신 식별자에만 사용**: CLI flag (`--fast`), checker id (`consistency-checker`), DB 필드명 (`anti_ai_force_check`), JSON 키명 등 변경 불가한 인터페이스명은 영어를 유지하며, 나머지는 일률적으로 간체자 중국어를 사용합니다.
+- **영어는 머신 식별자에만 사용**: CLI flag (`--fast`), checker id (`consistency-checker`), DB 필드명 (`anti_ai_force_check`), JSON 키명 등 변경 불가한 인터페이스명은 영어를 유지하며, 나머지는 일률적으로 한국어를 사용합니다.
 
 출력:
 - 장 초안 (Step 2B 또는 Step 3으로 진입 가능).
@@ -245,7 +245,7 @@ review_metrics 필드 제약 (현재 워크플로 약정은 아래 필드만 전
   "dimension_scores": {"카타르시스 밀도": 8.5, "설정 일관성": 8.0, "리듬 제어": 7.8, "인물 조형": 8.2, "연속성": 9.0, "추독력": 8.7},
   "severity_counts": {"critical": 0, "high": 1, "medium": 2, "low": 0},
   "critical_issues": ["문제 설명"],
-  "report_file": "审查报告/第100-100章审查报告.md",
+  "report_file": "reviews/chapter_100-100_review.md",
   "notes": "단일 문자열; selected_checkers / timeline_gate / anti_ai_force_check 등 확장 정보를 한 줄 텍스트로 압축하여 이 필드에 기입"
 }
 ```
@@ -278,7 +278,7 @@ cat "${SKILL_ROOT}/references/writing/typesetting.md"
 
 Task를 사용하여 `data-agent` 호출, 파라미터:
 - `chapter`
-- `chapter_file` 반드시 실제 장 파일 경로를 전달; 상세 개요에 장 이름이 있으면 우선 `正文/第{chapter_padded}章-{title_safe}.md` 전달, 없으면 `正文/第{chapter_padded}章.md` 전달
+- `chapter_file` 반드시 실제 장 파일 경로를 전달; 상세 개요에 장 이름이 있으면 우선 `chapters/chapter_{chapter_padded}-{title_safe}.md` 전달, 없으면 `chapters/chapter_{chapter_padded}.md` 전달
 - `review_score=Step 3 overall_score`
 - `project_root`
 - `storage_path=.webnovel/`
@@ -327,19 +327,19 @@ Step 5 실패 격리 규칙:
 
 ```bash
 git add .
-git -c i18n.commitEncoding=UTF-8 commit -m "第{chapter_num}章: {title}"
+git -c i18n.commitEncoding=UTF-8 commit -m "제{chapter_num}장: {title}"
 ```
 
 규칙:
 - 커밋 시점: 검증, 역기입, 정리 모두 완료 후 마지막에 실행.
-- 커밋 메시지는 기본 중국어, 형식: `第{chapter_num}章: {title}`.
+- 커밋 메시지는 기본 한국어, 형식: `제{chapter_num}장: {title}`.
 - commit 실패 시, 반드시 실패 원인과 미커밋 파일 범위를 제시합니다.
 
 ## 충분성 게이트 (반드시 통과)
 
 다음 조건을 충족하기 전에는 프로세스를 종료할 수 없습니다:
 
-1. 장 본문 파일 존재하고 비어있지 않음: `正文/第{chapter_padded}章-{title_safe}.md` 또는 `正文/第{chapter_padded}章.md`
+1. 장 본문 파일 존재하고 비어있지 않음: `chapters/chapter_{chapter_padded}-{title_safe}.md` 또는 `chapters/chapter_{chapter_padded}.md`
 2. Step 3에서 `overall_score`를 산출하고 `review_metrics` 데이터베이스 저장 성공
 3. Step 4에서 모든 `critical` 처리 완료, `high` 미수정 항목에 deviation 기록 있음
 4. Step 4의 `anti_ai_force_check=pass` (전문 검사 기반; fail 시 Step 5에 진입할 수 없음)
@@ -352,7 +352,7 @@ git -c i18n.commitEncoding=UTF-8 commit -m "第{chapter_num}章: {title}"
 
 ```bash
 test -f "${PROJECT_ROOT}/.webnovel/state.json"
-test -f "${PROJECT_ROOT}/正文/第${chapter_padded}章.md"
+test -f "${PROJECT_ROOT}/chapters/chapter_${chapter_padded}.md"
 test -f "${PROJECT_ROOT}/.webnovel/summaries/ch${chapter_padded}.md"
 python -X utf8 "${SCRIPTS_DIR}/webnovel.py" --project-root "${PROJECT_ROOT}" index get-recent-review-metrics --limit 1
 tail -n 1 "${PROJECT_ROOT}/.webnovel/observability/data_agent_timing.jsonl" || true

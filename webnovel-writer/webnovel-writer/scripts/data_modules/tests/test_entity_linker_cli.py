@@ -27,7 +27,7 @@ def test_process_extraction_and_register_new_entities(temp_project):
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             current={},
             first_appearance=1,
             last_appearance=1,
@@ -37,13 +37,13 @@ def test_process_extraction_and_register_new_entities(temp_project):
     results, warnings = linker.process_extraction_result(
         [
             {
-                "mention": "萧炎",
+                "mention": "소염",
                 "candidates": ["xiaoyan"],
                 "suggested": "xiaoyan",
                 "confidence": 0.7,
             },
             {
-                "mention": "宗主",
+                "mention": "종주",
                 "candidates": ["zongzhu"],
                 "suggested": "zongzhu",
                 "confidence": 0.4,
@@ -58,15 +58,15 @@ def test_process_extraction_and_register_new_entities(temp_project):
         [
             {
                 "suggested_id": "hongyi",
-                "name": "红衣女子",
+                "name": "홍의여자",
                 "type": "캐릭터",
-                "mentions": ["红衣", "女子"],
+                "mentions": ["홍의", "여자"],
             }
         ]
     )
     assert registered == ["hongyi"]
     aliases = idx.get_entity_aliases("hongyi")
-    assert "红衣女子" in aliases
+    assert "홍의여자" in aliases
 
 
 def test_entity_linker_cli(temp_project, monkeypatch, capsys):
@@ -75,7 +75,7 @@ def test_entity_linker_cli(temp_project, monkeypatch, capsys):
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             current={},
             first_appearance=1,
             last_appearance=1,
@@ -88,10 +88,10 @@ def test_entity_linker_cli(temp_project, monkeypatch, capsys):
 
     root = str(temp_project.project_root)
 
-    run_cli(["--project-root", root, "register-alias", "--entity", "xiaoyan", "--alias", "炎帝"])
-    run_cli(["--project-root", root, "lookup", "--mention", "炎帝"])
+    run_cli(["--project-root", root, "register-alias", "--entity", "xiaoyan", "--alias", "염제"])
+    run_cli(["--project-root", root, "lookup", "--mention", "염제"])
     run_cli(["--project-root", root, "lookup", "--mention", "존재하지 않음"])
-    run_cli(["--project-root", root, "lookup-all", "--mention", "炎帝"])
+    run_cli(["--project-root", root, "lookup-all", "--mention", "염제"])
     run_cli(["--project-root", root, "list-aliases", "--entity", "xiaoyan"])
 
     capsys.readouterr()

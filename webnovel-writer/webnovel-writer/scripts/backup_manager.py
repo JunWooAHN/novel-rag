@@ -7,37 +7,37 @@ Git 통합 백업 관리 시스템 (Backup Manager with Git)
 🔧 주요 업그레이드: Git을 사용한 원자적 버전 관리
 
 Git을 선택한 이유：
-1. ✅ 원자적 롤백：state.json + 正文/*.md 同时回滚，数据 100% 一致
+1. ✅ 원자적 롤백: state.json + chapters/*.md 동시 롤백, 데이터 100% 일관성
 2. ✅ 증분 저장: diff만 저장하여 95% 공간 절약
 3. ✅ 성숙하고 안정적: 20년간 검증된 버전 관리 시스템
 4. ✅ 브랜치 관리: "평행 세계" 창작을 자연스럽게 지원
 
-功能：
-1. 자동 Git 커밋：每次 /webnovel-write 완료后自动 commit
+기능:
+1. 자동 Git 커밋: 매번 /webnovel-write 완료 후 자동 commit
 2. 원자적 롤백: git checkout으로 모든 파일 동시 롤백
 3. 버전 이력: git log로 전체 이력 조회
 4. 차이 비교: git diff로 임의 두 버전 간 차이 조회
 5. 브랜치 생성: git branch로 임의 시점에서 브랜치 생성
 
-使用方式：
-  # 45챕터 완료 후 자동 백업（自动 git commit）
+사용 방법:
+  # 45챕터 완료 후 자동 백업 (자동 git commit)
   python backup_manager.py --chapter 45
 
-  # 30챕터 상태로 롤백（git checkout）
+  # 30챕터 상태로 롤백 (git checkout)
   python backup_manager.py --rollback 30
 
-  # 20챕터와 40챕터의 차이 조회（git diff）
+  # 20챕터와 40챕터의 차이 조회 (git diff)
   python backup_manager.py --diff 20 40
 
-  # 50챕터에서 브랜치 생성（git branch）
+  # 50챕터에서 브랜치 생성 (git branch)
   python backup_manager.py --create-branch 50 --branch-name "alternative-ending"
 
-  # 모든 백업 목록（git log）
+  # 모든 백업 목록 (git log)
   python backup_manager.py --list
 
-Git 提交规范：
+Git 커밋 규범:
   - 커밋 메시지 형식: "Chapter {N}: {챕터 제목}"
-  - Tag 格式: "ch{N}" (如 ch0045)
+  - Tag 형식: "ch{N}" (예: ch0045)
   - 각 챕터는 하나의 commit + 하나의 tag에 대응
 
 데이터 일관성 보장：
@@ -97,7 +97,7 @@ class GitBackupManager:
                 capture_output=True
             )
 
-            # 创建 .gitignore
+            # .gitignore 생성
             gitignore_file = self.project_root / ".gitignore"
             if not gitignore_file.exists():
                 with open(gitignore_file, 'w', encoding='utf-8') as f:
@@ -191,13 +191,13 @@ __pycache__/
 
     def backup(self, chapter_num: int, chapter_title: str = "") -> bool:
         """
-        현재 상태 백업（Git commit + tag，或本地备份）
+        현재 상태 백업 (Git commit + tag, 또는 로컬 백업)
 
         Args:
             chapter_num: 챕터 번호
             chapter_title: 챕터 제목(선택사항)
         """
-        print(f"📝 백업 중: 제 {chapter_num} 章...")
+        print(f"📝 백업 중: chapter {chapter_num}...")
 
         # Git을 사용할 수 없는 경우, 로컬 백업 사용
         if not self.git_available:
@@ -215,14 +215,14 @@ __pycache__/
             # ============================================================================
             # 보안 수정: 커밋 메시지 정리, 명령 주입 방지 (CWE-77) - P1 MEDIUM
             # 원본 코드: commit_message += f": {chapter_title}"
-            # 취약점: chapter_title에 Git 플래그가 포함될 수 있음（如 --author, --amend）명령 주입 초래
+            # 취약점: chapter_title에 Git 플래그가 포함될 수 있음 (예: --author, --amend) 명령 주입 초래
             # ============================================================================
             safe_chapter_title = sanitize_commit_message(chapter_title)
             commit_message += f": {safe_chapter_title}"
 
         success, output = self._run_git_command(
             ["commit", "-m", commit_message],
-            check=False  # 允许"변경사항 없음"的情况
+            check=False  # "변경사항 없음" 상황 허용
         )
 
         if not success and "nothing to commit" in output:
@@ -250,21 +250,21 @@ __pycache__/
 
     def rollback(self, chapter_num: int) -> bool:
         """
-        지정된 챕터로 롤백（Git checkout）
+        지정된 챕터로 롤백 (Git checkout)
 
         ⚠️ 경고: 모든 미커밋 변경사항이 폐기됩니다!
         """
 
         tag_name = f"ch{chapter_num:04d}"
 
-        print(f"🔄 롤백 중: 제 {chapter_num} 章...")
+        print(f"🔄 롤백 중: chapter {chapter_num}...")
         print(f"⚠️  경고: 모든 미커밋 변경사항이 폐기됩니다!")
 
         # 미커밋 변경사항 확인
         success, status_output = self._run_git_command(["status", "--porcelain"])
 
         if status_output.strip():
-            print("\n⚠️  미커밋 변경사항 감지：")
+            print("\n⚠️  미커밋 변경사항 감지:")
             print(status_output)
 
             # 백업 커밋 생성
@@ -296,15 +296,15 @@ __pycache__/
             print(f"💡 팁: tag 확인 '{tag_name}' 존재(--list 실행으로 모든 백업 조회)")
             return False
 
-        print(f"✅ 롤백 완료: 제 {chapter_num} 章！")
+        print(f"✅ 롤백 완료: chapter {chapter_num}!")
         print(f"\n💡 팁:")
-        print(f"  - 모든 파일(state.json + 正文/*.md) 동기 롤백 완료")
+        print(f"  - 모든 파일(state.json + chapters/*.md) 동기 롤백 완료")
         print(f"  - 복구하려면 실행: git checkout master")
 
         return True
 
     def diff(self, chapter_a: int, chapter_b: int):
-        """두 버전 간 차이 비교（Git diff）"""
+        """두 버전 간 차이 비교 (Git diff)"""
 
         tag_a = f"ch{chapter_a:04d}"
         tag_b = f"ch{chapter_b:04d}"
@@ -317,26 +317,26 @@ __pycache__/
             print(f"❌ 비교 실패: {output}")
             return
 
-        print("📈 파일 변경 통계：")
+        print("📈 파일 변경 통계:")
         print(output)
 
-        # 显示 state.json 的상세 차이
-        print("\n📝 state.json 상세 차이：")
+        # state.json 상세 차이 표시
+        print("\n📝 state.json 상세 차이:")
         success, state_diff = self._run_git_command(
             ["diff", tag_a, tag_b, "--", ".webnovel/state.json"]
         )
 
         if success and state_diff:
-            print(state_diff[:2000])  # 限制输出长度
+            print(state_diff[:2000])  # 출력 길이 제한
             if len(state_diff) > 2000:
                 print("\n...(출력이 너무 길어 잘림)")
         else:
             print("(변경사항 없음)")
 
     def list_backups(self):
-        """모든 백업 목록（Git log + tags）"""
+        """모든 백업 목록 (Git log + tags)"""
 
-        print("\n📚 백업 목록（Git tags）：\n")
+        print("\n📚 백업 목록 (Git tags):\n")
 
         # 모든 tags 조회
         success, tags_output = self._run_git_command(["tag", "-l", "ch*"])
@@ -359,10 +359,10 @@ __pycache__/
             if success:
                 print(f"📖 {tag} | {commit_info.strip()}")
 
-        print(f"\n합계：{len(tags)} 개 백업")
+        print(f"\n합계: {len(tags)} 개 백업")
 
-        # 显示최근 5개 커밋
-        print("\n📜 최근 커밋 이력：\n")
+        # 최근 5개 커밋 표시
+        print("\n📜 최근 커밋 이력:\n")
         success, log_output = self._run_git_command(
             ["log", "--oneline", "-5"]
         )
@@ -371,7 +371,7 @@ __pycache__/
             print(log_output)
 
     def create_branch(self, chapter_num: int, branch_name: str) -> bool:
-        """지정된 챕터에서 브랜치 생성（Git branch）"""
+        """지정된 챕터에서 브랜치 생성 (Git branch)"""
 
         tag_name = f"ch{chapter_num:04d}"
 
@@ -404,7 +404,7 @@ def main():
         description="Git 통합 백업 관리 시스템",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-예시：
+예시:
   # 45챕터 완료 후 자동 백업
   python backup_manager.py --chapter 45
 
@@ -433,7 +433,7 @@ def main():
 
     args = parser.parse_args()
 
-    # 프로젝트 루트 디렉토리 분석（允许传入“工作区根目录”，统一解析到真正的 book project_root）
+    # 프로젝트 루트 디렉토리 분석 (“워크스페이스 루트 디렉토리” 전달 허용, 실제 book project_root로 통합 분석)
     try:
         project_root = str(resolve_project_root(args.project_root))
     except FileNotFoundError as exc:

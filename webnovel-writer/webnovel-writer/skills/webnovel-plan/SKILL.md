@@ -6,10 +6,10 @@ description: Builds volume and chapter outlines from the total outline, inherits
 # Outline Planning
 
 Purpose: 총강을 권별 + 장별 개요로 세분화합니다. 전체 스토리를 재설계하지 않습니다.
-설정 정책: 먼저 init에서 산출한 총강+세계관을 기반으로 설정집 기준선을 보충하고, 권별 개요 완성 후 기존 설정집에 증분 보충을 직접 수행합니다.
+설정 정책: 먼저 init에서 산출한 총강+세계관을 기반으로 settings 기준선을 보충하고, 권별 개요 완성 후 기존 settings에 증분 보충을 직접 수행합니다.
 
 ## Project Root Guard
-- Claude Code의 "작업 영역 루트 디렉토리"가 반드시 "책 프로젝트 루트 디렉토리"와 같지는 않습니다. 일반적인 구조: 작업 영역이 `D:\wk\xiaoshuo`이고, 책 프로젝트가 `D:\wk\xiaoshuo\凡人资本论`인 경우.
+- Claude Code의 "작업 영역 루트 디렉토리"가 반드시 "책 프로젝트 루트 디렉토리"와 같지는 않습니다. 일반적인 구조: 작업 영역이 `D:\wk\소설`이고, 책 프로젝트가 `D:\wk\소설\범인자본론`인 경우.
 - 반드시 `PROJECT_ROOT`를 실제 책 프로젝트 루트(반드시 `.webnovel/state.json` 포함)로 해석한 후, 이후 모든 읽기/쓰기 경로를 해당 디렉토리 기준으로 합니다.
 
 환경 설정 (bash 명령 실행 전):
@@ -33,8 +33,8 @@ export PROJECT_ROOT="$(python "${SCRIPTS_DIR}/webnovel.py" --project-root "${WOR
 
 ## References (단계별 내비게이션)
 
-- Step 3 (필독, 비트시트 템플릿): [大纲-卷节拍表.md](../../templates/output/大纲-卷节拍表.md)
-- Step 4.5 (필독, 타임라인 템플릿): [大纲-卷时间线.md](../../templates/output/大纲-卷时间线.md)
+- Step 3 (필독, 비트시트 템플릿): [outline-vol-beats.md](../../templates/output/outline-vol-beats.md)
+- Step 4.5 (필독, 타임라인 템플릿): [outline-vol-timeline.md](../../templates/output/outline-vol-timeline.md)
 - Step 4 (필독, 장르 구성): [genre-profiles.md](../../references/genre-profiles.md)
 - Step 4 (필독, Strand 리듬): [strand-weave-pattern.md](../../references/shared/strand-weave-pattern.md)
 - Step 4 (선택, 카타르시스 구조 세분화 필요 시): [cool-points-guide.md](../../references/shared/cool-points-guide.md)
@@ -65,29 +65,29 @@ Use progressive disclosure and load only what current step requires:
 ## 1) Load project data
 ```bash
 cat "$PROJECT_ROOT/.webnovel/state.json"
-cat "$PROJECT_ROOT/大纲/总纲.md"
+cat "$PROJECT_ROOT/outline/master.md"
 ```
 
 Optional (only if they exist):
-- `设定集/主角组.md`
-- `设定集/女主卡.md`
-- `设定集/反派设计.md`
-- `设定集/世界观.md`
-- `设定集/力量体系.md`
-- `设定集/主角卡.md`
+- `settings/team.md`
+- `settings/heroine.md`
+- `settings/antagonist.md`
+- `settings/worldview.md`
+- `settings/power-system.md`
+- `settings/protagonist.md`
 - `.webnovel/idea_bank.json` (inherit constraints)
 
-If 총강.md lacks volume ranges / core conflict / climax, ask the user to fill those before proceeding.
+If master.md lacks volume ranges / core conflict / climax, ask the user to fill those before proceeding.
 
 ## 2) Build setting baseline from 총강 + 세계관
-목표: 기존 내용을 뒤엎지 않는 전제 하에, 설정집을 "골격 템플릿"에서 "기획 및 집필 가능한" 기준선 상태로 진입시킵니다.
+목표: 기존 내용을 뒤엎지 않는 전제 하에, settings를 "골격 템플릿"에서 "기획 및 집필 가능한" 기준선 상태로 진입시킵니다.
 
 입력 소스:
-- `大纲/总纲.md`
-- `设定集/世界观.md`
-- `设定集/力量体系.md`
-- `设定集/主角卡.md`
-- `设定集/反派设计.md`
+- `outline/master.md`
+- `settings/worldview.md`
+- `settings/power-system.md`
+- `settings/protagonist.md`
+- `settings/antagonist.md`
 
 실행 규칙 (필수):
 - 증분 보충만 수행하며, 비우거나 파일 전체를 재작성하지 않습니다.
@@ -95,13 +95,13 @@ If 총강.md lacks volume ranges / core conflict / climax, ask the user to fill 
 - 총강과 기존 설정이 충돌하면, 먼저 충돌을 나열하고 차단하여 사용자 결정을 기다린 후 수정합니다.
 
 기준선 보충 최소 요구:
-- `设定集/世界观.md`: 세계 규칙 경계, 사회 구조, 핵심 장소 용도.
-- `设定集/力量体系.md`: 경계 체인/능력 제한/대가와 쿨다운.
-- `设定集/主角卡.md`: 욕망, 결함, 초기 자원과 제한.
-- `设定集/反派设计.md`: 소/중/대 악역 계층과 주인공 미러 관계.
+- `settings/worldview.md`: 세계 규칙 경계, 사회 구조, 핵심 장소 용도.
+- `settings/power-system.md`: 경계 체인/능력 제한/대가와 쿨다운.
+- `settings/protagonist.md`: 욕망, 결함, 초기 자원과 제한.
+- `settings/antagonist.md`: 소/중/대 악역 계층과 주인공 미러 관계.
 
 ## 3) Select volume
-- Offer choices from 총강.md (권명 + 장 범위).
+- Offer choices from master.md (권명 + 장 범위).
 - Confirm any special requirement (tone, POV emphasis, romance, etc.).
 총강에 권명/장 범위/핵심 갈등/권말 클라이맥스가 없으면, 먼저 보충 질문하고 총강을 업데이트한 후 계속합니다.
 
@@ -110,7 +110,7 @@ If 총강.md lacks volume ranges / core conflict / climax, ask the user to fill 
 
 Load template:
 ```bash
-cat "${SKILL_ROOT}/../../templates/output/大纲-卷节拍表.md"
+cat "${SKILL_ROOT}/../../templates/output/outline-vol-beats.md"
 ```
 
 Must satisfy (hard requirements):
@@ -122,11 +122,11 @@ Write output:
 ```bash
 @'
 {beat_sheet_content}
-'@ | Set-Content -Encoding UTF8 "$PROJECT_ROOT/大纲/第{volume_id}卷-节拍表.md"
+'@ | Set-Content -Encoding UTF8 "$PROJECT_ROOT/outline/vol_{volume_id}-beats.md"
 ```
 
 Completion criteria:
-- `大纲/第{volume_id}卷-节拍表.md` 존재하고 비어있지 않음
+- `outline/vol_{volume_id}-beats.md` 존재하고 비어있지 않음
 - Step 4/5에서 Catalyst / 중반 반전 / 최저점 / 대실현 / 새 훅을 직접 참조하여 리듬을 앵커링할 수 있음
 
 ## 4.5) Generate volume timeline (타임라인표)
@@ -135,7 +135,7 @@ Completion criteria:
 
 Load template:
 ```bash
-cat "${SKILL_ROOT}/../../templates/output/大纲-卷时间线.md"
+cat "${SKILL_ROOT}/../../templates/output/outline-vol-timeline.md"
 ```
 
 Must satisfy (hard requirements):
@@ -147,11 +147,11 @@ Write output:
 ```bash
 @'
 {timeline_content}
-'@ | Set-Content -Encoding UTF8 "$PROJECT_ROOT/大纲/第{volume_id}卷-时间线.md"
+'@ | Set-Content -Encoding UTF8 "$PROJECT_ROOT/outline/vol_{volume_id}-timeline.md"
 ```
 
 Completion criteria:
-- `大纲/第{volume_id}卷-时间线.md` 존재하고 비어있지 않음
+- `outline/vol_{volume_id}-timeline.md` 존재하고 비어있지 않음
 - 시간 기준과 이 권의 범위가 명확히 됨
 - 카운트다운 이벤트가 있으면 표에 기재됨
 
@@ -174,7 +174,7 @@ cat "${SKILL_ROOT}/references/outlining/conflict-design.md"
 
 Load beat sheet (must exist):
 ```bash
-cat "$PROJECT_ROOT/大纲/第{volume_id}卷-节拍表.md"
+cat "$PROJECT_ROOT/outline/vol_{volume_id}-beats.md"
 ```
 
 Extract for current genre:
@@ -358,15 +358,15 @@ Save after each batch:
 ```bash
 @'
 {batch_content}
-'@ | Add-Content -Encoding UTF8 "$PROJECT_ROOT/大纲/第{volume_id}卷-详细大纲.md"
+'@ | Add-Content -Encoding UTF8 "$PROJECT_ROOT/outline/vol_{volume_id}-detailed.md"
 ```
 
 ## 7) Enrich existing setting files from volume outline
 목표: 권별 개요 작성 후, 이 권의 새로운 사실을 "기존 설정집 파일"에 기록하여, 후속 집필에서 직접 읽을 수 있도록 보장합니다.
 
 입력 소스:
-- `大纲/第{volume_id}卷-节拍表.md`
-- `大纲/第{volume_id}卷-详细大纲.md`
+- `outline/vol_{volume_id}-beats.md`
+- `outline/vol_{volume_id}-detailed.md`
 - 기존 설정집 파일 (세계관/능력체계/주인공카드/주인공그룹/여주카드/악역설계)
 
 기록 전략 (필수):
@@ -425,7 +425,7 @@ Every chapter must have:
 - 훅 (유형 + 30자 설명)
 
 **6. 타임라인 일관성 검사 (신규)**
-- 타임라인표 파일 존재: `大纲/第{volume_id}卷-时间线.md`
+- 타임라인표 파일 존재: `outline/vol_{volume_id}-timeline.md`
 - 모든 장의 시간 앵커가 기입됨
 - 시간이 단조 증가 (역행 불가, 플래시백으로 명시 표기한 경우 제외)
 - 카운트다운 추진 정확 (D-5 → D-4 → D-3, 건너뛰기 불가)
@@ -444,9 +444,9 @@ python "${SCRIPTS_DIR}/webnovel.py" --project-root "$PROJECT_ROOT" update-state 
 ```
 
 Final check:
-- 비트시트 파일 기록 완료: `大纲/第{volume_id}卷-节拍表.md`
-- 타임라인표 파일 기록 완료: `大纲/第{volume_id}卷-时间线.md`
-- 장별 개요 파일 기록 완료: `大纲/第{volume_id}卷-详细大纲.md`
+- 비트시트 파일 기록 완료: `outline/vol_{volume_id}-beats.md`
+- 타임라인표 파일 기록 완료: `outline/vol_{volume_id}-timeline.md`
+- 장별 개요 파일 기록 완료: `outline/vol_{volume_id}-detailed.md`
 - 설정집 기준선 보충 및 이 권 증분 보충 완료 (원 파일에서 확인 가능)
 - 각 장에 포함: 목표/저항/대가/시간 앵커/장내 시간 범위/전장과의 시간차/카타르시스/Strand/악역 계층/시점/핵심 엔티티/이 장의 변화/장말 미해결 문제/훅
 - 타임라인 단조 증가, 카운트다운 추진 정확

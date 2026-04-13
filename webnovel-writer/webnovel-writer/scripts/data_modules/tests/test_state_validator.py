@@ -27,7 +27,7 @@ def test_to_positive_int_and_resolve_chapter_field():
     assert to_positive_int(0) is None
     assert to_positive_int("no number") is None
 
-    item = {"added_chapter": "第15章", "target": "200"}
+    item = {"added_chapter": "제15장", "target": "200"}
     assert resolve_chapter_field(item, ["planted_chapter", "added_chapter"]) == 15
     assert resolve_chapter_field(item, ["target_chapter", "target"]) == 200
 
@@ -53,14 +53,14 @@ def test_pattern_split_and_count():
 
 def test_normalize_foreshadowing_item_and_chapter_meta_entry():
     item = {
-        "content": "  遗迹钥匙  ",
+        "content": "  유적 열쇠  ",
         "status": "pending",
         "tier": "main",
-        "added_chapter": "第30章",
+        "added_chapter": "제30장",
         "target": "120",
     }
     normalized_item = normalize_foreshadowing_item(item)
-    assert normalized_item["content"] == "遗迹钥匙"
+    assert normalized_item["content"] == "유적 열쇠"
     assert normalized_item["status"] == FORESHADOWING_STATUS_PENDING
     assert normalized_item["tier"] == FORESHADOWING_TIER_CORE
     assert normalized_item["planted_chapter"] == 30
@@ -68,15 +68,15 @@ def test_normalize_foreshadowing_item_and_chapter_meta_entry():
 
     state = {
         "chapter_meta": {
-            "0003": {"coolpoint_pattern": "反杀, 掉马"},
-            "7": {"patterns": ["翻车", "反杀"]},
+            "0003": {"coolpoint_pattern": "역전, 정체폭로"},
+            "7": {"patterns": ["역전패", "역전"]},
         }
     }
     meta3 = get_chapter_meta_entry(state, 3)
-    assert meta3["coolpoint_patterns"] == ["反杀", "掉马"]
+    assert meta3["coolpoint_patterns"] == ["역전", "정체폭로"]
 
     meta7 = get_chapter_meta_entry(state, 7)
-    assert meta7["coolpoint_patterns"] == ["翻车", "反杀"]
+    assert meta7["coolpoint_patterns"] == ["역전패", "역전"]
 
 
 def test_normalize_state_runtime_sections():
@@ -88,7 +88,7 @@ def test_normalize_state_runtime_sections():
             ]
         },
         "chapter_meta": {
-            1: {"cool_point_pattern": "打脸|翻车"},
+            1: {"cool_point_pattern": "반격|역전패"},
             "bad": "invalid",
         },
     }
@@ -103,5 +103,5 @@ def test_normalize_state_runtime_sections():
 
     chapter_meta = normalize_chapter_meta(normalized["chapter_meta"])
     assert "1" in chapter_meta
-    assert chapter_meta["1"]["coolpoint_patterns"] == ["打脸", "翻车"]
+    assert chapter_meta["1"]["coolpoint_patterns"] == ["반격", "역전패"]
 

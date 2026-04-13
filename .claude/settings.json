@@ -5,15 +5,15 @@
       "Edit(webnovel-writer/**)"
     ]
   },
+  "enabledPlugins": {
+    "webnovel-writer@webnovel-writer-marketplace": true
+  },
   "extraKnownMarketplaces": {
     "webnovel-writer-marketplace": {
       "source": {
-        "source": "github",
-        "repo": "lingfengQAQ/webnovel-writer"
+        "source": "directory",
+        "path": "/Users/ahnjunwoo/dev/novel/webnovel-writer"
       }
     }
-  },
-  "enabledPlugins": {
-    "webnovel-writer@webnovel-writer-marketplace": true
   }
 }

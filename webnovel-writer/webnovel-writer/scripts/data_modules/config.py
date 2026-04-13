@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Data Modules - 설정文件
+Data Modules - 설정 파일
 
 API 설정은 환경 변수로 읽기(. env 파일 지원)：
 - EMBED_BASE_URL, EMBED_MODEL, EMBED_API_KEY
@@ -40,7 +40,7 @@ def _load_dotenv_file(env_path: Path, *, override: bool = False) -> bool:
                     value = value.strip()
                     if not key:
                         continue
-                    # 기본값不覆盖완료有环境变量（保持“显式 > .env”우선级）
+                    # 기본적으로 기존 환경 변수를 덮어쓰지 않음（”명시적 > .env” 우선순위 유지）
                     if override or key not in os.environ:
                         os.environ[key] = value
         return True
@@ -52,8 +52,8 @@ def _load_dotenv():
     """
     .env 파일 로드(best-effort).
 
-    约定：
-    - 프로젝트 수준 `.env`（현재작업 디렉토리下）우선；
+    규칙：
+    - 프로젝트 수준 `.env`（현재 작업 디렉토리 하위）우선;
     - 전역 `.env` 폴백으로：`~/.claude/webnovel-writer/.env`
     """
     # 1) 현재 디렉토리(일반적: 사용자가 프로젝트 루트에서 실행)
@@ -110,15 +110,15 @@ class DataModulesConfig:
 
     @property
     def chapters_dir(self) -> Path:
-        return self.project_root / "正文"
+        return self.project_root / "chapters"
 
     @property
     def settings_dir(self) -> Path:
-        return self.project_root / "设定集"
+        return self.project_root / "settings"
 
     @property
     def outline_dir(self) -> Path:
-        return self.project_root / "大纲"
+        return self.project_root / "outline"
 
 
     # ================= Embedding API 설정 =================
@@ -200,11 +200,11 @@ class DataModulesConfig:
     context_ranker_length_bonus_cap: float = 0.2
     context_ranker_alert_critical_keywords: tuple[str, ...] = (
         "충돌",
-        "矛盾",
+        "모순",
         "critical",
         "break",
-        "违规",
-        "断裂",
+        "위반",
+        "단절",
     )
     context_ranker_debug: bool = False
     context_reader_signal_enabled: bool = True
@@ -285,7 +285,7 @@ class DataModulesConfig:
     character_absence_critical: int = 100
     character_candidates_limit: int = 800
 
-    # ================= Strand Weave 节奏 =================
+    # ================= Strand Weave 리듬 =================
     strand_quest_max_consecutive: int = 5
     strand_fire_max_gap: int = 10
     strand_constellation_max_gap: int = 15
@@ -334,7 +334,7 @@ def get_config(project_root: Optional[Path] = None) -> DataModulesConfig:
         # 기본적으로 CWD를 project_root로 무작정 사용하지 않음(잘못된 디렉토리에 쓰기 쉬움).
         # 통합 project_locator를 사용한 자동 탐지：
         # - 지원 WEBNOVEL_PROJECT_ROOT
-        # - 지원 `.claude/.webnovel-current-project` 포인터文件
+        # - `.claude/.webnovel-current-project` 포인터 파일 지원
         # - 현재 디렉토리/부모 디렉토리에서 검색 지원 `.webnovel/state.json`
         from project_locator import resolve_project_root
 

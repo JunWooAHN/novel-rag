@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-관계事件와관계图谱测试
+관계이벤트와 관계 그래프 테스트
 """
 
 import json
@@ -32,7 +32,7 @@ def test_relationship_events_timeline_and_subgraph(temp_project):
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             tier="핵심",
             current={},
             first_appearance=1,
@@ -44,8 +44,8 @@ def test_relationship_events_timeline_and_subgraph(temp_project):
         EntityMeta(
             id="yaolao",
             type="캐릭터",
-            canonical_name="药老",
-            tier="重要",
+            canonical_name="약로",
+            tier="중요",
             current={},
             first_appearance=1,
             last_appearance=10,
@@ -55,8 +55,8 @@ def test_relationship_events_timeline_and_subgraph(temp_project):
         EntityMeta(
             id="lintian",
             type="캐릭터",
-            canonical_name="林天",
-            tier="重要",
+            canonical_name="임천",
+            tier="중요",
             current={},
             first_appearance=2,
             last_appearance=10,
@@ -67,7 +67,7 @@ def test_relationship_events_timeline_and_subgraph(temp_project):
             from_entity="xiaoyan",
             to_entity="yaolao",
             type="사제",
-            description="正式拜师",
+            description="정식 사사",
             chapter=3,
         )
     )
@@ -76,7 +76,7 @@ def test_relationship_events_timeline_and_subgraph(temp_project):
             from_entity="yaolao",
             to_entity="lintian",
             type="적대",
-            description="理念충돌",
+            description="이념충돌",
             chapter=5,
         )
     )
@@ -89,8 +89,8 @@ def test_relationship_events_timeline_and_subgraph(temp_project):
             action="create",
             polarity=1,
             strength=0.9,
-            description="拜师",
-            evidence="公开收徒",
+            description="사사",
+            evidence="공개 제자 수련",
             confidence=0.95,
         )
     )
@@ -104,8 +104,8 @@ def test_relationship_events_timeline_and_subgraph(temp_project):
             action="create",
             polarity=-1,
             strength=0.8,
-            description="结怨",
-            evidence="比斗失手",
+            description="원한",
+            evidence="비무 실수",
             confidence=0.8,
         )
     )
@@ -133,7 +133,7 @@ def test_relationship_subgraph_respects_chapter_slice(temp_project):
         EntityMeta(
             id="a",
             type="캐릭터",
-            canonical_name="甲",
+            canonical_name="갑",
             current={},
             first_appearance=1,
             last_appearance=3,
@@ -144,7 +144,7 @@ def test_relationship_subgraph_respects_chapter_slice(temp_project):
         EntityMeta(
             id="b",
             type="캐릭터",
-            canonical_name="乙",
+            canonical_name="을",
             current={},
             first_appearance=1,
             last_appearance=3,
@@ -185,7 +185,7 @@ def test_relationship_subgraph_fallbacks_to_snapshot_when_events_missing(temp_pr
         EntityMeta(
             id="a",
             type="캐릭터",
-            canonical_name="甲",
+            canonical_name="갑",
             current={},
             first_appearance=1,
             last_appearance=5,
@@ -196,19 +196,19 @@ def test_relationship_subgraph_fallbacks_to_snapshot_when_events_missing(temp_pr
         EntityMeta(
             id="b",
             type="캐릭터",
-            canonical_name="乙",
+            canonical_name="을",
             current={},
             first_appearance=1,
             last_appearance=5,
         )
     )
-    # 只写 relationships 快照，不写 relationship_events
+    # relationships 스냅샷만 작성, relationship_events는 미작성
     manager.upsert_relationship(
         RelationshipMeta(
             from_entity="a",
             to_entity="b",
             type="동맹",
-            description="旧版快照数据",
+            description="이전 버전 스냅샷 데이터",
             chapter=3,
         )
     )
@@ -225,7 +225,7 @@ def test_relationship_graph_cli_commands(temp_project, monkeypatch, capsys):
         EntityMeta(
             id="hero",
             type="캐릭터",
-            canonical_name="主角",
+            canonical_name="주인공",
             current={},
             first_appearance=1,
             last_appearance=1,
@@ -236,7 +236,7 @@ def test_relationship_graph_cli_commands(temp_project, monkeypatch, capsys):
         EntityMeta(
             id="mentor",
             type="캐릭터",
-            canonical_name="师父",
+            canonical_name="스승",
             current={},
             first_appearance=1,
             last_appearance=1,

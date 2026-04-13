@@ -8,7 +8,7 @@ webnovel 통합 진입 스크립트(필요 없음 `cd`）
   python "<SCRIPTS_DIR>/webnovel.py" where
   python "<SCRIPTS_DIR>/webnovel.py" index stats
 
-说明：
+설명：
 - 이 스크립트는 `.claude/scripts` sys.path에 추가한 후 전달만 `data_modules.webnovel`。
 - skills/agents가 프로젝트 수준 또는 사용자 수준(~/.claude)에 설치될 때의 호출 방식에 적응.
 """

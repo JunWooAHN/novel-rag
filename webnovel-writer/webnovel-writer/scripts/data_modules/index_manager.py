@@ -1,35 +1,35 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Index Manager - 索引管理模块 (v5.4)
+Index Manager - 인덱스 관리 모듈 (v5.4)
 
-管理 index.db (SQLite) 的读写操作：
-- 챕터元数据索引
-- 实体出场记录
-- 场景索引
-- 实体스토리지 (从 state.json 迁移)
-- 별칭索引 (一对多)
-- 상태变化记录
-- 관계스토리지
-- 快速쿼리인터페이스
-- 追读力债务管理 (v5.3 도입,v5.4 유지)
+index.db (SQLite) 읽기/쓰기 관리:
+- 챕터 메타데이터 인덱스
+- 엔티티 등장 기록
+- 장면 인덱스
+- 엔티티 스토리지 (state.json에서 마이그레이션)
+- 별칭 인덱스 (일대다)
+- 상태 변화 기록
+- 관계 스토리지
+- 빠른 쿼리 인터페이스
+- 추독력 부채 관리 (v5.3 도입, v5.4 유지)
 
 v5.4 변경:
-- 신규 invalid_facts 表：追踪없음效事实 (pending/confirmed)
-- 신규 tool_call_stats 表：记录工具调用成功率와오류信息
-- 신규 review_metrics 表：记录审查지표와趋势数据
+- 신규 invalid_facts 테이블: 유효하지 않은 팩트 추적 (pending/confirmed)
+- 신규 tool_call_stats 테이블: 도구 호출 성공률 및 오류 정보 기록
+- 신규 review_metrics 테이블: 검토 지표 및 추세 데이터 기록
 
 v5.3 변경:
-- 신규 override_contracts 表：记录违背软제안时的Override Contract
-- 신규 chase_debt 表：追读力债务追踪
-- 신규 debt_events 表：债务事件日志（产生/偿还/利息）
-- 신규 chapter_reading_power 表：챕터追读力元数据
+- 신규 override_contracts 테이블: 소프트 제안 위반 시 Override Contract 기록
+- 신규 chase_debt 테이블: 추독력 부채 추적
+- 신규 debt_events 테이블: 부채 이벤트 로그 (발생/상환/이자)
+- 신규 chapter_reading_power 테이블: 챕터 추독력 메타데이터
 
 v5.1 변경:
-- 신규 entities 表替代 state.json 中的 entities_v3
-- 신규 aliases 表替代 state.json 中的 alias_index (지원一对多)
-- 신규 state_changes 表替代 state.json 中的 state_changes
-- 신규 relationships 表替代 state.json 中的 structured_relationships
+- 신규 entities 테이블이 state.json의 entities_v3를 대체
+- 신규 aliases 테이블이 state.json의 alias_index를 대체 (일대다 지원)
+- 신규 state_changes 테이블이 state.json의 state_changes를 대체
+- 신규 relationships 테이블이 state.json의 structured_relationships를 대체
 """
 
 import sqlite3
@@ -54,7 +54,7 @@ from .observability import safe_append_perf_timing, safe_log_tool_call
 
 @dataclass
 class ChapterMeta:
-    """챕터元数据"""
+    """챕터 메타데이터"""
 
     chapter: int
     title: str
@@ -66,7 +66,7 @@ class ChapterMeta:
 
 @dataclass
 class SceneMeta:
-    """场景元数据"""
+    """장면 메타데이터"""
 
     chapter: int
     scene_index: int
@@ -79,14 +79,14 @@ class SceneMeta:
 
 @dataclass
 class EntityMeta:
-    """实体元数据 (v5.1 도입)"""
+    """엔티티 메타데이터 (v5.1 도입)"""
 
     id: str
-    type: str  # 캐릭터/장소/物品/세력/招式
+    type: str  # 캐릭터/장소/물품/세력/초식
     canonical_name: str
-    tier: str = "장식"  # 핵심/重要/次要/장식
+    tier: str = "장식"  # 핵심/중요/차요/장식
     desc: str = ""
-    current: Dict = field(default_factory=dict)  # 현재 상태 (realm/location/items等)
+    current: Dict = field(default_factory=dict)  # 현재 상태 (realm/location/items 등)
     first_appearance: int = 0
     last_appearance: int = 0
     is_protagonist: bool = False
@@ -95,7 +95,7 @@ class EntityMeta:
 
 @dataclass
 class StateChangeMeta:
-    """상태变化记录 (v5.1 도입)"""
+    """상태 변화 기록 (v5.1 도입)"""
 
     entity_id: str
     field: str
@@ -107,7 +107,7 @@ class StateChangeMeta:
 
 @dataclass
 class RelationshipMeta:
-    """관계记录 (v5.1 도입)"""
+    """관계 기록 (v5.1 도입)"""
 
     from_entity: str
     to_entity: str
@@ -118,7 +118,7 @@ class RelationshipMeta:
 
 @dataclass
 class RelationshipEventMeta:
-    """관계事件记录 (v5.5 도입)"""
+    """관계 이벤트 기록 (v5.5 도입)"""
 
     from_entity: str
     to_entity: str
@@ -139,32 +139,32 @@ class OverrideContractMeta:
 
     chapter: int
     constraint_type: str  # SOFT_HOOK_STRENGTH / SOFT_MICROPAYOFF / etc.
-    constraint_id: str  # 具体约束标识
+    constraint_id: str  # 구체적 제약 식별자
     rationale_type: str  # TRANSITIONAL_SETUP / LOGIC_INTEGRITY / etc.
-    rationale_text: str  # 具体理由说明
-    payback_plan: str  # 偿还计划描述
-    due_chapter: int  # 偿还截止챕터
+    rationale_text: str  # 구체적 사유 설명
+    payback_plan: str  # 상환 계획 설명
+    due_chapter: int  # 상환 마감 챕터
     status: str = "pending"  # pending / fulfilled / overdue / cancelled
 
 
 @dataclass
 class ChaseDebtMeta:
-    """追读力债务 (v5.3 도입)"""
+    """추독력 부채 (v5.3 도입)"""
 
     id: int = 0
     debt_type: str = ""  # hook_strength / micropayoff / coolpoint / etc.
-    original_amount: float = 1.0  # 初始债务量
-    current_amount: float = 1.0  # 현재债务量（포함利息）
-    interest_rate: float = 0.1  # 利息率（每章）
-    source_chapter: int = 0  # 产生债务的챕터
-    due_chapter: int = 0  # 截止챕터
-    override_contract_id: int = 0  # 关联的Override Contract
+    original_amount: float = 1.0  # 초기 부채량
+    current_amount: float = 1.0  # 현재 부채량 (이자 포함)
+    interest_rate: float = 0.1  # 이자율 (챕터당)
+    source_chapter: int = 0  # 부채 발생 챕터
+    due_chapter: int = 0  # 마감 챕터
+    override_contract_id: int = 0  # 연관된 Override Contract
     status: str = "active"  # active / paid / overdue / written_off
 
 
 @dataclass
 class DebtEventMeta:
-    """债务事件日志 (v5.3 도입)"""
+    """부채 이벤트 로그 (v5.3 도입)"""
 
     debt_id: int
     event_type: (
@@ -177,23 +177,23 @@ class DebtEventMeta:
 
 @dataclass
 class ChapterReadingPowerMeta:
-    """챕터追读力元数据 (v5.3 도입)"""
+    """챕터 추독력 메타데이터 (v5.3 도입)"""
 
     chapter: int
-    hook_type: str = ""  # 章末钩子类型
+    hook_type: str = ""  # 장 말미 훅 유형
     hook_strength: str = "medium"  # strong / medium / weak
-    coolpoint_patterns: List[str] = field(default_factory=list)  # 使用的爽点모드
-    micropayoffs: List[str] = field(default_factory=list)  # 微兑现列表
-    hard_violations: List[str] = field(default_factory=list)  # 硬约束违规
-    soft_suggestions: List[str] = field(default_factory=list)  # 软제안
-    is_transition: bool = False  # 是否为过渡章
-    override_count: int = 0  # Override Contract수량
-    debt_balance: float = 0.0  # 현재债务余额
+    coolpoint_patterns: List[str] = field(default_factory=list)  # 사용된 쾌감 포인트 패턴
+    micropayoffs: List[str] = field(default_factory=list)  # 마이크로 페이오프 목록
+    hard_violations: List[str] = field(default_factory=list)  # 하드 제약 위반
+    soft_suggestions: List[str] = field(default_factory=list)  # 소프트 제안
+    is_transition: bool = False  # 전환 장 여부
+    override_count: int = 0  # Override Contract 수량
+    debt_balance: float = 0.0  # 현재 부채 잔액
 
 
 @dataclass
 class ReviewMetrics:
-    """审查지표记录 (v5.4 도입)"""
+    """검토 지표 기록 (v5.4 도입)"""
 
     start_chapter: int
     end_chapter: int
@@ -207,7 +207,7 @@ class ReviewMetrics:
 
 @dataclass
 class WritingChecklistScoreMeta:
-    """写作清单점수记录（Context Contract v2 Phase F）"""
+    """작성 체크리스트 점수 기록 (Context Contract v2 Phase F)"""
 
     chapter: int
     template: str = "plot"
@@ -226,20 +226,20 @@ class WritingChecklistScoreMeta:
 
 
 class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexReadingMixin, IndexObservabilityMixin):
-    """索引管理器"""
+    """인덱스 관리기"""
 
     def __init__(self, config=None):
         self.config = config or get_config()
         self._init_db()
 
     def _init_db(self):
-        """초기화数据库表"""
+        """데이터베이스 테이블 초기화"""
         self.config.ensure_dirs()
 
         with self._get_conn() as conn:
             cursor = conn.cursor()
 
-            # 챕터表
+            # 챕터 테이블
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS chapters (
                     chapter INTEGER PRIMARY KEY,
@@ -252,7 +252,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # 场景表
+            # 장면 테이블
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS scenes (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -267,7 +267,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # 实体出场表
+            # 엔티티 등장 테이블
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS appearances (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -279,7 +279,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # 创建索引
+            # 인덱스 생성
             cursor.execute(
                 "CREATE INDEX IF NOT EXISTS idx_scenes_chapter ON scenes(chapter)"
             )
@@ -290,9 +290,9 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 "CREATE INDEX IF NOT EXISTS idx_appearances_chapter ON appearances(chapter)"
             )
 
-            # ==================== v5.1 도입表 ====================
+            # ==================== v5.1 도입 테이블 ====================
 
-            # 实体表 (替代 state.json 中的 entities_v3)
+            # 엔티티 테이블 (state.json의 entities_v3를 대체)
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS entities (
                     id TEXT PRIMARY KEY,
@@ -310,7 +310,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # 별칭表 (替代 state.json 中的 alias_index，지원一对多)
+            # 별칭 테이블 (state.json의 alias_index를 대체, 일대다 지원)
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS aliases (
                     alias TEXT NOT NULL,
@@ -321,7 +321,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # 상태变化表 (替代 state.json 中的 state_changes)
+            # 상태 변화 테이블 (state.json의 state_changes를 대체)
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS state_changes (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -335,7 +335,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # 관계表 (替代 state.json 中的 structured_relationships)
+            # 관계 테이블 (state.json의 structured_relationships를 대체)
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS relationships (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -349,7 +349,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # v5.1 도입索引
+            # v5.1 도입 인덱스
             cursor.execute(
                 "CREATE INDEX IF NOT EXISTS idx_entities_type ON entities(type)"
             )
@@ -381,7 +381,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 "CREATE INDEX IF NOT EXISTS idx_relationships_chapter ON relationships(chapter)"
             )
 
-            # 관계事件表 (v5.5 도입,用于时序回放/图谱分析)
+            # 관계 이벤트 테이블 (v5.5 도입, 시계열 재생/그래프 분석용)
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS relationship_events (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -412,9 +412,9 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 "CREATE INDEX IF NOT EXISTS idx_relationship_events_type_chapter ON relationship_events(type, chapter)"
             )
 
-            # ==================== v5.3 도입表：追读力债务管理 ====================
+            # ==================== v5.3 도입 테이블: 추독력 부채 관리 ====================
 
-            # Override Contract 表
+            # Override Contract 테이블
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS override_contracts (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -432,7 +432,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # 追读力债务表
+            # 추독력 부채 테이블
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS chase_debt (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -450,7 +450,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # 债务事件日志表
+            # 부채 이벤트 로그 테이블
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS debt_events (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -464,7 +464,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # 챕터追读力元数据表
+            # 챕터 추독력 메타데이터 테이블
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS chapter_reading_power (
                     chapter INTEGER PRIMARY KEY,
@@ -482,7 +482,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 )
             """)
 
-            # v5.3 도입索引
+            # v5.3 도입 인덱스
             cursor.execute(
                 "CREATE INDEX IF NOT EXISTS idx_override_contracts_chapter ON override_contracts(chapter)"
             )
@@ -508,9 +508,9 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 "CREATE INDEX IF NOT EXISTS idx_debt_events_chapter ON debt_events(chapter)"
             )
 
-            # ==================== v5.4 신규表：없음效事实와日志 ====================
+            # ==================== v5.4 신규 테이블: 유효하지 않은 팩트 및 로그 ====================
 
-            # 없음效事实表
+            # 유효하지 않은 팩트 테이블
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS invalid_facts (
                     id INTEGER PRIMARY KEY,
@@ -532,7 +532,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 "CREATE INDEX IF NOT EXISTS idx_invalid_source ON invalid_facts(source_type, source_id)"
             )
 
-            # 审查지표表
+            # 검토 지표 테이블
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS review_metrics (
                     start_chapter INTEGER NOT NULL,
@@ -552,7 +552,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 "CREATE INDEX IF NOT EXISTS idx_review_metrics_end ON review_metrics(end_chapter)"
             )
 
-            # RAG 쿼리日志
+            # RAG 쿼리 로그
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS rag_query_log (
                     id INTEGER PRIMARY KEY,
@@ -572,7 +572,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 "CREATE INDEX IF NOT EXISTS idx_rag_query_chapter ON rag_query_log(chapter)"
             )
 
-            # 工具호출 통계
+            # 도구 호출 통계
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS tool_call_stats (
                     id INTEGER PRIMARY KEY,
@@ -592,7 +592,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
                 "CREATE INDEX IF NOT EXISTS idx_tool_stats_chapter ON tool_call_stats(chapter)"
             )
 
-            # 写作清单점수记录（Phase F）
+            # 작성 체크리스트 점수 기록 (Phase F)
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS writing_checklist_scores (
                     chapter INTEGER PRIMARY KEY,
@@ -621,7 +621,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
 
     @contextmanager
     def _get_conn(self):
-        """获取数据库连接"""
+        """데이터베이스 연결 조회"""
         conn = sqlite3.connect(str(self.config.index_db))
         conn.row_factory = sqlite3.Row
         try:
@@ -629,7 +629,7 @@ class IndexManager(IndexChapterMixin, IndexEntityMixin, IndexDebtMixin, IndexRea
         finally:
             conn.close()
 
-    # ==================== 챕터操作 ====================
+    # ==================== 챕터 작업 ====================
 
 # ==================== CLI 인터페이스 ====================
 
@@ -645,77 +645,77 @@ def main():
 
     subparsers = parser.add_subparsers(dest="command")
 
-    # 获取통계
+    # 통계 조회
     subparsers.add_parser("stats")
 
-    # 쿼리챕터
+    # 챕터 쿼리
     chapter_parser = subparsers.add_parser("get-chapter")
     chapter_parser.add_argument("--chapter", type=int, required=True)
 
-    # 쿼리최근出场
+    # 최근 등장 쿼리
     recent_parser = subparsers.add_parser("recent-appearances")
     recent_parser.add_argument("--limit", type=int, default=None)
 
-    # 쿼리实体出场
+    # 엔티티 등장 쿼리
     entity_parser = subparsers.add_parser("entity-appearances")
     entity_parser.add_argument("--entity", required=True)
     entity_parser.add_argument("--limit", type=int, default=None)
 
-    # 搜索场景
+    # 장면 검색
     search_parser = subparsers.add_parser("search-scenes")
     search_parser.add_argument("--location", required=True)
     search_parser.add_argument("--limit", type=int, default=None)
 
-    # 处理챕터数据 (写入)
+    # 챕터 데이터 처리 (쓰기)
     process_parser = subparsers.add_parser("process-chapter")
     process_parser.add_argument("--chapter", type=int, required=True)
     process_parser.add_argument("--title", required=True)
     process_parser.add_argument("--location", required=True)
     process_parser.add_argument("--word-count", type=int, required=True)
-    process_parser.add_argument("--entities", required=True, help="JSON 格式的实体列表")
-    process_parser.add_argument("--scenes", required=True, help="JSON 格式的场景列表")
+    process_parser.add_argument("--entities", required=True, help="JSON 형식의 엔티티 목록")
+    process_parser.add_argument("--scenes", required=True, help="JSON 형식의 장면 목록")
 
-    # ==================== v5.1 도입命令 ====================
+    # ==================== v5.1 도입 명령 ====================
 
-    # 获取实体
+    # 엔티티 조회
     get_entity_parser = subparsers.add_parser("get-entity")
-    get_entity_parser.add_argument("--id", required=True, help="实体 ID")
+    get_entity_parser.add_argument("--id", required=True, help="엔티티 ID")
 
-    # 获取핵심实体
+    # 핵심 엔티티 조회
     subparsers.add_parser("get-core-entities")
 
-    # 获取主角
+    # 주인공 조회
     subparsers.add_parser("get-protagonist")
 
-    # 按类型获取实体
+    # 타입별 엔티티 조회
     type_parser = subparsers.add_parser("get-entities-by-type")
     type_parser.add_argument(
-        "--type", required=True, help="实体类型 (캐릭터/장소/物品/세력/招式)"
+        "--type", required=True, help="엔티티 타입 (캐릭터/장소/물품/세력/초식)"
     )
     type_parser.add_argument("--include-archived", action="store_true")
 
-    # 按별칭查找实体
+    # 별칭으로 엔티티 조회
     alias_parser = subparsers.add_parser("get-by-alias")
     alias_parser.add_argument("--alias", required=True, help="별칭")
 
-    # 获取实体별칭
+    # 엔티티 별칭 조회
     aliases_parser = subparsers.add_parser("get-aliases")
-    aliases_parser.add_argument("--entity", required=True, help="实体 ID")
+    aliases_parser.add_argument("--entity", required=True, help="엔티티 ID")
 
-    # 注册별칭
+    # 별칭 등록
     reg_alias_parser = subparsers.add_parser("register-alias")
     reg_alias_parser.add_argument("--alias", required=True)
     reg_alias_parser.add_argument("--entity", required=True)
-    reg_alias_parser.add_argument("--type", required=True, help="实体类型")
+    reg_alias_parser.add_argument("--type", required=True, help="엔티티 타입")
 
-    # 获取实体관계
+    # 엔티티 관계 조회
     rel_parser = subparsers.add_parser("get-relationships")
     rel_parser.add_argument("--entity", required=True)
     rel_parser.add_argument(
         "--direction", choices=["from", "to", "both"], default="both"
     )
 
-    # 获取관계事件
+    # 관계 이벤트 조회
     rel_events_parser = subparsers.add_parser("get-relationship-events")
     rel_events_parser.add_argument("--entity", required=True)
     rel_events_parser.add_argument("--direction", choices=["from", "to", "both"], default="both")
@@ -723,48 +723,48 @@ def main():
     rel_events_parser.add_argument("--to-chapter", type=int, default=None)
     rel_events_parser.add_argument("--limit", type=int, default=100)
 
-    # 获取관계图谱
+    # 관계 그래프 조회
     rel_graph_parser = subparsers.add_parser("get-relationship-graph")
-    rel_graph_parser.add_argument("--center", required=True, help="中心实体 ID")
+    rel_graph_parser.add_argument("--center", required=True, help="중심 엔티티 ID")
     rel_graph_parser.add_argument("--depth", type=int, default=2)
     rel_graph_parser.add_argument("--chapter", type=int, default=None)
     rel_graph_parser.add_argument("--top-edges", type=int, default=50)
     rel_graph_parser.add_argument("--format", choices=["json", "mermaid"], default="json")
 
-    # 获取관계时间线
+    # 관계 타임라인 조회
     rel_timeline_parser = subparsers.add_parser("get-relationship-timeline")
-    rel_timeline_parser.add_argument("--a", required=True, help="实体 A")
-    rel_timeline_parser.add_argument("--b", required=True, help="实体 B")
+    rel_timeline_parser.add_argument("--a", required=True, help="엔티티 A")
+    rel_timeline_parser.add_argument("--b", required=True, help="엔티티 B")
     rel_timeline_parser.add_argument("--from-chapter", type=int, default=None)
     rel_timeline_parser.add_argument("--to-chapter", type=int, default=None)
     rel_timeline_parser.add_argument("--limit", type=int, default=100)
 
-    # 写入관계事件
+    # 관계 이벤트 기록
     rel_event_record_parser = subparsers.add_parser("record-relationship-event")
-    rel_event_record_parser.add_argument("--data", required=True, help="JSON 格式的관계事件数据")
+    rel_event_record_parser.add_argument("--data", required=True, help="JSON 형식의 관계 이벤트 데이터")
 
-    # 获取상태变化
+    # 상태 변화 조회
     changes_parser = subparsers.add_parser("get-state-changes")
     changes_parser.add_argument("--entity", required=True)
     changes_parser.add_argument("--limit", type=int, default=20)
 
-    # 写入实体
+    # 엔티티 쓰기
     upsert_entity_parser = subparsers.add_parser("upsert-entity")
     upsert_entity_parser.add_argument(
-        "--data", required=True, help="JSON 格式的实体数据"
+        "--data", required=True, help="JSON 형식의 엔티티 데이터"
     )
 
-    # 写入관계
+    # 관계 쓰기
     upsert_rel_parser = subparsers.add_parser("upsert-relationship")
-    upsert_rel_parser.add_argument("--data", required=True, help="JSON 格式的관계数据")
+    upsert_rel_parser.add_argument("--data", required=True, help="JSON 형식의 관계 데이터")
 
-    # 写入상태变化
+    # 상태 변화 기록
     state_change_parser = subparsers.add_parser("record-state-change")
     state_change_parser.add_argument(
-        "--data", required=True, help="JSON 格式的상태变化数据"
+        "--data", required=True, help="JSON 형식의 상태 변화 데이터"
     )
 
-    # ==================== v5.4 신규命令 ====================
+    # ==================== v5.4 신규 명령 ====================
     invalid_parser = subparsers.add_parser("mark-invalid")
     invalid_parser.add_argument("--source-type", required=True)
     invalid_parser.add_argument("--source-id", required=True)
@@ -780,7 +780,7 @@ def main():
     list_invalid_parser.add_argument("--status", choices=["pending", "confirmed"], default=None)
 
     review_save_parser = subparsers.add_parser("save-review-metrics")
-    review_save_parser.add_argument("--data", required=True, help="JSON 格式的审查지표数据")
+    review_save_parser.add_argument("--data", required=True, help="JSON 형식의 검토 지표 데이터")
 
     review_recent_parser = subparsers.add_parser("get-recent-review-metrics")
     review_recent_parser.add_argument("--limit", type=int, default=5)
@@ -789,7 +789,7 @@ def main():
     review_trend_parser.add_argument("--last-n", type=int, default=5)
 
     checklist_score_save_parser = subparsers.add_parser("save-writing-checklist-score")
-    checklist_score_save_parser.add_argument("--data", required=True, help="JSON 格式的写作清单점수数据")
+    checklist_score_save_parser.add_argument("--data", required=True, help="JSON 형식의 작성 체크리스트 점수 데이터")
 
     checklist_score_get_parser = subparsers.add_parser("get-writing-checklist-score")
     checklist_score_get_parser.add_argument("--chapter", type=int, required=True)
@@ -800,70 +800,70 @@ def main():
     checklist_score_trend_parser = subparsers.add_parser("get-writing-checklist-score-trend")
     checklist_score_trend_parser.add_argument("--last-n", type=int, default=10)
 
-    # ==================== v5.3 도입命令 ====================
+    # ==================== v5.3 도입 명령 ====================
 
-    # 获取债务汇总
+    # 부채 요약 조회
     subparsers.add_parser("get-debt-summary")
 
-    # 获取최근챕터追读力元数据
+    # 최근 챕터 추독력 메타데이터 조회
     reading_power_parser = subparsers.add_parser("get-recent-reading-power")
     reading_power_parser.add_argument("--limit", type=int, default=10)
 
-    # 获取챕터追读力元数据
+    # 챕터 추독력 메타데이터 조회
     chapter_rp_parser = subparsers.add_parser("get-chapter-reading-power")
     chapter_rp_parser.add_argument("--chapter", type=int, required=True)
 
-    # 获取爽点모드使用통계
+    # 쾌감 포인트 패턴 사용 통계 조회
     pattern_stats_parser = subparsers.add_parser("get-pattern-usage-stats")
     pattern_stats_parser.add_argument("--last-n", type=int, default=20)
 
-    # 获取钩子类型使用통계
+    # 훅 유형 사용 통계 조회
     hook_stats_parser = subparsers.add_parser("get-hook-type-stats")
     hook_stats_parser.add_argument("--last-n", type=int, default=20)
 
-    # 获取待偿还Override
+    # 상환 대기 Override 조회
     pending_override_parser = subparsers.add_parser("get-pending-overrides")
     pending_override_parser.add_argument("--before-chapter", type=int, default=None)
 
-    # 获取逾期Override
+    # 연체 Override 조회
     overdue_override_parser = subparsers.add_parser("get-overdue-overrides")
     overdue_override_parser.add_argument("--current-chapter", type=int, required=True)
 
-    # 获取활성债务
+    # 활성 부채 조회
     subparsers.add_parser("get-active-debts")
 
-    # 获取逾期债务
+    # 연체 부채 조회
     overdue_debt_parser = subparsers.add_parser("get-overdue-debts")
     overdue_debt_parser.add_argument("--current-chapter", type=int, required=True)
 
-    # 计算利息
+    # 이자 계산
     accrue_parser = subparsers.add_parser("accrue-interest")
     accrue_parser.add_argument("--current-chapter", type=int, required=True)
 
-    # 偿还债务
+    # 부채 상환
     pay_debt_parser = subparsers.add_parser("pay-debt")
     pay_debt_parser.add_argument("--debt-id", type=int, required=True)
     pay_debt_parser.add_argument("--amount", type=float, required=True)
     pay_debt_parser.add_argument("--chapter", type=int, required=True)
 
-    # 创建Override Contract
+    # Override Contract 생성
     create_override_parser = subparsers.add_parser("create-override-contract")
     create_override_parser.add_argument(
-        "--data", required=True, help="JSON 格式的Override Contract数据"
+        "--data", required=True, help="JSON 형식의 Override Contract 데이터"
     )
 
-    # 创建债务
+    # 부채 생성
     create_debt_parser = subparsers.add_parser("create-debt")
-    create_debt_parser.add_argument("--data", required=True, help="JSON 格式的债务数据")
+    create_debt_parser.add_argument("--data", required=True, help="JSON 형식의 부채 데이터")
 
-    # 标记Override완료偿还
+    # Override 상환 완료 표시
     fulfill_override_parser = subparsers.add_parser("fulfill-override")
     fulfill_override_parser.add_argument("--contract-id", type=int, required=True)
 
-    # 저장챕터追读力元数据
+    # 챕터 추독력 메타데이터 저장
     save_rp_parser = subparsers.add_parser("save-chapter-reading-power")
     save_rp_parser.add_argument(
-        "--data", required=True, help="JSON 格式的챕터追读力元数据"
+        "--data", required=True, help="JSON 형식의 챕터 추독력 메타데이터"
     )
 
     argv = normalize_global_project_root(sys.argv[1:])
@@ -873,7 +873,7 @@ def main():
     # 초기화
     config = None
     if args.project_root:
-        # 允许传入“工作区根目录”，统一解析到真正的 book project_root（必须포함 .webnovel/state.json）
+        # “작업 공간 루트 디렉토리”를 전달받아, 실제 book project_root로 통일 해석 (.webnovel/state.json 포함 필수)
         from project_locator import resolve_project_root
         from .config import DataModulesConfig
 
@@ -926,7 +926,7 @@ def main():
         if chapter:
             emit_success(chapter, message="chapter")
         else:
-            emit_error("NOT_FOUND", f"찾을 수 없음챕터: {args.chapter}")
+            emit_error("NOT_FOUND", f"챕터를 찾을 수 없음: {args.chapter}")
 
     elif args.command == "recent-appearances":
         appearances = manager.get_recent_appearances(args.limit)
@@ -953,14 +953,14 @@ def main():
         )
         emit_success(stats, message="chapter_processed", chapter=args.chapter)
 
-    # ==================== v5.1 도입命令处理 ====================
+    # ==================== v5.1 도입 명령 처리 ====================
 
     elif args.command == "get-entity":
         entity = manager.get_entity(args.id)
         if entity:
             emit_success(entity, message="entity")
         else:
-            emit_error("NOT_FOUND", f"찾을 수 없음实体: {args.id}")
+            emit_error("NOT_FOUND", f"엔티티를 찾을 수 없음: {args.id}")
 
     elif args.command == "get-core-entities":
         entities = manager.get_core_entities()
@@ -971,7 +971,7 @@ def main():
         if protagonist:
             emit_success(protagonist, message="protagonist")
         else:
-            emit_error("NOT_FOUND", "未设置主角")
+            emit_error("NOT_FOUND", "주인공이 설정되지 않음")
 
     elif args.command == "get-entities-by-type":
         entities = manager.get_entities_by_type(args.type, args.include_archived)
@@ -989,7 +989,7 @@ def main():
         if aliases:
             emit_success({"entity": args.entity, "aliases": aliases}, message="aliases")
         else:
-            emit_error("NOT_FOUND", f"{args.entity} 没有별칭")
+            emit_error("NOT_FOUND", f"{args.entity}에 별칭이 없음")
 
     elif args.command == "register-alias":
         success = manager.register_alias(args.alias, args.entity, args.type)
@@ -999,7 +999,7 @@ def main():
                 message="alias_registered",
             )
         else:
-            emit_error("ALIAS_EXISTS", f"별칭완료存在或注册실패: {args.alias}")
+            emit_error("ALIAS_EXISTS", f"별칭이 이미 존재하거나 등록 실패: {args.alias}")
 
     elif args.command == "get-relationships":
         rels = manager.get_entity_relationships(args.entity, args.direction)
@@ -1045,7 +1045,7 @@ def main():
         try:
             data = load_json_arg(args.data)
         except (TypeError, ValueError, json.JSONDecodeError):
-            emit_error("INVALID_RELATIONSHIP_EVENT", "관계事件 JSON 없음效")
+            emit_error("INVALID_RELATIONSHIP_EVENT", "관계 이벤트 JSON이 유효하지 않음")
         else:
             event = RelationshipEventMeta(
                 from_entity=data.get("from_entity", ""),
@@ -1064,7 +1064,7 @@ def main():
             if event_id > 0:
                 emit_success({"id": event_id}, message="relationship_event_recorded")
             else:
-                emit_error("INVALID_RELATIONSHIP_EVENT", "관계事件매개변수없음效，未写入")
+                emit_error("INVALID_RELATIONSHIP_EVENT", "관계 이벤트 매개변수가 유효하지 않아 기록되지 않음")
 
     elif args.command == "upsert-entity":
         data = load_json_arg(args.data)
@@ -1111,7 +1111,7 @@ def main():
         record_id = manager.record_state_change(change)
         emit_success({"id": record_id, "entity": change.entity_id, "field": change.field}, message="state_change_recorded")
 
-    # ==================== v5.4 없음效事实命令处理 ====================
+    # ==================== v5.4 유효하지 않은 팩트 명령 처리 ====================
 
     elif args.command == "mark-invalid":
         invalid_id = manager.mark_invalid_fact(
@@ -1128,7 +1128,7 @@ def main():
         if ok:
             emit_success({"id": args.id, "action": args.action}, message="invalid_resolved")
         else:
-            emit_error("INVALID_ACTION", f"없음法处理 action: {args.action}")
+            emit_error("INVALID_ACTION", f"처리할 수 없는 action: {args.action}")
 
     elif args.command == "list-invalid":
         rows = manager.list_invalid_facts(args.status)
@@ -1186,7 +1186,7 @@ def main():
         if score:
             emit_success(score, message="writing_checklist_score")
         else:
-            emit_error("NOT_FOUND", f"찾을 수 없음第 {args.chapter} 章的写作清单점수")
+            emit_error("NOT_FOUND", f"제 {args.chapter} 장의 작성 체크리스트 점수를 찾을 수 없음")
 
     elif args.command == "get-recent-writing-checklist-scores":
         scores = manager.get_recent_writing_checklist_scores(args.limit)
@@ -1196,7 +1196,7 @@ def main():
         trend = manager.get_writing_checklist_score_trend(args.last_n)
         emit_success(trend, message="writing_checklist_score_trend")
 
-    # ==================== v5.3 도입命令处理 ====================
+    # ==================== v5.3 도입 명령 처리 ====================
 
     elif args.command == "get-debt-summary":
         summary = manager.get_debt_summary()
@@ -1211,7 +1211,7 @@ def main():
         if record:
             emit_success(record, message="chapter_reading_power")
         else:
-            emit_error("NOT_FOUND", f"찾을 수 없음第 {args.chapter} 章的追读力元数据")
+            emit_error("NOT_FOUND", f"제 {args.chapter} 장의 추독력 메타데이터를 찾을 수 없음")
 
     elif args.command == "get-pattern-usage-stats":
         stats = manager.get_pattern_usage_stats(args.last_n)

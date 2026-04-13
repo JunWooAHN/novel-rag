@@ -20,25 +20,25 @@ logger = logging.getLogger(__name__)
 class IndexEntityMixin:
     def upsert_entity(self, entity: EntityMeta, update_metadata: bool = False) -> bool:
         """
-        插入或更新实体 (智能合并)
+        엔티티 삽입 또는 수정 (스마트 병합)
 
-        - 新实体: 直接插入
-        - 완료存在: 更新 current_json, last_appearance, updated_at
-        - update_metadata=True: 同时更新 canonical_name/tier/desc/is_protagonist/is_archived
+        - 새 엔티티: 바로 삽입
+        - 이미 존재: current_json, last_appearance, updated_at 수정
+        - update_metadata=True: canonical_name/tier/desc/is_protagonist/is_archived도 함께 수정
 
-        반환是否为新实体
+        반환: 새 엔티티 여부
         """
         with self._get_conn() as conn:
             cursor = conn.cursor()
 
-            # 检查是否存在
+            # 존재 여부 확인
             cursor.execute(
                 "SELECT id, current_json FROM entities WHERE id = ?", (entity.id,)
             )
             existing = cursor.fetchone()
 
             if existing:
-                # 완료存在: 智能合并 current_json
+                # 이미 존재: current_json 스마트 병합
                 old_current = {}
                 if existing["current_json"]:
                     try:
@@ -49,11 +49,11 @@ class IndexEntityMixin:
                             exc,
                         )
 
-                # 合并 current (新值覆盖旧值)
+                # current 병합 (새 값이 기존 값을 덮어씀)
                 merged_current = {**old_current, **entity.current}
 
                 if update_metadata:
-                    # 完整更新（包括元数据）
+                    # 전체 수정 (메타데이터 포함)
                     cursor.execute(
                         """
                         UPDATE entities SET
@@ -79,7 +79,7 @@ class IndexEntityMixin:
                         ),
                     )
                 else:
-                    # 只更新 current 和 last_appearance
+                    # current와 last_appearance만 수정
                     cursor.execute(
                         """
                         UPDATE entities SET
@@ -97,7 +97,7 @@ class IndexEntityMixin:
                 conn.commit()
                 return False
             else:
-                # 新实体: 插入
+                # 새 엔티티: 삽입
                 cursor.execute(
                     """
                     INSERT INTO entities
@@ -122,7 +122,7 @@ class IndexEntityMixin:
                 return True
 
     def get_entity(self, entity_id: str) -> Optional[Dict]:
-        """获取单个实体"""
+        """단일 엔티티 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM entities WHERE id = ?", (entity_id,))
@@ -134,7 +134,7 @@ class IndexEntityMixin:
     def get_entities_by_type(
         self, entity_type: str, include_archived: bool = False
     ) -> List[Dict]:
-        """按类型获取实体"""
+        """유형별 엔티티 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             if include_archived:
@@ -159,7 +159,7 @@ class IndexEntityMixin:
             ]
 
     def get_entities_by_tier(self, tier: str) -> List[Dict]:
-        """按重要度获取实体 (핵심/重要/次要/장식)"""
+        """중요도별 엔티티 조회 (핵심/중요/차요/장식)"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -175,12 +175,12 @@ class IndexEntityMixin:
             ]
 
     def get_core_entities(self) -> List[Dict]:
-        """获取所有핵심实体 (用于 Context Agent 全量로드)"""
+        """모든 핵심 엔티티 조회 (Context Agent 전체 로드용)"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute("""
                 SELECT * FROM entities
-                WHERE (tier IN ('핵심', '重要') OR is_protagonist = 1) AND is_archived = 0
+                WHERE (tier IN ('핵심', '중요') OR is_protagonist = 1) AND is_archived = 0
                 ORDER BY is_protagonist DESC, tier, last_appearance DESC
             """)
             return [
@@ -189,7 +189,7 @@ class IndexEntityMixin:
             ]
 
     def get_protagonist(self) -> Optional[Dict]:
-        """获取主角实体"""
+        """주인공 엔티티 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM entities WHERE is_protagonist = 1 LIMIT 1")
@@ -200,9 +200,9 @@ class IndexEntityMixin:
 
     def update_entity_current(self, entity_id: str, updates: Dict) -> bool:
         """
-        增量更新实体的 current 필드 (不覆盖其他필드)
+        엔티티의 current 필드 증분 수정 (다른 필드를 덮어쓰지 않음)
 
-        例如: update_entity_current("xiaoyan", {"realm": "斗师"})
+        예시: update_entity_current("xiaoyan", {"realm": "투사"})
         """
         with self._get_conn() as conn:
             cursor = conn.cursor()
@@ -239,7 +239,7 @@ class IndexEntityMixin:
             return True
 
     def archive_entity(self, entity_id: str) -> bool:
-        """归档实体 (不삭제，只是标记)"""
+        """엔티티 아카이브 (삭제하지 않고 표시만 함)"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -252,13 +252,13 @@ class IndexEntityMixin:
             conn.commit()
             return cursor.rowcount > 0
 
-    # ==================== v5.1 별칭操作 ====================
+    # ==================== v5.1 별칭 관리 ====================
 
     def register_alias(self, alias: str, entity_id: str, entity_type: str) -> bool:
         """
-        注册별칭 (지원一对多)
+        별칭 등록 (일대다 지원)
 
-        同一별칭可매핑多个实体 (如 "天云宗" → 장소 + 세력)
+        동일 별칭이 여러 엔티티에 매핑 가능 (예: "천운종" → 장소 + 세력)
         """
         with self._get_conn() as conn:
             cursor = conn.cursor()
@@ -277,9 +277,9 @@ class IndexEntityMixin:
 
     def get_entities_by_alias(self, alias: str) -> List[Dict]:
         """
-        根据별칭查找实体 (一对多)
+        별칭으로 엔티티 검색 (일대다)
 
-        반환所有匹配的实体 (可能有多个不同类型)
+        매칭되는 모든 엔티티 반환 (서로 다른 유형이 여러 개 있을 수 있음)
         """
         with self._get_conn() as conn:
             cursor = conn.cursor()
@@ -307,7 +307,7 @@ class IndexEntityMixin:
             return [row["alias"] for row in cursor.fetchall()]
 
     def remove_alias(self, alias: str, entity_id: str) -> bool:
-        """移除별칭"""
+        """별칭 제거"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -317,13 +317,13 @@ class IndexEntityMixin:
             conn.commit()
             return cursor.rowcount > 0
 
-    # ==================== v5.1 상태变化操作 ====================
+    # ==================== v5.1 상태 변화 관리 ====================
 
     def record_state_change(self, change: StateChangeMeta) -> int:
         """
-        记录상태变化
+        상태 변화 기록
 
-        반환记录 ID
+        반환: 기록 ID
         """
         with self._get_conn() as conn:
             cursor = conn.cursor()
@@ -346,7 +346,7 @@ class IndexEntityMixin:
             return cursor.lastrowid
 
     def get_entity_state_changes(self, entity_id: str, limit: int = 20) -> List[Dict]:
-        """获取实体的상태变化历史"""
+        """엔티티의 상태 변화 이력 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -361,7 +361,7 @@ class IndexEntityMixin:
             return [dict(row) for row in cursor.fetchall()]
 
     def get_recent_state_changes(self, limit: int = 50) -> List[Dict]:
-        """获取최근的상태变化"""
+        """최근 상태 변화 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -375,7 +375,7 @@ class IndexEntityMixin:
             return [dict(row) for row in cursor.fetchall()]
 
     def get_chapter_state_changes(self, chapter: int) -> List[Dict]:
-        """获取某章的所有상태变化"""
+        """특정 챕터의 모든 상태 변화 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -388,19 +388,19 @@ class IndexEntityMixin:
             )
             return [dict(row) for row in cursor.fetchall()]
 
-    # ==================== v5.1 관계操作 ====================
+    # ==================== v5.1 관계 관리 ====================
 
     def upsert_relationship(self, rel: RelationshipMeta) -> bool:
         """
-        插入或관계 업데이트
+        관계 삽입 또는 수정
 
-        相同 (from, to, type) 会更新 description 和 chapter
-        반환是否为新관계
+        동일한 (from, to, type)이면 description과 chapter를 수정
+        반환: 새 관계 여부
         """
         with self._get_conn() as conn:
             cursor = conn.cursor()
 
-            # 检查是否存在
+            # 존재 여부 확인
             cursor.execute(
                 """
                 SELECT id FROM relationships
@@ -444,7 +444,7 @@ class IndexEntityMixin:
         self, entity_id: str, direction: str = "both"
     ) -> List[Dict]:
         """
-        获取实体的관계
+        엔티티의 관계 조회
 
         direction: "from" | "to" | "both"
         """
@@ -480,7 +480,7 @@ class IndexEntityMixin:
             return [dict(row) for row in cursor.fetchall()]
 
     def get_relationship_between(self, entity1: str, entity2: str) -> List[Dict]:
-        """获取两个实体之间的所有관계"""
+        """두 엔티티 간의 모든 관계 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -495,7 +495,7 @@ class IndexEntityMixin:
             return [dict(row) for row in cursor.fetchall()]
 
     def get_recent_relationships(self, limit: int = 30) -> List[Dict]:
-        """获取최근建立的관계"""
+        """최근 수립된 관계 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -508,13 +508,13 @@ class IndexEntityMixin:
             )
             return [dict(row) for row in cursor.fetchall()]
 
-    # ==================== v5.5 관계事件와图谱 ====================
+    # ==================== v5.5 관계 이벤트와 그래프 ====================
 
     def _infer_relationship_polarity(self, rel_type: str) -> int:
-        """基于관계类型推断极性：-1 적대，0 中立，1 우호。"""
+        """관계 유형에 기반하여 극성 추론: -1 적대, 0 중립, 1 우호."""
         t = str(rel_type or "")
-        positive_keywords = ("盟友", "우호", "사제", "同伴", "亲", "爱", "合作")
-        negative_keywords = ("敌", "仇", "恨", "对立", "충돌", "背叛", "追杀")
+        positive_keywords = ("맹우", "우호", "사제", "동반자", "친", "애", "협력")
+        negative_keywords = ("적", "원수", "증오", "대립", "충돌", "배신", "추격")
 
         if any(k in t for k in negative_keywords):
             return -1
@@ -523,7 +523,7 @@ class IndexEntityMixin:
         return 0
 
     def record_relationship_event(self, event: RelationshipEventMeta) -> int:
-        """记录관계事件，반환事件 ID。"""
+        """관계 이벤트 기록, 이벤트 ID 반환."""
         from_entity = str(getattr(event, "from_entity", "") or "").strip()
         to_entity = str(getattr(event, "to_entity", "") or "").strip()
         rel_type = str(getattr(event, "type", "") or "").strip()
@@ -605,7 +605,7 @@ class IndexEntityMixin:
         to_chapter: Optional[int] = None,
         limit: int = 100,
     ) -> List[Dict[str, Any]]:
-        """按实体쿼리관계事件。"""
+        """엔티티별 관계 이벤트 쿼리."""
         direction = str(direction or "both").lower()
         clauses: List[str] = []
         params: List[Any] = []
@@ -649,7 +649,7 @@ class IndexEntityMixin:
         to_chapter: Optional[int] = None,
         limit: int = 100,
     ) -> List[Dict[str, Any]]:
-        """쿼리两个实体之间的관계时间线。"""
+        """두 엔티티 간의 관계 타임라인 쿼리."""
         clauses = [
             "((from_entity = ? AND to_entity = ?) OR (from_entity = ? AND to_entity = ?))"
         ]
@@ -681,7 +681,7 @@ class IndexEntityMixin:
         chapter: Optional[int] = None,
         relation_types: Optional[List[str]] = None,
     ) -> List[Dict[str, Any]]:
-        """로드指定챕터截面的有效관계边。"""
+        """지정 챕터 시점의 유효 관계 엣지 로드."""
         relation_types = [str(t) for t in (relation_types or []) if str(t).strip()]
 
         with self._get_conn() as conn:
@@ -739,7 +739,7 @@ class IndexEntityMixin:
             )
             event_rows = cursor.fetchall()
 
-            # 兼容旧数据：若事件流不完整，回退 relationships 快照补边
+            # 이전 데이터 호환: 이벤트 스트림이 불완전하면, relationships 스냅샷으로 엣지 보충
             snapshot_clauses = ["chapter <= ?"]
             snapshot_params: List[Any] = [int(chapter)]
             if relation_types:
@@ -757,7 +757,7 @@ class IndexEntityMixin:
             )
             snapshot_rows = cursor.fetchall()
 
-        # 챕터截面：相同관계只保留“최근一次事件”，remove 视为완료失效。
+        # 챕터 시점: 동일 관계는 “가장 최근 이벤트”만 유지, remove는 실효된 것으로 간주.
         effective: List[Dict[str, Any]] = []
         seen: set[tuple[str, str, str]] = set()
         for row in event_rows:
@@ -787,7 +787,7 @@ class IndexEntityMixin:
                 }
             )
 
-        # 事件流缺失时，从관계快照补齐（若 key 완료出现则以事件为准）
+        # 이벤트 스트림 누락 시, 관계 스냅샷으로 보충 (key가 이미 있으면 이벤트 우선)
         for row in snapshot_rows:
             key = (
                 str(row["from_entity"]),
@@ -820,7 +820,7 @@ class IndexEntityMixin:
         top_edges: int = 50,
         relation_types: Optional[List[str]] = None,
     ) -> Dict[str, Any]:
-        """按中心实体构建관계子图。"""
+        """중심 엔티티 기준으로 관계 서브그래프 구축."""
         center_entity = str(center_entity or "").strip()
         depth = max(1, int(depth or 1))
         top_edges = max(1, int(top_edges or 1))
@@ -870,7 +870,7 @@ class IndexEntityMixin:
         if center_entity and center_entity not in visited_nodes:
             visited_nodes.add(center_entity)
 
-        # 쿼리节点详情
+        # 노드 상세 정보 쿼리
         entity_map: Dict[str, Dict[str, Any]] = {}
         if visited_nodes:
             with self._get_conn() as conn:
@@ -933,13 +933,13 @@ class IndexEntityMixin:
         return safe
 
     def render_relationship_subgraph_mermaid(self, graph: Dict[str, Any]) -> str:
-        """将관계子图渲染为 Mermaid。"""
+        """관계 서브그래프를 Mermaid로 렌더링."""
         lines = ["```mermaid", "graph LR"]
         nodes = graph.get("nodes") or []
         edges = graph.get("edges") or []
 
         if not nodes:
-            lines.append("    EMPTY[暂없음관계数据]")
+            lines.append("    EMPTY[관계 데이터 없음]")
             lines.append("```")
             return "\n".join(lines)
 
@@ -958,7 +958,7 @@ class IndexEntityMixin:
             to_entity = str(edge.get("to") or "")
             if from_entity not in node_alias or to_entity not in node_alias:
                 continue
-            edge_type = str(edge.get("type") or "关联")
+            edge_type = str(edge.get("type") or "연관")
             chapter = edge.get("chapter")
             chapter_suffix = f"@{chapter}" if chapter not in (None, "") else ""
             label = f"{edge_type}{chapter_suffix}".replace('"', "'")
@@ -977,7 +977,7 @@ class IndexEntityMixin:
         lines.append("```")
         return "\n".join(lines)
 
-    # ==================== v5.3 Override Contract 操作 ====================
+    # ==================== v5.3 Override Contract 관리 ====================
 
 
     def update_entity_field(self, entity_id: str, field: str, value: Any) -> bool:

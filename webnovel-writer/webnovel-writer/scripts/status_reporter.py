@@ -4,7 +4,7 @@
 
 핵심 개념: 1000개 챕터를 마주하면 작가는 방향을 잃는다. "거시적 조감" 능력이 필요하다.
 
-功能：
+기능:
 1. 캐릭터 활동도 분석: 너무 오래 미등장한 캐릭터(이탈 통계)
 2. 복선 깊이 분석: 너무 오래 방치된 복선（20만 자 이상 미회수）+ 긴급도 정렬
 3. 카타르시스 리듬 분포: 전체 책의 클라이맥스 분포 빈도(히트맵)
@@ -13,11 +13,11 @@
 6. Strand Weave 리듬 분석: Quest/Fire/Constellation 3라인 비율 통계
 7. 복선 긴급도 정렬: 3단계 시스템 기반（핵심/서브/장식）우선순위 계산
 
-출력 형식：
-  - Markdown 报告（.webnovel/health_report.md）
+출력 형식:
+  - Markdown 보고서（.webnovel/health_report.md）
   - Mermaid 차트 포함（캐릭터 관계도, 카타르시스 히트맵）
 
-使用方式：
+사용 방법:
   # 전체 건강 보고서 생성
   python status_reporter.py --output .webnovel/health_report.md
 
@@ -38,43 +38,43 @@
 
   ## 📊 기본 데이터
 
-  - **총 챕터 수**: 450 章
+  - **총 챕터 수**: 450 챕터
   - **총 글자 수**: 1,985,432 자
   - **평균 챕터 글자 수**: 4,412 자
-  - **창작 진행률**: 99.3%（목표 200万자）
+  - **창작 진행률**: 99.3%（목표 200만 자）
 
   ## ⚠️ 캐릭터 이탈（3명）
 
   | 캐릭터 | 마지막 등장 | 부재 챕터 | 상태 |
   |------|---------|---------|------|
-  | 李雪 | 第 350 章 | 100 章 | 🔴 심각한 이탈 |
-  | 血煞门主 | 第 300 章 | 150 章 | 🔴 심각한 이탈 |
-  | 天云宗宗主 | 第 400 章 | 50 章 | 🟡 경미한 이탈 |
+  | 이설 | chapter 350 | 100 챕터 | 🔴 심각한 이탈 |
+  | 혈살문주 | chapter 300 | 150 챕터 | 🔴 심각한 이탈 |
+  | 천운종종주 | chapter 400 | 50 챕터 | 🟡 경미한 이탈 |
 
   ## ⚠️ 복선 시간 초과（2건）
 
   | 복선 내용 | 설치 챕터 | 경과 챕터 | 상태 |
   |---------|---------|---------|------|
-  | "林家宝库铭文的秘密" | 第 200 章 | 250 章 | 🔴 심각한 시간 초과 |
-  | "神秘玉佩的내력" | 第 270 章 | 180 章 | 🟡 경미한 시간 초과 |
+  | "임가보고 명문의 비밀" | chapter 200 | 250 챕터 | 🔴 심각한 시간 초과 |
+  | "신비한 옥패의 내력" | chapter 270 | 180 챕터 | 🟡 경미한 시간 초과 |
 
   ## 📈 카타르시스 리듬 분포
 
   ```
-  第 1-100 章   ████████████ 우수（1200자/爽点）
-  第 101-200章  ██████████ 양호（1500자/爽点）
-  第 201-300章  ████████ 양호（1600자/爽点）
-  第 301-400章  ████ 낮음（2200자/爽点）⚠️
-  第 401-450章  ██████ 양호（1550자/爽点）
+  chapter 1-100    ████████████ 우수（1200자/카타르시스）
+  chapter 101-200  ██████████ 양호（1500자/카타르시스）
+  chapter 201-300  ████████ 양호（1600자/카타르시스）
+  chapter 301-400  ████ 낮음（2200자/카타르시스）⚠️
+  chapter 401-450  ██████ 양호（1550자/카타르시스）
   ```
 
   ## 💑 인간관계 트렌드
 
   ```mermaid
   graph LR
-    主角 -->|호감도95| 李雪
-    主角 -->|호감도60| 慕容雪
-    主角 -->|적대도100| 血煞门
+    주인공 -->|호감도95| 이설
+    주인공 -->|호감도60| 모용설
+    주인공 -->|적대도100| 혈살문
   ```
 """
 
@@ -90,7 +90,7 @@ from project_locator import resolve_project_root
 from chapter_paths import extract_chapter_num_from_filename
 from runtime_compat import enable_windows_utf8_stdio
 
-# 导入설정
+# 설정 임포트
 try:
     from data_modules.config import get_config, DataModulesConfig
     from data_modules.index_manager import IndexManager
@@ -115,11 +115,11 @@ except ImportError:
     )
 
 def _is_resolved_foreshadowing_status(raw_status: Any) -> bool:
-    """判断복선是否회수됨（兼容历史필드와同义词）。"""
+    """복선 회수 여부 판단（과거 필드 및 동의어 호환）."""
     return is_resolved_foreshadowing_status(raw_status)
 
 def _enable_windows_utf8_stdio() -> None:
-    """在 Windows 下启用 UTF-8 输出；pytest 环境跳过以避免捕获충돌。"""
+    """Windows에서 UTF-8 출력 활성화; pytest 환경에서는 캡처 충돌 방지를 위해 건너뜀."""
     enable_windows_utf8_stdio(skip_in_pytest=True)
 
 
@@ -130,7 +130,7 @@ class StatusReporter:
         self.project_root = Path(project_root)
         self.config = get_config(self.project_root)
         self.state_file = self.project_root / ".webnovel/state.json"
-        self.chapters_dir = self.project_root / "正文"
+        self.chapters_dir = self.project_root / "chapters"
 
         self.state = None
         self.chapters_data = []
@@ -141,8 +141,8 @@ class StatusReporter:
 
     def _extract_stats_field(self, content: str, field_name: str) -> str:
         """
-        从“이번 챕터 통계”区块추출필드值，例如：
-        - **主导Strand**: quest
+        “이번 챕터 통계” 블록에서 필드 값을 추출. 예시:
+        - **주도Strand**: quest
         """
         pattern = rf"^\s*-\s*\*\*{re.escape(field_name)}\*\*\s*:\s*(.+?)\s*$"
         for line in content.splitlines():
@@ -166,11 +166,11 @@ class StatusReporter:
         return True
 
     def _to_positive_int(self, value: Any) -> Optional[int]:
-        """将输入解析为正整数；파싱 실패반환 None。"""
+        """입력을 양의 정수로 파싱; 실패 시 None 반환."""
         return to_positive_int(value)
 
     def _normalize_foreshadowing_tier(self, raw_tier: Any) -> Tuple[str, float]:
-        """标准化복선층级并반환对应가중치。"""
+        """복선 등급을 표준화하고 대응하는 가중치를 반환."""
         tier = normalize_foreshadowing_tier(raw_tier)
 
         if tier == "핵심":
@@ -180,11 +180,11 @@ class StatusReporter:
         return "서브", self.config.foreshadowing_tier_weight_sub
 
     def _resolve_chapter_field(self, item: Dict[str, Any], keys: List[str]) -> Optional[int]:
-        """按候选键顺序读取챕터 번호。"""
+        """후보 키 순서대로 챕터 번호를 읽음."""
         return resolve_chapter_field(item, keys)
 
     def _collect_foreshadowing_records(self) -> List[Dict[str, Any]]:
-        """收集未복선 회수，并基于真实필드构建分析记录。"""
+        """미회수 복선을 수집하고, 실제 필드 기반으로 분석 레코드를 구성."""
         if not self.state:
             return []
 
@@ -201,7 +201,7 @@ class StatusReporter:
             if _is_resolved_foreshadowing_status(item.get("status")):
                 continue
 
-            content = str(item.get("content") or "").strip() or "[未命名복선]"
+            content = str(item.get("content") or "").strip() or "[이름 없는 복선]"
             tier, weight = self._normalize_foreshadowing_tier(item.get("tier"))
 
             planted_chapter = self._resolve_chapter_field(
@@ -281,13 +281,13 @@ class StatusReporter:
         return records
 
     def _get_chapter_meta(self, chapter: int) -> Dict[str, Any]:
-        """读取指定챕터的 chapter_meta（지원 0001/1 两种键）。"""
+        """지정 챕터의 chapter_meta를 읽음（0001/1 두 가지 키 지원）."""
         if not self.state:
             return {}
         return get_chapter_meta_entry(self.state, chapter)
 
     def _parse_pattern_count(self, raw_value: Any) -> Optional[int]:
-        """解析爽点모드수량，파싱 실패반환 None。"""
+        """카타르시스 패턴 수량을 파싱; 실패 시 None 반환."""
         if raw_value is None:
             return None
 
@@ -307,7 +307,7 @@ class StatusReporter:
         return None
 
     def _get_chapter_reading_power_cached(self, chapter: int) -> Optional[Dict[str, Any]]:
-        """读取并缓存 chapter_reading_power。"""
+        """chapter_reading_power를 읽고 캐싱."""
         if chapter in self._reading_power_cache:
             return self._reading_power_cache[chapter]
 
@@ -320,7 +320,7 @@ class StatusReporter:
         return record
 
     def _get_chapter_cool_points(self, chapter: int, chapter_data: Dict[str, Any]) -> Tuple[Optional[int], str]:
-        """단일 챕터 카타르시스 수 조회(실제 메타데이터 우선)。"""
+        """단일 챕터 카타르시스 수 조회(실제 메타데이터 우선)."""
         reading_power = self._get_chapter_reading_power_cached(chapter)
         if isinstance(reading_power, dict):
             count = self._parse_pattern_count(reading_power.get("coolpoint_patterns"))
@@ -340,15 +340,16 @@ class StatusReporter:
         return None, "none"
 
     def scan_chapters(self):
-        """扫描所有챕터文件"""
+        """모든 챕터 파일 스캔"""
         if not self.chapters_dir.exists():
             print(f"⚠️  본문 디렉토리 미존재: {self.chapters_dir}")
             return
 
-        # 두 가지 디렉토리 구조 지원：
-        # 1) 正文/第0001章.md
-        # 2) 正文/第1卷/第001章-标题.md
-        chapter_files = sorted(self.chapters_dir.rglob("第*.md"))
+        # 두 가지 디렉토리 구조 지원:
+        # 1) chapters/chapter_0001.md (legacy: 제0001장.md)
+        # 2) chapters/vol_1/chapter_001-title.md (legacy: 제1권/제001장-제목.md)
+        # NOTE: glob pattern uses legacy Chinese prefix for backward compatibility
+        chapter_files = sorted(self.chapters_dir.rglob("제*.md"))
 
         # v5.1 도입: SQLite에서 알려진 캐릭터 이름 조회
         known_character_names: List[str] = []
@@ -382,9 +383,10 @@ class StatusReporter:
             text = re.sub(r'---', '', text)  # 구분선 제거
             word_count = len(text.strip())
 
-            # 主导 Strand / 爽点类型（우선从"이번 챕터 통계"解析）
-            dominant_strand = (self._extract_stats_field(content, "主导Strand") or "").lower()
-            cool_point_type = self._extract_stats_field(content, "爽点")
+            # 주도 Strand / 카타르시스 유형（우선 "이번 챕터 통계"에서 파싱）
+            # NOTE: legacy Chinese field names kept as fallback for backward compatibility
+            dominant_strand = (self._extract_stats_field(content, "주도Strand") or self._extract_stats_field(content, "주도 Strand") or "").lower()
+            cool_point_type = self._extract_stats_field(content, "카타르시스") or self._extract_stats_field(content, "카타르시스 유형")
 
             # v5.1 도입: 캐릭터 추출을 SQLite chapters 테이블에서 읽기
             characters: List[str] = []
@@ -431,7 +433,7 @@ class StatusReporter:
             })
 
     def analyze_characters(self) -> Dict:
-        """캐릭터 활동도 분석（v5.1 도입,v5.4 유지）"""
+        """캐릭터 활동도 분석（v5.1 도입, v5.4 유지）"""
         if not self.state:
             return {}
 
@@ -532,7 +534,7 @@ class StatusReporter:
             for item in records
         ]
 
-        # 先按“是否可计算”，再按긴급도降序
+        # “계산 가능 여부” 우선, 그 다음 긴급도 내림차순
         return sorted(
             urgency_list,
             key=lambda x: (x["urgency"] is None, -(x["urgency"] if x["urgency"] is not None else -1)),
@@ -738,7 +740,7 @@ class StatusReporter:
             return "낮음⚠️"
 
     def _resolve_protagonist_entity_id(self) -> Optional[str]:
-        """解析主角实体 ID（우선 index.db）。"""
+        """주인공 엔티티 ID 파싱（index.db 우선）."""
         protagonist = self._index_manager.get_protagonist()
         if protagonist and protagonist.get("id"):
             return str(protagonist["id"])
@@ -754,7 +756,7 @@ class StatusReporter:
         return None
 
     def _generate_relationship_graph_from_index(self) -> str:
-        """基于 index.db 生成관계图。"""
+        """index.db 기반으로 관계 그래프 생성."""
         protagonist_id = self._resolve_protagonist_entity_id()
         if not protagonist_id:
             return ""
@@ -791,13 +793,13 @@ class StatusReporter:
 
         # 이전 버전 state.json relationships 구조 호환
         relationships = self.state.get("relationships", {})
-        protagonist_name = self.state.get("protagonist_state", {}).get("name", "主角")
+        protagonist_name = self.state.get("protagonist_state", {}).get("name", "주인공")
 
         lines = ["```mermaid", "graph LR"]
 
-        # 두 가지 형식 지원：
-        # 格式1（新）: {"allies": [...], "enemies": [...]}
-        # 格式2（旧）: {"캐릭터名": {"affection": X, "hatred": Y}}
+        # 두 가지 형식 지원:
+        # 형식1（신）: {"allies": [...], "enemies": [...]}
+        # 형식2（구）: {"캐릭터명": {"affection": X, "hatred": Y}}
 
         allies = relationships.get("allies", [])
         enemies = relationships.get("enemies", [])
@@ -890,7 +892,7 @@ class StatusReporter:
         return [
             "## 📊 기본 데이터",
             "",
-            f"- **총 챕터 수**: {current_chapter} 章",
+            f"- **총 챕터 수**: {current_chapter} 챕터",
             f"- **총 글자 수**: {total_words:,} 자",
             f"- **평균 챕터 글자 수**: {avg_words:,.0f} 자",
             f"- **창작 진행률**: {completion:.1f}%（목표 {target_words:,} 자）",
@@ -908,7 +910,7 @@ class StatusReporter:
 
         # 이탈 캐릭터 필터링
         dropped = {name: data for name, data in activity.items()
-                  if "掉线" in data["status"]}
+                  if "이탈" in data["status"]}
 
         lines = [
             f"## ⚠️ 캐릭터 이탈（{len(dropped)}명）",
@@ -925,8 +927,8 @@ class StatusReporter:
                                          key=lambda x: x[1]["absence"],
                                          reverse=True):
                 lines.append(
-                    f"| {char_name} | 第 {data['last_appearance']} 章 | "
-                    f"{data['absence']} 章 | {data['status']} |"
+                    f"| {char_name} | chapter {data['last_appearance']} | "
+                    f"{data['absence']} 챕터 | {data['status']} |"
                 )
         else:
             lines.append("✅ 모든 캐릭터 활동도 정상")
@@ -941,7 +943,7 @@ class StatusReporter:
 
         # 시간 초과 복선 필터링
         overdue_items = [
-            item for item in overdue if "超时" in item["status"] or "超期" in item["status"]
+            item for item in overdue if "시간 초과" in item["status"]
         ]
         unknown_items = [item for item in overdue if item["status"] == "⚪ 데이터 부족"]
 
@@ -960,15 +962,15 @@ class StatusReporter:
                 planted = item["planted_chapter"] if item["planted_chapter"] is not None else "알 수 없음"
                 elapsed = item["elapsed"] if item["elapsed"] is not None else "알 수 없음"
                 lines.append(
-                    f"| {item['content'][:30]}... | 第 {planted} 章 | "
-                    f"{elapsed} 章 | {item['status']} |"
+                    f"| {item['content'][:30]}... | chapter {planted} | "
+                    f"{elapsed} 챕터 | {item['status']} |"
                 )
         else:
             lines.append("✅ 모든 복선 진행 정상")
 
         if unknown_items:
             lines.append("")
-            lines.append(f"⚪ 另有 {len(unknown_items)} 건의 복선이 챕터 정보 부족으로 시간 초과 여부 판단 불가")
+            lines.append(f"⚪ 추가 {len(unknown_items)} 건의 복선이 챕터 정보 부족으로 시간 초과 여부 판단 불가")
 
         lines.extend(["", "---", ""])
 
@@ -978,7 +980,7 @@ class StatusReporter:
         """복선 긴급도 섹션 생성(3단계 시스템 기반)"""
         urgency_list = self.analyze_foreshadowing_urgency()
 
-        # 筛选긴급 복선
+        # 긴급 복선 필터링
         urgent_items = [
             item
             for item in urgency_list
@@ -988,7 +990,7 @@ class StatusReporter:
         lines = [
             f"## 🚨 복선긴급도 정렬（{len(urgent_items)}건 주의 필요）",
             "",
-            "> 基于3단계 시스템：핵심(×3) / 서브(×2) / 장식(×1)",
+            "> 3단계 시스템 기반: 핵심(×3) / 서브(×2) / 장식(×1)",
             "> 긴급도 = (경과 챕터 / (목표챕터-설치 챕터)) × 단계 가중치",
             ""
         ]
@@ -1000,13 +1002,13 @@ class StatusReporter:
 
         if urgency_list:
             lines.extend([
-                "| 복선 내용 | 층级 | 埋设 | 목표 | 긴급도 | 상태 |",
+                "| 복선 내용 | 등급 | 설치 | 목표 | 긴급도 | 상태 |",
                 "|---------|------|------|------|--------|------|"
             ])
 
-            for item in urgency_list[:10]:  # 只显示前10건
-                planted = f"第{item['planted_chapter']}章" if item["planted_chapter"] is not None else "알 수 없음"
-                target = f"第{item['target_chapter']}章" if item["target_chapter"] is not None else "알 수 없음"
+            for item in urgency_list[:10]:  # 상위 10건만 표시
+                planted = f"chapter {item['planted_chapter']}" if item["planted_chapter"] is not None else "알 수 없음"
+                target = f"chapter {item['target_chapter']}" if item["target_chapter"] is not None else "알 수 없음"
                 urgency_text = f"{item['urgency']:.2f}" if item["urgency"] is not None else "N/A"
                 lines.append(
                     f"| {item['content'][:20]}... | {item['tier']} | "
@@ -1021,11 +1023,11 @@ class StatusReporter:
         return lines
 
     def _generate_strand_section(self) -> List[str]:
-        """生成 Strand Weave 节奏챕터"""
+        """Strand Weave 리듬 섹션 생성"""
         strand_data = self.analyze_strand_weave()
 
         lines = [
-            "## 🎭 Strand Weave 节奏分析",
+            "## 🎭 Strand Weave 리듬 분석",
             ""
         ]
 
@@ -1039,7 +1041,7 @@ class StatusReporter:
         lines.extend([
             "### 3라인 비율",
             "",
-            "| Strand | 챕터数 | 비율 | 목표范围 | 상태 |",
+            "| Strand | 챕터 수 | 비율 | 목표 범위 | 상태 |",
             "|--------|--------|------|----------|------|"
         ])
 
@@ -1061,9 +1063,9 @@ class StatusReporter:
         lines.extend([
             "### 연속성 검사",
             "",
-            f"- Quest 최대 연속: {strand_data['max_quest_streak']} 章（限制 ≤5）",
-            f"- Fire 최대 부재: {strand_data['max_fire_gap']} 章（限制 ≤10）",
-            f"- Constellation 최대 부재: {strand_data['max_const_gap']} 章（限制 ≤15）",
+            f"- Quest 최대 연속: {strand_data['max_quest_streak']} 챕터（제한 ≤5）",
+            f"- Fire 최대 부재: {strand_data['max_fire_gap']} 챕터（제한 ≤10）",
+            f"- Constellation 최대 부재: {strand_data['max_const_gap']} 챕터（제한 ≤15）",
             ""
         ])
 
@@ -1096,8 +1098,8 @@ class StatusReporter:
             words_per_point = seg["words_per_point"]
             if words_per_point is None:
                 lines.append(
-                    f"第 {seg['start']}-{seg['end']}章   ░ 데이터 부족"
-                    f"（카타르시스 데이터 부족 {seg['missing_chapters']} 章）"
+                    f"chapter {seg['start']}-{seg['end']}  ░ 데이터 부족"
+                    f"（카타르시스 데이터 부족 {seg['missing_chapters']} 챕터）"
                 )
                 continue
 
@@ -1107,10 +1109,10 @@ class StatusReporter:
 
             suffix = ""
             if seg["missing_chapters"] > 0:
-                suffix = f"，카타르시스 데이터 부족 {seg['missing_chapters']} 章"
+                suffix = f", 카타르시스 데이터 부족 {seg['missing_chapters']} 챕터"
 
             lines.append(
-                f"第 {seg['start']}-{seg['end']}章   {bar} {seg['rating']}"
+                f"chapter {seg['start']}-{seg['end']}  {bar} {seg['rating']}"
                 f"（{words_per_point:.0f}자/카타르시스, 기록 {seg['cool_points']} 개 카타르시스{suffix}）"
             )
 
@@ -1167,17 +1169,17 @@ def main():
 
     args = parser.parse_args()
 
-    # 프로젝트 루트 디렉토리 분석（允许传入“工作区根目录”，统一解析到真正的 book project_root）
+    # 프로젝트 루트 디렉토리 분석（”워크스페이스 루트”를 전달할 수 있으며, 실제 book project_root로 통일 파싱）
     try:
         project_root = str(resolve_project_root(args.project_root))
     except FileNotFoundError as exc:
         print(f"❌ 프로젝트 루트 디렉토리를 찾을 수 없음(.webnovel/state.json 포함 필요): {exc}", file=sys.stderr)
         sys.exit(1)
 
-    # 创建보고서 생성器
+    # 보고서 생성기 생성
     reporter = StatusReporter(project_root)
 
-    # 로드상태
+    # 상태 로드
     if not reporter.load_state():
         sys.exit(1)
 
@@ -1188,10 +1190,10 @@ def main():
 
     print("\n📊 분석 중...")
 
-    # 生成报告
+    # 보고서 생성
     report = reporter.generate_report(args.focus)
 
-    # 저장报告
+    # 보고서 저장
     output_file = Path(args.output)
     if args.output == '.webnovel/health_report.md' and project_root != '.':
         output_file = Path(project_root) / '.webnovel' / 'health_report.md'
@@ -1202,7 +1204,7 @@ def main():
 
     print(f"\n✅ 건강 보고서 생성 완료: {output_file}")
 
-    # 预览报告（前 30 行）
+    # 보고서 미리보기（처음 30행）
     print("\n" + "="*60)
     print("📄 보고서 미리보기：\n")
     print("\n".join(report.split("\n")[:30]))

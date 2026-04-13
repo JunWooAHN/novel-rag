@@ -169,7 +169,7 @@ def test_cleanup_artifacts_requires_confirm(tmp_path, monkeypatch):
 
     assert draft_path.exists()
     assert git_called["count"] == 0
-    assert any(item.startswith("[预览]") for item in preview)
+    assert any(item.startswith("[미리보기]") for item in preview)
 
 
 def test_cleanup_artifacts_confirm_deletes_with_backup(tmp_path, monkeypatch):
@@ -197,7 +197,7 @@ def test_cleanup_artifacts_confirm_deletes_with_backup(tmp_path, monkeypatch):
     assert not draft_path.exists()
     assert git_called["count"] == 1
     assert git_called["cmd"] == ["git", "reset", "HEAD", "."]
-    assert any("Git 暂存区정리 완료" in item for item in cleaned)
+    assert any("Git 스테이징정리 완료" in item for item in cleaned)
 
     backup_dir = tmp_path / ".webnovel" / "recovery_backups"
     backups = list(backup_dir.glob("ch0008-*"))

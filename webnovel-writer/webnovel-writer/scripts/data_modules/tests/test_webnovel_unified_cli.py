@@ -31,19 +31,19 @@ def test_init_does_not_resolve_existing_project_root(monkeypatch):
         return 0
 
     def _fail_resolve(_explicit_project_root=None):
-        raise AssertionError("init 子命令不应触发 project_root 解析")
+        raise AssertionError("init 하위 명령이 project_root 해석을 트리거하지 않아야 함")
 
     monkeypatch.setenv("WEBNOVEL_PROJECT_ROOT", r"D:\invalid\root")
     monkeypatch.setattr(module, "_run_script", _fake_run_script)
     monkeypatch.setattr(module, "_resolve_root", _fail_resolve)
-    monkeypatch.setattr(sys, "argv", ["webnovel", "init", "proj-dir", "测试书", "修仙"])
+    monkeypatch.setattr(sys, "argv", ["webnovel", "init", "proj-dir", "테스트책", "선협"])
 
     with pytest.raises(SystemExit) as exc:
         module.main()
 
     assert int(exc.value.code or 0) == 0
     assert called["script_name"] == "init_project.py"
-    assert called["argv"] == ["proj-dir", "测试书", "修仙"]
+    assert called["argv"] == ["proj-dir", "테스트책", "선협"]
 
 
 def test_extract_context_forwards_with_resolved_project_root(monkeypatch, tmp_path):
@@ -137,7 +137,7 @@ def test_quality_trend_report_writes_to_book_root_when_input_is_workspace_root(t
     import quality_trend_report as quality_trend_report_module
 
     workspace_root = (tmp_path / "workspace").resolve()
-    book_root = (workspace_root / "凡명资本论").resolve()
+    book_root = (workspace_root / "범인자본론").resolve()
 
     (workspace_root / ".claude").mkdir(parents=True, exist_ok=True)
     (workspace_root / ".claude" / ".webnovel-current-project").write_text(str(book_root), encoding="utf-8")

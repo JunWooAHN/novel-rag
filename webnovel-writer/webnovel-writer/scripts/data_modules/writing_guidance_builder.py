@@ -12,68 +12,68 @@ from .genre_aliases import to_profile_key
 
 
 GENRE_GUIDANCE_TEXT: dict[str, str] = {
-    "xianxia": "장르加权：强化升级/对抗结果的可见反馈，术语解释后置。",
-    "shuangwen": "장르加权：维持高카타르시스 밀도，主爽点外叠加一个副轴反差。",
-    "urban-power": "장르加权：우선写社会反馈链（他명反应→资源变化→地位变化）。",
-    "romance": "장르加权：每章推进관계位移，避免情绪原地打转。",
-    "mystery": "장르加权：단서必须可회수，우선以规则충돌制造悬念。",
-    "rules-mystery": "장르加权：规则先于解释，代价先于胜利。",
-    "zhihu-short": "장르加权：压缩铺垫，우선反转와高强度结尾钩。",
-    "substitute": "장르加权：强化误解-拉扯-决断链路，避免重复虐点。",
-    "esports": "장르加权：每场对抗至少写清一个战术决策点와其后果。",
-    "livestream": "장르加权：强化“外部反馈→主角反制→数据变化”即时闭环。",
-    "cosmic-horror": "장르加权：恐怖来源于规则와代价，不依赖空泛惊悚形容。",
+    “xianxia”: “장르 가중: 업그레이드/대항 결과의 가시적 피드백 강화, 용어 설명 후치.”,
+    “shuangwen”: “장르 가중: 높은 카타르시스 밀도 유지, 주요 쾌감포인트 외에 부축 반전 추가.”,
+    “urban-power”: “장르 가중: 사회 피드백 체인 우선 (타인 반응→자원 변화→지위 변화).”,
+    “romance”: “장르 가중: 매 챕터 관계 위치 변화 추진, 감정 제자리 회전 방지.”,
+    “mystery”: “장르 가중: 단서는 반드시 회수 가능, 규칙 충돌로 서스펜스 생성 우선.”,
+    “rules-mystery”: “장르 가중: 규칙이 설명보다 먼저, 대가가 승리보다 먼저.”,
+    “zhihu-short”: “장르 가중: 복선 압축, 반전과 고강도 결미 훅 우선.”,
+    “substitute”: “장르 가중: 오해-밀당-결단 체인 강화, 반복 학대 포인트 방지.”,
+    “esports”: “장르 가중: 매 대전마다 최소 한 가지 전술 결정 포인트와 그 결과 명확히 서술.”,
+    “livestream”: “장르 가중: '외부 피드백→주인공 대응→데이터 변화' 즉시 폐쇄 루프 강화.”,
+    “cosmic-horror”: “장르 가중: 공포는 규칙과 대가에서 비롯, 막연한 공포 묘사에 의존하지 않음.”,
 }
 
 
 GENRE_METHOD_ANCHORS: dict[str, dict[str, str]] = {
     "xianxia": {
-        "pressure_source": "资源争夺/경지压制",
-        "release_target": "主角主动破局并拿到可见收益",
+        "pressure_source": "자원 쟁탈/경지 압제",
+        "release_target": "주인공이 주도적으로 돌파하여 가시적 수익 획득",
     },
     "urban-power": {
-        "pressure_source": "阶층卡位/权力压制",
-        "release_target": "主角통과资源博弈拿到地位와回报",
+        "pressure_source": "계층 포지션/권력 압제",
+        "release_target": "주인공이 자원 게임을 통해 지위와 보상 획득",
     },
     "romance": {
-        "pressure_source": "관계误解/情感拉扯",
-        "release_target": "관계位移落地并形成下一步承诺",
+        "pressure_source": "관계 오해/감정 밀당",
+        "release_target": "관계 위치 변화 착지 후 다음 단계 약속 형성",
     },
     "mystery": {
-        "pressure_source": "단서缺失/规则충돌",
-        "release_target": "给出可검증的新단서并保留알 수 없음区",
+        "pressure_source": "단서 결핍/규칙 충돌",
+        "release_target": "검증 가능한 새 단서 제시 후 미지 영역 유지",
     },
     "rules-mystery": {
-        "pressure_source": "规则反噬/代价递增",
-        "release_target": "用代价换突破并留下更高阶规则问题",
+        "pressure_source": "규칙 반작용/대가 증가",
+        "release_target": "대가로 돌파 후 더 높은 규칙 문제 남김",
     },
     "zhihu-short": {
-        "pressure_source": "信息落差/立场对撞",
-        "release_target": "反转兑现并形成高强度尾钩",
+        "pressure_source": "정보 격차/입장 충돌",
+        "release_target": "반전 실현 후 고강도 결미 훅 형성",
     },
     "substitute": {
-        "pressure_source": "신분误读/情绪对峙",
-        "release_target": "误解链推进到明确决断",
+        "pressure_source": "신분 오독/감정 대치",
+        "release_target": "오해 체인이 명확한 결단으로 진행",
     },
     "esports": {
-        "pressure_source": "战术压制/节奏失衡",
-        "release_target": "关键决策生效并转化为局势优势",
+        "pressure_source": "전술 압제/리듬 불균형",
+        "release_target": "핵심 결정이 효력 발휘하여 전세 우위로 전환",
     },
     "livestream": {
-        "pressure_source": "舆论波动/数据下滑",
-        "release_target": "当场反制形成可见数据回弹",
+        "pressure_source": "여론 변동/데이터 하락",
+        "release_target": "현장 대응으로 가시적 데이터 반등 형성",
     },
     "cosmic-horror": {
-        "pressure_source": "认知失真/规则侵蚀",
-        "release_target": "以明确代价换阶段性生存窗口",
+        "pressure_source": "인지 왜곡/규칙 침식",
+        "release_target": "명확한 대가로 단계적 생존 창구 확보",
     },
     "history-travel": {
-        "pressure_source": "历史惯性/礼教阻力",
-        "release_target": "知识优势兑现并引发新的连锁反应",
+        "pressure_source": "역사 관성/예교 저항",
+        "release_target": "지식 우위 실현 후 새로운 연쇄 반응 유발",
     },
     "game-lit": {
-        "pressure_source": "系统规则限制/资源稀缺",
-        "release_target": "数值突破并暴露更高층级威胁",
+        "pressure_source": "시스템 규칙 제한/자원 희소",
+        "release_target": "수치 돌파 후 더 높은 층급 위협 노출",
     },
 }
 
@@ -129,8 +129,8 @@ def build_methodology_strategy_card(
     anchor_preset = GENRE_METHOD_ANCHORS.get(
         profile_key,
         {
-            "pressure_source": "生存목표/资源竞争",
-            "release_target": "主角완료阶段목표并留下新的行动理由",
+            "pressure_source": "생존 목표/자원 경쟁",
+            "release_target": "주인공이 단계 목표를 완료하고 새로운 행동 이유를 남김",
         },
     )
 
@@ -143,16 +143,16 @@ def build_methodology_strategy_card(
         "emotion_anchor": {
             "pressure_source": anchor_preset["pressure_source"],
             "release_target": anchor_preset["release_target"],
-            "position_hint": "前段设压，中后段释放，避免固定자位打点",
+            "position_hint": "전반부에 압력 설정, 중후반부에 해소, 고정 위치 배치 지양",
         },
         "long_arc_controls": {
-            "map_transition": "阶段切换承接既有资产와관계账本，避免能力와收益归零",
-            "power_guard": "关键胜利必须给机制理由（信息/资源/代价/策略）",
-            "antagonist_model": "反派需具备목표-手段-代价三要素，避免工具명推进",
+            "map_transition": "단계 전환 시 기존 자산과 관계 장부를 승계, 능력과 수익 초기화 방지",
+            "power_guard": "핵심 승리에는 반드시 메커니즘 근거 제시 (정보/자원/대가/전략)",
+            "antagonist_model": "악역은 목표-수단-대가 3요소를 갖춰야 하며, 도구적 추진 지양",
         },
         "serialization_ops": {
-            "next_reason": "章末或后段给出可复述的下一章动机句",
-            "interaction_note": "保留一个可讨论分歧点，便于连载상호작용反馈",
+            "next_reason": "챕터 말미 또는 후반부에 복술 가능한 다음 챕터 동기 문장 제시",
+            "interaction_note": "논의 가능한 분기점 하나를 남겨 연재 상호작용 피드백 유도",
         },
         "observability": {
             "next_reason_clarity": round(max(0.0, min(100.0, next_reason_clarity)), 2),
@@ -178,27 +178,27 @@ def build_methodology_guidance_items(strategy_card: Dict[str, Any]) -> List[str]
     genre_key = str(strategy_card.get("genre_profile_key") or strategy_card.get("pilot") or "general")
 
     stage_text = {
-        "build_up": "本章以铺压为主，우선做威胁와代价的可感知铺垫。",
-        "confront": "本章以正面对抗为主，确保破局路径清晰可复盘。",
-        "release": "本章以释放와余波为主，给出实质收益并引出下一问。",
-    }.get(stage, "本章保持压力-破局-余波的完整链路。")
+        "build_up": "이번 챕터는 복선 압력 위주로, 위협과 대가의 체감 가능한 복선을 우선 배치.",
+        "confront": "이번 챕터는 정면 대항 위주로, 돌파 경로가 명확하고 복기 가능하도록 확보.",
+        "release": "이번 챕터는 해소와 여파 위주로, 실질 수익을 제시하고 다음 문제를 유도.",
+    }.get(stage, "이번 챕터는 압력-돌파-여파의 완전한 체인을 유지.")
 
     items = [
-        f"方法论策略（通用/{genre_key}）：{stage_text}",
-        "长线控制：换图承接旧资产，避免主角进入新地图后能力와资源归零。",
-        "机制控制：关键胜利必须写出机制理由와代价，不用纯光环碾压。",
+        f"방법론 전략 (범용/{genre_key}): {stage_text}",
+        "장기선 제어: 맵 전환 시 기존 자산 승계, 주인공이 새 맵 진입 후 능력과 자원 초기화 방지.",
+        "메커니즘 제어: 핵심 승리에는 반드시 메커니즘 근거와 대가를 서술, 순수 광환 압도 지양.",
         (
-            "连载상호작용：保留一个可讨论分歧点，强化下章追更动机。"
-            f"（next_reason={observability.get('next_reason_clarity')}）"
+            "연재 상호작용: 논의 가능한 분기점 하나를 남겨 다음 챕터 추독 동기 강화."
+            f" (next_reason={observability.get('next_reason_clarity')})"
         ),
     ]
 
     if "pattern_overuse_watch" in risk_flags:
         dominant_pattern = str(signals.get("dominant_pattern") or "").strip()
         if dominant_pattern:
-            items.append(f"风险修正：近期“{dominant_pattern}”偏高频，本章补一个异质副轴避免疲劳。")
+            items.append(f”리스크 보정: 최근 \”{dominant_pattern}\” 빈도 과다, 이번 챕터에 이질적 부축 하나를 추가하여 피로 방지.”)
     if "readability_guard" in risk_flags:
-        items.append("风险修正：近期검토 평균점 낮음，本章우선保证段落动作-结果闭环와可读性。")
+        items.append("리스크 보정: 최근 검토 평균점 낮음, 이번 챕터는 우선 단락 동작-결과 폐쇄루프와 가독성 확보.")
 
     return items
 
@@ -220,39 +220,39 @@ def build_guidance_items(
             key=lambda row: float(row.get("overall_score", 9999)),
         )
         guidance.append(
-            f"第{chapter}章우선 수정近期低分段问题：参考{worst.get('start_chapter')}-{worst.get('end_chapter')}章，强化충돌推进와结尾钩子。"
+            f"제{chapter}장 우선 수정 최근 저점 구간 문제: {worst.get('start_chapter')}-{worst.get('end_chapter')}장 참고, 충돌 추진과 결미 훅 강화."
         )
 
     hook_usage = reader_signal.get("hook_type_usage") or {}
     if hook_usage and hook_diversify_enabled:
         dominant_hook = max(hook_usage.items(), key=lambda kv: kv[1])[0]
         guidance.append(
-            f"近期钩子类型“{dominant_hook}”使用偏多，本章제안做钩子差异化，避免连续同构。"
+            f”최근 훅 유형 \”{dominant_hook}\” 사용 과다, 이번 챕터는 훅 차별화 제안, 연속 동일 구조 지양.”
         )
 
     pattern_usage = reader_signal.get("pattern_usage") or {}
     if pattern_usage:
         top_pattern = max(pattern_usage.items(), key=lambda kv: kv[1])[0]
         guidance.append(
-            f"爽点모드“{top_pattern}”近期高频，本章可保留主爽点但叠加一个新爽点副轴。"
+            f”쾌감포인트 모드 \”{top_pattern}\” 최근 고빈도, 이번 챕터는 주 쾌감포인트를 유지하되 새 쾌감포인트 부축 추가.”
         )
 
     review_trend = reader_signal.get("review_trend") or {}
     overall_avg = review_trend.get("overall_avg")
     if isinstance(overall_avg, (int, float)) and float(overall_avg) < low_score_threshold:
         guidance.append(
-            f"최근 검토 평균점{overall_avg:.1f}低于임계값{low_score_threshold:.1f}，제안先保稳：减少跳场、每段补动作结果闭环。"
+            f"최근 검토 평균점 {overall_avg:.1f}이 임계값 {low_score_threshold:.1f} 미만, 안정 우선 제안: 장면 전환 줄이고 매 단락마다 동작-결과 폐쇄루프 보완."
         )
 
     genre = str(genre_profile.get("genre") or "").strip()
     refs = genre_profile.get("reference_hints") or []
     if genre:
-        guidance.append(f"장르 앵커링：按“{genre}”叙事메인 스토리推进，保持장르读者预期稳定兑现。")
+        guidance.append(f”장르 앵커링: \”{genre}\” 서사 메인 스토리에 따라 추진, 장르 독자 기대의 안정적 실현 유지.”)
     if refs:
-        guidance.append(f"장르策略可执行팁：{refs[0]}")
+        guidance.append(f"장르 전략 실행 팁: {refs[0]}")
 
-    guidance.append("网文节奏基线：章首300자内给出목표와阻力，章末保留未闭合问题。")
-    guidance.append("兑现密度基线：每600-900자给一次微兑现，并确保本章至少1处可量化变化。")
+    guidance.append("웹소설 리듬 기준선: 챕터 서두 300자 이내에 목표와 저항 제시, 챕터 말미에 미해결 문제 남김.")
+    guidance.append("실현 밀도 기준선: 600-900자마다 소규모 실현 1회, 이번 챕터에 최소 1곳 정량화 가능한 변화 확보.")
 
     normalized_genre = to_profile_key(genre)
     genre_hint = GENRE_GUIDANCE_TEXT.get(normalized_genre)
@@ -261,10 +261,10 @@ def build_guidance_items(
 
     composite_hints = genre_profile.get("composite_hints") or []
     if composite_hints:
-        guidance.append(f"복합 장르协同：{composite_hints[0]}")
+        guidance.append(f"복합 장르 시너지: {composite_hints[0]}")
 
     if not guidance:
-        guidance.append("本章执行기본값高可读策略：충돌前置、信息后置、段末留钩。")
+        guidance.append("이번 챕터는 기본값 고가독성 전략 실행: 충돌 전치, 정보 후치, 단락 말미 훅 남김.")
 
     return {
         "guidance": guidance,
@@ -322,11 +322,11 @@ def build_writing_checklist(
         span = f"{worst.get('start_chapter')}-{worst.get('end_chapter')}"
         _add_item(
             "fix_low_score_range",
-            f"修复低分구간问题（参考第{span}章）",
+            f"저점 구간 문제 수정 (제{span}장 참고)",
             weight=max(default_weight, 1.4),
             required=True,
             source="reader_signal.low_score_ranges",
-            verify_hint="至少완료1处충돌升级，并在段末留下钩子。",
+            verify_hint="최소 1곳 충돌 업그레이드 완료하고, 단락 말미에 훅 남김.",
         )
 
     hook_usage = reader_signal.get("hook_type_usage") or {}
@@ -334,11 +334,11 @@ def build_writing_checklist(
         dominant_hook = max(hook_usage.items(), key=lambda kv: kv[1])[0]
         _add_item(
             "hook_diversification",
-            f"钩子差异化（避免继续单一“{dominant_hook}”）",
+            f”훅 차별화 (단일 \”{dominant_hook}\” 연속 사용 지양)”,
             weight=max(default_weight, 1.2),
             required=True,
-            source="reader_signal.hook_type_usage",
-            verify_hint="结尾钩子类型와近20章主类型至少有一处差异。",
+            source=”reader_signal.hook_type_usage”,
+            verify_hint=”결미 훅 유형이 최근 20장 주요 유형과 최소 1곳 차이 필요.”,
         )
 
     pattern_usage = reader_signal.get("pattern_usage") or {}
@@ -346,11 +346,11 @@ def build_writing_checklist(
         top_pattern = max(pattern_usage.items(), key=lambda kv: kv[1])[0]
         _add_item(
             "coolpoint_combo",
-            f"主爽点+副爽点组合（主爽点：{top_pattern}）",
+            f"주 쾌감포인트 + 부 쾌감포인트 조합 (주 쾌감포인트: {top_pattern})",
             weight=default_weight,
             required=False,
             source="reader_signal.pattern_usage",
-            verify_hint="신규至少1个副爽点，并와主爽点形成因果链。",
+            verify_hint="신규 부 쾌감포인트 최소 1개, 주 쾌감포인트와 인과 체인 형성.",
         )
 
     review_trend = reader_signal.get("review_trend") or {}
@@ -358,48 +358,48 @@ def build_writing_checklist(
     if isinstance(overall_avg, (int, float)):
         _add_item(
             "readability_loop",
-            "段落可读性闭环（动作→结果→情绪）",
+            "단락 가독성 폐쇄루프 (동작→결과→감정)",
             weight=max(default_weight, 1.1),
             required=True,
             source="reader_signal.review_trend",
-            verify_hint="抽查3段，均포함动作结果闭环。",
+            verify_hint="3개 단락 표본 검사, 모두 동작-결과 폐쇄루프 포함.",
         )
 
     genre = str(genre_profile.get("genre") or "").strip()
     if genre:
         _add_item(
             "genre_anchor_consistency",
-            f"장르 앵커링一致性（{genre}）",
+            f"장르 앵커링 일관성 ({genre})",
             weight=max(default_weight, 1.1),
             required=True,
             source="genre_profile.genre",
-            verify_hint="主충돌와장르핵심承诺保持一致。",
+            verify_hint="주 충돌과 장르 핵심 약속이 일관성 유지.",
         )
 
     if isinstance(strategy_card, dict) and strategy_card.get("enabled"):
         _add_item(
-            "methodology_next_reason",
-            "方法论：下章动机需可复述（章末或后段均可）",
+            “methodology_next_reason”,
+            “방법론: 다음 챕터 동기가 복술 가능해야 함 (챕터 말미 또는 후반부 모두 가능)”,
             weight=default_weight,
             required=False,
-            source="methodology.next_reason",
-            verify_hint="提炼一句“为什么要点下一章”的动机句。",
+            source=”methodology.next_reason”,
+            verify_hint=”'왜 다음 챕터를 클릭해야 하는가'의 동기 문장 한 줄 추출.”,
         )
         _add_item(
             "methodology_power_guard",
-            "方法论：越级와破局给出机制理由와代价",
+            "방법론: 월급(레벨 초월)과 돌파에 메커니즘 근거와 대가 제시",
             weight=default_weight,
             required=False,
             source="methodology.power_guard",
-            verify_hint="至少写清1个机制理由와1个代价。"
+            verify_hint="최소 1개 메커니즘 근거와 1개 대가를 명확히 서술."
         )
         _add_item(
             "methodology_antagonist_pressure",
-            "方法论：反派行动具备목표-手段-代价",
+            "방법론: 악역 행동에 목표-수단-대가 구비",
             weight=default_weight,
             required=False,
             source="methodology.antagonist",
-            verify_hint="反派不是工具명推进，需有可解释行动逻辑。",
+            verify_hint="악역이 도구적 추진이 아닌, 설명 가능한 행동 논리를 갖춰야 함.",
         )
 
     for idx, text in enumerate(guidance_items, start=1):
@@ -414,24 +414,24 @@ def build_writing_checklist(
             weight=default_weight,
             required=False,
             source="writing_guidance.guidance_items",
-            verify_hint="완료后可在正文中定位对应段落。",
+            verify_hint="완료 후 본문(chapters)에서 해당 단락 위치 확인 가능.",
         )
 
     fallback_items = [
         (
             "opening_conflict",
-            "开篇300자内给出충돌触发",
-            "开头段出现明确목표와阻力。",
+            "서두 300자 이내에 충돌 트리거 제시",
+            "첫 단락에 명확한 목표와 저항 등장.",
         ),
         (
             "scene_goal_block",
-            "场景목표와阻力清晰",
-            "每个场景至少有1个可검증목표。",
+            "장면 목표와 저항 명확화",
+            "각 장면에 최소 1개 검증 가능한 목표.",
         ),
         (
             "ending_hook",
-            "段末留钩并引出下一问",
-            "结尾出现未解问题或下一步行动。",
+            "단락 말미에 훅을 남기고 다음 문제 유도",
+            "결미에 미해결 문제 또는 다음 행동 등장.",
         ),
     ]
     for item_id, label, verify_hint in fallback_items:
@@ -472,7 +472,7 @@ def is_checklist_item_completed(item: Dict[str, Any], reader_signal: Dict[str, A
         return True
 
     if source.startswith("methodology."):
-        # 方法论건目현재作为软팁，仅做观察와引导，不参와扣分。
+        # 방법론 항목은 현재 소프트 팁으로, 관찰과 유도만 수행하며 감점에 참여하지 않음.
         return True
 
     return False

@@ -98,10 +98,10 @@ def build_composite_genre_hints(genres: List[str], refs: List[str]) -> List[str]
     secondaries = genres[1:]
     hints: List[str] = []
     hints.append(
-        f"以“{primary}”作为主引擎推进메인 스토리，每章至少保留1处“{'/'.join(secondaries)}”特征表达。"
+        f”'{primary}'를 주 엔진으로 메인 스토리 추진, 매 챕터 최소 1곳 '{'/'.join(secondaries)}' 특성 표현 유지.”
     )
     if refs:
-        hints.append(f"복합 장르执行参考：{refs[0]}")
-    hints.append("主辅장르충돌时，우선保证主장르读者承诺，辅장르用于制造新鲜感。")
+        hints.append(f"복합 장르 실행 참고: {refs[0]}")
+    hints.append("주보조 장르 충돌 시, 우선 주 장르 독자 약속을 보장하고, 보조 장르는 신선감 조성에 활용.")
     return hints
 

@@ -73,7 +73,7 @@ def test_resolve_project_root_uses_workspace_pointer(tmp_path):
     workspace = tmp_path / "workspace"
     (workspace / ".claude").mkdir(parents=True, exist_ok=True)
 
-    project_root = workspace / "凡명资本论"
+    project_root = workspace / "범인자본론"
     (project_root / ".webnovel").mkdir(parents=True, exist_ok=True)
     (project_root / ".webnovel" / "state.json").write_text("{}", encoding="utf-8")
 

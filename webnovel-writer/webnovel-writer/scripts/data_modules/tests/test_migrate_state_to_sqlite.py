@@ -36,10 +36,10 @@ def test_migrate_state_to_sqlite_flow(temp_project):
         "entities_v3": {
             "캐릭터": {
                 "xiaoyan": {
-                    "canonical_name": "萧炎",
+                    "canonical_name": "소염",
                     "tier": "핵심",
-                    "desc": "主角",
-                    "current": {"realm": "斗者"},
+                    "desc": "주인공",
+                    "current": {"realm": "투자"},
                     "first_appearance": 1,
                     "last_appearance": 2,
                     "is_protagonist": True,
@@ -47,23 +47,23 @@ def test_migrate_state_to_sqlite_flow(temp_project):
             }
         },
         "alias_index": {
-            "萧炎": [{"type": "캐릭터", "id": "xiaoyan"}]
+            "소염": [{"type": "캐릭터", "id": "xiaoyan"}]
         },
         "state_changes": [
-            {"entity_id": "xiaoyan", "field": "realm", "old": "斗者", "new": "斗师", "reason": "突破", "chapter": 2}
+            {"entity_id": "xiaoyan", "field": "realm", "old": "투자", "new": "투사", "reason": "돌파", "chapter": 2}
         ],
         "structured_relationships": [
-            {"from_entity": "xiaoyan", "to_entity": "yaolao", "type": "사제", "description": "收徒", "chapter": 1}
+            {"from_entity": "xiaoyan", "to_entity": "yaolao", "type": "사제", "description": "제자 수련", "chapter": 1}
         ],
         "world_settings": {
-            "power_system": [{"name": "斗者"}, {"name": "斗师"}],
-            "factions": [{"name": "天云宗", "type": "宗门"}],
-            "locations": [{"name": "天云宗"}],
+            "power_system": [{"name": "투자"}, {"name": "투사"}],
+            "factions": [{"name": "천운종", "type": "종문"}],
+            "locations": [{"name": "천운종"}],
         },
         "plot_threads": {"active_threads": [], "foreshadowing": []},
         "relationships": {},
         "review_checkpoints": [],
-        "project_info": {"title": "测试书名"},
+        "project_info": {"title": "테스트 책 제목"},
     }
     temp_project.state_file.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -74,12 +74,12 @@ def test_migrate_state_to_sqlite_flow(temp_project):
     stats = migrate_state_to_sqlite(temp_project, dry_run=False, backup=False, verbose=False)
     assert stats["entities"] == 1
 
-    # state.json 被精简
+    # state.json 간소화됨
     saved = json.loads(temp_project.state_file.read_text(encoding="utf-8"))
     assert saved.get("_migrated_to_sqlite") is True
     assert "entities_v3" not in saved
 
-    # SQLite 中可쿼리实体
+    # SQLite 에서 엔티티 쿼리 가능
     idx = IndexManager(temp_project)
     entity = idx.get_entity("xiaoyan")
     assert entity is not None
@@ -87,12 +87,12 @@ def test_migrate_state_to_sqlite_flow(temp_project):
 
 def test_slim_helpers():
     world = {
-        "power_system": [{"name": "斗者"}],
-        "factions": [{"name": "天云宗", "type": "宗门"}],
-        "locations": [{"name": "天云宗"}],
+        "power_system": [{"name": "투자"}],
+        "factions": [{"name": "천운종", "type": "종문"}],
+        "locations": [{"name": "천운종"}],
     }
     slim = _slim_world_settings(world)
-    assert slim["power_system"][0] == "斗者"
+    assert slim["power_system"][0] == "투자"
 
     rels = _slim_relationships({"a": 1})
     assert rels["a"] == 1
@@ -141,13 +141,13 @@ def test_migrate_state_backup_and_skips(temp_project):
     state = {
         "entities_v3": {
             "캐릭터": {
-                "good": {"canonical_name": "好명"},
+                "good": {"canonical_name": "좋은명"},
                 "bad": "not-dict",
             }
         },
         "alias_index": {
-            "好명": [{"type": "캐릭터", "id": "good"}],
-            "坏건目": ["oops", {"type": "캐릭터"}],
+            "좋은명": [{"type": "캐릭터", "id": "good"}],
+            "나쁜항목": ["oops", {"type": "캐릭터"}],
         },
         "state_changes": ["bad", {"field": "realm"}],
         "structured_relationships": ["bad", {"from_entity": "", "to_entity": ""}],
@@ -171,13 +171,13 @@ def test_migrate_state_error_branches(tmp_path, monkeypatch):
     cfg = DataModulesConfig.from_project_root(tmp_path)
     cfg.ensure_dirs()
     state = {
-        "entities_v3": {"캐릭터": {"boom": {"canonical_name": "爆"}}},
-        "alias_index": {"爆": [{"type": "캐릭터", "id": "boom"}]},
+        "entities_v3": {"캐릭터": {"boom": {"canonical_name": "폭"}}},
+        "alias_index": {"폭": [{"type": "캐릭터", "id": "boom"}]},
         "state_changes": [
-            {"entity_id": "boom", "field": "realm", "old": "", "new": "斗者", "reason": "测试", "chapter": 1}
+            {"entity_id": "boom", "field": "realm", "old": "", "new": "투자", "reason": "테스트", "chapter": 1}
         ],
         "structured_relationships": [
-            {"from_entity": "boom", "to_entity": "yao", "type": "相识", "description": "测试", "chapter": 1}
+            {"from_entity": "boom", "to_entity": "yao", "type": "상면", "description": "테스트", "chapter": 1}
         ],
         "relationships": {},
         "world_settings": {},

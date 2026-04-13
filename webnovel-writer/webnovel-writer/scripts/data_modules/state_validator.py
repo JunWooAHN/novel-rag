@@ -33,11 +33,11 @@ FORESHADOWING_TARGET_KEYS = [
     "target",
 ]
 
-_PENDING_STATUS_TEXT = {"미회수", "待회수", "进行中", "未解决", "pending", "active"}
-_RESOLVED_STATUS_TEXT = {"회수됨", "완료완료", "완료解决", "완료", "resolved", "done", "complete"}
+_PENDING_STATUS_TEXT = {"미회수", "대기회수", "진행중", "미해결", "pending", "active"}
+_RESOLVED_STATUS_TEXT = {"회수됨", "완료", "해결완료", "완료됨", "resolved", "done", "complete"}
 
 _TIER_CORE_TEXT = {"핵심", "메인 스토리", "core", "main"}
-_TIER_DECOR_TEXT = {"장식", "次要", "decor", "decoration"}
+_TIER_DECOR_TEXT = {"장식", "부차적", "decor", "decoration"}
 
 _PATTERN_FIELDS = [
     "coolpoint_patterns",

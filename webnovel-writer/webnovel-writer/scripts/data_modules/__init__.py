@@ -3,9 +3,9 @@
 """
 Data Modules - 데이터 체인 모듈 패키지.
 
-注意：
-- 여기서는 지연 임포트(lazy import)를 사용하여 실행 시 `python -m data_modules.xxx` 时，
-  因包级 __init__ 提前导入子模块而触发 runpy 的 RuntimeWarning。
+주의：
+- 여기서는 지연 임포트(lazy import)를 사용하여 `python -m data_modules.xxx` 실행 시,
+  패키지 수준 __init__이 서브 모듈을 미리 임포트하여 runpy의 RuntimeWarning을 트리거하는 것을 방지.
 - 권장 사용법은 항상 안전：
     from data_modules.index_manager import IndexManager
   하지만 이전 코드와의 호환성을 위해 유지：

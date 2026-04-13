@@ -25,10 +25,10 @@ DEFAULT_PROJECT_DIR_NAMES: tuple[str, ...] = ("webnovel-project",)
 CURRENT_PROJECT_POINTER_REL: Path = Path(".claude") / ".webnovel-current-project"
 
 # 사용자 수준 글로벌 매핑（skills/agents가 ~/.claude에 설치될 때, 프로젝트 디렉토리는 임의 드라이브에 위치 가능）
-# 该文件用于在“空上下文 + CWD 不在项目内”的情况下仍能定位到正确 project_root。
+# 이 파일은 “빈 컨텍스트 + CWD가 프로젝트 내에 없는” 상황에서도 올바른 project_root를 찾기 위해 사용.
 GLOBAL_REGISTRY_REL: Path = Path("webnovel-writer") / "workspaces.json"
 
-# Claude Code 常见环境变量（存在时우선作为“工作区根目录”팁）
+# Claude Code 일반적인 환경 변수（존재 시 우선 “워크스페이스 루트 디렉토리” 힌트로 사용）
 ENV_CLAUDE_PROJECT_DIR = "CLAUDE_PROJECT_DIR"
 ENV_CLAUDE_HOME = "CLAUDE_HOME"
 ENV_WEBNOVEL_CLAUDE_HOME = "WEBNOVEL_CLAUDE_HOME"
@@ -48,7 +48,7 @@ def _now_iso() -> str:
 
 def _normcase_path_key(p: Path) -> str:
     """
-    안정적인 경로 key 생성（Windows 下대소문자/구분자 무관）。
+    안정적인 경로 key 생성（Windows에서 대소문자/구분자 무관）.
 
     주의: key는 매핑 테이블 인덱스에만 사용되며, 실제 경로는 여전히 원본 절대 경로 문자열로 저장.
     """
@@ -125,8 +125,8 @@ def _resolve_project_root_from_global_registry(
     사용자 수준 registry에서 project_root를 분석.
 
     보안 정책：
-    - workspace_hint 우선 사용 / CLAUDE_PROJECT_DIR 팁做匹配。
-    - 기본값不使用 last_used 兜底，避免在“完全없음上下文”时误命中오류项目。
+    - workspace_hint 우선 사용 / CLAUDE_PROJECT_DIR 힌트로 매칭.
+    - 기본적으로 last_used 폴백 미사용, “완전히 빈 컨텍스트”에서 잘못된 프로젝트에 매칭되는 것을 방지.
     """
     reg_path = _global_registry_path()
     reg = _load_global_registry(reg_path)
@@ -305,15 +305,15 @@ def write_current_project_pointer(project_root: Path, *, workspace_root: Optiona
     if ws_root is None:
         ws_root = _find_workspace_root_with_claude(Path.cwd().resolve())
     if ws_root is None:
-        # 폴백: 찾을 수 없는 경우 `.claude/`，将项目父目录视为“工作区”候选，
-        # 사용자 수준 registry 쓰기 전용(생성하지 않음 `.claude/` 디렉토리, pointer 파일 미기록).
+        # 폴백: `.claude/`를 찾을 수 없는 경우, 프로젝트 부모 디렉토리를 “워크스페이스” 후보로 간주,
+        # 사용자 수준 registry 쓰기 전용(`.claude/` 디렉토리 생성하지 않음, pointer 파일 미기록).
         ws_root = root.parent if root.parent != root else None
     # 주의: ws_root가 None일 수 있음（예: 전역 설치된 skills/agents, 워크스페이스 내에 `.claude/`）。
-    # 这类情况仍然필요写入用户级 registry，以지원后续“空上下文”定位。
+    # 이런 경우에도 사용자 수준 registry에 기록 필요, 이후 “빈 컨텍스트”에서의 위치 찾기 지원.
 
     pointer_file: Optional[Path] = None
     if ws_root is not None:
-        # 워크스페이스 내에 이미 존재하는 경우에만 `.claude/` 时才写入포인터，避免在任意目录下“凭空创建 .claude/”。
+        # 워크스페이스 내에 이미 `.claude/`가 존재하는 경우에만 포인터 기록, 임의 디렉토리에 `.claude/`를 무단 생성하는 것 방지.
         if (ws_root / ".claude").is_dir():
             try:
                 pointer_file = ws_root / CURRENT_PROJECT_POINTER_REL
@@ -351,13 +351,13 @@ def resolve_project_root(explicit_project_root: Optional[str] = None, *, cwd: Op
         if _is_project_root(root):
             return root
 
-        # 兼容：显式传入“工作区根目录”（포함 `.claude/.webnovel-current-project` 포인터）
-        # 例如：D:\wk\xiaoshuo 프로젝트 루트가 아님，하지만 그포인터指向 D:\wk\xiaoshuo\<书名>
+        # 호환: 명시적으로 “워크스페이스 루트 디렉토리” 전달（`.claude/.webnovel-current-project` 포인터 포함）
+        # 예: D:\wk\xiaoshuo는 프로젝트 루트가 아니지만, 그 포인터가 D:\wk\xiaoshuo\<책이름>을 가리킴
         pointer_root = _resolve_project_root_from_pointer(root, stop_at=_find_git_root(root))
         if pointer_root is not None:
             return pointer_root
 
-        # 兼容：显式传入“工作区根目录”하지만 그 `.claude/` 사용자 디렉토리(전역 설치) 내에 있을 때，
+        # 호환: 명시적으로 “워크스페이스 루트 디렉토리” 전달하지만 그 `.claude/`가 사용자 디렉토리(전역 설치) 내에 있을 때,
         # workspace 내부에 포인터 파일이 없을 수 있음. 이 경우 사용자 수준 registry에서 검색.
         reg_root = _resolve_project_root_from_global_registry(
             root,
@@ -384,7 +384,7 @@ def resolve_project_root(explicit_project_root: Optional[str] = None, *, cwd: Op
     if pointer_root is not None:
         return pointer_root
 
-    # 사용자 수준 registry 폴백（仅在“有上下文팁”时启用，避免误命中）
+    # 사용자 수준 registry 폴백（”컨텍스트 힌트가 있을 때”만 활성화, 잘못된 매칭 방지）
     # - CLAUDE_PROJECT_DIR가 존재하면: Claude Code가 워크스페이스 컨텍스트를 제공한 것으로 간주
     # - 그렇지 않으면 base가 이미 기록된 workspace 내에 있을 때만 활성화(접두사 매칭)
     allow_last_used = bool(os.environ.get(ENV_CLAUDE_PROJECT_DIR))

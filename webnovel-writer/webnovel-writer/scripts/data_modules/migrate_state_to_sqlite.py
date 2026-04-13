@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-migrate_state_to_sqlite.py - 数据迁移脚本 (v5.4)
+migrate_state_to_sqlite.py - 데이터 마이그레이션 스크립트 (v5.4)
 
-将 state.json 中的大数据迁移到 SQLite (index.db):
-- entities_v3 → entities 表
-- alias_index → aliases 表
-- state_changes → state_changes 表
-- structured_relationships → relationships 表
+state.json의 대용량 데이터를 SQLite (index.db)로 마이그레이션:
+- entities_v3 → entities 테이블
+- alias_index → aliases 테이블
+- state_changes → state_changes 테이블
+- structured_relationships → relationships 테이블
 
-迁移后 state.json 只保留精简数据 (< 5KB):
+마이그레이션 후 state.json은 경량 데이터만 유지 (< 5KB):
 - progress
 - protagonist_state
 - strand_tracker
 - disambiguation_warnings/pending
 - project_info
-- world_settings (骨架)
+- world_settings (골격)
 - plot_threads
-- relationships (简化版)
+- relationships (간소화 버전)
 - review_checkpoints
 
 사용법:
-    python -m data_modules.migrate_state_to_sqlite --project-root "D:/wk/斗破苍穹"
+    python -m data_modules.migrate_state_to_sqlite --project-root "D:/wk/투파창궁"
     python -m data_modules.migrate_state_to_sqlite --project-root "." --dry-run
     python -m data_modules.migrate_state_to_sqlite --project-root "." --backup
 """
@@ -43,15 +43,15 @@ def migrate_state_to_sqlite(
     verbose: bool = True
 ) -> Dict[str, int]:
     """
-    执行迁移
+    마이그레이션 실행
 
     매개변수:
-    - config: 설정对象
-    - dry_run: 只分析不实际写入
-    - backup: 迁移前state.json 백업
-    - verbose: 打印상세日志
+    - config: 설정 객체
+    - dry_run: 분석만 하고 실제 기록하지 않음
+    - backup: 마이그레이션 전 state.json 백업
+    - verbose: 상세 로그 출력
 
-    반환: 迁移통계
+    반환: 마이그레이션 통계
     """
     stats = {
         "entities": 0,
@@ -62,7 +62,7 @@ def migrate_state_to_sqlite(
         "errors": 0
     }
 
-    # 读取 state.json
+    # state.json 읽기
     state_file = config.state_file
     if not state_file.exists():
         if verbose:
@@ -74,22 +74,22 @@ def migrate_state_to_sqlite(
 
     if verbose:
         file_size = state_file.stat().st_size / 1024
-        print(f"📄 读取 state.json ({file_size:.1f} KB)")
+        print(f"📄 state.json 읽기 ({file_size:.1f} KB)")
 
-    # 备份
+    # 백업
     if backup and not dry_run:
         backup_file = state_file.with_suffix(f".json.backup-{datetime.now().strftime('%Y%m%d_%H%M%S')}")
         shutil.copy(state_file, backup_file)
         if verbose:
-            print(f"💾 백업 완료到: {backup_file}")
+            print(f"💾 백업 완료: {backup_file}")
 
     # 초기화 SQLStateManager
     sql_manager = SQLStateManager(config)
 
-    # 1. 迁移 entities_v3
+    # 1. entities_v3 마이그레이션
     entities_v3 = state.get("entities_v3", {})
     if verbose:
-        print(f"\n🔄 迁移 entities_v3...")
+        print(f"\n🔄 entities_v3 마이그레이션...")
 
     for entity_type, entities in entities_v3.items():
         if not isinstance(entities, dict):
@@ -108,7 +108,7 @@ def migrate_state_to_sqlite(
                     tier=entity_data.get("tier", "장식"),
                     desc=entity_data.get("desc", ""),
                     current=entity_data.get("current", {}),
-                    aliases=[],  # 별칭单独处理
+                    aliases=[],  # 별칭은 별도 처리
                     first_appearance=entity_data.get("first_appearance", 0),
                     last_appearance=entity_data.get("last_appearance", 0),
                     is_protagonist=entity_data.get("is_protagonist", False)
@@ -119,20 +119,20 @@ def migrate_state_to_sqlite(
                 stats["entities"] += 1
 
                 if verbose and stats["entities"] % 50 == 0:
-                    print(f"  완료迁移 {stats['entities']} 个实体...")
+                    print(f"  {stats['entities']}개 엔티티 마이그레이션 완료...")
 
             except Exception as e:
                 stats["errors"] += 1
                 if verbose:
-                    print(f"  ⚠️ 实体迁移실패 {entity_id}: {e}")
+                    print(f"  ⚠️ 엔티티 마이그레이션 실패 {entity_id}: {e}")
 
     if verbose:
-        print(f"  ✅ 实体: {stats['entities']} 个")
+        print(f"  ✅ 엔티티: {stats['entities']}개")
 
-    # 2. 迁移 alias_index
+    # 2. alias_index 마이그레이션
     alias_index = state.get("alias_index", {})
     if verbose:
-        print(f"\n🔄 迁移 alias_index...")
+        print(f"\n🔄 alias_index 마이그레이션...")
 
     for alias, entries in alias_index.items():
         if not isinstance(entries, list):
@@ -157,15 +157,15 @@ def migrate_state_to_sqlite(
             except Exception as e:
                 stats["errors"] += 1
                 if verbose:
-                    print(f"  ⚠️ 별칭迁移실패 {alias}: {e}")
+                    print(f"  ⚠️ 별칭 마이그레이션 실패 {alias}: {e}")
 
     if verbose:
-        print(f"  ✅ 별칭: {stats['aliases']} 个")
+        print(f"  ✅ 별칭: {stats['aliases']}개")
 
-    # 3. 迁移 state_changes
+    # 3. state_changes 마이그레이션
     state_changes = state.get("state_changes", [])
     if verbose:
-        print(f"\n🔄 迁移 state_changes...")
+        print(f"\n🔄 state_changes 마이그레이션...")
 
     for change in state_changes:
         if not isinstance(change, dict):
@@ -192,15 +192,15 @@ def migrate_state_to_sqlite(
         except Exception as e:
             stats["errors"] += 1
             if verbose:
-                print(f"  ⚠️ 상태变化迁移실패: {e}")
+                print(f"  ⚠️ 상태 변화 마이그레이션 실패: {e}")
 
     if verbose:
-        print(f"  ✅ 상태变化: {stats['state_changes']} 건")
+        print(f"  ✅ 상태 변화: {stats['state_changes']} 건")
 
-    # 4. 迁移 structured_relationships
+    # 4. structured_relationships 마이그레이션
     relationships = state.get("structured_relationships", [])
     if verbose:
-        print(f"\n🔄 迁移 structured_relationships...")
+        print(f"\n🔄 structured_relationships 마이그레이션...")
 
     for rel in relationships:
         if not isinstance(rel, dict):
@@ -218,7 +218,7 @@ def migrate_state_to_sqlite(
                 sql_manager.upsert_relationship(
                     from_entity=from_entity,
                     to_entity=to_entity,
-                    type=rel.get("type", "相识"),
+                    type=rel.get("type", "아는 사이"),
                     description=rel.get("description", ""),
                     chapter=rel.get("chapter", 0)
                 )
@@ -227,17 +227,17 @@ def migrate_state_to_sqlite(
         except Exception as e:
             stats["errors"] += 1
             if verbose:
-                print(f"  ⚠️ 관계迁移실패: {e}")
+                print(f"  ⚠️ 관계 마이그레이션 실패: {e}")
 
     if verbose:
         print(f"  ✅ 관계: {stats['relationships']} 건")
 
-    # 5. 精简 state.json（移除완료迁移필드）
+    # 5. state.json 경량화 (마이그레이션 완료 필드 제거)
     if not dry_run:
         if verbose:
-            print(f"\n🔄 精简 state.json...")
+            print(f"\n🔄 state.json 경량화...")
 
-        # 保留필드
+        # 유지할 필드
         slim_state = {
             "project_info": state.get("project_info", {}),
             "progress": state.get("progress", {}),
@@ -246,10 +246,10 @@ def migrate_state_to_sqlite(
             "world_settings": _slim_world_settings(state.get("world_settings", {})),
             "plot_threads": state.get("plot_threads", {}),
             "relationships": _slim_relationships(state.get("relationships", {})),
-            "review_checkpoints": state.get("review_checkpoints", [])[-10:],  # 只保留최근10个
+            "review_checkpoints": state.get("review_checkpoints", [])[-10:],  # 최근 10개만 유지
             "disambiguation_warnings": state.get("disambiguation_warnings", [])[-20:],
             "disambiguation_pending": state.get("disambiguation_pending", [])[-10:],
-            # v5.1 도입标记
+            # v5.1 도입 표시
             "_migrated_to_sqlite": True,
             "_migration_timestamp": datetime.now().isoformat()
         }
@@ -259,66 +259,66 @@ def migrate_state_to_sqlite(
 
         new_size = state_file.stat().st_size / 1024
         if verbose:
-            print(f"  ✅ 精简后: {new_size:.1f} KB")
+            print(f"  ✅ 경량화 후: {new_size:.1f} KB")
 
-    # 打印통계
+    # 통계 출력
     if verbose:
         print(f"\n" + "=" * 50)
-        print(f"📊 迁移통계:")
-        print(f"  实体: {stats['entities']}")
+        print(f"📊 마이그레이션 통계:")
+        print(f"  엔티티: {stats['entities']}")
         print(f"  별칭: {stats['aliases']}")
-        print(f"  상태变化: {stats['state_changes']}")
+        print(f"  상태 변화: {stats['state_changes']}")
         print(f"  관계: {stats['relationships']}")
-        print(f"  跳过: {stats['skipped']}")
+        print(f"  건너뜀: {stats['skipped']}")
         print(f"  오류: {stats['errors']}")
         if dry_run:
-            print(f"\n⚠️ 这是 dry-run 모드，实际未写入任何数据")
+            print(f"\n⚠️ dry-run 모드입니다. 실제로 데이터가 기록되지 않았습니다")
 
     return stats
 
 
 def _slim_world_settings(world_settings: Dict) -> Dict:
-    """精简 world_settings，只保留骨架"""
+    """world_settings 경량화, 골격만 유지"""
     if not isinstance(world_settings, dict):
         return {}
 
     slim = {}
 
-    # power_system: 只保留등급이름
+    # power_system: 등급 이름만 유지
     power_system = world_settings.get("power_system", [])
     if isinstance(power_system, list):
         slim["power_system"] = [
             p.get("name") if isinstance(p, dict) else p
-            for p in power_system[:20]  # 最多20个등급
+            for p in power_system[:20]  # 최대 20개 등급
         ]
 
-    # factions: 只保留이름和简述
+    # factions: 이름과 간략 설명만 유지
     factions = world_settings.get("factions", [])
     if isinstance(factions, list):
         slim["factions"] = [
             {"name": f.get("name"), "type": f.get("type")}
             if isinstance(f, dict) else f
-            for f in factions[:30]  # 最多30个세력
+            for f in factions[:30]  # 최대 30개 세력
         ]
 
-    # locations: 只保留이름
+    # locations: 이름만 유지
     locations = world_settings.get("locations", [])
     if isinstance(locations, list):
         slim["locations"] = [
             loc.get("name") if isinstance(loc, dict) else loc
-            for loc in locations[:50]  # 最多50个장소
+            for loc in locations[:50]  # 최대 50개 장소
         ]
 
     return slim
 
 
 def _slim_relationships(relationships: Dict) -> Dict:
-    """精简 relationships，只保留핵심관계"""
+    """relationships 경량화, 핵심 관계만 유지"""
     if not isinstance(relationships, dict):
         return {}
 
-    # 只保留 relationships 자典本身，不做额外精简
-    # 因为这个필드本身应该比较小
+    # relationships 딕셔너리 자체만 유지, 추가 경량화 불필요
+    # 이 필드 자체가 비교적 작기 때문
     return relationships
 
 
@@ -327,16 +327,16 @@ def main():
     from .cli_output import print_success, print_error
     from .index_manager import IndexManager
 
-    parser = argparse.ArgumentParser(description="迁移 state.json 到 SQLite (v5.4)")
+    parser = argparse.ArgumentParser(description="state.json을 SQLite로 마이그레이션 (v5.4)")
     parser.add_argument("--project-root", type=str, required=True, help="프로젝트 루트 디렉토리")
-    parser.add_argument("--dry-run", action="store_true", help="只分析不实际写入")
-    parser.add_argument("--backup", action="store_true", default=True, help="迁移前备份")
-    parser.add_argument("--no-backup", action="store_true", help="不备份")
-    parser.add_argument("--quiet", action="store_true", help="安静모드")
+    parser.add_argument("--dry-run", action="store_true", help="분석만 하고 실제 기록하지 않음")
+    parser.add_argument("--backup", action="store_true", default=True, help="마이그레이션 전 백업")
+    parser.add_argument("--no-backup", action="store_true", help="백업하지 않음")
+    parser.add_argument("--quiet", action="store_true", help="조용한 모드")
 
     args = parser.parse_args()
 
-    # 允许传入“工作区根目录”，统一解析到真正的 book project_root（必须포함 .webnovel/state.json）
+    # “작업 공간 루트 디렉토리”를 전달받아, 실제 book project_root로 통합 해석 (반드시 .webnovel/state.json 포함)
     from project_locator import resolve_project_root
 
     resolved_root = resolve_project_root(args.project_root)
@@ -353,7 +353,7 @@ def main():
             verbose=False,
         )
     except Exception as exc:
-        print_error("MIGRATE_FAILED", str(exc), suggestion="检查 state.json 와 index.db 权限")
+        print_error("MIGRATE_FAILED", str(exc), suggestion="state.json과 index.db 권한을 확인하세요")
         try:
             logger.log_tool_call(tool_name, False, error_code="MIGRATE_FAILED", error_message=str(exc))
         except Exception:
@@ -361,9 +361,9 @@ def main():
         raise SystemExit(1)
 
     if stats.get("errors", 0) > 0:
-        print_error("MIGRATE_ERRORS", "迁移出现오류", details=stats)
+        print_error("MIGRATE_ERRORS", "마이그레이션 중 오류 발생", details=stats)
         try:
-            logger.log_tool_call(tool_name, False, error_code="MIGRATE_ERRORS", error_message="迁移出现오류")
+            logger.log_tool_call(tool_name, False, error_code="MIGRATE_ERRORS", error_message="마이그레이션 중 오류 발생")
         except Exception:
             pass
         raise SystemExit(1)

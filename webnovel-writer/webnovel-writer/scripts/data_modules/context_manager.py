@@ -213,9 +213,9 @@ class ContextManager:
         )
 
         global_ctx = {
-            "worldview_skeleton": self._load_setting("세계관"),
-            "power_system_skeleton": self._load_setting("力量体系"),
-            "style_contract_ref": self._load_setting("风格契约"),
+            "worldview_skeleton": self._load_setting("worldview"),
+            "power_system_skeleton": self._load_setting("power-system"),
+            "style_contract_ref": self._load_setting("style-contract"),
         }
 
         preferences = self._load_json_optional(self.config.webnovel_dir / "preferences.json")
@@ -739,7 +739,7 @@ def main():
 
     config = None
     if args.project_root:
-        # 允许传入“工作区根目录”，统一解析到真正的 book project_root（必须포함 .webnovel/state.json）
+        # “워크스페이스 루트 디렉토리” 전달 허용, 실제 book project_root로 통합 해석（반드시 .webnovel/state.json 포함）
         from project_locator import resolve_project_root
         from .config import DataModulesConfig
 

@@ -54,13 +54,13 @@ def test_snapshot_delete_roundtrip(temp_project):
 
 def test_context_manager_build_and_filter(temp_project):
     state = {
-        "protagonist_state": {"name": "萧炎", "location": {"current": "天云宗"}},
-        "chapter_meta": {"0001": {"hook": "测试"}},
+        "protagonist_state": {"name": "소염", "location": {"current": "천운종"}},
+        "chapter_meta": {"0001": {"hook": "테스트"}},
     }
     temp_project.state_file.write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
 
     # preferences and memory
-    (temp_project.webnovel_dir / "preferences.json").write_text(json.dumps({"tone": "热血"}, ensure_ascii=False), encoding="utf-8")
+    (temp_project.webnovel_dir / "preferences.json").write_text(json.dumps({"tone": "열혈"}, ensure_ascii=False), encoding="utf-8")
     (temp_project.webnovel_dir / "project_memory.json").write_text(json.dumps({"patterns": []}, ensure_ascii=False), encoding="utf-8")
 
     idx = IndexManager(temp_project)
@@ -68,7 +68,7 @@ def test_context_manager_build_and_filter(temp_project):
         EntityMeta(
             id="xiaoyan",
             type="캐릭터",
-            canonical_name="萧炎",
+            canonical_name="소염",
             current={},
             first_appearance=1,
             last_appearance=1,
@@ -78,14 +78,14 @@ def test_context_manager_build_and_filter(temp_project):
         EntityMeta(
             id="bad",
             type="캐릭터",
-            canonical_name="坏명",
+            canonical_name="나쁜명",
             current={},
             first_appearance=1,
             last_appearance=1,
         )
     )
-    idx.record_appearance("xiaoyan", 1, ["萧炎"], 1.0)
-    idx.record_appearance("bad", 1, ["坏명"], 1.0)
+    idx.record_appearance("xiaoyan", 1, ["소염"], 1.0)
+    idx.record_appearance("bad", 1, ["나쁜명"], 1.0)
     invalid_id = idx.mark_invalid_fact("entity", "bad", "오류")
     idx.resolve_invalid_fact(invalid_id, "confirm")
 
@@ -94,7 +94,7 @@ def test_context_manager_build_and_filter(temp_project):
     characters = payload["sections"]["scene"]["content"]["appearing_characters"]
     assert any(c.get("entity_id") == "xiaoyan" for c in characters)
     assert not any(c.get("entity_id") == "bad" for c in characters)
-    assert payload["sections"]["preferences"]["content"].get("tone") == "热血"
+    assert payload["sections"]["preferences"]["content"].get("tone") == "열혈"
 
 
 def test_context_manager_loads_volume_outline_file(temp_project):
@@ -111,8 +111,8 @@ def test_context_manager_loads_volume_outline_file(temp_project):
     }
     temp_project.state_file.write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
     temp_project.outline_dir.mkdir(parents=True, exist_ok=True)
-    (temp_project.outline_dir / "第1卷-상세大纲.md").write_text(
-        "### 第2章：测试标题\n测试大纲\n\n### 第3章：下一章",
+    (temp_project.outline_dir / "vol_1-detailed.md").write_text(
+        "### chapter 2: 테스트 제목\n테스트 개요\n\n### chapter 3: 다음 챕터",
         encoding="utf-8",
     )
 
@@ -120,15 +120,15 @@ def test_context_manager_loads_volume_outline_file(temp_project):
     payload = manager.build_context(2, use_snapshot=False, save_snapshot=False)
 
     outline = payload["sections"]["core"]["content"]["chapter_outline"]
-    assert "### 第2章：测试标题" in outline
-    assert "测试大纲" in outline
+    assert "### chapter 2: 테스트 제목" in outline
+    assert "테스트 개요" in outline
 
 
 def test_query_router():
     router = QueryRouter()
-    assert router.route("캐릭터是谁") == "entity"
-    assert router.route("发生了什么剧情") == "plot"
-    intent = router.route_intent("第10-20章萧炎和药老관계图谱")
+    assert router.route("캐릭터는 누구") == "entity"
+    assert router.route("어떤 줄거리가 발생했나") == "plot"
+    intent = router.route_intent("제10-20장 소염과 약로 관계 그래프")
     assert intent["intent"] == "relationship"
     assert intent["needs_graph"] is True
     assert intent["time_scope"]["from_chapter"] == 10
@@ -141,7 +141,7 @@ def test_query_router():
 
 def test_context_snapshot_respects_template(temp_project):
     state = {
-        "protagonist_state": {"name": "萧炎"},
+        "protagonist_state": {"name": "소염"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -159,14 +159,14 @@ def test_context_snapshot_respects_template(temp_project):
 
 def test_context_manager_applies_ranker_and_contract_meta(temp_project):
     state = {
-        "protagonist_state": {"name": "萧炎"},
+        "protagonist_state": {"name": "소염"},
         "chapter_meta": {
-            "0002": {"hook": "平稳"},
-            "0003": {"hook": "留下悬念"},
+            "0002": {"hook": "안정"},
+            "0003": {"hook": "서스펜스 남기기"},
         },
         "disambiguation_warnings": [
-            {"chapter": 1, "message": "普通告警"},
-            {"chapter": 3, "message": "critical 충돌告警", "severity": "high"},
+            {"chapter": 1, "message": "일반 경고"},
+            {"chapter": 3, "message": "critical 충돌경고", "severity": "high"},
         ],
         "disambiguation_pending": [],
     }
@@ -188,7 +188,7 @@ def test_context_manager_applies_ranker_and_contract_meta(temp_project):
 def test_context_manager_includes_reader_signal_and_genre_profile(temp_project):
     state = {
         "project": {"genre": "xuanhuan"},
-        "protagonist_state": {"name": "萧炎"},
+        "protagonist_state": {"name": "소염"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -199,9 +199,9 @@ def test_context_manager_includes_reader_signal_and_genre_profile(temp_project):
     idx.save_chapter_reading_power(
         ChapterReadingPowerMeta(
             chapter=3,
-            hook_type="悬念钩",
+            hook_type="서스펜스훅",
             hook_strength="strong",
-            coolpoint_patterns=["신분掉马"],
+            coolpoint_patterns=["신분정체폭로"],
         )
     )
     idx.save_review_metrics(
@@ -211,7 +211,7 @@ def test_context_manager_includes_reader_signal_and_genre_profile(temp_project):
             overall_score=72,
             dimension_scores={"plot": 72},
             severity_counts={"high": 1},
-            critical_issues=["节奏拖沓"],
+            critical_issues=["리듬 느슨함"],
         )
     )
 
@@ -238,20 +238,20 @@ def test_context_manager_genre_section_and_refs_extraction(temp_project):
     (refs_dir / "genre-profiles.md").write_text(
         """
 ## shuangwen
-- 节奏快
-- 打脸密集
+- 빠른 리듬
+- 밀집 반격
 
 ## xuanhuan
-- 升级线清晰
-- 资源争夺
+- 성장 라인 명확
+- 자원 쟁탈
 """.strip(),
         encoding="utf-8",
     )
     (refs_dir / "reading-power-taxonomy.md").write_text(
         """
 ## xuanhuan
-- 钩子强度우선 strong
-- 爽点使用战力跨级
+- 훅 강도우선 strong
+- 쾌감 포인트 전투력 월경급
 """.strip(),
         encoding="utf-8",
     )
@@ -260,8 +260,8 @@ def test_context_manager_genre_section_and_refs_extraction(temp_project):
 
     profile = manager._load_genre_profile({"project": {"genre": "xuanhuan"}})
     assert profile["genre"] == "xuanhuan"
-    assert "升级线清晰" in profile["profile_excerpt"]
-    assert "钩子强度" in profile["taxonomy_excerpt"]
+    assert "성장 라인 명확" in profile["profile_excerpt"]
+    assert "훅 강도" in profile["taxonomy_excerpt"]
     assert isinstance(profile["reference_hints"], list)
     assert profile["reference_hints"]
 
@@ -286,7 +286,7 @@ def test_context_manager_reader_signal_with_debt_and_disable_switch(temp_project
 def test_context_manager_includes_writing_guidance(temp_project):
     state = {
         "project": {"genre": "xuanhuan"},
-        "protagonist_state": {"name": "萧炎"},
+        "protagonist_state": {"name": "소염"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -297,9 +297,9 @@ def test_context_manager_includes_writing_guidance(temp_project):
     idx.save_chapter_reading_power(
         ChapterReadingPowerMeta(
             chapter=3,
-            hook_type="悬念钩",
+            hook_type="서스펜스훅",
             hook_strength="strong",
-            coolpoint_patterns=["신분掉马"],
+            coolpoint_patterns=["신분정체폭로"],
         )
     )
     idx.save_review_metrics(
@@ -309,7 +309,7 @@ def test_context_manager_includes_writing_guidance(temp_project):
             overall_score=70,
             dimension_scores={"plot": 70},
             severity_counts={"high": 1},
-            critical_issues=["节奏拖沓"],
+            critical_issues=["리듬 느슨함"],
         )
     )
 
@@ -345,27 +345,27 @@ def test_context_manager_dynamic_weights_and_composite_genre(temp_project):
     (refs_dir / "genre-profiles.md").write_text(
         """
 ## xuanhuan
-- 升级线清晰
+- 성장 라인 명확
 
 ## realistic
-- 社会议题매핑
+- 사회 이슈매핑
 """.strip(),
         encoding="utf-8",
     )
     (refs_dir / "reading-power-taxonomy.md").write_text(
         """
 ## xuanhuan
-- 钩子强度우선
+- 훅 강도우선
 
 ## realistic
-- 명物动机一致
+- 명물 동기 일치
 """.strip(),
         encoding="utf-8",
     )
 
     state = {
         "project": {"genre": "xuanhuan+realistic"},
-        "protagonist_state": {"name": "萧炎"},
+        "protagonist_state": {"name": "소염"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -395,28 +395,28 @@ def test_context_manager_genre_alias_guidance_and_heading_extraction(temp_projec
     refs_dir.mkdir(parents=True, exist_ok=True)
     (refs_dir / "genre-profiles.md").write_text(
         """
-### 电竞
-- 联赛升级
+### e스포츠
+- 리그 승급
 
-### 直播文
-- 反馈闭环
+### 라이브문
+- 피드백 순환
 
-### 克苏鲁
-- 진상代价
+### 크툴루
+- 진상대가
 """.strip(),
         encoding="utf-8",
     )
     (refs_dir / "reading-power-taxonomy.md").write_text(
         """
-### 电竞
-- 战术决策点
+### e스포츠
+- 전술 결정점
 """.strip(),
         encoding="utf-8",
     )
 
     state = {
-        "project": {"genre": "电竞"},
-        "protagonist_state": {"name": "林燃"},
+        "project": {"genre": "e스포츠"},
+        "protagonist_state": {"name": "임연"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -428,9 +428,9 @@ def test_context_manager_genre_alias_guidance_and_heading_extraction(temp_projec
     guidance = payload["sections"]["writing_guidance"]["content"]
     items = guidance.get("guidance_items") or []
 
-    assert any("战术决策点" in str(text) for text in items)
-    assert any("网文节奏基线" in str(text) for text in items)
-    assert any("兑现密度基线" in str(text) for text in items)
+    assert any("전술 결정점" in str(text) for text in items)
+    assert any("웹소설 리듬 베이스라인" in str(text) for text in items)
+    assert any("실현 밀도 베이스라인" in str(text) for text in items)
 
 
 def test_context_manager_genre_aliases_normalized_for_profile_lookup(temp_project):
@@ -438,43 +438,43 @@ def test_context_manager_genre_aliases_normalized_for_profile_lookup(temp_projec
     refs_dir.mkdir(parents=True, exist_ok=True)
     (refs_dir / "genre-profiles.md").write_text(
         """
-## 电竞
-- 联赛升级
+## e스포츠
+- 리그 승급
 
-## 直播文
-- 实时反馈
+## 라이브문
+- 실시간 피드백
 
-## 克苏鲁
-- 진상代价
+## 크툴루
+- 진상대가
 """.strip(),
         encoding="utf-8",
     )
     (refs_dir / "reading-power-taxonomy.md").write_text(
         """
-## 电竞
-- 决策后果
+## e스포츠
+- 결정 결과
 
-## 直播文
-- 数据闭环
+## 라이브문
+- 데이터 순환
 
-## 克苏鲁
-- 规则우선
+## 크툴루
+- 규칙우선
 """.strip(),
         encoding="utf-8",
     )
 
     manager = ContextManager(temp_project)
 
-    assert manager._parse_genre_tokens("电竞文") == ["电竞"]
-    assert manager._parse_genre_tokens("直播") == ["直播文"]
-    assert manager._parse_genre_tokens("克系") == ["克苏鲁"]
-    assert manager._parse_genre_tokens("修仙/玄幻") == ["修仙"]
-    assert manager._parse_genre_tokens("都市修真") == ["都市异能"]
-    assert manager._parse_genre_tokens("古言脑洞") == ["古言"]
+    assert manager._parse_genre_tokens("e스포츠문") == ["e스포츠"]
+    assert manager._parse_genre_tokens("라이브") == ["라이브문"]
+    assert manager._parse_genre_tokens("크계") == ["크툴루"]
+    assert manager._parse_genre_tokens("선협") == ["선협"]
+    assert manager._parse_genre_tokens("도시선협") == ["도시이능"]
+    assert manager._parse_genre_tokens("고언기발") == ["고언"]
 
     state = {
-        "project": {"genre": "电竞文+直播"},
-        "protagonist_state": {"name": "叶修"},
+        "project": {"genre": "e스포츠문+라이브"},
+        "protagonist_state": {"name": "엽수"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -484,14 +484,14 @@ def test_context_manager_genre_aliases_normalized_for_profile_lookup(temp_projec
     payload = manager.build_context(20, template="plot", use_snapshot=False, save_snapshot=False)
     profile = payload["sections"]["genre_profile"]["content"]
 
-    assert profile.get("genre") == "电竞"
-    assert "直播文" in (profile.get("genres") or [])
+    assert profile.get("genre") == "e스포츠"
+    assert "라이브문" in (profile.get("genres") or [])
 
 
 def test_context_manager_enables_methodology_for_xianxia(temp_project):
     state = {
-        "project": {"genre": "修仙"},
-        "protagonist_state": {"name": "韩立"},
+        "project": {"genre": "선협"},
+        "protagonist_state": {"name": "한립"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -514,7 +514,7 @@ def test_context_manager_enables_methodology_for_xianxia(temp_project):
 def test_context_manager_enables_methodology_for_non_xianxia_by_default(temp_project):
     state = {
         "project": {"genre": "xuanhuan"},
-        "protagonist_state": {"name": "萧炎"},
+        "protagonist_state": {"name": "소염"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -533,8 +533,8 @@ def test_context_manager_enables_methodology_for_non_xianxia_by_default(temp_pro
 
 def test_context_manager_allows_methodology_whitelist_restriction(temp_project):
     state = {
-        "project": {"genre": "直播文"},
-        "protagonist_state": {"name": "林默"},
+        "project": {"genre": "라이브문"},
+        "protagonist_state": {"name": "임묵"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -600,13 +600,13 @@ def test_context_manager_composite_genre_boundary_three_plus(temp_project):
     manager.config.context_genre_profile_support_composite = True
     manager.config.context_genre_profile_max_genres = 3
 
-    genre_raw = "电竞文+直播+克系+修仙/玄幻+电竞文"
+    genre_raw = "e스포츠문+라이브+크계+선협+e스포츠문"
     tokens = manager._parse_genre_tokens(genre_raw)
-    assert tokens[:4] == ["电竞", "直播文", "克苏鲁", "修仙"]
+    assert tokens[:4] == ["e스포츠", "라이브문", "크툴루", "선협"]
 
     state = {
         "project": {"genre": genre_raw},
-        "protagonist_state": {"name": "主角"},
+        "protagonist_state": {"name": "주인공"},
         "chapter_meta": {},
         "disambiguation_warnings": [],
         "disambiguation_pending": [],
@@ -614,8 +614,8 @@ def test_context_manager_composite_genre_boundary_three_plus(temp_project):
 
     profile = manager._load_genre_profile(state)
     assert profile.get("composite") is True
-    assert profile.get("genres") == ["电竞", "直播文", "克苏鲁"]
-    assert profile.get("secondary_genres") == ["直播文", "克苏鲁"]
+    assert profile.get("genres") == ["e스포츠", "라이브문", "크툴루"]
+    assert profile.get("secondary_genres") == ["라이브문", "크툴루"]
 
     profile_again = manager._load_genre_profile(state)
     assert profile_again.get("genres") == profile.get("genres")

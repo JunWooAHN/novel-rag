@@ -1,20 +1,20 @@
 # Step 5 Debt Switch
 
-## 默认策略
+## 기본 전략
 
-- 债务利息默认关闭。
-- 只有两种情况允许开启：
-  - 用户明确要求开启；
-  - 项目已显式启用债务追踪。
+- 채무 이자는 기본적으로 비활성.
+- 다음 두 가지 상황에서만 활성화 허용:
+  - 사용자가 명확히 활성화 요청;
+  - 프로젝트에서 명시적으로 채무 추적 활성화.
 
-## 执行命令
+## 실행 명령
 
 ```bash
 python "${SCRIPTS_DIR}/webnovel.py" --project-root "${PROJECT_ROOT}" index accrue-interest --current-chapter {chapter_num}
 ```
 
-## 执行后要求
+## 실행 후 요구사항
 
-- 在 Step 5 输出中标注本次是否执行了利息计算。
-- 若执行，输出结果摘要：处理债务数、累计利息、是否出现逾期。
-- 若未执行，明确标注 `debt_interest: skipped (default off)`。
+- Step 5 출력에 이번에 이자 계산을 실행했는지 표기.
+- 실행한 경우, 결과 요약 출력: 처리 채무 수, 누적 이자, 연체 발생 여부.
+- 미실행 시, 명확히 `debt_interest: skipped (default off)` 표기.

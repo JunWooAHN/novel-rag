@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "title": "철갑 문종아들",
+    "genre": "역사기발",
+    "created_at": "2026-04-09",
+    "target_words": 300000,
+    "target_chapters": 150,
+    "golden_finger_name": "HEMA/야금 지식",
+    "golden_finger_type": "지식 특화 + 전투광",
+    "golden_finger_style": "하드코어",
+    "core_selling_points": "HEMA 덕후가 단종에 빙의, 빙의 자체를 신의 계시로 믿고 잡탕 전투교리를 만들어 철갑 입고 라이라이차차차 외치며 전 세계를 긴빠이치는 우당탕탕 대체역사",
+    "protagonist_structure": "단일 주인공",
+    "heroine_config": "없음",
+    "heroine_names": "",
+    "heroine_role": "",
+    "co_protagonists": "",
+    "co_protagonist_roles": "",
+    "antagonist_tiers": "{\"소\":\"수양대군\",\"중\":\"대만 원주민, 일본 왜구\",\"대\":\"홍치제 시대 명나라\"}",
+    "world_scale": "전 세계",
+    "factions": "조선·수양파 → 여진 → 대만·왜구 → 명나라",
+    "power_system_type": "기술 문명 (철강/콘크리트/HEMA/조선/화포)",
+    "social_class": "조선 신분제 기반",
+    "resource_distribution": "철광석/초석/목재 중심 (초석 절대 부족)",
+    "gf_visibility": "효령대군의 피를 이은 광신도",
+    "gf_irreversible_cost": "전장 경험으로 인한 급격한 정신 붕괴 + 광신 심화",
+    "target_reader": "역사 대체역사/밀리터리/사이다물 독자",
+    "platform": "노벨피아, 문피아, 네이버, 카카오, 리디",
+    "currency_system": "",
+    "currency_exchange": "",
+    "sect_hierarchy": "",
+    "cultivation_chain": "",
+    "cultivation_subtiers": ""
+  },
+  "progress": {
+    "current_chapter": 0,
+    "total_words": 0,
+    "last_updated": "2026-04-09 13:59:42",
+    "volumes_completed": [],
+    "current_volume": 1,
+    "volumes_planned": []
+  },
+  "protagonist_state": {
+    "name": "대붕이(단종)",
+    "power": {
+      "realm": "",
+      "layer": 1,
+      "bottleneck": ""
+    },
+    "location": {
+      "current": "",
+      "last_chapter": 0
+    },
+    "golden_finger": {
+      "name": "HEMA/야금 지식",
+      "level": 1,
+      "cooldown": 0,
+      "skills": []
+    },
+    "attributes": {}
+  },
+  "relationships": {},
+  "disambiguation_warnings": [],
+  "disambiguation_pending": [],
+  "world_settings": {
+    "power_system": [],
+    "factions": [],
+    "locations": []
+  },
+  "plot_threads": {
+    "active_threads": [],
+    "foreshadowing": []
+  },
+  "review_checkpoints": [],
+  "chapter_meta": {},
+  "strand_tracker": {
+    "last_quest_chapter": 0,
+    "last_fire_chapter": 0,
+    "last_constellation_chapter": 0,
+    "current_dominant": "quest",
+    "chapters_since_switch": 0,
+    "history": []
+  }
+}

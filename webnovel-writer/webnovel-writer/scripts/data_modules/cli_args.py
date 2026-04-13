@@ -4,12 +4,12 @@
 CLI 매개변수 호환 도구.
 
 배경：
-- data_modules 下的 CLI 普遍使用 argparse + subparsers。
-- argparse 的전역 매개변수(예: --project-root)는 서브 커맨드 앞에 위치해야 함：
+- data_modules 하위 CLI는 일반적으로 argparse + subparsers 사용.
+- argparse의 전역 매개변수(예: --project-root)는 서브 커맨드 앞에 위치해야 함:
     python -m data_modules.index_manager --project-root X get-core-entities
   하지만 실제 작성 워크플로우(skills/agents 문서, 도구 호출)에서는 --project-root를 서브 커맨드 뒤에 놓는 경우가 잦음：
     python -m data_modules.index_manager get-core-entities --project-root X
-  이것은 바로 "unrecognized arguments" 오류를 발생（见 issues7 日志）。
+  이것은 바로 "unrecognized arguments" 오류를 발생（issues7 로그 참조）.
 
 여기서 경량 argv 전처리를 제공: --project-root를 임의 위치에서 추출하여 앞으로 이동，
 기존 argparse 정의를 크게 변경하지 않고 두 가지 작성 방식 모두 호환 가능.
@@ -79,7 +79,7 @@ def load_json_arg(raw: str) -> Any:
     CLI에서 전달된 JSON 매개변수 파싱, 두 가지 형식 지원：
     - 직접 JSON 문자열：'{"a":1}'
     - @ 파일 경로：'@data.json'（파일에서 JSON 읽기, shell 따옴표 지옥 방지）
-      - 特例：'@-' stdin에서 읽기를 의미
+      - 특수 경우: '@-'는 stdin에서 읽기를 의미
     """
     if raw is None:
         raise ValueError("missing json arg")

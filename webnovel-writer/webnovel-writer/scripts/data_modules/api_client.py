@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Data Modules - API 客户端 (v5.4，v5.0 OpenAI 兼容인터페이스유지)
+Data Modules - API 클라이언트 (v5.4, v5.0 OpenAI 호환 인터페이스 유지)
 
-지원两种 API 类型：
-1. openai: OpenAI 兼容的 /v1/embeddings 和 /v1/rerank 인터페이스
-   - 适用于: OpenAI, Jina, Cohere, vLLM, Ollama 等
-2. modal: Modal 自定义인터페이스格式
-   - 适用于: 自部署的 Modal 服务
+두 가지 API 유형 지원：
+1. openai: OpenAI 호환 /v1/embeddings 및 /v1/rerank 인터페이스
+   - 적용 대상: OpenAI, Jina, Cohere, vLLM, Ollama 등
+2. modal: Modal 커스텀 인터페이스 형식
+   - 적용 대상: 자체 배포 Modal 서비스
 
-설정예시 (config.py):
+설정 예시 (config.py):
     embed_api_type = "openai"
     embed_base_url = "https://api.openai.com/v1"
     embed_model = "text-embedding-3-small"
     embed_api_key = "sk-xxx"
 
-    rerank_api_type = "openai"  # Jina/Cohere 也使用此类型
+    rerank_api_type = "openai"  # Jina/Cohere도 이 유형 사용
     rerank_base_url = "https://api.jina.ai/v1"
     rerank_model = "jina-reranker-v2-base-multilingual"
     rerank_api_key = "jina_xxx"
@@ -75,14 +75,14 @@ class EmbeddingAPIClient:
         """요청 URL 구성"""
         base_url = self.config.embed_base_url.rstrip("/")
         if self.config.embed_api_type == "openai":
-            # OpenAI 兼容: /v1/embeddings
+            # OpenAI 호환: /v1/embeddings
             if not base_url.endswith("/embeddings"):
                 if base_url.endswith("/v1"):
                     return f"{base_url}/embeddings"
                 return f"{base_url}/v1/embeddings"
             return base_url
         else:
-            # Modal 自定义인터페이스: 설정된 URL 직접 사용
+            # Modal 커스텀 인터페이스: 설정된 URL 직접 사용
             return base_url
 
     def _build_payload(self, texts: List[str]) -> Dict[str, Any]:
@@ -94,7 +94,7 @@ class EmbeddingAPIClient:
                 "encoding_format": "float"
             }
         else:
-            # Modal 格式
+            # Modal 형식
             return {
                 "input": texts,
                 "model": self.config.embed_model
@@ -103,14 +103,14 @@ class EmbeddingAPIClient:
     def _parse_response(self, data: Dict[str, Any]) -> Optional[List[List[float]]]:
         """응답 파싱"""
         if self.config.embed_api_type == "openai":
-            # OpenAI 格式: {"data": [{"embedding": [...], "index": 0}, ...]}
+            # OpenAI 형식: {"data": [{"embedding": [...], "index": 0}, ...]}
             if "data" in data:
                 # index로 정렬하여 순서 보장
                 sorted_data = sorted(data["data"], key=lambda x: x.get("index", 0))
                 return [item["embedding"] for item in sorted_data]
             return None
         else:
-            # Modal 格式: {"data": [{"embedding": [...]}, ...]}
+            # Modal 형식: {"data": [{"embedding": [...]}, ...]}
             if "data" in data:
                 return [item["embedding"] for item in data["data"]]
             return None
@@ -240,7 +240,7 @@ class RerankAPIClient:
     """
     범용 Rerank API 클라이언트
 
-    OpenAI 호환 인터페이스 지원 (Jina/Cohere 格式) 및 Modal 커스텀 인터페이스
+    OpenAI 호환 인터페이스 지원 (Jina/Cohere 형식) 및 Modal 커스텀 인터페이스
     """
 
     def __init__(self, config=None):
@@ -271,20 +271,20 @@ class RerankAPIClient:
         """요청 URL 구성"""
         base_url = self.config.rerank_base_url.rstrip("/")
         if self.config.rerank_api_type == "openai":
-            # Jina/Cohere 兼容: /v1/rerank
+            # Jina/Cohere 호환: /v1/rerank
             if not base_url.endswith("/rerank"):
                 if base_url.endswith("/v1"):
                     return f"{base_url}/rerank"
                 return f"{base_url}/v1/rerank"
             return base_url
         else:
-            # Modal 自定义인터페이스
+            # Modal 커스텀 인터페이스
             return base_url
 
     def _build_payload(self, query: str, documents: List[str], top_n: Optional[int]) -> Dict[str, Any]:
         """요청 본문 구성"""
         if self.config.rerank_api_type == "openai":
-            # Jina/Cohere 格式
+            # Jina/Cohere 형식
             payload: Dict[str, Any] = {
                 "query": query,
                 "documents": documents,
@@ -294,7 +294,7 @@ class RerankAPIClient:
                 payload["top_n"] = top_n
             return payload
         else:
-            # Modal 格式
+            # Modal 형식
             payload = {"query": query, "documents": documents}
             if top_n:
                 payload["top_n"] = top_n
@@ -303,10 +303,10 @@ class RerankAPIClient:
     def _parse_response(self, data: Dict[str, Any]) -> List[Dict[str, Any]]:
         """응답 파싱"""
         if self.config.rerank_api_type == "openai":
-            # Jina/Cohere 格式: {"results": [{"index": 0, "relevance_score": 0.9}, ...]}
+            # Jina/Cohere 형식: {"results": [{"index": 0, "relevance_score": 0.9}, ...]}
             return data.get("results", [])
         else:
-            # Modal 格式: {"results": [...]}
+            # Modal 형식: {"results": [...]}
             return data.get("results", [])
 
     async def rerank(
@@ -415,7 +415,7 @@ class ModalAPIClient:
         }
 
     async def _get_session(self) -> aiohttp.ClientSession:
-        # 复用 embed client 的 session
+        # embed client의 session 재사용
         return await self._embed_client._get_session()
 
     async def close(self):

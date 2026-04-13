@@ -9,7 +9,7 @@ allowed-tools: Read Write Edit Grep Bash Task AskUserQuestion WebSearch WebFetch
 ## 목표
 
 - 구조화된 상호작용을 통해 충분한 정보를 수집하여 "먼저 생성하고 나중에 재작업"하는 상황을 방지합니다.
-- 실행 가능한 프로젝트 골격을 산출합니다: `.webnovel/state.json`, `设定集/*`, `大纲/总纲.md`, `.webnovel/idea_bank.json`.
+- 실행 가능한 프로젝트 골격을 산출합니다: `.webnovel/state.json`, `settings/*`, `outline/master.md`, `.webnovel/idea_bank.json`.
 - 이후 `/webnovel-plan` 과 `/webnovel-write` 가 바로 실행될 수 있도록 보장합니다.
 
 ## 실행 원칙
@@ -407,15 +407,15 @@ python "${SCRIPTS_DIR}/webnovel.py" init \
 
 ```bash
 test -f "{project_root}/.webnovel/state.json"
-find "{project_root}/设定集" -maxdepth 1 -type f -name "*.md"
-test -f "{project_root}/大纲/总纲.md"
+find "{project_root}/settings" -maxdepth 1 -type f -name "*.md"
+test -f "{project_root}/outline/master.md"
 test -f "{project_root}/.webnovel/idea_bank.json"
 ```
 
 성공 기준:
 - `state.json` 존재하고 핵심 필드가 비어있지 않음 (title/genre/target_words/target_chapters).
-- 설정집 핵심 파일 존재: `世界观.md`, `力量体系.md`, `主角卡.md`, `金手指设计.md`.
-- `总纲.md`에 핵심 메인 라인과 제약 필드가 기입됨.
+- 설정집 핵심 파일 존재: `worldview.md`, `power-system.md`, `protagonist.md`, `golden-finger.md`.
+- `master.md`에 핵심 메인 라인과 제약 필드가 기입됨.
 - `idea_bank.json`이 작성되어 있고 최종 선정 방안과 일치.
 
 ## 실패 처리 (최소 롤백)

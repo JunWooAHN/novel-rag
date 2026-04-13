@@ -33,21 +33,21 @@ def test_foreshadowing_analysis_uses_real_chapters_and_handles_missing_data():
             "plot_threads": {
                 "foreshadowing": [
                     {
-                        "content": "林家宝库铭文的秘密",
+                        "content": "임가 보고 명문의 비밀",
                         "status": "미회수",
                         "tier": "핵심",
                         "planted_chapter": 20,
                         "target_chapter": 100,
                     },
                     {
-                        "content": "神秘玉佩내력",
-                        "status": "待회수",
+                        "content": "신비한 옥패내력",
+                        "status": "대기회수",
                         "tier": "서브",
                         "added_chapter": 50,
                         "target": 150,
                     },
                     {
-                        "content": "旧日誓言",
+                        "content": "옛날 서약",
                         "status": "미회수",
                         "tier": "장식",
                     },
@@ -69,24 +69,24 @@ def test_foreshadowing_analysis_uses_real_chapters_and_handles_missing_data():
         assert len(foreshadowing) == 3
 
         records = {item["content"]: item for item in foreshadowing}
-        assert records["林家宝库铭文的秘密"]["planted_chapter"] == 20
-        assert records["林家宝库铭文的秘密"]["elapsed"] == 100
-        assert records["林家宝库铭文的秘密"]["status"] == "🔴 만료됨"
+        assert records["임가 보고 명문의 비밀"]["planted_chapter"] == 20
+        assert records["임가 보고 명문의 비밀"]["elapsed"] == 100
+        assert records["임가 보고 명문의 비밀"]["status"] == "🔴 만료됨"
 
-        assert records["神秘玉佩내력"]["planted_chapter"] == 50
-        assert records["神秘玉佩내력"]["target_chapter"] == 150
-        assert records["神秘玉佩내력"]["status"] in {"🟡 경미한 시간 초과", "🟢 정상"}
+        assert records["신비한 옥패내력"]["planted_chapter"] == 50
+        assert records["신비한 옥패내력"]["target_chapter"] == 150
+        assert records["신비한 옥패내력"]["status"] in {"🟡 경미한 시간 초과", "🟢 정상"}
 
-        assert records["旧日誓言"]["planted_chapter"] is None
-        assert records["旧日誓言"]["status"] == "⚪ 데이터 부족"
+        assert records["옛날 서약"]["planted_chapter"] is None
+        assert records["옛날 서약"]["status"] == "⚪ 데이터 부족"
 
         urgency = reporter.analyze_foreshadowing_urgency()
         urgency_by_content = {item["content"]: item for item in urgency}
 
-        assert urgency_by_content["林家宝库铭文的秘密"]["urgency"] is not None
-        assert urgency_by_content["林家宝库铭文的秘密"]["status"] == "🔴 만료됨"
-        assert urgency_by_content["旧日誓言"]["urgency"] is None
-        assert urgency_by_content["旧日誓言"]["status"] == "⚪ 데이터 부족"
+        assert urgency_by_content["임가 보고 명문의 비밀"]["urgency"] is not None
+        assert urgency_by_content["임가 보고 명문의 비밀"]["status"] == "🔴 만료됨"
+        assert urgency_by_content["옛날 서약"]["urgency"] is None
+        assert urgency_by_content["옛날 서약"]["status"] == "⚪ 데이터 부족"
 
 
 def test_pacing_analysis_prefers_real_coolpoint_metadata_over_estimation():
@@ -99,8 +99,8 @@ def test_pacing_analysis_prefers_real_coolpoint_metadata_over_estimation():
             "progress": {"current_chapter": 3, "total_words": 12000},
             "chapter_meta": {
                 "0003": {
-                    "hook": "下章有变",
-                    "coolpoint_patterns": ["신분掉马", "反派翻车"],
+                    "hook": "다음 장에 변화",
+                    "coolpoint_patterns": ["신분정체폭로", "악역 역전"],
                 }
             },
         }
@@ -110,17 +110,17 @@ def test_pacing_analysis_prefers_real_coolpoint_metadata_over_estimation():
         idx.save_chapter_reading_power(
             ChapterReadingPowerMeta(
                 chapter=1,
-                hook_type="渴望钩",
+                hook_type="갈망훅",
                 hook_strength="strong",
-                coolpoint_patterns=["打脸权威", "신분掉马"],
+                coolpoint_patterns=["권위 뒤집기", "신분정체폭로"],
             )
         )
         idx.save_chapter_reading_power(
             ChapterReadingPowerMeta(
                 chapter=2,
-                hook_type="悬念钩",
+                hook_type="서스펜스훅",
                 hook_strength="medium",
-                coolpoint_patterns=["신분掉马"],
+                coolpoint_patterns=["신분정체폭로"],
             )
         )
 
@@ -175,8 +175,8 @@ def test_relationship_graph_prefers_index_db_data():
 
         state = {
             "progress": {"current_chapter": 12, "total_words": 24000},
-            "protagonist_state": {"name": "萧炎"},
-            "relationships": {"allies": [{"name": "旧盟友", "relation": "우호"}], "enemies": []},
+            "protagonist_state": {"name": "소염"},
+            "relationships": {"allies": [{"name": "옛 동맹", "relation": "우호"}], "enemies": []},
         }
         _write_state(project_root, state)
 
@@ -185,7 +185,7 @@ def test_relationship_graph_prefers_index_db_data():
             EntityMeta(
                 id="xiaoyan",
                 type="캐릭터",
-                canonical_name="萧炎",
+                canonical_name="소염",
                 tier="핵심",
                 current={},
                 first_appearance=1,
@@ -197,8 +197,8 @@ def test_relationship_graph_prefers_index_db_data():
             EntityMeta(
                 id="yaolao",
                 type="캐릭터",
-                canonical_name="药老",
-                tier="重要",
+                canonical_name="약로",
+                tier="중요",
                 current={},
                 first_appearance=1,
                 last_appearance=12,
@@ -222,8 +222,8 @@ def test_relationship_graph_prefers_index_db_data():
                 action="create",
                 polarity=1,
                 strength=0.9,
-                description="拜师",
-                evidence="萧炎拜药老为师",
+                description="사사",
+                evidence="소염이 약로를 스승으로 모심",
             )
         )
 
@@ -231,5 +231,5 @@ def test_relationship_graph_prefers_index_db_data():
         assert reporter.load_state() is True
         graph = reporter.generate_relationship_graph()
         assert "mermaid" in graph
-        assert "药老" in graph
+        assert "약로" in graph
         assert "사제" in graph

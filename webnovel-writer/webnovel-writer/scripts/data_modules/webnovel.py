@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-webnovel 统一入口（面向 skills / agents 的稳定 CLI）
+webnovel 통합 진입점（skills / agents 대상 안정적 CLI）
 
-设计목표：
-- 只有一个入口命令，避免到处拼 `python -m data_modules.xxx ...` 导致매개변수位置/引号/路径炸裂。
-- 自动解析正确的 book project_root（포함 `.webnovel/state.json` 디렉토리）。
-- 所有写入类命令在解析到 project_root 后，统一前置 `--project-root` 传给具体模块。
+설계 목표：
+- 하나의 진입 명령만 사용, `python -m data_modules.xxx ...`를 여기저기 조합하여 매개변수 위치/따옴표/경로 폭발 방지.
+- 올바른 book project_root 자동 해석（`.webnovel/state.json` 포함 디렉토리）.
+- 모든 쓰기 명령은 project_root 해석 후, 통일적으로 `--project-root`를 앞에 추가하여 구체 모듈에 전달.
 
-典型사용법（推荐，不依赖 PYTHONPATH / 不要求 cd）：
+일반적인 사용법（권장, PYTHONPATH 의존 없음 / cd 불필요）：
   python "<SCRIPTS_DIR>/webnovel.py" preflight
   python "<SCRIPTS_DIR>/webnovel.py" where
-  python "<SCRIPTS_DIR>/webnovel.py" use D:\\wk\\xiaoshuo\\凡명资本论
+  python "<SCRIPTS_DIR>/webnovel.py" use D:\\wk\\xiaoshuo\\범인자본론
   python "<SCRIPTS_DIR>/webnovel.py" --project-root D:\\wk\\xiaoshuo index stats
   python "<SCRIPTS_DIR>/webnovel.py" --project-root D:\\wk\\xiaoshuo state process-chapter --chapter 100 --data @payload.json
   python "<SCRIPTS_DIR>/webnovel.py" --project-root D:\\wk\\xiaoshuo extract-context --chapter 100 --format json
 
-也지원（不推荐，容易踩 PYTHONPATH/cd/매개변수顺序坑）：
+아래도 지원（비권장, PYTHONPATH/cd/매개변수 순서 함정에 빠지기 쉬움）：
   python -m data_modules.webnovel where
 """
 
@@ -40,7 +40,7 @@ def _scripts_dir() -> Path:
 
 
 def _resolve_root(explicit_project_root: Optional[str]) -> Path:
-    # 允许显式传入工作区根目录或书프로젝트 루트 디렉토리
+    # 명시적으로 워크스페이스 루트 디렉토리 또는 책 프로젝트 루트 디렉토리 전달 허용
     raw = explicit_project_root
     if raw:
         return resolve_project_root(raw)
@@ -49,7 +49,7 @@ def _resolve_root(explicit_project_root: Optional[str]) -> Path:
 
 def _strip_project_root_args(argv: list[str]) -> list[str]:
     """
-    下游工具统一由本入口注入 `--project-root`，避免重复传参导致 argparse 报错/歧义。
+    하위 도구는 본 진입점에서 통일적으로 `--project-root`를 주입하여, 중복 전달로 인한 argparse 오류/모호성 방지.
     """
     out: list[str] = []
     i = 0
@@ -73,7 +73,7 @@ def _run_data_module(module: str, argv: list[str]) -> int:
     mod = importlib.import_module(f"data_modules.{module}")
     main = getattr(mod, "main", None)
     if not callable(main):
-        raise RuntimeError(f"data_modules.{module} 누락可调用的 main()")
+        raise RuntimeError(f"data_modules.{module} 에 호출 가능한 main()이 없음")
 
     old_argv = sys.argv
     try:
@@ -91,11 +91,11 @@ def _run_script(script_name: str, argv: list[str]) -> int:
     """
     Run a script under `.claude/scripts/` via a subprocess.
 
-    用途：兼容没有 main() 的脚本（例如 workflow_manager.py）。
+    용도: main()이 없는 스크립트 호환（예: workflow_manager.py）.
     """
     script_path = _scripts_dir() / script_name
     if not script_path.is_file():
-        raise FileNotFoundError(f"찾을 수 없음脚本: {script_path}")
+        raise FileNotFoundError(f"스크립트를 찾을 수 없음: {script_path}")
     proc = subprocess.run([sys.executable, str(script_path), *argv])
     return int(proc.returncode or 0)
 
@@ -169,14 +169,14 @@ def cmd_use(args: argparse.Namespace) -> int:
         except Exception:
             workspace_root = workspace_root
 
-    # 1) 写入工作区포인터（若工作区内存在 `.claude/`）
+    # 1) 워크스페이스 포인터 기록（워크스페이스 내에 `.claude/`가 존재하는 경우）
     pointer_file = write_current_project_pointer(project_root, workspace_root=workspace_root)
     if pointer_file is not None:
         print(f"workspace pointer: {pointer_file}")
     else:
         print("workspace pointer: (skipped)")
 
-    # 2) 写入用户级 registry（保证전역安装/空上下文可恢复）
+    # 2) 사용자 수준 registry 기록（전역 설치/빈 컨텍스트에서도 복구 가능 보장）
     reg_path = update_global_registry_current_project(workspace_root=workspace_root, project_root=project_root)
     if reg_path is not None:
         print(f"global registry: {reg_path}")
@@ -188,90 +188,90 @@ def cmd_use(args: argparse.Namespace) -> int:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="webnovel unified CLI")
-    parser.add_argument("--project-root", help="书프로젝트 루트 디렉토리或工作区根目录（선택，기본값自动检测）")
+    parser.add_argument("--project-root", help="책 프로젝트 루트 디렉토리 또는 워크스페이스 루트 디렉토리（선택, 기본값 자동 탐지）")
 
     sub = parser.add_subparsers(dest="tool", required=True)
 
-    p_where = sub.add_parser("where", help="打印解析出的 project_root")
+    p_where = sub.add_parser("where", help="해석된 project_root 출력")
     p_where.set_defaults(func=cmd_where)
 
-    p_preflight = sub.add_parser("preflight", help="校验统一 CLI 실행环境와 project_root")
+    p_preflight = sub.add_parser("preflight", help="통합 CLI 실행 환경과 project_root 검증")
     p_preflight.add_argument("--format", choices=["text", "json"], default="text", help="출력 형식")
     p_preflight.set_defaults(func=cmd_preflight)
 
-    p_use = sub.add_parser("use", help="绑定현재工作区使用的书项目（写入포인터/registry）")
-    p_use.add_argument("project_root", help="书프로젝트 루트 디렉토리（必须포함 .webnovel/state.json）")
-    p_use.add_argument("--workspace-root", help="工作区根目录（선택；기본값由실행环境推断）")
+    p_use = sub.add_parser("use", help="현재 워크스페이스에서 사용할 책 프로젝트 바인딩（포인터/registry 기록）")
+    p_use.add_argument("project_root", help="책 프로젝트 루트 디렉토리（반드시 .webnovel/state.json 포함）")
+    p_use.add_argument("--workspace-root", help="워크스페이스 루트 디렉토리（선택; 기본값은 실행 환경에서 추론）")
     p_use.set_defaults(func=cmd_use)
 
     # Pass-through to data modules
-    p_index = sub.add_parser("index", help="转发到 index_manager")
+    p_index = sub.add_parser("index", help="index_manager로 전달")
     p_index.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_state = sub.add_parser("state", help="转发到 state_manager")
+    p_state = sub.add_parser("state", help="state_manager로 전달")
     p_state.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_rag = sub.add_parser("rag", help="转发到 rag_adapter")
+    p_rag = sub.add_parser("rag", help="rag_adapter로 전달")
     p_rag.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_style = sub.add_parser("style", help="转发到 style_sampler")
+    p_style = sub.add_parser("style", help="style_sampler로 전달")
     p_style.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_entity = sub.add_parser("entity", help="转发到 entity_linker")
+    p_entity = sub.add_parser("entity", help="entity_linker로 전달")
     p_entity.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_context = sub.add_parser("context", help="转发到 context_manager")
+    p_context = sub.add_parser("context", help="context_manager로 전달")
     p_context.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_migrate = sub.add_parser("migrate", help="转发到 migrate_state_to_sqlite")
+    p_migrate = sub.add_parser("migrate", help="migrate_state_to_sqlite로 전달")
     p_migrate.add_argument("args", nargs=argparse.REMAINDER)
 
     # Pass-through to scripts
-    p_workflow = sub.add_parser("workflow", help="转发到 workflow_manager.py")
+    p_workflow = sub.add_parser("workflow", help="workflow_manager.py로 전달")
     p_workflow.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_status = sub.add_parser("status", help="转发到 status_reporter.py")
+    p_status = sub.add_parser("status", help="status_reporter.py로 전달")
     p_status.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_update_state = sub.add_parser("update-state", help="转发到 update_state.py")
+    p_update_state = sub.add_parser("update-state", help="update_state.py로 전달")
     p_update_state.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_backup = sub.add_parser("backup", help="转发到 backup_manager.py")
+    p_backup = sub.add_parser("backup", help="backup_manager.py로 전달")
     p_backup.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_archive = sub.add_parser("archive", help="转发到 archive_manager.py")
+    p_archive = sub.add_parser("archive", help="archive_manager.py로 전달")
     p_archive.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_init = sub.add_parser("init", help="转发到 init_project.py（초기화项目）")
+    p_init = sub.add_parser("init", help="init_project.py로 전달（프로젝트 초기화）")
     p_init.add_argument("args", nargs=argparse.REMAINDER)
 
-    p_extract_context = sub.add_parser("extract-context", help="转发到 extract_chapter_context.py")
+    p_extract_context = sub.add_parser("extract-context", help="extract_chapter_context.py로 전달")
     p_extract_context.add_argument("--chapter", type=int, required=True, help="대상 챕터 번호")
     p_extract_context.add_argument("--format", choices=["text", "json"], default="text", help="출력 형식")
 
-    # 兼容：允许 `--project-root` 出现在任意位置（减少 agents/skills 拼命令的出错率）
+    # 호환: `--project-root`가 임의 위치에 나타나는 것을 허용（agents/skills 명령 조합 시 오류율 감소）
     from .cli_args import normalize_global_project_root
 
     argv = normalize_global_project_root(sys.argv[1:])
     args = parser.parse_args(argv)
 
-    # where/use 直接执行
+    # where/use 직접 실행
     if hasattr(args, "func"):
         code = int(args.func(args) or 0)
         raise SystemExit(code)
 
     tool = args.tool
     rest = list(getattr(args, "args", []) or [])
-    # argparse.REMAINDER 可能以 `--` 开头占位，这里去掉
+    # argparse.REMAINDER가 `--`로 시작하는 자리 차지 가능, 여기서 제거
     if rest[:1] == ["--"]:
         rest = rest[1:]
     rest = _strip_project_root_args(rest)
 
-    # init 是创建项目，不应该依赖/注入완료存在 project_root
+    # init은 프로젝트 생성이므로, 기존 project_root에 의존/주입하면 안 됨
     if tool == "init":
         raise SystemExit(_run_script("init_project.py", rest))
 
-    # 其余工具：统一解析 project_root 后前置给下游
+    # 나머지 도구: project_root 통합 해석 후 하위에 전달
     project_root = _resolve_root(args.project_root)
     forward_args = ["--project-root", str(project_root)]
 

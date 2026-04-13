@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 class IndexObservabilityMixin:
     def _row_to_dict(self, row: sqlite3.Row, parse_json: List[str] = None) -> Dict:
-        """将 Row 转换为자典"""
+        """Row를 딕셔너리로 변환"""
         d = dict(row)
         if parse_json:
             for key in parse_json:
@@ -32,7 +32,7 @@ class IndexObservabilityMixin:
                         )
         return d
 
-    # ==================== 없음效事实管理 ====================
+    # ==================== 무효 사실 관리 ====================
 
     def mark_invalid_fact(
         self,
@@ -42,7 +42,7 @@ class IndexObservabilityMixin:
         marked_by: str = "user",
         chapter_discovered: Optional[int] = None,
     ) -> int:
-        """标记없음效事实（pending）"""
+        """무효 사실 표시（pending）"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -57,7 +57,7 @@ class IndexObservabilityMixin:
             return int(cursor.lastrowid)
 
     def resolve_invalid_fact(self, invalid_id: int, action: str) -> bool:
-        """确认或撤销없음效标记"""
+        """무효 표시 확인 또는 철회"""
         action = action.lower()
         with self._get_conn() as conn:
             cursor = conn.cursor()
@@ -78,7 +78,7 @@ class IndexObservabilityMixin:
             return cursor.rowcount > 0
 
     def list_invalid_facts(self, status: Optional[str] = None) -> List[Dict]:
-        """列出없음效事实"""
+        """무효 사실 목록 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             if status:
@@ -91,7 +91,7 @@ class IndexObservabilityMixin:
             return [dict(r) for r in cursor.fetchall()]
 
     def get_invalid_ids(self, source_type: str, status: str = "confirmed") -> set[str]:
-        """获取없음效事实 ID 集合"""
+        """무효 사실 ID 집합 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -100,7 +100,7 @@ class IndexObservabilityMixin:
             )
             return {str(r[0]) for r in cursor.fetchall() if r and r[0] is not None}
 
-    # ==================== 日志记录 ====================
+    # ==================== 로그 기록 ====================
 
     def log_rag_query(
         self,
@@ -145,7 +145,7 @@ class IndexObservabilityMixin:
             conn.commit()
 
     def get_stats(self) -> Dict[str, int]:
-        """获取索引통계"""
+        """인덱스 통계 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
 

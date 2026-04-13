@@ -14,7 +14,7 @@ from typing import Any, Dict, List, Optional
 
 class IndexReadingMixin:
     def save_chapter_reading_power(self, meta: ChapterReadingPowerMeta):
-        """저장챕터追读力元数据"""
+        """챕터 추독력 메타데이터 저장"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -41,7 +41,7 @@ class IndexReadingMixin:
             conn.commit()
 
     def get_chapter_reading_power(self, chapter: int) -> Optional[Dict]:
-        """获取챕터追读力元数据"""
+        """챕터 추독력 메타데이터 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -61,7 +61,7 @@ class IndexReadingMixin:
             return None
 
     def get_recent_reading_power(self, limit: int = 10) -> List[Dict]:
-        """获取최근챕터的追读力元数据"""
+        """최근 챕터의 추독력 메타데이터 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -86,7 +86,7 @@ class IndexReadingMixin:
             ]
 
     def get_pattern_usage_stats(self, last_n_chapters: int = 20) -> Dict[str, int]:
-        """获取최근N章的爽点모드使用통계"""
+        """최근 N챕터의 쾌감 포인트 패턴 사용 통계 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -113,7 +113,7 @@ class IndexReadingMixin:
             return stats
 
     def get_hook_type_stats(self, last_n_chapters: int = 20) -> Dict[str, int]:
-        """获取최근N章的钩子类型使用통계"""
+        """최근 N챕터의 훅 유형 사용 통계 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -132,10 +132,10 @@ class IndexReadingMixin:
                 stats[hook] = stats.get(hook, 0) + 1
             return stats
 
-    # ==================== v5.4 审查지표 ====================
+    # ==================== v5.4 심사 지표 ====================
 
     def save_review_metrics(self, metrics: ReviewMetrics) -> None:
-        """저장审查지표记录"""
+        """심사 지표 기록 저장"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -168,7 +168,7 @@ class IndexReadingMixin:
             conn.commit()
 
     def get_recent_review_metrics(self, limit: int = 5) -> List[Dict]:
-        """获取최근审查记录"""
+        """최근 심사 기록 조회"""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -188,7 +188,7 @@ class IndexReadingMixin:
             ]
 
     def get_review_trend_stats(self, last_n: int = 5) -> Dict[str, Any]:
-        """获取审查趋势통계"""
+        """심사 추세 통계 조회"""
         records = self.get_recent_review_metrics(last_n)
         if not records:
             return {
@@ -254,10 +254,10 @@ class IndexReadingMixin:
             "recent_ranges": recent_ranges,
         }
 
-    # ==================== 写作清单점수（Phase F） ====================
+    # ==================== 작성 체크리스트 점수 (Phase F) ====================
 
     def save_writing_checklist_score(self, meta: WritingChecklistScoreMeta) -> None:
-        """저장챕터写作清单점수。"""
+        """챕터 작성 체크리스트 점수 저장."""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -304,7 +304,7 @@ class IndexReadingMixin:
             conn.commit()
 
     def get_writing_checklist_score(self, chapter: int) -> Optional[Dict[str, Any]]:
-        """获取指定챕터的写作清单점수。"""
+        """지정 챕터의 작성 체크리스트 점수 조회."""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -317,7 +317,7 @@ class IndexReadingMixin:
             return self._row_to_dict(row, parse_json=["score_breakdown", "pending_items"])
 
     def get_recent_writing_checklist_scores(self, limit: int = 10) -> List[Dict[str, Any]]:
-        """获取최근챕터写作清单점수。"""
+        """최근 챕터 작성 체크리스트 점수 조회."""
         with self._get_conn() as conn:
             cursor = conn.cursor()
             cursor.execute(
@@ -334,7 +334,7 @@ class IndexReadingMixin:
             ]
 
     def get_writing_checklist_score_trend(self, last_n: int = 10) -> Dict[str, Any]:
-        """获取写作清单점수趋势통계。"""
+        """작성 체크리스트 점수 추세 통계 조회."""
         records = self.get_recent_writing_checklist_scores(limit=max(1, int(last_n)))
         if not records:
             return {

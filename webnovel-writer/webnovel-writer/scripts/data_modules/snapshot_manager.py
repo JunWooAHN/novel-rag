@@ -15,10 +15,10 @@ from typing import Any, Dict, Optional
 from .config import get_config
 
 try:
-    # 当 scripts 目录在 sys.path 中
+    # scripts 디렉토리가 sys.path에 있을 때
     from security_utils import atomic_write_json
 except ImportError:  # pragma: no cover
-    # 当以 python -m scripts.data_modules... 形式실행
+    # python -m scripts.data_modules... 형식으로 실행할 때
     from scripts.security_utils import atomic_write_json
 
 SNAPSHOT_VERSION = "1.2"

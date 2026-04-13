@@ -54,7 +54,7 @@ def find_project_root(override: Optional[Path] = None) -> Path:
         override: If provided, use this path directly instead of auto-detecting.
     """
     if override is not None:
-        # 允许传入“工作区根目录”，统一解析到真正的 book project_root（必须포함 .webnovel/state.json）
+        # “워크스페이스 루트 디렉토리” 전달 허용, 실제 book project_root로 통합 해석（반드시 .webnovel/state.json 포함）
         return resolve_project_root(str(override))
     return resolve_project_root()
 
@@ -64,7 +64,7 @@ _cli_project_root: Optional[Path] = None
 
 
 def _get_active_project_root() -> Path:
-    """Resolve workflow paths while兼容测试中없음参 monkeypatch。"""
+    """워크플로우 경로 해석, 테스트에서 매개변수 없는 monkeypatch와 호환."""
     if _cli_project_root is not None:
         return find_project_root(_cli_project_root)
     return find_project_root()
@@ -416,7 +416,7 @@ def analyze_recovery_options(interrupt_info):
                 "description": "전체 프로세스 재실행",
                 "actions": [
                     "workflow_state.json 현재 작업 삭제",
-                    f"执行 /{command} {chapter_num}",
+                    f"/{command} {chapter_num} 실행",
                 ],
             }
         ]
@@ -432,7 +432,7 @@ def analyze_recovery_options(interrupt_info):
                 "description": "컨텍스트 다시 로드",
                 "actions": [
                     "중단 상태 정리",
-                    f"执行 /{command} {chapter_num}",
+                    f"/{command} {chapter_num} 실행",
                 ],
             }
         ]
@@ -457,7 +457,7 @@ def analyze_recovery_options(interrupt_info):
                     f"삭제 {chapter_path}（존재하는 경우）",
                     "Git 스테이징 영역 정리",
                     "중단 상태 정리",
-                    f"执行 /{command} {chapter_num}",
+                    f"/{command} {chapter_num} 실행",
                 ],
             }
         ]
@@ -520,7 +520,7 @@ def analyze_recovery_options(interrupt_info):
                 "label": "윤색 원고 삭제, Step 2A에서 다시 작성",
                 "risk": "medium",
                 "description": f"삭제 {chapter_path} 그리고 챕터 내용 재생성",
-                "actions": [f"삭제 {chapter_path}", "Git 스테이징 영역 정리", "중단 상태 정리", f"执行 /{command} {chapter_num}"],
+                "actions": [f"삭제 {chapter_path}", "Git 스테이징 영역 정리", "중단 상태 정리", f"/{command} {chapter_num} 실행"],
             },
         ]
 
@@ -531,7 +531,7 @@ def analyze_recovery_options(interrupt_info):
                 "label": "Step 5부터 다시 시작",
                 "risk": "low",
                 "description": "Data Agent 재실행(멱등)",
-                "actions": ["重新调用 Data Agent", "Step 6 계속（Git 备份）"],
+                "actions": ["Data Agent 재호출", "Step 6 계속（Git 백업）"],
             }
         ]
 
@@ -559,7 +559,7 @@ def analyze_recovery_options(interrupt_info):
             "label": "처음부터 시작",
             "risk": "low",
             "description": "전체 프로세스 재실행",
-            "actions": ["모든 중단 artifacts 정리", f"执行 /{command} {chapter_num}"],
+            "actions": ["모든 중단 artifacts 정리", f"/{command} {chapter_num} 실행"],
         }
     ]
 
@@ -595,7 +595,7 @@ def cleanup_artifacts(chapter_num, *, confirm: bool = False):
     planned_actions.append("Git 스테이징 영역 재설정: git reset HEAD .")
 
     if not confirm:
-        preview_items = [f"[预览] {action}" for action in planned_actions]
+        preview_items = [f"[미리보기] {action}" for action in planned_actions]
         safe_append_call_trace(
             "artifacts_cleanup_preview",
             {
@@ -605,7 +605,7 @@ def cleanup_artifacts(chapter_num, *, confirm: bool = False):
             },
         )
         print("⚠️ 고위험 정리 작업 감지됨, 현재 미리보기만. 실행 확인 시 --confirm을 추가하세요.")
-        return preview_items or ["[预览] 정리할 항목 없음"]
+        return preview_items or ["[미리보기] 정리할 항목 없음"]
 
     if chapter_path and chapter_path.exists():
         try:
@@ -714,7 +714,7 @@ def save_state(state):
 def get_pending_steps(command):
     """Get command pending step list."""
     if command == "webnovel-write":
-        # v2: Step 1 内置 Contract v2，不再单独记录 Step 1.5，避免产生 step_order_violation 噪声。
+        # v2: Step 1에 Contract v2 내장, Step 1.5 별도 기록 제거, step_order_violation 노이즈 방지.
         return ["Step 1", "Step 2A", "Step 2B", "Step 3", "Step 4", "Step 5", "Step 6"]
     if command == "webnovel-review":
         return ["Step 1", "Step 2", "Step 3", "Step 4", "Step 5", "Step 6", "Step 7", "Step 8"]

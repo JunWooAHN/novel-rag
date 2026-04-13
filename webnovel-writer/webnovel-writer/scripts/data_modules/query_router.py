@@ -10,11 +10,11 @@ from typing import Any, Dict, List
 class QueryRouter:
     def __init__(self):
         self.intent_patterns = {
-            "relationship": [r"관계", r"图谱", r"时间线", r"谁和谁", r"적대", r"盟友"],
-            "entity": [r"명物", r"캐릭터", r"谁", r"신분", r"별칭"],
-            "scene": [r"장소", r"场景", r"哪里", r"位置"],
-            "setting": [r"设定", r"规则", r"体系", r"세계관"],
-            "plot": [r"剧情", r"发生", r"事件", r"经过"],
+            "relationship": [r"관계", r"도표", r"타임라인", r"누구와누구", r"적대", r"동맹"],
+            "entity": [r"인물", r"캐릭터", r"누구", r"신분", r"별칭"],
+            "scene": [r"장소", r"장면", r"어디", r"위치"],
+            "setting": [r"설정", r"규칙", r"체계", r"세계관"],
+            "plot": [r"스토리", r"발생", r"사건", r"경과"],
         }
         self.patterns = {
             "entity": list(self.intent_patterns["entity"]),
@@ -24,21 +24,21 @@ class QueryRouter:
         }
 
     def _extract_entities(self, query: str) -> List[str]:
-        # 轻量启发式추출：추출长度 2-6 的中文短语，过滤常见쿼리词
-        candidates = re.findall(r"[\u4e00-\u9fff]{2,6}", query)
+        # 경량 휴리스틱 추출: 길이 2-6의 한중 구문 추출, 일반 쿼리 단어 필터링
+        candidates = re.findall(r"[\u4e00-\u9fff가-힣]{2,6}", query)
         stopwords = {
             "관계",
-            "图谱",
-            "时间线",
-            "剧情",
-            "发生",
-            "事件",
+            "도표",
+            "타임라인",
+            "스토리",
+            "발생",
+            "사건",
             "캐릭터",
-            "명物",
-            "设定",
+            "인물",
+            "설정",
             "세계관",
             "장소",
-            "场景",
+            "장면",
         }
         entities: List[str] = []
         for c in candidates:
@@ -49,7 +49,7 @@ class QueryRouter:
         return entities[:4]
 
     def _extract_time_scope(self, query: str) -> Dict[str, Any]:
-        m_range = re.search(r"第?\s*(\d+)\s*[-~到]\s*(\d+)\s*章", query)
+        m_range = re.search(r"(?:제?\s*)?(\d+)\s*[-~부터에서]\s*(\d+)\s*(?:장|화)", query)
         if m_range:
             start = int(m_range.group(1))
             end = int(m_range.group(2))
@@ -57,7 +57,7 @@ class QueryRouter:
                 start, end = end, start
             return {"from_chapter": start, "to_chapter": end}
 
-        m_single = re.search(r"第?\s*(\d+)\s*章", query)
+        m_single = re.search(r"(?:제?\s*)?(\d+)\s*(?:장|화)", query)
         if m_single:
             chapter = int(m_single.group(1))
             return {"from_chapter": chapter, "to_chapter": chapter}
@@ -74,7 +74,7 @@ class QueryRouter:
 
         time_scope = self._extract_time_scope(query)
         entities = self._extract_entities(query)
-        needs_graph = intent == "relationship" or "관계" in query or "图谱" in query
+        needs_graph = intent == "relationship" or "관계" in query or "도표" in query
         return {
             "intent": intent,
             "entities": entities,
@@ -140,5 +140,5 @@ class QueryRouter:
         return str(self.route_intent(query).get("intent") or "plot")
 
     def split(self, query: str) -> List[str]:
-        parts = re.split(r"[，,；;以及和]\s*", query)
+        parts = re.split(r"[，,；;및과]\s*", query)
         return [p.strip() for p in parts if p.strip()]
