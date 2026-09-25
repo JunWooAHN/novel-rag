@@ -1,0 +1,2198 @@
+{
+  "work_id": "sunjong",
+  "source_sha256": "bb37e8245c86d855a672b07abdc49bcbb18cd4503f1fb7a882f9f1eb4e3a4b87",
+  "markers": [
+    {
+      "start_cp": 0,
+      "label": "<성군 순종대왕 일대기>",
+      "kind": "prologue",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "파일 첫 줄의 작품명 표제. 다음 numbered marker 전까지 앞머리로 보존하며 공식 회차로 세지 않는다."
+    },
+    {
+      "start_cp": 17,
+      "label": "1화 백두산에서",
+      "kind": "numbered",
+      "number_claimed": 1,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 3532,
+      "label": "2화 둘째날",
+      "kind": "numbered",
+      "number_claimed": 2,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 9992,
+      "label": "3화 충정공 민영환",
+      "kind": "numbered",
+      "number_claimed": 3,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 17232,
+      "label": "4화 덕치와 유신",
+      "kind": "numbered",
+      "number_claimed": 4,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 24381,
+      "label": "5화 순명효황후 민씨",
+      "kind": "numbered",
+      "number_claimed": 5,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 31688,
+      "label": "6화 도깨비 신랑",
+      "kind": "numbered",
+      "number_claimed": 6,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 39037,
+      "label": "7화 즐거운 일",
+      "kind": "numbered",
+      "number_claimed": 7,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 46536,
+      "label": "8화 견부호자",
+      "kind": "numbered",
+      "number_claimed": 8,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 53926,
+      "label": "9화 용호상박",
+      "kind": "numbered",
+      "number_claimed": 9,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 61893,
+      "label": "10화 따끔한 충고",
+      "kind": "numbered",
+      "number_claimed": 10,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 69672,
+      "label": "11화 한국지연의",
+      "kind": "numbered",
+      "number_claimed": 11,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 77310,
+      "label": "12화 수신제가",
+      "kind": "numbered",
+      "number_claimed": 12,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 84853,
+      "label": "13화 너의 이름은",
+      "kind": "numbered",
+      "number_claimed": 13,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 92926,
+      "label": "14화 고작 한달",
+      "kind": "numbered",
+      "number_claimed": 14,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 100539,
+      "label": "15화 네가 왜 거기서 나와",
+      "kind": "numbered",
+      "number_claimed": 15,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 108300,
+      "label": "16화 개노답삼형제",
+      "kind": "numbered",
+      "number_claimed": 16,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 116066,
+      "label": "17화 절세보검(絕世寶劍)",
+      "kind": "numbered",
+      "number_claimed": 17,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 123853,
+      "label": "18화 간접통치",
+      "kind": "numbered",
+      "number_claimed": 18,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 131521,
+      "label": "19화 견원지간",
+      "kind": "numbered",
+      "number_claimed": 19,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 139440,
+      "label": "20화 군민공치",
+      "kind": "numbered",
+      "number_claimed": 20,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 147609,
+      "label": "21화 풍운의 꿈",
+      "kind": "numbered",
+      "number_claimed": 21,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 155526,
+      "label": "22화 최종병기 그놈",
+      "kind": "numbered",
+      "number_claimed": 22,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 163623,
+      "label": "23화 영웅호걸",
+      "kind": "numbered",
+      "number_claimed": 23,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 171592,
+      "label": "24화 새 세상",
+      "kind": "numbered",
+      "number_claimed": 24,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 179550,
+      "label": "25화 납속계",
+      "kind": "numbered",
+      "number_claimed": 25,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 187717,
+      "label": "26화 흑막",
+      "kind": "numbered",
+      "number_claimed": 26,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 195835,
+      "label": "27화 의심암귀",
+      "kind": "numbered",
+      "number_claimed": 27,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 203492,
+      "label": "28화 계미년 새해",
+      "kind": "numbered",
+      "number_claimed": 28,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 212169,
+      "label": "29화 묄렌도르프",
+      "kind": "numbered",
+      "number_claimed": 29,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 220186,
+      "label": "30화 잠룡(潛龍)",
+      "kind": "numbered",
+      "number_claimed": 30,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 228195,
+      "label": "31화 구본신참(舊本新參)",
+      "kind": "numbered",
+      "number_claimed": 31,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 236206,
+      "label": "32화 보빙사",
+      "kind": "numbered",
+      "number_claimed": 32,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 244327,
+      "label": "33화 자식 된 도리",
+      "kind": "numbered",
+      "number_claimed": 33,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 252485,
+      "label": "34화 문맹퇴치운동",
+      "kind": "numbered",
+      "number_claimed": 34,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 260679,
+      "label": "35화 사민평등(四民平等)",
+      "kind": "numbered",
+      "number_claimed": 35,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 268810,
+      "label": "36화 바겐세일",
+      "kind": "numbered",
+      "number_claimed": 36,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 277173,
+      "label": "37화 고슴도치 전략",
+      "kind": "numbered",
+      "number_claimed": 37,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 285302,
+      "label": "38화 지한파",
+      "kind": "numbered",
+      "number_claimed": 38,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 293797,
+      "label": "39화 대동학",
+      "kind": "numbered",
+      "number_claimed": 39,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 302040,
+      "label": "40화 갑신정변(甲申政變)",
+      "kind": "numbered",
+      "number_claimed": 40,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 310331,
+      "label": "41화 천좌의 공백",
+      "kind": "numbered",
+      "number_claimed": 41,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 318757,
+      "label": "42화 노인들을 위한 나라",
+      "kind": "numbered",
+      "number_claimed": 42,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 326944,
+      "label": "43화 항거(抗拒)",
+      "kind": "numbered",
+      "number_claimed": 43,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 335143,
+      "label": "44화 수렴진화",
+      "kind": "numbered",
+      "number_claimed": 44,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 343309,
+      "label": "45화 해학의 민족",
+      "kind": "numbered",
+      "number_claimed": 45,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 351478,
+      "label": "46화 죽림파",
+      "kind": "numbered",
+      "number_claimed": 46,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 359793,
+      "label": "47화 인질교환",
+      "kind": "numbered",
+      "number_claimed": 47,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 368391,
+      "label": "48화 작당모의",
+      "kind": "numbered",
+      "number_claimed": 48,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 376596,
+      "label": "49화 자유의 성채",
+      "kind": "numbered",
+      "number_claimed": 49,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 384974,
+      "label": "50화 가이사의 것은 가이사에게",
+      "kind": "numbered",
+      "number_claimed": 50,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 393259,
+      "label": "51화 골드러쉬",
+      "kind": "numbered",
+      "number_claimed": 51,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 402240,
+      "label": "52화 영혼의 단짝",
+      "kind": "numbered",
+      "number_claimed": 52,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 410631,
+      "label": "53화 동경",
+      "kind": "numbered",
+      "number_claimed": 53,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 418956,
+      "label": "54화 체제선전",
+      "kind": "numbered",
+      "number_claimed": 54,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 427609,
+      "label": "55화 캣파이트",
+      "kind": "numbered",
+      "number_claimed": 55,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 436912,
+      "label": "56화 선비의 나라",
+      "kind": "numbered",
+      "number_claimed": 56,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 446439,
+      "label": "57화 동방의 별",
+      "kind": "numbered",
+      "number_claimed": 57,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 455902,
+      "label": "58화 독주",
+      "kind": "numbered",
+      "number_claimed": 58,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 465496,
+      "label": "59화 서부개척시대",
+      "kind": "numbered",
+      "number_claimed": 59,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 474778,
+      "label": "60화 금태양",
+      "kind": "numbered",
+      "number_claimed": 60,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 484546,
+      "label": "61화 퍼니와이즈",
+      "kind": "numbered",
+      "number_claimed": 61,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 494028,
+      "label": "62화 사기꾼",
+      "kind": "numbered",
+      "number_claimed": 62,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 503426,
+      "label": "63화 장난을 잘 치는 골리앗",
+      "kind": "numbered",
+      "number_claimed": 63,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 512844,
+      "label": "64화 질투",
+      "kind": "numbered",
+      "number_claimed": 64,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 522465,
+      "label": "65화 효행",
+      "kind": "numbered",
+      "number_claimed": 65,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 531876,
+      "label": "66화 낙수효과",
+      "kind": "numbered",
+      "number_claimed": 66,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 541404,
+      "label": "67화 귀인",
+      "kind": "numbered",
+      "number_claimed": 67,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 550933,
+      "label": "68화 미끼",
+      "kind": "numbered",
+      "number_claimed": 68,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 560687,
+      "label": "69화 설계사상",
+      "kind": "numbered",
+      "number_claimed": 69,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 570073,
+      "label": "70화 폭풍전야",
+      "kind": "numbered",
+      "number_claimed": 70,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 579484,
+      "label": "71화 권농관-유료 첫번째 화입니다-",
+      "kind": "numbered",
+      "number_claimed": 71,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 589047,
+      "label": "72화 새마을운동",
+      "kind": "numbered",
+      "number_claimed": 72,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 598254,
+      "label": "73화 강백산",
+      "kind": "numbered",
+      "number_claimed": 73,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 607796,
+      "label": "74화 화려한 휴가",
+      "kind": "numbered",
+      "number_claimed": 74,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 617149,
+      "label": "75화 보안조례",
+      "kind": "numbered",
+      "number_claimed": 75,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 626284,
+      "label": "76화 일본통감",
+      "kind": "numbered",
+      "number_claimed": 76,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 635947,
+      "label": "77화 총리의 게임",
+      "kind": "numbered",
+      "number_claimed": 77,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 645665,
+      "label": "78화 비로소 황제",
+      "kind": "numbered",
+      "number_claimed": 78,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 655211,
+      "label": "79화 해동태왕",
+      "kind": "numbered",
+      "number_claimed": 79,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 664770,
+      "label": "80화 열병",
+      "kind": "numbered",
+      "number_claimed": 80,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 674142,
+      "label": "81화 강화해전",
+      "kind": "numbered",
+      "number_claimed": 81,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 683665,
+      "label": "82화 자강두천",
+      "kind": "numbered",
+      "number_claimed": 82,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 693260,
+      "label": "83화 숨겨진 재능",
+      "kind": "numbered",
+      "number_claimed": 83,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 702766,
+      "label": "84화 강적",
+      "kind": "numbered",
+      "number_claimed": 84,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 712284,
+      "label": "85화 낭만의 시대",
+      "kind": "numbered",
+      "number_claimed": 85,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 721898,
+      "label": "86화 고별사",
+      "kind": "numbered",
+      "number_claimed": 86,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 731494,
+      "label": "87화 독립선언서",
+      "kind": "numbered",
+      "number_claimed": 87,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 741086,
+      "label": "88화 용산전투",
+      "kind": "numbered",
+      "number_claimed": 88,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 750767,
+      "label": "89화 대와 소",
+      "kind": "numbered",
+      "number_claimed": 89,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 760296,
+      "label": "90화 건곤일척",
+      "kind": "numbered",
+      "number_claimed": 90,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 769805,
+      "label": "91화 파주대첩",
+      "kind": "numbered",
+      "number_claimed": 91,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 779458,
+      "label": "92화 임협",
+      "kind": "numbered",
+      "number_claimed": 92,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 789255,
+      "label": "93화 성화봉송",
+      "kind": "numbered",
+      "number_claimed": 93,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 798690,
+      "label": "94화 수원화성",
+      "kind": "numbered",
+      "number_claimed": 94,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 808346,
+      "label": "95화 화성공방전",
+      "kind": "numbered",
+      "number_claimed": 95,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 818010,
+      "label": "96화 목숨의 가치",
+      "kind": "numbered",
+      "number_claimed": 96,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 827815,
+      "label": "97화 환란",
+      "kind": "numbered",
+      "number_claimed": 97,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 837531,
+      "label": "98화 아귀도",
+      "kind": "numbered",
+      "number_claimed": 98,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 846998,
+      "label": "99화 깜짝선물",
+      "kind": "numbered",
+      "number_claimed": 99,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 856616,
+      "label": "100화 근대의 여명",
+      "kind": "numbered",
+      "number_claimed": 100,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 866206,
+      "label": "101화 백온 김옥균",
+      "kind": "numbered",
+      "number_claimed": 101,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 875703,
+      "label": "102화 부자유친",
+      "kind": "numbered",
+      "number_claimed": 102,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 885444,
+      "label": "103화 부부유별",
+      "kind": "numbered",
+      "number_claimed": 103,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 895109,
+      "label": "104화 아랫물",
+      "kind": "numbered",
+      "number_claimed": 104,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 904973,
+      "label": "105화 칭제건원",
+      "kind": "numbered",
+      "number_claimed": 105,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 914749,
+      "label": "106화 4월 혁명",
+      "kind": "numbered",
+      "number_claimed": 106,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 924542,
+      "label": "107화 동양천지",
+      "kind": "numbered",
+      "number_claimed": 107,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 934137,
+      "label": "108화 복잡기괴",
+      "kind": "numbered",
+      "number_claimed": 108,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 944355,
+      "label": "109화 그레이트 게임",
+      "kind": "numbered",
+      "number_claimed": 109,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 953959,
+      "label": "110화 야만의 시대",
+      "kind": "numbered",
+      "number_claimed": 110,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 963528,
+      "label": "111화 단서철권",
+      "kind": "numbered",
+      "number_claimed": 111,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 973105,
+      "label": "112화 순애",
+      "kind": "numbered",
+      "number_claimed": 112,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 982725,
+      "label": "113화 북방식민정책",
+      "kind": "numbered",
+      "number_claimed": 113,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 992391,
+      "label": "114화 일편단심",
+      "kind": "numbered",
+      "number_claimed": 114,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1002032,
+      "label": "115화 신민당",
+      "kind": "numbered",
+      "number_claimed": 115,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1011855,
+      "label": "116화 마교도",
+      "kind": "numbered",
+      "number_claimed": 116,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1021538,
+      "label": "117화 뿌리 깊은 나무",
+      "kind": "numbered",
+      "number_claimed": 117,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1031096,
+      "label": "118화 아버지",
+      "kind": "numbered",
+      "number_claimed": 118,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1040702,
+      "label": "119화 덕치진영",
+      "kind": "numbered",
+      "number_claimed": 119,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1050390,
+      "label": "120화 오쓰 사건",
+      "kind": "numbered",
+      "number_claimed": 120,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1059975,
+      "label": "121화 해룡",
+      "kind": "numbered",
+      "number_claimed": 121,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1069637,
+      "label": "122화 동양연합함대",
+      "kind": "numbered",
+      "number_claimed": 122,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1079303,
+      "label": "123화 단군신화",
+      "kind": "numbered",
+      "number_claimed": 123,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1089002,
+      "label": "124화 예정조화",
+      "kind": "numbered",
+      "number_claimed": 124,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1098669,
+      "label": "125화 무위지치",
+      "kind": "numbered",
+      "number_claimed": 125,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1108237,
+      "label": "126화 광제창생(廣濟蒼生)",
+      "kind": "numbered",
+      "number_claimed": 126,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1117922,
+      "label": "127화 반명제",
+      "kind": "numbered",
+      "number_claimed": 127,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1127595,
+      "label": "128화 십년대계",
+      "kind": "numbered",
+      "number_claimed": 128,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1137245,
+      "label": "129화 봉선의식",
+      "kind": "numbered",
+      "number_claimed": 129,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1146934,
+      "label": "130화 처키즘",
+      "kind": "numbered",
+      "number_claimed": 130,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1156685,
+      "label": "131화 손수건",
+      "kind": "numbered",
+      "number_claimed": 131,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1166450,
+      "label": "132화 천하삼분찌개",
+      "kind": "numbered",
+      "number_claimed": 132,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1176065,
+      "label": "133화 천좌",
+      "kind": "numbered",
+      "number_claimed": 133,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1186057,
+      "label": "134화 식자우환(識字憂患)",
+      "kind": "numbered",
+      "number_claimed": 134,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1195788,
+      "label": "135화 씨앗",
+      "kind": "numbered",
+      "number_claimed": 135,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1205481,
+      "label": "136화 바지사장",
+      "kind": "numbered",
+      "number_claimed": 136,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1215226,
+      "label": "137화 스무살",
+      "kind": "numbered",
+      "number_claimed": 137,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1225177,
+      "label": "138화 생존자",
+      "kind": "numbered",
+      "number_claimed": 138,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1234911,
+      "label": "139화 반상의 법도",
+      "kind": "numbered",
+      "number_claimed": 139,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1244649,
+      "label": "140화 비범함",
+      "kind": "numbered",
+      "number_claimed": 140,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1254402,
+      "label": "141화 가화만사성",
+      "kind": "numbered",
+      "number_claimed": 141,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1264290,
+      "label": "142화 비행중년",
+      "kind": "numbered",
+      "number_claimed": 142,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1274291,
+      "label": "143화 황국협회",
+      "kind": "numbered",
+      "number_claimed": 143,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1284147,
+      "label": "144화 한국식 차리즘",
+      "kind": "numbered",
+      "number_claimed": 144,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1293847,
+      "label": "145화 강상죄",
+      "kind": "numbered",
+      "number_claimed": 145,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1303584,
+      "label": "146화 혜화학궁",
+      "kind": "numbered",
+      "number_claimed": 146,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1313504,
+      "label": "147화 사대교린",
+      "kind": "numbered",
+      "number_claimed": 147,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1323591,
+      "label": "148화 삼당연정",
+      "kind": "numbered",
+      "number_claimed": 148,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1333427,
+      "label": "149화 조선타락",
+      "kind": "numbered",
+      "number_claimed": 149,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1343226,
+      "label": "150화 자연재해",
+      "kind": "numbered",
+      "number_claimed": 150,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1353256,
+      "label": "151화 발해오족",
+      "kind": "numbered",
+      "number_claimed": 151,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1363544,
+      "label": "152화 최강한화",
+      "kind": "numbered",
+      "number_claimed": 152,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1373845,
+      "label": "153화 콧수염 대마왕",
+      "kind": "numbered",
+      "number_claimed": 153,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1383776,
+      "label": "154화 마왕성",
+      "kind": "numbered",
+      "number_claimed": 154,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 1394095,
+      "label": "155화 부국강병",
+      "kind": "numbered",
+      "number_claimed": 155,
+      "confidence": "hold",
+      "note": "원문 표제 시작점과 번호는 확인됨. 다음 번호 표제는 313화라 155화의 끝 경계가 확인되지 않는다. 313화 전 무번호 장구간을 155화 한 편으로 배정하지 않는다."
+    },
+    {
+      "start_cp": 1931901,
+      "label": "< 건함경쟁 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 1942585,
+      "label": "< 어린 왕자 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 1953329,
+      "label": "< 가화만사성 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 1964033,
+      "label": "< 독이 든 성배 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 1974962,
+      "label": "< 크리스마스의 기적 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 1986160,
+      "label": "< 좋은 사람 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 1997098,
+      "label": "< 빛은 동방에서 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2008184,
+      "label": "< 무대 뒤편 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2018746,
+      "label": "< 현대화 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2029372,
+      "label": "< 보수혁명 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2039956,
+      "label": "< 전간기 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2050663,
+      "label": "< 신세계 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2061197,
+      "label": "< 고르디우스의 매듭 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2072156,
+      "label": "< 근주자적(近朱者赤) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2083348,
+      "label": "< 고굉지신(股肱之臣) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2094418,
+      "label": "< 장충단(壯忠壇) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2105281,
+      "label": "< 국제환곡 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2116398,
+      "label": "< 상왕정치 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2127453,
+      "label": "< 하위호환 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2138286,
+      "label": "< 고진감래 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2149407,
+      "label": "< 향화인 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2160304,
+      "label": "< 이상지계(履霜之戒) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2171531,
+      "label": "< 양철인간 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2182612,
+      "label": "< 교왕과정(矯枉過正) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2193692,
+      "label": "< 중국 독감 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2204969,
+      "label": "< 서얼대신 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2215849,
+      "label": "< 새옹지마 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2226956,
+      "label": "< 전통놀이 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2238243,
+      "label": "< 부월상소 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2249344,
+      "label": "< 천안문 시위 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2260557,
+      "label": "< 달러외교 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2271790,
+      "label": "< 봉황래의(鳳凰來儀) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2282933,
+      "label": "< 괴력난신 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2294107,
+      "label": "< 공씨잡변 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2305606,
+      "label": "< 금의환향 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2316732,
+      "label": "< 검은 목요일 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2328451,
+      "label": "< 매난국죽 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2339732,
+      "label": "< 옥음방송 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2350997,
+      "label": "< 동아공영 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2362319,
+      "label": "< 소미국 사상 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2373742,
+      "label": "< 조선 내음 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2385290,
+      "label": "< 최종전쟁론 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2396724,
+      "label": "< 프롤레타리아트 독재 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2408391,
+      "label": "< 사회민주노동당 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2420075,
+      "label": "< 인민의 적 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2431518,
+      "label": "< 차르 소비에트주의(Младороссов) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2443159,
+      "label": "< 카산드라 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2454436,
+      "label": "< 프로메테우스 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2465862,
+      "label": "< 추축 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2477393,
+      "label": "< 협상국 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2488803,
+      "label": "< 우리 시대의 평화 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2500688,
+      "label": "< 광대 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2512058,
+      "label": "< 대영제국 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2523538,
+      "label": "< 대표 없는 곳에 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2535002,
+      "label": "< 소영국주의 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2546258,
+      "label": "< 불안돈목(佛眼豚目) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2557072,
+      "label": "< 화성에서 온 남자 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2568548,
+      "label": "< 분구필합(分久必合) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2580010,
+      "label": "< 합구필분(合久必分) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2591247,
+      "label": "< 비호부대 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2602898,
+      "label": "< 도쿄대공수 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2614392,
+      "label": "< 모사재인(謀事在人) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2625826,
+      "label": "< 성사재천(成事在天) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2637089,
+      "label": "< 맹호복초(猛虎伏草) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2648327,
+      "label": "< 뉴딜사업 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2659907,
+      "label": "< 몽골의 후예들 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2671539,
+      "label": "< 개사귀정 (改邪歸正) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2683183,
+      "label": "< 개화당 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2695140,
+      "label": "< 계몽 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2706399,
+      "label": "< 신풍(神風) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2718072,
+      "label": "< 힘의 논리 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2729343,
+      "label": "< 주체와 두체 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2740889,
+      "label": "< 좋은 시절 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2752778,
+      "label": "< 제국당 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2763881,
+      "label": "< 악의 탄생 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2775204,
+      "label": "< 대계 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2786487,
+      "label": "< 개와 늑대 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2798007,
+      "label": "< 개전 6주차 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2809645,
+      "label": "< 개전 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2821050,
+      "label": "< 할힌골 전투 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2832723,
+      "label": "< 지과위무(止戈爲武) >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2844329,
+      "label": "< 남경대축제 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2855843,
+      "label": "< 세계최강 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2867189,
+      "label": "< 함대결전 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2878320,
+      "label": "< 동양함대궤멸 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2889971,
+      "label": "< 애산대첩 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2901907,
+      "label": "< 대권 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2913298,
+      "label": "< 대격변 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2924626,
+      "label": "< 이화학궁 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2935982,
+      "label": "< 아름다운 나라 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2947115,
+      "label": "< 붉은 마후라 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2958316,
+      "label": "< 전초전 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2969947,
+      "label": "< 결전병기 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2981998,
+      "label": "< 벵골만 대해전 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 2994190,
+      "label": "< 마지막 도미노 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3005949,
+      "label": "< 아틀라스 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3018023,
+      "label": "< 런던 레이스 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3029867,
+      "label": "< 손에 손잡고 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3041534,
+      "label": "< 정영가도 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3053965,
+      "label": "< 런던 핵폭격 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3065637,
+      "label": "< 바벨탑 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3078163,
+      "label": "< 역지사지 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3090185,
+      "label": "< 선무공신탄 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3101971,
+      "label": "< 최종국면 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3113610,
+      "label": "< 발할라 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3125988,
+      "label": "< 한 여름밤의 꿈 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3138216,
+      "label": "< 대장정 >",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "독립된 꺾쇠 표제 줄의 시작점 확인. title_section 표제이며 number_claimed는 없고 numbered episode 경계로 세지 않는다."
+    },
+    {
+      "start_cp": 3150026,
+      "label": "< 대장정 > 끝",
+      "kind": "unresolved",
+      "number_claimed": null,
+      "confidence": "hold",
+      "note": "원문에 있는 대장정 종료 표식. 155–313 사이의 회차 경계와 무관하게 이 표식만으로 무번호 구간의 단일 회차 귀속을 확정할 수 없다."
+    },
+    {
+      "start_cp": 3150041,
+      "label": "313화 런던 관광",
+      "kind": "numbered",
+      "number_claimed": 313,
+      "confidence": "confirmed",
+      "note": "번호 표제가 다시 나타나는 시작점. 앞선 무번호 구간의 내부 회차 수나 경계를 소급해 확정하지 않는다."
+    },
+    {
+      "start_cp": 3161184,
+      "label": "314화 개선식",
+      "kind": "numbered",
+      "number_claimed": 314,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 3172659,
+      "label": "315화 천붕(崩)",
+      "kind": "numbered",
+      "number_claimed": 315,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 3184573,
+      "label": "316화 신세계질서",
+      "kind": "numbered",
+      "number_claimed": 316,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 3196094,
+      "label": "317화 다음시대",
+      "kind": "numbered",
+      "number_claimed": 317,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 3208506,
+      "label": "318화 천조(天朝)",
+      "kind": "numbered",
+      "number_claimed": 318,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 3220744,
+      "label": "319화 유년기의 끝",
+      "kind": "numbered",
+      "number_claimed": 319,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 3233362,
+      "label": "320화 대동아(同)",
+      "kind": "numbered",
+      "number_claimed": 320,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 3245866,
+      "label": "321화 개천절(完)",
+      "kind": "numbered",
+      "number_claimed": 321,
+      "confidence": "confirmed",
+      "note": "행 시작에 번호와 화 표기가 있고 후보 label이 원문 범위와 정확히 일치하는 번호 표제."
+    },
+    {
+      "start_cp": 3258571,
+      "label": "322화 후기",
+      "kind": "note",
+      "number_claimed": 322,
+      "confidence": "confirmed",
+      "note": "번호를 명시한 후기 표제. 322는 원문 number_claimed를 보존하며 서사 본편 회차로 해석하지 않는다."
+    }
+  ]
+}

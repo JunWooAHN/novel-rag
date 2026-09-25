@@ -1,0 +1,170 @@
+{
+  "work": "성군 순종대왕 일대기",
+  "author": "리첼렌",
+  "drive_file_id": "1PpAU5v-N9b67ZXWd_Rbv-sEZi7JzD6Cx",
+  "source_file": "성군 순종대왕 일대기 1-322 리첼렌 완결.txt",
+  "local_copy_path": "docs/references/richerlen/성군 순종대왕 일대기 1-322 리첼렌 완결.txt",
+  "source_mime_type": "text/plain",
+  "drive_metadata_size_bytes": 7522619,
+  "local_copy_size_bytes": 7522619,
+  "local_copy_md5": "7dc52eec35552ef7a0fc6d9f5aba10a6",
+  "drive_md5_checksum": null,
+  "checksum_note": "Drive metadata returned no md5Checksum even with fields=*. The local copy has the same byte length and UTF-8 character count as the complete fetch. Text at all 14 recorded sample ranges was compared directly with the fetch. Full-file byte equality could not be independently verified by Drive checksum.",
+  "fetched_unicode_characters": 3259945,
+  "fetched_utf8_bytes": 7522619,
+  "extraction": {
+    "method": "Google Drive connector default readable text fetch; in-memory script; CRLF-aware line count; heading matcher ^(\\d{1,3})화; excerpts were selected by exact phrase search or episode offsets. No full source text is stored here.",
+    "offset_unit": "0-based decoded Unicode character offset, half-open [start,end); source contains BMP characters only, so JavaScript string offsets equal codepoint offsets.",
+    "line_unit": "1-based line numbers, counting CRLF as one line break.",
+    "chapter_boundary_observation": "165 numbered headings found: 1-155 and 313-322. No numbered heading pattern for 156-312 was found. Text from the 155 heading to 313 heading is 1,755,946 characters with no episode heading; do not infer chapter divisions from this range."
+  },
+  "samples": [
+    {
+      "id": "S01",
+      "role": "representative",
+      "episode": 1,
+      "title": "백두산에서",
+      "range": {"start": 17, "end": 197},
+      "lines": {"start": 3, "end": 15},
+      "scene": "Opening catastrophe hook: news and the protagonist's first reaction at Baekdusan.",
+      "short_quote": "지리산 등산 중 실종"
+    },
+    {
+      "id": "S02",
+      "role": "contextual",
+      "context_reason": "Paired with the opening excerpt to locate the initial promise at the end of episode 1.",
+      "episode": 1,
+      "title": "백두산에서",
+      "range": {"start": 3418, "end": 3532},
+      "lines": {"start": 131, "end": 137},
+      "scene": "Closing wish and death/memory transition into the next episode.",
+      "short_quote": "다들 좀 마음 편히 웃으면서 살 수 있게"
+    },
+    {
+      "id": "S03",
+      "role": "representative",
+      "episode": 2,
+      "title": "둘째날",
+      "range": {"start": 4163, "end": 4407},
+      "lines": {"start": 159, "end": 167},
+      "scene": "The protagonist weighs his limited knowledge and makes a decision to act.",
+      "short_quote": "우선, 정리부터 해보자."
+    },
+    {
+      "id": "S04",
+      "role": "contextual",
+      "context_reason": "Extra political-dialogue evidence for how reform can be co-opted by practical interests.",
+      "episode": 20,
+      "title": "군민공치",
+      "range": {"start": 139786, "end": 139875},
+      "lines": {"start": 5677, "end": 5679},
+      "scene": "Comic reaction to political reform and the ruler's practical motive.",
+      "short_quote": "도장을 찍어줄 책임자"
+    },
+    {
+      "id": "S05",
+      "role": "representative",
+      "episode": 75,
+      "title": "보안조례",
+      "range": {"start": 626220, "end": 626278},
+      "lines": {"start": 27764, "end": 27764},
+      "scene": "The crown prince turns Ito's pro-Korean reputation into a political proposal.",
+      "short_quote": "황국에 군민공치를 소개"
+    },
+    {
+      "id": "S06",
+      "role": "representative",
+      "episode": 100,
+      "title": "근대의 여명",
+      "range": {"start": 865992, "end": 866206},
+      "lines": {"start": 38818, "end": 38834},
+      "scene": "Handshake and departure close the scene while setting up the next destination.",
+      "short_quote": "동이 터오는 아침해의 나라로."
+    },
+    {
+      "id": "S14",
+      "role": "contextual",
+      "context_reason": "Small explanatory note sample supporting the observed use of after-notes.",
+      "episode": 20,
+      "title": "군민공치",
+      "range": {"start": 147470, "end": 147575},
+      "lines": {"start": 5949, "end": 5951},
+      "scene": "The episode's after-note briefly explains the historical use of the term 군민공치.",
+      "short_quote": "서유견문이 작성된 것이 1889년"
+    },
+    {
+      "id": "S07",
+      "role": "contextual",
+      "context_reason": "Boundary check at the beginning of the long unheaded range.",
+      "episode": 155,
+      "title": "부국강병",
+      "range": {"start": 1394095, "end": 1394284},
+      "lines": {"start": 61638, "end": 61648},
+      "scene": "Start of the long unheaded body range: definitions of representative government introduce a debate in Guangzhou.",
+      "short_quote": "군민공치란 임금과 백성이 함께 치세를 논하는 체제"
+    },
+    {
+      "id": "S08",
+      "role": "contextual",
+      "context_reason": "A scene-level sample inside the long unheaded range; does not establish chapter boundaries.",
+      "episode": 155,
+      "title": "부국강병; chapter attribution uncertain beyond the heading",
+      "range": {"start": 1395391, "end": 1395641},
+      "lines": {"start": 61684, "end": 61694},
+      "scene": "Policy vote followed by the unintended capture of tax proceeds; located inside the unheaded 155-to-313 range.",
+      "short_quote": "광동 성의회는 아편세와 밀수단속법을 통과시켰다."
+    },
+    {
+      "id": "S09",
+      "role": "contextual",
+      "context_reason": "Boundary check immediately before < 대장정 > 끝 and 313화.",
+      "episode": null,
+      "title": "Unheaded text range between 155화 and 313화",
+      "range": {"start": 3149977, "end": 3150038},
+      "lines": {"start": 140448, "end": 140456},
+      "scene": "Terminal scene before < 대장정 > 끝; chapter attribution is unknown within the unheaded range.",
+      "short_quote": "병명은 오랜 지병이었던 영불 관계였다."
+    },
+    {
+      "id": "S10",
+      "role": "representative",
+      "episode": 313,
+      "title": "런던 관광",
+      "range": {"start": 3161054, "end": 3161184},
+      "lines": {"start": 141000, "end": 141013},
+      "scene": "The sightseeing gag escalates into a promise of a victory parade.",
+      "short_quote": "런던 관광은 이제 막 시작되었을 뿐"
+    },
+    {
+      "id": "S11",
+      "role": "representative",
+      "episode": 316,
+      "title": "신세계질서",
+      "range": {"start": 3195893, "end": 3196094},
+      "lines": {"start": 142833, "end": 142848},
+      "scene": "Rapid comic aftermath pairs political humiliation with a technological milestone.",
+      "short_quote": "30톤짜리 전자공학계산기"
+    },
+    {
+      "id": "S12",
+      "role": "representative",
+      "episode": 321,
+      "title": "개천절(完)",
+      "range": {"start": 3258440, "end": 3258571},
+      "lines": {"start": 146190, "end": 146205},
+      "scene": "Finale image: the public celebrates a new political order on National Foundation Day.",
+      "short_quote": "오늘은 개천절."
+    },
+    {
+      "id": "S13",
+      "role": "contextual",
+      "context_reason": "Author's note is needed to assess the missing chapter boundaries and preserve the limit on mid-story inference.",
+      "episode": 322,
+      "title": "후기",
+      "range": {"start": 3259204, "end": 3259524},
+      "lines": {"start": 146233, "end": 146243},
+      "scene": "Author's note describes cutting the middle China story and the resulting plot difficulty.",
+      "short_quote": "중간을 차지할 중국 쪽 이야기를 대폭 날려버리는 바람에"
+    }
+  ]
+}

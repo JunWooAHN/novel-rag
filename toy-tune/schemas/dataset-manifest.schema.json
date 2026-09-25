@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "dataset-manifest v1",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "artifact_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,95}$"
+    },
+    "collection": {
+      "const": "datasets"
+    },
+    "files": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,95}$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "builder_version",
+        "files",
+        "allow_context_overlap",
+        "counts",
+        "warnings",
+        "token_validation",
+        "loss_mask_validation",
+        "leakage_check"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "artifact_id",
+    "collection",
+    "files",
+    "metadata"
+  ],
+  "additionalProperties": false
+}

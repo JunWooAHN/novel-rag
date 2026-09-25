@@ -1,0 +1,6 @@
+[runtime]
+name = "mac-mlx"
+execution = "local"
+engine = "mlx"
+knowledge = "snapshot"
+# Inventory and data preparation only; the MLX engine is a later milestone.

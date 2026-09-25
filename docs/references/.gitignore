@@ -1,0 +1,5 @@
+# Local reference corpus; keep metadata and analysis documents separate.
+*.txt
+*.epub
+*.7z
+*.zip

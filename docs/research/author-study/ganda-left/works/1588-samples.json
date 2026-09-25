@@ -1,0 +1,640 @@
+{
+  "work_title": "1588 샤인머스캣으로 귀농 왔더니 신대륙",
+  "author": "간다왼쪽",
+  "source": {
+    "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+    "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+    "drive_folder": "2603",
+    "filename_range": "1-661, 완",
+    "byte_length": 12038746,
+    "sha256": "7ee52308ed896730c457b9da9158f8dfed4e0ca1aaaf91cba363535cf059fa77",
+    "utf8_bom": true,
+    "line_endings": "238208 CRLF; 0 bare LF; 0 bare CR",
+    "ends_with_newline": false,
+    "remote_md5_available": false
+  },
+  "offset_conventions": {
+    "codepoint": "Python Unicode code point offsets in read_bytes().decode(\"utf-8\") string; leading U+FEFF is index 0",
+    "js_utf16": "JavaScript UTF-16 code units; separately recorded",
+    "raw_byte": "UTF-8 byte offsets in original file; includes BOM bytes",
+    "lines": "1-based physical lines in source with CRLF retained; start_line identifies the inclusive start offset and end_line identifies the exclusive end offset (so an end exactly on a line break may report the following line).",
+    "observed_ranges": "각 표본의 observed_ranges에는 주 좌표 외에 확인한 원문 연속 슬라이스를 별도로 기록했다. 서로 다른 range 사이의 텍스트는 해당 범위를 명시하지 않았다면 읽은 연속 구간으로 간주하지 않는다."
+  },
+  "samples": [
+    {
+      "sample_id": "1588-001",
+      "phase": "초반",
+      "chapter_number": 1,
+      "chapter_heading": "1화. 프롤로그",
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+      "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+      "coordinates": {
+        "unit_codepoint": "Unicode code point, decoded UTF-8 including leading U+FEFF in source string",
+        "start_inclusive": 14,
+        "end_exclusive": 1014,
+        "unit_js_utf16": "UTF-16 code unit",
+        "start_inclusive_utf16": 14,
+        "end_exclusive_utf16": 1014,
+        "unit_raw_byte": "UTF-8 source byte offset",
+        "start_inclusive_byte": 32,
+        "end_exclusive_byte": 2352,
+        "start_line": 3,
+        "end_line": 41
+      },
+      "selection_reason": "초반 표본: 농장 노동과 가족의 귀농 결정으로 주인공의 처지·불만·생계 압박을 설정한다.",
+      "identifying_quote": "“하아아, 포장재는 다 옮겨놨고. 이제 오늘 할 일은 이걸로 끝났나?”",
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "starts_with_chapter_heading": true,
+        "excerpt_codepoints": 1000,
+        "end_line_checked_against_last_included_codepoint": 41
+      },
+      "observed_ranges": [
+        {
+          "chapter_number": 1,
+          "chapter_heading": "1화. 프롤로그",
+          "role": "게임의 선택지와 첫 회차 끝: UI의 선택, 동의 문구, 화면 종료",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 3035,
+            "end_exclusive": 3935,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 3035,
+            "end_exclusive_utf16": 3935,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 7005,
+            "end_exclusive_byte": 8999,
+            "start_line": 117,
+            "end_line": 175
+          },
+          "identifying_quote": "신세계로 이주하기",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 900
+          }
+        },
+        {
+          "chapter_number": 2,
+          "chapter_heading": "2화. 조우",
+          "role": "다음 회차 도입: 불가역적 이주 통지",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 3935,
+            "end_exclusive": 4685,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 3935,
+            "end_exclusive_utf16": 4685,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 8999,
+            "end_exclusive_byte": 10685,
+            "start_line": 175,
+            "end_line": 217
+          },
+          "identifying_quote": "그대는 이미 신세계로 이주했다",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 750
+          }
+        },
+        {
+          "chapter_number": 2,
+          "chapter_heading": "2화. 조우",
+          "role": "첫 조우의 발견",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 10898,
+            "end_exclusive": 11548,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 10898,
+            "end_exclusive_utf16": 11548,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 24792,
+            "end_exclusive_byte": 26262,
+            "start_line": 535,
+            "end_line": 571
+          },
+          "identifying_quote": "여긴 북아메리카다",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 650
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": "1588-003",
+      "phase": "초반",
+      "chapter_number": 3,
+      "chapter_heading": "3화. 구원자",
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+      "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+      "coordinates": {
+        "unit_codepoint": "Unicode code point, decoded UTF-8 including leading U+FEFF in source string",
+        "start_inclusive": 11548,
+        "end_exclusive": 12548,
+        "unit_js_utf16": "UTF-16 code unit",
+        "start_inclusive_utf16": 11548,
+        "end_exclusive_utf16": 12548,
+        "unit_raw_byte": "UTF-8 source byte offset",
+        "start_inclusive_byte": 26262,
+        "end_exclusive_byte": 28586,
+        "start_line": 571,
+        "end_line": 620
+      },
+      "selection_reason": "초반 표본: 엘리노어의 과거 회상에서 책임감이 형성되고 집단 생존의 결단으로 이어지는 장면을 본다.",
+      "identifying_quote": "어머니에 대한 엘리노어의 기억은 흐릿하다.",
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "starts_with_chapter_heading": true,
+        "excerpt_codepoints": 1000,
+        "end_line_checked_against_last_included_codepoint": 619
+      },
+      "observed_ranges": [
+        {
+          "chapter_number": 3,
+          "chapter_heading": "3화. 구원자",
+          "role": "회차 말미: 구원자를 둘러싼 관찰과 시대 지식 노출",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 18415,
+            "end_exclusive": 19515,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 18415,
+            "end_exclusive_utf16": 19515,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 41767,
+            "end_exclusive_byte": 44217,
+            "start_line": 939,
+            "end_line": 991
+          },
+          "identifying_quote": "미래를 경고한 것도 아니고",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 1100
+          }
+        },
+        {
+          "chapter_number": 4,
+          "chapter_heading": "4화. 불멸자",
+          "role": "다음 회차 도입: 식량·약재를 든 재등장과 첫 반응",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 19515,
+            "end_exclusive": 20215,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 19515,
+            "end_exclusive_utf16": 20215,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 44217,
+            "end_exclusive_byte": 45763,
+            "start_line": 991,
+            "end_line": 1035
+          },
+          "identifying_quote": "30명분의 식량",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 700
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": "1588-200",
+      "phase": "중반",
+      "chapter_number": 200,
+      "chapter_heading": "200화. 창고와 저탄소",
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+      "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+      "coordinates": {
+        "unit_codepoint": "Unicode code point, decoded UTF-8 including leading U+FEFF in source string",
+        "start_inclusive": 1573610,
+        "end_exclusive": 1574610,
+        "unit_js_utf16": "UTF-16 code unit",
+        "start_inclusive_utf16": 1573610,
+        "end_exclusive_utf16": 1574610,
+        "unit_raw_byte": "UTF-8 source byte offset",
+        "start_inclusive_byte": 3605534,
+        "end_exclusive_byte": 3607868,
+        "start_line": 78147,
+        "end_line": 78187
+      },
+      "selection_reason": "중반 표본: 무역 경로를 단계적으로 설명한 뒤 네덜란드 해적의 실제 행동과 화자의 반응을 붙이는 구간.",
+      "identifying_quote": "곧 있으면 1624년 말이다. 조선이 새해 문안 인사를 위해 명나라 황제에게 정조사(正",
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "starts_with_chapter_heading": true,
+        "excerpt_codepoints": 1000,
+        "end_line_checked_against_last_included_codepoint": 78187
+      },
+      "observed_ranges": [
+        {
+          "chapter_number": 200,
+          "chapter_heading": "200화. 창고와 저탄소",
+          "role": "회차 말미: 무역·산업 협력의 정책상 파급",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 1580073,
+            "end_exclusive": 1581073,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 1580073,
+            "end_exclusive_utf16": 1581073,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 3620750,
+            "end_exclusive_byte": 3623152,
+            "start_line": 78383,
+            "end_line": 78417
+          },
+          "identifying_quote": "산업화와 왕권 강화와 화폐 경제의 확산",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 1000
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": "1588-201",
+      "phase": "중반",
+      "chapter_number": 201,
+      "chapter_heading": "201화. 사탕수수 농장",
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+      "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+      "coordinates": {
+        "unit_codepoint": "Unicode code point, decoded UTF-8 including leading U+FEFF in source string",
+        "start_inclusive": 1581073,
+        "end_exclusive": 1582073,
+        "unit_js_utf16": "UTF-16 code unit",
+        "start_inclusive_utf16": 1581073,
+        "end_exclusive_utf16": 1582073,
+        "unit_raw_byte": "UTF-8 source byte offset",
+        "start_inclusive_byte": 3623152,
+        "end_exclusive_byte": 3625504,
+        "start_line": 78417,
+        "end_line": 78451
+      },
+      "selection_reason": "중반 표본: 조선의 숙청 선택을 당대의 위험·상호책임 논리로 설명하는 구간. 200화와 연속 회차의 대조 표본.",
+      "identifying_quote": "지난 계해년의 정난 이후, 조정 내에 고심이 많았다.",
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "starts_with_chapter_heading": true,
+        "excerpt_codepoints": 1000,
+        "end_line_checked_against_last_included_codepoint": 78451
+      },
+      "observed_ranges": [
+        {
+          "chapter_number": 201,
+          "chapter_heading": "201화. 사탕수수 농장",
+          "role": "회차 말미: 김자점의 노동 선택과 보상 약속",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 1588250,
+            "end_exclusive": 1589100,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 1588250,
+            "end_exclusive_utf16": 1589100,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 3639737,
+            "end_exclusive_byte": 3641697,
+            "start_line": 78737,
+            "end_line": 78781
+          },
+          "identifying_quote": "사탕수수 수도회 총무 김자점",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 850
+          }
+        },
+        {
+          "chapter_number": 202,
+          "chapter_heading": "202화. 하와이",
+          "role": "다음 회차 도입: 사행단과 무역 확대",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 1589100,
+            "end_exclusive": 1589700,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 1589100,
+            "end_exclusive_utf16": 1589700,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 3641697,
+            "end_exclusive_byte": 3643103,
+            "start_line": 78781,
+            "end_line": 78803
+          },
+          "identifying_quote": "막대한 규모의 상인들",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 600
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": "1588-351",
+      "phase": "중반",
+      "chapter_number": 351,
+      "chapter_heading": "351화 계획대로",
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+      "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+      "selection_reason": "중간 구간 표본: 음모 수행자들의 성공 오인과 그와 어긋나는 정보 공개를 확인한다. 200·201화 인접 표본에만 몰린 중간부 범위를 넓힌다.",
+      "coordinates": {
+        "unit_codepoint": "Unicode code point, decoded UTF-8 including leading U+FEFF in source string",
+        "start_inclusive": 2762569,
+        "end_exclusive": 2763569,
+        "unit_js_utf16": "UTF-16 code unit",
+        "start_inclusive_utf16": 2762569,
+        "end_exclusive_utf16": 2763569,
+        "unit_raw_byte": "UTF-8 source byte offset",
+        "start_inclusive_byte": 6361309,
+        "end_exclusive_byte": 6363641,
+        "start_line": 131125,
+        "end_line": 131165
+      },
+      "identifying_quote": "결사단원 마리아 데 브라간사는 거대한 음모를 마무리하고서",
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "starts_with_chapter_heading": true,
+        "excerpt_codepoints": 1000
+      },
+      "observed_ranges": [
+        {
+          "chapter_number": 351,
+          "chapter_heading": "351화 계획대로",
+          "role": "새 중반 표본: 음모 수행자의 다음 숙제와 정보 공개",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 2762569,
+            "end_exclusive": 2763569,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 2762569,
+            "end_exclusive_utf16": 2763569,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 6361309,
+            "end_exclusive_byte": 6363641,
+            "start_line": 131125,
+            "end_line": 131165
+          },
+          "identifying_quote": "거대한 음모를 마무리하고서",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 1000
+          }
+        },
+        {
+          "chapter_number": 351,
+          "chapter_heading": "351화 계획대로",
+          "role": "회차 말미: 프란츠의 성공 오인에 대한 반전",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 2769597,
+            "end_exclusive": 2770597,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 2769597,
+            "end_exclusive_utf16": 2770597,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 6377469,
+            "end_exclusive_byte": 6379805,
+            "start_line": 131465,
+            "end_line": 131511
+          },
+          "identifying_quote": "사실 그는 아무것도 알지 못했다",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 1000
+          }
+        },
+        {
+          "chapter_number": 352,
+          "chapter_heading": "352화 이거 방탄 조끼야",
+          "role": "다음 회차 도입: 대주교의 빈민 구제와 숨은 준비",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 2770597,
+            "end_exclusive": 2771397,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 2770597,
+            "end_exclusive_utf16": 2771397,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 6379805,
+            "end_exclusive_byte": 6381665,
+            "start_line": 131511,
+            "end_line": 131547
+          },
+          "identifying_quote": "마인츠의 대주교 요한 프리드리히",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 800
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": "1588-521",
+      "phase": "후반",
+      "chapter_number": 521,
+      "chapter_heading": "521화 적들이 온다",
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+      "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+      "coordinates": {
+        "unit_codepoint": "Unicode code point, decoded UTF-8 including leading U+FEFF in source string",
+        "start_inclusive": 4081920,
+        "end_exclusive": 4082920,
+        "unit_js_utf16": "UTF-16 code unit",
+        "start_inclusive_utf16": 4081920,
+        "end_exclusive_utf16": 4082920,
+        "unit_raw_byte": "UTF-8 source byte offset",
+        "start_inclusive_byte": 9427167,
+        "end_exclusive_byte": 9429547,
+        "start_line": 185719,
+        "end_line": 185751
+      },
+      "selection_reason": "후반 표본: 폭력적 정권 변화 뒤의 공식 담화와 현장 서술의 불일치를 보여주는 구간.",
+      "identifying_quote": "왕궁 앞에 기자들이 모여 있다.",
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "starts_with_chapter_heading": true,
+        "excerpt_codepoints": 1000,
+        "end_line_checked_against_last_included_codepoint": 185751
+      },
+      "observed_ranges": [
+        {
+          "chapter_number": 521,
+          "chapter_heading": "521화 적들이 온다",
+          "role": "회차 말미: 선서 직전 적의 접근으로 행동 촉발",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 4088015,
+            "end_exclusive": 4089115,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 4088015,
+            "end_exclusive_utf16": 4089115,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 9441576,
+            "end_exclusive_byte": 9444075,
+            "start_line": 185947,
+            "end_line": 186007
+          },
+          "identifying_quote": "적이 온다",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 1100
+          }
+        },
+        {
+          "chapter_number": 522,
+          "chapter_heading": "522화 목 뒤의 칼날",
+          "role": "다음 회차 도입: 바리케이드 돌파와 위협 가시화",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 4089115,
+            "end_exclusive": 4089715,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 4089115,
+            "end_exclusive_utf16": 4089715,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 9444075,
+            "end_exclusive_byte": 9445465,
+            "start_line": 186007,
+            "end_line": 186035
+          },
+          "identifying_quote": "바리케이드가 돌파당했다",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 600
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": "1588-600",
+      "phase": "후반",
+      "chapter_number": 600,
+      "chapter_heading": "600화 이게 다 이유가 있습니다",
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+      "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+      "coordinates": {
+        "unit_codepoint": "Unicode code point, decoded UTF-8 including leading U+FEFF in source string",
+        "start_inclusive": 4732550,
+        "end_exclusive": 4733550,
+        "unit_js_utf16": "UTF-16 code unit",
+        "start_inclusive_utf16": 4732550,
+        "end_exclusive_utf16": 4733550,
+        "unit_raw_byte": "UTF-8 source byte offset",
+        "start_inclusive_byte": 10933800,
+        "end_exclusive_byte": 10936124,
+        "start_line": 215607,
+        "end_line": 215655
+      },
+      "selection_reason": "후반 표본: 기술 구상을 산업·사회적 제약과 조직의 실제 기능으로 조정하는 대화 구간.",
+      "identifying_quote": "“저도 공학자고, 그 이전에 한 사람의 학자이기도 합니다. 저 또한 지성을 갖춘 사람입",
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "starts_with_chapter_heading": true,
+        "excerpt_codepoints": 1000,
+        "end_line_checked_against_last_included_codepoint": 215655
+      },
+      "observed_ranges": [
+        {
+          "chapter_number": 600,
+          "chapter_heading": "600화 이게 다 이유가 있습니다",
+          "role": "회차 말미: 아이디어의 크기 조정과 동료 획득, 화자의 반응",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 4738780,
+            "end_exclusive": 4739780,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 4738780,
+            "end_exclusive_utf16": 4739780,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 10948286,
+            "end_exclusive_byte": 10950547,
+            "start_line": 215871,
+            "end_line": 215919
+          },
+          "identifying_quote": "아무튼 트레비식 연구소에 동료가 또 한 명 생겼다",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 1000
+          }
+        },
+        {
+          "chapter_number": 601,
+          "chapter_heading": "601화 This time for Africa",
+          "role": "다음 회차 도입: 기술 투자 논쟁의 후유증과 방문 초대",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 4739780,
+            "end_exclusive": 4740380,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 4739780,
+            "end_exclusive_utf16": 4740380,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 10950547,
+            "end_exclusive_byte": 10951921,
+            "start_line": 215919,
+            "end_line": 215943
+          },
+          "identifying_quote": "사태는 나름 깔끔히 정리되었다",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 600
+          }
+        }
+      ]
+    },
+    {
+      "sample_id": "1588-661",
+      "phase": "후반",
+      "chapter_number": 661,
+      "chapter_heading": "661화 외전-살아가기 (完)",
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+      "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+      "coordinates": {
+        "unit_codepoint": "Unicode code point, decoded UTF-8 including leading U+FEFF in source string",
+        "start_inclusive": 5202048,
+        "end_exclusive": 5203048,
+        "unit_js_utf16": "UTF-16 code unit",
+        "start_inclusive_utf16": 5202048,
+        "end_exclusive_utf16": 5203048,
+        "unit_raw_byte": "UTF-8 source byte offset",
+        "start_inclusive_byte": 12013132,
+        "end_exclusive_byte": 12015370,
+        "start_line": 237645,
+        "end_line": 237689
+      },
+      "selection_reason": "후반 마지막 회차의 시작과 말미를 따로 확인한다. 말미에서 화자는 포기를 거부하고 현실에 돌아온 뒤 포도밭을 택하며 본문은 <완>으로 닫힌다. 작품의 결말 해석은 이 장면에 한정한다.",
+      "identifying_quote": "\"후! 굉장했습니다. 앞으로 이런 일이 많겠지요?”",
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "starts_with_chapter_heading": true,
+        "excerpt_codepoints": 1000,
+        "end_line_checked_against_last_included_codepoint": 237689
+      },
+      "observed_ranges": [
+        {
+          "chapter_number": 661,
+          "chapter_heading": "661화 외전-살아가기 (完)",
+          "role": "파일 말미: 선택지 거부, 귀환 뒤 포도밭 선택과 완 표식",
+          "coordinates": {
+            "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded source, leading U+FEFF included",
+            "start_inclusive": 5211612,
+            "end_exclusive": 5213412,
+            "unit_js_utf16": "UTF-16 code units",
+            "start_inclusive_utf16": 5211612,
+            "end_exclusive_utf16": 5213412,
+            "unit_raw_byte": "UTF-8 raw byte offset",
+            "start_inclusive_byte": 12034702,
+            "end_exclusive_byte": 12038746,
+            "start_line": 238091,
+            "end_line": 238209
+          },
+          "identifying_quote": "“포도밭이요.”",
+          "source_slice_validation": {
+            "quote_found_in_exact_source_slice": true,
+            "slice_codepoints": 1800
+          }
+        }
+      ]
+    }
+  ]
+}

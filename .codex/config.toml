@@ -1,0 +1,12 @@
+model = "gpt-6-astra"
+
+[agents]
+max_threads = 3
+
+[agents.sol]
+description = "설계·구현·작가 단위 검토 담당"
+config_file = "agents/sol.toml"
+
+[agents.luna]
+description = "작품 한 편 분석·기계적 자료 점검 담당"
+config_file = "agents/luna.toml"

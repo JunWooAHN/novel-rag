@@ -1,0 +1,3286 @@
+{
+  "work_id": "fair-trade",
+  "source_sha256": "37cea491dcfe5be4e5e310faa820fcaf559425251dfe26da226fb18dc00f7688",
+  "markers": [
+    {
+      "start_cp": 1,
+      "label": "1화 프롤로그",
+      "kind": "numbered",
+      "number_claimed": 1,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 5486,
+      "label": "2화 감자대가리들",
+      "kind": "numbered",
+      "number_claimed": 2,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 11980,
+      "label": "3화 스타팅 운 실화냐",
+      "kind": "numbered",
+      "number_claimed": 3,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 19686,
+      "label": "4화 위대한 항로",
+      "kind": "numbered",
+      "number_claimed": 4,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 26768,
+      "label": "5화 쇼생크 탈출",
+      "kind": "numbered",
+      "number_claimed": 5,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 32332,
+      "label": "6화 이세계 용사의 도래",
+      "kind": "numbered",
+      "number_claimed": 6,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 37855,
+      "label": "7화 셀럽 마케팅",
+      "kind": "numbered",
+      "number_claimed": 7,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 44390,
+      "label": "8화 유교 수호자 탄생",
+      "kind": "numbered",
+      "number_claimed": 8,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 50957,
+      "label": "9화 헌종, 오랑캐를 만나다",
+      "kind": "numbered",
+      "number_claimed": 9,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 57848,
+      "label": "10화 히히 못 가",
+      "kind": "numbered",
+      "number_claimed": 10,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 64089,
+      "label": "11화 제1차 확산성 자유무역",
+      "kind": "numbered",
+      "number_claimed": 11,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 70841,
+      "label": "12화 살아남은 아이",
+      "kind": "numbered",
+      "number_claimed": 12,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 76472,
+      "label": "13화 프로젝트 읍참마속",
+      "kind": "numbered",
+      "number_claimed": 13,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 82731,
+      "label": "14화 중알못들",
+      "kind": "numbered",
+      "number_claimed": 14,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 88720,
+      "label": "15화 별을 보고 찾아오는 이들",
+      "kind": "numbered",
+      "number_claimed": 15,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 95336,
+      "label": "16화 기쁜 돌",
+      "kind": "numbered",
+      "number_claimed": 16,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 101999,
+      "label": "17화 선견자의 딜레마",
+      "kind": "numbered",
+      "number_claimed": 17,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 108378,
+      "label": "18화 아서 리와 신비한 마법학교",
+      "kind": "numbered",
+      "number_claimed": 18,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 114147,
+      "label": "19화 선정의 검을 뽑고",
+      "kind": "numbered",
+      "number_claimed": 19,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 119949,
+      "label": "20화 돌아온 탕아",
+      "kind": "numbered",
+      "number_claimed": 20,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 126932,
+      "label": "21화 금수회의록",
+      "kind": "numbered",
+      "number_claimed": 21,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 133382,
+      "label": "22화 동상이몽",
+      "kind": "numbered",
+      "number_claimed": 22,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 140898,
+      "label": "23화 안녕, 나는 인삼이야!",
+      "kind": "numbered",
+      "number_claimed": 23,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 147917,
+      "label": "24화 조선보완계획",
+      "kind": "numbered",
+      "number_claimed": 24,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 155488,
+      "label": "25화 버스터 콜",
+      "kind": "numbered",
+      "number_claimed": 25,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 162398,
+      "label": "26화 제2차 확산성 자유무역",
+      "kind": "numbered",
+      "number_claimed": 26,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 168238,
+      "label": "27화 데뷔전 (1)",
+      "kind": "numbered",
+      "number_claimed": 27,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 174955,
+      "label": "28화 데뷔전 (2)",
+      "kind": "numbered",
+      "number_claimed": 28,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 182411,
+      "label": "29화 데뷔전 (3)",
+      "kind": "numbered",
+      "number_claimed": 29,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 189084,
+      "label": "30화 조선 침공 (1)",
+      "kind": "numbered",
+      "number_claimed": 30,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 195275,
+      "label": "31화 조선 침공 (2)",
+      "kind": "numbered",
+      "number_claimed": 31,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 201426,
+      "label": "32화 조선 침공 (3)",
+      "kind": "numbered",
+      "number_claimed": 32,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 208079,
+      "label": "33화 조선 침공 (4)",
+      "kind": "numbered",
+      "number_claimed": 33,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 216404,
+      "label": "34화 조선을 개국하라 (1)",
+      "kind": "numbered",
+      "number_claimed": 34,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 223723,
+      "label": "35화 조선을 개국하라 (2)",
+      "kind": "numbered",
+      "number_claimed": 35,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 229953,
+      "label": "36화 조선을 개국하라 (3)",
+      "kind": "numbered",
+      "number_claimed": 36,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 235911,
+      "label": "37화 조선을 개국하라 (4)",
+      "kind": "numbered",
+      "number_claimed": 37,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 242886,
+      "label": "38화 사기꾼의 귀환 (1)",
+      "kind": "numbered",
+      "number_claimed": 38,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 249393,
+      "label": "39화 사기꾼의 귀환 (2)",
+      "kind": "numbered",
+      "number_claimed": 39,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 256203,
+      "label": "40화 사기꾼의 귀환 (3)",
+      "kind": "numbered",
+      "number_claimed": 40,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 262381,
+      "label": "41화 인륜지대사 (1)",
+      "kind": "numbered",
+      "number_claimed": 41,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 269086,
+      "label": "42화 인륜지대사 (2)",
+      "kind": "numbered",
+      "number_claimed": 42,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 276757,
+      "label": "43화 인륜지대사 (3)",
+      "kind": "numbered",
+      "number_claimed": 43,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 283669,
+      "label": "44화 인륜지대사 (4)",
+      "kind": "numbered",
+      "number_claimed": 44,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 290906,
+      "label": "45화 인륜지대사 (5)",
+      "kind": "numbered",
+      "number_claimed": 45,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 298473,
+      "label": "46화 콩 심은 데 콩 난다 (1)",
+      "kind": "numbered",
+      "number_claimed": 46,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 304521,
+      "label": "47화 콩 심은 데 콩 난다 (2)",
+      "kind": "numbered",
+      "number_claimed": 47,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 310850,
+      "label": "48화 콩 심은 데 콩 난다 (3)",
+      "kind": "numbered",
+      "number_claimed": 48,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 317884,
+      "label": "49화 콩 심은 데 콩 난다 (4)",
+      "kind": "numbered",
+      "number_claimed": 49,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 324662,
+      "label": "50화 콩 심은 데 콩 난다 (5)",
+      "kind": "numbered",
+      "number_claimed": 50,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 331074,
+      "label": "51화 근대는 차갑다 (1)",
+      "kind": "numbered",
+      "number_claimed": 51,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 337563,
+      "label": "52화 근대는 차갑다 (2)",
+      "kind": "numbered",
+      "number_claimed": 52,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 343426,
+      "label": "53화 근대는 차갑다 (3)",
+      "kind": "numbered",
+      "number_claimed": 53,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 350386,
+      "label": "54화 근대는 차갑다 (4)",
+      "kind": "numbered",
+      "number_claimed": 54,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 357211,
+      "label": "55화 근대는 차갑다 (5)",
+      "kind": "numbered",
+      "number_claimed": 55,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 363695,
+      "label": "56화 자본주의의 맹아 (1)",
+      "kind": "numbered",
+      "number_claimed": 56,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 370858,
+      "label": "57화 자본주의의 맹아 (2)",
+      "kind": "numbered",
+      "number_claimed": 57,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 377211,
+      "label": "58화 자본주의의 맹아 (3)",
+      "kind": "numbered",
+      "number_claimed": 58,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 383866,
+      "label": "59화 자본주의의 맹아 (4)",
+      "kind": "numbered",
+      "number_claimed": 59,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 390405,
+      "label": "60화 자본주의의 맹아 (5)",
+      "kind": "numbered",
+      "number_claimed": 60,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 396288,
+      "label": "61화 리버스 운요호 (1)",
+      "kind": "numbered",
+      "number_claimed": 61,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 402512,
+      "label": "62화 리버스 운요호 (2)",
+      "kind": "numbered",
+      "number_claimed": 62,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 409341,
+      "label": "63화 리버스 운요호 (3)",
+      "kind": "numbered",
+      "number_claimed": 63,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 416033,
+      "label": "64화 리버스 운요호 (4)",
+      "kind": "numbered",
+      "number_claimed": 64,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 423553,
+      "label": "65화 보이지 않는 위협 (1)",
+      "kind": "numbered",
+      "number_claimed": 65,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 431691,
+      "label": "66화 보이지 않는 위협 (2)",
+      "kind": "numbered",
+      "number_claimed": 66,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 438340,
+      "label": "67화 보이지 않는 위협 (3)",
+      "kind": "numbered",
+      "number_claimed": 67,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 445194,
+      "label": "68화 보이지 않는 위협 (4)",
+      "kind": "numbered",
+      "number_claimed": 68,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 452096,
+      "label": "69화 보이지 않는 위협 (5)",
+      "kind": "numbered",
+      "number_claimed": 69,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 458169,
+      "label": "70화 중국애호가 아서 리 (1)",
+      "kind": "numbered",
+      "number_claimed": 70,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 464648,
+      "label": "71화 중국애호가 아서 리 (2)",
+      "kind": "numbered",
+      "number_claimed": 71,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 471687,
+      "label": "72화 중국애호가 아서 리 (3)",
+      "kind": "numbered",
+      "number_claimed": 72,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 479993,
+      "label": "73화 중국애호가 아서 리 (4)",
+      "kind": "numbered",
+      "number_claimed": 73,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 486700,
+      "label": "74화 중국애호가 아서 리 (5)",
+      "kind": "numbered",
+      "number_claimed": 74,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 492810,
+      "label": "75화 중국애호가 아서 리 (6)",
+      "kind": "numbered",
+      "number_claimed": 75,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 498739,
+      "label": "76화 대격변 (1)",
+      "kind": "numbered",
+      "number_claimed": 76,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 505866,
+      "label": "77화 대격변 (2)",
+      "kind": "numbered",
+      "number_claimed": 77,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 511710,
+      "label": "78화 대격변 (3)",
+      "kind": "numbered",
+      "number_claimed": 78,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 517679,
+      "label": "79화 대격변 (4)",
+      "kind": "numbered",
+      "number_claimed": 79,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 524151,
+      "label": "80화 대격변 (5)",
+      "kind": "numbered",
+      "number_claimed": 80,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 530860,
+      "label": "81화 피아식별 (1)",
+      "kind": "numbered",
+      "number_claimed": 81,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 537162,
+      "label": "82화 피아식별 (2)",
+      "kind": "numbered",
+      "number_claimed": 82,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 543103,
+      "label": "83화 피아식별 (3)",
+      "kind": "numbered",
+      "number_claimed": 83,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 548820,
+      "label": "84화 피아식별 (4)",
+      "kind": "numbered",
+      "number_claimed": 84,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 555087,
+      "label": "85화 피아식별 (5)",
+      "kind": "numbered",
+      "number_claimed": 85,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 561145,
+      "label": "86화 불가근불가원 (1)",
+      "kind": "numbered",
+      "number_claimed": 86,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 567845,
+      "label": "87화 불가근불가원 (2)",
+      "kind": "numbered",
+      "number_claimed": 87,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 574018,
+      "label": "88화 불가근불가원 (3)",
+      "kind": "numbered",
+      "number_claimed": 88,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 580197,
+      "label": "89화 불가근불가원 (4)",
+      "kind": "numbered",
+      "number_claimed": 89,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 586389,
+      "label": "90화 불가근불가원 (5)",
+      "kind": "numbered",
+      "number_claimed": 90,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 592054,
+      "label": "91화 런던 브릿지는 무너졌냐 (1)",
+      "kind": "numbered",
+      "number_claimed": 91,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 598523,
+      "label": "92화 런던 브릿지는 무너졌냐 (2)",
+      "kind": "numbered",
+      "number_claimed": 92,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 604485,
+      "label": "93화 런던 브릿지는 무너졌냐 (3)",
+      "kind": "numbered",
+      "number_claimed": 93,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 610529,
+      "label": "94화 런던 브릿지는 무너졌냐 (4)",
+      "kind": "numbered",
+      "number_claimed": 94,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 616762,
+      "label": "95화 런던 브릿지는 무너졌냐 (5)",
+      "kind": "numbered",
+      "number_claimed": 95,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 623066,
+      "label": "96화 런던 브릿지는 무너졌냐 (6)",
+      "kind": "numbered",
+      "number_claimed": 96,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 630379,
+      "label": "97화 네 사람의 서명 (1)",
+      "kind": "numbered",
+      "number_claimed": 97,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 637294,
+      "label": "98화 네 사람의 서명 (2)",
+      "kind": "numbered",
+      "number_claimed": 98,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 643348,
+      "label": "99화 네 사람의 서명 (3)",
+      "kind": "numbered",
+      "number_claimed": 99,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 650292,
+      "label": "100화 네 사람의 서명 (4)",
+      "kind": "numbered",
+      "number_claimed": 100,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 656778,
+      "label": "101화 네 사람의 서명 (5)",
+      "kind": "numbered",
+      "number_claimed": 101,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 662906,
+      "label": "102화 네 사람의 서명 (6)",
+      "kind": "numbered",
+      "number_claimed": 102,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 669276,
+      "label": "103화 과학적 경영기법 (1)",
+      "kind": "numbered",
+      "number_claimed": 103,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 674922,
+      "label": "104화 과학적 경영기법 (2)",
+      "kind": "numbered",
+      "number_claimed": 104,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 682439,
+      "label": "105화 과학적 경영기법 (3)",
+      "kind": "numbered",
+      "number_claimed": 105,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 688671,
+      "label": "106화 과학적 경영기법 (4)",
+      "kind": "numbered",
+      "number_claimed": 106,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 694679,
+      "label": "107화 과학적 경영기법 (5)",
+      "kind": "numbered",
+      "number_claimed": 107,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 700629,
+      "label": "108화 과학적 경영기법 (6)",
+      "kind": "numbered",
+      "number_claimed": 108,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 706599,
+      "label": "109화 불난 집에 얼음물 팔기 (1)",
+      "kind": "numbered",
+      "number_claimed": 109,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 712388,
+      "label": "110화 불난 집에 얼음물 팔기 (2)",
+      "kind": "numbered",
+      "number_claimed": 110,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 718208,
+      "label": "111화 불난 집에 얼음물 팔기 (3)",
+      "kind": "numbered",
+      "number_claimed": 111,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 724491,
+      "label": "112화 불난 집에 얼음물 팔기 (4)",
+      "kind": "numbered",
+      "number_claimed": 112,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 730466,
+      "label": "113화 불난 집에 얼음물 팔기 (5)",
+      "kind": "numbered",
+      "number_claimed": 113,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 736393,
+      "label": "114화 불난 집에 얼음물 팔기 (6)",
+      "kind": "numbered",
+      "number_claimed": 114,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 742524,
+      "label": "115화 불난 집에 얼음물 팔기 (7)",
+      "kind": "numbered",
+      "number_claimed": 115,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 748282,
+      "label": "116화 제1차 조-청 위기 (1)",
+      "kind": "numbered",
+      "number_claimed": 116,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 754768,
+      "label": "117화 제1차 조-청 위기 (2)",
+      "kind": "numbered",
+      "number_claimed": 117,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 760784,
+      "label": "118화 제1차 조-청 위기 (3)",
+      "kind": "numbered",
+      "number_claimed": 118,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 767322,
+      "label": "119화 제1차 조-청 위기 (4)",
+      "kind": "numbered",
+      "number_claimed": 119,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 773103,
+      "label": "120화 제1차 조-청 위기 (5)",
+      "kind": "numbered",
+      "number_claimed": 120,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 779914,
+      "label": "121화 제1차 조-청 위기 (6)",
+      "kind": "numbered",
+      "number_claimed": 121,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 786102,
+      "label": "122화 옛 나라이나 그 명이 새롭다 (1)",
+      "kind": "numbered",
+      "number_claimed": 122,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 791979,
+      "label": "123화 옛 나라이나 그 명이 새롭다 (2)",
+      "kind": "numbered",
+      "number_claimed": 123,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 798087,
+      "label": "124화 옛 나라이나 그 명이 새롭다 (3)",
+      "kind": "numbered",
+      "number_claimed": 124,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 804388,
+      "label": "125화 옛 나라이나 그 명이 새롭다 (4)",
+      "kind": "numbered",
+      "number_claimed": 125,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 809885,
+      "label": "126화 옛 나라이나 그 명이 새롭다 (5)",
+      "kind": "numbered",
+      "number_claimed": 126,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 815886,
+      "label": "127화 옛 나라이나 그 명이 새롭다 (6)",
+      "kind": "numbered",
+      "number_claimed": 127,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 822369,
+      "label": "128화 옛 나라이나 그 명이 새롭다 (7)",
+      "kind": "numbered",
+      "number_claimed": 128,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 828598,
+      "label": "129화 선거는 전쟁이다 (1)",
+      "kind": "numbered",
+      "number_claimed": 129,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 834400,
+      "label": "130화 선거는 전쟁이다 (2)",
+      "kind": "numbered",
+      "number_claimed": 130,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 840423,
+      "label": "131화 선거는 전쟁이다 (3)",
+      "kind": "numbered",
+      "number_claimed": 131,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 847091,
+      "label": "132화 선거는 전쟁이다 (4)",
+      "kind": "numbered",
+      "number_claimed": 132,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 855322,
+      "label": "133화 선거는 전쟁이다 (5)",
+      "kind": "numbered",
+      "number_claimed": 133,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 861684,
+      "label": "134화 선거는 전쟁이다 (6)",
+      "kind": "numbered",
+      "number_claimed": 134,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 868216,
+      "label": "135화 선거는 전쟁이다 (7)",
+      "kind": "numbered",
+      "number_claimed": 135,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 874613,
+      "label": "136화 풀뿌리 민주주의 (1)",
+      "kind": "numbered",
+      "number_claimed": 136,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 880639,
+      "label": "137화 풀뿌리 민주주의 (2)",
+      "kind": "numbered",
+      "number_claimed": 137,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 886560,
+      "label": "138화 풀뿌리 민주주의 (3)",
+      "kind": "numbered",
+      "number_claimed": 138,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 893177,
+      "label": "139화 풀뿌리 민주주의 (4)",
+      "kind": "numbered",
+      "number_claimed": 139,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 900272,
+      "label": "140화 풀뿌리 민주주의 (5)",
+      "kind": "numbered",
+      "number_claimed": 140,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 905972,
+      "label": "141화 풀뿌리 민주주의 (6)",
+      "kind": "numbered",
+      "number_claimed": 141,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 912116,
+      "label": "142화 노인의 전쟁 (1)",
+      "kind": "numbered",
+      "number_claimed": 142,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 918239,
+      "label": "143화 노인의 전쟁 (3)",
+      "kind": "numbered",
+      "number_claimed": 143,
+      "confidence": "hold",
+      "note": "다음 표제는 145화 (4)이고 144 표제는 확인되지 않는다. 앞선 구간 길이는 통상적이나 (3)/(4)만으로 144의 위치를 만들거나 재번호하지 않도록 보류."
+    },
+    {
+      "start_cp": 925157,
+      "label": "145화 노인의 전쟁 (4)",
+      "kind": "numbered",
+      "number_claimed": 145,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 930993,
+      "label": "146화 거목으로 캠프파이어 (1)",
+      "kind": "numbered",
+      "number_claimed": 146,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 937316,
+      "label": "147화 거목으로 캠프파이어 (2)",
+      "kind": "numbered",
+      "number_claimed": 147,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 943927,
+      "label": "148화 거목으로 캠프파이어 (3)",
+      "kind": "numbered",
+      "number_claimed": 148,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 949958,
+      "label": "149화 거목으로 캠프파이어 (4)",
+      "kind": "numbered",
+      "number_claimed": 149,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 957553,
+      "label": "150화 거목으로 캠프파이어 (5)",
+      "kind": "numbered",
+      "number_claimed": 150,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 964380,
+      "label": "151화 숙적들 (1)",
+      "kind": "numbered",
+      "number_claimed": 151,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 970257,
+      "label": "152화 숙적들 (2)",
+      "kind": "numbered",
+      "number_claimed": 152,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 978178,
+      "label": "153화 숙적들 (3)",
+      "kind": "numbered",
+      "number_claimed": 153,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 984317,
+      "label": "154화 숙적들 (4)",
+      "kind": "numbered",
+      "number_claimed": 154,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 990746,
+      "label": "155화 숙적들 (5)",
+      "kind": "numbered",
+      "number_claimed": 155,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 997206,
+      "label": "156화 불씨 (1)",
+      "kind": "numbered",
+      "number_claimed": 156,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1003364,
+      "label": "157화 불씨 (2)",
+      "kind": "numbered",
+      "number_claimed": 157,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1009054,
+      "label": "158화 불씨 (3)",
+      "kind": "numbered",
+      "number_claimed": 158,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1015403,
+      "label": "159화 불씨 (4)",
+      "kind": "numbered",
+      "number_claimed": 159,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1022627,
+      "label": "160화 불씨 (5)",
+      "kind": "numbered",
+      "number_claimed": 160,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1028979,
+      "label": "161화 불씨 (6)",
+      "kind": "numbered",
+      "number_claimed": 161,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1035775,
+      "label": "162화 불씨 (7)",
+      "kind": "numbered",
+      "number_claimed": 162,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1041878,
+      "label": "163화 콩가루 집안 (1)",
+      "kind": "numbered",
+      "number_claimed": 163,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1049009,
+      "label": "164화 콩가루 집안 (2)",
+      "kind": "numbered",
+      "number_claimed": 164,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1054970,
+      "label": "165화 콩가루 집안 (3)",
+      "kind": "numbered",
+      "number_claimed": 165,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1060981,
+      "label": "166화 콩가루 집안 (4)",
+      "kind": "numbered",
+      "number_claimed": 166,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1066742,
+      "label": "167화 무진호란 (1)",
+      "kind": "numbered",
+      "number_claimed": 167,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1073091,
+      "label": "168화 무진호란 (2)",
+      "kind": "numbered",
+      "number_claimed": 168,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1079913,
+      "label": "169화 무진호란 (3)",
+      "kind": "numbered",
+      "number_claimed": 169,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1086391,
+      "label": "170화 무진호란 (4)",
+      "kind": "numbered",
+      "number_claimed": 170,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1092445,
+      "label": "171화 무진호란 (5)",
+      "kind": "numbered",
+      "number_claimed": 171,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1098679,
+      "label": "172화 무진호란 (6)",
+      "kind": "numbered",
+      "number_claimed": 172,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1104664,
+      "label": "173화 무진호란 (7)",
+      "kind": "numbered",
+      "number_claimed": 173,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1111205,
+      "label": "174화 무진호란 (8)",
+      "kind": "numbered",
+      "number_claimed": 174,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1116819,
+      "label": "175화 칭제건원 (1)",
+      "kind": "numbered",
+      "number_claimed": 175,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1122800,
+      "label": "176화 칭제건원 (2)",
+      "kind": "numbered",
+      "number_claimed": 176,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1130101,
+      "label": "177화 칭제건원 (3)",
+      "kind": "numbered",
+      "number_claimed": 177,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1136491,
+      "label": "178화 장관님의 애착국가 (1)",
+      "kind": "numbered",
+      "number_claimed": 178,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1142968,
+      "label": "179화 장관님의 애착국가 (2)",
+      "kind": "numbered",
+      "number_claimed": 179,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1149860,
+      "label": "180화 장관님의 애착국가 (3)",
+      "kind": "numbered",
+      "number_claimed": 180,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1156645,
+      "label": "181화 장관님의 애착국가 (4)",
+      "kind": "numbered",
+      "number_claimed": 181,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1162835,
+      "label": "182화 봉건전제빨갱이백작의 첫 장관 임기 (1)",
+      "kind": "numbered",
+      "number_claimed": 182,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1169215,
+      "label": "183화 봉건전제빨갱이백작의 첫 장관 임기 (2)",
+      "kind": "numbered",
+      "number_claimed": 183,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1175795,
+      "label": "184화 봉건전제빨갱이백작의 첫 장관 임기 (3)",
+      "kind": "numbered",
+      "number_claimed": 184,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1182185,
+      "label": "185화 봉건전제빨갱이백작의 첫 장관 임기 (4)",
+      "kind": "numbered",
+      "number_claimed": 185,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1188988,
+      "label": "186화 봉건전제빨갱이백작의 첫 장관 임기 (5)",
+      "kind": "numbered",
+      "number_claimed": 186,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1194803,
+      "label": "187화 봉건전제빨갱이백작의 첫 장관 임기 (6)",
+      "kind": "numbered",
+      "number_claimed": 187,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1200978,
+      "label": "188화 봉건전제빨갱이백작의 첫 장관 임기 (7)",
+      "kind": "numbered",
+      "number_claimed": 188,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1207108,
+      "label": "189화 망나니 백작이 되었다 (1)",
+      "kind": "numbered",
+      "number_claimed": 189,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1213383,
+      "label": "190화 망나니 백작이 되었다 (2)",
+      "kind": "numbered",
+      "number_claimed": 190,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1219839,
+      "label": "191화 망나니 백작이 되었다 (3)",
+      "kind": "numbered",
+      "number_claimed": 191,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1225905,
+      "label": "192화 망나니 백작이 되었다 (4)",
+      "kind": "numbered",
+      "number_claimed": 192,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1232247,
+      "label": "193화 망나니 백작이 되었다 (5)",
+      "kind": "numbered",
+      "number_claimed": 193,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1239909,
+      "label": "194화 나쁜 짓은 안 알려줘도 알아서 배운다 (1)",
+      "kind": "numbered",
+      "number_claimed": 194,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1246337,
+      "label": "195화 나쁜 짓은 안 알려줘도 알아서 배운다 (2)",
+      "kind": "numbered",
+      "number_claimed": 195,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1252478,
+      "label": "196화 나쁜 짓은 안 알려줘도 알아서 배운다 (3)",
+      "kind": "numbered",
+      "number_claimed": 196,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1258927,
+      "label": "197화 나쁜 짓은 안 알려줘도 알아서 배운다 (4)",
+      "kind": "numbered",
+      "number_claimed": 197,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1265477,
+      "label": "198화 나쁜 짓은 안 알려줘도 알아서 배운다 (5)",
+      "kind": "numbered",
+      "number_claimed": 198,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1271808,
+      "label": "199화 자유당은 어떻게 다시 강팀이 되었나 (1)",
+      "kind": "numbered",
+      "number_claimed": 199,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1278346,
+      "label": "200화 자유당은 어떻게 다시 강팀이 되었나 (2)",
+      "kind": "numbered",
+      "number_claimed": 200,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1284588,
+      "label": "201화 자유당은 어떻게 다시 강팀이 되었나 (3)",
+      "kind": "numbered",
+      "number_claimed": 201,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1291128,
+      "label": "202화 자유당은 어떻게 다시 강팀이 되었나 (4)",
+      "kind": "numbered",
+      "number_claimed": 202,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1297153,
+      "label": "203화 자유당은 어떻게 다시 강팀이 되었나 (5)",
+      "kind": "numbered",
+      "number_claimed": 203,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1303231,
+      "label": "204화 교주님의 강호초출 (1)",
+      "kind": "numbered",
+      "number_claimed": 204,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1309864,
+      "label": "205화 교주님의 강호초출 (2)",
+      "kind": "numbered",
+      "number_claimed": 205,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1316224,
+      "label": "206화 교주님의 강호초출 (3)",
+      "kind": "numbered",
+      "number_claimed": 206,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1322203,
+      "label": "207화 교주님의 강호초출 (4)",
+      "kind": "numbered",
+      "number_claimed": 207,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1328618,
+      "label": "208화 교주님의 강호초출 (5)",
+      "kind": "numbered",
+      "number_claimed": 208,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1335023,
+      "label": "209화 교주님의 강호초출 (6)",
+      "kind": "numbered",
+      "number_claimed": 209,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1342112,
+      "label": "210화 교주님의 강호초출 (7)",
+      "kind": "numbered",
+      "number_claimed": 210,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1348653,
+      "label": "211화 미트 더 콧수염 (1)",
+      "kind": "numbered",
+      "number_claimed": 211,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1354466,
+      "label": "212화 미트 더 콧수염 (2)",
+      "kind": "numbered",
+      "number_claimed": 212,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1360177,
+      "label": "213화 미트 더 콧수염 (3)",
+      "kind": "numbered",
+      "number_claimed": 213,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1365788,
+      "label": "214화 미트 더 콧수염 (4)",
+      "kind": "numbered",
+      "number_claimed": 214,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1372100,
+      "label": "215화 나는 정말 아무 짓도 안 했는데 (1)",
+      "kind": "numbered",
+      "number_claimed": 215,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1378224,
+      "label": "216화 나는 정말 아무 짓도 안 했는데 (2)",
+      "kind": "numbered",
+      "number_claimed": 216,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1384351,
+      "label": "217화 나는 정말 아무 짓도 안 했는데 (3)",
+      "kind": "numbered",
+      "number_claimed": 217,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1390492,
+      "label": "218화 나는 정말 아무 짓도 안 했는데 (4)",
+      "kind": "numbered",
+      "number_claimed": 218,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1396225,
+      "label": "219화 나는 정말 아무 짓도 안 했는데 (5)",
+      "kind": "numbered",
+      "number_claimed": 219,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1402667,
+      "label": "220화 두려워 말라 (1)",
+      "kind": "numbered",
+      "number_claimed": 220,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1408791,
+      "label": "221화 두려워 말라 (2)",
+      "kind": "numbered",
+      "number_claimed": 221,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1415088,
+      "label": "222화 두려워 말라 (3)",
+      "kind": "numbered",
+      "number_claimed": 222,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1421133,
+      "label": "223화 두려워 말라 (4)",
+      "kind": "numbered",
+      "number_claimed": 223,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1427071,
+      "label": "224화 두려워 말라 (5)",
+      "kind": "numbered",
+      "number_claimed": 224,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1434081,
+      "label": "225화 오리엔트 특급 식민 (1)",
+      "kind": "numbered",
+      "number_claimed": 225,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1440270,
+      "label": "226화 오리엔트 특급 식민 (2)",
+      "kind": "numbered",
+      "number_claimed": 226,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1446214,
+      "label": "227화 오리엔트 특급 식민 (3)",
+      "kind": "numbered",
+      "number_claimed": 227,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1452522,
+      "label": "228화 오리엔트 특급 식민 (4)",
+      "kind": "numbered",
+      "number_claimed": 228,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1458854,
+      "label": "229화 오리엔트 특급 식민 (5)",
+      "kind": "numbered",
+      "number_claimed": 229,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1465879,
+      "label": "230화 오리엔트 특급 식민 (6)",
+      "kind": "numbered",
+      "number_claimed": 230,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1471936,
+      "label": "231화 쥬멸의 칼날 (1)",
+      "kind": "numbered",
+      "number_claimed": 231,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1478655,
+      "label": "232화 쥬멸의 칼날 (2)",
+      "kind": "numbered",
+      "number_claimed": 232,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1485238,
+      "label": "233화 쥬멸의 칼날 (3)",
+      "kind": "numbered",
+      "number_claimed": 233,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1491801,
+      "label": "234화 쥬멸의 칼날 (4)",
+      "kind": "numbered",
+      "number_claimed": 234,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1498526,
+      "label": "235화 쥬멸의 칼날 (5)",
+      "kind": "numbered",
+      "number_claimed": 235,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1504591,
+      "label": "236화 쥬멸의 칼날 (6)",
+      "kind": "numbered",
+      "number_claimed": 236,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1511375,
+      "label": "237화 앵글로 무스메 언해피 더비 (1)",
+      "kind": "numbered",
+      "number_claimed": 237,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1518286,
+      "label": "238화 앵글로 무스메 언해피 더비 (2)",
+      "kind": "numbered",
+      "number_claimed": 238,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1525127,
+      "label": "239화 앵글로 무스메 언해피 더비 (3)",
+      "kind": "numbered",
+      "number_claimed": 239,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1531667,
+      "label": "240화 앵글로 무스메 언해피 더비 (4)",
+      "kind": "numbered",
+      "number_claimed": 240,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1537631,
+      "label": "241화 앵글로 무스메 언해피 더비 (5)",
+      "kind": "numbered",
+      "number_claimed": 241,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1544199,
+      "label": "242화 X를 눌러 자본주의 모순 지적하기 (1)",
+      "kind": "numbered",
+      "number_claimed": 242,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1550507,
+      "label": "243화 X를 눌러 자본주의 모순 지적하기 (2)",
+      "kind": "numbered",
+      "number_claimed": 243,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1556567,
+      "label": "244화 X를 눌러 자본주의 모순 지적하기 (3)",
+      "kind": "numbered",
+      "number_claimed": 244,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1562179,
+      "label": "245화 X를 눌러 자본주의 모순 지적하기 (4)",
+      "kind": "numbered",
+      "number_claimed": 245,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1568549,
+      "label": "246화 X를 눌러 자본주의 모순 지적하기 (5)",
+      "kind": "numbered",
+      "number_claimed": 246,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1575339,
+      "label": "247화 X를 눌러 자본주의 모순 지적하기 (6)",
+      "kind": "numbered",
+      "number_claimed": 247,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1581397,
+      "label": "248화 굿바이 디지 (1)",
+      "kind": "numbered",
+      "number_claimed": 248,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1587534,
+      "label": "249화 굿바이 디지 (2)",
+      "kind": "numbered",
+      "number_claimed": 249,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1593834,
+      "label": "250화 굿바이 디지 (3)",
+      "kind": "numbered",
+      "number_claimed": 250,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1600345,
+      "label": "251화 굿바이 디지 (4)",
+      "kind": "numbered",
+      "number_claimed": 251,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1606743,
+      "label": "252화 굿바이 디지 (5)",
+      "kind": "numbered",
+      "number_claimed": 252,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1612653,
+      "label": "253화 늙은이가 쓰러지지 않아 (1)",
+      "kind": "numbered",
+      "number_claimed": 253,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1618427,
+      "label": "254화 늙은이가 쓰러지지 않아 (2)",
+      "kind": "numbered",
+      "number_claimed": 254,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1623789,
+      "label": "255화 늙은이가 쓰러지지 않아 (3)",
+      "kind": "numbered",
+      "number_claimed": 255,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1631086,
+      "label": "256화 늙은이가 쓰러지지 않아 (4)",
+      "kind": "numbered",
+      "number_claimed": 256,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1637258,
+      "label": "257화 늙은이가 쓰러지지 않아 (5)",
+      "kind": "numbered",
+      "number_claimed": 257,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1642922,
+      "label": "258화 늙은이가 쓰러지지 않아 (6)",
+      "kind": "numbered",
+      "number_claimed": 258,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1648813,
+      "label": "259화 늙은이가 쓰러지지 않아 (7)",
+      "kind": "numbered",
+      "number_claimed": 259,
+      "confidence": "hold",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다. 중복 number_claimed=259 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류."
+    },
+    {
+      "start_cp": 1655512,
+      "label": "259화 늙은이가 쓰러지지 않아 (8)",
+      "kind": "numbered",
+      "number_claimed": 259,
+      "confidence": "hold",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다. 중복 number_claimed=259 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류."
+    },
+    {
+      "start_cp": 1661320,
+      "label": "260화 늙은이가 쓰러지지 않아 (8)",
+      "kind": "numbered",
+      "number_claimed": 260,
+      "confidence": "hold",
+      "note": "앞선 259화 (8)과 부제 단계가 겹쳐 보인다. 원문 표제 260은 보존하고 번호·부제를 자동 수정하지 않도록 보류."
+    },
+    {
+      "start_cp": 1667123,
+      "label": "261화 회화나무 사랑걸렸네 (1)",
+      "kind": "numbered",
+      "number_claimed": 261,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1672974,
+      "label": "262화 회화나무 사랑걸렸네 (2)",
+      "kind": "numbered",
+      "number_claimed": 262,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1678994,
+      "label": "263화 회화나무 사랑걸렸네 (3)",
+      "kind": "numbered",
+      "number_claimed": 263,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1685513,
+      "label": "264화 회화나무 사랑걸렸네 (4)",
+      "kind": "numbered",
+      "number_claimed": 264,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1691789,
+      "label": "265화 회화나무 사랑걸렸네 (5)",
+      "kind": "numbered",
+      "number_claimed": 265,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1697600,
+      "label": "266화 조롱도 롱이다 (1)",
+      "kind": "numbered",
+      "number_claimed": 266,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1704651,
+      "label": "267화 조롱도 롱이다 (2)",
+      "kind": "numbered",
+      "number_claimed": 267,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1710281,
+      "label": "268화 조롱도 롱이다 (3)",
+      "kind": "numbered",
+      "number_claimed": 268,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1717722,
+      "label": "269화 조롱도 롱이다 (4)",
+      "kind": "numbered",
+      "number_claimed": 269,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1725316,
+      "label": "270화 광야에서 외치는 자의 소리 (1)",
+      "kind": "numbered",
+      "number_claimed": 270,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1732007,
+      "label": "271화 광야에서 외치는 자의 소리 (2)",
+      "kind": "numbered",
+      "number_claimed": 271,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1738698,
+      "label": "272화 광야에서 외치는 자의 소리 (3)",
+      "kind": "numbered",
+      "number_claimed": 272,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1745031,
+      "label": "273화 광야에서 외치는 자의 소리 (4)",
+      "kind": "numbered",
+      "number_claimed": 273,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1751901,
+      "label": "274화 광야에서 외치는 자의 소리 (5)",
+      "kind": "numbered",
+      "number_claimed": 274,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1757977,
+      "label": "275화 광야에서 외치는 자의 소리 (6)",
+      "kind": "numbered",
+      "number_claimed": 275,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1763983,
+      "label": "276화 광야에서 외치는 자의 소리 (7)",
+      "kind": "numbered",
+      "number_claimed": 276,
+      "confidence": "hold",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다. 중복 number_claimed=276 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류."
+    },
+    {
+      "start_cp": 1764010,
+      "label": "276화 광야에서 외치는 자의 소리 (7)의 문장들을 요청하신 규칙대로 정리했습니다.",
+      "kind": "unresolved",
+      "number_claimed": 276,
+      "confidence": "hold",
+      "note": "숫자화 표제처럼 시작하지만 실제 행은 문장 정리 요청 문구다. 분할 경계로 채택하지 않고 원문 위치를 보존해 검토 보류. 중복 number_claimed=276 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류."
+    },
+    {
+      "start_cp": 1770206,
+      "label": "277화 사공명주생중달 (1)",
+      "kind": "numbered",
+      "number_claimed": 277,
+      "confidence": "hold",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다. 중복 number_claimed=277 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류."
+    },
+    {
+      "start_cp": 1770226,
+      "label": "277화 사공명주생중달 (1)의 문장들을 요청하신 규칙대로 정리했습니다.",
+      "kind": "unresolved",
+      "number_claimed": 277,
+      "confidence": "hold",
+      "note": "숫자화 표제처럼 시작하지만 실제 행은 문장 정리 요청 문구다. 분할 경계로 채택하지 않고 원문 위치를 보존해 검토 보류. 중복 number_claimed=277 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류."
+    },
+    {
+      "start_cp": 1777891,
+      "label": "278화 사공명주생중달 (2)",
+      "kind": "numbered",
+      "number_claimed": 278,
+      "confidence": "hold",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다. 중복 number_claimed=278 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류."
+    },
+    {
+      "start_cp": 1777911,
+      "label": "278화 사공명주생중달 (2)의 문장들을 요청하신 규칙대로 정리했습니다.",
+      "kind": "unresolved",
+      "number_claimed": 278,
+      "confidence": "hold",
+      "note": "숫자화 표제처럼 시작하지만 실제 행은 문장 정리 요청 문구다. 분할 경계로 채택하지 않고 원문 위치를 보존해 검토 보류. 중복 number_claimed=278 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류."
+    },
+    {
+      "start_cp": 1787027,
+      "label": "279화 사공명주생중달 (3)",
+      "kind": "numbered",
+      "number_claimed": 279,
+      "confidence": "hold",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다. 중복 number_claimed=279 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류. 원문상의 다음 numbered 표제까지 10,955 codepoints로 전체 numbered 구간 중 최장이고, 중간에 반복 지시문형 행이 있어 길이 이상치로 함께 보류."
+    },
+    {
+      "start_cp": 1790255,
+      "label": "279화 사공명주생중달 (3)의 내용을 특수문자 없이 정리했습니다.",
+      "kind": "unresolved",
+      "number_claimed": 279,
+      "confidence": "hold",
+      "note": "숫자화 표제처럼 시작하지만 실제 행은 문장 정리 요청 문구다. 분할 경계로 채택하지 않고 원문 위치를 보존해 검토 보류. 중복 number_claimed=279 행은 자동 재번호·삭제 없이 모두 보존하고 수동 검토 보류."
+    },
+    {
+      "start_cp": 1797982,
+      "label": "280화 사공명주생중달 (4)",
+      "kind": "numbered",
+      "number_claimed": 280,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1805335,
+      "label": "281화 사공명주생중달 (5)",
+      "kind": "numbered",
+      "number_claimed": 281,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1812124,
+      "label": "282화 사공명주생중달 (6)",
+      "kind": "numbered",
+      "number_claimed": 282,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1819032,
+      "label": "283화 사공명주생중달 (7)",
+      "kind": "numbered",
+      "number_claimed": 283,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1824915,
+      "label": "284화 사공명주생중달 (8)",
+      "kind": "numbered",
+      "number_claimed": 284,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1831999,
+      "label": "285화 병신과 머저리 (1)",
+      "kind": "numbered",
+      "number_claimed": 285,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1839069,
+      "label": "286화 병신과 머저리 (2)",
+      "kind": "numbered",
+      "number_claimed": 286,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1845800,
+      "label": "287화 왕관걸이들 (3)",
+      "kind": "numbered",
+      "number_claimed": 287,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1852177,
+      "label": "288화 왕관걸이들 (4)",
+      "kind": "numbered",
+      "number_claimed": 288,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1859152,
+      "label": "289화 왕관걸이들 (5)",
+      "kind": "numbered",
+      "number_claimed": 289,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1864968,
+      "label": "290화 왕관걸이들 (6)",
+      "kind": "numbered",
+      "number_claimed": 290,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1872551,
+      "label": "291화 왕관걸이들 (7)",
+      "kind": "numbered",
+      "number_claimed": 291,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1878671,
+      "label": "292화 한 지붕 두 가족 (1)",
+      "kind": "numbered",
+      "number_claimed": 292,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1885195,
+      "label": "293화 한 지붕 두 가족 (2)",
+      "kind": "numbered",
+      "number_claimed": 293,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1891292,
+      "label": "294화 한 지붕 두 가족 (3)",
+      "kind": "numbered",
+      "number_claimed": 294,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1898113,
+      "label": "295화 한 지붕 두 가족 (4)",
+      "kind": "numbered",
+      "number_claimed": 295,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1903698,
+      "label": "296화 한 지붕 두 가족 (5)",
+      "kind": "numbered",
+      "number_claimed": 296,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1910583,
+      "label": "297화 한 지붕 두 가족 (6)",
+      "kind": "numbered",
+      "number_claimed": 297,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1917642,
+      "label": "298화 다우닝가 10번지로 (1)",
+      "kind": "numbered",
+      "number_claimed": 298,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1924052,
+      "label": "299화 다우닝가 10번지로 (2)",
+      "kind": "numbered",
+      "number_claimed": 299,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1930780,
+      "label": "300화 다우닝가 10번지로 (3)",
+      "kind": "numbered",
+      "number_claimed": 300,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1938050,
+      "label": "301화 다우닝가 10번지로 (4)",
+      "kind": "numbered",
+      "number_claimed": 301,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1944496,
+      "label": "302화 다우닝가 10번지로 (5)",
+      "kind": "numbered",
+      "number_claimed": 302,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1950507,
+      "label": "303화 다우닝가 10번지로 (6)",
+      "kind": "numbered",
+      "number_claimed": 303,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1957184,
+      "label": "304화 다우닝가 10번지로 (7)",
+      "kind": "numbered",
+      "number_claimed": 304,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1963734,
+      "label": "305화 철혈재상 VS 붉은총리 (1)",
+      "kind": "numbered",
+      "number_claimed": 305,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1969810,
+      "label": "306화 철혈재상 VS 붉은총리 (2)",
+      "kind": "numbered",
+      "number_claimed": 306,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1975835,
+      "label": "307화 철혈재상 VS 붉은총리 (3)",
+      "kind": "numbered",
+      "number_claimed": 307,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1983244,
+      "label": "308화 철혈재상 VS 붉은총리 (4)",
+      "kind": "numbered",
+      "number_claimed": 308,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1989360,
+      "label": "309화 철혈재상 VS 붉은총리 (5)",
+      "kind": "numbered",
+      "number_claimed": 309,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1995854,
+      "label": "310화 철혈재상 VS 붉은총리 (6)",
+      "kind": "numbered",
+      "number_claimed": 310,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2001733,
+      "label": "311화 철혈재상 VS 붉은총리 (7)",
+      "kind": "numbered",
+      "number_claimed": 311,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2008755,
+      "label": "312화 더더더 그레이트한 게임 (1)",
+      "kind": "numbered",
+      "number_claimed": 312,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2015590,
+      "label": "313화 더더더 그레이트한 게임 (2)",
+      "kind": "numbered",
+      "number_claimed": 313,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2022593,
+      "label": "(작가의 말)",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 경계. 별도 메모 구간이며 화 번호를 부여하지 않는다."
+    },
+    {
+      "start_cp": 2022961,
+      "label": "314화 더더더 그레이트한 게임 (3)",
+      "kind": "numbered",
+      "number_claimed": 314,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2029265,
+      "label": "315화 더더더 그레이트한 게임 (4)",
+      "kind": "numbered",
+      "number_claimed": 315,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2035305,
+      "label": "316화 더더더 그레이트한 게임 (5)",
+      "kind": "numbered",
+      "number_claimed": 316,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2041679,
+      "label": "317화 더더더 그레이트한 게임 (6)",
+      "kind": "numbered",
+      "number_claimed": 317,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2047756,
+      "label": "318화 몽유병자들 (1)",
+      "kind": "numbered",
+      "number_claimed": 318,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2053925,
+      "label": "319화 몽유병자들 (2)",
+      "kind": "numbered",
+      "number_claimed": 319,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2060352,
+      "label": "320화 몽유병자들 (3)",
+      "kind": "numbered",
+      "number_claimed": 320,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2067095,
+      "label": "321화 몽유병자들 (4)",
+      "kind": "numbered",
+      "number_claimed": 321,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2073133,
+      "label": "322화 몽유병자들 (5)",
+      "kind": "numbered",
+      "number_claimed": 322,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2078816,
+      "label": "323화 몽유병자들 (6)",
+      "kind": "numbered",
+      "number_claimed": 323,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2084743,
+      "label": "324화 몽유병자들 (7)",
+      "kind": "numbered",
+      "number_claimed": 324,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2091826,
+      "label": "325화 좋았던 그 마지막 나날들 (1)",
+      "kind": "numbered",
+      "number_claimed": 325,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2098283,
+      "label": "326화 좋았던 그 마지막 나날들 (2)",
+      "kind": "numbered",
+      "number_claimed": 326,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2104018,
+      "label": "327화 좋았던 그 마지막 나날들 (3)",
+      "kind": "numbered",
+      "number_claimed": 327,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2110889,
+      "label": "(작가의 말)",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 경계. 별도 메모 구간이며 화 번호를 부여하지 않는다."
+    },
+    {
+      "start_cp": 2110917,
+      "label": "328화 좋았던 그 마지막 나날들 (4)",
+      "kind": "numbered",
+      "number_claimed": 328,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2117192,
+      "label": "329화 좋았던 그 마지막 나날들 (5)",
+      "kind": "numbered",
+      "number_claimed": 329,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2124004,
+      "label": "(작가의 말)",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 경계. 별도 메모 구간이며 화 번호를 부여하지 않는다."
+    },
+    {
+      "start_cp": 2124059,
+      "label": "330화 좋았던 그 마지막 나날들 (6)",
+      "kind": "numbered",
+      "number_claimed": 330,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2130286,
+      "label": "331화 좋았던 그 마지막 나날들 (7)",
+      "kind": "numbered",
+      "number_claimed": 331,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2137194,
+      "label": "332화 유럽의 종말 (1)",
+      "kind": "numbered",
+      "number_claimed": 332,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2143290,
+      "label": "333화 유럽의 종말 (2)",
+      "kind": "numbered",
+      "number_claimed": 333,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2149862,
+      "label": "334화 유럽의 종말 (3)",
+      "kind": "numbered",
+      "number_claimed": 334,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2156211,
+      "label": "335화 유럽의 종말 (4)",
+      "kind": "numbered",
+      "number_claimed": 335,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2162597,
+      "label": "336화 유럽의 종말 (5)",
+      "kind": "numbered",
+      "number_claimed": 336,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2169061,
+      "label": "337화 유럽의 종말 (6)",
+      "kind": "numbered",
+      "number_claimed": 337,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2175595,
+      "label": "(작가의 말)",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 경계. 별도 메모 구간이며 화 번호를 부여하지 않는다."
+    },
+    {
+      "start_cp": 2175804,
+      "label": "338화 유럽의 종말 (7)",
+      "kind": "numbered",
+      "number_claimed": 338,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2182697,
+      "label": "339화 용광로 불 같은 날이 이르리니 (1)",
+      "kind": "numbered",
+      "number_claimed": 339,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2188453,
+      "label": "340화 용광로 불 같은 날이 이르리니 (2)",
+      "kind": "numbered",
+      "number_claimed": 340,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2194700,
+      "label": "(작가의 말)",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 경계. 별도 메모 구간이며 화 번호를 부여하지 않는다."
+    },
+    {
+      "start_cp": 2194740,
+      "label": "341화 용광로 불 같은 날이 이르리니 (3)",
+      "kind": "numbered",
+      "number_claimed": 341,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2200242,
+      "label": "342화 용광로 불 같은 날이 이르리니 (4)",
+      "kind": "numbered",
+      "number_claimed": 342,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2207112,
+      "label": "343화 용광로 불 같은 날이 이르리니 (5)",
+      "kind": "numbered",
+      "number_claimed": 343,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2213395,
+      "label": "344화 용광로 불 같은 날이 이르리니 (6)",
+      "kind": "numbered",
+      "number_claimed": 344,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2219294,
+      "label": "345화 용광로 불 같은 날이 이르리니 (7)",
+      "kind": "numbered",
+      "number_claimed": 345,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2224804,
+      "label": "346화 도살장 (1)",
+      "kind": "numbered",
+      "number_claimed": 346,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2231213,
+      "label": "347화 도살장 (2)",
+      "kind": "numbered",
+      "number_claimed": 347,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2237687,
+      "label": "348화 도살장 (3)",
+      "kind": "numbered",
+      "number_claimed": 348,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2243948,
+      "label": "349화 도살장 (4)",
+      "kind": "numbered",
+      "number_claimed": 349,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2249869,
+      "label": "350화 도살장 (5)",
+      "kind": "numbered",
+      "number_claimed": 350,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2256314,
+      "label": "351화 도살장 (6)",
+      "kind": "numbered",
+      "number_claimed": 351,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2262028,
+      "label": "352화 도살장 (7)",
+      "kind": "numbered",
+      "number_claimed": 352,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2268749,
+      "label": "353화 동물들의 운명 (1)",
+      "kind": "numbered",
+      "number_claimed": 353,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2276278,
+      "label": "354화 동물들의 운명 (2)",
+      "kind": "numbered",
+      "number_claimed": 354,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2281964,
+      "label": "355화 동물들의 운명 (3)",
+      "kind": "numbered",
+      "number_claimed": 355,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2288479,
+      "label": "356화 동물들의 운명 (4)",
+      "kind": "numbered",
+      "number_claimed": 356,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2295608,
+      "label": "357화 동물들의 운명 (5)",
+      "kind": "numbered",
+      "number_claimed": 357,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2302706,
+      "label": "358화 첫 번째 겨울 (1)",
+      "kind": "numbered",
+      "number_claimed": 358,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2308689,
+      "label": "359화 첫 번째 겨울 (2)",
+      "kind": "numbered",
+      "number_claimed": 359,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2315761,
+      "label": "360화 설마 나라가 망하겠냐고 (1)",
+      "kind": "numbered",
+      "number_claimed": 360,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2321629,
+      "label": "361화 설마 나라가 망하겠냐고 (2)",
+      "kind": "numbered",
+      "number_claimed": 361,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2327396,
+      "label": "362화 설마 나라가 망하겠냐고 (3)",
+      "kind": "numbered",
+      "number_claimed": 362,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2334600,
+      "label": "363화 설마 나라가 망하겠냐고 (4)",
+      "kind": "numbered",
+      "number_claimed": 363,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2340838,
+      "label": "364화 설마 나라가 망하겠냐고 (5)",
+      "kind": "numbered",
+      "number_claimed": 364,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2347382,
+      "label": "365화 설마 나라가 망하겠냐고 (6)",
+      "kind": "numbered",
+      "number_claimed": 365,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2355232,
+      "label": "366화 그대들의 의무를 다하라 (1)",
+      "kind": "numbered",
+      "number_claimed": 366,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2361302,
+      "label": "367화 그대들의 의무를 다하라 (2)",
+      "kind": "numbered",
+      "number_claimed": 367,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2368403,
+      "label": "368화 그대들의 의무를 다하라 (3)",
+      "kind": "numbered",
+      "number_claimed": 368,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2374841,
+      "label": "369화 그대들의 의무를 다하라 (4)",
+      "kind": "numbered",
+      "number_claimed": 369,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2381629,
+      "label": "370화 그대들의 의무를 다하라 (5)",
+      "kind": "numbered",
+      "number_claimed": 370,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2388039,
+      "label": "371화 제발 한 번만 이겨달라고 좀 (1)",
+      "kind": "numbered",
+      "number_claimed": 371,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2393924,
+      "label": "372화 제발 한 번만 이겨달라고 좀 (2)",
+      "kind": "numbered",
+      "number_claimed": 372,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2400722,
+      "label": "373화 제발 한 번만 이겨달라고 좀 (3)",
+      "kind": "numbered",
+      "number_claimed": 373,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2407509,
+      "label": "374화 제발 한 번만 이겨달라고 좀 (4)",
+      "kind": "numbered",
+      "number_claimed": 374,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2413935,
+      "label": "375화 제발 한 번만 이겨달라고 좀 (5)",
+      "kind": "numbered",
+      "number_claimed": 375,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2420626,
+      "label": "376화 두 번째 겨울 (1)",
+      "kind": "numbered",
+      "number_claimed": 376,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2426530,
+      "label": "377화 두 번째 겨울 (2)",
+      "kind": "numbered",
+      "number_claimed": 377,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2433544,
+      "label": "378화 두 번째 겨울 (3)",
+      "kind": "numbered",
+      "number_claimed": 378,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2440000,
+      "label": "379화 몰락 (1)",
+      "kind": "numbered",
+      "number_claimed": 379,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2446794,
+      "label": "380화 몰락 (2)",
+      "kind": "numbered",
+      "number_claimed": 380,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2452922,
+      "label": "381화 몰락 (3)",
+      "kind": "numbered",
+      "number_claimed": 381,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2459848,
+      "label": "382화 몰락 (4)",
+      "kind": "numbered",
+      "number_claimed": 382,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2466191,
+      "label": "383화 몰락 (5)",
+      "kind": "numbered",
+      "number_claimed": 383,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2472868,
+      "label": "384화 몰락 (6)",
+      "kind": "numbered",
+      "number_claimed": 384,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2478765,
+      "label": "385화 몰락 (7)",
+      "kind": "numbered",
+      "number_claimed": 385,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2484662,
+      "label": "386화 잃을 것은 왕관뿐이다 (1)",
+      "kind": "numbered",
+      "number_claimed": 386,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2491797,
+      "label": "387화 잃을 것은왕관뿐이다 (2)",
+      "kind": "numbered",
+      "number_claimed": 387,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2497736,
+      "label": "388화 잃을 것은왕관뿐이다 (3)",
+      "kind": "numbered",
+      "number_claimed": 388,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2504331,
+      "label": "389화 잃을 것은 왕관뿐이다 (4)",
+      "kind": "numbered",
+      "number_claimed": 389,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2512468,
+      "label": "390화 잃을 것은 왕관뿐이다 (5)",
+      "kind": "numbered",
+      "number_claimed": 390,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2518965,
+      "label": "391화 붉은 백작의 평화 (1)",
+      "kind": "numbered",
+      "number_claimed": 391,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2525283,
+      "label": "392화 붉은 백작의 평화 (2)",
+      "kind": "numbered",
+      "number_claimed": 392,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2532259,
+      "label": "393화 붉은 백작의 평화 (3)",
+      "kind": "numbered",
+      "number_claimed": 393,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2538201,
+      "label": "394화 붉은 백작의 평화 (4)",
+      "kind": "numbered",
+      "number_claimed": 394,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2544777,
+      "label": "395화 붉은 백작의 평화 (5)",
+      "kind": "numbered",
+      "number_claimed": 395,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2551714,
+      "label": "396화 붉은 백작의 평화 (6)",
+      "kind": "numbered",
+      "number_claimed": 396,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2557305,
+      "label": "397화 붉은 백작의 평화 (7)",
+      "kind": "numbered",
+      "number_claimed": 397,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2563014,
+      "label": "398화 종장 (1)",
+      "kind": "numbered",
+      "number_claimed": 398,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2569415,
+      "label": "399화 종장 (2)",
+      "kind": "numbered",
+      "number_claimed": 399,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2575454,
+      "label": "400화 퀘스트 완료",
+      "kind": "numbered",
+      "number_claimed": 400,
+      "confidence": "confirmed",
+      "note": "명시된 화 표제 행이며 후보 좌표와 원문 행이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2583113,
+      "label": "(작가의 말)",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 경계. 별도 메모 구간이며 화 번호를 부여하지 않는다."
+    }
+  ]
+}

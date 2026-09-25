@@ -1,0 +1,4622 @@
+{
+  "work_id": "poland",
+  "source_sha256": "483360b0f19e6d1c702fe3aec2b338331c9907fb2de796aa1c16ff5526ba9832",
+  "markers": [
+    {
+      "start_cp": 0,
+      "label": "1화 폴란드의 그녀",
+      "kind": "numbered",
+      "number_claimed": 1,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 6830,
+      "label": "2화 중근세에 떨어진 범부",
+      "kind": "numbered",
+      "number_claimed": 2,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 13091,
+      "label": "3화 중근세에 떨어진 범부(2)",
+      "kind": "numbered",
+      "number_claimed": 3,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 21838,
+      "label": "4화 계시를 받은 공주",
+      "kind": "numbered",
+      "number_claimed": 4,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 30089,
+      "label": "5화 군대를 위해 태어난 자",
+      "kind": "numbered",
+      "number_claimed": 5,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 37339,
+      "label": "6화 윙드 후사르",
+      "kind": "numbered",
+      "number_claimed": 6,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 45699,
+      "label": "7화 몰다비아 원정",
+      "kind": "numbered",
+      "number_claimed": 7,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 53280,
+      "label": "8화 몰다비아 원정(2)",
+      "kind": "numbered",
+      "number_claimed": 8,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 59858,
+      "label": "9화 몰다비아 원정(3)",
+      "kind": "numbered",
+      "number_claimed": 9,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 67970,
+      "label": "10화 이아시 전투",
+      "kind": "numbered",
+      "number_claimed": 10,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 76993,
+      "label": "11화 온달 혹은 아그리파",
+      "kind": "numbered",
+      "number_claimed": 11,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 84529,
+      "label": "12화 온달 혹은 아그리파(2)",
+      "kind": "numbered",
+      "number_claimed": 12,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 91066,
+      "label": "13화 귀족과 영지",
+      "kind": "numbered",
+      "number_claimed": 13,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 97665,
+      "label": "14화 카미에니에츠 요새(그림 추가)",
+      "kind": "numbered",
+      "number_claimed": 14,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 103814,
+      "label": "*작가의 말 (1)",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 104136,
+      "label": "*작가의 말 (2)",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 104284,
+      "label": "15화 도시를 키우는 방법",
+      "kind": "numbered",
+      "number_claimed": 15,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 110960,
+      "label": "16화 타타르의 왕이로소이다",
+      "kind": "numbered",
+      "number_claimed": 16,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 117382,
+      "label": "17화 설탕 공주",
+      "kind": "numbered",
+      "number_claimed": 17,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 124509,
+      "label": "18화 포돌레의 박",
+      "kind": "numbered",
+      "number_claimed": 18,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 131053,
+      "label": "19화 세임(Sejm)",
+      "kind": "numbered",
+      "number_claimed": 19,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 139170,
+      "label": "20화 세임(Sejm)(2)",
+      "kind": "numbered",
+      "number_claimed": 20,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 145206,
+      "label": "21화 세임(Sejm)(3)",
+      "kind": "numbered",
+      "number_claimed": 21,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 151999,
+      "label": "22화 스타로스타 그리고 보예보다",
+      "kind": "numbered",
+      "number_claimed": 22,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 158846,
+      "label": "23화 경자유전",
+      "kind": "numbered",
+      "number_claimed": 23,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 166526,
+      "label": "24화 설탕, 그리고 보드카",
+      "kind": "numbered",
+      "number_claimed": 24,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 172843,
+      "label": "25화 모녀",
+      "kind": "numbered",
+      "number_claimed": 25,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 179158,
+      "label": "26화 시대를 잘못 타고난 사람 (외전)",
+      "kind": "numbered",
+      "number_claimed": 26,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 187352,
+      "label": "27화 시대를 잘못 타고난 사람 2 (외전)",
+      "kind": "numbered",
+      "number_claimed": 27,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 196750,
+      "label": "28화 모녀의 계획",
+      "kind": "numbered",
+      "number_claimed": 28,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 204673,
+      "label": "29화 음모",
+      "kind": "numbered",
+      "number_claimed": 29,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 212647,
+      "label": "30화 똥, 돌, 총",
+      "kind": "numbered",
+      "number_claimed": 30,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 219530,
+      "label": "31화 크라쿠프로",
+      "kind": "numbered",
+      "number_claimed": 31,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 225786,
+      "label": "32화 하이두크",
+      "kind": "numbered",
+      "number_claimed": 32,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 234042,
+      "label": "33화 결혼식",
+      "kind": "numbered",
+      "number_claimed": 33,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 240969,
+      "label": "34화 결혼식(2)",
+      "kind": "numbered",
+      "number_claimed": 34,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 247690,
+      "label": "35화 결혼식(3)",
+      "kind": "numbered",
+      "number_claimed": 35,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 256122,
+      "label": "36화 피의 탑",
+      "kind": "numbered",
+      "number_claimed": 36,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 265588,
+      "label": "37화 로코슈",
+      "kind": "numbered",
+      "number_claimed": 37,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 272621,
+      "label": "38화 로코슈(2)",
+      "kind": "numbered",
+      "number_claimed": 38,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 281602,
+      "label": "39화 나아가야 할 길",
+      "kind": "numbered",
+      "number_claimed": 39,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 288989,
+      "label": "40화 보얀",
+      "kind": "numbered",
+      "number_claimed": 40,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 295915,
+      "label": "41화 행군",
+      "kind": "numbered",
+      "number_claimed": 41,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 307444,
+      "label": "42화 라바 전투",
+      "kind": "numbered",
+      "number_claimed": 42,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 316142,
+      "label": "43화 드제비차 전투",
+      "kind": "numbered",
+      "number_claimed": 43,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 323826,
+      "label": "44화 드제비차 전투(2)",
+      "kind": "numbered",
+      "number_claimed": 44,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 331235,
+      "label": "45화 소비에스키 가문의 운명",
+      "kind": "numbered",
+      "number_claimed": 45,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 340713,
+      "label": "46화 소비에스키 가문의 비극",
+      "kind": "numbered",
+      "number_claimed": 46,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 346947,
+      "label": "47화 은원",
+      "kind": "numbered",
+      "number_claimed": 47,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 354413,
+      "label": "48화 속죄",
+      "kind": "numbered",
+      "number_claimed": 48,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 364687,
+      "label": "49화 전례",
+      "kind": "numbered",
+      "number_claimed": 49,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 371190,
+      "label": "50화 폴란드 여왕 키우기",
+      "kind": "numbered",
+      "number_claimed": 50,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 379647,
+      "label": "51화 푸른 병",
+      "kind": "numbered",
+      "number_claimed": 51,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 386619,
+      "label": "52화 모드제프스키",
+      "kind": "numbered",
+      "number_claimed": 52,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 394113,
+      "label": "53화 영웅들의 시대",
+      "kind": "numbered",
+      "number_claimed": 53,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 400469,
+      "label": "54화 영웅들의 시대 (2)",
+      "kind": "numbered",
+      "number_claimed": 54,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 407343,
+      "label": "55화 영웅들의 시대(3)",
+      "kind": "numbered",
+      "number_claimed": 55,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 413676,
+      "label": "56화 대튀르크",
+      "kind": "numbered",
+      "number_claimed": 56,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 421680,
+      "label": "57화 대튀르크(2)",
+      "kind": "numbered",
+      "number_claimed": 57,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 428179,
+      "label": "58화 아치칼레",
+      "kind": "numbered",
+      "number_claimed": 58,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 435045,
+      "label": "59화 연방의 구원자",
+      "kind": "numbered",
+      "number_claimed": 59,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 441620,
+      "label": "60화 카를로비츠 조약",
+      "kind": "numbered",
+      "number_claimed": 60,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 448932,
+      "label": "61화 영웅",
+      "kind": "numbered",
+      "number_claimed": 61,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 456775,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 457767,
+      "label": "62화 견제, 그리고 통합",
+      "kind": "numbered",
+      "number_claimed": 62,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 464786,
+      "label": "63화 세이미크",
+      "kind": "numbered",
+      "number_claimed": 63,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 471353,
+      "label": "64화 The King is dead, Long live the King.",
+      "kind": "numbered",
+      "number_claimed": 64,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 478656,
+      "label": "65화 The King is dead, Long live the King.(2)",
+      "kind": "numbered",
+      "number_claimed": 65,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 485902,
+      "label": "66화 The King is dead, Long live the King.(3)",
+      "kind": "numbered",
+      "number_claimed": 66,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 494244,
+      "label": "67화 남부대공",
+      "kind": "numbered",
+      "number_claimed": 67,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 501124,
+      "label": "68화 왕족과 귀족들",
+      "kind": "numbered",
+      "number_claimed": 68,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 507474,
+      "label": "69화 신혼여행",
+      "kind": "numbered",
+      "number_claimed": 69,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 514430,
+      "label": "70화 신성로마제국",
+      "kind": "numbered",
+      "number_claimed": 70,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 521023,
+      "label": "71화 합스부르크",
+      "kind": "numbered",
+      "number_claimed": 71,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 528907,
+      "label": "72화 합스부르크(2)",
+      "kind": "numbered",
+      "number_claimed": 72,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 535588,
+      "label": "73화 베네치아와 로마",
+      "kind": "numbered",
+      "number_claimed": 73,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 542753,
+      "label": "74화 의례논쟁",
+      "kind": "numbered",
+      "number_claimed": 74,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 549155,
+      "label": "75화 커세어",
+      "kind": "numbered",
+      "number_claimed": 75,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 555915,
+      "label": "76화 커세어(2)",
+      "kind": "numbered",
+      "number_claimed": 76,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 562451,
+      "label": "77화 윌리엄 키드",
+      "kind": "numbered",
+      "number_claimed": 77,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 568902,
+      "label": "78화 윌리엄 키드(2)",
+      "kind": "numbered",
+      "number_claimed": 78,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 575376,
+      "label": "79화 윌리엄 키드(3)",
+      "kind": "numbered",
+      "number_claimed": 79,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 582188,
+      "label": "80화 잉글랜드를 배우는 방법",
+      "kind": "numbered",
+      "number_claimed": 80,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 588957,
+      "label": "81화 잉글랜드를 배우는 방법(2)",
+      "kind": "numbered",
+      "number_claimed": 81,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 595990,
+      "label": "82화 차르와 대공",
+      "kind": "numbered",
+      "number_claimed": 82,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 604214,
+      "label": "83화 산업혁명의 인재들",
+      "kind": "numbered",
+      "number_claimed": 83,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 611527,
+      "label": "84화 산업혁명의 인재들(2)",
+      "kind": "numbered",
+      "number_claimed": 84,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 621265,
+      "label": "85화 찾아온 손님",
+      "kind": "numbered",
+      "number_claimed": 85,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 628244,
+      "label": "86화 살롱",
+      "kind": "numbered",
+      "number_claimed": 86,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 634642,
+      "label": "87화 왕위 계승의 법칙",
+      "kind": "numbered",
+      "number_claimed": 87,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 641344,
+      "label": "88화 행운남과 행운녀",
+      "kind": "numbered",
+      "number_claimed": 88,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 649540,
+      "label": "89화 대북방전쟁",
+      "kind": "numbered",
+      "number_claimed": 89,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 656136,
+      "label": "90화 그녀를 위한 발명",
+      "kind": "numbered",
+      "number_claimed": 90,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 664275,
+      "label": "91화 시비엥타 엘주비에티(지도 첨부)",
+      "kind": "numbered",
+      "number_claimed": 91,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 671069,
+      "label": "92화 흑해의 사략선단",
+      "kind": "numbered",
+      "number_claimed": 92,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 677839,
+      "label": "93화 제철",
+      "kind": "numbered",
+      "number_claimed": 93,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 684313,
+      "label": "94화 궤도마차",
+      "kind": "numbered",
+      "number_claimed": 94,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 690738,
+      "label": "95화 아들",
+      "kind": "numbered",
+      "number_claimed": 95,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 697389,
+      "label": "96화 스웨덴의 저력",
+      "kind": "numbered",
+      "number_claimed": 96,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 703859,
+      "label": "97화 차르와 소년왕",
+      "kind": "numbered",
+      "number_claimed": 97,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 711468,
+      "label": "98화 종교 문제",
+      "kind": "numbered",
+      "number_claimed": 98,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 718120,
+      "label": "99화 고의식파",
+      "kind": "numbered",
+      "number_claimed": 99,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 725589,
+      "label": "100화 코자키들의 동요",
+      "kind": "numbered",
+      "number_claimed": 100,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 733785,
+      "label": "101화 평화를 원한다면",
+      "kind": "numbered",
+      "number_claimed": 101,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 741361,
+      "label": "102화 전쟁을 준비하라",
+      "kind": "numbered",
+      "number_claimed": 102,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 747459,
+      "label": "103화 전쟁을 준비하라 (2)",
+      "kind": "numbered",
+      "number_claimed": 103,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 753831,
+      "label": "104화 연방의 위기",
+      "kind": "numbered",
+      "number_claimed": 104,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 761061,
+      "label": "105화 매국노들",
+      "kind": "numbered",
+      "number_claimed": 105,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 767399,
+      "label": "106화 충신들",
+      "kind": "numbered",
+      "number_claimed": 106,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 775069,
+      "label": "107화 야쿠프 왕",
+      "kind": "numbered",
+      "number_claimed": 107,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 782255,
+      "label": "108화 구원",
+      "kind": "numbered",
+      "number_claimed": 108,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 789847,
+      "label": "109화 참전",
+      "kind": "numbered",
+      "number_claimed": 109,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 798862,
+      "label": "110화 북방의 왕과 남부의 대공",
+      "kind": "numbered",
+      "number_claimed": 110,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 807019,
+      "label": "111화 북방의 왕과 남부의 대공(2)",
+      "kind": "numbered",
+      "number_claimed": 111,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 819451,
+      "label": "112화 그로예츠 회전",
+      "kind": "numbered",
+      "number_claimed": 112,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 826295,
+      "label": "113화 그로예츠 회전(2)",
+      "kind": "numbered",
+      "number_claimed": 113,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 832970,
+      "label": "114화 그로예츠 회전(3)",
+      "kind": "numbered",
+      "number_claimed": 114,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 842857,
+      "label": "115화 왕을 위하여",
+      "kind": "numbered",
+      "number_claimed": 115,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 852766,
+      "label": "116화 협상",
+      "kind": "numbered",
+      "number_claimed": 116,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 860012,
+      "label": "117화 협상(2)",
+      "kind": "numbered",
+      "number_claimed": 117,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 868703,
+      "label": "118화 폴란드의 여왕",
+      "kind": "numbered",
+      "number_claimed": 118,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 876501,
+      "label": "119화 여왕의 치세",
+      "kind": "numbered",
+      "number_claimed": 119,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 884997,
+      "label": "120화 숙청",
+      "kind": "numbered",
+      "number_claimed": 120,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 892788,
+      "label": "121화 잠코비 광장",
+      "kind": "numbered",
+      "number_claimed": 121,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 899436,
+      "label": "122화 개혁",
+      "kind": "numbered",
+      "number_claimed": 122,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 907700,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 907787,
+      "label": "123화 개혁(2)",
+      "kind": "numbered",
+      "number_claimed": 123,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 915740,
+      "label": "124화 조선으로 간 선교사",
+      "kind": "numbered",
+      "number_claimed": 124,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 922031,
+      "label": "125화 조선으로 간 선교사(2)",
+      "kind": "numbered",
+      "number_claimed": 125,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 929000,
+      "label": "126화 조선으로 간 선교사(3)",
+      "kind": "numbered",
+      "number_claimed": 126,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 935623,
+      "label": "127화 파란을 몰고 오는 파란의 왕자",
+      "kind": "numbered",
+      "number_claimed": 127,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 943278,
+      "label": "128화 파란을 몰고 오는 파란의 왕자(2)",
+      "kind": "numbered",
+      "number_claimed": 128,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 953284,
+      "label": "129화 파란을 몰고 오는 파란의 왕자(3)",
+      "kind": "numbered",
+      "number_claimed": 129,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 963043,
+      "label": "130화 가면 무도회",
+      "kind": "numbered",
+      "number_claimed": 130,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 970028,
+      "label": "131화 가면 무도회(2)",
+      "kind": "numbered",
+      "number_claimed": 131,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 977812,
+      "label": "132화 가면 무도회(3)",
+      "kind": "numbered",
+      "number_claimed": 132,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 985264,
+      "label": "133화 권투",
+      "kind": "numbered",
+      "number_claimed": 133,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 992143,
+      "label": "134화 세 명의 죽음",
+      "kind": "numbered",
+      "number_claimed": 134,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 998981,
+      "label": "135화 바르샤바 회담",
+      "kind": "numbered",
+      "number_claimed": 135,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1006473,
+      "label": "136화 모략",
+      "kind": "numbered",
+      "number_claimed": 136,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1013619,
+      "label": "137화 적대자들",
+      "kind": "numbered",
+      "number_claimed": 137,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1023446,
+      "label": "138화 1700 콘클라베",
+      "kind": "numbered",
+      "number_claimed": 138,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1029458,
+      "label": "139화 스페인 왕위 계승 전쟁",
+      "kind": "numbered",
+      "number_claimed": 139,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1036830,
+      "label": "140화 흑해에 부는 폭풍",
+      "kind": "numbered",
+      "number_claimed": 140,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1043148,
+      "label": "141화 연방사관학교",
+      "kind": "numbered",
+      "number_claimed": 141,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1050055,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1050090,
+      "label": "142화 단결과 불화",
+      "kind": "numbered",
+      "number_claimed": 142,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1056373,
+      "label": "143화 단결과 불화(2)",
+      "kind": "numbered",
+      "number_claimed": 143,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1062892,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1063450,
+      "label": "144화 3차 오스만 원정 (지도 첨부)",
+      "kind": "numbered",
+      "number_claimed": 144,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1071550,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1071898,
+      "label": "145화 3차 오스만 원정(2)",
+      "kind": "numbered",
+      "number_claimed": 145,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1077889,
+      "label": "146화 3차 오스만 원정(3)",
+      "kind": "numbered",
+      "number_claimed": 146,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1084169,
+      "label": "147화 위기의 오스만",
+      "kind": "numbered",
+      "number_claimed": 147,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1091019,
+      "label": "148화 위기의 오스만 (2)",
+      "kind": "numbered",
+      "number_claimed": 148,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1098311,
+      "label": "149화 라소바 전투",
+      "kind": "numbered",
+      "number_claimed": 149,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1104774,
+      "label": "150화 라소바 전투(2)",
+      "kind": "numbered",
+      "number_claimed": 150,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1112896,
+      "label": "151화 무너지는 도시들",
+      "kind": "numbered",
+      "number_claimed": 151,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1120954,
+      "label": "152화 크림 칸국",
+      "kind": "numbered",
+      "number_claimed": 152,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1129772,
+      "label": "153화 크림 칸국(2)",
+      "kind": "numbered",
+      "number_claimed": 153,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1136406,
+      "label": "154화 크림 칸국(3)",
+      "kind": "numbered",
+      "number_claimed": 154,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1143471,
+      "label": "155화 분열",
+      "kind": "numbered",
+      "number_claimed": 155,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1151217,
+      "label": "156화 협술탄이령공",
+      "kind": "numbered",
+      "number_claimed": 156,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1160107,
+      "label": "157화 퀴취크 카이나르차 조약",
+      "kind": "numbered",
+      "number_claimed": 157,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1168237,
+      "label": "- 작가의 말.",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1168338,
+      "label": "158화 뜻밖의 손님",
+      "kind": "numbered",
+      "number_claimed": 158,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1175327,
+      "label": "159화 뜻밖의 손님(2)",
+      "kind": "numbered",
+      "number_claimed": 159,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1181687,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1181743,
+      "label": "160화 유럽의 조선인들",
+      "kind": "numbered",
+      "number_claimed": 160,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1188714,
+      "label": "161화 유럽의 조선인들(2)",
+      "kind": "numbered",
+      "number_claimed": 161,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1196447,
+      "label": "162화 도자기",
+      "kind": "numbered",
+      "number_claimed": 162,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1204215,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1204736,
+      "label": "163화 도자기(2)",
+      "kind": "numbered",
+      "number_claimed": 163,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1212273,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1212498,
+      "label": "164화 도자기(3)",
+      "kind": "numbered",
+      "number_claimed": 164,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1220717,
+      "label": "165화 도자기(4)",
+      "kind": "numbered",
+      "number_claimed": 165,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1230244,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1230296,
+      "label": "166화 요세오니안",
+      "kind": "numbered",
+      "number_claimed": 166,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1238037,
+      "label": "167화 선비들",
+      "kind": "numbered",
+      "number_claimed": 167,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1246112,
+      "label": "168화 선비들(2)",
+      "kind": "numbered",
+      "number_claimed": 168,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1253841,
+      "label": "169화 행정 제도",
+      "kind": "numbered",
+      "number_claimed": 169,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1261240,
+      "label": "170화 교육",
+      "kind": "numbered",
+      "number_claimed": 170,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1267943,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1268079,
+      "label": "171화 가화만사성",
+      "kind": "numbered",
+      "number_claimed": 171,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1274453,
+      "label": "172화 가불만사난",
+      "kind": "numbered",
+      "number_claimed": 172,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1281985,
+      "label": "173화 경국지색",
+      "kind": "numbered",
+      "number_claimed": 173,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1290552,
+      "label": "174화 황태자와 정부",
+      "kind": "numbered",
+      "number_claimed": 174,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1298446,
+      "label": "175화 황태자와 정부 (2)",
+      "kind": "numbered",
+      "number_claimed": 175,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1305791,
+      "label": "176화 사국연합",
+      "kind": "numbered",
+      "number_claimed": 176,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1312828,
+      "label": "177화 사국연합 (2)",
+      "kind": "numbered",
+      "number_claimed": 177,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1320281,
+      "label": "178화 브란덴부르크",
+      "kind": "numbered",
+      "number_claimed": 178,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1329526,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1329748,
+      "label": "179화 도망자들의 낙원, 이방인들의 궁정",
+      "kind": "numbered",
+      "number_claimed": 179,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1336616,
+      "label": "180화 자유를 위한 피",
+      "kind": "numbered",
+      "number_claimed": 180,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1345258,
+      "label": "181화 자유를 위한 피 (2)",
+      "kind": "numbered",
+      "number_claimed": 181,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1353279,
+      "label": "182화 자유를 위한 피 (3)",
+      "kind": "numbered",
+      "number_claimed": 182,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1360504,
+      "label": "183화 외전: 엘주비에타 안나 비셰니엡스카",
+      "kind": "numbered",
+      "number_claimed": 183,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1369779,
+      "label": "184화 통합",
+      "kind": "numbered",
+      "number_claimed": 184,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1376862,
+      "label": "185화 통합(2)",
+      "kind": "numbered",
+      "number_claimed": 185,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1383365,
+      "label": "186화 통합(3)",
+      "kind": "numbered",
+      "number_claimed": 186,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1389720,
+      "label": "187화 통합(4)",
+      "kind": "numbered",
+      "number_claimed": 187,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1396817,
+      "label": "188화 전야",
+      "kind": "numbered",
+      "number_claimed": 188,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1404388,
+      "label": "189화 전야(2)",
+      "kind": "numbered",
+      "number_claimed": 189,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1411116,
+      "label": "190화 초석",
+      "kind": "numbered",
+      "number_claimed": 190,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1420341,
+      "label": "191화 선전포고",
+      "kind": "numbered",
+      "number_claimed": 191,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1429559,
+      "label": "192화 유럽대전쟁",
+      "kind": "numbered",
+      "number_claimed": 192,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1436459,
+      "label": "193화 유럽대전쟁(2)",
+      "kind": "numbered",
+      "number_claimed": 193,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1442674,
+      "label": "194화 유럽대전쟁(3)",
+      "kind": "numbered",
+      "number_claimed": 194,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1450524,
+      "label": "195화 공성전",
+      "kind": "numbered",
+      "number_claimed": 195,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1458238,
+      "label": "196화 공성전(2)",
+      "kind": "numbered",
+      "number_claimed": 196,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1466143,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1466356,
+      "label": "197화 공성전(3)",
+      "kind": "numbered",
+      "number_claimed": 197,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1474777,
+      "label": "198화 공성전(4)",
+      "kind": "numbered",
+      "number_claimed": 198,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1481366,
+      "label": "199화 군신유친",
+      "kind": "numbered",
+      "number_claimed": 199,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1489827,
+      "label": "200화 군신유친(2)",
+      "kind": "numbered",
+      "number_claimed": 200,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1497104,
+      "label": "201화 그룬발트 전투",
+      "kind": "numbered",
+      "number_claimed": 201,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1503395,
+      "label": "202화 그룬발트 전투 (2)",
+      "kind": "numbered",
+      "number_claimed": 202,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1509927,
+      "label": "203화 그룬발트 전투 (3)",
+      "kind": "numbered",
+      "number_claimed": 203,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1516981,
+      "label": "204화 그룬발트 전투 (4)",
+      "kind": "numbered",
+      "number_claimed": 204,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1523312,
+      "label": "205화 그룬발트 전투 (5)",
+      "kind": "numbered",
+      "number_claimed": 205,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1534084,
+      "label": "206화 균열",
+      "kind": "numbered",
+      "number_claimed": 206,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1540679,
+      "label": "207화 균열 (2)",
+      "kind": "numbered",
+      "number_claimed": 207,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1546851,
+      "label": "208화 균열 (3)",
+      "kind": "numbered",
+      "number_claimed": 208,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1555388,
+      "label": "209화 북독일",
+      "kind": "numbered",
+      "number_claimed": 209,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1563437,
+      "label": "210화 북독일 (2)",
+      "kind": "numbered",
+      "number_claimed": 210,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1569961,
+      "label": "211화 북독일 (3)",
+      "kind": "numbered",
+      "number_claimed": 211,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1577316,
+      "label": "212화 북독일 (4)",
+      "kind": "numbered",
+      "number_claimed": 212,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1586758,
+      "label": "213화 베를린",
+      "kind": "numbered",
+      "number_claimed": 213,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1593123,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1593279,
+      "label": "214화 베를린 (2)",
+      "kind": "numbered",
+      "number_claimed": 214,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1599152,
+      "label": "215화 베를린 (3)",
+      "kind": "numbered",
+      "number_claimed": 215,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1606667,
+      "label": "216화 호엔촐레른의 운명",
+      "kind": "numbered",
+      "number_claimed": 216,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1614721,
+      "label": "217화 베를린 조약",
+      "kind": "numbered",
+      "number_claimed": 217,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1622712,
+      "label": "218화 하노버",
+      "kind": "numbered",
+      "number_claimed": 218,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1629871,
+      "label": "219화 하노버 (2)",
+      "kind": "numbered",
+      "number_claimed": 219,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1637329,
+      "label": "220화 대(大)한파",
+      "kind": "numbered",
+      "number_claimed": 220,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1643459,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1643592,
+      "label": "221화 대(大)한파 (2)",
+      "kind": "numbered",
+      "number_claimed": 221,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1651020,
+      "label": "222화 계속되는 전쟁",
+      "kind": "numbered",
+      "number_claimed": 222,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1658330,
+      "label": "223화 한자 동맹",
+      "kind": "numbered",
+      "number_claimed": 223,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1665337,
+      "label": "224화 페라이닉테 한제슈타텐",
+      "kind": "numbered",
+      "number_claimed": 224,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1672520,
+      "label": "225화 동맹과 연합",
+      "kind": "numbered",
+      "number_claimed": 225,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1678593,
+      "label": "226화 동맹과 연합 (2)",
+      "kind": "numbered",
+      "number_claimed": 226,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1687782,
+      "label": "227화 러시아",
+      "kind": "numbered",
+      "number_claimed": 227,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1694970,
+      "label": "228화 러시아 (2)",
+      "kind": "numbered",
+      "number_claimed": 228,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1701798,
+      "label": "229화 러시아 (3)",
+      "kind": "numbered",
+      "number_claimed": 229,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1708549,
+      "label": "230화 러시아 (4)",
+      "kind": "numbered",
+      "number_claimed": 230,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1714612,
+      "label": "231화 이반들의 싸움",
+      "kind": "numbered",
+      "number_claimed": 231,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1721300,
+      "label": "232화 이반들의 싸움 (2)",
+      "kind": "numbered",
+      "number_claimed": 232,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1730122,
+      "label": "233화 검은 행렬",
+      "kind": "numbered",
+      "number_claimed": 233,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1738368,
+      "label": "234화 검은 행렬 (2)",
+      "kind": "numbered",
+      "number_claimed": 234,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1745219,
+      "label": "235화 검은 행렬 (3)",
+      "kind": "numbered",
+      "number_claimed": 235,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1753412,
+      "label": "236화 검은 행렬 (4)",
+      "kind": "numbered",
+      "number_claimed": 236,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1759696,
+      "label": "237화 검은 행렬 (5)",
+      "kind": "numbered",
+      "number_claimed": 237,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1766131,
+      "label": "238화 귀족들의 공화국",
+      "kind": "numbered",
+      "number_claimed": 238,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1772355,
+      "label": "239화 귀족들의 공화국 (2)",
+      "kind": "numbered",
+      "number_claimed": 239,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1780444,
+      "label": "240화 귀족들의 공화국 (3)",
+      "kind": "numbered",
+      "number_claimed": 240,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1788106,
+      "label": "241화 귀족들의 공화국 (4)",
+      "kind": "numbered",
+      "number_claimed": 241,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1798216,
+      "label": "242화 귀족 혁명",
+      "kind": "numbered",
+      "number_claimed": 242,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1804859,
+      "label": "243화 귀족 혁명 (2)",
+      "kind": "numbered",
+      "number_claimed": 243,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1810982,
+      "label": "244화 코자키 통합",
+      "kind": "numbered",
+      "number_claimed": 244,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1818025,
+      "label": "245화 싸우지 않고 이기는 법",
+      "kind": "numbered",
+      "number_claimed": 245,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1826271,
+      "label": "246화 싸우지 않고 이기는 법 (2)",
+      "kind": "numbered",
+      "number_claimed": 246,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1833425,
+      "label": "247화 싸우지 않고 이기는 법 (3)",
+      "kind": "numbered",
+      "number_claimed": 247,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1843881,
+      "label": "248화 키유프",
+      "kind": "numbered",
+      "number_claimed": 248,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1852490,
+      "label": "249화 폴타바",
+      "kind": "numbered",
+      "number_claimed": 249,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1862991,
+      "label": "250화 폴타바 (2)",
+      "kind": "numbered",
+      "number_claimed": 250,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1870569,
+      "label": "251화 폴타바 (3)",
+      "kind": "numbered",
+      "number_claimed": 251,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1881003,
+      "label": "252화 폴타바 (4)",
+      "kind": "numbered",
+      "number_claimed": 252,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1891151,
+      "label": "253화 폴타바 (5) (삽화 有)",
+      "kind": "numbered",
+      "number_claimed": 253,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1900214,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1900299,
+      "label": "254화 크룰레비에츠",
+      "kind": "numbered",
+      "number_claimed": 254,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1908335,
+      "label": "255화 인테르마리움",
+      "kind": "numbered",
+      "number_claimed": 255,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1918171,
+      "label": "256화 대운하 (삽화 有)",
+      "kind": "numbered",
+      "number_claimed": 256,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1926835,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1927015,
+      "label": "257화 보드카와 위스키",
+      "kind": "numbered",
+      "number_claimed": 257,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1935580,
+      "label": "258화 스튜어트",
+      "kind": "numbered",
+      "number_claimed": 258,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1943824,
+      "label": "259화 프랑스",
+      "kind": "numbered",
+      "number_claimed": 259,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1952034,
+      "label": "260화 증기기관",
+      "kind": "numbered",
+      "number_claimed": 260,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1960502,
+      "label": "261화 왕의 분노",
+      "kind": "numbered",
+      "number_claimed": 261,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1968961,
+      "label": "262화 왕의 분노 (2)",
+      "kind": "numbered",
+      "number_claimed": 262,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1976573,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 1977285,
+      "label": "263화 자강두왕",
+      "kind": "numbered",
+      "number_claimed": 263,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1988583,
+      "label": "264화 트베리 협정",
+      "kind": "numbered",
+      "number_claimed": 264,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 1995154,
+      "label": "265화 스노하체스트보",
+      "kind": "numbered",
+      "number_claimed": 265,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2002677,
+      "label": "266화 사랑이 남긴 것들",
+      "kind": "numbered",
+      "number_claimed": 266,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2009332,
+      "label": "267화 사랑이 남긴 것들 (2)",
+      "kind": "numbered",
+      "number_claimed": 267,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2015770,
+      "label": "268화 사랑이 남긴 것들 (3)",
+      "kind": "numbered",
+      "number_claimed": 268,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2022552,
+      "label": "269화 사랑이 남긴 것들 (4)",
+      "kind": "numbered",
+      "number_claimed": 269,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2029379,
+      "label": "270화 근대의 표상",
+      "kind": "numbered",
+      "number_claimed": 270,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2036677,
+      "label": "271화 격동하는 발칸",
+      "kind": "numbered",
+      "number_claimed": 271,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2043690,
+      "label": "272화 외교란 무엇인가",
+      "kind": "numbered",
+      "number_claimed": 272,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2052299,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2052518,
+      "label": "273화 수호",
+      "kind": "numbered",
+      "number_claimed": 273,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2061628,
+      "label": "274화 실롱스크",
+      "kind": "numbered",
+      "number_claimed": 274,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2068235,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2068343,
+      "label": "275화 대적자들",
+      "kind": "numbered",
+      "number_claimed": 275,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2075813,
+      "label": "작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2075881,
+      "label": "276화 미엥질레시에 전투",
+      "kind": "numbered",
+      "number_claimed": 276,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2082105,
+      "label": "277화 미엥질레시에 전투 (2)",
+      "kind": "numbered",
+      "number_claimed": 277,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2091347,
+      "label": "278화 미엥질레시에 전투 (3)",
+      "kind": "numbered",
+      "number_claimed": 278,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2100956,
+      "label": "279화 제국의 해체",
+      "kind": "numbered",
+      "number_claimed": 279,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2111526,
+      "label": "280화 제국의 해체 (2)",
+      "kind": "numbered",
+      "number_claimed": 280,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2120315,
+      "label": "작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2120415,
+      "label": "281화 빈 조약",
+      "kind": "numbered",
+      "number_claimed": 281,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2127326,
+      "label": "282화 오스만 레이스",
+      "kind": "numbered",
+      "number_claimed": 282,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2136015,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2136092,
+      "label": "283화 당신은 번개처럼 오시리라",
+      "kind": "numbered",
+      "number_claimed": 283,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2143741,
+      "label": "284화 당신은 번개처럼 오시리라 (2)",
+      "kind": "numbered",
+      "number_claimed": 284,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2150468,
+      "label": "285화 갈망의 도시",
+      "kind": "numbered",
+      "number_claimed": 285,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2158852,
+      "label": "286화 예언들",
+      "kind": "numbered",
+      "number_claimed": 286,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2165895,
+      "label": "287화 예언들 (2)",
+      "kind": "numbered",
+      "number_claimed": 287,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2172380,
+      "label": "288화 예언들 (3)",
+      "kind": "numbered",
+      "number_claimed": 288,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2180630,
+      "label": "289화 세계의 재건자",
+      "kind": "numbered",
+      "number_claimed": 289,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2187374,
+      "label": "290화 세계의 재건자 (2)",
+      "kind": "numbered",
+      "number_claimed": 290,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2194367,
+      "label": "291화 아나톨리아",
+      "kind": "numbered",
+      "number_claimed": 291,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2202184,
+      "label": "292화 공백",
+      "kind": "numbered",
+      "number_claimed": 292,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2208819,
+      "label": "293화 그리스와 베네치아",
+      "kind": "numbered",
+      "number_claimed": 293,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2216909,
+      "label": "294화 유럽의 공포",
+      "kind": "numbered",
+      "number_claimed": 294,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2223386,
+      "label": "295화 후계자들",
+      "kind": "numbered",
+      "number_claimed": 295,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2229768,
+      "label": "296화 후계자들 (2)",
+      "kind": "numbered",
+      "number_claimed": 296,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2237869,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2238084,
+      "label": "297화 후계자들 (3)",
+      "kind": "numbered",
+      "number_claimed": 297,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2244070,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2244101,
+      "label": "298화 바다의 강대국들",
+      "kind": "numbered",
+      "number_claimed": 298,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2252016,
+      "label": "299화 바다의 강대국들 (2)",
+      "kind": "numbered",
+      "number_claimed": 299,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2258485,
+      "label": "300화 몰타 기사단",
+      "kind": "numbered",
+      "number_claimed": 300,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2267197,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2267432,
+      "label": "301화 몰타 기사단 (2)",
+      "kind": "numbered",
+      "number_claimed": 301,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2276260,
+      "label": "302화 몰타 기사단 (3)",
+      "kind": "numbered",
+      "number_claimed": 302,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2283355,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2283480,
+      "label": "303화 몰타 기사단 (4)",
+      "kind": "numbered",
+      "number_claimed": 303,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2293499,
+      "label": "304화 검은 십자가의 기사단",
+      "kind": "numbered",
+      "number_claimed": 304,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2300827,
+      "label": "305화 검은 십자가의 기사단 (2)",
+      "kind": "numbered",
+      "number_claimed": 305,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2309232,
+      "label": "306화 대호스피탈러",
+      "kind": "numbered",
+      "number_claimed": 306,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2316049,
+      "label": "307화 그랜드 마스터",
+      "kind": "numbered",
+      "number_claimed": 307,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2323357,
+      "label": "308화 그랜드 마스터 (2)",
+      "kind": "numbered",
+      "number_claimed": 308,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2333407,
+      "label": "309화 베네치아의 몰락",
+      "kind": "numbered",
+      "number_claimed": 309,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2344175,
+      "label": "310화 삼분할",
+      "kind": "numbered",
+      "number_claimed": 310,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2351547,
+      "label": "311화 사코 디 베네치아",
+      "kind": "numbered",
+      "number_claimed": 311,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2359622,
+      "label": "312화 사코 디 베네치아 (2)",
+      "kind": "numbered",
+      "number_claimed": 312,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2371286,
+      "label": "313화 사코 디 베네치아 (3)",
+      "kind": "numbered",
+      "number_claimed": 313,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2379244,
+      "label": "314화 빈 자리",
+      "kind": "numbered",
+      "number_claimed": 314,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2387016,
+      "label": "315화 쿠릴타이",
+      "kind": "numbered",
+      "number_claimed": 315,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2394442,
+      "label": "316화 쿠릴타이 (2)",
+      "kind": "numbered",
+      "number_claimed": 316,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2401022,
+      "label": "317화 제국의 종언",
+      "kind": "numbered",
+      "number_claimed": 317,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2407654,
+      "label": "318화 제국의 종언 (2)",
+      "kind": "numbered",
+      "number_claimed": 318,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2413912,
+      "label": "319화 파멸의 날",
+      "kind": "numbered",
+      "number_claimed": 319,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2422434,
+      "label": "320화 파멸의 날 (2)",
+      "kind": "numbered",
+      "number_claimed": 320,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2430323,
+      "label": "321화 파멸의 날 (3)",
+      "kind": "numbered",
+      "number_claimed": 321,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2438439,
+      "label": "322화 종전",
+      "kind": "numbered",
+      "number_claimed": 322,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2445040,
+      "label": "323화 개선",
+      "kind": "numbered",
+      "number_claimed": 323,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2451147,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2456044,
+      "label": "324화 정당",
+      "kind": "numbered",
+      "number_claimed": 324,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2462833,
+      "label": "325화 귀환",
+      "kind": "numbered",
+      "number_claimed": 325,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2470223,
+      "label": "326화 평화",
+      "kind": "numbered",
+      "number_claimed": 326,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2477778,
+      "label": "327화 경제",
+      "kind": "numbered",
+      "number_claimed": 327,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2486112,
+      "label": "328화 경제 (2)",
+      "kind": "numbered",
+      "number_claimed": 328,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2494267,
+      "label": "329화 미시시피",
+      "kind": "numbered",
+      "number_claimed": 329,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2501548,
+      "label": "330화 미시시피 (2)",
+      "kind": "numbered",
+      "number_claimed": 330,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2508829,
+      "label": "331화 미시시피 (3)",
+      "kind": "numbered",
+      "number_claimed": 331,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2516488,
+      "label": "332화 네덜란드",
+      "kind": "numbered",
+      "number_claimed": 332,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2523872,
+      "label": "333화 프랑스",
+      "kind": "numbered",
+      "number_claimed": 333,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2531927,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2532009,
+      "label": "334화 버블",
+      "kind": "numbered",
+      "number_claimed": 334,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2539080,
+      "label": "335화 여파",
+      "kind": "numbered",
+      "number_claimed": 335,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2545531,
+      "label": "336화 여파 (2)",
+      "kind": "numbered",
+      "number_claimed": 336,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2554567,
+      "label": "337화 가문의 이야기",
+      "kind": "numbered",
+      "number_claimed": 337,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2562126,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2562154,
+      "label": "338화 식민지와 해적들",
+      "kind": "numbered",
+      "number_claimed": 338,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2569514,
+      "label": "339화 해적공화국",
+      "kind": "numbered",
+      "number_claimed": 339,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2580392,
+      "label": "340화 평화를 위한 노력",
+      "kind": "numbered",
+      "number_claimed": 340,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2588350,
+      "label": "341화 민족 문제",
+      "kind": "numbered",
+      "number_claimed": 341,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2596910,
+      "label": "342화 유대인 문제",
+      "kind": "numbered",
+      "number_claimed": 342,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2603651,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2603713,
+      "label": "343화 공동합의책",
+      "kind": "numbered",
+      "number_claimed": 343,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2613942,
+      "label": "344화 기관차",
+      "kind": "numbered",
+      "number_claimed": 344,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2621426,
+      "label": "345화 독수리와 사자, 그리고 새끼들.",
+      "kind": "numbered",
+      "number_claimed": 345,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2629466,
+      "label": "346화 독수리와 사자, 그리고 새끼들 (2)",
+      "kind": "numbered",
+      "number_claimed": 346,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2639954,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2640232,
+      "label": "347화 독수리와 사자, 그리고 새끼들 (3)",
+      "kind": "numbered",
+      "number_claimed": 347,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2647930,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2648071,
+      "label": "348화 독수리와 사자, 그리고 새끼들 (4)",
+      "kind": "numbered",
+      "number_claimed": 348,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2655193,
+      "label": "349화 독수리와 사자, 그리고 새끼들 (5)",
+      "kind": "numbered",
+      "number_claimed": 349,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2663763,
+      "label": "350화 동쪽으로 부는 바람",
+      "kind": "numbered",
+      "number_claimed": 350,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2673258,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2673337,
+      "label": "351화 토르구트와 준가르",
+      "kind": "numbered",
+      "number_claimed": 351,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2680137,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2680525,
+      "label": "352화 토르구트와 준가르 (2)",
+      "kind": "numbered",
+      "number_claimed": 352,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2686933,
+      "label": "353화 토르구트와 준가르 (3)",
+      "kind": "numbered",
+      "number_claimed": 353,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2695609,
+      "label": "354화 구룡탈적",
+      "kind": "numbered",
+      "number_claimed": 354,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2704770,
+      "label": "― 작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2705108,
+      "label": "355화 구룡탈적 (2)",
+      "kind": "numbered",
+      "number_claimed": 355,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2716289,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2716366,
+      "label": "356화 구룡탈적 (3)",
+      "kind": "numbered",
+      "number_claimed": 356,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2725088,
+      "label": "357화 어좌의 놀음, 게장과 감의 풍문",
+      "kind": "numbered",
+      "number_claimed": 357,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2731354,
+      "label": "358화 어좌의 놀음, 게장과 감의 풍문 (2)",
+      "kind": "numbered",
+      "number_claimed": 358,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2740267,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2740361,
+      "label": "359화 어좌의 놀음, 게장과 감의 풍문 (3)",
+      "kind": "numbered",
+      "number_claimed": 359,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2748666,
+      "label": "360화 어좌의 놀음, 게장과 감의 풍문 (4)",
+      "kind": "numbered",
+      "number_claimed": 360,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2756642,
+      "label": "361화 어좌의 놀음, 게장과 감의 풍문 (5)",
+      "kind": "numbered",
+      "number_claimed": 361,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2766278,
+      "label": "362화 어좌의 놀음, 게장과 감의 풍문 (6)",
+      "kind": "numbered",
+      "number_claimed": 362,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2772735,
+      "label": "363화 어좌의 놀음, 게장과 감의 풍문 (7)",
+      "kind": "numbered",
+      "number_claimed": 363,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2779631,
+      "label": "364화 어좌의 놀음, 게장과 감의 풍문 (8)",
+      "kind": "numbered",
+      "number_claimed": 364,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2786535,
+      "label": "365화 어좌의 놀음, 게장과 감의 풍문 (9)",
+      "kind": "numbered",
+      "number_claimed": 365,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2797578,
+      "label": "366화 어좌의 놀음, 게장과 감의 풍문 (10)",
+      "kind": "numbered",
+      "number_claimed": 366,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2805165,
+      "label": "367화 이란의 막간",
+      "kind": "numbered",
+      "number_claimed": 367,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2812966,
+      "label": "368화 이란의 막간 (2)",
+      "kind": "numbered",
+      "number_claimed": 368,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2820318,
+      "label": "369화 나디르 샤",
+      "kind": "numbered",
+      "number_claimed": 369,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2826850,
+      "label": "370화 나디르 샤 (2)",
+      "kind": "numbered",
+      "number_claimed": 370,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2834369,
+      "label": "371화 최후의 정복자",
+      "kind": "numbered",
+      "number_claimed": 371,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2840566,
+      "label": "372화 최후의 정복자 (2)",
+      "kind": "numbered",
+      "number_claimed": 372,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2849502,
+      "label": "373화 최후의 정복자 (3)",
+      "kind": "numbered",
+      "number_claimed": 373,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2857627,
+      "label": "374화 최후의 정복자 (4)",
+      "kind": "numbered",
+      "number_claimed": 374,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2865233,
+      "label": "375화 동방 원정",
+      "kind": "numbered",
+      "number_claimed": 375,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2874889,
+      "label": "376화 페르시아 원정",
+      "kind": "numbered",
+      "number_claimed": 376,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2881328,
+      "label": "377화 페르시아 원정 (2)",
+      "kind": "numbered",
+      "number_claimed": 377,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2889483,
+      "label": "378화 페르시아 원정 (3)",
+      "kind": "numbered",
+      "number_claimed": 378,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2898682,
+      "label": "379화 나인 전투",
+      "kind": "numbered",
+      "number_claimed": 379,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2912156,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 2912212,
+      "label": "380화 샤한샤",
+      "kind": "numbered",
+      "number_claimed": 380,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2924380,
+      "label": "381화 샤한샤 (2)",
+      "kind": "numbered",
+      "number_claimed": 381,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2934311,
+      "label": "382화 트란스옥시아나",
+      "kind": "numbered",
+      "number_claimed": 382,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2942767,
+      "label": "383화 인도",
+      "kind": "numbered",
+      "number_claimed": 383,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2950832,
+      "label": "384화 무굴",
+      "kind": "numbered",
+      "number_claimed": 384,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2957841,
+      "label": "385화 무굴 (2)",
+      "kind": "numbered",
+      "number_claimed": 385,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2965633,
+      "label": "386화 바지라오",
+      "kind": "numbered",
+      "number_claimed": 386,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2978165,
+      "label": "387화 바지라오 (2)",
+      "kind": "numbered",
+      "number_claimed": 387,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2984553,
+      "label": "388화 바지라오 (3)",
+      "kind": "numbered",
+      "number_claimed": 388,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 2993006,
+      "label": "389화 봄베이",
+      "kind": "numbered",
+      "number_claimed": 389,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3004233,
+      "label": "390화 얀의 치세",
+      "kind": "numbered",
+      "number_claimed": 390,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3015238,
+      "label": "391화 얀의 치세 (2)",
+      "kind": "numbered",
+      "number_claimed": 391,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3025052,
+      "label": "392화 얀의 치세 (3)",
+      "kind": "numbered",
+      "number_claimed": 392,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3032227,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3032367,
+      "label": "393화 너, 행복한 로마여, 결혼하라!",
+      "kind": "numbered",
+      "number_claimed": 393,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3043162,
+      "label": "394화 너, 행복한 로마여, 결혼하라! (2)",
+      "kind": "numbered",
+      "number_claimed": 394,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3054534,
+      "label": "395화 준가르",
+      "kind": "numbered",
+      "number_claimed": 395,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3061555,
+      "label": "396화 알바진",
+      "kind": "numbered",
+      "number_claimed": 396,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3070384,
+      "label": "397화 기유변란",
+      "kind": "numbered",
+      "number_claimed": 397,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3077487,
+      "label": "398화 기유변란 (2)",
+      "kind": "numbered",
+      "number_claimed": 398,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3084955,
+      "label": "399화 기유변란 (3)",
+      "kind": "numbered",
+      "number_claimed": 399,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3093307,
+      "label": "400화 경술호란",
+      "kind": "numbered",
+      "number_claimed": 400,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3103804,
+      "label": "401화 경술호란 (2)",
+      "kind": "numbered",
+      "number_claimed": 401,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3112868,
+      "label": "402화 경술호란 (3)",
+      "kind": "numbered",
+      "number_claimed": 402,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3120135,
+      "label": "403화 숙천의 맹",
+      "kind": "numbered",
+      "number_claimed": 403,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3126712,
+      "label": "404화 숙천의 맹 (2)",
+      "kind": "numbered",
+      "number_claimed": 404,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3133995,
+      "label": "405화 부여",
+      "kind": "numbered",
+      "number_claimed": 405,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3141242,
+      "label": "406화 부여 (2)",
+      "kind": "numbered",
+      "number_claimed": 406,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3149693,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3149777,
+      "label": "407화 부여 (3)",
+      "kind": "numbered",
+      "number_claimed": 407,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3158361,
+      "label": "408화 제국의 역습",
+      "kind": "numbered",
+      "number_claimed": 408,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3166262,
+      "label": "409화 제국의 역습 (2)",
+      "kind": "numbered",
+      "number_claimed": 409,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3176600,
+      "label": "410화 제국의 역습 (3)",
+      "kind": "numbered",
+      "number_claimed": 410,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3184052,
+      "label": "411화 알바진 공방전",
+      "kind": "numbered",
+      "number_claimed": 411,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3193925,
+      "label": "412화 알바진 공방전 (2)",
+      "kind": "numbered",
+      "number_claimed": 412,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3205616,
+      "label": "413화 허물",
+      "kind": "numbered",
+      "number_claimed": 413,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3215687,
+      "label": "414화 징조",
+      "kind": "numbered",
+      "number_claimed": 414,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3222710,
+      "label": "415화 오장원에 뜨는 해",
+      "kind": "numbered",
+      "number_claimed": 415,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3232888,
+      "label": "416화 봉상 전투",
+      "kind": "numbered",
+      "number_claimed": 416,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3239330,
+      "label": "417화 봉상 전투 (2)",
+      "kind": "numbered",
+      "number_claimed": 417,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3249338,
+      "label": "418화 봉상 전투 (3)",
+      "kind": "numbered",
+      "number_claimed": 418,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3256044,
+      "label": "419화 봉상 전투 (4)",
+      "kind": "numbered",
+      "number_claimed": 419,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3263044,
+      "label": "420화 진천명(眞天命)",
+      "kind": "numbered",
+      "number_claimed": 420,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3270365,
+      "label": "421화 진천명(眞天命) (2)",
+      "kind": "numbered",
+      "number_claimed": 421,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3277500,
+      "label": "422화 진천명(眞天命) (3)",
+      "kind": "numbered",
+      "number_claimed": 422,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3288363,
+      "label": "423화 진천명(眞天命) (4)",
+      "kind": "numbered",
+      "number_claimed": 423,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3295081,
+      "label": "424화 멸만흥한(滅滿興韓)",
+      "kind": "numbered",
+      "number_claimed": 424,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3303583,
+      "label": "425화 멸만흥한(滅滿興韓) (2)",
+      "kind": "numbered",
+      "number_claimed": 425,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3310590,
+      "label": "426화 멸만흥한(滅滿興韓) (3)",
+      "kind": "numbered",
+      "number_claimed": 426,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3320050,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3320089,
+      "label": "427화 멸만흥한(滅滿興韓) (4)",
+      "kind": "numbered",
+      "number_claimed": 427,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3328953,
+      "label": "428화 대청의 끝",
+      "kind": "numbered",
+      "number_claimed": 428,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3338861,
+      "label": "429화 혁명",
+      "kind": "numbered",
+      "number_claimed": 429,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3348518,
+      "label": "430화 한의 치세",
+      "kind": "numbered",
+      "number_claimed": 430,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3356651,
+      "label": "431화 뒤주대왕",
+      "kind": "numbered",
+      "number_claimed": 431,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3366443,
+      "label": "432화 뒤주대왕 (2)",
+      "kind": "numbered",
+      "number_claimed": 432,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3374961,
+      "label": "작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3375011,
+      "label": "433화 뒤주대왕 (3)",
+      "kind": "numbered",
+      "number_claimed": 433,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3384651,
+      "label": "434화 냉정과 열정 사이",
+      "kind": "numbered",
+      "number_claimed": 434,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3393262,
+      "label": "435화 시대의 발걸음",
+      "kind": "numbered",
+      "number_claimed": 435,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3400750,
+      "label": "436화 시대의 발걸음 (2)",
+      "kind": "numbered",
+      "number_claimed": 436,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3409169,
+      "label": "437화 납절해인",
+      "kind": "numbered",
+      "number_claimed": 437,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3416850,
+      "label": "438화 예화석권",
+      "kind": "numbered",
+      "number_claimed": 438,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3428808,
+      "label": "439화 대한",
+      "kind": "numbered",
+      "number_claimed": 439,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3436370,
+      "label": "440화 귀환",
+      "kind": "numbered",
+      "number_claimed": 440,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3443568,
+      "label": "441화 오스트리아 왕위 계승 전쟁",
+      "kind": "numbered",
+      "number_claimed": 441,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3450449,
+      "label": "442화 돈 문제",
+      "kind": "numbered",
+      "number_claimed": 442,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3458911,
+      "label": "443화 돈 문제 (2)",
+      "kind": "numbered",
+      "number_claimed": 443,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3464752,
+      "label": "444화 파리 진격",
+      "kind": "numbered",
+      "number_claimed": 444,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3473093,
+      "label": "445화 파리 진격 (2)",
+      "kind": "numbered",
+      "number_claimed": 445,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3479437,
+      "label": "446화 파리 진격 (3)",
+      "kind": "numbered",
+      "number_claimed": 446,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3486795,
+      "label": "447화 속죄의 부르봉",
+      "kind": "numbered",
+      "number_claimed": 447,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3494162,
+      "label": "448화 속죄의 부르봉 (2)",
+      "kind": "numbered",
+      "number_claimed": 448,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3503069,
+      "label": "449화 침몰하는 브리튼",
+      "kind": "numbered",
+      "number_claimed": 449,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3514265,
+      "label": "450화 세계의 아버지",
+      "kind": "numbered",
+      "number_claimed": 450,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3520937,
+      "label": "451화 다이아몬드 쥬빌레",
+      "kind": "numbered",
+      "number_claimed": 451,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3527272,
+      "label": "452화 작별",
+      "kind": "numbered",
+      "number_claimed": 452,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3534247,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3534283,
+      "label": "453화 정훈과 엘주비에타",
+      "kind": "numbered",
+      "number_claimed": 453,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3544505,
+      "label": "작가의 말.",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3544665,
+      "label": "454화 외전. 가긴 어딜 가겠어",
+      "kind": "numbered",
+      "number_claimed": 454,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3550681,
+      "label": "455화 외전. 가긴 어딜 가겠어 (2)",
+      "kind": "numbered",
+      "number_claimed": 455,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3558329,
+      "label": "456화 외전. 이전 시대의 평화",
+      "kind": "numbered",
+      "number_claimed": 456,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3564588,
+      "label": "457화 외전. 이전 시대의 평화 (2)",
+      "kind": "numbered",
+      "number_claimed": 457,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3573384,
+      "label": "458화 외전. 이전 시대의 평화 (3)",
+      "kind": "numbered",
+      "number_claimed": 458,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3580356,
+      "label": "459화 외전. 근대에 떨어진 범부(凡婦)",
+      "kind": "numbered",
+      "number_claimed": 459,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3589951,
+      "label": "460화 외전. 근대에 떨어진 범부(凡婦) (2)",
+      "kind": "numbered",
+      "number_claimed": 460,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3600124,
+      "label": "461화 외전. 19세기의 말, 20세기의 초.",
+      "kind": "numbered",
+      "number_claimed": 461,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3607217,
+      "label": "462화 외전. 19세기의 말, 20세기의 초. (2)",
+      "kind": "numbered",
+      "number_claimed": 462,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3615852,
+      "label": "463화 외전. 각축의 시대",
+      "kind": "numbered",
+      "number_claimed": 463,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3622952,
+      "label": "464화 외전. 각축의 시대 (2)",
+      "kind": "numbered",
+      "number_claimed": 464,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3633906,
+      "label": "465화 외전. 각축의 시대 (3)",
+      "kind": "numbered",
+      "number_claimed": 465,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3641953,
+      "label": "466화 외전. 준비",
+      "kind": "numbered",
+      "number_claimed": 466,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3648851,
+      "label": "467화 외전. 빈니차 시스템 (1)",
+      "kind": "numbered",
+      "number_claimed": 467,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3656635,
+      "label": "468화 외전. 빈니차 시스템 (2)",
+      "kind": "numbered",
+      "number_claimed": 468,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3666206,
+      "label": "469화 외전. 빈니차 시스템 (3)",
+      "kind": "numbered",
+      "number_claimed": 469,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3677574,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3681153,
+      "label": "470화 외전. 강철의 후사리아",
+      "kind": "numbered",
+      "number_claimed": 470,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3689470,
+      "label": "471화 외전. 혈통",
+      "kind": "numbered",
+      "number_claimed": 471,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3697582,
+      "label": "472화 외전. 혈통 (2)",
+      "kind": "numbered",
+      "number_claimed": 472,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3711324,
+      "label": "473화 외전. 천재들",
+      "kind": "numbered",
+      "number_claimed": 473,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3718883,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3719003,
+      "label": "474화 외전. 천재들 (2)",
+      "kind": "numbered",
+      "number_claimed": 474,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3727385,
+      "label": "475화 외전. 스캔들",
+      "kind": "numbered",
+      "number_claimed": 475,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3736902,
+      "label": "476화 외전. 스캔들 (2)",
+      "kind": "numbered",
+      "number_claimed": 476,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3745781,
+      "label": "477화 외전. 황태자",
+      "kind": "numbered",
+      "number_claimed": 477,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3758583,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3758669,
+      "label": "478화 외전. 일본",
+      "kind": "numbered",
+      "number_claimed": 478,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3766937,
+      "label": "479화 외전. 일본 (2)",
+      "kind": "numbered",
+      "number_claimed": 479,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3773372,
+      "label": "*작가의 말.",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3773535,
+      "label": "480화 외전. 일본 (3)",
+      "kind": "numbered",
+      "number_claimed": 480,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3786055,
+      "label": "481화 외전. 일본 (4)",
+      "kind": "numbered",
+      "number_claimed": 481,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3794513,
+      "label": "*작가의 말.",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    },
+    {
+      "start_cp": 3794570,
+      "label": "482화 외전. 일왕가의 비극",
+      "kind": "numbered",
+      "number_claimed": 482,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3803237,
+      "label": "483화 외전. 대한",
+      "kind": "numbered",
+      "number_claimed": 483,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3811743,
+      "label": "484화 외전. 박람회",
+      "kind": "numbered",
+      "number_claimed": 484,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3817842,
+      "label": "485화 외전. 붉은 혁명가들",
+      "kind": "numbered",
+      "number_claimed": 485,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3829038,
+      "label": "486화 외전. 선택과 필연",
+      "kind": "numbered",
+      "number_claimed": 486,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3836281,
+      "label": "487화 외전. 선택과 필연 (2)",
+      "kind": "numbered",
+      "number_claimed": 487,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3843436,
+      "label": "488화 외전. 선택과 필연 (3)",
+      "kind": "numbered",
+      "number_claimed": 488,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3852033,
+      "label": "489화 외전. 선택과 필연 (4)",
+      "kind": "numbered",
+      "number_claimed": 489,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3859262,
+      "label": "490화 외전. 로마여, 내 피를 원하는가?",
+      "kind": "numbered",
+      "number_claimed": 490,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3867670,
+      "label": "491화 외전. 당신을 위하여",
+      "kind": "numbered",
+      "number_claimed": 491,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3875172,
+      "label": "492화 외전. 당신을 위하여 (2)",
+      "kind": "numbered",
+      "number_claimed": 492,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3884608,
+      "label": "493화 외전. 대전쟁",
+      "kind": "numbered",
+      "number_claimed": 493,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3891329,
+      "label": "494화 외전. 대전쟁 (2)",
+      "kind": "numbered",
+      "number_claimed": 494,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3898082,
+      "label": "495화 외전. 대군세",
+      "kind": "numbered",
+      "number_claimed": 495,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3905051,
+      "label": "496화 외전. 런던 해즈 폴른",
+      "kind": "numbered",
+      "number_claimed": 496,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3911950,
+      "label": "497화 외전. 몰락",
+      "kind": "numbered",
+      "number_claimed": 497,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3919360,
+      "label": "498화 외전. 몰락 (2)",
+      "kind": "numbered",
+      "number_claimed": 498,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3926211,
+      "label": "499화 외전. 몰락 (3)",
+      "kind": "numbered",
+      "number_claimed": 499,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3933531,
+      "label": "500화 외전. 몰락 (4)",
+      "kind": "numbered",
+      "number_claimed": 500,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3941346,
+      "label": "501화 외전. 심판의 날",
+      "kind": "numbered",
+      "number_claimed": 501,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3948376,
+      "label": "502화 외전. 심판의 날 (2)",
+      "kind": "numbered",
+      "number_claimed": 502,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3956838,
+      "label": "503화 외전. 새로운 세상",
+      "kind": "numbered",
+      "number_claimed": 503,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3963712,
+      "label": "504화 외전. 창사특집 바코비에(Bakowie)",
+      "kind": "numbered",
+      "number_claimed": 504,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3972920,
+      "label": "505화 외전. 창사특집 바코비에(Bakowie) (2)",
+      "kind": "numbered",
+      "number_claimed": 505,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3979573,
+      "label": "506화 외전. 창사특집 바코비에(Bakowie) (3)",
+      "kind": "numbered",
+      "number_claimed": 506,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3985956,
+      "label": "507화 외전. 창사특집 바코비에(Bakowie) (4)",
+      "kind": "numbered",
+      "number_claimed": 507,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 3997299,
+      "label": "508화 외전. 창사특집 바코비에(Bakowie) (5)",
+      "kind": "numbered",
+      "number_claimed": 508,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4003583,
+      "label": "509화 외전. 창사특집 바코비에(Bakowie) (6)",
+      "kind": "numbered",
+      "number_claimed": 509,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4009724,
+      "label": "510화 외전. 창사특집 바코비에(Bakowie) (7)",
+      "kind": "numbered",
+      "number_claimed": 510,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4016676,
+      "label": "511화 외전. 창사특집 바코비에(Bakowie) (8)",
+      "kind": "numbered",
+      "number_claimed": 511,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4022695,
+      "label": "512화 외전. 창사특집 바코비에(Bakowie) (9)",
+      "kind": "numbered",
+      "number_claimed": 512,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4031513,
+      "label": "513화 외전. 창사특집 바코비에(Bakowie) (10)",
+      "kind": "numbered",
+      "number_claimed": 513,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4039163,
+      "label": "514화 외전. 창사특집 바코비에(Bakowie) (11)",
+      "kind": "numbered",
+      "number_claimed": 514,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4046464,
+      "label": "515화 외전. 창사특집 바코비에(Bakowie) (12)",
+      "kind": "numbered",
+      "number_claimed": 515,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4053590,
+      "label": "516화 외전. 창사특집 바코비에(Bakowie) (13)",
+      "kind": "numbered",
+      "number_claimed": 516,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4060961,
+      "label": "517화 외전. 창사특집 바코비에(Bakowie) (14)",
+      "kind": "numbered",
+      "number_claimed": 517,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4067130,
+      "label": "518화 외전. 창사특집 바코비에(Bakowie) (15)",
+      "kind": "numbered",
+      "number_claimed": 518,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4073668,
+      "label": "519화 외전. 창사특집 바코비에(Bakowie) (16)",
+      "kind": "numbered",
+      "number_claimed": 519,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4081670,
+      "label": "520화 외전. 창사특집 바코비에(Bakowie) (17)",
+      "kind": "numbered",
+      "number_claimed": 520,
+      "confidence": "confirmed",
+      "note": "원문 표제 행과 후보 codepoint 위치·label이 정확히 일치한다."
+    },
+    {
+      "start_cp": 4088701,
+      "label": "폴란드 여왕 키우기 521화",
+      "kind": "numbered",
+      "number_claimed": 521,
+      "confidence": "confirmed",
+      "note": "작품명+회차번호의 변형 표제. 제목 '외전. 창사특집 바코비에(Bakowie) (18)'는 빈 줄 뒤 다음 줄에 있다. 별도 회차 경계로 추가하지 않았다."
+    },
+    {
+      "start_cp": 4094654,
+      "label": "폴란드 여왕 키우기 522화",
+      "kind": "numbered",
+      "number_claimed": 522,
+      "confidence": "confirmed",
+      "note": "작품명+회차번호의 변형 표제. 제목 '외전. 거자필반'는 빈 줄 뒤 다음 줄에 있다. 별도 회차 경계로 추가하지 않았다."
+    },
+    {
+      "start_cp": 4102158,
+      "label": "폴란드 여왕 키우기 523화",
+      "kind": "numbered",
+      "number_claimed": 523,
+      "confidence": "confirmed",
+      "note": "작품명+회차번호의 변형 표제. 제목 '외전. 회자정리'는 빈 줄 뒤 다음 줄에 있다. 별도 회차 경계로 추가하지 않았다."
+    },
+    {
+      "start_cp": 4113564,
+      "label": "폴란드 여왕 키우기 524화",
+      "kind": "numbered",
+      "number_claimed": 524,
+      "confidence": "confirmed",
+      "note": "작품명+회차번호의 변형 표제. 제목 '외전. 폴란드는 우주에 갈 수 있어! (完)'는 빈 줄 뒤 다음 줄에 있다. 별도 회차 경계로 추가하지 않았다."
+    },
+    {
+      "start_cp": 4119030,
+      "label": "*작가의 말",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에 명시된 작가의 말 표제 행이다. 본문과 구분되는 별도 note 경계로 기록했다."
+    }
+  ]
+}

@@ -1,0 +1,446 @@
+{
+  "checked_at": "2026-09-24",
+  "basis": "Public platform indicators; not audited total sales or complete ranking of all owned works",
+  "rank_source": "https://www.munpia.com/best/plsa.genre?displayType=LIST&tab=plhistory",
+  "novels": [
+    {
+      "title": "블랙기업조선",
+      "author": "국뽕™",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/182112",
+      "views": 40034321,
+      "favorites": 41783,
+      "likes": 961867,
+      "episodes": 1231,
+      "priority": "A",
+      "analysis_question": "기술 도입을 장기적인 제도·산업 변화와 회차 보상으로 연결하는 방식",
+      "munpia_recent_purchase_rank": 63,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2606",
+          "name": "블랙기업조선 1-1230 완.txt",
+          "id": "1v6myDbZJkMUGUHEbCmRXPRy9-R0kWJTB",
+          "url": "https://drive.google.com/file/d/1v6myDbZJkMUGUHEbCmRXPRy9-R0kWJTB/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "폭군 고종대왕 일대기",
+      "author": "리첼렌",
+      "platform": "문피아",
+      "url": "https://m.munpia.com/novel/detail/125076",
+      "views": 12644065,
+      "favorites": 20319,
+      "likes": 369458,
+      "episodes": 531,
+      "priority": "A",
+      "analysis_question": "강한 주인공의 결단과 국내외 정치적 반작용의 연결",
+      "munpia_recent_purchase_rank": 66,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2604",
+          "name": "폭군 고종대왕 일대기 1-530 (완) 리첼렌 누락수정.txt",
+          "id": "1xjpThaC1reLqtjzLSo6c-H_31fC-cSc4",
+          "url": "https://drive.google.com/file/d/1xjpThaC1reLqtjzLSo6c-H_31fC-cSc4/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "고려, 신대륙에 떨어지다",
+      "author": "마늘맛스낵",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/216931",
+      "views": 7599574,
+      "favorites": 12589,
+      "likes": 271185,
+      "episodes": 653,
+      "priority": "B",
+      "analysis_question": "이동·정착 이후 국가 단위 변화와 긴 서사의 확장",
+      "munpia_recent_purchase_rank": 131,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2605",
+          "name": "고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+          "id": "12Gc9wGbK6qs7Y7Ai1TlvHWnAUy3qVJi3",
+          "url": "https://drive.google.com/file/d/12Gc9wGbK6qs7Y7Ai1TlvHWnAUy3qVJi3/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "1588 샤인머스캣으로 귀농 왔더니 신대륙",
+      "author": "간다왼쪽",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/414226",
+      "views": 7154739,
+      "favorites": 21178,
+      "likes": 398332,
+      "episodes": 661,
+      "priority": "A",
+      "analysis_question": "농업이라는 출발점에서 역사 분기가 확대되는 과정",
+      "munpia_recent_purchase_rank": 57,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2603",
+          "name": "1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+          "id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+          "url": "https://drive.google.com/file/d/1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "화약고 제국의 천재 대공",
+      "author": "시작의바다",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/363878",
+      "views": 6411062,
+      "favorites": 15457,
+      "likes": 192114,
+      "episodes": 351,
+      "priority": "A",
+      "analysis_question": "제국의 제약 속에서 군주가 문제를 해결하고 전쟁에 대비하는 구성",
+      "munpia_recent_purchase_rank": 111,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2512",
+          "name": "화약고 제국의 천재 대공@시작의바다 1-351완, 외전포함.txt",
+          "id": "1ejFrnWQYcsE8EGC9kFlr2LiOQz77XSqE",
+          "url": "https://drive.google.com/file/d/1ejFrnWQYcsE8EGC9kFlr2LiOQz77XSqE/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "대영제국 선비의 공정무역",
+      "author": "명원(命元)",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/417725",
+      "views": 6276445,
+      "favorites": 23659,
+      "likes": 338418,
+      "episodes": 407,
+      "priority": "A",
+      "analysis_question": "경영·무역·정치의 결합과 인물의 말투·태도",
+      "munpia_recent_purchase_rank": 35,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2606",
+          "name": "대영제국 선비의 공정무역@명원命元 1-400완.txt",
+          "id": "15YDnXIxl0Xgh8CefOckT2tbKJ1OH0Opf",
+          "url": "https://drive.google.com/file/d/15YDnXIxl0Xgh8CefOckT2tbKJ1OH0Opf/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "내 조선에 세종은 없다",
+      "author": "핏콩",
+      "platform": "문피아",
+      "url": "https://m.munpia.com/novel/detail/334226",
+      "views": 6002914,
+      "favorites": 14445,
+      "likes": 207490,
+      "episodes": 469,
+      "priority": "A",
+      "analysis_question": "독자가 아는 역사적 인물과 주인공의 선택 사이의 긴장",
+      "munpia_recent_purchase_rank": 67,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2510",
+          "name": "내 조선에 세종은 없다 1~444화 외전 1~24화 완.txt",
+          "id": "1sjZoBOd8oVE521X_VTuR6Gm-qZWUGJar",
+          "url": "https://drive.google.com/file/d/1sjZoBOd8oVE521X_VTuR6Gm-qZWUGJar/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "조선, 혁명의 시대",
+      "author": "태사령",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/159950",
+      "views": 5893879,
+      "favorites": 10856,
+      "likes": 217358,
+      "episodes": 1107,
+      "priority": "B",
+      "analysis_question": "1,000화 이상 장편의 단계별 목표와 시대 전환",
+      "munpia_recent_purchase_rank": null,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2512",
+          "name": "조선, 혁명의 시대 1-1099 1-4부 완결.txt",
+          "id": "1PPnsC3ViCTuLWw_5vrmpWn0iXwiAIpL_",
+          "url": "https://drive.google.com/file/d/1PPnsC3ViCTuLWw_5vrmpWn0iXwiAIpL_/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "내 독일에 나치는 필요없다",
+      "author": "카르카손",
+      "platform": "문피아",
+      "url": "https://m.munpia.com/novel/detail/184712",
+      "views": 5588825,
+      "favorites": 14919,
+      "likes": 187593,
+      "episodes": 302,
+      "priority": "A",
+      "analysis_question": "생존 목표와 전쟁·체제 변화의 연결",
+      "munpia_recent_purchase_rank": null,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2604",
+          "name": "내 독일에 나치는 필요없다 1-302 [완].txt",
+          "id": "14eqik8wyR6o1ceWYV5cDCw1Pv6_0m0Z8",
+          "url": "https://drive.google.com/file/d/14eqik8wyR6o1ceWYV5cDCw1Pv6_0m0Z8/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "동방의 라스푸틴",
+      "author": "TheTempes",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/270085",
+      "views": 5557212,
+      "favorites": 14185,
+      "likes": 171762,
+      "episodes": 400,
+      "priority": "A",
+      "analysis_question": "권력 관계와 인물의 선택이 정치적 변화로 이어지는 과정",
+      "munpia_recent_purchase_rank": 138,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2605",
+          "name": "동방의 라스푸틴 1-400 외전완후기.txt",
+          "id": "1gHlJ_qZXvEk4uvhSfmKM6mS5HMeEE2Y9",
+          "url": "https://drive.google.com/file/d/1gHlJ_qZXvEk4uvhSfmKM6mS5HMeEE2Y9/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "미국 남부의 악덕 대지주가 되었다",
+      "author": "폭식마왕",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/502508",
+      "views": 5139663,
+      "favorites": 21366,
+      "likes": 248422,
+      "episodes": 577,
+      "priority": "B",
+      "analysis_question": "주인공의 이해관계와 제도적 갈등, 최근 독자 반응",
+      "munpia_recent_purchase_rank": 16,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2608",
+          "name": "미국 남부의 악덕 대지주가 되었다@폭식마왕 1-562완.txt",
+          "id": "1NGhWRbsWQ-HaJ_yF7ZiDVdXa-QwIb2py",
+          "url": "https://drive.google.com/file/d/1NGhWRbsWQ-HaJ_yF7ZiDVdXa-QwIb2py/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "근육조선",
+      "author": "차돌박E",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/155471",
+      "views": 4948881,
+      "favorites": 11850,
+      "likes": 147569,
+      "episodes": 574,
+      "priority": "A",
+      "analysis_question": "독특한 전문 지식·캐릭터를 장기 서사의 반복 동력으로 쓰는 방식",
+      "munpia_recent_purchase_rank": null,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2604",
+          "name": "근육조선 1-573 완결1,2부외전.txt",
+          "id": "1Es8XmjB1TN5J3rGo-HkJqiN5iq9Pg9Rf",
+          "url": "https://drive.google.com/file/d/1Es8XmjB1TN5J3rGo-HkJqiN5iq9Pg9Rf/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "조선왕자가 미국갔다 안 돌아옴",
+      "author": "누텔라.",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/319286",
+      "views": 4366379,
+      "favorites": 10479,
+      "likes": 143157,
+      "episodes": 606,
+      "priority": "B",
+      "analysis_question": "해외 진출·경제적 성취·독립 목표를 연결하는 과정",
+      "munpia_recent_purchase_rank": 125,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2510",
+          "name": "조선왕자가 미국갔다 안 돌아옴 1-606 완.txt",
+          "id": "1wLrojk4MiCsklqfZxdbMOgtrQ_vMpnC1",
+          "url": "https://drive.google.com/file/d/1wLrojk4MiCsklqfZxdbMOgtrQ_vMpnC1/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "경제왕 연산군",
+      "author": "라구.B.P",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/414764",
+      "views": 4061713,
+      "favorites": 12619,
+      "likes": 192219,
+      "episodes": 396,
+      "priority": "A",
+      "analysis_question": "경제 정책을 인물의 목표·정치적 갈등과 결합하는 방식",
+      "munpia_recent_purchase_rank": 99,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2607",
+          "name": "경제왕 연산군@라구.B.P 1-396완.txt",
+          "id": "1JZBdQdxRtBS0jybvrKapd0gNXO-qGMj8",
+          "url": "https://drive.google.com/file/d/1JZBdQdxRtBS0jybvrKapd0gNXO-qGMj8/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "폴란드 여왕 키우기",
+      "author": "마늘맛스낵",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/415466",
+      "views": 4004530,
+      "favorites": 11836,
+      "likes": 237301,
+      "episodes": 524,
+      "priority": "B",
+      "analysis_question": "중세 정치·영지 운영과 인물 관계를 함께 전개하는 방식",
+      "munpia_recent_purchase_rank": 73,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2607",
+          "name": "폴란드 여왕 키우기 1-524 완결.txt",
+          "id": "1-DJl9LGFtkgnP_gZ2aM9bw2UltnbNXAk",
+          "url": "https://drive.google.com/file/d/1-DJl9LGFtkgnP_gZ2aM9bw2UltnbNXAk/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "바이킹은 놀이기구가 아니다",
+      "author": "하리보매니아",
+      "platform": "노벨피아",
+      "url": "https://novelpia.com/novel/105791",
+      "views": 3958194,
+      "favorites": 13842,
+      "episodes": 560,
+      "priority": "B",
+      "analysis_question": "다른 플랫폼의 중세·영지·관계 중심 서사와 비교",
+      "munpia_recent_purchase_rank": null,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2609",
+          "name": "바이킹은 놀이기구가 아니다 1-560 완결.txt",
+          "id": "1DpyJpj-DfpXi2JrA4DmrNVnqNPDQ-jhs",
+          "url": "https://drive.google.com/file/d/1DpyJpj-DfpXi2JrA4DmrNVnqNPDQ-jhs/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "러시아에 혁명 따윈 없다",
+      "author": "쿤타세계관",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/423029",
+      "views": 3944047,
+      "favorites": 12957,
+      "likes": 144116,
+      "episodes": 257,
+      "priority": "B",
+      "analysis_question": "군주·개혁 서사의 비교와 비교적 짧은 장편 구성",
+      "munpia_recent_purchase_rank": 70,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2511",
+          "name": "러시아에 혁명 따윈 없다 1-257 완.txt",
+          "id": "14GC-7Sp6R-P19YJO4sFaskpC-B2qRpp-",
+          "url": "https://drive.google.com/file/d/14GC-7Sp6R-P19YJO4sFaskpC-B2qRpp-/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "대영제국의 숨은 거물이 되었다",
+      "author": "폭식마왕",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/354363",
+      "views": 3903220,
+      "favorites": 12169,
+      "likes": 155958,
+      "episodes": 538,
+      "priority": "B",
+      "analysis_question": "하층 출발점에서 정치·경제적 영향력을 축적하는 과정",
+      "munpia_recent_purchase_rank": 116,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2605",
+          "name": "[폭식마왕] 대영제국의 숨은 거물이 되었다 1-537화完.txt",
+          "id": "1Z2fh2N9f92KlvAWwJUQ3n3Ug0KS2GCx5",
+          "url": "https://drive.google.com/file/d/1Z2fh2N9f92KlvAWwJUQ3n3Ug0KS2GCx5/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "전쟁을 딛고 재벌로",
+      "author": "푸달",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/434081",
+      "views": 3881329,
+      "favorites": 12277,
+      "likes": 135145,
+      "episodes": 386,
+      "priority": "B",
+      "analysis_question": "전쟁·자원·경제적 성취의 연결과 보상 설계",
+      "munpia_recent_purchase_rank": 105,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2606",
+          "name": "[푸달] 전쟁을 딛고 재벌로 1-386 에필로그 포함 완결.txt",
+          "id": "1j2mMgpa_5GHdeiRYc4ffLJC4jw07ieAu",
+          "url": "https://drive.google.com/file/d/1j2mMgpa_5GHdeiRYc4ffLJC4jw07ieAu/view?usp=drivesdk"
+        }
+      ]
+    },
+    {
+      "title": "성군 순종대왕 일대기",
+      "author": "리첼렌",
+      "platform": "문피아",
+      "url": "https://www.munpia.com/novel/detail/475882",
+      "views": 3558051,
+      "favorites": 10728,
+      "likes": 178993,
+      "episodes": 340,
+      "priority": "B",
+      "analysis_question": "폭군 고종대왕 일대기와 같은 작가의 다른 작품 비교",
+      "munpia_recent_purchase_rank": 62,
+      "rank_snapshot": "2026-09-23 00:00 (페이지 표기)",
+      "owned_files": [
+        {
+          "folder": "2604",
+          "name": "성군 순종대왕 일대기 1-322 리첼렌 완결.txt",
+          "id": "1PpAU5v-N9b67ZXWd_Rbv-sEZi7JzD6Cx",
+          "url": "https://drive.google.com/file/d/1PpAU5v-N9b67ZXWd_Rbv-sEZi7JzD6Cx/view?usp=drivesdk"
+        }
+      ]
+    }
+  ]
+}

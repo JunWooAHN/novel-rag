@@ -27,3 +27,15 @@ node_modules/
 
 # Claude Code
 .claude/settings.local.json
+
+# Local novel source copies and corpus database (keep manifest, tools, and rules)
+docs/references/**/*.txt
+data/analysis/*.sqlite3
+data/analysis/*.sqlite3-*
+
+# Local document harness database and SQLite backup/sidecar files
+data/document_harness/**/*.sqlite3
+data/document_harness/**/*.sqlite3-*
+
+# Local Wikipedia source dump
+/wiki-dump/

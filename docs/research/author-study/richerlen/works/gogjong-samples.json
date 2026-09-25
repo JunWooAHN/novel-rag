@@ -1,0 +1,60 @@
+{
+  "file": {
+    "drive_file_id": "1xjpThaC1reLqtjzLSo6c-H_31fC-cSc4",
+    "drive_title": "폭군 고종대왕 일대기 1-530 (완) 리첼렌 누락수정.txt",
+    "mime_type": "text/plain",
+    "metadata_size_bytes": 9641037,
+    "fetched_text_utf16_code_units": 3991522,
+    "fetched_text_utf8_bytes": 9641037,
+    "fetched_text_lines": 72643,
+    "last_content_marker": "［完］",
+    "truncation_check": "UTF-8 byte count of fetched text equals Drive metadata size; end marker present",
+    "url": "https://drive.google.com/file/d/1xjpThaC1reLqtjzLSo6c-H_31fC-cSc4/view?usp=drivesdk",
+    "local_copy": {
+      "relative_path": "docs/references/richerlen/폭군 고종대왕 일대기 1-530 (완) 리첼렌 누락수정.txt",
+      "size_bytes": 9641037,
+      "md5": "09cdc4b02b640d3f320458b7ccc41f82",
+      "sha256": "9f3688428abd072b291a753246201cf621d11cd95621c2f755da401840ecc94c",
+      "comparison": "Reconstructed from fetched text with the fetched CRLF profile; size matches Drive metadata. Drive md5Checksum was not returned, so original raw-byte identity was not independently verified."
+    }
+  },
+  "indexing": {
+    "boundary_pattern": "A line whose trimmed content matches 【...】",
+    "heading_boundary_count": 513,
+    "interpretation": "Header rank is an extraction index only; the source does not consistently map these boundaries to official episode numbers.",
+    "line_numbers": "1-based; line_end is the last line before the next heading line",
+    "character_offsets": "0-based UTF-16 code-unit offsets into the complete fetched text with CRLF preserved; end is exclusive",
+    "sample_scope": "Selected heading blocks were indexed in full for traceability. Reading focused on the named sample passages and short local context, not every character of each block."
+  },
+  "core_sample_count": 9,
+  "samples": [
+    {"header_rank": 1, "heading": "【프롤로그】", "line_start": 4, "line_end": 115, "char_start_utf16": 88, "char_end_utf16_exclusive": 4908, "focus": "opening hook, protagonist grievance, death, reincarnation payoff", "inspection": "close read of full titled block"},
+    {"header_rank": 2, "heading": "【상황을 정리하다】", "line_start": 116, "line_end": 279, "char_start_utf16": 4908, "char_end_utf16_exclusive": 15368, "focus": "identity recognition and initial situation setup", "inspection": "opening and closing context"},
+    {"header_rank": 120, "heading": "【전쟁을 끝내는 방법】", "line_start": 18162, "line_end": 18275, "char_start_utf16": 958366, "char_end_utf16_exclusive": 965861, "focus": "proposed allied-navy landing at Nanjing, force imbalance, Park Gyu-su's alarm", "inspection": "opening and targeted Nanjing / force-risk context"},
+    {"header_rank": 221, "heading": "【스톡홀름 조약】", "line_start": 31188, "line_end": 31301, "char_start_utf16": 1731485, "char_end_utf16_exclusive": 1738997, "focus": "Britain's wish for secrecy, Germany's wish for publicity, allied reaction", "inspection": "opening, announcement, and closing exchange"},
+    {"header_rank": 228, "heading": "【산업화】", "line_start": 32068, "line_end": 32203, "char_start_utf16": 1784177, "char_end_utf16_exclusive": 1791624, "focus": "Pohang steelworks completion, imperial visit, Carnegie dialogue and trade talk", "inspection": "opening, steelworks visit, and closing exchange"},
+    {"header_rank": 507, "heading": "【아주의 방패】", "line_start": 72084, "line_end": 72153, "char_start_utf16": 3938952, "char_end_utf16_exclusive": 3946192, "focus": "Korean national slogan and retrospective reasoning about political choices before World War III", "inspection": "opening and targeted political-analysis contexts"},
+    {"header_ranks": [493, 494, 495], "headings": ["【너의 제국】", "【두 사람의 황제】", "【대한 고조를 추억하며】"], "line_start": 70592, "line_end": 71153, "char_start_utf16": 3824569, "char_end_utf16_exclusive": 3856290, "focus": "father-son succession discussion, main-story end marker, and a dated 2020 in-world historical essay", "inspection": "selected opening and closing passages across the consecutive coda transition"},
+    {"header_ranks": [504, 505], "headings": ["【초인의 빈자리】", "【가짜 초인들의 시대】"], "line_start": 71840, "line_end": 72011, "char_start_utf16": 3916789, "char_end_utf16_exclusive": 3931491, "focus": "posthumous public reception, symbolic use of the late emperor, and successor legitimacy crisis", "inspection": "opening and closing passages"},
+    {"header_rank": 513, "heading": "【역경과 승리의 역사】", "line_start": 72534, "line_end": 72643, "char_start_utf16": 3983918, "char_end_utf16_exclusive": 3991522, "focus": "cold-war chronology followed by a private conversation and final end marker", "inspection": "opening and final passage"}
+  ],
+  "context_only": [
+    {"header_rank": 508, "heading": "【3차대전 발발】", "line_start": 72154, "line_end": 72225, "char_start_utf16": 3946192, "char_end_utf16_exclusive": 3953380, "focus": "retrospective account of the 1936-1944 world war"},
+    {"header_rank": 509, "heading": "【세계 패권을 향한 길】", "line_start": 72226, "line_end": 72301, "char_start_utf16": 3953380, "char_end_utf16_exclusive": 3960619, "focus": "war fronts and the United States' 1941 declaration of war on Korea"},
+    {"header_rank": 510, "heading": "【샌프란시스코 폭동】", "line_start": 72302, "line_end": 72377, "char_start_utf16": 3960619, "char_end_utf16_exclusive": 3968163, "focus": "US perceptions of Korean ambitions and the nuclear race in the Pacific"},
+    {"header_rank": 511, "heading": "【3차대전 종전】", "line_start": 72378, "line_end": 72455, "char_start_utf16": 3968163, "char_end_utf16_exclusive": 3976110, "focus": "nuclear program history and the European war's political aftermath"},
+    {"header_rank": 512, "heading": "【대서양 적백내전】", "line_start": 72456, "line_end": 72533, "char_start_utf16": 3976110, "char_end_utf16_exclusive": 3983918, "focus": "historiographic debate about the European socialist revolution and Cold War"}
+  ],
+  "closure_markers": [
+    {"marker": "［完］", "line": 70970, "char_start_utf16": 3840423, "char_end_utf16_exclusive": 3840426, "role": "main-story end marker; followed by the afterword label on line 70972"},
+    {"marker": "▣ 후일담", "line": 70972, "char_start_utf16": 3840430, "char_end_utf16_exclusive": 3840435, "role": "afterword begins after the main story closure"},
+    {"marker": "［完］", "line": 72642, "char_start_utf16": 3991517, "char_end_utf16_exclusive": 3991520, "role": "end of the appended historical coda"}
+  ],
+  "explicit_restoration_note": {
+    "line": 2,
+    "char_start_utf16": 16,
+    "char_end_utf16_exclusive": 84,
+    "listed_episode_labels": ["404. 검은돈", "405. 도버 대해전", "407. 한미회담", "408. 한미재계 회동", "409. 논쟁의 시대"],
+    "interpretation": "Present in the file header only; this is not a verified episode-by-episode index of body boundaries."
+  }
+}

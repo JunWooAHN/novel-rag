@@ -1,0 +1,4118 @@
+{
+  "work_id": "gogjong",
+  "source_sha256": "9f3688428abd072b291a753246201cf621d11cd95621c2f755da401840ecc94c",
+  "markers": [
+    {
+      "start_cp": 88,
+      "label": "【프롤로그】",
+      "kind": "prologue",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 표제가 프롤로그를 명시한다. 번호 회차로 환산하지 않았다."
+    },
+    {
+      "start_cp": 4908,
+      "label": "【상황을 정리하다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 15368,
+      "label": "【여흥부대부인 민씨】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 23132,
+      "label": "【입궁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 31100,
+      "label": "【도승지 민치상】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 39907,
+      "label": "【동요하는 한양】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 47521,
+      "label": "【승정원을 얻다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 55707,
+      "label": "【일을 터뜨리다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 64550,
+      "label": "【죽기 아니면 까무러치기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 72528,
+      "label": "【궁여지책】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 80240,
+      "label": "【기호지세】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 89095,
+      "label": "【조선통신사 박규수】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 98396,
+      "label": "【난관】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 106027,
+      "label": "【파리 외방전교회】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 113823,
+      "label": "【궁지에 몰리다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 122121,
+      "label": "【일본에서】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 140326,
+      "label": "【프랑스와의 수교】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 148085,
+      "label": "【청나라의 침공】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 156523,
+      "label": "【이하응과 김좌근】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 164446,
+      "label": "【대령강 전투】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 172158,
+      "label": "【평양성에서】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 180444,
+      "label": "【총체적 난국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 188491,
+      "label": "【각국의 사정】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 196548,
+      "label": "【격화되는 전투】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 207262,
+      "label": "【위기일발】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 218007,
+      "label": "【소년왕의 돌격】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 228934,
+      "label": "【김좌근의 야망】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 237113,
+      "label": "【역모대책】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 245511,
+      "label": "【무기시연】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 254052,
+      "label": "【개선】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 262827,
+      "label": "【부전자전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 270707,
+      "label": "【예상치 못한 승전】",
+      "kind": "unresolved",
+      "number_claimed": null,
+      "confidence": "hold",
+      "note": "이 표제부터 다음 【…】 표제까지 비정상적으로 긴 구간(26,891 코드포인트). 내부 회차 경계가 있을 수 있어 한 회차로 확정하지 않는다."
+    },
+    {
+      "start_cp": 297598,
+      "label": "【소년왕의 고뇌】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 305672,
+      "label": "【봉천조약】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 313698,
+      "label": "【근대화의 밑 준비】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 321513,
+      "label": "【프랑스 군사고문단】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 329789,
+      "label": "【영국 공사 토마스】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 337917,
+      "label": "【산 넘어 산】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 346174,
+      "label": "【6개국 사절단】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 353707,
+      "label": "【친우와 적】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 361401,
+      "label": "【불곰과 새끼 호랑이】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 368928,
+      "label": "【서역과의 거래】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 376958,
+      "label": "【청국의 공주】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 384389,
+      "label": "【호랑이 사냥】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 392188,
+      "label": "【시위대의 활약】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 399478,
+      "label": "【군제개혁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 406809,
+      "label": "【숙청】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 414187,
+      "label": "【10년 대계】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 421526,
+      "label": "【철강왕 앤드루 카네기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 429032,
+      "label": "【열강들로부터의 지원】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 436635,
+      "label": "【격동의 시대】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 444060,
+      "label": "【서태후의 야욕】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 451371,
+      "label": "【자업자득】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 458737,
+      "label": "【난세】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 466145,
+      "label": "【황제병】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 473527,
+      "label": "【출진】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 480904,
+      "label": "【심요정벌】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 488288,
+      "label": "【만주의 칸】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 495552,
+      "label": "【베이징의 정복자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 502912,
+      "label": "【베이징 약탈】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 510178,
+      "label": "【이권분배】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 517516,
+      "label": "【만주의 결투】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 524871,
+      "label": "【청의 섭정】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 532194,
+      "label": "【만주의 제왕】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 539511,
+      "label": "【분열】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 546793,
+      "label": "【천하삼분지계】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 554083,
+      "label": "【난세를 준비하다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 561372,
+      "label": "【각오와 결의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 568796,
+      "label": "【각오를 굳히다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 576064,
+      "label": "【결전을 앞두고】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 583371,
+      "label": "【무진전쟁의 서막】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 590687,
+      "label": "【마지막 한걸음】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 598159,
+      "label": "【결전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 605859,
+      "label": "【격돌】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 613198,
+      "label": "【결판이 나다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 620625,
+      "label": "【결투의 승자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 628026,
+      "label": "【이름을 떨치다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 635389,
+      "label": "【박규수 사절단】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 642698,
+      "label": "【차르의 진노】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 650380,
+      "label": "【국가유공자법】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 657947,
+      "label": "【무진개혁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 666021,
+      "label": "【엇갈린 부자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 674159,
+      "label": "【대한제국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 682168,
+      "label": "【아시아의 스승?】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 689790,
+      "label": "【대만 왕국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 697829,
+      "label": "【일보후퇴】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 705270,
+      "label": "【무진전쟁의 끝】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 712699,
+      "label": "【일본을 거래하다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 720679,
+      "label": "【거래의 결과】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 728181,
+      "label": "【형제의 나라】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 735507,
+      "label": "【기반을 다지다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 743169,
+      "label": "【1기 사관학교 졸업식】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 751040,
+      "label": "【어색한 재회】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 758977,
+      "label": "【엎친 데 덮친 격】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 766842,
+      "label": "【붉은색】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 774239,
+      "label": "【폭군의 괴팍함】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 781982,
+      "label": "【코리안 드림】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 789582,
+      "label": "【우리 장인 어르신】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 797167,
+      "label": "【광기의 시대】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 805004,
+      "label": "【이웃사촌】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 812609,
+      "label": "【최악을 위한 준비】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 820159,
+      "label": "【명예로운 군인】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 827794,
+      "label": "【생명이라는 이름의 탄환】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 835744,
+      "label": "【범아시아 조약기구 발족】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 843317,
+      "label": "【복분자주】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 850780,
+      "label": "【잘 살아보세】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 858437,
+      "label": "【행동하는 위선】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 865713,
+      "label": "【미래를 안다는 것】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 873732,
+      "label": "【B．J．R】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 881711,
+      "label": "【부추기기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 889192,
+      "label": "【미래를 아는 자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 896570,
+      "label": "【천기누설】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 904509,
+      "label": "【국유화 오보사건】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 912462,
+      "label": "【민족주의자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 920376,
+      "label": "【전쟁계획】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 928203,
+      "label": "【경기병대의 돌격】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 936039,
+      "label": "【이이제이】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 943670,
+      "label": "【운명은 없다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 950981,
+      "label": "【전쟁을 끝내야 할 이유】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 958366,
+      "label": "【전쟁을 끝내는 방법】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 965861,
+      "label": "【추수기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 973271,
+      "label": "【제 3의 선택지】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 980879,
+      "label": "【약올리기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 988902,
+      "label": "【사면초가】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 996880,
+      "label": "【일당백】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1004778,
+      "label": "【삼면초가】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1012518,
+      "label": "【가시리 가시리잇고】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1020441,
+      "label": "【문답】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1028106,
+      "label": "【점심 먹을 준비】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1036322,
+      "label": "【점심 식사】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1043655,
+      "label": "【참수작전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1051183,
+      "label": "【천하의 중심】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1058998,
+      "label": "【초승달】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1067125,
+      "label": "【강한 편이 내 편】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1075074,
+      "label": "【새로운 천하를 연다는 것】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1082348,
+      "label": "【흉내쟁이】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1090346,
+      "label": "【망집】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1098206,
+      "label": "【탐욕】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1105486,
+      "label": "【골칫거리】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1113191,
+      "label": "【혼란스러운 유럽】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1120798,
+      "label": "【10월 혁명】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1128147,
+      "label": "【좋은 구경】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1135635,
+      "label": "【허심탄회】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1143811,
+      "label": "【얕은 수】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1151154,
+      "label": "【어둠】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1158438,
+      "label": "【천하장안】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1165811,
+      "label": "【대역】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1173159,
+      "label": "【자승자박】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1180500,
+      "label": "【말과 함께 태어난 자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1188524,
+      "label": "【대초원의 법칙】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1196037,
+      "label": "【야심가】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1203629,
+      "label": "【타타르와 몽골】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1210980,
+      "label": "【적대적 공생】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1218425,
+      "label": "【역모?】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1227010,
+      "label": "【무식이 죄】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1234551,
+      "label": "【첫출전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1241930,
+      "label": "【쉬운 전쟁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1249325,
+      "label": "【말세】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1256592,
+      "label": "【속내】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1264354,
+      "label": "【보신】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1272087,
+      "label": "【영국의 우울】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1279501,
+      "label": "【원정실패】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1286923,
+      "label": "【연해주 평정】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1294183,
+      "label": "【둔전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1301890,
+      "label": "【극동의 나폴레옹】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1309297,
+      "label": "【무대 위로】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1317341,
+      "label": "【종전, 혹은 휴전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1325152,
+      "label": "【조국을 위하여】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1333166,
+      "label": "【태동】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1340676,
+      "label": "【천하유람?】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1348644,
+      "label": "【최고의 협상장】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1356208,
+      "label": "【귀국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1363748,
+      "label": "【재회】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1371539,
+      "label": "【새로운 시작】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1379431,
+      "label": "【국방성금】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1386781,
+      "label": "【강철의 도시】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1394503,
+      "label": "【경마사업】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1402002,
+      "label": "【유유상종】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1409816,
+      "label": "【무림?】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1417332,
+      "label": "【천하제일무술대회】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1424788,
+      "label": "【문화산업】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1432549,
+      "label": "【철면피의 시대】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1440072,
+      "label": "【종놈의 자식】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1447532,
+      "label": "【정신론】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1455553,
+      "label": "【전쟁경제】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1463286,
+      "label": "【천성】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1470956,
+      "label": "【명중】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1478909,
+      "label": "【부부】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1486463,
+      "label": "【젊은 나라】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1494099,
+      "label": "【독사】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1501466,
+      "label": "【정상참작】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1509234,
+      "label": "【임협】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1516834,
+      "label": "【회맹】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1524360,
+      "label": "【축제 당일】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1532441,
+      "label": "【투견】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1539956,
+      "label": "【무영각】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1547651,
+      "label": "【축제의 끝】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1555611,
+      "label": "【최지용 보총】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1563227,
+      "label": "【협상 난항】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1570748,
+      "label": "【격동의 베를린】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1578443,
+      "label": "【종전 협상】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1586048,
+      "label": "【날강도】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1593890,
+      "label": "【검은 월요일】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1601263,
+      "label": "【대영제국 국채투기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1608682,
+      "label": "【만능황금】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1616347,
+      "label": "【별】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1624160,
+      "label": "【기적】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1633057,
+      "label": "【동아줄】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1640682,
+      "label": "【분할】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1648228,
+      "label": "【돼지사냥】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1656016,
+      "label": "【세대교체 수순】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1663774,
+      "label": "【포부】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1671396,
+      "label": "【이강】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1678886,
+      "label": "【호가호위】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1686385,
+      "label": "【덤터기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1694132,
+      "label": "【반항기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1701583,
+      "label": "【이재면】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1708947,
+      "label": "【우물파기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1716656,
+      "label": "【시위】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1724132,
+      "label": "【대타협】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1731485,
+      "label": "【스톡홀름 조약】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1738997,
+      "label": "【패권경쟁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1746967,
+      "label": "【의회소집】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1754273,
+      "label": "【한불동맹】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1762102,
+      "label": "【뒤처리】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1769366,
+      "label": "【정월】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1776795,
+      "label": "【여흥 민씨】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1784177,
+      "label": "【산업화】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1791624,
+      "label": "【쿨리】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1799379,
+      "label": "【신대륙 이주】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1807035,
+      "label": "【아시아주의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1814393,
+      "label": "【물산장려운동】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1822283,
+      "label": "【국민주권론】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1830055,
+      "label": "【고구려?】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1837559,
+      "label": "【선거결과】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1844898,
+      "label": "【한미회담】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1852679,
+      "label": "【친미】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1860167,
+      "label": "【삼각동맹】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1867983,
+      "label": "【프리드리히 3세】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1875671,
+      "label": "【제12차 러시아-튀르크 전쟁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1883328,
+      "label": "【갈등】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1890931,
+      "label": "【수탉과 암사자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1898326,
+      "label": "【황금 아치】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1905852,
+      "label": "【별이 빛나는 나라】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1913591,
+      "label": "【망국의 예법】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1921489,
+      "label": "【미국행】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1929571,
+      "label": "【희망고문】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1937551,
+      "label": "【금의환향】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1945224,
+      "label": "【강국의 강군】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1952776,
+      "label": "【원석】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1960831,
+      "label": "【모르는 게 약】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1968648,
+      "label": "【애민의 화신】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1976537,
+      "label": "【다시 태어나다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1984320,
+      "label": "【천주당 땡중】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1992041,
+      "label": "【사업가】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 1999579,
+      "label": "【투견】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2007103,
+      "label": "【고뇌】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2015121,
+      "label": "【힘의 논리】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2023030,
+      "label": "【바닷길】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2030649,
+      "label": "【학질】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2038230,
+      "label": "【오해】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2046244,
+      "label": "【흥선왕, 흥선왕, 우리 흥선왕】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2054434,
+      "label": "【자신감의 근거】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2062398,
+      "label": "【아름다운 시절】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2069911,
+      "label": "【만주 웨스턴】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2077425,
+      "label": "【무사의 나라】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2085286,
+      "label": "【나라 도둑】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2093255,
+      "label": "【왕의 부재】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2100891,
+      "label": "【태자 이원철】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2108815,
+      "label": "【이유 있는 자신감】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2116613,
+      "label": "【제정】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2124287,
+      "label": "【드넓은, 너무나도 드넓은】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2131978,
+      "label": "【상석】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2139484,
+      "label": "【적의 행방】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2146914,
+      "label": "【두 사람의 원수】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2154771,
+      "label": "【남쪽】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2162219,
+      "label": "【시야】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2169658,
+      "label": "【탭댄스】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2177118,
+      "label": "【그레이트 게임】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2184597,
+      "label": "【차악】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2192206,
+      "label": "【아주의 미래】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2199800,
+      "label": "【주거니 받거니】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2208141,
+      "label": "【DDT】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2216405,
+      "label": "【맹상군】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2224529,
+      "label": "【으뜸】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2232213,
+      "label": "【방한】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2239774,
+      "label": "【방한 목적】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2247327,
+      "label": "【귀빈】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2254862,
+      "label": "【조건】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2262709,
+      "label": "【선구자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2270288,
+      "label": "【소양강댐】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2277938,
+      "label": "【촌놈들의 촌극】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2285453,
+      "label": "【마지막 일】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2292993,
+      "label": "【두 개의 태양】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2300493,
+      "label": "【코펜하겐 회담】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2308323,
+      "label": "【독일인 집성촌】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2315875,
+      "label": "【프로이센이라는 나라】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2323186,
+      "label": "【기사단의 후예】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2330485,
+      "label": "【천재 세균학자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2338418,
+      "label": "【인류 최초】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2346290,
+      "label": "【지혜】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2353869,
+      "label": "【페르시아 전쟁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2361485,
+      "label": "【Plus Ultra】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2369257,
+      "label": "【섬】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2376753,
+      "label": "【제국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2384642,
+      "label": "【분리주의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2392646,
+      "label": "【자치론자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2400923,
+      "label": "【영정】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2408804,
+      "label": "【진(秦)】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2416734,
+      "label": "【공화주의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2424972,
+      "label": "【사회주의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2433116,
+      "label": "【두 갈래 길】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2440475,
+      "label": "【동학】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2447806,
+      "label": "【캘리포니아의 맹상군】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2455405,
+      "label": "【고뇌】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2463140,
+      "label": "【망나니 황자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2470755,
+      "label": "【장기 말】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2478069,
+      "label": "【궁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2485829,
+      "label": "【꾸짖음】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2493635,
+      "label": "【독재관】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2501454,
+      "label": "【보스】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2508957,
+      "label": "【말】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2516619,
+      "label": "【숨은 보석】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2524235,
+      "label": "【거함 거포】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2531854,
+      "label": "【형제】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2539473,
+      "label": "【미음】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2547243,
+      "label": "【보람】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2554892,
+      "label": "【먹구름】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2562617,
+      "label": "【위험한 장난감】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2570787,
+      "label": "【화약고】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2578133,
+      "label": "【시비지심】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2585752,
+      "label": "【해운대국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2593800,
+      "label": "【남의 떡】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2601772,
+      "label": "【재회】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2609852,
+      "label": "【인내】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2617756,
+      "label": "【대계】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2625310,
+      "label": "【출사표】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2632830,
+      "label": "【기사(棋師)】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2640440,
+      "label": "【순백의 도시】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2648555,
+      "label": "【평범한 행복】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2656654,
+      "label": "【행운아】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2664691,
+      "label": "【괴짜】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2672201,
+      "label": "【도화선】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2680357,
+      "label": "【흐르는 피】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2688355,
+      "label": "【모스크바 정권】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2696485,
+      "label": "【도전권】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2704272,
+      "label": "【청탁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2711985,
+      "label": "【발화】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2719598,
+      "label": "【새로운 전장】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2727634,
+      "label": "【난세의 봉화】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2735092,
+      "label": "【귀국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2742872,
+      "label": "【강철의 도시】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2750543,
+      "label": "【우화등선】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2758180,
+      "label": "【천하유람】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2766060,
+      "label": "【불온함】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2773639,
+      "label": "【서부의 왕】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2781111,
+      "label": "【양당제】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2788784,
+      "label": "【윌리엄 매킨리】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2796426,
+      "label": "【위화감】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2804094,
+      "label": "【기폭】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2811833,
+      "label": "【저지대 침공】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2819662,
+      "label": "【기울어버린 추】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2827250,
+      "label": "【소년 왕】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2835055,
+      "label": "【날강도】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2843070,
+      "label": "【수다쟁이】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2850903,
+      "label": "【명안】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2859158,
+      "label": "【불씨】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2866769,
+      "label": "【불의의 불행이 불우함】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2874586,
+      "label": "【자백】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2881920,
+      "label": "【기자의 책무】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2890450,
+      "label": "【폭주】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2897951,
+      "label": "【빛나던 과거】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2905678,
+      "label": "【인도 대국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2913155,
+      "label": "【파국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2920721,
+      "label": "【기도】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2928725,
+      "label": "【러시아에서】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2936314,
+      "label": "【혹세무민】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2943962,
+      "label": "【동방의 나폴레옹】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2952018,
+      "label": "【뻐꾸기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2960202,
+      "label": "【이이제이】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2967979,
+      "label": "【부부일심동체】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2975926,
+      "label": "【수오지심】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2983836,
+      "label": "【저질스러운 현실】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2991526,
+      "label": "【의심암귀】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 2999791,
+      "label": "【어전회의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3004190,
+      "label": "【흉기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3009042,
+      "label": "【전후구상】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3013383,
+      "label": "【검은돈】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3021221,
+      "label": "【도버 대해전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3028951,
+      "label": "【본국의 방침】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3037121,
+      "label": "【한미회담】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3044555,
+      "label": "【한미재계 회동】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3051961,
+      "label": "【논쟁의 시대】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3059804,
+      "label": "【맞부딪히다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3067222,
+      "label": "【미래주의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3075312,
+      "label": "【개회사】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3083148,
+      "label": "【정당정치】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3091478,
+      "label": "【양성기관】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3098834,
+      "label": "【요동치는 전선】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3106837,
+      "label": "【낙관주의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3114234,
+      "label": "【할아버지】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3122150,
+      "label": "【한양 조약】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3130104,
+      "label": "【고르디우스의 매듭】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3138323,
+      "label": "【천자와 천명】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3146321,
+      "label": "【돌아가야 할 곳】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3154402,
+      "label": "【러시아 민주 공화국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3162025,
+      "label": "【항명】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3169856,
+      "label": "【총리권】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3177860,
+      "label": "【루이 베르그송】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3185418,
+      "label": "【천하오패(天下五覇)】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3192962,
+      "label": "【청준·우진 질소 고정법】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3200505,
+      "label": "【신농유업 계획】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3208048,
+      "label": "【사분오열】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3215812,
+      "label": "【에조치(蝦夷地)】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3224001,
+      "label": "【두 입으로 두 말하기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3231936,
+      "label": "【대륙중화론】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3239243,
+      "label": "【골치】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3246752,
+      "label": "【비강호걸】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3254298,
+      "label": "【스몰렌스크 조약】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3262034,
+      "label": "【기 싸움】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3269639,
+      "label": "【외교 민주화】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3277129,
+      "label": "【아나코-원시주의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3284985,
+      "label": "【이리는 이리를 알아본다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3292477,
+      "label": "【손자국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3299865,
+      "label": "【아주 예술위원회】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3307839,
+      "label": "【아주 종합 미학 전시관】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3315503,
+      "label": "【평화 박람회】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3323599,
+      "label": "【아범】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3331364,
+      "label": "【망나니 아들】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3338653,
+      "label": "【인과응보】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3346712,
+      "label": "【방심】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3354748,
+      "label": "【재회】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3362616,
+      "label": "【꼬임】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3370467,
+      "label": "【디딤돌】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3378311,
+      "label": "【실없는 소리】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3385956,
+      "label": "【그다음】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3393343,
+      "label": "【오리엔탈리즘】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3400755,
+      "label": "【십자군?】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3408496,
+      "label": "【어두운 미래】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3416695,
+      "label": "【미래인】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3424809,
+      "label": "【청해사업】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3432454,
+      "label": "【반초 동맹】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3439809,
+      "label": "【시간과 예산】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3447375,
+      "label": "【상담】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3454801,
+      "label": "【국가론】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3462606,
+      "label": "【조국의 건아】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3470427,
+      "label": "【망국담론】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3478561,
+      "label": "【본심】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3485974,
+      "label": "【심장이 터져 죽다】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3493888,
+      "label": "【이슬람 파시즘】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3501388,
+      "label": "【좀스러운 대국들】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3508858,
+      "label": "【리옹 회담】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3517030,
+      "label": "【반란】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3524592,
+      "label": "【영국 혁명】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3532275,
+      "label": "【후폭풍】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3539570,
+      "label": "【영국 망명정부】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3547256,
+      "label": "【아전인수】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3554867,
+      "label": "【반항기?】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3562415,
+      "label": "【결단】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3570101,
+      "label": "【신사협정】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3577784,
+      "label": "【사치스러운 고민】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3585640,
+      "label": "【아주의 방패】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3593240,
+      "label": "【기대】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3600424,
+      "label": "【커닝 페이퍼】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3608107,
+      "label": "【지천명】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3615621,
+      "label": "【국민보험】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3622949,
+      "label": "【유교 민주주의】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3630242,
+      "label": "【국민의 왕】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3638215,
+      "label": "【시대정신】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3645637,
+      "label": "【일본 혁명】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3653025,
+      "label": "【바라지 않았던 결단】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3660868,
+      "label": "【이순신 내항】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3668780,
+      "label": "【노코노시마 해전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3676413,
+      "label": "【책임뿐인 자리】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3683942,
+      "label": "【만일 다시 태어나거든】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3692007,
+      "label": "【웃으며 가는 길】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3699534,
+      "label": "【삼중제국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3707040,
+      "label": "【통합의 노력】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3714968,
+      "label": "【한국 위협론】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3723094,
+      "label": "【인과응보】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3730582,
+      "label": "【대혼란】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3738368,
+      "label": "【대리청정】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3746445,
+      "label": "【제국의 도읍】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3754368,
+      "label": "【부부싸움】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3762786,
+      "label": "【식민】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3770909,
+      "label": "【절대강자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3778631,
+      "label": "【밑 준비】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3786246,
+      "label": "【주고받기】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3794314,
+      "label": "【호부견자】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3802068,
+      "label": "【미치광이】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3809729,
+      "label": "【황제 대담】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3817139,
+      "label": "【진솔한 부탁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3824569,
+      "label": "【너의 제국】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3832605,
+      "label": "【두 사람의 황제】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3840430,
+      "label": "▣ 후일담",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문에서 ［完］ 뒤에 명시된 후일담 구획 표식. 뒤따る 제목은 개별 공식 회차를 뜻한다고 확인되지 않는다."
+    },
+    {
+      "start_cp": 3840439,
+      "label": "【대한 고조를 추억하며】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3856290,
+      "label": "【한국 공군 건군 비화】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3864115,
+      "label": "【대한제국 전차개발사】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3871910,
+      "label": "【범대륙적 단일 시장】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3879175,
+      "label": "【한러 밀월관계】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3887110,
+      "label": "【러시아-폴란드 전쟁】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3894883,
+      "label": "【인도 잔혹사】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3902164,
+      "label": "【자유 아주를 위하여】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3909465,
+      "label": "【청구의 가을바람】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3916789,
+      "label": "【초인의 빈자리】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3924144,
+      "label": "【가짜 초인들의 시대】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3931491,
+      "label": "【대한 포위망】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3938952,
+      "label": "【아주의 방패】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3946192,
+      "label": "【3차대전 발발】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3953380,
+      "label": "【세계 패권을 향한 길】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3960619,
+      "label": "【샌프란시스코 폭동】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3968163,
+      "label": "【3차대전 종전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3976110,
+      "label": "【대서양 적백내전】",
+      "kind": "title_section",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "원문 줄 단독 【…】 제목 경계는 확인됨; 공식 회차 번호와의 대응은 확인되지 않음."
+    },
+    {
+      "start_cp": 3983918,
+      "label": "【역경과 승리의 역사】",
+      "kind": "unresolved",
+      "number_claimed": null,
+      "confidence": "hold",
+      "note": "파일 마지막 표제이며 끝부분은 후일담 역사 요약과 사적 대화가 이어진다. 번호 미표시; 마지막 공식 회차 여부는 미확정."
+    }
+  ]
+}

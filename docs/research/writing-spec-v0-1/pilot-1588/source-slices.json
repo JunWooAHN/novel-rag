@@ -1,0 +1,135 @@
+{
+  "example_id": "dev-pilot-1588-ch01-menu-choice",
+  "preparation_status": "candidate_ready_contract_revision_pending",
+  "author": "간다왼쪽",
+  "work_title": "1588 샤인머스캣으로 귀농 왔더니 신대륙",
+  "source": {
+    "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+    "drive_file_id": "1AwGk3bAkl6SJf8TTGaPqL_CbCRwIcLYa",
+    "drive_folder": "2603",
+    "filename": "1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+    "byte_length": 12038746,
+    "sha256_raw_file": "7ee52308ed896730c457b9da9158f8dfed4e0ca1aaaf91cba363535cf059fa77",
+    "utf8_bom": true,
+    "crlf_count": 238208,
+    "bare_lf_count": 0,
+    "bare_cr_count": 0,
+    "ends_with_newline": false,
+    "coordinate_conventions": "All main ranges are [start_inclusive,end_exclusive). Python codepoint positions refer to read_bytes().decode(\"utf-8\") and retain U+FEFF; JS offsets count UTF-16 units; bytes count original UTF-8 bytes including BOM; lines are physical CRLF-delimited, 1-based. End line records the exclusive boundary."
+  },
+  "candidate_scene": {
+    "chapter_number": 1,
+    "chapter_heading": "1화. 프롤로그",
+    "scene_label": "게임 시작 메뉴에서의 선택과 장면 말미 컴퓨터 종료",
+    "target_range_id": "target_scene",
+    "target_start_reason": "First interface scene begins with the screen and Korean-dub prompt; avoids treating preceding package/game facts as scene events.",
+    "target_end_reason": "Ends on the immediate observable failure of the computer to restart, before the standalone transition word and 2화 heading.",
+    "range": {
+      "range": {
+        "start_inclusive": 3022,
+        "end_exclusive": 3925,
+        "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded string; leading U+FEFF included at index 0",
+        "start_inclusive_js_utf16": 3022,
+        "end_exclusive_js_utf16": 3925,
+        "unit_raw_byte": "UTF-8 source byte offset including BOM",
+        "start_inclusive_byte": 6972,
+        "end_exclusive_byte": 8985,
+        "start_line": 117,
+        "end_line_exclusive_boundary": 171
+      },
+      "role": "target_scene_and_answer_ref",
+      "exact_slice_validation": {
+        "starts_with": "이윽고 나타나는 검은 화면.",
+        "ends_with": "다시 안 켜졌다.",
+        "selected_length_codepoints": 903,
+        "source_slice_sha256_utf8": "f0ef79882a0fe600313d5ae07eae75ec3d575d4434fd841cec3c58330bfaf656",
+        "contains_next_chapter_heading": false
+      },
+      "identifying_quotes": [
+        "신세계로 이주하기.",
+        "그대는 분명 동의했다.",
+        "다시 안 켜졌다."
+      ]
+    }
+  },
+  "prior_context": {
+    "range_id": "prior_context",
+    "range": {
+      "range": {
+        "start_inclusive": 0,
+        "end_exclusive": 3022,
+        "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded string; leading U+FEFF included at index 0",
+        "start_inclusive_js_utf16": 0,
+        "end_exclusive_js_utf16": 3022,
+        "unit_raw_byte": "UTF-8 source byte offset including BOM",
+        "start_inclusive_byte": 0,
+        "end_exclusive_byte": 6972,
+        "start_line": 1,
+        "end_line_exclusive_boundary": 117
+      },
+      "role": "prior_context",
+      "exact_slice_validation": {
+        "starts_with_utf8_bom": true,
+        "ends_immediately_before_target": true,
+        "selected_length_codepoints": 3022,
+        "source_slice_sha256_utf8": "5c4f1cbd69ae6f9bcd1c5626873b3f94217491b8af8c314867ed4c5dbd944b0a"
+      },
+      "boundary_checks": {
+        "target_first_chars": "이윽고 나타나는 검은 화면. 한국어 더빙을 켜겠냐는 말에 ‘예’를 ",
+        "prior_last_40_chars": "황숙소프트의 로고가 나오고, 웅장한 BGM이 가슴을 설레게 한다.\r\n\r\n"
+      }
+    },
+    "continuous": true,
+    "knowledge_summary": "Before the interface scene, the protagonist is a young adult in South Korea who has spent years farming a family vineyard after unemployment. Falling crop prices and the approaching harvest constrain his income and free time. He has purchased a premium release in a stealth-action game series and has read its packaging: the prequel concerns a sixteenth-century Roanoke colony whose historical attempt failed. He expects an ordinary game and hopes the expensive purchase will be enjoyable. The interface and its options do not appear until the target begins.",
+    "evidence_ranges_within_prior_context": [
+      {
+        "range": {
+          "start_inclusive": 1000,
+          "end_exclusive": 2050,
+          "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded string; leading U+FEFF included at index 0",
+          "start_inclusive_js_utf16": 1000,
+          "end_exclusive_js_utf16": 2050,
+          "unit_raw_byte": "UTF-8 source byte offset including BOM",
+          "start_inclusive_byte": 2318,
+          "end_exclusive_byte": 4714,
+          "start_line": 41,
+          "end_line_exclusive_boundary": 84
+        },
+        "basis": "farming situation, earlier success, unemployment and personal motivation; exact slice checked",
+        "identifying_quote": "조회수 14회"
+      },
+      {
+        "range": {
+          "start_inclusive": 2050,
+          "end_exclusive": 3022,
+          "unit_codepoint": "Python Unicode code point offset in UTF-8-decoded string; leading U+FEFF included at index 0",
+          "start_inclusive_js_utf16": 2050,
+          "end_exclusive_js_utf16": 3022,
+          "unit_raw_byte": "UTF-8 source byte offset including BOM",
+          "start_inclusive_byte": 4714,
+          "end_exclusive_byte": 6972,
+          "start_line": 84,
+          "end_line_exclusive_boundary": 117
+        },
+        "basis": "game package, Roanoke setup, purchase, and approach to interface before target; exact slice checked",
+        "identifying_quote": "로어노크 섬에 개척민들을 파견한다."
+      }
+    ]
+  },
+  "observed_vs_inferred": {
+    "direct_observations": [
+      "The prior context contains present-day farming and income pressure, a purchased game, and the game-series premise and packaging information about Roanoke.",
+      "Within the target, an interface appears and offers an unfamiliar choice; after seeing it, the protagonist has a brief concern about an unreal event, dismisses it, and chooses to proceed. The interface implies his choice is already accepted; the computer powers off and will not restart."
+    ],
+    "reconstructed_assumptions_for_later_input": [
+      "A useful event-level scene goal may connect the protagonist’s escapist game purchase to an unexpected interruption of ordinary control. This is an interpretation of the juxtaposition, not a claim about author intent."
+    ],
+    "unconfirmed_at_target_end": [
+      "Whether any physical relocation has happened.",
+      "Where the protagonist is or whether historical colonists exist beyond the game packaging.",
+      "What happens after the computer powers off."
+    ],
+    "prior_only_boundary_note": "The web-fiction/screen-absorption concern occurs after the target begins. It is target behavior, not a scene-start belief or prior-context fact. Neither option is known by the character before the target starts."
+  },
+  "scope_note": "This is a candidate from an already analyzed source, not a held-out or final test example. The target and its prior context must remain together for any future split. No final writer-input package or training/evaluation approval is created in this stage."
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "synthetic-source",
+      "text": "문이 열렸다.\n그는 책을 폈다.\n비가 그쳤다."
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "sample-1",
+      "work_id": "synthetic-work",
+      "scene_id": "scene-1",
+      "order": 0,
+      "prompt": "방문을 여는 짧은 장면을 쓴다.",
+      "answer": "문이 열렸다.",
+      "source_id": "synthetic-source",
+      "source_sha256": "2b4525a80e5bcae6aaaa3f5b5bca945ef5417207bcd16fd2bce230e06ab10a6e",
+      "answer_start": 0,
+      "answer_end": 7,
+      "question_method": "human-synthetic-v1",
+      "packet_id": null
+    },
+    {
+      "sample_id": "sample-2",
+      "work_id": "synthetic-work",
+      "scene_id": "scene-2",
+      "order": 1,
+      "prompt": "독서가 시작되는 짧은 장면을 쓴다.",
+      "answer": "그는 책을 폈다.",
+      "source_id": "synthetic-source",
+      "source_sha256": "2b4525a80e5bcae6aaaa3f5b5bca945ef5417207bcd16fd2bce230e06ab10a6e",
+      "answer_start": 8,
+      "answer_end": 17,
+      "question_method": "human-synthetic-v1",
+      "packet_id": null
+    },
+    {
+      "sample_id": "sample-3",
+      "work_id": "synthetic-work",
+      "scene_id": "scene-3",
+      "order": 2,
+      "prompt": "날씨가 바뀌는 짧은 장면을 쓴다.",
+      "answer": "비가 그쳤다.",
+      "source_id": "synthetic-source",
+      "source_sha256": "2b4525a80e5bcae6aaaa3f5b5bca945ef5417207bcd16fd2bce230e06ab10a6e",
+      "answer_start": 18,
+      "answer_end": 25,
+      "question_method": "human-synthetic-v1",
+      "packet_id": null
+    }
+  ]
+}

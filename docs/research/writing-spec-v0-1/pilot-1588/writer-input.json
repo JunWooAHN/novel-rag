@@ -1,0 +1,76 @@
+{
+  "example_id": "dev-pilot-1588-ch01-menu-choice",
+  "development_status": "accept_for_prototype_development_only",
+  "data_role": "development design material only; never label this source or its derivatives as an unobserved final test",
+  "prior_context": {
+    "summary": "A young adult in South Korea has spent several years running his family’s vineyard after becoming unemployed. Weakening grape prices and the coming harvest limit his income and leisure. He has ordered an expensive new installment of an espionage-action game series, and its packaging describes a prequel set around a historical North American settlement whose first English effort failed. He expects a conventional game launch and wants the purchase to be worthwhile.",
+    "scope": "Only conditions and information available before the scene starts. Do not assume a menu choice, supernatural effect, new location, or people outside the game."
+  },
+  "virtual_history": [
+    {
+      "event": "The protagonist’s present-day livelihood is tied to a family vineyard under market and seasonal pressure.",
+      "basis": "observed",
+      "availability": "before_scene_start"
+    },
+    {
+      "event": "The protagonist possesses a new game release whose package describes a historical prequel and failed colonial venture.",
+      "basis": "observed",
+      "availability": "before_scene_start"
+    },
+    {
+      "event": "During this scene the game presents a consequential proceed-or-stop choice; the protagonist elects to proceed, and the machine becomes unusable by the scene end.",
+      "basis": "observed",
+      "availability": "planned_for_this_scene_only",
+      "caveat": "The computer failure is observable; its cause and any physical-world effect are unknown at the cutoff."
+    },
+    {
+      "event": "Connect ordinary-life pressure and anticipation of a costly leisure purchase to an abrupt loss of control.",
+      "basis": "reconstructed_assumption",
+      "availability": "scene_design_hypothesis",
+      "caveat": "This is a possible scene function inferred from the source, not authorial intent."
+    }
+  ],
+  "character_knowledge": [
+    {
+      "character": "protagonist",
+      "knows": [
+        "He has been farming for years after unemployment.",
+        "The crop market is poor and harvest work is approaching.",
+        "The game is part of a familiar entertainment franchise; its packaging describes its historical premise."
+      ],
+      "believes_or_misunderstands": [
+        "He expects the launch to behave like software and hopes the price will be justified by a good experience."
+      ],
+      "does_not_know": [
+        "Which choices the game will show.",
+        "Whether game content can affect the physical world.",
+        "Where he could go or who he might meet if the system behaves strangely."
+      ],
+      "acquisition": "Prior work and family experience, the game package, and expectations formed before play begins.",
+      "timing_note": "Do not give him knowledge of the interface prompt before it appears during the scene."
+    }
+  ],
+  "scene_spec": {
+    "purpose": "Move from ordinary anticipation into a voluntary but uncertain decision, then end on an immediate interruption that leaves its cause unresolved. This purpose is a development hypothesis, not a claim about author intent.",
+    "required_events": [
+      "A game interface presents a consequential choice between proceeding and stopping.",
+      "The protagonist chooses to proceed despite a brief moment of doubt.",
+      "The interface indicates that the choice has taken effect.",
+      "The computer powers down and cannot be restarted by the end of the scene."
+    ],
+    "allowed_freedom": [
+      "Dialogue and interior voice in fresh wording.",
+      "Pacing and sensory description.",
+      "How ordinary-life pressure and game expectations surface, provided they come only from prior_context."
+    ],
+    "forbidden": [
+      "Reusing any source dialogue, interface label, sentence, distinctive metaphor, or wording.",
+      "Giving the protagonist knowledge of the prompt before its appearance.",
+      "Explaining whether the interruption is supernatural or whether physical relocation occurred.",
+      "Adding a destination, colonists, rescue, or any event from chapter 2 or later.",
+      "Presenting a possible scene-function interpretation as author intent."
+    ]
+  },
+  "use_limit": "Accepted only as a development design/review artifact for the bounded scene. User preference selection is incomplete; the development-pool split and overlap policy remain unassigned and must be frozen before creating learning examples or style references. No training or final-evaluation approval is granted; this source and derivatives must never be labeled as an unobserved final test.",
+  "independent_review_ref": "docs/research/writing-spec-v0-1/reverse-review.md"
+}

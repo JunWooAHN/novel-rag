@@ -1,0 +1,439 @@
+{
+  "work_title": "고려, 신대륙에 떨어지다",
+  "author": "마늘맛스낵",
+  "source": {
+    "filename": "고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+    "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+    "drive_id": "12Gc9wGbK6qs7Y7Ai1TlvHWnAUy3qVJi3",
+    "drive_folder": "2605",
+    "mime_type": "text/plain",
+    "metadata_size_bytes": 11658340,
+    "local_size_bytes": 11658340,
+    "sha256": "b1f719ca45c171fd28b20d074e3a508946a923b4c8ff64ebd4c0076834d19b82",
+    "utf8_bom": true,
+    "crlf_count": 207973,
+    "bare_lf_count": 0,
+    "bare_cr_count": 0,
+    "final_newline": false,
+    "decoded_unicode_codepoints": 4964676,
+    "numbered_heading_pattern": "(?m)^(\\d+)화[^\\r\\n]*(?=\\r?$)",
+    "detected_numbered_heading_lines": 155,
+    "detected_501_653_heading_lines": 153,
+    "detected_heading_range": "501–653 contiguous",
+    "interior_episode_mentions": [
+      {
+        "line": 101020,
+        "text": "300화입니다."
+      },
+      {
+        "line": 131824,
+        "text": "400화는 세부 사항 수정 문제로 토요일에 올라갈 예정입니다."
+      }
+    ],
+    "heading_observation": "500 numbered-less ◈ titles precede the continuous numbered headings 501–653. Two additional numbered-pattern lines, 300 and 400, occur in author notes and are not chapter headings. No episode numbers are assigned to the ◈ ordinal list.",
+    "scene_divider_count": 1147,
+    "coordinate_method": "Python Unicode code point offsets in Path.read_bytes().decode(\"utf-8\") text; JavaScript UTF-16 code units and UTF-8 byte offsets computed from that unchanged decoded string; 1-based physical lines via count(\"\\n\")+1; ranges inclusive/exclusive.",
+    "unnumbered_section_heading_pattern": "(?m)^◈[ \\t]*([^\\r\\n]*)(?=\\r?$)",
+    "detected_unnumbered_section_heading_count": 500,
+    "section_heading_titles_all_nonempty": true,
+    "section_heading_titles_unique_count": 500,
+    "section_heading_order_monotonic": true,
+    "first_section_heading": {
+      "ordinal": 1,
+      "text": "◈ Universal Kingdoms",
+      "position": {
+        "codepoint": 96,
+        "js_utf16": 96,
+        "utf8_byte": 162,
+        "line": 8
+      }
+    },
+    "last_section_heading": {
+      "ordinal": 500,
+      "text": "◈ 소비에트 연방",
+      "position": {
+        "codepoint": 3735620,
+        "js_utf16": 3735620,
+        "utf8_byte": 8757496,
+        "line": 164028
+      }
+    },
+    "unnumbered_heading_series_observation": "500 nonempty, unique ◈-prefixed line-start titles appear in source order from line 8 to line 164028. They contain no episode numbers. The 500th title precedes numbered heading 501 at line 164204; ordinal correspondence to official episodes 1–500 remains unconfirmed.",
+    "first_numbered_episode_heading": {
+      "text": "501화 소비에트 연방(2)",
+      "position": {
+        "codepoint": 3741672,
+        "js_utf16": 3741672,
+        "utf8_byte": 8772002,
+        "line": 164204
+      }
+    },
+    "all_unnumbered_section_headings_precede_501": true
+  },
+  "offset_units": {
+    "codepoint": "Python Unicode code point index in the full read_bytes().decode(\"utf-8\") string; BOM retained as U+FEFF at index 0",
+    "js_utf16": "UTF-16 code unit index, independently computed",
+    "utf8_byte": "UTF-8 byte offset in the preserved local source file; includes BOM bytes",
+    "line": "1-based physical line number; CRLF retained in decoded source"
+  },
+  "samples": [
+    {
+      "id": "G01",
+      "phase": "초반",
+      "episode_number": null,
+      "episode_heading": null,
+      "episode_heading_start": null,
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+      "drive_id": "12Gc9wGbK6qs7Y7Ai1TlvHWnAUy3qVJi3",
+      "range_boundary": "보유 원문 첫 1,200 Unicode code point 발췌. 장면 중간에서 끝나는 부분 발췌.",
+      "selection_reason": "도입의 약속과 주인공의 당면 결핍을 확인하되, 발췌에 없는 이행 사건이나 결과는 분석하지 않음.",
+      "coordinates": {
+        "start_inclusive": {
+          "codepoint": 0,
+          "js_utf16": 0,
+          "utf8_byte": 0,
+          "line": 1
+        },
+        "end_exclusive": {
+          "codepoint": 1200,
+          "js_utf16": 1200,
+          "utf8_byte": 2700,
+          "line": 62
+        },
+        "excerpt_codepoints": 1200
+      },
+      "identifying_quote": "고려를 다시 건국하라.",
+      "quote_coordinates": {
+        "start_inclusive": {
+          "codepoint": 47,
+          "js_utf16": 47,
+          "utf8_byte": 81,
+          "line": 4
+        },
+        "end_exclusive": {
+          "codepoint": 59,
+          "js_utf16": 59,
+          "utf8_byte": 111,
+          "line": 4
+        }
+      },
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "identifying_quote_in_slice": true,
+        "starts_at_episode_heading": false
+      },
+      "section_title_context": {
+        "marker_type": "unnumbered ◈ title",
+        "ordinal": 1,
+        "title": "Universal Kingdoms",
+        "position": {
+          "codepoint": 96,
+          "js_utf16": 96,
+          "utf8_byte": 162,
+          "line": 8
+        },
+        "relation": "heading occurs inside this opening excerpt; ordinal is not a confirmed episode number"
+      }
+    },
+    {
+      "id": "G02",
+      "phase": "초반",
+      "episode_number": null,
+      "episode_heading": null,
+      "episode_heading_start": null,
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+      "drive_id": "12Gc9wGbK6qs7Y7Ai1TlvHWnAUy3qVJi3",
+      "range_boundary": "첫 번째 * * * 구분자 뒤에서 다음 구분자 직전까지의 완결된 구간.",
+      "selection_reason": "이름 붙지 않은 부자 대화에서 아버지의 회피 욕망과 아들의 권유, 대답을 함께 확인.",
+      "coordinates": {
+        "start_inclusive": {
+          "codepoint": 377547,
+          "js_utf16": 377547,
+          "utf8_byte": 871236,
+          "line": 19864
+        },
+        "end_exclusive": {
+          "codepoint": 378874,
+          "js_utf16": 378874,
+          "utf8_byte": 874303,
+          "line": 19942
+        },
+        "excerpt_codepoints": 1327
+      },
+      "identifying_quote": "하지만 그렇다고 해도 찾아오는 인연을 피하지는 마십시오.",
+      "quote_coordinates": {
+        "start_inclusive": {
+          "codepoint": 378591,
+          "js_utf16": 378591,
+          "utf8_byte": 873654,
+          "line": 19924
+        },
+        "end_exclusive": {
+          "codepoint": 378622,
+          "js_utf16": 378622,
+          "utf8_byte": 873733,
+          "line": 19924
+        }
+      },
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "identifying_quote_in_slice": true,
+        "starts_at_episode_heading": false
+      },
+      "section_title_context": {
+        "marker_type": "unnumbered ◈ title",
+        "ordinal": 59,
+        "title": "동예",
+        "position": {
+          "codepoint": 376186,
+          "js_utf16": 376186,
+          "utf8_byte": 868033,
+          "line": 19804
+        },
+        "relation": "nearest preceding title marker; ordinal is not a confirmed episode number"
+      }
+    },
+    {
+      "id": "G03",
+      "phase": "중반",
+      "episode_number": null,
+      "episode_heading": null,
+      "episode_heading_start": null,
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+      "drive_id": "12Gc9wGbK6qs7Y7Ai1TlvHWnAUy3qVJi3",
+      "range_boundary": "파일 내 * * * 구분자 510번째 구간 전체.",
+      "selection_reason": "이상기후·화산 피해에 대한 행정 보고와 대외 지출·지원 축소라는 정책 선택까지 닫힌 논증 구간.",
+      "coordinates": {
+        "start_inclusive": {
+          "codepoint": 2002953,
+          "js_utf16": 2002953,
+          "utf8_byte": 4669796,
+          "line": 95320
+        },
+        "end_exclusive": {
+          "codepoint": 2006439,
+          "js_utf16": 2006439,
+          "utf8_byte": 4678022,
+          "line": 95440
+        },
+        "excerpt_codepoints": 3486
+      },
+      "identifying_quote": "첫 번째 팍스 코리아나(Pax Koreana)가 위태롭게 흔들리고 있었다.",
+      "quote_coordinates": {
+        "start_inclusive": {
+          "codepoint": 2006394,
+          "js_utf16": 2006394,
+          "utf8_byte": 4677935,
+          "line": 95438
+        },
+        "end_exclusive": {
+          "codepoint": 2006435,
+          "js_utf16": 2006435,
+          "utf8_byte": 4678018,
+          "line": 95438
+        }
+      },
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "identifying_quote_in_slice": true,
+        "starts_at_episode_heading": false
+      },
+      "section_title_context": {
+        "marker_type": "unnumbered ◈ title",
+        "ordinal": 282,
+        "title": "위기의 세기(3)",
+        "position": {
+          "codepoint": 2000901,
+          "js_utf16": 2000901,
+          "utf8_byte": 4664928,
+          "line": 95240
+        },
+        "relation": "nearest preceding title marker; ordinal is not a confirmed episode number"
+      }
+    },
+    {
+      "id": "G04",
+      "phase": "중반",
+      "episode_number": null,
+      "episode_heading": null,
+      "episode_heading_start": null,
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+      "drive_id": "12Gc9wGbK6qs7Y7Ai1TlvHWnAUy3qVJi3",
+      "range_boundary": "파일 내 * * * 구분자 812번째 구간 전체.",
+      "selection_reason": "전쟁 국면 전환을 선전포고부터 베네치아 방위군이 카이로에서 도망쳤다는 서술까지 짧은 연속 구간으로 확인.",
+      "coordinates": {
+        "start_inclusive": {
+          "codepoint": 3203270,
+          "js_utf16": 3203270,
+          "utf8_byte": 7500309,
+          "line": 143602
+        },
+        "end_exclusive": {
+          "codepoint": 3204143,
+          "js_utf16": 3204143,
+          "utf8_byte": 7502374,
+          "line": 143640
+        },
+        "excerpt_codepoints": 873
+      },
+      "identifying_quote": "아랍 에미르 연방이 공식적으로 베네치아에게 선전포고",
+      "quote_coordinates": {
+        "start_inclusive": {
+          "codepoint": 3203285,
+          "js_utf16": 3203285,
+          "utf8_byte": 7500328,
+          "line": 143606
+        },
+        "end_exclusive": {
+          "codepoint": 3203313,
+          "js_utf16": 3203313,
+          "utf8_byte": 7500402,
+          "line": 143606
+        }
+      },
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "identifying_quote_in_slice": true,
+        "starts_at_episode_heading": false
+      },
+      "section_title_context": {
+        "marker_type": "unnumbered ◈ title",
+        "ordinal": 435,
+        "title": "Sacco di Venezia",
+        "position": {
+          "codepoint": 3198520,
+          "js_utf16": 3198520,
+          "utf8_byte": 7489143,
+          "line": 143392
+        },
+        "relation": "nearest preceding title marker; ordinal is not a confirmed episode number"
+      }
+    },
+    {
+      "id": "G05",
+      "phase": "후반",
+      "episode_number": 501,
+      "episode_heading": "501화 소비에트 연방(2)",
+      "episode_heading_start": {
+        "codepoint": 3741672,
+        "js_utf16": 3741672,
+        "utf8_byte": 8772002,
+        "line": 164204
+      },
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+      "drive_id": "12Gc9wGbK6qs7Y7Ai1TlvHWnAUy3qVJi3",
+      "range_boundary": "501화 표제부터 다음 * * * 구분자 직전까지.",
+      "selection_reason": "소비에트의 혁명 성공, 내부 권력 다툼과 숙청, 체제 선포 및 고려와의 적대 인식이 같은 회차 구간에서 어떻게 누적되는지 확인.",
+      "coordinates": {
+        "start_inclusive": {
+          "codepoint": 3741672,
+          "js_utf16": 3741672,
+          "utf8_byte": 8772002,
+          "line": 164204
+        },
+        "end_exclusive": {
+          "codepoint": 3746929,
+          "js_utf16": 3746929,
+          "utf8_byte": 8784617,
+          "line": 164344
+        },
+        "excerpt_codepoints": 5257
+      },
+      "identifying_quote": "1770년 2월 4일이 되어서야 모렐리는 비로소 그의 목적을 달성했다.",
+      "quote_coordinates": {
+        "start_inclusive": {
+          "codepoint": 3744211,
+          "js_utf16": 3744211,
+          "utf8_byte": 8778049,
+          "line": 164276
+        },
+        "end_exclusive": {
+          "codepoint": 3744250,
+          "js_utf16": 3744250,
+          "utf8_byte": 8778136,
+          "line": 164276
+        }
+      },
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "identifying_quote_in_slice": true,
+        "starts_at_episode_heading": true
+      },
+      "section_title_context": {
+        "marker_type": "unnumbered ◈ title",
+        "ordinal": 500,
+        "title": "소비에트 연방",
+        "position": {
+          "codepoint": 3735620,
+          "js_utf16": 3735620,
+          "utf8_byte": 8757496,
+          "line": 164028
+        },
+        "relation": "last unnumbered ◈ title before explicit heading 501; the ordinal is not a confirmed episode number"
+      }
+    },
+    {
+      "id": "G06",
+      "phase": "후반",
+      "episode_number": 653,
+      "episode_heading": "653화 (외전) 승천(2) (完)",
+      "episode_heading_start": {
+        "codepoint": 4950748,
+        "js_utf16": 4950748,
+        "utf8_byte": 11626606,
+        "line": 207386
+      },
+      "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+      "drive_id": "12Gc9wGbK6qs7Y7Ai1TlvHWnAUy3qVJi3",
+      "range_boundary": "653화 안 세 번째 * * * 구분자 뒤부터 보유 파일 끝까지. 장면 결말·작가 후기·참고문헌을 포함.",
+      "selection_reason": "653화 말미의 태양풍 영향 감소에 대한 집단 반응, 상민 부재에 대한 애도, 다음 세대의 결의와 작가의 완결 후기를 확인. 이 구간은 영향 감소의 직접 원인을 설명하지 않음.",
+      "coordinates": {
+        "start_inclusive": {
+          "codepoint": 4959846,
+          "js_utf16": 4959846,
+          "utf8_byte": 11647826,
+          "line": 207768
+        },
+        "end_exclusive": {
+          "codepoint": 4964676,
+          "js_utf16": 4964676,
+          "utf8_byte": 11658340,
+          "line": 207974
+        },
+        "excerpt_codepoints": 4830
+      },
+      "identifying_quote": "《고려, 신대륙에 떨어지다》 외전 完",
+      "quote_coordinates": {
+        "start_inclusive": {
+          "codepoint": 4963031,
+          "js_utf16": 4963031,
+          "utf8_byte": 11655235,
+          "line": 207922
+        },
+        "end_exclusive": {
+          "codepoint": 4963051,
+          "js_utf16": 4963051,
+          "utf8_byte": 11655285,
+          "line": 207922
+        }
+      },
+      "slice_validation": {
+        "source_slice_equals_recorded_range": true,
+        "identifying_quote_in_slice": true,
+        "starts_at_episode_heading": false
+      },
+      "section_title_context": {
+        "marker_type": "numbered episode heading",
+        "ordinal": null,
+        "title": "653화 (외전) 승천(2) (完)",
+        "position": {
+          "codepoint": 4950748,
+          "js_utf16": 4950748,
+          "utf8_byte": 11626606,
+          "line": 207386
+        },
+        "relation": "explicit episode number in source"
+      }
+    }
+  ]
+}

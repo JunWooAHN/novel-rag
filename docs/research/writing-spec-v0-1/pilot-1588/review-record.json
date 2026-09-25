@@ -1,0 +1,130 @@
+{
+  "example_id": "dev-pilot-1588-ch01-menu-choice",
+  "status": "accept_for_prototype",
+  "status_reason": "Independently accepted only as a development design/review example for this bounded scene. This does not complete user style-preference selection, freeze the development-pool split, or authorize training or final evaluation.",
+  "source_ref": {
+    "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+    "sha256_raw_file": "7ee52308ed896730c457b9da9158f8dfed4e0ca1aaaf91cba363535cf059fa77",
+    "coordinate_unit": "Python Unicode code point after read_bytes().decode(\"utf-8\"); leading BOM included; source bytes are UTF-8 with CRLF retained",
+    "start_inclusive": 3022,
+    "end_exclusive": 3925,
+    "range_unit": "Unicode code points"
+  },
+  "basis_note": "Candidate selected for a bounded voluntary-choice scene with enough preceding life/game context and an observable scene end. The source is already in the analyzed development pool.",
+  "prior_context_ref": {
+    "same_source_as": "source_ref",
+    "range": [
+      0,
+      3022
+    ],
+    "range_unit": "Python Unicode code points",
+    "verified_prior_only": true,
+    "continuous": true,
+    "summary_basis": "Only facts present before target start; the menu and options are excluded."
+  },
+  "history_evidence": [
+    {
+      "event": "Protagonist has ongoing farming, income and seasonal time pressure.",
+      "basis": "observed",
+      "source_range": [
+        14,
+        2050
+      ],
+      "range_unit": "Python Unicode code points"
+    },
+    {
+      "event": "Protagonist bought a game release and received packaging information about its prequel and a historical colonial settlement.",
+      "basis": "observed",
+      "source_range": [
+        2050,
+        3022
+      ],
+      "range_unit": "Python Unicode code points"
+    },
+    {
+      "event": "This scene presents an unfamiliar choice; protagonist elects to proceed; the computer then powers off and remains unavailable at the end.",
+      "basis": "observed",
+      "role": "target_event",
+      "source_range": [
+        3022,
+        3925
+      ],
+      "range_unit": "Python Unicode code points"
+    },
+    {
+      "event": "The scene connects a costly leisure purchase under ordinary-life pressure to an unexpected loss of control.",
+      "basis": "reconstructed_assumption",
+      "role": "possible_scene_function",
+      "source_range": [
+        14,
+        3925
+      ],
+      "range_unit": "Python Unicode code points",
+      "limitation": "A reading of observed juxtaposition, not a claim about author intent."
+    }
+  ],
+  "character_knowledge_at_scene_start": [
+    {
+      "character": "protagonist",
+      "knows": [
+        "He has spent several years operating his family vineyard after a period of unemployment.",
+        "The grape market has weakened and the harvest season will soon increase his workload.",
+        "He has obtained a new release in a familiar game franchise and has read its package description about the game’s historical setting and premise."
+      ],
+      "believes_or_misunderstands": [
+        "He expects the software to behave as an ordinary game and hopes the expensive purchase will be entertaining."
+      ],
+      "does_not_know": [
+        "What choices the interface will present.",
+        "Whether any game event has real-world effects.",
+        "What happens after the computer stops working."
+      ],
+      "acquisition": "Prior life experience, the delivered game package, and expectations established before the target begins."
+    }
+  ],
+  "knowledge_boundary_check": {
+    "the_options_are_first_presented_inside_target": true,
+    "excluded_from_scene_start_knows": [
+      "The migration/exit options shown by the interface.",
+      "The protagonist’s brief concern about an unreal event, which occurs after the interface appears.",
+      "Any actual relocation, destination, colonists, or later episode events."
+    ]
+  },
+  "answer_ref": {
+    "same_source_as": "source_ref",
+    "range": [
+      3022,
+      3925
+    ],
+    "range_unit": "Python Unicode code points",
+    "verified_exact_slice": true,
+    "verification": "Direct Python slice of the hashed UTF-8-decoded CRLF source; starts at the interface scene, ends after the immediate computer failure, excludes following transition and chapter 2."
+  },
+  "leakage_review": {
+    "self_check": "pass_with_limits",
+    "independent_review": "accept_for_prototype_for_development_only",
+    "checks": {
+      "prior_context_ends_at_target_start": true,
+      "writer_input_contains_no_source_path_or_coordinates": true,
+      "writer_input_contains_no_target_quote_or_option_label": true,
+      "future_episode_facts_excluded": true,
+      "scene_end_is_immediate_observable_result": true
+    },
+    "notes": "Target outcome is abstracted at event level. Cause of the device failure and any real-world movement remain unknown at this boundary.",
+    "independent_review_ref": "docs/research/writing-spec-v0-1/reverse-review.md"
+  },
+  "development_data_policy": {
+    "pool": "permanently_in_development_pool",
+    "held_out_final_test": false,
+    "split": "unassigned; freeze development-pool overlap/split policy before creating learning examples or style references",
+    "training_or_evaluation_approval": false,
+    "writer_preference_selection_complete": false,
+    "prototype_status": "accept_for_prototype"
+  },
+  "independent_review": {
+    "review_document": "docs/research/writing-spec-v0-1/reverse-review.md",
+    "verdict": "accept_for_prototype",
+    "scope": "Source hash and exact slices, scene boundary, prior-only context, character-knowledge timing, and writer-input expression leakage for the 1화 UI choice/computer shutdown scene.",
+    "limitation": "Does not validate a complete virtual-history reconstruction, historical causality, or broad author/style claims."
+  }
+}

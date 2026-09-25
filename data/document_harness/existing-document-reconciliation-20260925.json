@@ -1,0 +1,2504 @@
+{
+  "task": "existing-project-document-reconciliation-2026-09-25",
+  "captured_at_utc": "2026-09-25T01:40:52Z",
+  "scope": "first-party project Markdown: docs/, plan/, AGENTS.md, tools/, toy-tune/, selected work-planning/worldbuilding directories; non-Markdown and third-party/narrative excluded; one PDF text-layer derivative ingested without modifying the source PDF",
+  "pre_import_backup": {
+    "path": "data/document_harness/documents-20260925-preexisting-import.sqlite3",
+    "sha256": "8b24d9cce8fa86427e021e76519c1a9d1c97b9d3cc441cd50760f0b5080e3afb",
+    "bytes": 4161536
+  },
+  "summary": {
+    "included_paths": 143,
+    "unchanged": 101,
+    "added": 42,
+    "changed": 0,
+    "excluded_paths": 230,
+    "excluded_by_reason": {
+      "novel_chapter_or_sample_body": 29,
+      "original_novel_text": 7,
+      "temporary_research_artifact": 1,
+      "third_party_claude_plugin_lingfengQAQ": 170,
+      "unsupported_text_list_format": 1,
+      "wikipedia_dump_or_checksum": 21,
+      "source_pdf_preserved_text_derivative_ingested": 1
+    },
+    "failed": 0,
+    "rerun_unchanged": 42,
+    "canon_before": 6,
+    "canon_after": 6,
+    "health": {
+      "integrity": "ok",
+      "documents": 156,
+      "canon": 6,
+      "fts_rows": 156,
+      "duplicate_canon_lineages": 0,
+      "invalid_tags": 0
+    }
+  },
+  "included": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 3398,
+      "sha256": "1f057f37b5e9b904e4fb5516da6668d806a317f69137f90418e9d7f18ebd0a64",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-d96362b7-91e0-4f88-9afa-10b6785eec26",
+      "lineage_id": "legacy-6c34cc35-0c32-53d6-b86e-cff8fb5e8380",
+      "document_canon": true
+    },
+    {
+      "path": "docs/20260914-novel-factory-architecture-v5.md",
+      "bytes": 67537,
+      "sha256": "2f701d1f6f6ac0b1fd2f7459b4ff19909e1f160a8e1d117110dd821322b1ba64",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-32ec1dcd-fd0c-5d15-8604-637d66982c4a",
+      "lineage_id": "legacy-035de4bc-54b7-5ca8-bf83-69d4aecabd07",
+      "document_canon": false
+    },
+    {
+      "path": "docs/260417 역설계 아키텍처 설계서.md",
+      "bytes": 4773,
+      "sha256": "064b8291e253128085065799ce3514c4aac70b1a12563b3cdb27012faabc9ff3",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-c2cef912-9e85-5e01-aedd-745ee53344ff",
+      "lineage_id": "legacy-cdf66e75-15a9-5759-b786-51e972e7fe62",
+      "document_canon": false
+    },
+    {
+      "path": "docs/260417 통합 아키텍처 설계서.md",
+      "bytes": 5263,
+      "sha256": "e9e80836f0bf5c9492d9a650a09c5f01698594cee5d1099e92e03f3218678356",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-fcb35eae-612a-51bb-8dd7-2f3b7c165ede",
+      "lineage_id": "legacy-096602a1-bca9-5da5-b4c9-4d01d21811f5",
+      "document_canon": false
+    },
+    {
+      "path": "docs/260504_웹소설 자동 집필 시스템 아키텍처 연구.md",
+      "bytes": 48037,
+      "sha256": "cdd1e6f2f41a7dc48d42398bdda8051cf7d90358c197fc92440aeb6a2a56b8b5",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-94383c0d-c4e6-5e44-8131-c818b86817e0",
+      "lineage_id": "legacy-06016d01-0cb6-52fe-83c3-a3d98252ac3b",
+      "document_canon": false
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 698,
+      "sha256": "d35f7784ded56c99c869d618192be313fe8948372935b7d38bf66309e57ee08d",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-b940b4fc-14df-5278-8010-caadd27310d5",
+      "lineage_id": "legacy-98b8ddf2-f476-5a26-9010-64fb54822ef8",
+      "document_canon": false
+    },
+    {
+      "path": "docs/alt_history_factory_index_v3.md",
+      "bytes": 18807,
+      "sha256": "c7011888c074cec1bfcd608f900e9db38f3288473b189d2b7831edef89e0c384",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-0c449458-103e-5e5d-b674-73a92d7daecc",
+      "lineage_id": "legacy-71b73afc-36eb-5adc-9178-212781159eb1",
+      "document_canon": false
+    },
+    {
+      "path": "docs/chinese-to-korean-translation-plan.md",
+      "bytes": 13551,
+      "sha256": "8e7083162a1458acadf5501fb3df616881434471bf731be3547db19f10486633",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-b25aa829-e587-5361-85fd-4bf0cd762b31",
+      "lineage_id": "legacy-fc43127d-954d-526a-a54f-875e1f27f713",
+      "document_canon": false
+    },
+    {
+      "path": "docs/harness/README.md",
+      "bytes": 8551,
+      "sha256": "80625302ef39359bb85b4c4719c9494fb331f679974e4e1ca732f6a2f4c5a13d",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-e752d2ec-1009-494e-bebb-a25e1cd36501",
+      "lineage_id": "legacy-d64e962c-5e59-556f-b516-44f7d9856f7a",
+      "document_canon": true
+    },
+    {
+      "path": "docs/harness/current-checkpoint.md",
+      "bytes": 11267,
+      "sha256": "11bb7d3d51aa75687b5d728c7ccb9f66136109de6671831d73244ded3fcf5d8b",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-18b24822-1b5b-41e6-a540-bf54c6623625",
+      "lineage_id": "legacy-40925fad-cbff-589b-9799-6cc13abe142b",
+      "document_canon": true
+    },
+    {
+      "path": "docs/harness/document-lifecycle.md",
+      "bytes": 19488,
+      "sha256": "e40463bf7728edfae4b2f6cbe9e3d81c853fcc986e02065eb87fa0c76a3b91b1",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-e1f44b00-ee5d-4e7b-a715-0aee51c5b093",
+      "lineage_id": "legacy-6bd92436-f517-55b1-9748-f4eab1ea92cb",
+      "document_canon": true
+    },
+    {
+      "path": "docs/harness/review.md",
+      "bytes": 3453,
+      "sha256": "ec76ee09ced643ccfe3383a4e977444304e91c6b89fba39abeeaff56f22b03f4",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-fe7e2295-c025-5a88-a2e3-a39449810f08",
+      "lineage_id": "legacy-2db2ba9d-16a6-5e8e-9a7a-4b1840e95148",
+      "document_canon": false
+    },
+    {
+      "path": "docs/harness/session-decisions.md",
+      "bytes": 9367,
+      "sha256": "47648604dcd024e73c23a4012b1a64d3d91e644e0c58a2daa1e6faf70a147fa1",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-09ffbef2-369a-4e4d-a449-8f2cf3e9e61a",
+      "lineage_id": "legacy-6d5cb571-6639-5237-929c-467101dd73ac",
+      "document_canon": true
+    },
+    {
+      "path": "docs/harness/task-template.md",
+      "bytes": 1169,
+      "sha256": "d43159db24f3d24d539ffe50454bc2522761d2eb251fd479bfafc6fd1e477445",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-dfc6bad9-0c9d-5a37-a817-ffe2fc3a45fc",
+      "lineage_id": "legacy-57c7707a-eb5d-527c-96db-4544f7c1311b",
+      "document_canon": false
+    },
+    {
+      "path": "docs/legacy/Local PostgreSQL SOT DB 설계서.md",
+      "bytes": 6155,
+      "sha256": "035635b09fe2994071ca7372a51d9f196600d73cb4932cf88b39845302cf3b12",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-a82c7a8d-356c-5b32-9852-e6b0280702eb",
+      "lineage_id": "legacy-5f0c2629-1ec8-5fe5-924e-bf03c53a56e0",
+      "document_canon": false
+    },
+    {
+      "path": "docs/legacy/Training Data Pipeline.md",
+      "bytes": 3905,
+      "sha256": "4029eadf61b319d3c8dba743eceb5d7a9a19560093be6a17ce22cfa6ece4a9cd",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-2425e281-3eea-59d0-86bf-cef123f98d06",
+      "lineage_id": "legacy-d25a4d99-fd70-5f59-a582-738614c9d64d",
+      "document_canon": false
+    },
+    {
+      "path": "docs/legacy/역설계 아키텍처 설계서.md",
+      "bytes": 4661,
+      "sha256": "eaf72368a8b31bb4aa6015aae2d99c5014dd8788b0f11a91e9d01b80a75262c1",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-d5f57f74-c6c5-5c84-922d-f072f40def5e",
+      "lineage_id": "legacy-d27b32d8-25a1-513c-bb7a-51547f18bf6b",
+      "document_canon": false
+    },
+    {
+      "path": "docs/legacy/통합 아키텍처 설계서.md",
+      "bytes": 4999,
+      "sha256": "738b34b2cee4bc9815c9cba03f38b89b4dd10b39c5b7c9c21d1dfc8a20d21d64",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-c5fa6d22-a397-5aef-be1f-ec8187d3c069",
+      "lineage_id": "legacy-c5115f59-a205-54e0-8df8-d7012777f208",
+      "document_canon": false
+    },
+    {
+      "path": "docs/original_rdb_schema_v1.md",
+      "bytes": 23150,
+      "sha256": "7ed8d08e72fbf2d79da54d29262998ba950d1da9a2420be9e9d235e9a66f1613",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-3c3f0881-74b0-53e2-a006-5c00d9964998",
+      "lineage_id": "legacy-22e24b62-d583-5aab-9e81-19f523161e6e",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260908-gemma4-finetuning-plan-v0-1.md",
+      "bytes": 22135,
+      "sha256": "eda3c9bda4646116af6a14c99f8e473fa0c8a847368f5a063dcf64d47d95f58e",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-683ad8ed-c394-5445-b355-3c23db16e0dc",
+      "lineage_id": "legacy-fcbe70ea-f2b0-5edf-aa0b-d9d1a9d0c344",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260911-gemma4-toy-finetuning-practice-plan-v0-1.md",
+      "bytes": 5540,
+      "sha256": "12c8c1e4c0d1930e6b3dc3378138be637ac4a0f70a5f6a3ef419454947baebd3",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-ac5ff283-0b0b-54a3-88f4-457a650de71c",
+      "lineage_id": "legacy-50ebc289-0f95-5084-b1c1-0a1832877cf7",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260914-enwiki-granite-knowledge-ingestion-plan-v0-1.md",
+      "bytes": 18183,
+      "sha256": "bee75e6e5ab0bb6d8198e1eb688063b0939daf858547b5d1118d0e13c911ff6b",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-537ee170-dd89-5d34-b680-00f014b5b038",
+      "lineage_id": "legacy-2e3bb67d-12f9-5754-9163-2960ca5bd82e",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260914-munche-style-embedding-integration-plan-v0-1.md",
+      "bytes": 12650,
+      "sha256": "2fbeae4037d81cbbc753ebeb9c78707437d1f16ad45075b9638588101e5e6090",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-9331c664-19f2-57f4-86d9-8cd05e52c4af",
+      "lineage_id": "legacy-39d453b6-345f-524c-9028-0f82557fffd0",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260914-toy-tune-architecture-and-backendai-bootstrap-plan-v0-1.md",
+      "bytes": 34279,
+      "sha256": "e3e2dd86d4e9236a22a5ee643774e16a8d70dc5feea853d73ba942ee20e4f67e",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-d4d7afc4-73e2-5b48-9c29-6d79f82698bd",
+      "lineage_id": "legacy-f407470e-b079-59a4-92be-11e6cc7b09c2",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260918-current-system-execution-plan-v0-1.md",
+      "bytes": 17808,
+      "sha256": "9ee74c2c922d8a09f197aaad7a7592dad3824ac1fc2785476229890320ff587b",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-842f548d-1929-5354-98e9-f3e595409643",
+      "lineage_id": "legacy-37331051-2fb7-56c3-a7c0-7a28b57b4cbe",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260924-first-50-analysis-and-ingestion-plan.md",
+      "bytes": 14729,
+      "sha256": "f4c13ed00b1c5fc63b34ca1674c0ce7dde3b9283d73fc1ed82e034ce6c95925d",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-d576bcc6-0b02-5b98-97aa-04e50986dc11",
+      "lineage_id": "legacy-fd938d95-a382-5c66-a926-cea5226b9751",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260924-first-50-episode-analysis-method.md",
+      "bytes": 18520,
+      "sha256": "544573ce6f1277333c3c4d4e9f2e01d768f9809250fef29e669ce40838f5f973",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-7c75fc28-ecfd-5dc1-a9ed-61c9d03accd2",
+      "lineage_id": "legacy-5d282a54-ad2b-5716-8037-a35e15451342",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260924-first-50-sqlite-storage.md",
+      "bytes": 25289,
+      "sha256": "9a0edf9ffa07de2a8095611d9242ac661415daf1091bef647e51b0a7942a463a",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-4a066535-8c8e-5ebb-a00d-cea00754e6c8",
+      "lineage_id": "legacy-aa7b1b75-f249-5840-984b-db23282aa9fa",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/20260924-history-sot-ontology-research-plan.md",
+      "bytes": 11790,
+      "sha256": "ae297d5d3f90bfd04b05adcb24a8ce4eeab4142bcd11e84afc9d2e90c697550f",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-2be16d93-6960-5021-85c9-3ce9a77ad3fc",
+      "lineage_id": "legacy-cf2ad899-99b6-5ae9-aab9-1c755ad15e0d",
+      "document_canon": false
+    },
+    {
+      "path": "docs/plans/README.md",
+      "bytes": 3155,
+      "sha256": "47ab6cfebaa0190fe32c1cb9b3293b9026a467ea7033606e1f7865617a381918",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-93f0a318-84f1-55a4-9c35-33a2fd76818c",
+      "lineage_id": "legacy-e4c4ac45-4277-5022-8ce0-5c8205c86e6f",
+      "document_canon": false
+    },
+    {
+      "path": "docs/references/README.md",
+      "bytes": 3528,
+      "sha256": "e6d7d15409d4c1112e626ecc4650c425a6fe387a59fc81fc7fdb681fd322efca",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-ac39aa5e-eb66-5cbc-a24f-9582cce3960d",
+      "lineage_id": "legacy-37a8181a-ca21-51bb-ab72-341e55efab72",
+      "document_canon": false
+    },
+    {
+      "path": "docs/reports/20260908-alternate-history-sqlite-canon-report-v0-1.md",
+      "bytes": 14899,
+      "sha256": "423d55977d7da6a1db729c284bede0b82a2104e54f69fa3a5ad06e5e384961ed",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-b294887d-6f0c-57b8-b483-991d537cc83e",
+      "lineage_id": "legacy-e992e7bf-143c-5fea-9637-b256a87efde1",
+      "document_canon": false
+    },
+    {
+      "path": "docs/reports/20260908-gemma4-31b-heretic-style-finetuning-deep-research-v0-2.md",
+      "bytes": 38891,
+      "sha256": "aa4197ce7198da71647bbe4b9c920bb52d6b60329a7f5736c2fd7060e247bf67",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-300c5bf3-9353-55d0-8e5d-e3abcbd8655e",
+      "lineage_id": "legacy-e7a0846f-34ef-53c6-bc02-b97cf730252e",
+      "document_canon": false
+    },
+    {
+      "path": "docs/reports/20260908-qwen38-27b-h200-finetuning-feasibility-report-v0-1.md",
+      "bytes": 14401,
+      "sha256": "1f631464657b5abd53ba784b54eaa54a4be18ecafffed8344560c88e494e6cd7",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-2aa02287-fda4-5471-8d9f-6f79caee9549",
+      "lineage_id": "legacy-a170a051-5f74-56d8-b2b3-f4f1923b1028",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/20260924-bestseller-selection.md",
+      "bytes": 15478,
+      "sha256": "008c65915696fd4d88e77dfcbd256494d50ea44d8cb2740709821902d7404765",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-7852a45b-f207-5133-9fb3-3226270fff75",
+      "lineage_id": "legacy-1420669e-2f67-5ad8-98e0-ea86d1e43f8d",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/20260924-history-sot-ontology-plan-review.md",
+      "bytes": 2025,
+      "sha256": "0794eb794c676913daa9fa5b5890db9139b16366438ced0731cdabfab3256baa",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-8b6936ad-3c58-5955-8ef6-05bcb323ea15",
+      "lineage_id": "legacy-245ff294-67c5-546f-9751-5a87474bd1da",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/20260924-history-sot-ontology-source-map.md",
+      "bytes": 11824,
+      "sha256": "46f7e48c7d41577c5f84484cbade1ff91967b3047c50ba6ef45f25da7f51fad7",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-f3bd50f5-90a2-529b-a268-e1f48de78a5f",
+      "lineage_id": "legacy-10d8a384-4572-5c64-a014-6a4a1d8c3c11",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/20260924-owned-novels-catalog.md",
+      "bytes": 22489,
+      "sha256": "52319cb599bdbd360f90fb5ec1050214fedef62908f12324825c3d78d02b0bf9",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-3f49c889-48ff-549c-a8e9-dde3533c6a8e",
+      "lineage_id": "legacy-bb6756d5-bc05-5312-a43a-73892d8575a0",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/README.md",
+      "bytes": 4715,
+      "sha256": "6d0a1e5a950b648547b2d5cd3c1bbbfad7e96c95d113b444a3dd54c9e7770135",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-f89ae71e-ce5f-5ddc-8e97-909b8c6137de",
+      "lineage_id": "legacy-b7c1099a-f3ef-5961-974b-e20f28428295",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/analysis-contract.md",
+      "bytes": 3878,
+      "sha256": "da5db0e8d4cb9ba6e0496209474a6bf7628913e8efa5bfd3ae3324172b0fc075",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-43b62d7e-9929-5617-87c9-b143fd20e081",
+      "lineage_id": "legacy-f5d55c87-d267-5a6a-adb5-d82a0ccf618d",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/ganda-left/author-profile.md",
+      "bytes": 3362,
+      "sha256": "0128084e2ec99ac4aa5a25c33af886fd002e681f7caddfa370efd754b74c4f3a",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-4270f9e3-f367-5afa-ba67-839b8ce77c64",
+      "lineage_id": "legacy-9cdf3486-7ecf-572f-9ef8-ca10f27a0ec1",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/ganda-left/preflight.md",
+      "bytes": 3148,
+      "sha256": "70fa02603f7ccf433eee394c76e3f37b1c8f381acb668e69b9ff907a5451a1c7",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-9c0d4db5-1234-54d3-ba5b-752d173d6012",
+      "lineage_id": "legacy-1a090676-9dfd-5610-973a-ebe7bacd5dd5",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/ganda-left/review.md",
+      "bytes": 2295,
+      "sha256": "fa177a0f956ac3f24696395a59513fe125e49749442ae978d6519e8f59facae1",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-4d5f1f97-95bb-5190-83b5-d6decf5ecf96",
+      "lineage_id": "legacy-5208e264-036b-532b-ab7a-95e1ad1561b9",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/ganda-left/works/1588.md",
+      "bytes": 17652,
+      "sha256": "3a5384c345488692f2b97d1a4a73a5f78d18f826d23d6f6c4b06e6e92bee41ec",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-c58213eb-7e17-51ac-8dc8-dc291668cdd0",
+      "lineage_id": "legacy-54b6c7ed-5f76-59ce-9ada-5f1873addaba",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/garlic-snack/author-profile.md",
+      "bytes": 4587,
+      "sha256": "ba9b94f89ad3cce7a4dc17b8a8132dec069f231d5074b05cb1a32b658c35e2dc",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-7a1735ed-25ac-5bf2-82ea-be176c0dea04",
+      "lineage_id": "legacy-d165c47a-0d99-5b32-8cd7-e27500ef441a",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/garlic-snack/preflight.md",
+      "bytes": 3649,
+      "sha256": "a2eaebabc33f551fe76058931067c3225911e4b03769953505270ce2296b536f",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-90128e6e-6582-510f-a810-d39208088b77",
+      "lineage_id": "legacy-0e9ada88-bead-50d7-b1b4-5de03444af07",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/garlic-snack/review.md",
+      "bytes": 4514,
+      "sha256": "5013e3a250eb086ac7ff55f03b1c5e0e7a2a33c3b08c3ffff1610ba8b212e2af",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-1fe6b419-1b7a-545e-953a-8f5f30e62ea7",
+      "lineage_id": "legacy-70d0530f-66cf-50cb-996d-ae7132ba62bd",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/garlic-snack/works/goryeo.md",
+      "bytes": 13903,
+      "sha256": "0e90d309342f7bf15ba000764523f56e2ced082b4edf7963fd897d8fcb311347",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-09f5b104-cfe7-5b03-b667-273586224804",
+      "lineage_id": "legacy-aac7e322-edf2-565d-b6b7-b1493b2aacaf",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/garlic-snack/works/poland.md",
+      "bytes": 13538,
+      "sha256": "2811f36f5ccb13acab5ac794c1ee2f905a243a21542b298d5566ae56b3da52be",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-9d056dd1-d051-531d-9532-4485ca74dd22",
+      "lineage_id": "legacy-f8208c73-1acd-5e56-91f8-866a26d079db",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/myeongwon/author-profile.md",
+      "bytes": 1942,
+      "sha256": "55bf3b2b5ebc4d27c915bcb6fcbd7d50fe14705ee336554930d85b3d811e458e",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-5c5f972a-0d08-5204-a52f-42a2ca245132",
+      "lineage_id": "legacy-79b84316-87fb-5373-8ee9-0374c1879b9f",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/myeongwon/preflight.md",
+      "bytes": 2691,
+      "sha256": "a6c4aa5ce434225bcff51da1ef1ae8cb93570354e38f635efc8d1b3258aaf3c1",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-b65066bb-f996-5287-93a2-697a9cf223b4",
+      "lineage_id": "legacy-d64b45df-b33d-5e80-9576-a4ef8c7db929",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/myeongwon/review.md",
+      "bytes": 2601,
+      "sha256": "1775ce0b3c4713f0a24c243c254ae0d9cbb2b92a998526d3333f7933d0878127",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-db43a138-f882-5b70-9853-fa7a0301822f",
+      "lineage_id": "legacy-105dc103-f23b-574b-a3fb-981940912291",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/myeongwon/works/fair-trade.md",
+      "bytes": 16897,
+      "sha256": "a9ec0b3e15eba3ed6871b5c5e2938f4faa1a94c135a0eb3ea87da86b1d3bfc85",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-93a9ab2e-2ae4-54d9-bcea-c751079853ce",
+      "lineage_id": "legacy-5f8d1f3e-c940-5669-ac23-d51c5c6a3f2a",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/richerlen/author-profile.md",
+      "bytes": 4218,
+      "sha256": "66f6c0d90c8a8f6c7a6b25e7b3680e009b2e1b1346e5ad9a4b80cf6bdda07b7d",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-8c9d3561-632d-545f-9da4-a441eca9450d",
+      "lineage_id": "legacy-eab17adf-0ac1-5243-8bd2-ec603982e202",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/richerlen/preflight.md",
+      "bytes": 2912,
+      "sha256": "ca3b6d385832e9a7ad2d4752cc682160ab900387adf567f8c3ed36dbff3e84b3",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-8af9c455-e3b2-5083-a828-9e3012157503",
+      "lineage_id": "legacy-e63f8b5d-6ba2-5dca-aef9-9b326d7b6b67",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/richerlen/review.md",
+      "bytes": 3587,
+      "sha256": "111b04addcd60a93a72f9c17beb51025befb60c5582fbf5fc772dcb1252b3f0a",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-2840303f-fe8f-5433-a9ce-5c474f4c520c",
+      "lineage_id": "legacy-7aa3c5f9-19ae-5bdc-a50e-deb21cfacc18",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/richerlen/source-offset-notes.md",
+      "bytes": 2706,
+      "sha256": "951c2f322ff27fda1bf86789cfe93d396b77cb8dd3a328cf93aab7f681dc6895",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-212044c9-d634-55e9-b6c4-1c0db8a8f81f",
+      "lineage_id": "legacy-5fa00907-1aa6-574f-9a2a-1e7632f462f9",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/richerlen/works/gogjong.md",
+      "bytes": 11085,
+      "sha256": "da09393d7ed4c249ad8e512e490f329023d00568a9a746de0ecfd694014395a3",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-56d9b02e-ae37-58dd-a34c-a775b4cffc3d",
+      "lineage_id": "legacy-cb206f69-aac7-5c38-a860-1bb78005b2be",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/richerlen/works/mustache.md",
+      "bytes": 5139,
+      "sha256": "b376b21ef46dfb0e869bf9a100a4e8434fa157aa75cf220a4dfb371e10efca36",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-2cc25d27-578d-56f9-96e2-45e64c16da95",
+      "lineage_id": "legacy-d10c9c3f-53c7-5e69-8385-8fdebcf64d3d",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/author-study/richerlen/works/sunjong.md",
+      "bytes": 9813,
+      "sha256": "59e808f76b7c465f1ea5f228081d3d25bbc596cb853e7e05b4daa9e73ad7753c",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-09576d5e-2545-58d4-b035-bd504eb7325b",
+      "lineage_id": "legacy-0591126e-af15-5f22-bdd2-322070924160",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/chapter-ingestion/1588-boundaries.md",
+      "bytes": 3671,
+      "sha256": "5bb801134237f44a3a13085b1d3f969c0d9ff9d38c7377416bb4af684f9a4ddc",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-c81f7104-c687-50e4-bfed-2e948472d5dc",
+      "lineage_id": "legacy-235b5bbe-1818-5e1c-859f-8d1ea673b6f2",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/chapter-ingestion/README.md",
+      "bytes": 3882,
+      "sha256": "f4a7946375175aa60ffcdad916f7abf383fdca2d637f14881ad7083abdcfd571",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-b3ca3f14-4f23-590b-bf01-d4fb9cbabe7c",
+      "lineage_id": "legacy-66a68e5c-5f49-5c41-a0c3-4d8cdbca7553",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/chapter-ingestion/fair-trade-boundaries.md",
+      "bytes": 4833,
+      "sha256": "e3717512cf04be6cd8baa2d0072c9d618e693d270f86c2b08081d9b27ba9e2e8",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-ec581b47-4670-5396-85d3-039a175ed886",
+      "lineage_id": "legacy-91877e3a-0a9d-5af8-b273-9202b6581f5b",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/chapter-ingestion/gogjong-boundaries.md",
+      "bytes": 2009,
+      "sha256": "374fdc3decfba5feab5acd0571b99c16f1f66ed3af35c5ab56b3ef74a87228cb",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-824988dc-5c37-5e76-807b-094d25ec4a5d",
+      "lineage_id": "legacy-5384c4c7-e71f-55d9-8a80-c249f305e79a",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/chapter-ingestion/goryeo-boundaries.md",
+      "bytes": 3960,
+      "sha256": "a68690754462c661283de8b475f4f671f95ee5fa7cb2060c684b3ae2d7a0d935",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-7ae4b56a-7a67-59db-9380-98bc330e9169",
+      "lineage_id": "legacy-bb3cb547-6808-5b0b-bd0b-15a30a983163",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/chapter-ingestion/mustache-boundaries.md",
+      "bytes": 2926,
+      "sha256": "dc6c71579068e10185b03669f8cee262261b6383e5c124b3f849b95e71e6f038",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-2111698a-b642-594f-b2cb-eba216b78535",
+      "lineage_id": "legacy-6d96de0b-f409-50f3-b40e-bc160bc40754",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/chapter-ingestion/poland-boundaries.md",
+      "bytes": 4157,
+      "sha256": "4b5c98b0c7af57c1c0d9a4b4250242f978d459e6270273d4f277e4d0d526c1c1",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-03a78308-9b49-51fc-af3f-49c79b94e871",
+      "lineage_id": "legacy-0344ea94-2521-532c-8459-66079b99fe1d",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/chapter-ingestion/review.md",
+      "bytes": 5610,
+      "sha256": "ca835f2a6f7c49801653ab7687338a2312a626c03cf9f66c6651193bb32f449e",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-010f5584-efef-5af4-8684-88416387b7bc",
+      "lineage_id": "legacy-aacceef7-241c-5213-a77f-0f03868c28ca",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/chapter-ingestion/sunjong-boundaries.md",
+      "bytes": 2883,
+      "sha256": "9f75fabc1e474005d736a5576101fc8170a6adbea84ca07793021a93eafa681a",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-664bc9ab-42b0-5764-8f98-4aa87f4b722d",
+      "lineage_id": "legacy-6b1de864-b196-51c5-a034-09292bf4dfed",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/writing-spec-v0-1/README.md",
+      "bytes": 4359,
+      "sha256": "5ca7dada0b26ecb2eb7b65a166383723265c1a009095dbb89ecc031e9b4ac74d",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-0aad59c9-194e-5a4a-8466-44bad36d3f9c",
+      "lineage_id": "legacy-47a4e3b9-b0cd-567f-97fc-afcdc80d6bb6",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/writing-spec-v0-1/author-comparison.md",
+      "bytes": 12212,
+      "sha256": "0bd03e73d5be49ed5fd8753c85a4266b8dba1288dd299300d8a9d47030da3a10",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-064f7253-931d-5987-9fdf-00005cbdd27c",
+      "lineage_id": "legacy-2ed77ae2-2202-5f15-b985-37388f35f6c1",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/writing-spec-v0-1/comparison-review.md",
+      "bytes": 3338,
+      "sha256": "e5b82c4eddf9497cb03acdabeb752de9fd9d90ae929da0ca1d33fe630c725f0c",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-b244c7a2-b8fe-5cee-a797-a79453b790f8",
+      "lineage_id": "legacy-f636225f-c26b-5e9b-8fa8-03ec4839b33f",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/writing-spec-v0-1/pilot-1588/source-audit.md",
+      "bytes": 6186,
+      "sha256": "0f45bcf081ae83049bfc8b2433523a3f25c302a2b895ea77f674c7eb2c771a64",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-9493c5b3-a928-5db4-8f42-3e6f3df6e76e",
+      "lineage_id": "legacy-508ea976-ab36-5300-8f45-40e44220b2cb",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/writing-spec-v0-1/reverse-candidate-policy.md",
+      "bytes": 4949,
+      "sha256": "068a3807617015997220baf3e9c7d512a219c76bf342c03bcf6ab0715177a4ec",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-5e66af9a-3fbc-50fa-a12f-2b109d5ba4c0",
+      "lineage_id": "legacy-6581aa86-01e1-52c2-ae52-19b856f564a7",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/writing-spec-v0-1/reverse-input-contract.md",
+      "bytes": 8677,
+      "sha256": "8d77cb46180924923b2797e8ca83d3723ee3b74e5ffad48a0e725041d8beb3af",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-dfceb663-aba2-5b62-b0a6-dcac49920708",
+      "lineage_id": "legacy-746cab4d-a292-5f8f-856c-f4c3e3d47151",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/writing-spec-v0-1/reverse-review.md",
+      "bytes": 6555,
+      "sha256": "7544563f241d08d6cf61eb3637fdd63072f7131652694d30544ccf64c5b15aa7",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-636596be-d4f8-518a-84b0-5bc933ca34c8",
+      "lineage_id": "legacy-a2a41360-9d19-5f23-bb5b-d5ac122d7f82",
+      "document_canon": false
+    },
+    {
+      "path": "docs/research/writing-spec-v0-1/writing-criteria-draft.md",
+      "bytes": 11263,
+      "sha256": "5bb864cc3a7fed8b261a220d35dd096460fbec4ba037e6ea58a40bdca03992f6",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-a9e45622-231b-562b-839a-a68c4d6b6872",
+      "lineage_id": "legacy-388f4b95-57ff-5f7c-b503-5036434dcff4",
+      "document_canon": false
+    },
+    {
+      "path": "docs/systems/20260924-history-ontology-and-anchor-bridges.md",
+      "bytes": 17347,
+      "sha256": "85acd844615daa210b23f3de2bb4aa52443a83408f4b2ed2d75fa68ab3f21ef8",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-f2823fba-8b57-5b41-a1f9-5935dc894a47",
+      "lineage_id": "legacy-9100d7dd-10b4-5e07-b1a5-739557c29b0f",
+      "document_canon": false
+    },
+    {
+      "path": "docs/systems/README.md",
+      "bytes": 18621,
+      "sha256": "1a9459434865a43724462e5500f39131be48d03416037f95aeff3d1628f34d8f",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-bbc570fe-d905-526a-9653-83ff88929c23",
+      "lineage_id": "legacy-b73dc239-4fdc-51c4-b92b-91ce34c876e9",
+      "document_canon": false
+    },
+    {
+      "path": "docs/systems/system-setup.md",
+      "bytes": 2628,
+      "sha256": "747c65a1911da98bb6f22feb22e5a135f1fc26e21e9f662a24ac7283674b3ada",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-939b1ea6-4e0d-5233-9fef-346e62e59f77",
+      "lineage_id": "legacy-7b10c2a7-1529-5537-a72e-90e4900e7487",
+      "document_canon": false
+    },
+    {
+      "path": "docs/wiki/AGENTS.md",
+      "bytes": 1124,
+      "sha256": "ad427e4babda462b191f8aa13d890633812cb2a94722f39ae5f21af4abc63d7f",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-c24a6458-909d-547c-b61c-ffc619e7805d",
+      "lineage_id": "legacy-3e69c67d-4b2d-500d-9c0f-5f01234980bf",
+      "document_canon": false
+    },
+    {
+      "path": "docs/wiki/data.md",
+      "bytes": 5542,
+      "sha256": "63af4e305418d0093cd575d8d9c1098e11df44b61e920f829f459a67a0179a8c",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-3d4dd080-4353-5e3c-85da-bec5f7cfac3c",
+      "lineage_id": "legacy-1b0b5377-2cc9-51c4-bd60-e69dbe8721ab",
+      "document_canon": false
+    },
+    {
+      "path": "docs/wiki/index.md",
+      "bytes": 2819,
+      "sha256": "80ac0575f67252258f7ea75b951e647ad00a83836fb935a099319d4fbab6a206",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-9cdbebeb-76b1-5995-9817-f52f9d8beabe",
+      "lineage_id": "legacy-f2ebcff0-5da1-5cdd-9b14-9d7aba9edfc6",
+      "document_canon": false
+    },
+    {
+      "path": "docs/wiki/log.md",
+      "bytes": 3839,
+      "sha256": "c5291c14f41a55f36ac7575305bde910c745719c997f8c0155df9586c80d020d",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-01c57aa2-d910-5c21-be30-f4ea5bdd8177",
+      "lineage_id": "legacy-d4da9024-86c1-5344-8b92-216afaf60977",
+      "document_canon": false
+    },
+    {
+      "path": "docs/wiki/rules.md",
+      "bytes": 3086,
+      "sha256": "610d6b3bc692e8b7c52669af5228a8c226515bb8fae12c23b61aebac7db019ac",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-6bcf7426-3bd7-5dc1-a570-6f0df285052a",
+      "lineage_id": "legacy-ba7f7180-f8ed-5174-bf0a-515af2737966",
+      "document_canon": false
+    },
+    {
+      "path": "docs/wiki/sources.md",
+      "bytes": 30091,
+      "sha256": "e9e635efcd95ce0a460546d75885476f778308f831d02da96473f4e30113fd17",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-66a8bc37-bd33-5373-9d23-9f0123bd0b6b",
+      "lineage_id": "legacy-14d54c93-944f-5144-b630-7729703a546e",
+      "document_canon": false
+    },
+    {
+      "path": "docs/wiki/status.md",
+      "bytes": 5125,
+      "sha256": "0ba41588987ea6d8a5b3d9aa85c5b1adc908884b0312e1f60d90e4b9ba0eacd6",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-42ab3d99-f8a9-57af-aaa4-5888ad2776dd",
+      "lineage_id": "legacy-91d56b4a-0148-5190-b06d-b231b07a5d96",
+      "document_canon": false
+    },
+    {
+      "path": "docs/wiki/system.md",
+      "bytes": 4055,
+      "sha256": "3c72ed00c15fdcbfdfdcc364ba466f12e38edd3e75cb060be8c746c64ba4b658",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-ae79a50b-6495-5fdf-bdd7-0b26fe7839b9",
+      "lineage_id": "legacy-5f1aeba2-2171-5f7b-9006-432289f188fc",
+      "document_canon": false
+    },
+    {
+      "path": "docs/wiki/writing.md",
+      "bytes": 3731,
+      "sha256": "7eedd8f548e14878420473f61fca2a93191b85ea709edb542c6c3f8b77a6b5e0",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-2adb0b43-e332-50ae-b3dc-25e09412d5ad",
+      "lineage_id": "legacy-3e35a01b-02ae-5c50-8399-026a05bd901d",
+      "document_canon": false
+    },
+    {
+      "path": "plan/260320_webnovel-project-setup.md",
+      "bytes": 9708,
+      "sha256": "4c518a764ac46408cfcc485b1e553518111cd64d99ac916dac50fc5766e2b678",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-105aeaf2-58fc-5baf-8e9b-540be1525c4f",
+      "lineage_id": "legacy-5bdbc9a1-d62e-55c5-8bd7-656789039b21",
+      "document_canon": false
+    },
+    {
+      "path": "plan/260413 개발 플랜 및 데이터 명세서.md",
+      "bytes": 8551,
+      "sha256": "85cd22dd4e4c8710604e85cbee7a0723ec3c6f3386d5ba73b7d0c23955bd5e7e",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-503a2bde-6136-5d84-91f1-8ee3dc919dae",
+      "lineage_id": "legacy-994966f9-fabb-56ae-bd0f-5d11e2cc5b25",
+      "document_canon": false
+    },
+    {
+      "path": "plan/260413_v2.1_재구축_플랜순서 .md",
+      "bytes": 118567,
+      "sha256": "e2c273b97c46c4394488cee3612cb5a5aa71c41ec4444d4616108486e4616b1f",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-1c0e4da8-0f52-552e-a95c-4026a701336a",
+      "lineage_id": "legacy-6f04f8aa-76d9-5be9-924f-4cbd8df86d3d",
+      "document_canon": false
+    },
+    {
+      "path": "plan/260413_v2_클린코드_피드백_검토.md",
+      "bytes": 19426,
+      "sha256": "4e58bad12e98d92dfaf0d1d2c810ba0301152a6926838a2954ca76afc26f9227",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-fb39e2d1-a07b-58dc-94ef-56930191f8a6",
+      "lineage_id": "legacy-1c655ae3-3bca-57c0-9da0-3771939ba289",
+      "document_canon": false
+    },
+    {
+      "path": "plan/260413_개발플랜_냉정한_피드백.md",
+      "bytes": 9381,
+      "sha256": "b190420f942dfd6a40065e4cba16f014244656a571af15008c443d2c6e9c32f8",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-82e12590-877a-56f6-8769-85dfd9395e39",
+      "lineage_id": "legacy-a304ea0c-bd68-5af3-ab76-6801d7aee284",
+      "document_canon": false
+    },
+    {
+      "path": "plan/260413_리팩토링_플랜순서.md",
+      "bytes": 12741,
+      "sha256": "0967bb7af1dc5fa1edbb248d88e161bdef4df5ff7faa700c3a74a5ecffa7d71c",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-f7f9e07c-7374-57b7-986d-2f6a9238cdff",
+      "lineage_id": "legacy-f349c528-2d20-5134-b362-96ed641b9311",
+      "document_canon": false
+    },
+    {
+      "path": "plan/260414_v1_v2_기능비교.md",
+      "bytes": 34729,
+      "sha256": "0c5988336b54325272e834174ccfa024c50f7ad388619c6333cab5cf29b1b74a",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-3ea9dafb-cf55-5ed5-ab76-dc0c3005804c",
+      "lineage_id": "legacy-947fd071-01dd-51d5-81ea-ed83da028c2c",
+      "document_canon": false
+    },
+    {
+      "path": "plan/260418_strategy_layer_작성플랜.md",
+      "bytes": 6405,
+      "sha256": "2103740c79ce3031a92ec03d77405340e4ff4e359f47a243271f649a2485201b",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-5867ca1d-ffb7-5c95-94ce-a8b59da9ffb4",
+      "lineage_id": "legacy-2718b5bc-8dac-55b1-9828-eb7f66fd56cb",
+      "document_canon": false
+    },
+    {
+      "path": "plan/260418_통합설계서_v3_v4.1_정리플랜.md",
+      "bytes": 7825,
+      "sha256": "d1f6027e2dece92f3b28c1e72fb770dfd0f895217677bf4c956a3e62ba97ba5d",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-03836559-b046-5ca0-a913-fe26bd7efe68",
+      "lineage_id": "legacy-e10fae63-2388-58e8-a28a-609bb91c5c4d",
+      "document_canon": false
+    },
+    {
+      "path": "plan/README.md",
+      "bytes": 797,
+      "sha256": "dc1bf41d3d28dcd043e41b1edef97170d5cd80cc26e73c75ad9fd14bda1b0da7",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-a1eeb51d-80a7-5edf-9a01-743bfad1b233",
+      "lineage_id": "legacy-c61f3924-6569-518c-bbea-0de915814e7a",
+      "document_canon": false
+    },
+    {
+      "path": "plan/legacy/260413_v2_재구축_플랜순서.md",
+      "bytes": 66344,
+      "sha256": "d8ebec25d94e7a44ea3f9c145bae46f5765abe748e9dc21eedde5743d5f26f08",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-8c864193-09f9-5f07-a5d4-4b8113cd8bf1",
+      "lineage_id": "legacy-ab4df47b-103e-5534-afef-f183482a03ff",
+      "document_canon": false
+    },
+    {
+      "path": "tools/document_harness/README.md",
+      "bytes": 5018,
+      "sha256": "7b793b7d03d804896d3b2313abf507a84e044b835b4718b89afb37a1d0ca229b",
+      "before": "same",
+      "result": "unchanged",
+      "document_id": "doc-f80c523f-a2f1-4370-8d5f-ac643bd95b54",
+      "lineage_id": "lin-9de47fd1-ad99-4e44-9e39-edb5e9196375",
+      "document_canon": true
+    },
+    {
+      "path": "tools/novel_corpus/README.md",
+      "bytes": 4401,
+      "sha256": "1630537a9d05d4a7ed3ffb6df3ef8e3698342502848ddb8e30c8626ff9c7d1af",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-207833a3-358f-52a5-b937-32694ae7cfab",
+      "lineage_id": "legacy-faa16015-acc5-5b53-a3c8-c83de79866dc",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "toy-tune/README.md",
+      "bytes": 2342,
+      "sha256": "5353118fea4535fa032e343aae4ee9024bdfadb235acfa836fbf3c3195a9b833",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-7c174ee8-1742-5262-b669-aa4af9f0741e",
+      "lineage_id": "legacy-dbe43025-fbd2-5b6e-a250-bae9651a25b1",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "toy-tune/docs/architecture.md",
+      "bytes": 2068,
+      "sha256": "b7d902987b3328a62838fd33ed4feac70d8e981f6ce865069ac6cccde9f3b610",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-53356e72-3b1d-53de-852a-a1d5988d70d5",
+      "lineage_id": "legacy-f8843823-ad87-5e4c-91f0-b017428e8cbb",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "toy-tune/docs/data-contract.md",
+      "bytes": 2472,
+      "sha256": "331e8d0d494b69e8a207b068daf44dd38e1189182c4ec91e35f9feb699160eab",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-4e53bd56-b6e6-5fc6-b9ae-3965485c2490",
+      "lineage_id": "legacy-d32a3b08-dac0-57f5-a1f9-6438d579cf06",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "toy-tune/docs/runbook.md",
+      "bytes": 1984,
+      "sha256": "d7ebe58c5ca979c6a34c6775150addadac7132deac00882be109786773ceea44",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-46ce3295-4262-5483-843c-597e2ef12893",
+      "lineage_id": "legacy-a61379a9-1ccf-5c11-af28-05e5c6c4f913",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "toy-tune/environments/README.md",
+      "bytes": 879,
+      "sha256": "f33e4b937829defd9736e5479c8975eb0b921d7562ad1c176c790d4297937e5f",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-23615cad-8694-5c65-8530-a9990dab2d47",
+      "lineage_id": "legacy-0ab41111-baff-539f-9633-e403ec49b6ef",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "toy-tune/ops/backendai/README.md",
+      "bytes": 1764,
+      "sha256": "185df32a1747e522f21226fc2dd9bae866539c9f09c27c79ca324cd283b3798c",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-030e4f29-c60d-520c-a6b0-457aa0256291",
+      "lineage_id": "legacy-96df95bf-e196-58cf-a07b-7e1fce47625c",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "toy-tune/ops/ssh/README.md",
+      "bytes": 1253,
+      "sha256": "cfb485802573afd9a20131d36f05bb8945e3f424e75907f5b86fb7132e8c4be0",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-55dbc7ea-7677-512c-960f-9274a38ed87c",
+      "lineage_id": "legacy-27ca404e-d2fc-5290-b3c4-0ca85b307259",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/session_summary_250517_1551.md",
+      "bytes": 4579,
+      "sha256": "15a9ccc856899b7d946584384d033e3036d4cf8ac09a297da23d42a42de34c81",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-6374ad80-9de0-52db-bac4-d47e93732197",
+      "lineage_id": "legacy-96889637-d15d-5bce-9f38-c90cabb43c2f",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/README.md",
+      "bytes": 1681,
+      "sha256": "5d177e5cf8512f7ba8bb9b297991d7d122dc2cb92eba0824c07a01624070c915",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-4344a71d-3824-5cdd-9d26-aaf6df42b5f6",
+      "lineage_id": "legacy-84f2f3e7-feea-59f2-a80d-319b463bd76a",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/characters/commons/몽골병사.md",
+      "bytes": 5098,
+      "sha256": "2aed28309a540915d618e57c38432f97c57474704d4f74339989cd83afe48458",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-f966b73d-afe6-5504-8d35-f90fd0e16177",
+      "lineage_id": "legacy-efd95835-e825-5738-b2f7-800d64e945ab",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/characters/commons/몽골케식.md",
+      "bytes": 5139,
+      "sha256": "a4b1648e882b98ad34f3d611fa77524ce0234d1789b15df80998cec815f790f7",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-d345b283-dbb8-586b-ba31-ca0ddfa1ade0",
+      "lineage_id": "legacy-e433cf9f-318f-50ba-93bc-bb24d6aacd4d",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/characters/mains/바하우딘.md",
+      "bytes": 17624,
+      "sha256": "172de29220a8508765b8c9c5567b8766d82580984f34e27ce2cc4dc93bd13212",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-831f935f-4fd1-5db0-bd14-968977162a8b",
+      "lineage_id": "legacy-de6509ba-6dd5-5480-8d4f-459b0312e208",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/characters/mains/소르칵타니.md",
+      "bytes": 8950,
+      "sha256": "c08cd9a30f2354a9e7ab274b3802815ab5c9a6d1c3c081127bf49200812c7873",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-87c4aaca-9feb-57fc-8023-60417491f413",
+      "lineage_id": "legacy-1c77f14e-0baf-5a33-a418-33ace5abec4a",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/characters/mains/수부타이.md",
+      "bytes": 21202,
+      "sha256": "63429b7d36d0b29840f1ec8aab6ce02f1d8968b161e4ced6a2f4a475474b3727",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-09946899-9421-5d08-823c-413c568d28b4",
+      "lineage_id": "legacy-30aa695b-abcf-5bed-9d28-d82596487ddc",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/characters/mains/아륵.md",
+      "bytes": 11326,
+      "sha256": "77a37d46d8e9f3bbc3ec95b672e7b111bd37f4ff3a3f8226acf5f7c14ba44056",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-e5dd9f5a-bcce-56d7-9aca-5c370e528256",
+      "lineage_id": "legacy-574c2410-454c-5ff6-aee6-528e3b2d8fbd",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/characters/mains/윤기령.md",
+      "bytes": 20897,
+      "sha256": "2cf290a989d7643f178902e5a3ca9b7793e3c8c7f12c238205a5a32c28e7f3fd",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-b394240b-7178-540e-840a-5d6ab02ffdef",
+      "lineage_id": "legacy-7d61e9a9-121a-5184-bbcd-3ee22baef6ed",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/characters/mains/툴루이.md",
+      "bytes": 4933,
+      "sha256": "e1ec8a61bd566c9db085970a685467bfe9302c71964d35854d72fe6b7564ca2a",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-1295e59d-7ea3-5196-aa2f-1e10f369d892",
+      "lineage_id": "legacy-23799f3c-f402-5b99-ae71-daac643d2675",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/characters/sub/타타통아.md",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-fafdbf05-6abd-5e16-9889-4cc3a7857174",
+      "lineage_id": "legacy-97b5b36b-34ac-539f-bc5b-efff2a05aa8f",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/history/README.md",
+      "bytes": 1061,
+      "sha256": "84a9604189826c1cc4a0b842b6f8336ebcec8e29c6756a7cde542e2e3e279520",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-40138dc9-a2da-581c-9643-6a8f7d10a554",
+      "lineage_id": "legacy-0a14267f-4416-59d7-9d5f-65c1d26d9a12",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/history/몽골 제국 주요 전쟁 및 전투 연표 (연도 중심).md",
+      "bytes": 13156,
+      "sha256": "75d5fd01140340fc816f8c42ceb2a9c0e1dbd6f1c7a566324acd2ac4df2a40f2",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-f1a6e27c-c663-5799-893d-153122a09836",
+      "lineage_id": "legacy-0590c407-38a0-52b9-823c-b5c5c4446d20",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/worldbuilding/명칭 등.md",
+      "bytes": 412,
+      "sha256": "c880860779ea7273287572b9d27caedef3d9b5c32b3635f916e1cf6eaceea4aa",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-d8fa6fdf-6b68-51fc-9807-8d914999a55d",
+      "lineage_id": "legacy-f1d4a2c0-d754-575a-a798-2e5289f5c182",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-단종/outline/highlights.md",
+      "bytes": 609,
+      "sha256": "c50bb8fd2982e797243a6db7630f41f7f4b8dedafbe4067900e7dce6d4cd0d68",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-efea7228-d6b5-5d8f-806a-140c36ece2f3",
+      "lineage_id": "legacy-b614b7e8-6da1-553d-96d4-422d6af1be0d",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-단종/outline/master.md",
+      "bytes": 4414,
+      "sha256": "b1c40370e2f3bb32edc8c72ac1241c73055dcd4eaa0db99c1fd39b068bf14c58",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-e59d65cb-8583-5f3e-9c92-29aae82a00b8",
+      "lineage_id": "legacy-5325cdd3-8a8f-523f-8c0b-05a1f4812515",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-단종/settings/antagonist.md",
+      "bytes": 979,
+      "sha256": "48944472f3fbf367b6d78fb1865856005226a9cce4c08b76d209830e1388d5b3",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-bd5077b2-b85e-5f97-9a33-0df551b933a8",
+      "lineage_id": "legacy-a6e98498-c452-57c6-b7f9-4d6e6123adcb",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-단종/settings/golden-finger.md",
+      "bytes": 18745,
+      "sha256": "edc3f2fd4a44497e12a52cbc55074528c2b416a9bb875216cf3abe55032621ab",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-aa2c347c-e067-5f4e-8566-6ffeaef5161e",
+      "lineage_id": "legacy-bf26ce81-10df-5868-b4eb-2ae910800f76",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-단종/settings/heroine.md",
+      "bytes": 923,
+      "sha256": "4f109204dd1ee771082f0bf83d1fcfea6d243461083ef796fab49ff9a16a1ac2",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-807f2532-4fc5-5966-90db-b3d664e554de",
+      "lineage_id": "legacy-c48dd44b-0e10-5d77-8d1b-a86bb10ac98a",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-단종/settings/power-system.md",
+      "bytes": 1535,
+      "sha256": "cecdc515c1bbfe31ea27f4dfe5bde979e89fb9b4a570cc14eb0a4b1aba60cbc3",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-27eb396c-1668-5135-8403-a5e4b163eab5",
+      "lineage_id": "legacy-46333c21-f30a-5524-bbdc-4c19fd738555",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-단종/settings/protagonist.md",
+      "bytes": 1093,
+      "sha256": "3db8e2f40b161aebee7fe4ea91e5669e2981bb1ae4149bc067e94be5057f67ff",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-886c86a6-01fc-507f-8f7f-282cd542ae1f",
+      "lineage_id": "legacy-82d26803-809a-5ae6-84ea-39041dba5544",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-단종/settings/team.md",
+      "bytes": 757,
+      "sha256": "ae500d035be90815aad4e57a3e817cb371be98e75d429cbb6a71bed3899767fe",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-8fc9818d-7596-5ff6-9d68-eac753a34a11",
+      "lineage_id": "legacy-3d4dac90-94f5-5ea1-b749-d401de0b2405",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-단종/settings/worldview.md",
+      "bytes": 475,
+      "sha256": "8a801245f2086b197802efc9e4fd11adb9f2e7a4f969cddbccd3e4666a786417",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-3973a14a-5ae1-5edc-a9d0-9d713ee2ff7b",
+      "lineage_id": "legacy-82e4b600-f563-54d6-a085-5de186e85c7a",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/outline/highlights.md",
+      "bytes": 764,
+      "sha256": "4aa7311f7269f043767c562cb526f0a67b0ab159056187203a1ea7cc78523d5b",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-b315e6d1-f246-5cd5-b783-01d66014d591",
+      "lineage_id": "legacy-2808baab-3d74-517c-9670-af09b14258f2",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/outline/master.md",
+      "bytes": 5551,
+      "sha256": "2f53b3bd2413cc92fc2c16aa70b7acce0620bdbb58dec9888ae6a3b2003ab858",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-304e0890-77e3-548d-a12b-bf0a2c529a1c",
+      "lineage_id": "legacy-ff925cfa-09a6-5121-9d78-0c0ad19dbfc2",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/settings/antagonist.md",
+      "bytes": 982,
+      "sha256": "eba52b5939a4ef4b51d52a815ae2e70fdfe3d48b46ab426ce1d05a751d905f21",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-a65b24ad-abe8-5035-94b1-3f52d138b98c",
+      "lineage_id": "legacy-40605ecd-fcd3-5496-9e81-7cce1dcfedd6",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/settings/genre-fusion.md",
+      "bytes": 720,
+      "sha256": "218a3bfdb40726de4236d22ba14be2ae4f674035a695690475472c81c308902e",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-fe163942-18e9-5e74-a9ff-aaab8ecf6831",
+      "lineage_id": "legacy-302280f8-8fe9-570a-88e2-b6ffe2f6fce6",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/settings/golden-finger.md",
+      "bytes": 1128,
+      "sha256": "a41b4eab1b38b627daf644ca9094242cb4e1e9bec483bf9d44c183e71f59708c",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-93cf7ca7-ddb2-57f6-823b-a22db316493d",
+      "lineage_id": "legacy-3fdb3d52-fa3c-512e-9547-7401ae8c5bda",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/settings/heroine.md",
+      "bytes": 923,
+      "sha256": "4f109204dd1ee771082f0bf83d1fcfea6d243461083ef796fab49ff9a16a1ac2",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-17e1b445-ec61-5265-8095-7ffcc97f717d",
+      "lineage_id": "legacy-f6514016-0346-5417-b70d-3b65ffc42522",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/settings/power-system.md",
+      "bytes": 1535,
+      "sha256": "cecdc515c1bbfe31ea27f4dfe5bde979e89fb9b4a570cc14eb0a4b1aba60cbc3",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-ac78c315-7760-5b63-8cb9-ea567ef8497e",
+      "lineage_id": "legacy-558d67a4-817c-5f7a-bafa-e6825f5f0870",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/settings/protagonist.md",
+      "bytes": 1093,
+      "sha256": "3db8e2f40b161aebee7fe4ea91e5669e2981bb1ae4149bc067e94be5057f67ff",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-d4c7d4eb-10b2-5b60-ae82-7d10540d6c08",
+      "lineage_id": "legacy-e41722d4-5b77-561c-89f9-cda805567844",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/settings/team.md",
+      "bytes": 757,
+      "sha256": "ae500d035be90815aad4e57a3e817cb371be98e75d429cbb6a71bed3899767fe",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-8adad989-cd5b-5bff-90f6-8494ce0e376b",
+      "lineage_id": "legacy-0c784c35-bd4d-5e96-b9e0-f85073daaca2",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "철갑-문종아들/settings/worldview.md",
+      "bytes": 1724,
+      "sha256": "1c72943160a4d8052e6180afac934dc9ea0b4715a401cc2822d9a2d138ebffec",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-ab264487-1695-5efb-a73d-682e83e60df9",
+      "lineage_id": "legacy-bfcb0e6a-7630-5164-84c1-db561458e9d2",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    {
+      "path": "data/document_harness/extracted/kt-cloud-gpu-user-guide-v1.0.md",
+      "bytes": 27373,
+      "sha256": "a9d188fca5a09d94cfbf7f838d891e4a864bb73a71293a466458bb6b19276be1",
+      "before": "new",
+      "result": "added",
+      "document_id": "doc-ba2181a9-20dd-515c-b9de-4bb60f21154c",
+      "lineage_id": "legacy-ac0fd546-619c-51b3-ac11-482d7e605dd1",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false,
+      "derived_from_pdf": "docs/kt cloud GPU 서비스 사용자 가이드_v1.0.pdf"
+    }
+  ],
+  "excluded": [
+    {
+      "path": "webnovel-writer/README.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/docs/README.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/docs/architecture.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/docs/commands.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/docs/genres.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/docs/operations.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/docs/rag-and-config.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/agents/consistency-checker.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/agents/context-agent.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/agents/continuity-checker.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/agents/data-agent.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/agents/high-point-checker.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/agents/ooc-checker.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/agents/pacing-checker.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/agents/reader-pull-checker.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/dog-blood-romance/character-archetypes.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/dog-blood-romance/emotional-tension.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/dog-blood-romance/plot-templates.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/dog-blood-romance/romance-pacing.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/dog-blood-romance/romance-tropes.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/dog-blood-romance/sweet-moments.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/dog-blood-romance/torture-points.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/period-drama/ancient-dialogue.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/period-drama/character-design.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/period-drama/historical-setting.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/period-drama/palace-intrigue.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/period-drama/plot-patterns.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/realistic/character-depth.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/realistic/dialogue-authenticity.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/realistic/plot-logic.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/realistic/reality-anchoring.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/realistic/social-issues.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/rules-mystery/clue-design.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/rules-mystery/core-elements.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/rules-mystery/detective-design.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/rules-mystery/revelation-design.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/rules-mystery/structure-pacing.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/rules-mystery/suspect-management.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/rules-mystery/trick-design.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/xuanhuan/cultivation-levels.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/xuanhuan/power-systems.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/xuanhuan/xuanhuan-cool-points.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/xuanhuan/xuanhuan-plot-patterns.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/zhihu-short/character-quick-build.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/zhihu-short/emotional-peaks.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/zhihu-short/ending-patterns.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/zhihu-short/genre-templates.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/zhihu-short/hook-techniques.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/zhihu-short/pacing-rhythm.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/genres/zhihu-short/plot-compression.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/checker-output-schema.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/claude-code-call-matrix.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/context-contract-v2.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/entity-management-spec.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/genre-profiles.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/preferences-schema.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/project-memory-schema.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/reading-power-taxonomy.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/shared/cool-points-guide.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/shared/core-constraints.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/references/shared/strand-weave-pattern.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-dashboard/SKILL.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/SKILL.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/anti-trope-game.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/anti-trope-rules-mystery.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/anti-trope-urban.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/anti-trope-xianxia.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/category-constraint-packs.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/creative-combination.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/creativity-constraints.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/inspiration-collection.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/market-positioning.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/market-trends-2026.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/creativity/selling-points.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/genre-tropes.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/system-data-flow.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/worldbuilding/character-design.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/worldbuilding/faction-systems.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/worldbuilding/power-systems.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/worldbuilding/setting-consistency.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-init/references/worldbuilding/world-rules.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-learn/SKILL.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-plan/SKILL.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-plan/references/cool-points-guide.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-plan/references/outlining/chapter-planning.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-plan/references/outlining/conflict-design.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-plan/references/outlining/genre-volume-pacing.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-plan/references/outlining/outline-structure.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-plan/references/outlining/plot-frameworks.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-plan/references/strand-weave-pattern.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-query/SKILL.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-query/references/advanced/foreshadowing.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-query/references/system-data-flow.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-query/references/tag-specification.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-resume/SKILL.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-resume/references/system-data-flow.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-resume/references/workflow-resume.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-review/SKILL.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-review/references/common-mistakes.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-review/references/cool-points-guide.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-review/references/core-constraints.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-review/references/pacing-control.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-review/references/strand-weave-pattern.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/SKILL.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/core-constraints.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/polish-guide.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/step-1.5-contract.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/step-3-review-gate.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/step-5-debt-switch.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/style-adapter.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/style-variants.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/workflow-details.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/writing/combat-scenes.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/writing/desire-description.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/writing/dialogue-writing.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/writing/emotion-psychology.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/writing/genre-hook-payoff-library.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/writing/scene-description.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/skills/webnovel-write/references/writing/typesetting.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/SF.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/e스포츠.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/게임스포츠.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/경작.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/고대로맨스.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/고무.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/궁중쟁투.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/규칙괴담.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/다자다복.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/다크소재.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/대역문.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/도시기발.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/도시이능.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/도시일상.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/막장로맨스.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/무한류.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/민국로맨스.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/방송문.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/서스펜스기발.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/서스펜스심령.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/서판타지.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/수선.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/시대물.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/시스템류.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/여성향서스펜스.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/역사고대.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/역사기발.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/재벌총재.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/지후단편.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/직장연애.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/청춘달콤.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/크툴루.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/포스트아포칼립스.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/항일첩보.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/현대기발.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/현실소재.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/genres/환상로맨스.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/golden-finger-templates.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/index-schema.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/outline-master.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/outline-vol-beats.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/outline-vol-timeline.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/settings-antagonist.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/settings-genre-fusion.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/settings-golden-finger.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/settings-heroine.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/settings-power-system.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/settings-protagonist.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/settings-team.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/settings-worldview.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "webnovel-writer/webnovel-writer/templates/output/state-schema.md",
+      "reason": "third_party_claude_plugin_lingfengQAQ"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/000-abstract.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/001.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/002.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/003.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/004.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/005.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/006.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/007.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/008.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/009.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/010.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/011.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/012.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/013.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/014 copy.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/014.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/015.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/016.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/017.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/018.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/019.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/019시놉.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/020.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/021.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/022.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/022_plot.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/023.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/998.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "한글 창제를 훔친 몽골 카간/series/volume1/chapter01/999.md",
+      "reason": "novel_chapter_or_sample_body"
+    },
+    {
+      "path": "tmp/deep-research/gemma4-style/report-source.md",
+      "reason": "temporary_research_artifact"
+    },
+    {
+      "path": "docs/references/ganda-left/1588 샤인머스캣으로 귀농 왔더니 신대륙 1-661 완.txt",
+      "reason": "original_novel_text"
+    },
+    {
+      "path": "docs/references/garlic-snack/고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+      "reason": "original_novel_text"
+    },
+    {
+      "path": "docs/references/garlic-snack/폴란드 여왕 키우기 1-524 완결.txt",
+      "reason": "original_novel_text"
+    },
+    {
+      "path": "docs/references/myeongwon/대영제국 선비의 공정무역@명원命元 1-400완.txt",
+      "reason": "original_novel_text"
+    },
+    {
+      "path": "docs/references/richerlen/성군 순종대왕 일대기 1-322 리첼렌 완결.txt",
+      "reason": "original_novel_text"
+    },
+    {
+      "path": "docs/references/richerlen/초대 콧수염 대마왕이 되었다 1-253 리첼렌 완.txt",
+      "reason": "original_novel_text"
+    },
+    {
+      "path": "docs/references/richerlen/폭군 고종대왕 일대기 1-530 (완) 리첼렌 누락수정.txt",
+      "reason": "original_novel_text"
+    },
+    {
+      "path": "wiki-dump/SHA256SUMS",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/_SUCCESS",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p10p1118752.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p1118753p3886836.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p13070024p18533919.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p18533920p23752069.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p23752071p28738670.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p28738671p33832395.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p33832396p38896230.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p3886838p8008466.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p38896231p43536673.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p43536674p48349381.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p48349382p53463019.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p53463020p58168653.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p58168654p62870052.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p62870054p67185673.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p67185674p71331289.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p71331290p75778644.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p75778650p80258755.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p8008467p13070023.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "wiki-dump/enwiki-2026-09-01-p80258756p84110898.xml.bz2",
+      "reason": "wikipedia_dump_or_checksum"
+    },
+    {
+      "path": "docs/kt cloud GPU 서비스 사용자 가이드_v1.0.pdf",
+      "reason": "source_pdf_preserved_text_derivative_ingested"
+    },
+    {
+      "path": "toy-tune/ops/ssh/source-files.txt",
+      "reason": "unsupported_text_list_format"
+    }
+  ],
+  "failed": [],
+  "pdf_derivative": {
+    "source_path": "docs/kt cloud GPU 서비스 사용자 가이드_v1.0.pdf",
+    "source_sha256": "9c250e0926f47ad1aae97daeeabc9a82c854d1d8fa425be191cc529a95a3b45d",
+    "source_bytes": 5243181,
+    "pages": 52,
+    "extractor": "Poppler pdftotext -layout -enc UTF-8",
+    "extracted_path": "data/document_harness/extracted/kt-cloud-gpu-user-guide-v1.0.md",
+    "extracted_sha256": "a9d188fca5a09d94cfbf7f838d891e4a864bb73a71293a466458bb6b19276be1",
+    "extracted_bytes": 27373,
+    "text_pages": 52,
+    "visual_limit": "Screenshots, diagrams, images and their spatial information are not fully represented; inspect source PDF pages for decisions."
+  },
+  "intermediate_markdown_backup": {
+    "path": "data/document_harness/documents-20260925-expanded.sqlite3",
+    "sha256": "7f341d54f03ba64c3212bce1781c1cf57503a615bfd8e39c8231f4f5a6fb0237",
+    "bytes": 4243456,
+    "restore_verified_documents": 155,
+    "restore_verified_canon": 6
+  },
+  "post_import_backup": {
+    "path": "data/document_harness/documents-20260925-expanded-pdf.sqlite3",
+    "sha256": "acfcc2fa7147e7fa212bf2b07b21bf9eacd30dc252deff0ba76507738cc156db",
+    "bytes": 4321280,
+    "restore_verified_documents": 156,
+    "restore_verified_canon": 6
+  }
+}

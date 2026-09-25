@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "retrieval-packet v1",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "packet_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,95}$"
+    },
+    "query": {
+      "type": "object",
+      "properties": {
+        "work_id": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "canon_revision": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "original_release": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "story_time": {
+          "type": "string",
+          "pattern": "\\S"
+        },
+        "pov_character_id": {
+          "type": "string",
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "work_id",
+        "canon_revision",
+        "original_release",
+        "story_time",
+        "pov_character_id"
+      ],
+      "additionalProperties": false
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fact_id": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "text": {
+            "type": "string",
+            "pattern": "\\S"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "contested",
+              "overridden"
+            ]
+          },
+          "source_id": {
+            "type": "string",
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "fact_id",
+          "text",
+          "status",
+          "source_id"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "packet_id",
+    "query",
+    "facts"
+  ],
+  "additionalProperties": false
+}

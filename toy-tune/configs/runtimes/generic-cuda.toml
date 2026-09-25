@@ -1,0 +1,6 @@
+[runtime]
+name = "generic-cuda"
+execution = "ssh"
+engine = "hf-peft"
+knowledge = "snapshot"
+# --workspace must point to persistent storage on the remote machine.

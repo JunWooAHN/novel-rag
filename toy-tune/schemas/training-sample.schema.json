@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "training-sample v1",
+  "type": "object",
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,95}$"
+    },
+    "work_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,95}$"
+    },
+    "scene_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,95}$"
+    },
+    "order": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "prompt": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "answer": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,95}$"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "answer_start": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "answer_end": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "question_method": {
+      "type": "string",
+      "pattern": "\\S"
+    },
+    "packet_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,95}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "sample_id",
+    "work_id",
+    "scene_id",
+    "order",
+    "prompt",
+    "answer",
+    "source_id",
+    "source_sha256",
+    "answer_start",
+    "answer_end",
+    "question_method"
+  ],
+  "additionalProperties": false
+}

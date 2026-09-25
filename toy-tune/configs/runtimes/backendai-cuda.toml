@@ -1,0 +1,7 @@
+[runtime]
+name = "backendai-cuda"
+execution = "backendai"
+engine = "hf-peft"
+knowledge = "snapshot"
+workspace_root = "/home/work/toy-tune/workspace"
+# Run this CLI inside the remote session; this profile does not connect to SSH.

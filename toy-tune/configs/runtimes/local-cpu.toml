@@ -1,0 +1,6 @@
+[runtime]
+name = "local-cpu"
+execution = "local"
+engine = "none"
+knowledge = "snapshot"
+# Supply a dedicated absolute workspace with --workspace.

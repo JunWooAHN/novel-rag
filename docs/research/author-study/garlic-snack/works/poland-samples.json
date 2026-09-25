@@ -1,0 +1,237 @@
+{
+  "work": "폴란드 여왕 키우기",
+  "source": {
+    "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/폴란드 여왕 키우기 1-524 완결.txt",
+    "drive_id": "1-DJl9LGFtkgnP_gZ2aM9bw2UltnbNXAk",
+    "drive_folder": "2607",
+    "filename_range_label": "1-524",
+    "remote_checksum_available": false
+  },
+  "coordinate_system": {
+    "primary_unit": "Python Unicode codepoint index into raw.decode('utf-8')",
+    "start": "inclusive",
+    "end": "exclusive",
+    "js_utf16_used": false,
+    "text_codepoints": 4119429,
+    "text_js_utf16_code_units": 4119430,
+    "line_numbering": "1-based physical line count; CRLF preserved; no trim or newline normalization"
+  },
+  "header_audit": {
+    "regular_marker_pattern": "line start: N화 <title>",
+    "regular_marker_count": 520,
+    "regular_numbers_contiguous": "1-520",
+    "embedded_marker_pattern": "line start: 폴란드 여왕 키우기 N화 <title>",
+    "embedded_marker_count": 4,
+    "embedded_numbers": "521-524",
+    "total_chapter_markers": 524,
+    "numbers_1_through_524_present_once": true,
+    "first_marker": {
+      "number": 1,
+      "title": "폴란드의 그녀",
+      "codepoint": 0
+    },
+    "last_marker": {
+      "number": 524,
+      "title": "외전. 폴란드는 우주에 갈 수 있어! (完)",
+      "codepoint": 4113564
+    },
+    "formal_vs_embedded_note": "File name says 1-524. The text has 520 regular N화 headers; the final four episodes use full-title embedded markers, included separately above."
+  },
+  "samples": [
+    {
+      "id": "early-01",
+      "portion": "초반",
+      "chapter_markers": [
+        {
+          "number": 1,
+          "title": "폴란드의 그녀",
+          "marker_format": "regular"
+        }
+      ],
+      "selection_reason": "첫 화 전체. 만남에서 폴란드 방문을 택하는 선택, 반지의 수수께끼와 폭발이라는 장면 전환 및 첫 화 말미를 함께 확인한다.",
+      "source": {
+        "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/폴란드 여왕 키우기 1-524 완결.txt",
+        "drive_id": "1-DJl9LGFtkgnP_gZ2aM9bw2UltnbNXAk"
+      },
+      "coordinates": {
+        "unit": "Python Unicode codepoint index after Path.read_bytes().decode('utf-8'); no newline normalization",
+        "start_inclusive": 0,
+        "end_exclusive": 6830,
+        "start_line_1based": 1,
+        "end_line_exclusive_line_1based": 323
+      },
+      "identifier_quote": {
+        "text": "화염과 진동이 함께 그들의 몸을 스쳐 지나갈 때까지.",
+        "start_codepoint": 6770,
+        "end_codepoint_exclusive": 6799,
+        "line_1based": 319
+      },
+      "validation": "start..end slice contains every listed chapter marker and the exact identifier quote; slice end is next actual heading marker or EOF."
+    },
+    {
+      "id": "early-04",
+      "portion": "초반",
+      "chapter_markers": [
+        {
+          "number": 4,
+          "title": "계시를 받은 공주",
+          "marker_format": "regular"
+        }
+      ],
+      "selection_reason": "초반 한 화 전체. 엘라가 아버지 얀 3세와 국가의 전략적 취약점을 논의해 그의 관심을 얻고, 화 말미에 정훈의 군 생활로 시점이 옮겨가는 범위를 본다.",
+      "source": {
+        "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/폴란드 여왕 키우기 1-524 완결.txt",
+        "drive_id": "1-DJl9LGFtkgnP_gZ2aM9bw2UltnbNXAk"
+      },
+      "coordinates": {
+        "unit": "Python Unicode codepoint index after Path.read_bytes().decode('utf-8'); no newline normalization",
+        "start_inclusive": 21838,
+        "end_exclusive": 30089,
+        "start_line_1based": 1057,
+        "end_line_exclusive_line_1based": 1409
+      },
+      "identifier_quote": {
+        "text": "안토니오 피냐텔리 추기경이 인노첸시오 12세가 될 거에요.",
+        "start_codepoint": 25966,
+        "end_codepoint_exclusive": 25998,
+        "line_1based": 1237
+      },
+      "validation": "start..end slice contains every listed chapter marker and the exact identifier quote; slice end is next actual heading marker or EOF."
+    },
+    {
+      "id": "early-10-11",
+      "portion": "초반",
+      "chapter_markers": [
+        {
+          "number": 10,
+          "title": "이아시 전투",
+          "marker_format": "regular"
+        },
+        {
+          "number": 11,
+          "title": "온달 혹은 아그리파",
+          "marker_format": "regular"
+        }
+      ],
+      "selection_reason": "첫 대규모 전투의 시작과 바로 다음 화의 승패·전리품·인물 반응까지 관찰하기 위해 두 연속 화를 포함한다.",
+      "source": {
+        "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/폴란드 여왕 키우기 1-524 완결.txt",
+        "drive_id": "1-DJl9LGFtkgnP_gZ2aM9bw2UltnbNXAk"
+      },
+      "coordinates": {
+        "unit": "Python Unicode codepoint index after Path.read_bytes().decode('utf-8'); no newline normalization",
+        "start_inclusive": 67970,
+        "end_exclusive": 84529,
+        "start_line_1based": 3233,
+        "end_line_exclusive_line_1based": 4013
+      },
+      "identifier_quote": {
+        "text": "후에 이아시 대회전이라고 불릴 전투가 완전히 끝났을 때",
+        "start_codepoint": 77250,
+        "end_codepoint_exclusive": 77280,
+        "line_1based": 3677
+      },
+      "validation": "start..end slice contains every listed chapter marker and the exact identifier quote; slice end is next actual heading marker or EOF."
+    },
+    {
+      "id": "mid-251-252",
+      "portion": "중반",
+      "chapter_markers": [
+        {
+          "number": 251,
+          "title": "폴타바 (3)",
+          "marker_format": "regular"
+        },
+        {
+          "number": 252,
+          "title": "폴타바 (4)",
+          "marker_format": "regular"
+        }
+      ],
+      "selection_reason": "중반의 폴타바 전투 두 화. 척후·포격과 병력 선택에서 시작해 전선별 결과, 배신과 정치적 결말이 드러나는 범위까지 읽는다.",
+      "source": {
+        "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/폴란드 여왕 키우기 1-524 완결.txt",
+        "drive_id": "1-DJl9LGFtkgnP_gZ2aM9bw2UltnbNXAk"
+      },
+      "coordinates": {
+        "unit": "Python Unicode codepoint index after Path.read_bytes().decode('utf-8'); no newline normalization",
+        "start_inclusive": 1870569,
+        "end_exclusive": 1891151,
+        "start_line_1based": 83313,
+        "end_line_exclusive_line_1based": 84307
+      },
+      "identifier_quote": {
+        "text": "좌안 헤트만국은 부활해선 안 될 테니까.",
+        "start_codepoint": 1889198,
+        "end_codepoint_exclusive": 1889220,
+        "line_1based": 84193
+      },
+      "validation": "start..end slice contains every listed chapter marker and the exact identifier quote; slice end is next actual heading marker or EOF."
+    },
+    {
+      "id": "late-495-496",
+      "portion": "후반",
+      "chapter_markers": [
+        {
+          "number": 495,
+          "title": "외전. 대군세",
+          "marker_format": "regular"
+        },
+        {
+          "number": 496,
+          "title": "외전. 런던 해즈 폴른",
+          "marker_format": "regular"
+        }
+      ],
+      "selection_reason": "작가의 말에서 이전 완결편으로 지목된 495화와 다음 화의 직접 후속을 확인한다. 브리튼 공략 작전의 기획과 상륙·수도 함락 결과를 포함한다.",
+      "source": {
+        "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/폴란드 여왕 키우기 1-524 완결.txt",
+        "drive_id": "1-DJl9LGFtkgnP_gZ2aM9bw2UltnbNXAk"
+      },
+      "coordinates": {
+        "unit": "Python Unicode codepoint index after Path.read_bytes().decode('utf-8'); no newline normalization",
+        "start_inclusive": 3898082,
+        "end_exclusive": 3911950,
+        "start_line_1based": 171939,
+        "end_line_exclusive_line_1based": 172443
+      },
+      "identifier_quote": {
+        "text": "마침내 파리에 절망스러운 소식을 전달했다.",
+        "start_codepoint": 3911886,
+        "end_codepoint_exclusive": 3911909,
+        "line_1based": 172439
+      },
+      "validation": "start..end slice contains every listed chapter marker and the exact identifier quote; slice end is next actual heading marker or EOF."
+    },
+    {
+      "id": "final-524",
+      "portion": "후반",
+      "chapter_markers": [
+        {
+          "number": 524,
+          "title": "외전. 폴란드는 우주에 갈 수 있어! (完)",
+          "marker_format": "embedded"
+        }
+      ],
+      "selection_reason": "파일의 실제 마지막 화 전체. 완결 표기, 초반 1화의 만남 장면 변주, 작가의 말까지 확인한다.",
+      "source": {
+        "local_path": "/Users/ahnjunwoo/dev/novel/docs/references/garlic-snack/폴란드 여왕 키우기 1-524 완결.txt",
+        "drive_id": "1-DJl9LGFtkgnP_gZ2aM9bw2UltnbNXAk"
+      },
+      "coordinates": {
+        "unit": "Python Unicode codepoint index after Path.read_bytes().decode('utf-8'); no newline normalization",
+        "start_inclusive": 4113564,
+        "end_exclusive": 4119429,
+        "start_line_1based": 181375,
+        "end_line_exclusive_line_1based": 181652
+      },
+      "identifier_quote": {
+        "text": "《폴란드 여왕 키우기》 외전 완결",
+        "start_codepoint": 4119008,
+        "end_codepoint_exclusive": 4119026,
+        "line_1based": 181633
+      },
+      "validation": "start..end slice contains every listed chapter marker and the exact identifier quote; slice end is next actual heading marker or EOF."
+    }
+  ]
+}

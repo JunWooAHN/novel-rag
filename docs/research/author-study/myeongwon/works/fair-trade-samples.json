@@ -1,0 +1,232 @@
+{
+  "work": "대영제국 선비의 공정무역",
+  "author": "명원(命元)",
+  "file": {
+    "drive_file_id": "15YDnXIxl0Xgh8CefOckT2tbKJ1OH0Opf",
+    "drive_url": "https://drive.google.com/file/d/15YDnXIxl0Xgh8CefOckT2tbKJ1OH0Opf/view?usp=drivesdk",
+    "local_path": "docs/references/myeongwon/대영제국 선비의 공정무역@명원命元 1-400완.txt",
+    "drive_title": "대영제국 선비의 공정무역@명원命元 1-400완.txt",
+    "size_bytes": 6018915,
+    "sha256": "37cea491dcfe5be4e5e310faa820fcaf559425251dfe26da226fb18dc00f7688",
+    "encoding": "UTF-8; Path.read_bytes().decode(\"utf-8\"), retaining decoded U+FEFF BOM",
+    "bom": true,
+    "crlf_count": 114861,
+    "bare_lf_count": 0,
+    "bare_cr_count": 0,
+    "ends_with_crlf": true,
+    "decoded_codepoint_count": 2583758,
+    "decoded_js_utf16_code_unit_count": 2583758,
+    "copy_provenance": "Preflighted connector-text reconstruction; local byte size matches Drive metadata. Drive md5Checksum was not returned, so raw remote byte identity is not independently established."
+  },
+  "indexing": {
+    "boundary_pattern": "Line starts with optional BOM, decimal label, \"화\", then title text; CRLF is preserved.",
+    "boundary_count": 404,
+    "missing_labels_1_to_400": [
+      144
+    ],
+    "duplicate_label_counts": {
+      "259": 2,
+      "276": 2,
+      "277": 2,
+      "278": 2,
+      "279": 2
+    },
+    "interpretation": "404 matched title lines. Missing 144 and repeated labels 259, 276-279 mean this is not a clean official-episode index. The 1-400 filename versus preflighted official 407 count difference is unresolved. No episode numbers are assigned to unheaded text.",
+    "line_numbers": "1-based physical lines with CRLF retained.",
+    "offsets": "Offsets are into the whole decoded source with BOM and CRLF retained. Codepoints and JS UTF-16 code units are separate fields; raw byte offsets count UTF-8 bytes. End offsets are exclusive.",
+    "sample_scope": "Nine bounded titled blocks or complete scene-bounded excerpts; not a full-text close read. Each exact range was checked against the source."
+  },
+  "official_episode_context": {
+    "preflight_filename_range": "1-400완",
+    "preflight_official_total": 407,
+    "comparison": "The seven-label difference is documented in preflight; local boundary checks do not prove omissions, unheaded episodes, or platform completion."
+  },
+  "core_sample_count": 9,
+  "samples": [
+    {
+      "sample_id": "S01",
+      "episode_heading": "1화 프롤로그",
+      "scope": "chapter",
+      "focus": "박인호가 런던에서 용왕의 조건부 과거행 제안을 받고 수락하는 도입.",
+      "reading_basis": "용왕의 제안과 박인호의 수락 뒤 갓난아이로 깨어나 2회차 진입이 확인된다.",
+      "source_slice": {
+        "start_codepoint_0based": 0,
+        "end_codepoint_exclusive": 5486,
+        "start_js_utf16_0based": 0,
+        "end_js_utf16_exclusive": 5486,
+        "start_raw_byte_0based": 0,
+        "end_raw_byte_exclusive": 12448,
+        "line_start_1based": 1,
+        "line_end_1based_inclusive": 274,
+        "verified_header": "1화 프롤로그",
+        "verified_quote": "나는 지금 영국의 수도 런던에 와 있었다."
+      },
+      "slice_validation": "Exact bounded source slice checked; the recorded heading and short quote match within the slice."
+    },
+    {
+      "sample_id": "S02",
+      "episode_heading": "2화 감자대가리들",
+      "scope": "first_scene",
+      "focus": "헨리 리가 출산을 기다린 뒤 아서를 받아 안고 이름을 정하는 출생 장면.",
+      "reading_basis": "출산 불안이 가족의 안도와 과장된 부성애로 전환된다. 동물들의 시선은 이 장면에서 해소되지 않는다.",
+      "source_slice": {
+        "start_codepoint_0based": 5486,
+        "end_codepoint_exclusive": 8059,
+        "start_js_utf16_0based": 5486,
+        "end_js_utf16_exclusive": 8059,
+        "start_raw_byte_0based": 12448,
+        "end_raw_byte_exclusive": 18321,
+        "line_start_1based": 275,
+        "line_end_1based_inclusive": 420,
+        "verified_header": "2화 감자대가리들",
+        "verified_quote": "우리 집안에 천재가 태어났어."
+      },
+      "slice_validation": "Exact bounded source slice checked; the recorded heading and short quote match within the slice."
+    },
+    {
+      "sample_id": "S03",
+      "episode_heading": "56화 자본주의의 맹아 (1)",
+      "scope": "first_scene",
+      "focus": "헌종이 안동 김문에 재무대신 자리를 주어 재산을 둘러싼 충성 협상을 연다.",
+      "reading_basis": "김흥근은 가산 헌납 대신 주식회사 설립이 요구된다고 이해하고 산업 투자에 동의한다.",
+      "source_slice": {
+        "start_codepoint_0based": 363695,
+        "end_codepoint_exclusive": 368978,
+        "start_js_utf16_0based": 363695,
+        "end_js_utf16_exclusive": 368978,
+        "start_raw_byte_0based": 847103,
+        "end_raw_byte_exclusive": 859565,
+        "line_start_1based": 15861,
+        "line_end_1based_inclusive": 16066,
+        "verified_header": "56화 자본주의의 맹아 (1)",
+        "verified_quote": "조선 최초의 주식회사가 안동 김문의 이름으로 설립된다면"
+      },
+      "slice_validation": "Exact bounded source slice checked; the recorded heading and short quote match within the slice."
+    },
+    {
+      "sample_id": "S04",
+      "episode_heading": "127화 옛 나라이나 그 명이 새롭다 (6)",
+      "scope": "first_scene",
+      "focus": "아서 리와 존 스튜어트 밀·마셜의 면담에서 참정권과 기업 복지를 논한다.",
+      "reading_basis": "자유·선거권·교육에서 상여·야학·의료·주거로 화제가 확장되고, 면담자는 주인공을 빨갱이이자 봉건적이라고 평가한다.",
+      "source_slice": {
+        "start_codepoint_0based": 815886,
+        "end_codepoint_exclusive": 818291,
+        "start_js_utf16_0based": 815886,
+        "end_js_utf16_exclusive": 818291,
+        "start_raw_byte_0based": 1903193,
+        "end_raw_byte_exclusive": 1908818,
+        "line_start_1based": 34923,
+        "line_end_1based_inclusive": 35014,
+        "verified_header": "127화 옛 나라이나 그 명이 새롭다 (6)",
+        "verified_quote": "직원들의 건강 검진이나 무상 의료 혜택은 어떤 도움이 됩니까?"
+      },
+      "slice_validation": "Exact bounded source slice checked; the recorded heading and short quote match within the slice."
+    },
+    {
+      "sample_id": "S05",
+      "episode_heading": "167화 무진호란 (1)",
+      "scope": "first_scene",
+      "focus": "서태후 주재 청 조정 회의에서 증국번이 원정의 위험과 외교 대안을 제시한다.",
+      "reading_basis": "증국번은 외교를 상책, 제한적 군사행동 후 협상을 중책으로 제안하고 명을 받는다. 표본은 후속 작전 결과까지 담지 않는다.",
+      "source_slice": {
+        "start_codepoint_0based": 1066742,
+        "end_codepoint_exclusive": 1070334,
+        "start_js_utf16_0based": 1066742,
+        "end_js_utf16_exclusive": 1070334,
+        "start_raw_byte_0based": 2487492,
+        "end_raw_byte_exclusive": 2495989,
+        "line_start_1based": 45867,
+        "line_end_1based_inclusive": 45994,
+        "verified_header": "167화 무진호란 (1)",
+        "verified_quote": "지금이라도 외교로 해결을 보는 것이 상책입니다."
+      },
+      "slice_validation": "Exact bounded source slice checked; the recorded heading and short quote match within the slice."
+    },
+    {
+      "sample_id": "S06",
+      "episode_heading": "252화 굿바이 디지 (5)",
+      "scope": "chapter",
+      "focus": "디즈레일리와 자유당의 선거 공방이 애국심 공격의 역효과와 자유당 승리로 이어진다.",
+      "reading_basis": "정책 공방이 반역 프레임으로 이동해 역효과를 내고, 381 대 210 의석 결과와 다음 당내 자리 다툼의 시작을 보여준다.",
+      "source_slice": {
+        "start_codepoint_0based": 1606743,
+        "end_codepoint_exclusive": 1612653,
+        "start_js_utf16_0based": 1606743,
+        "end_js_utf16_exclusive": 1612653,
+        "start_raw_byte_0based": 3745857,
+        "end_raw_byte_exclusive": 3759388,
+        "line_start_1based": 69917,
+        "line_end_1based_inclusive": 70234,
+        "verified_header": "252화 굿바이 디지 (5)",
+        "verified_quote": "자유당. 381석."
+      },
+      "slice_validation": "Exact bounded source slice checked; the recorded heading and short quote match within the slice."
+    },
+    {
+      "sample_id": "S07",
+      "episode_heading": "334화 유럽의 종말 (3)",
+      "scope": "chapter",
+      "focus": "독일의 참정권 갈등, 빌헬름의 부분 동원 지시, 벨기에 경유 작전 계산, 영국의 경고로 이어지는 장.",
+      "reading_basis": "정치적 타협 거부가 대외 위기로 번진다. 교통 조건이 군사 계산으로 연결되고, 마지막 영국 성명이 벨기에 침범 금지 약속을 상기시키며 다음 상황을 연다.",
+      "source_slice": {
+        "start_codepoint_0based": 2149862,
+        "end_codepoint_exclusive": 2156211,
+        "start_js_utf16_0based": 2149862,
+        "end_js_utf16_exclusive": 2156211,
+        "start_raw_byte_0based": 5009682,
+        "end_raw_byte_exclusive": 5024407,
+        "line_start_1based": 95104,
+        "line_end_1based_inclusive": 95421,
+        "verified_header": "334화 유럽의 종말 (3)",
+        "verified_quote": "독일은 영국으로부터 헬골란트를 할양받았을 때 약조한 바를 지킬 것."
+      },
+      "slice_validation": "Exact bounded source slice checked; the recorded heading and short quote match within the slice."
+    },
+    {
+      "sample_id": "S08",
+      "episode_heading": "398화 종장 (1)",
+      "scope": "first_scene",
+      "focus": "전쟁 뒤 뮌헨으로 돌아온 독일군 생존자 마르크의 시선으로 점령과 구호, 일상의 재개를 보여준다.",
+      "reading_basis": "약과의 단맛, 귀환병과 가족, 배급과 노동자의 휴식이 전후 생존의 감각적 보상으로 놓인다. 이는 한 병사의 관찰 범위다.",
+      "source_slice": {
+        "start_codepoint_0based": 2563014,
+        "end_codepoint_exclusive": 2565619,
+        "start_js_utf16_0based": 2563014,
+        "end_js_utf16_exclusive": 2565619,
+        "start_raw_byte_0based": 5970865,
+        "end_raw_byte_exclusive": 5977022,
+        "line_start_1based": 113984,
+        "line_end_1based_inclusive": 114089,
+        "verified_header": "398화 종장 (1)",
+        "verified_quote": "두 번 다시 이 단맛과 이별하고 싶지 않았다."
+      },
+      "slice_validation": "Exact bounded source slice checked; the recorded heading and short quote match within the slice."
+    },
+    {
+      "sample_id": "S09",
+      "episode_heading": "400화 퀘스트 완료",
+      "scope": "chapter",
+      "focus": "주인공이 총리직을 내려놓고 한양에서 옛 동료와 작별한 뒤 사후 보상 선택을 거쳐 새 삶으로 향한다.",
+      "reading_basis": "정치적 성취보다 작별을 미루지 않는 선택과 자녀의 장수를 보장한 소원을 우선한다. 천국행은 불확실해지지만 용왕이 다른 길을 제안하며 계약 서사가 닫힌다. 파일 끝에는 -완-과 작가 후기가 있다.",
+      "source_slice": {
+        "start_codepoint_0based": 2575454,
+        "end_codepoint_exclusive": 2583758,
+        "start_js_utf16_0based": 2575454,
+        "end_js_utf16_exclusive": 2583758,
+        "start_raw_byte_0based": 5999985,
+        "end_raw_byte_exclusive": 6018915,
+        "line_start_1based": 114499,
+        "line_end_1based_inclusive": 114861,
+        "verified_header": "400화 퀘스트 완료",
+        "verified_quote": "무조건 써야지. 그냥 궁금해서 물어본 거야."
+      },
+      "slice_validation": "Exact bounded source slice checked; the recorded heading and short quote match within the slice."
+    }
+  ],
+  "completion_marker_observation": {
+    "marker": "-완-",
+    "episode_heading": "400화 퀘스트 완료",
+    "observation": "Present in the local file; the author note after it says the work ended at exactly 400 episodes. This does not resolve the separately recorded official-total discrepancy."
+  }
+}

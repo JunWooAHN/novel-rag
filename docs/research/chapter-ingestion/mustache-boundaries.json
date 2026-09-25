@@ -1,0 +1,462 @@
+{
+  "work_id": "mustache",
+  "source_sha256": "858ce2ec9b5d37b8981b5da5fb5cc7d09ff5f0d7532b4e66d4266f4cc8c701e8",
+  "markers": [
+    {
+      "start_cp": 2,
+      "label": "초대 콧수염 대마왕이 되었다 - 1편 자업자득",
+      "kind": "numbered",
+      "number_claimed": 1,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 2699,
+      "label": "초대 콧수염 대마왕이 되었다 - 2편 억까",
+      "kind": "numbered",
+      "number_claimed": 2,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 10751,
+      "label": "초대 콧수염 대마왕이 되었다 - 3편 타고 남은 재",
+      "kind": "numbered",
+      "number_claimed": 3,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 18747,
+      "label": "초대 콧수염 대마왕이 되었다 - 4편 천재",
+      "kind": "numbered",
+      "number_claimed": 4,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 26735,
+      "label": "초대 콧수염 대마왕이 되었다 - 5편 광명",
+      "kind": "numbered",
+      "number_claimed": 5,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 34789,
+      "label": "초대 콧수염 대마왕이 되었다 - 6편 어머니",
+      "kind": "numbered",
+      "number_claimed": 6,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 42825,
+      "label": "초대 콧수염 대마왕이 되었다 - 7편 대체육류",
+      "kind": "numbered",
+      "number_claimed": 7,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 50842,
+      "label": "초대 콧수염 대마왕이 되었다 - 8편 생존자",
+      "kind": "numbered",
+      "number_claimed": 8,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 58870,
+      "label": "초대 콧수염 대마왕이 되었다 - 9편 다단계",
+      "kind": "numbered",
+      "number_claimed": 9,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 66884,
+      "label": "초대 콧수염 대마왕이 되었다 - 10편 결심",
+      "kind": "numbered",
+      "number_claimed": 10,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 74883,
+      "label": "초대 콧수염 대마왕이 되었다 - 11편 가짜 귀족",
+      "kind": "numbered",
+      "number_claimed": 11,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 82925,
+      "label": "초대 콧수염 대마왕이 되었다 - 12편 만석지기",
+      "kind": "numbered",
+      "number_claimed": 12,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 90939,
+      "label": "초대 콧수염 대마왕이 되었다 - 13편 돈 벼락",
+      "kind": "numbered",
+      "number_claimed": 13,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 98995,
+      "label": "초대 콧수염 대마왕이 되었다 - 14편 소유",
+      "kind": "numbered",
+      "number_claimed": 14,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 107074,
+      "label": "초대 콧수염 대마왕이 되었다 - 15편 복수자",
+      "kind": "numbered",
+      "number_claimed": 15,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 115231,
+      "label": "초대 콧수염 대마왕이 되었다 - 16편 선물",
+      "kind": "numbered",
+      "number_claimed": 16,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 123322,
+      "label": "초대 콧수염 대마왕이 되었다 - 17편 진학",
+      "kind": "numbered",
+      "number_claimed": 17,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 131369,
+      "label": "초대 콧수염 대마왕이 되었다 - 18편 생도대표",
+      "kind": "numbered",
+      "number_claimed": 18,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 139491,
+      "label": "초대 콧수염 대마왕이 되었다 - 19편 근신",
+      "kind": "numbered",
+      "number_claimed": 19,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 147605,
+      "label": "초대 콧수염 대마왕이 되었다 - 20편 콜레라",
+      "kind": "numbered",
+      "number_claimed": 20,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 155764,
+      "label": "초대 콧수염 대마왕이 되었다 - 21편 후원자",
+      "kind": "numbered",
+      "number_claimed": 21,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 163870,
+      "label": "초대 콧수염 대마왕이 되었다 - 22편 불편",
+      "kind": "numbered",
+      "number_claimed": 22,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 171993,
+      "label": "초대 콧수염 대마왕이 되었다 - 23편 안정",
+      "kind": "numbered",
+      "number_claimed": 23,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 180068,
+      "label": "초대 콧수염 대마왕이 되었다 - 24편 미신",
+      "kind": "numbered",
+      "number_claimed": 24,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 188162,
+      "label": "초대 콧수염 대마왕이 되었다 - 25편 여론전",
+      "kind": "numbered",
+      "number_claimed": 25,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 196217,
+      "label": "초대 콧수염 대마왕이 되었다 - 26편 제헌회의",
+      "kind": "numbered",
+      "number_claimed": 26,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 204373,
+      "label": "초대 콧수염 대마왕이 되었다 - 27편 유토피아",
+      "kind": "numbered",
+      "number_claimed": 27,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 212515,
+      "label": "초대 콧수염 대마왕이 되었다 - 28편 우상",
+      "kind": "numbered",
+      "number_claimed": 28,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 220616,
+      "label": "초대 콧수염 대마왕이 되었다 - 29편 적독수리",
+      "kind": "numbered",
+      "number_claimed": 29,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 228692,
+      "label": "초대 콧수염 대마왕이 되었다 - 30편 구국의 결단",
+      "kind": "numbered",
+      "number_claimed": 30,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 236861,
+      "label": "초대 콧수염 대마왕이 되었다 - 31편 단 한 걸음",
+      "kind": "numbered",
+      "number_claimed": 31,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 245048,
+      "label": "초대 콧수염 대마왕이 되었다 - 32편 불완전연소",
+      "kind": "numbered",
+      "number_claimed": 32,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 253191,
+      "label": "초대 콧수염 대마왕이 되었다 - 33편 맞선",
+      "kind": "numbered",
+      "number_claimed": 33,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 261393,
+      "label": "초대 콧수염 대마왕이 되었다 - 34편 임관",
+      "kind": "numbered",
+      "number_claimed": 34,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 269535,
+      "label": "초대 콧수염 대마왕이 되었다 - 35편 정의의 공매도",
+      "kind": "numbered",
+      "number_claimed": 35,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 277612,
+      "label": "초대 콧수염 대마왕이 되었다 - 36편 붉은 방패",
+      "kind": "numbered",
+      "number_claimed": 36,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 285735,
+      "label": "초대 콧수염 대마왕이 되었다 - 37편 동반자",
+      "kind": "numbered",
+      "number_claimed": 37,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 293855,
+      "label": "초대 콧수염 대마왕이 되었다 - 38편 분신",
+      "kind": "numbered",
+      "number_claimed": 38,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 301930,
+      "label": "초대 콧수염 대마왕이 되었다 - 39편 기차왕",
+      "kind": "numbered",
+      "number_claimed": 39,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 310036,
+      "label": "초대 콧수염 대마왕이 되었다 - 40편 약속",
+      "kind": "numbered",
+      "number_claimed": 40,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 318142,
+      "label": "초대 콧수염 대마왕이 되었다 - 41편 불청객",
+      "kind": "numbered",
+      "number_claimed": 41,
+      "confidence": "hold",
+      "note": "41 표제가 동일 번호로 두 차례 출현한다. 두 occurrence 모두 보존하며 어느 쪽이 중복/정정인지 판정하지 않는다."
+    },
+    {
+      "start_cp": 326328,
+      "label": "초대 콧수염 대마왕이 되었다 - 41편 불청객",
+      "kind": "numbered",
+      "number_claimed": 41,
+      "confidence": "hold",
+      "note": "41 표제가 동일 번호로 두 차례 출현한다. 두 occurrence 모두 보존하며 어느 쪽이 중복/정정인지 판정하지 않는다."
+    },
+    {
+      "start_cp": 334514,
+      "label": "초대 콧수염 대마왕이 되었다 - 42편 독불장군",
+      "kind": "numbered",
+      "number_claimed": 42,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 342622,
+      "label": "초대 콧수염 대마왕이 되었다 - 43편 그림동화",
+      "kind": "numbered",
+      "number_claimed": 43,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 350761,
+      "label": "초대 콧수염 대마왕이 되었다 - 44편 마귀할멈",
+      "kind": "numbered",
+      "number_claimed": 44,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 358937,
+      "label": "초대 콧수염 대마왕이 되었다 - 45 동병상련",
+      "kind": "numbered",
+      "number_claimed": 45,
+      "confidence": "confirmed",
+      "note": "편 글자는 생략됐지만 독립된 작품 표제 줄이며, 앞뒤 번호가 순차적이고 인접 표제 사이 구간 길이도 일관되어 번호 회차 경계로 확인된다."
+    },
+    {
+      "start_cp": 367098,
+      "label": "초대 콧수염 대마왕이 되었다 - 46편 난장판",
+      "kind": "numbered",
+      "number_claimed": 46,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 375261,
+      "label": "초대 콧수염 대마왕이 되었다 - 47 서민의 친구",
+      "kind": "numbered",
+      "number_claimed": 47,
+      "confidence": "confirmed",
+      "note": "편 글자는 생략됐지만 독립된 작품 표제 줄이며, 앞뒤 번호가 순차적이고 인접 표제 사이 구간 길이도 일관되어 번호 회차 경계로 확인된다."
+    },
+    {
+      "start_cp": 383405,
+      "label": "초대 콧수염 대마왕이 되었다 - 48편 버블경기",
+      "kind": "numbered",
+      "number_claimed": 48,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 391493,
+      "label": "초대 콧수염 대마왕이 되었다 - 49편 우리식 주식회사",
+      "kind": "numbered",
+      "number_claimed": 49,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 399588,
+      "label": "초대 콧수염 대마왕이 되었다 - 50편 풀매수",
+      "kind": "numbered",
+      "number_claimed": 50,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 407723,
+      "label": "초대 콧수염 대마왕이 되었다 - 51편 지구작가",
+      "kind": "numbered",
+      "number_claimed": 51,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 415803,
+      "label": "초대 콧수염 대마왕이 되었다 - 52편 독일 민족의 황제",
+      "kind": "numbered",
+      "number_claimed": 52,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 423956,
+      "label": "초대 콧수염 대마왕이 되었다 - 53편 지주의 생존권",
+      "kind": "numbered",
+      "number_claimed": 53,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 432035,
+      "label": "초대 콧수염 대마왕이 되었다 - 54편 격발",
+      "kind": "numbered",
+      "number_claimed": 54,
+      "confidence": "confirmed",
+      "note": "작품명 표제에 편 번호가 명시되어 있고 다음 표제 전까지의 시작 경계로 확인된다."
+    },
+    {
+      "start_cp": 440168,
+      "label": "초대 콧수염 대마왕이 되었다 - 55편 도둑이야",
+      "kind": "numbered",
+      "number_claimed": 55,
+      "confidence": "hold",
+      "note": "표제에 55가 명시되나 다음 번호 표제가 없다. 뒤에 긴 서사가 이어져 이 marker에서 다음 note 경계까지를 단일 55화로 확정할 근거가 없으므로 끝 경계 미확정."
+    },
+    {
+      "start_cp": 2158549,
+      "label": "1.개요",
+      "kind": "note",
+      "number_claimed": null,
+      "confidence": "confirmed",
+      "note": "말미의 인물사전식 참고 구간이 시작되는 명시적 구획 표식. 작품 회차 번호로 보지 않는다."
+    }
+  ]
+}

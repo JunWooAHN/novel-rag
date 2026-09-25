@@ -1,0 +1,4 @@
+[split]
+train = 1
+validation = 1
+test = 1
