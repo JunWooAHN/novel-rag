@@ -1,0 +1,103 @@
+{
+  "final_unseen_test": false,
+  "pool": "previously_observed_development_only",
+  "schema_version": 1,
+  "works": {
+    "gogjong": {
+      "development_holdout": {
+        "accepted": 8,
+        "attempted_windows": 8,
+        "held": 0,
+        "jsonl_sha256": "0bcd61b0cb8ada25d64fe7f10039663640fc2a4816941c6289ae8ad9a0d640e0",
+        "proposed_candidates": 8,
+        "rejected": 0,
+        "truncated": false,
+        "window_holds": 0
+      },
+      "development_validation": {
+        "accepted": 7,
+        "attempted_windows": 8,
+        "held": 1,
+        "jsonl_sha256": "861033cf042a30a58837a8209f50074b683b6eff7020cc74d371aba2b74f9a0e",
+        "proposed_candidates": 8,
+        "rejected": 0,
+        "truncated": false,
+        "window_holds": 0
+      },
+      "train": {
+        "accepted": 27,
+        "attempted_windows": 32,
+        "held": 4,
+        "jsonl_sha256": "07dea1de66a23922ab31038a2571a8bfd6ce7130dabcc5cd761ac0dbd064b64f",
+        "proposed_candidates": 31,
+        "rejected": 0,
+        "truncated": false,
+        "window_holds": 1
+      }
+    },
+    "goryeo": {
+      "development_holdout": {
+        "accepted": 6,
+        "attempted_windows": 8,
+        "held": 1,
+        "jsonl_sha256": "1cfdbf01eb618ed3f94865952ba6081b252ececac96503d01444cdb45338f538",
+        "proposed_candidates": 7,
+        "rejected": 0,
+        "truncated": false,
+        "window_holds": 1
+      },
+      "development_validation": {
+        "accepted": 8,
+        "attempted_windows": 8,
+        "held": 0,
+        "jsonl_sha256": "ec9d1f78973935f3623fb16aea474b1d18be29aebae6482f8ad96e5244e7a41b",
+        "proposed_candidates": 8,
+        "rejected": 0,
+        "truncated": false,
+        "window_holds": 0
+      },
+      "train": {
+        "accepted": 29,
+        "attempted_windows": 32,
+        "held": 3,
+        "jsonl_sha256": "fa2a01ba4153718070fd71f8ff52b5d2934e789408452594fd8006073c8b4f9f",
+        "proposed_candidates": 32,
+        "rejected": 0,
+        "truncated": false,
+        "window_holds": 0
+      }
+    },
+    "poland": {
+      "development_holdout": {
+        "accepted": 8,
+        "attempted_windows": 8,
+        "held": 0,
+        "jsonl_sha256": "9eb4bf9b27626889e455acb9fc2476c8d4b46f4ef02a2734d9d370a448e93e16",
+        "proposed_candidates": 8,
+        "rejected": 0,
+        "truncated": false,
+        "window_holds": 0
+      },
+      "development_validation": {
+        "accepted": 7,
+        "attempted_windows": 8,
+        "held": 1,
+        "jsonl_sha256": "b4e29b093b4c5806dd3aea4a38a749ac6759e92ab2a56ce1e6b0d7c11097be1d",
+        "proposed_candidates": 8,
+        "rejected": 0,
+        "truncated": false,
+        "window_holds": 0
+      },
+      "train": {
+        "accepted": 22,
+        "attempted_windows": 32,
+        "held": 9,
+        "jsonl_sha256": "21495195f52dcc01a796b9f9b1bd3c5cb2323db99d38256137b8c91b092d1ff6",
+        "proposed_candidates": 31,
+        "rejected": 0,
+        "truncated": false,
+        "window_holds": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "partition_rule": "bands 1-4 train, 5 development_validation, 6 development_holdout",
+  "pool": "development; no unseen final test",
+  "rules": [
+    "All target, prior, and evidence spans must stay in the chosen window portion and frozen split.",
+    "A window is a reading task, not a claim that scenes are children of source units.",
+    "A scene can cross adjacent source-unit borders inside its window portion.",
+    "Read the alternative portion only after holding the primary portion.",
+    "Hold a window if no complete action has adequate source evidence; do not fill a quota.",
+    "Unresolved source units remain in metadata but cannot be selection targets.",
+    "No initial-release holdout material becomes new training context or target."
+  ],
+  "sampling_target": "six progress bands and eight windows per band per work; operational choice",
+  "schema_version": 1,
+  "source_manifest_sha256": "938626b283e4fe93c9efcecb905c9cf025e297857cc40a16f0df0db82909a811",
+  "works": {
+    "gogjong": {
+      "bands": [
+        {
+          "band": 1,
+          "end_cp": 1036322,
+          "section_order_end_exclusive": 129,
+          "section_order_start": 51,
+          "split": "train",
+          "start_cp": 444060
+        },
+        {
+          "band": 2,
+          "end_cp": 1624160,
+          "section_order_end_exclusive": 206,
+          "section_order_start": 129,
+          "split": "train",
+          "start_cp": 1036322
+        },
+        {
+          "band": 3,
+          "end_cp": 2216405,
+          "section_order_end_exclusive": 283,
+          "section_order_start": 206,
+          "split": "train",
+          "start_cp": 1624160
+        },
+        {
+          "band": 4,
+          "end_cp": 2811833,
+          "section_order_end_exclusive": 360,
+          "section_order_start": 283,
+          "split": "train",
+          "start_cp": 2216405
+        },
+        {
+          "band": 5,
+          "end_cp": 3400755,
+          "section_order_end_exclusive": 437,
+          "section_order_start": 360,
+          "split": "development_validation",
+          "start_cp": 2811833
+        },
+        {
+          "band": 6,
+          "end_cp": 3991522,
+          "section_order_end_exclusive": 513,
+          "section_order_start": 437,
+          "split": "development_holdout",
+          "start_cp": 3400755
+        }
+      ],
+      "first_50_end_cp": 444060,
+      "role": "gemma_style",
+      "unresolved_units": [
+        {
+          "boundary_status": "hold",
+          "end_cp": 3991522,
+          "kind": "unresolved",
+          "section_order": 512,
+          "segment_id": 515,
+          "segment_ordinal": 515,
+          "segmentation_id": 1,
+          "source_number": null,
+          "start_cp": 3983918,
+          "text_sha256": "d86c314f69b4edb7cf7cc644b6d3e68e1174fb9f6c25c09ce027b32978b15bd8"
+        }
+      ]
+    },
+    "goryeo": {
+      "bands": [
+        {
+          "band": 1,
+          "end_cp": 1090386,
+          "section_order_end_exclusive": 162,
+          "section_order_start": 51,
+          "split": "train",
+          "start_cp": 314211
+        },
+        {
+          "band": 2,
+          "end_cp": 1861381,
+          "section_order_end_exclusive": 265,
+          "section_order_start": 162,
+          "split": "train",
+          "start_cp": 1090386
+        },
+        {
+          "band": 3,
+          "end_cp": 2636977,
+          "section_order_end_exclusive": 366,
+          "section_order_start": 265,
+          "split": "train",
+          "start_cp": 1861381
+        },
+        {
+          "band": 4,
+          "end_cp": 3410983,
+          "section_order_end_exclusive": 460,
+          "section_order_start": 366,
+          "split": "train",
+          "start_cp": 2636977
+        },
+        {
+          "band": 5,
+          "end_cp": 4191310,
+          "section_order_end_exclusive": 559,
+          "section_order_start": 460,
+          "split": "development_validation",
+          "start_cp": 3410983
+        },
+        {
+          "band": 6,
+          "end_cp": 4964676,
+          "section_order_end_exclusive": 654,
+          "section_order_start": 559,
+          "split": "development_holdout",
+          "start_cp": 4191310
+        }
+      ],
+      "first_50_end_cp": 314211,
+      "role": "sota_planning",
+      "unresolved_units": []
+    },
+    "poland": {
+      "bands": [
+        {
+          "band": 1,
+          "end_cp": 1006473,
+          "section_order_end_exclusive": 136,
+          "section_order_start": 51,
+          "split": "train",
+          "start_cp": 379647
+        },
+        {
+          "band": 2,
+          "end_cp": 1622712,
+          "section_order_end_exclusive": 218,
+          "section_order_start": 136,
+          "split": "train",
+          "start_cp": 1006473
+        },
+        {
+          "band": 3,
+          "end_cp": 2252016,
+          "section_order_end_exclusive": 299,
+          "section_order_start": 218,
+          "split": "train",
+          "start_cp": 1622712
+        },
+        {
+          "band": 4,
+          "end_cp": 2874889,
+          "section_order_end_exclusive": 376,
+          "section_order_start": 299,
+          "split": "train",
+          "start_cp": 2252016
+        },
+        {
+          "band": 5,
+          "end_cp": 3494162,
+          "section_order_end_exclusive": 448,
+          "section_order_start": 376,
+          "split": "development_validation",
+          "start_cp": 2874889
+        },
+        {
+          "band": 6,
+          "end_cp": 4119429,
+          "section_order_end_exclusive": 525,
+          "section_order_start": 448,
+          "split": "development_holdout",
+          "start_cp": 3494162
+        }
+      ],
+      "first_50_end_cp": 379647,
+      "role": "sota_planning",
+      "unresolved_units": []
+    }
+  }
+}

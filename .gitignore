@@ -39,3 +39,9 @@ data/document_harness/**/*.sqlite3-*
 
 # Local Wikipedia source dump
 /wiki-dump/
+
+# Reverse-dataset source excerpts, reviewer packets, and answer JSONL stay local
+/data/training/reverse-20260925/private/
+/data/training/reverse-20260925/**/*.jsonl
+/data/training/reverse-full-20260925/private/
+/data/training/reverse-full-20260925/**/*.jsonl

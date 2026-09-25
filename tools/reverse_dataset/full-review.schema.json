@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Whole-work window review proposal",
+  "type": "object",
+  "required": ["schema_version", "window_id", "work_id", "source_sha256", "segmentation_id", "attempts", "candidates"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "window_id": {"type": "string"},
+    "work_id": {"enum": ["gogjong", "goryeo", "poland"]},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "segmentation_id": {"type": "integer"},
+    "attempts": {
+      "type": "array", "minItems": 1, "maxItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["window_id", "status", "portion", "candidate_ids"],
+        "properties": {
+          "window_id": {"type": "string"},
+          "status": {"enum": ["proposed", "hold"]},
+          "portion": {"enum": ["primary", "alternative"]},
+          "candidate_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "reason": {"type": "string"},
+          "primary_hold_reason": {"type": "string"}
+        }
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "answer_start_cp", "answer_end_cp", "prior_start_cp", "prior_end_cp", "review_record"],
+        "properties": {
+          "candidate_id": {"type": "string"},
+          "answer_start_cp": {"type": "integer"},
+          "answer_end_cp": {"type": "integer"},
+          "prior_start_cp": {"type": "integer"},
+          "prior_end_cp": {"type": "integer"},
+          "review_record": {
+            "type": "object",
+            "required": ["observed", "reconstructed_assumptions", "boundary_reason", "scene_function", "selection_reason", "leakage_check"],
+            "properties": {
+              "observed": {"type": "array", "minItems": 1,
+                "items": {"type": "object", "required": ["claim", "start_cp", "end_cp"],
+                  "properties": {"claim": {"type": "string"}, "start_cp": {"type": "integer"}, "end_cp": {"type": "integer"}}}},
+              "reconstructed_assumptions": {"type": "array", "items": {"type": "string"}},
+              "boundary_reason": {"type": "string"},
+              "scene_function": {"type": "string"},
+              "selection_reason": {"type": "string"},
+              "leakage_check": {"const": "pass"}
+            }
+          },
+          "writer_input": {
+            "type": "object", "required": ["prior_context", "virtual_history", "character_knowledge", "scene_spec"],
+            "properties": {
+              "prior_context": {"type": "string"},
+              "virtual_history": {"type": "array", "items": {"type": "object"}},
+              "character_knowledge": {"type": "array", "items": {"type": "object"}},
+              "scene_spec": {"type": "object"}
+            }
+          },
+          "planner_input": {
+            "type": "object", "required": ["prior_state", "goal", "constraints"],
+            "properties": {
+              "prior_state": {"type": "string"},
+              "goal": {"type": "string"},
+              "constraints": {"type": "array", "items": {"type": "string"}}
+            }
+          },
+          "plan_target": {
+            "type": "object", "required": ["virtual_history", "character_knowledge", "scene_spec"],
+            "properties": {
+              "virtual_history": {"type": "array", "items": {"type": "object"}},
+              "character_knowledge": {"type": "array", "items": {"type": "object"}},
+              "scene_spec": {"type": "object"}
+            }
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"work_id": {"const": "gogjong"}}},
+     "then": {"properties": {"candidates": {"items": {"required": ["writer_input"],
+       "not": {"anyOf": [{"required": ["planner_input"]}, {"required": ["plan_target"]}]}}}}}},
+    {"if": {"properties": {"work_id": {"enum": ["goryeo", "poland"]}}},
+     "then": {"properties": {"candidates": {"items": {"required": ["planner_input", "plan_target"],
+       "not": {"required": ["writer_input"]}}}}}}
+  ]
+}

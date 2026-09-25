@@ -1,20 +1,33 @@
 ---
 category_id: document-harness
 lineage_id: legacy-40925fad-cbff-589b-9799-6cc13abe142b
-document_id: doc-18b24822-1b5b-41e6-a540-bf54c6623625
+document_id: doc-7713ec01-e042-4f96-a438-9ae74d5e9995
 parent_lineage_id: null
 abstract: 중단된 작업의 산출물과 다음 행동을 확인할 때 읽는다.
-version: 0.0.5
+version: 0.0.8
 created_at: null
-updated_at: '2026-09-25T01:13:36Z'
+updated_at: '2026-09-25T09:08:52Z'
 tags:
 - 하네스
 ---
 # 현재 체크포인트
 
-기준일: 2026-09-25. 현재 작업은 아래 **문서 생애주기 하네스 구현**이다. 역사 온톨로지 문서 정리와 이전 작업 카드는 아래에 보존한다. 이 문서는 재개 인덱스이며 소설 분석·학습·작품 캐논 실행 승인이 아니다.
+기준일: 2026-09-25. 현재 작업은 아래 **원문 역구성 데이터셋 제작**이다. 이전 작업 카드는 아래에 보존한다. 이 문서는 재개 인덱스이며 소설 분석·학습·작품 캐논 실행 승인이 아니다.
 
-## 현재 작업 카드 — `DOC-HARNESS-IMPLEMENT-20260925`
+## 현재 작업 카드 — `REVERSE-DATASET-20260925`
+
+| 항목 | 실제 기록 |
+|---|---|
+| 요청·범위 | 사용자가 기존 원문으로 역구성 데이터셋 제작을 요청하고, 고종은 Gemma 문체용·고려와 폴란드는 SOTA 기획용으로 분리하며 각 작품 전체 원문에서 장면을 선정하도록 확정했다. 실제 모델 학습·원문 DB 변경·외부 게시·추가 Git 커밋은 이번 범위에 포함하지 않는다. |
+| 역할·모델 | Astra가 조율하고 작품별 Luna가 후보를 작성·교정하며 작가별 Sol이 검토한다. 현재 실무·검토 모델은 **Sol 6.0**이다. 실행 수단은 모델과 별도로 기록하며 Codex CLI를 필수 조건으로 고정하지 않는다. |
+| 원문·입력 | 원문 코퍼스는 `data/analysis/novel-corpus.sqlite3`. [초반 동결 manifest](../../data/training/reverse-20260925/source-manifest.json)의 SHA-256은 `ea0764d58e109bdb828b5143e2bf9d88a933594d3a7ab583b7b3c00b71046e80`, [전편 추가 선정 manifest](../../data/training/reverse-full-20260925/source-manifest.json)는 `938626b283e4fe93c9efcecb905c9cf025e297857cc40a16f0df0db82909a811`이다. 각 판의 [초반 분할 정책](../../data/training/reverse-20260925/split-policy.json)·[전편 분할 정책](../../data/training/reverse-full-20260925/split-policy.json)을 보존한다. 무번호 표제 구간은 공식 회차 번호로 간주하지 않으며 장면을 회차의 하위 단위로 강제하지 않는다. |
+| 현재 산출 | [초반 수락본 150개](../../data/training/reverse-20260925/quality-report.json)와 [전편 추가 수락본 122개](../../data/training/reverse-full-20260925/quality-report.json)를 작품·분할별 JSONL 9개로 합쳤다. [합본 목록](../../data/training/reverse-full-20260925/bundle-manifest.json)의 SHA-256은 `25d4e6981b30062bfbc550eb9f1aab4d636ac1311c454c56db2f6da6f7aa004d`이다. 고종 90개(Gemma 문체), 고려 96개·폴란드 86개(SOTA 기획), 총 **272개**이며 `train` 173개·`development_validation` 51개·`development_holdout` 48개다. 고종의 실제 학습 분할은 56개다. 파일은 `data/training/reverse-full-20260925/private/bundle/`에 있다. |
+| 검토·보류 | 작품별 Luna 작성·교정과 작가별 Sol의 현재 파일 SHA 재검토를 마쳤다. 전편 선정 창 144개에서 후보 141개를 만들었고 122개 수락·19개 후보 보류·3개 생성 보류로 끝냈다. 보류는 합본에서 제외했다. 초반판의 후보 보류 2개, 미확정 고종31 구간과 절차 위반 폴란드42 구간도 유지한다. 상세 근거는 [고종 최종 검토](../../data/training/reverse-full-20260925/private/orchestration/sol-gogjong-full-rereview.json)·[마늘맛스낵 최종 검토](../../data/training/reverse-full-20260925/private/orchestration/sol-garlic-full-rereview.json)에 있다. |
+| 상태·검증 | 데이터셋 제작·출력·검토를 완료했다. [출력 실행 기록](../../data/training/reverse-full-20260925/private/orchestration/full-export-result.json)과 [Luna 독립 기계 검증](../../data/training/reverse-full-20260925/private/orchestration/luna-cross-release-verification.json)에 원본 출력 18개·합본 9개 파일의 실제 건수·해시, 수락 결정·원문 좌표 결박, 겹침·중복 없음, 정확한 합본을 기록했다. 독립 검증 보고서 SHA-256은 `425b69e16e8a4610f197fdbcfbd87c5043166aa83b1fb3f4f4d4c4983e37b117`이다. 실행 경로와 최종 담당 기록은 비공개 [작업 상태](../../data/training/reverse-20260925/private/orchestration/root-state.json)에서 재확인한다. |
+| 실제 데이터 열람 | 사용자의 후속 요청으로 [단일 HTML 뷰어](../../data/training/reverse-full-20260925/private/viewer/index.html)를 만들었다. 실제 272개 레코드·입력·정답·근거 원문을 내장하고 작품·용도·분할·판본 필터, 검색, 원본 JSON 확인을 제공한다. [생성 스크립트](../../tools/reverse_dataset/viewer.py)는 원문·JSONL을 읽기 전용으로 대조한다. 외부 의존성이 없고 원문 포함 HTML은 Git에서 제외된다. 브라우저 도구의 로컬 파일 URL 정책으로 실제 UI 조작은 확인하지 못했으며 데이터 일치·JavaScript 구문·정적 점검 결과만 기록한다. 상세 실행은 [뷰어 작업 기록](../../data/training/reverse-full-20260925/private/orchestration/viewer-task.json)에 있다. |
+| 다음 행동·한계 | 데이터셋 제작 다음 단계는 대상 Gemma 모델의 토크나이저·대화 템플릿·손실 마스킹과 입력 길이를 점검하고 평가 방법을 정하는 것이다. 이 단계와 실제 모델 학습·성능 평가는 아직 실행하지 않았다. 세 작품은 이미 읽은 개발 자료이며 어떤 분할도 미관측 최종 test로 주장하지 않는다. SOTA 기획 표본은 원문에서 역구성한 계획이며 작가의 실제 의도나 역사적 사실의 정본이 아니다. |
+
+## 이전 작업 카드 — `DOC-HARNESS-IMPLEMENT-20260925`
 
 | 항목 | 실제 기록 |
 |---|---|
@@ -24,7 +37,7 @@ tags:
 | 검증 | Python 단위 테스트 7개 통과. 초기 DB `integrity_check=ok`, 문서판 99, `canon=1` 0, FTS 99. Luna가 manifest 99개 경로·크기·SHA-256과 DB 본문 재해시 99/99를 읽기 전용 확인. 하네스 문서 4개와 도구 안내를 같은 계통의 관리판으로 전환·명시 채택했다. 임시 목적지에 실제 SQLite backup→restore→verify를 실행해 복원본 108판·canon 5·무결성 ok를 확인했다. 다른 Sol의 독립 코드 검토는 `harness.py` SHA-256 `1748d50fd17c16640901f7410c0344997338b08b10dce630247652d99245dc35`, 테스트 SHA-256 `54af3db45663f2e52d49a4bfd39c364928b9ec1d8d81982ff1d8f0d3dced824d`를 기준으로 필수 미해결 없이 수락했다. |
 | 다음 행동 | 최종 관리판과 [전용 DB 백업](../../data/document_harness/documents-20260925-final.sqlite3)의 복원 검증을 완료했다. 다음은 Astra의 읽기 전용 최종 스냅샷 대조·보고다. 후속 문서 선택은 사용자의 명시적 선택과 공용 `finalize` 경로를 따르며 미분류 legacy 문서는 임의 채택하지 않는다. `canon=false`인 기존 문서 99개의 적용 여부는 자동 결정하지 않는다. |
 
-## 현재 작업 카드 — `HISTORY-ONTOLOGY-FUN-FIRST-DOC-20260924`
+## 이전 작업 카드 — `HISTORY-ONTOLOGY-FUN-FIRST-DOC-20260924`
 
 | 항목 | 실제 기록 |
 |---|---|

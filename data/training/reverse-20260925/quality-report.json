@@ -1,0 +1,143 @@
+{
+  "final_unseen_test": false,
+  "manual_semantic_leakage_review_required": true,
+  "pool": "previously_observed_development_only",
+  "schema_version": 1,
+  "source_manifest_sha256": "ea0764d58e109bdb828b5143e2bf9d88a933594d3a7ab583b7b3c00b71046e80",
+  "token_validation": "not_run",
+  "truncated": false,
+  "works": {
+    "gogjong": {
+      "development_holdout": {
+        "accepted": 10,
+        "attempted_units": 10,
+        "held": 0,
+        "input_characters": 7557,
+        "jsonl_path": "data/training/reverse-20260925/private/export/gogjong/development_holdout.jsonl",
+        "jsonl_sha256": "819b533ef74ba7d2693aa0b259e91adb9ed8786ddbea6af09e0428569d4d61aa",
+        "output_characters": 15961,
+        "proposed_candidates": 10,
+        "rejected": 0,
+        "source_answer_characters": 15961,
+        "truncated": false,
+        "unit_holds": 0
+      },
+      "development_validation": {
+        "accepted": 9,
+        "attempted_units": 10,
+        "held": 0,
+        "input_characters": 6782,
+        "jsonl_path": "data/training/reverse-20260925/private/export/gogjong/development_validation.jsonl",
+        "jsonl_sha256": "4d3b09174fb82b729c5a79eac17f3fdd7aa5484fa4ca71ee8ee566d9e2b6901d",
+        "output_characters": 25432,
+        "proposed_candidates": 9,
+        "rejected": 0,
+        "source_answer_characters": 25432,
+        "truncated": false,
+        "unit_holds": 1
+      },
+      "train": {
+        "accepted": 29,
+        "attempted_units": 30,
+        "held": 0,
+        "input_characters": 21564,
+        "jsonl_path": "data/training/reverse-20260925/private/export/gogjong/train.jsonl",
+        "jsonl_sha256": "6254c84c696a7d57fa1959ba89b8aa8d5bb3e528e01322b3c228b588d013eadd",
+        "output_characters": 142662,
+        "proposed_candidates": 29,
+        "rejected": 0,
+        "source_answer_characters": 142662,
+        "truncated": false,
+        "unit_holds": 0
+      }
+    },
+    "goryeo": {
+      "development_holdout": {
+        "accepted": 8,
+        "attempted_units": 10,
+        "held": 2,
+        "input_characters": 3078,
+        "jsonl_path": "data/training/reverse-20260925/private/export/goryeo/development_holdout.jsonl",
+        "jsonl_sha256": "78bf88d018de6b61b618667c58330862405c338921c64222008feab20b1f5f8d",
+        "output_characters": 17745,
+        "proposed_candidates": 10,
+        "rejected": 0,
+        "source_answer_characters": 22170,
+        "truncated": false,
+        "unit_holds": 0
+      },
+      "development_validation": {
+        "accepted": 10,
+        "attempted_units": 10,
+        "held": 0,
+        "input_characters": 3737,
+        "jsonl_path": "data/training/reverse-20260925/private/export/goryeo/development_validation.jsonl",
+        "jsonl_sha256": "57ec30743698cf4dae5d1b15111f6b1263e15088fa29712d08a1cc94728f7b22",
+        "output_characters": 21201,
+        "proposed_candidates": 10,
+        "rejected": 0,
+        "source_answer_characters": 26288,
+        "truncated": false,
+        "unit_holds": 0
+      },
+      "train": {
+        "accepted": 35,
+        "attempted_units": 30,
+        "held": 0,
+        "input_characters": 12916,
+        "jsonl_path": "data/training/reverse-20260925/private/export/goryeo/train.jsonl",
+        "jsonl_sha256": "5eebf0bdc208685f1edd64ca03dbeb0e7b8bdcca35687f8d5af0a9b7c5a4b4f3",
+        "output_characters": 64066,
+        "proposed_candidates": 35,
+        "rejected": 0,
+        "source_answer_characters": 94609,
+        "truncated": false,
+        "unit_holds": 0
+      }
+    },
+    "poland": {
+      "development_holdout": {
+        "accepted": 8,
+        "attempted_units": 10,
+        "held": 0,
+        "input_characters": 3101,
+        "jsonl_path": "data/training/reverse-20260925/private/export/poland/development_holdout.jsonl",
+        "jsonl_sha256": "28a3844e22eea28afbf69fd69adaf29725ce77f33e8ecf40cca3bd59a06f0bd9",
+        "output_characters": 16039,
+        "proposed_candidates": 8,
+        "rejected": 0,
+        "source_answer_characters": 37061,
+        "truncated": false,
+        "unit_holds": 1
+      },
+      "development_validation": {
+        "accepted": 10,
+        "attempted_units": 10,
+        "held": 0,
+        "input_characters": 3647,
+        "jsonl_path": "data/training/reverse-20260925/private/export/poland/development_validation.jsonl",
+        "jsonl_sha256": "dbbe9d0c97e48bbaf7064f38a404aaf22af44e9b4b112d9c406a87848fe44911",
+        "output_characters": 16491,
+        "proposed_candidates": 10,
+        "rejected": 0,
+        "source_answer_characters": 33694,
+        "truncated": false,
+        "unit_holds": 0
+      },
+      "train": {
+        "accepted": 31,
+        "attempted_units": 30,
+        "held": 0,
+        "input_characters": 13834,
+        "jsonl_path": "data/training/reverse-20260925/private/export/poland/train.jsonl",
+        "jsonl_sha256": "37e804065f4750f97dd6c1534d52dadbd1ee22bb82a22291b6c28f96f5e626b0",
+        "output_characters": 53298,
+        "proposed_candidates": 31,
+        "rejected": 0,
+        "source_answer_characters": 92706,
+        "truncated": false,
+        "unit_holds": 0
+      }
+    }
+  }
+}

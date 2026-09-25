@@ -1,16 +1,18 @@
 ---
 category_id: document-harness
 lineage_id: lin-9de47fd1-ad99-4e44-9e39-edb5e9196375
-document_id: doc-f80c523f-a2f1-4370-8d5f-ac643bd95b54
+document_id: doc-22c3ecee-559b-4872-bf30-9723f41a2f21
 parent_lineage_id: null
 abstract: 문서 생애주기 CLI를 실행하고 canon 판을 선택할 때 읽는다.
-version: 0.0.1
+version: 0.0.2
 created_at: null
-updated_at: '2026-09-25T01:10:18Z'
+updated_at: '2026-09-25T02:48:59Z'
 tags:
 - 하네스
 ---
 # 문서 하네스 CLI
+
+다른 프로젝트에 적용하는 절차는 [문서 하네스 이식 가이드](../../docs/harness/portability.md)를 따른다.
 
 `python3 tools/document_harness/harness.py`로 실행한다. Python 3.10+, PyYAML, JSONB와 FTS5가 있는 SQLite 3.45+가 필요하다. 기본 DB는 `data/document_harness/documents.sqlite3`이며 `--db PATH`는 **명령 앞**에 둔다. 이 DB는 문서판 누적 본문과 현재 `canon` 선택의 정본이다. 소설 코퍼스 DB와 분리되어 있다.
 

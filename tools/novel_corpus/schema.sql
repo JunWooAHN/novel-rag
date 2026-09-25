@@ -66,6 +66,18 @@ JOIN segmentations sg ON sg.id = w.current_segmentation_id
 JOIN source_revisions sr ON sr.id = sg.source_revision_id
 JOIN segments s ON s.segmentation_id = sg.id;
 
+-- Source-order access to every chapter-like header. section_order is not an official episode number.
+DROP VIEW IF EXISTS current_chapter_units;
+CREATE VIEW current_chapter_units AS
+SELECT work_id, work_title, sha256_raw, segmentation_id, id AS segment_id,
+       ROW_NUMBER() OVER (PARTITION BY work_id ORDER BY ordinal) AS section_order,
+       ordinal AS segment_ordinal, kind, boundary_status, label,
+       number_claimed AS source_number, number_occurrence,
+       start_cp, end_cp, text_sha256
+FROM current_segments
+WHERE kind IN ('numbered', 'title_section')
+   OR (kind = 'unresolved' AND label IS NOT NULL);
+
 CREATE VIEW IF NOT EXISTS first_50_status AS
 WITH RECURSIVE n(value) AS (SELECT 1 UNION ALL SELECT value + 1 FROM n WHERE value < 50),
 matches AS (

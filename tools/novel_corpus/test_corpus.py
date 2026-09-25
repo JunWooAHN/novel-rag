@@ -134,6 +134,50 @@ class CorpusTest(unittest.TestCase):
         self.ingest()
         self.assertEqual(current, self.counts())
 
+    def test_section_order_does_not_invent_source_number(self):
+        self.raw = '첫 장\nA\n2화\nB'.encode('utf-8')
+        self.write_source(self.raw)
+        config = {'work_id': 'gogjong', 'source_sha256': corpus.digest(self.raw), 'markers': [
+            {'start_cp': 0, 'label': '첫 장', 'kind': 'title_section', 'confidence': 'confirmed'},
+            {'start_cp': 6, 'label': '2화', 'kind': 'numbered', 'number_claimed': 2, 'confidence': 'confirmed'},
+        ]}
+        (self.boundaries / 'gogjong-boundaries.json').write_text(json.dumps(config), encoding='utf-8')
+        self.ingest()
+        with sqlite3.connect(self.db) as conn:
+            rows = conn.execute('SELECT section_order,kind,source_number FROM current_chapter_units ORDER BY section_order').fetchall()
+            self.assertEqual(rows, [(1, 'title_section', None), (2, 'numbered', 2)])
+            identity = conn.execute('SELECT sha256_raw,segmentation_id,segment_id FROM current_chapter_units WHERE section_order=1').fetchone()
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            corpus.sections(SimpleNamespace(db=self.db, work='gogjong', start=1, end=1))
+        shown = json.loads(out.getvalue())[0]
+        self.assertEqual((shown['source_sha256'], shown['segmentation_id'], shown['segment_id']), identity)
+        self.ingest()
+        with sqlite3.connect(self.db) as conn:
+            self.assertEqual(conn.execute('SELECT COUNT(*) FROM current_chapter_units').fetchone()[0], 2)
+
+    def test_selected_ingest_ignores_unselected_source(self):
+        obj = json.loads(self.manifest.read_text(encoding='utf-8'))
+        obj['files'].append({'author': 'unused', 'original_filename': '폴란드 여왕 missing.txt',
+                             'drive_file_id': 'missing', 'relative_path': 'missing.txt'})
+        self.manifest.write_text(json.dumps(obj), encoding='utf-8')
+        self.args.work = ['gogjong']
+        self.ingest()
+        with sqlite3.connect(self.db) as conn:
+            self.assertEqual(conn.execute('SELECT work_id FROM works').fetchall(), [('gogjong',)])
+
+    def test_labeled_hold_range_remains_visible_in_section_order(self):
+        self.raw = '장 제목\n본문'.encode('utf-8')
+        self.write_source(self.raw)
+        config = {'work_id': 'gogjong', 'source_sha256': corpus.digest(self.raw), 'markers': [
+            {'start_cp': 0, 'label': '장 제목', 'kind': 'unresolved', 'confidence': 'hold'},
+        ]}
+        (self.boundaries / 'gogjong-boundaries.json').write_text(json.dumps(config), encoding='utf-8')
+        self.ingest()
+        with sqlite3.connect(self.db) as conn:
+            self.assertEqual(conn.execute('SELECT section_order,kind,boundary_status,source_number FROM current_chapter_units').fetchall(),
+                             [(1, 'unresolved', 'hold', None)])
+
 
 if __name__ == '__main__':
     unittest.main()

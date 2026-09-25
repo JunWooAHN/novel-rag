@@ -132,6 +132,11 @@ def check_db(conn):
 def ingest(args):
     manifest = json.loads(args.manifest.read_text(encoding='utf-8'))
     files = manifest['files']
+    selected = set(getattr(args, 'work', None) or [])
+    if selected:
+        files = [item for item in files if work_id(item) in selected]
+        if {work_id(item) for item in files} != selected:
+            raise ValueError('selected work is missing from manifest')
     refs_dir = args.manifest.parent
     prepared = []
     for item in files:
@@ -257,6 +262,20 @@ def titles(args):
     print(json.dumps([dict(zip(('title_sequence','segment_ordinal','label','start_cp','end_cp','boundary_status'), r)) for r in rows], ensure_ascii=False, indent=2))
 
 
+def sections(args):
+    with read_conn(args.db) as conn:
+        rows = conn.execute('''SELECT sha256_raw,segmentation_id,segment_id,
+                                     section_order,segment_ordinal,kind,boundary_status,label,
+                                     source_number,number_occurrence,start_cp,end_cp,text_sha256
+                              FROM current_chapter_units
+                              WHERE work_id=? AND section_order BETWEEN ? AND ?
+                              ORDER BY section_order''', (args.work, args.start, args.end)).fetchall()
+    keys = ('source_sha256','segmentation_id','segment_id',
+            'section_order','segment_ordinal','kind','boundary_status','label',
+            'source_number','number_occurrence','start_cp','end_cp','text_sha256')
+    print(json.dumps([dict(zip(keys, row)) for row in rows], ensure_ascii=False, indent=2))
+
+
 def export(args):
     if args.output.resolve().is_relative_to(DEFAULT_MANIFEST.parent.resolve()):
         raise ValueError('export output may not overwrite source copies')
@@ -289,9 +308,11 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--db', type=Path, default=DEFAULT_DB)
     sub = p.add_subparsers(dest='command', required=True)
-    i = sub.add_parser('ingest', help='atomically import all manifest works')
+    i = sub.add_parser('ingest', help='atomically import all or selected manifest works')
     i.add_argument('--manifest', type=Path, default=DEFAULT_MANIFEST)
     i.add_argument('--boundaries', type=Path, default=BOUNDARY_DIR)
+    i.add_argument('--work', choices=sorted(WORK_IDS.values()), action='append',
+                   help='limit this run to selected work; repeat for multiple works')
     v = sub.add_parser('verify')
     v.add_argument('--manifest', type=Path, default=DEFAULT_MANIFEST)
     sub.add_parser('status')
@@ -305,6 +326,10 @@ def main():
     r.add_argument('--end', type=int, default=999999)
     t = sub.add_parser('titles', help='list unnumbered title sections in source order')
     t.add_argument('work', choices=sorted(WORK_IDS.values()))
+    s = sub.add_parser('sections', help='list all numbered and unnumbered chapter-like sections in source order')
+    s.add_argument('work', choices=sorted(WORK_IDS.values()))
+    s.add_argument('--start', type=int, default=1)
+    s.add_argument('--end', type=int, default=999999)
     e = sub.add_parser('export', help='write exact UTF-8 source or confirmed chapter')
     e.add_argument('work', choices=sorted(WORK_IDS.values()))
     e.add_argument('output', type=Path)
@@ -315,7 +340,7 @@ def main():
     if args.command == 'export' and args.chapter is not None and args.ordinal is not None:
         p.error('--chapter and --ordinal are mutually exclusive')
     try:
-        {'ingest': ingest, 'verify': verify, 'status': status, 'chapters': chapters, 'ranges': ranges, 'titles': titles, 'export': export}[args.command](args)
+        {'ingest': ingest, 'verify': verify, 'status': status, 'chapters': chapters, 'ranges': ranges, 'titles': titles, 'sections': sections, 'export': export}[args.command](args)
     except (ValueError, OSError, sqlite3.Error, UnicodeError) as exc:
         print(f'error: {exc}', file=sys.stderr)
         return 1

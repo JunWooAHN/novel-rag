@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "artifact": "concatenated_initial_and_full_development_exports",
+  "component_quality_reports": {
+    "initial": {
+      "path": "data/training/reverse-20260925/quality-report.json",
+      "sha256": "4e96aca00aa56f91d4b06ab239cfda8f69a3fdc0ce24bcaea3257004864fdae4"
+    },
+    "full": {
+      "path": "data/training/reverse-full-20260925/quality-report.json",
+      "sha256": "601ea76ca3eaa99e3deb0b79776c4d9df22153875a1c572f180303f13f0c66d1"
+    }
+  },
+  "files": {
+    "gogjong": {
+      "train": {
+        "role": "gemma_style",
+        "components": [
+          {
+            "release": "initial",
+            "path": "data/training/reverse-20260925/private/export/gogjong/train.jsonl",
+            "sha256": "6254c84c696a7d57fa1959ba89b8aa8d5bb3e528e01322b3c228b588d013eadd",
+            "line_count": 29
+          },
+          {
+            "release": "full",
+            "path": "data/training/reverse-full-20260925/private/export/gogjong/train.jsonl",
+            "sha256": "07dea1de66a23922ab31038a2571a8bfd6ce7130dabcc5cd761ac0dbd064b64f",
+            "line_count": 27
+          }
+        ],
+        "output_path": "data/training/reverse-full-20260925/private/bundle/gogjong/train.jsonl",
+        "output_sha256": "ee8fb05db65ae7ca9932b34eae8388595f6717a3f8b5607c4a42351946c2750d",
+        "line_count": 56,
+        "component_counts": {
+          "initial": 29,
+          "full": 27
+        }
+      },
+      "development_validation": {
+        "role": "gemma_style",
+        "components": [
+          {
+            "release": "initial",
+            "path": "data/training/reverse-20260925/private/export/gogjong/development_validation.jsonl",
+            "sha256": "4d3b09174fb82b729c5a79eac17f3fdd7aa5484fa4ca71ee8ee566d9e2b6901d",
+            "line_count": 9
+          },
+          {
+            "release": "full",
+            "path": "data/training/reverse-full-20260925/private/export/gogjong/development_validation.jsonl",
+            "sha256": "861033cf042a30a58837a8209f50074b683b6eff7020cc74d371aba2b74f9a0e",
+            "line_count": 7
+          }
+        ],
+        "output_path": "data/training/reverse-full-20260925/private/bundle/gogjong/development_validation.jsonl",
+        "output_sha256": "7a56f08269c080c784dabe73ed549d3d13474514e78070f3dc33f6d338b145db",
+        "line_count": 16,
+        "component_counts": {
+          "initial": 9,
+          "full": 7
+        }
+      },
+      "development_holdout": {
+        "role": "gemma_style",
+        "components": [
+          {
+            "release": "initial",
+            "path": "data/training/reverse-20260925/private/export/gogjong/development_holdout.jsonl",
+            "sha256": "819b533ef74ba7d2693aa0b259e91adb9ed8786ddbea6af09e0428569d4d61aa",
+            "line_count": 10
+          },
+          {
+            "release": "full",
+            "path": "data/training/reverse-full-20260925/private/export/gogjong/development_holdout.jsonl",
+            "sha256": "0bcd61b0cb8ada25d64fe7f10039663640fc2a4816941c6289ae8ad9a0d640e0",
+            "line_count": 8
+          }
+        ],
+        "output_path": "data/training/reverse-full-20260925/private/bundle/gogjong/development_holdout.jsonl",
+        "output_sha256": "8098393dd02cb1aff2fcf6104fbc65ca719ab0bf0c8cd1c5411aaf1f6ff9057a",
+        "line_count": 18,
+        "component_counts": {
+          "initial": 10,
+          "full": 8
+        }
+      }
+    },
+    "goryeo": {
+      "train": {
+        "role": "sota_planning",
+        "components": [
+          {
+            "release": "initial",
+            "path": "data/training/reverse-20260925/private/export/goryeo/train.jsonl",
+            "sha256": "5eebf0bdc208685f1edd64ca03dbeb0e7b8bdcca35687f8d5af0a9b7c5a4b4f3",
+            "line_count": 35
+          },
+          {
+            "release": "full",
+            "path": "data/training/reverse-full-20260925/private/export/goryeo/train.jsonl",
+            "sha256": "fa2a01ba4153718070fd71f8ff52b5d2934e789408452594fd8006073c8b4f9f",
+            "line_count": 29
+          }
+        ],
+        "output_path": "data/training/reverse-full-20260925/private/bundle/goryeo/train.jsonl",
+        "output_sha256": "382ca06fabe55bf12365bb2d1482f92797c3dea7e450c43791df45a9cffe8a64",
+        "line_count": 64,
+        "component_counts": {
+          "initial": 35,
+          "full": 29
+        }
+      },
+      "development_validation": {
+        "role": "sota_planning",
+        "components": [
+          {
+            "release": "initial",
+            "path": "data/training/reverse-20260925/private/export/goryeo/development_validation.jsonl",
+            "sha256": "57ec30743698cf4dae5d1b15111f6b1263e15088fa29712d08a1cc94728f7b22",
+            "line_count": 10
+          },
+          {
+            "release": "full",
+            "path": "data/training/reverse-full-20260925/private/export/goryeo/development_validation.jsonl",
+            "sha256": "ec9d1f78973935f3623fb16aea474b1d18be29aebae6482f8ad96e5244e7a41b",
+            "line_count": 8
+          }
+        ],
+        "output_path": "data/training/reverse-full-20260925/private/bundle/goryeo/development_validation.jsonl",
+        "output_sha256": "fa11b608ab8ef32e1885dd9773005adaedb1624d22dcddff68400a791d0aeeda",
+        "line_count": 18,
+        "component_counts": {
+          "initial": 10,
+          "full": 8
+        }
+      },
+      "development_holdout": {
+        "role": "sota_planning",
+        "components": [
+          {
+            "release": "initial",
+            "path": "data/training/reverse-20260925/private/export/goryeo/development_holdout.jsonl",
+            "sha256": "78bf88d018de6b61b618667c58330862405c338921c64222008feab20b1f5f8d",
+            "line_count": 8
+          },
+          {
+            "release": "full",
+            "path": "data/training/reverse-full-20260925/private/export/goryeo/development_holdout.jsonl",
+            "sha256": "1cfdbf01eb618ed3f94865952ba6081b252ececac96503d01444cdb45338f538",
+            "line_count": 6
+          }
+        ],
+        "output_path": "data/training/reverse-full-20260925/private/bundle/goryeo/development_holdout.jsonl",
+        "output_sha256": "1443fe561e707051cedd5de5cf680f546e4e4a38e53f724109a92fbfeef4165e",
+        "line_count": 14,
+        "component_counts": {
+          "initial": 8,
+          "full": 6
+        }
+      }
+    },
+    "poland": {
+      "train": {
+        "role": "sota_planning",
+        "components": [
+          {
+            "release": "initial",
+            "path": "data/training/reverse-20260925/private/export/poland/train.jsonl",
+            "sha256": "37e804065f4750f97dd6c1534d52dadbd1ee22bb82a22291b6c28f96f5e626b0",
+            "line_count": 31
+          },
+          {
+            "release": "full",
+            "path": "data/training/reverse-full-20260925/private/export/poland/train.jsonl",
+            "sha256": "21495195f52dcc01a796b9f9b1bd3c5cb2323db99d38256137b8c91b092d1ff6",
+            "line_count": 22
+          }
+        ],
+        "output_path": "data/training/reverse-full-20260925/private/bundle/poland/train.jsonl",
+        "output_sha256": "1d6888d6dc4c3fe4ef93819068e817a1b3378fdf4160d3fc57e2c62ec2ad3998",
+        "line_count": 53,
+        "component_counts": {
+          "initial": 31,
+          "full": 22
+        }
+      },
+      "development_validation": {
+        "role": "sota_planning",
+        "components": [
+          {
+            "release": "initial",
+            "path": "data/training/reverse-20260925/private/export/poland/development_validation.jsonl",
+            "sha256": "dbbe9d0c97e48bbaf7064f38a404aaf22af44e9b4b112d9c406a87848fe44911",
+            "line_count": 10
+          },
+          {
+            "release": "full",
+            "path": "data/training/reverse-full-20260925/private/export/poland/development_validation.jsonl",
+            "sha256": "b4e29b093b4c5806dd3aea4a38a749ac6759e92ab2a56ce1e6b0d7c11097be1d",
+            "line_count": 7
+          }
+        ],
+        "output_path": "data/training/reverse-full-20260925/private/bundle/poland/development_validation.jsonl",
+        "output_sha256": "e8cd020f20d3830c0914b9aaafe79ac071ebd59778025d163a03455d1c6a44f1",
+        "line_count": 17,
+        "component_counts": {
+          "initial": 10,
+          "full": 7
+        }
+      },
+      "development_holdout": {
+        "role": "sota_planning",
+        "components": [
+          {
+            "release": "initial",
+            "path": "data/training/reverse-20260925/private/export/poland/development_holdout.jsonl",
+            "sha256": "28a3844e22eea28afbf69fd69adaf29725ce77f33e8ecf40cca3bd59a06f0bd9",
+            "line_count": 8
+          },
+          {
+            "release": "full",
+            "path": "data/training/reverse-full-20260925/private/export/poland/development_holdout.jsonl",
+            "sha256": "9eb4bf9b27626889e455acb9fc2476c8d4b46f4ef02a2734d9d370a448e93e16",
+            "line_count": 8
+          }
+        ],
+        "output_path": "data/training/reverse-full-20260925/private/bundle/poland/development_holdout.jsonl",
+        "output_sha256": "9d3c81cc4d81ec1fec7f89a201d7a226116134787be83786e2405590618a8f41",
+        "line_count": 16,
+        "component_counts": {
+          "initial": 8,
+          "full": 8
+        }
+      }
+    }
+  },
+  "counts": {
+    "initial": 150,
+    "full": 122,
+    "bundle": 272,
+    "by_work": {
+      "gogjong": 90,
+      "goryeo": 96,
+      "poland": 86
+    },
+    "by_split": {
+      "train": 173,
+      "development_validation": 51,
+      "development_holdout": 48
+    },
+    "by_role_and_split": {
+      "gemma_style": {
+        "train": 56,
+        "development_validation": 16,
+        "development_holdout": 18
+      },
+      "sota_planning": {
+        "train": 117,
+        "development_validation": 35,
+        "development_holdout": 30
+      }
+    }
+  },
+  "verification": {
+    "actual_component_file_hash_and_line_count": "9 initial and 9 full passed",
+    "bundle_exact_byte_concatenation": "9/9 passed",
+    "sample_id_collisions": 0,
+    "source_coordinate_overlaps": 0,
+    "normalized_assistant_target_duplicates": 0,
+    "source_slice_hash_and_metadata": "272/272 passed",
+    "component_releases_preserved": true
+  },
+  "limitations": [
+    "Previously observed development sources; neither split is an unseen final test.",
+    "No model training, generation evaluation, or tokenizer certification was performed."
+  ]
+}

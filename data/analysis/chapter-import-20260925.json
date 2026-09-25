@@ -1,0 +1,133 @@
+{
+  "task": "three-work-full-chapter-boundary-access",
+  "captured_at_utc": "2026-09-25T04:05:45.933740+00:00",
+  "db": "data/analysis/novel-corpus.sqlite3",
+  "backup_before_write": {
+    "path": "data/analysis/novel-corpus.before-scenes-20260925T035922Z.sqlite3",
+    "bytes": 158130176
+  },
+  "works": [
+    {
+      "work_id": "gogjong",
+      "title": "폭군 고종대왕 일대기 1-530 (완) 리첼렌 누락수정.txt",
+      "source_path": "docs/references/richerlen/폭군 고종대왕 일대기 1-530 (완) 리첼렌 누락수정.txt",
+      "source_sha256": "9f3688428abd072b291a753246201cf621d11cd95621c2f755da401840ecc94c",
+      "source_bytes": 9641037,
+      "source_codepoints": 3991522,
+      "source_revision_id": 1,
+      "segmentation_id": 1,
+      "boundary_json_path": "docs/research/chapter-ingestion/gogjong-boundaries.json",
+      "boundary_json_sha256": "c15c19d68d522c4b1be32b2e26e46635d2be73abb75cdc46efc7c57cdbb10d8b",
+      "all_segment_count": 515,
+      "covered_codepoints": 3991522,
+      "chapter_units": [
+        {
+          "kind": "title_section",
+          "boundary_status": "confirmed",
+          "count": 510
+        },
+        {
+          "kind": "unresolved",
+          "boundary_status": "hold",
+          "count": 2
+        }
+      ],
+      "first_50_status": {
+        "unmapped": 50
+      },
+      "hold_headers": [
+        {
+          "segment_ordinal": 33,
+          "label": "【예상치 못한 승전】",
+          "start_cp": 270707,
+          "end_cp": 297598
+        },
+        {
+          "segment_ordinal": 515,
+          "label": "【역경과 승리의 역사】",
+          "start_cp": 3983918,
+          "end_cp": 3991522
+        }
+      ]
+    },
+    {
+      "work_id": "goryeo",
+      "title": "고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+      "source_path": "docs/references/garlic-snack/고려 신대륙에 떨어지다 [외포완] 1-653.txt",
+      "source_sha256": "b1f719ca45c171fd28b20d074e3a508946a923b4c8ff64ebd4c0076834d19b82",
+      "source_bytes": 11658340,
+      "source_codepoints": 4964676,
+      "source_revision_id": 6,
+      "segmentation_id": 9,
+      "boundary_json_path": "docs/research/chapter-ingestion/goryeo-boundaries.json",
+      "boundary_json_sha256": "36684272f4ea87413d355d11e4a52b4612ecb923839fec98576de332b343c699",
+      "all_segment_count": 807,
+      "covered_codepoints": 4964676,
+      "chapter_units": [
+        {
+          "kind": "numbered",
+          "boundary_status": "confirmed",
+          "count": 153
+        },
+        {
+          "kind": "title_section",
+          "boundary_status": "confirmed",
+          "count": 500
+        }
+      ],
+      "first_50_status": {
+        "unmapped": 50
+      },
+      "hold_headers": []
+    },
+    {
+      "work_id": "poland",
+      "title": "폴란드 여왕 키우기 1-524 완결.txt",
+      "source_path": "docs/references/garlic-snack/폴란드 여왕 키우기 1-524 완결.txt",
+      "source_sha256": "483360b0f19e6d1c702fe3aec2b338331c9907fb2de796aa1c16ff5526ba9832",
+      "source_bytes": 9587505,
+      "source_codepoints": 4119429,
+      "source_revision_id": 7,
+      "segmentation_id": 16,
+      "boundary_json_path": "docs/research/chapter-ingestion/poland-boundaries.json",
+      "boundary_json_sha256": "d4b6e8f38fe953e254e17abf41ab9c55e1ad0c7f6fa3b15ce27092f9c849e510",
+      "all_segment_count": 577,
+      "covered_codepoints": 4119429,
+      "chapter_units": [
+        {
+          "kind": "numbered",
+          "boundary_status": "confirmed",
+          "count": 524
+        }
+      ],
+      "first_50_status": {
+        "mapped": 50
+      },
+      "hold_headers": []
+    }
+  ],
+  "other_current_segmentation_ids": {
+    "1588": 14,
+    "fair-trade": 12,
+    "mustache": 17,
+    "sunjong": 10
+  },
+  "verification": {
+    "corpus_verify_passed": true,
+    "repeat_selected_ingest_idempotent": true,
+    "source_revisions_total": 7,
+    "segmentations_total": 17,
+    "segments_total": 5233,
+    "scene_layer_added": false,
+    "official_number_inferred": false,
+    "integrity_check": "ok",
+    "foreign_key_violations": 0,
+    "readme_document_id": "doc-bbdb12ee-ddc7-4778-899b-643cb4c11118",
+    "readme_finalization": "retain; requery confirmed canon=false"
+  },
+  "limitations": [
+    "고종의 파일명 1-530은 개별 회차 경계를 증명하지 않는다.",
+    "무번호 표제의 section_order는 내부 조회 순서이며 공식 화 번호가 아니다.",
+    "고종 보류 표제 2개를 확정 회차로 계산하지 않는다."
+  ]
+}

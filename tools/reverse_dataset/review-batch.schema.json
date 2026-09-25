@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reverse dataset reviewer proposal v1",
+  "type": "object",
+  "required": ["schema_version", "batch_id", "work_id", "source_sha256", "segmentation_id", "attempts", "candidates"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "batch_id": {"type": "string"},
+    "work_id": {"type": "string"},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "segmentation_id": {"type": "integer"},
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["section_order", "status", "candidate_ids", "reason"],
+        "properties": {
+          "section_order": {"type": "integer", "minimum": 1},
+          "status": {"enum": ["proposed", "hold", "reject"]},
+          "candidate_ids": {"type": "array", "items": {"type": "string"}},
+          "reason": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "covered_section_orders", "answer_start_cp", "answer_end_cp", "prior_start_cp", "prior_end_cp", "review_record"],
+        "properties": {
+          "candidate_id": {"type": "string"},
+          "covered_section_orders": {"type": "array", "minItems": 1, "items": {"type": "integer", "minimum": 1}},
+          "answer_start_cp": {"type": "integer", "minimum": 0},
+          "answer_end_cp": {"type": "integer", "minimum": 1},
+          "prior_start_cp": {"type": "integer", "minimum": 0},
+          "prior_end_cp": {"type": "integer", "minimum": 0},
+          "review_record": {
+            "type": "object",
+            "required": ["observed", "reconstructed_assumptions", "boundary_reason", "leakage_check"],
+            "properties": {
+              "observed": {"type": "array", "items": {"type": "object", "required": ["claim", "start_cp", "end_cp"], "properties": {"claim": {"type": "string"}, "start_cp": {"type": "integer"}, "end_cp": {"type": "integer"}}, "additionalProperties": false}},
+              "reconstructed_assumptions": {"type": "array", "items": {"type": "string"}},
+              "boundary_reason": {"type": "string"},
+              "leakage_check": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          "planner_input": {
+            "type": "object",
+            "required": ["prior_state", "goal", "constraints"],
+            "properties": {
+              "prior_state": {"type": "string"},
+              "goal": {"type": "string"},
+              "constraints": {"type": "array", "items": {"type": "string"}}
+            },
+            "additionalProperties": false
+          },
+          "plan_target": {
+            "type": "object",
+            "required": ["virtual_history", "character_knowledge", "scene_spec"],
+            "properties": {
+              "virtual_history": {"type": "array", "items": {"type": "object"}},
+              "character_knowledge": {"type": "array", "items": {"type": "object"}},
+              "scene_spec": {"type": "object"}
+            },
+            "additionalProperties": false
+          },
+          "writer_input": {
+            "type": "object",
+            "required": ["prior_context", "virtual_history", "character_knowledge", "scene_spec"],
+            "properties": {
+              "prior_context": {"type": "string"},
+              "virtual_history": {"type": "array", "items": {"type": "object"}},
+              "character_knowledge": {"type": "array", "items": {"type": "object"}},
+              "scene_spec": {"type": "object"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {"properties": {"work_id": {"const": "gogjong"}}},
+      "then": {"properties": {"candidates": {"items": {"required": ["writer_input"], "not": {"anyOf": [{"required": ["planner_input"]}, {"required": ["plan_target"]}]}}}}}
+    },
+    {
+      "if": {"properties": {"work_id": {"enum": ["goryeo", "poland"]}}},
+      "then": {"properties": {"candidates": {"items": {"required": ["planner_input", "plan_target"], "not": {"required": ["writer_input"]}}}}}
+    }
+  ]
+}

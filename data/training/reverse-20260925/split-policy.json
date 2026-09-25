@@ -1,0 +1,95 @@
+{
+  "pool": "development; no unseen final test",
+  "references": "train only",
+  "rules": [
+    "Target, prior context, evidence, and all derived variants stay inside one split codepoint range.",
+    "Overlapping targets, windows, contexts, and derivative questions form one split group.",
+    "A scene may cross section headings but may not cross a split boundary; count one scene once.",
+    "At each eligible section attempt one complete action; hold missing evidence instead of filling a quota.",
+    "Writer input contains no source path, coordinate, target wording, later prose, or unauthorized future knowledge.",
+    "Reviewer observation and reconstruction remain distinct; target is exact raw-source text slice."
+  ],
+  "schema_version": 1,
+  "source_manifest_sha256": "ea0764d58e109bdb828b5143e2bf9d88a933594d3a7ab583b7b3c00b71046e80",
+  "unit_meaning": "source-order heading; not an inferred official episode number",
+  "works": {
+    "gogjong": {
+      "role": "gemma_style",
+      "splits": [
+        {
+          "end_cp": 270707,
+          "name": "train",
+          "section_order_end": 30,
+          "section_order_start": 1,
+          "start_cp": 0
+        },
+        {
+          "end_cp": 368928,
+          "name": "development_validation",
+          "section_order_end": 40,
+          "section_order_start": 31,
+          "start_cp": 270707
+        },
+        {
+          "end_cp": 444060,
+          "name": "development_holdout",
+          "section_order_end": 50,
+          "section_order_start": 41,
+          "start_cp": 368928
+        }
+      ]
+    },
+    "goryeo": {
+      "role": "sota_planning",
+      "splits": [
+        {
+          "end_cp": 175549,
+          "name": "train",
+          "section_order_end": 30,
+          "section_order_start": 1,
+          "start_cp": 0
+        },
+        {
+          "end_cp": 246546,
+          "name": "development_validation",
+          "section_order_end": 40,
+          "section_order_start": 31,
+          "start_cp": 175549
+        },
+        {
+          "end_cp": 314211,
+          "name": "development_holdout",
+          "section_order_end": 50,
+          "section_order_start": 41,
+          "start_cp": 246546
+        }
+      ]
+    },
+    "poland": {
+      "role": "sota_planning",
+      "splits": [
+        {
+          "end_cp": 219530,
+          "name": "train",
+          "section_order_end": 30,
+          "section_order_start": 1,
+          "start_cp": 0
+        },
+        {
+          "end_cp": 295915,
+          "name": "development_validation",
+          "section_order_end": 40,
+          "section_order_start": 31,
+          "start_cp": 219530
+        },
+        {
+          "end_cp": 379647,
+          "name": "development_holdout",
+          "section_order_end": 50,
+          "section_order_start": 41,
+          "start_cp": 295915
+        }
+      ]
+    }
+  }
+}
