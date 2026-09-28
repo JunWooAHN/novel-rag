@@ -1,0 +1,11 @@
+start_utc=2026-09-28T03:38:01.305020+00:00
+end_utc=2026-09-28T03:38:01.318000+00:00
+request_url=https://yago-knowledge.org/sparql/qlever?query=SELECT+%3Fs+%3Fp+%3Fo+WHERE+%7B+VALUES+%3Fs+%7B+%3Chttp%3A%2F%2Fyago-knowledge.org%2Fresource%2FFall_of_Constantinople%3E+%3Chttp%3A%2F%2Fyago-knowledge.org%2Fresource%2FSteam_engine%3E+%3Chttp%3A%2F%2Fyago-knowledge.org%2Fresource%2FPrinting_press%3E+%7D+%3Fs+%3Fp+%3Fo+%7D+LIMIT+5&format=json
+query=SELECT ?s ?p ?o WHERE { VALUES ?s { <http://yago-knowledge.org/resource/Fall_of_Constantinople> <http://yago-knowledge.org/resource/Steam_engine> <http://yago-knowledge.org/resource/Printing_press> } ?s ?p ?o } LIMIT 5
+http_status=URLError
+response_body=<urlopen error [Errno 8] nodename nor servname provided, or not known>
+
+fallback_method=web.open on the same endpoint with the same bounded query
+fallback_result=Internal Error; web tool reported the endpoint query URL is not accessible via this tool
+fallback_checked_before_utc=2026-09-28T03:38:45Z
+conclusion=No SPARQL response received; endpoint health and data-version freshness remain unverified

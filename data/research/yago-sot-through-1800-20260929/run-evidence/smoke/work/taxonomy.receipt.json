@@ -1,0 +1,16 @@
+{
+  "bytes": 99,
+  "counts": {
+    "all_lines": 2,
+    "excluded": 1,
+    "header_or_blank": 1,
+    "mapped": 1,
+    "related_auxiliary_only": 1
+  },
+  "expected_sha256": "93f98eacaccfd1fd3b80787c221322612ebc13b362dcf7f791270d2226cb28aa",
+  "file": "/home/work/novel-toy-tune/reality-yago46-through-1899-smoke-20260929/fixture-source/yago-4.6-taxonomy/yago-taxonomy.ttl",
+  "ledger_sha256": "18006ef51a44cbbee9bc8732ac49a33887a5adbb5f62213ab383697b31e89898",
+  "scanned_at_utc": "2026-09-28T23:00:55.345232+00:00",
+  "sha256": "93f98eacaccfd1fd3b80787c221322612ebc13b362dcf7f791270d2226cb28aa",
+  "stage_code_sha256": "ff89ce4a818d20d0c16f9ea4b7b92d4e9162c48f176cea272adb79560494193a"
+}

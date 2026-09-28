@@ -1,0 +1,12 @@
+{
+  "scope": "single_read_only_draft_source_coordinate_comparison_not_final_release",
+  "source_file": "facts",
+  "line_no": 46623039,
+  "source_sha256": "17da906cefea15aa076ccfd5ce0bd2956b2e95ae06b225cca18059bbaf5eb1e4",
+  "raw": "yago:Hangul\tschema:startDate\t\"1443\"^^xsd:gYear\t.",
+  "old_r3_lane": "knowledge_or_taxonomy",
+  "new_draft_lane": "H_boundary",
+  "new_draft_reason": "explicit_entity_boundary",
+  "new_draft_time": {"raw": "\"1443\"^^xsd:gYear", "kind": "point", "year": 1443, "status": "nominal_calendar_unknown", "calendar": "unknown", "precision": "year"},
+  "interpretation_limit": "This is the source's nominal start boundary for the Hangul entity, not evidence that Hangul was in use in 1443, nor an independently verified cultural-history event. New global policy and old r3 role classification differ."
+}

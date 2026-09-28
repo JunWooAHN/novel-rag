@@ -1,0 +1,121 @@
+{
+  "task_id": "wikidata-storage-20260929",
+  "status": "downloading",
+  "request": "그럼 현재 h200에 위키데이터 는 없는건가? 필요하면 yago처럼 데이터를 다운로드해서 스토리지에 저장해야함",
+  "started_at_utc": "2026-09-28T22:24:32.729209+00:00",
+  "scope": "Inspect existing approved H200 persistent Storage for Wikidata originals; if absent obtain the necessary official snapshot with full statements/qualifiers/references and preserve it as original, subject to measured free capacity.",
+  "ownership": {
+    "root": [
+      "task-card.json"
+    ],
+    "operator": [
+      "tools/wikidata_storage/ if needed",
+      "new task evidence except task-card/independent-review",
+      "approved H200 /home/work/novel-toy-tune/sources/original/wikidata/ and dedicated download workspace",
+      "necessary report/checkpoint and document DB lifecycle"
+    ],
+    "research_reviewer": [
+      "new task independent-review/"
+    ]
+  },
+  "inputs": [
+    "docs/methods/history-ledger-sot.md canon v0.0.1",
+    "docs/prd/wikipedia-history-ontology.md canon v2.0.0",
+    "docs/research/20260928-yago-h200-original-setup.md",
+    "Existing H200 approved SSH access and Storage; do not expose key contents or env files."
+  ],
+  "requirements": [
+    "Verify actual storage inventory and mount/free-space/quota context; no assumption that YAGO entails a complete Wikidata dump.",
+    "Use official Wikimedia/Wikidata sources; distinguish full current-entity JSON/statement dumps from truthy reduced RDF and all-revision history dumps. Select only needed format, not duplicate formats.",
+    "Resolve to a fixed snapshot URL/date/size/checksum; preserve original compressed bytes with manifest, ORIGINAL designation, source/license and acquisition status.",
+    "Allow resumable partial download and detach safely if long; no claim of completion until size/checksum and suitable integrity validation pass.",
+    "Do not delete existing sources/models/DB/corpus or uncompress the full archive without capacity justification. Keep a conservative workspace reserve.",
+    "No GPU inference, KB ingestion, new SoT release, external publishing, secrets upload, or purchase/new storage allocation.",
+    "Operator is sole remote/file/document DB writer; independent Sol reviews format/capacity/manifest and final evidence."
+  ],
+  "acceptance": [
+    "Answer whether Wikidata original was present from actual inventory",
+    "Necessary original acquired and integrity checked, or accurately report a specific blocker/running state without claiming acquisition complete",
+    "Evidence and restart-safe checkpoint with actual destination and immutable source identity"
+  ],
+  "next": "Server continues download and automatic size/SHA1/SHA256/sample validation. Preserve downloading status until final manifest and independent acquisition review confirm completion.",
+  "roles": {
+    "root": "Astra orchestration",
+    "operator": "/root/wikidata_storage_operator (Sol), sole remote and document DB writer",
+    "research_reviewer": "/root/wikidata_dump_review (Sol), read-only official-source and evidence review"
+  },
+  "preflight_partial": {
+    "original_source_directory": "Only yago present; bounded project inventory at depth <=5 found 0 Wikidata-named files or directories before acquisition.",
+    "persistent_fs_type": "NFS",
+    "reported_total_bytes": 2000000385024,
+    "reported_available_bytes": 1676399345664,
+    "separate_account_quota": "Not independently available from quota CLI; mount total matches configured 2 TB context."
+  },
+  "selection": {
+    "format": "all entities JSON, bzip2 compressed; full current entity statements, not all revision history",
+    "snapshot_file_date": "20260922",
+    "official_directory_date": "20260921",
+    "url": "https://dumps.wikimedia.org/wikidatawiki/entities/20260921/wikidata-20260922-all.json.bz2",
+    "expected_bytes": 103222517992,
+    "expected_sha1": "c5bfd59f16c6cdf906ead1190d99729108e961be",
+    "destination_directory": "/home/work/novel-toy-tune/sources/original/wikidata/20260922/",
+    "reserve_bytes": 100000000000,
+    "source_selection_evidence": "independent-review/source-selection.md",
+    "root_authorization": "Proceed with existing user-authorized original download; no new confirmation required.",
+    "snapshot_caveat": "The new Wikidata snapshot is not asserted to be the upstream snapshot used to build YAGO 4.6."
+  },
+  "active_job": {
+    "host": "existing approved H200 session",
+    "pid": 38511,
+    "script": "/home/work/novel-toy-tune/tools/wikidata_storage/20260929/fetch_original.py",
+    "script_sha256": "0103f1158f2c5d61b65bf8cdf4ed69beb31ff84bb42b4f744e3c36bb3fddd9d0",
+    "log": "/home/work/novel-toy-tune/tools/wikidata_storage/20260929/fetch.log",
+    "partial_file": "/home/work/novel-toy-tune/sources/original/wikidata/20260922/wikidata-20260922-all.json.bz2.part",
+    "initial_observed_bytes": 209715200,
+    "initial_elapsed_seconds": 47,
+    "estimated_hours_from_initial_rate": 6.4,
+    "estimate_is_guarantee": false,
+    "latest_observed_at_utc": "2026-09-28T22:36:49Z",
+    "latest_observed_bytes": 1333788672,
+    "observed_after_separate_ssh_reconnect": true,
+    "survives_local_disconnect": true,
+    "survives_h200_compute_session_termination": false
+  },
+  "acquisition_complete": false,
+  "handoff_scope": "Verify detached launch and progression, document restart/inspection instructions and exact pending state; do not mislabel this handoff as completed original acquisition.",
+  "handoff_status": "launch_accepted, acquisition_pending",
+  "handoff_recorded_at_utc": "2026-09-28T22:38:18.306733+00:00",
+  "handoff_evidence": {
+    "progress": {
+      "path": "data/research/wikidata-storage-20260929/progress-after-reconnect.json",
+      "sha256": "7a143173eb1f379760002a5d3ebe0541ded595ac9f6d8087f035fca92a302578"
+    },
+    "independent_launch_acceptance": {
+      "path": "data/research/wikidata-storage-20260929/independent-review/launch-review.md",
+      "sha256": "f958372196ef7907265dab681b0712281ae876f0232ff7eb321fbe010c9d2024"
+    },
+    "document_lifecycle": {
+      "path": "data/research/wikidata-storage-20260929/document-lifecycle.json",
+      "sha256": "d406e8939ef045d2917457e1ae0023aa32c2450afb9464cfaf5e39902fac0260"
+    },
+    "setup_report": {
+      "path": "docs/research/20260929-wikidata-h200-original-setup.md",
+      "sha256": "eaef02137e1b8a6694f33e208a51747035ad75f6dc62935f2e279caa67ab4e5e"
+    },
+    "checkpoint": {
+      "path": "docs/harness/current-checkpoint.md",
+      "sha256": "93ded1c8ece4f901bfa1e8d1465a90887acb96d9e87cbed22d038c284a4e5f06"
+    }
+  },
+  "pending_completion_evidence": [
+    "final exact bytes 103222517992",
+    "official SHA1 match",
+    "computed dump SHA256 (not checksum-list SHA256)",
+    "three parsed JSON entity samples",
+    "manifest status complete readback",
+    "independent final acquisition acceptance"
+  ],
+  "evidence_limitations": [
+    "Raw HTTP HEAD headers were not retained as a separate receipt; setup report records the operator observation. Manifest ETag/Last-Modified fields are fixed inputs, not independent HTTP observations."
+  ]
+}

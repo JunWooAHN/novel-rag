@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Validate reviewed reverse-design candidates and export local development JSONL."""
+"""Export the accepted, fixed DB release as derived development JSONL.
+
+Legacy candidate validators remain for the existing review fixtures and
+``full.py``. The operational export path only uses the public release reader.
+"""
 import argparse
 import hashlib
 import json
@@ -193,95 +197,98 @@ def validate_batch(bundle, review, decision, work, split, text, review_raw=None)
                     'unit_holds': sum(a['status'] == 'hold' for a in attempts)}
 
 
-def build(_args):
-    manifest_raw = (BASE / 'source-manifest.json').read_bytes()
-    manifest = json.loads(manifest_raw)
-    policy = read_json(BASE / 'split-policy.json')
-    require(digest(manifest_raw) == policy['source_manifest_sha256'], 'frozen policy hash mismatch')
-    reports = {}
-    output_files = {}
-    seen_normalized_targets = set()
-    for wid in WORKS:
-        work = manifest['works'][wid]
-        raw = (ROOT / work['source_path']).read_bytes()
-        require(digest(raw) == work['source_sha256'], f'raw source changed: {wid}')
-        text = raw.decode('utf-8')
-        reports[wid] = {}
-        seen_ranges = []
-        for split in policy['works'][wid]['splits']:
-            name = split['name']
-            rows = []
-            counts = {'attempted_units': 0, 'proposed_candidates': 0, 'accepted': 0,
-                      'held': 0, 'rejected': 0, 'unit_holds': 0}
-            attempted = []
-            for start in range(split['section_order_start'], split['section_order_end'] + 1, 5):
-                end = min(start + 4, split['section_order_end'])
-                bid = f'{wid}-{start:03d}-{end:03d}'
-                bundle = read_json(BASE / 'private/batches' / f'{bid}.json')
-                review_raw = (BASE / 'private/reviews' / f'{bid}.json').read_bytes()
-                review = json.loads(review_raw)
-                decision = read_json(BASE / 'private/decisions' / f'{bid}.json')
-                require(bundle['batch_id'] == bid and bundle['work_id'] == wid and bundle['split'] == name,
-                        f'batch identity changed: {bid}')
-                require('excerpt' not in bundle and len(bundle['section_inputs']) == len(bundle['units']),
-                        f'batch index must contain metadata only: {bid}')
-                for unit, ref in zip(bundle['units'], bundle['section_inputs']):
-                    section_path = ROOT / ref['path']
-                    require(section_path.parent == BASE / 'private/sections', f'unsafe section path: {bid}')
-                    section = read_json(section_path)
-                    require(section['batch_id'] == bid and section['work_id'] == wid and
-                            section['source_sha256'] == work['source_sha256'] and
-                            section['current_unit'] == unit and
-                            section['excerpt_end_cp'] == unit['end_cp'] == ref['excerpt_end_cp'] and
-                            section['excerpt_start_cp'] == split['start_cp'],
-                            f'section identity/range differs: {bid}')
-                    excerpt = text[section['excerpt_start_cp']:section['excerpt_end_cp']]
-                    require(excerpt == section['excerpt'] and
-                            digest(excerpt.encode('utf-8')) == section['excerpt_sha256'] == ref['excerpt_sha256'],
-                            f'section excerpt differs: {bid}')
-                got, count = validate_batch(bundle, review, decision, work, split, text, review_raw)
-                rows.extend(got)
-                attempted.extend(a['section_order'] for a in review['attempts'])
-                for key in counts:
-                    counts[key] += count[key]
-            require(attempted == list(range(split['section_order_start'], split['section_order_end'] + 1)),
-                    f'split section coverage incomplete: {wid}/{name}')
-            for row in rows:
-                a, b = row['metadata']['answer_start_cp'], row['metadata']['answer_end_cp']
-                require(all(b <= x or a >= y for x, y in seen_ranges), f'accepted targets overlap: {wid}')
-                ensure_unique_target(text[a:b], f'{wid}/{name}', seen_normalized_targets)
-                seen_ranges.append((a, b))
-            path = BASE / 'private/export' / wid / f'{name}.jsonl'
-            data = ''.join(json.dumps(row, ensure_ascii=False, sort_keys=True) + '\n' for row in rows).encode('utf-8')
-            output_files[path] = data
-            reports[wid][name] = {**counts, 'jsonl_path': str(path.relative_to(ROOT)),
-                                  'jsonl_sha256': digest(data),
-                                  'input_characters': sum(r['metadata']['input_characters'] for r in rows),
-                                  'output_characters': sum(r['metadata']['output_characters'] for r in rows),
-                                  'source_answer_characters': sum(r['metadata']['source_answer_characters'] for r in rows),
-                                  'truncated': False}
-    report = {'schema_version': 1, 'pool': 'previously_observed_development_only',
-              'final_unseen_test': False, 'manual_semantic_leakage_review_required': True,
-              'token_validation': 'not_run', 'truncated': False,
-              'source_manifest_sha256': digest(manifest_raw), 'works': reports}
-    for path, data in output_files.items():
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_bytes(data)
-    (BASE / 'quality-report.json').write_text(json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + '\n', encoding='utf-8')
-    print(json.dumps({'works': {w: {s: v['accepted'] for s, v in ss.items()} for w, ss in reports.items()}}, ensure_ascii=False))
+def checked_release(release):
+    """Check the public release shape without querying its private DB tables."""
+    require(isinstance(release, dict) and isinstance(release.get('release_id'), str)
+            and isinstance(release.get('rows'), list), 'invalid DB release result')
+    require(release.get('accepted_count') == len(release['rows']), 'accepted release count differs from rows')
+    require(isinstance(release.get('source_hashes'), dict) and
+            isinstance(release.get('selection_policy_hashes'), dict), 'release provenance missing')
+    seen = set()
+    for item in release['rows']:
+        require(isinstance(item, dict) and set(item) >=
+                {'release', 'record', 'raw_line', 'source_answer'}, 'invalid release row')
+        record, raw_line, answer = item['record'], item['raw_line'], item['source_answer']
+        require(item['release'] in ('initial', 'full') and isinstance(record, dict)
+                and isinstance(raw_line, str) and isinstance(answer, str)
+                and '\n' not in raw_line and '\r' not in raw_line, 'invalid row content')
+        require(json.loads(raw_line) == record, 'stored JSONL line differs from release record')
+        meta = record['metadata']
+        require(meta['work_id'] in WORKS and meta['split'] in SPLITS and
+                meta['role'] in ('gemma_style', 'sota_planning'), 'invalid role/split/work')
+        require(record['sample_id'] not in seen, 'duplicate accepted sample ID')
+        seen.add(record['sample_id'])
+        require(digest(answer.encode('utf-8')) == meta['answer_sha256'] and
+                len(answer) == meta['answer_end_cp'] - meta['answer_start_cp'],
+                'DB source span or hash differs from accepted record')
+        require([message['role'] for message in record['messages']] == ['user', 'assistant'],
+                'invalid model message roles')
+    return release
+
+
+def read_release(db_path, import_id):
+    from novel_factory.composition import read_accepted_release
+    return checked_release(read_accepted_release(db_path, import_id))
+
+
+def render_jsonl_files(release):
+    """Return the nine legacy-shaped files, preserving accepted row bytes/order."""
+    release = checked_release(release)
+    groups = {(work, split): [] for work in WORKS for split in SPLITS}
+    for item in release['rows']:
+        meta = item['record']['metadata']
+        groups[(meta['work_id'], meta['split'])].append(item['raw_line'])
+    return {(work, split): ('\n'.join(lines) + ('\n' if lines else '')).encode('utf-8')
+            for (work, split), lines in groups.items()}
+
+
+def export_release(db_path: Path | str, import_id: str, output_dir: Path | str) -> dict:
+    """Write a new derived directory; never rewrite the frozen legacy bundle."""
+    from tempfile import TemporaryDirectory
+
+    db_path, output_dir = Path(db_path), Path(output_dir)
+    release = read_release(db_path, import_id)
+    require(len(release['rows']) == 272, 'fixed reviewed release must contain 272 accepted rows')
+    out = output_dir.resolve()
+    require(not out.exists(), 'output directory already exists')
+    for original in (BASE.resolve(), (ROOT / 'data/training/reverse-full-20260925').resolve()):
+        require(not out.is_relative_to(original), 'do not overwrite legacy source artifacts')
+    files = render_jsonl_files(release)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with TemporaryDirectory(prefix='.db-export-', dir=out.parent) as temporary:
+        stage = Path(temporary) / 'release'
+        stage.mkdir(mode=0o700)
+        report = {'schema_version': 1, 'kind': 'derived_from_analysis_db',
+                  'db_path': str(db_path.resolve()), 'import_id': import_id,
+                  'release_id': release['release_id'],
+                  'source_hashes': release['source_hashes'],
+                  'selection_policy_hashes': release['selection_policy_hashes'],
+                  'count': len(release['rows']), 'files': {}}
+        for (work, split), data in files.items():
+            path = stage / work / f'{split}.jsonl'
+            path.parent.mkdir(exist_ok=True, mode=0o700)
+            path.write_bytes(data)
+            report['files'][f'{work}/{split}.jsonl'] = {'rows': len(data.splitlines()),
+                                                       'bytes': len(data), 'sha256': digest(data)}
+        (stage / 'release-manifest.json').write_text(
+            json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + '\n', encoding='utf-8')
+        stage.rename(out)
+    return {'path': str(out), 'release_id': release['release_id'],
+            'records': len(release['rows']), 'files': 9}
+
+
+def build(args):
+    print(json.dumps(export_release(args.db, args.import_id, args.output_dir), ensure_ascii=False))
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['build'])
-    parser.add_argument('--release', choices=['initial', 'full'], default='initial',
-                        help='select the frozen development release; initial is the existing first-50 set')
+    parser.add_argument('--db', type=Path, default=ROOT / 'data/analysis/novel-corpus.sqlite3')
+    parser.add_argument('--import-id', required=True, help='fixed, imported reviewed release ID')
+    parser.add_argument('--output-dir', type=Path, required=True, help='new directory for DB-derived JSONL')
     args = parser.parse_args()
     try:
-        if args.release == 'full':
-            from full import export as export_full
-            export_full(args)
-        else:
-            build(args)
+        build(args)
     except (KeyError, TypeError, ValueError, OSError) as exc:
         parser.exit(1, f'error: {exc}\n')

@@ -1,0 +1,14 @@
+{
+  "accounting": "secondary related evidence; not added to base denominator or H validity",
+  "counts": {
+    "all_lines": 13,
+    "context_hint": 3,
+    "not_context": 10
+  },
+  "expected_sha256": "ce9411b123d4b4b012552e14cfdc8fa399b3e970e00e4f75adc2c605402656d3",
+  "file": "/home/work/novel-toy-tune/reality-yago46-through-1899-smoke-20260929/fixture-source/yago-4.6-facts/yago-facts.ttl",
+  "ledger_sha256": "3ed572fcf1205b4afbc3adfed3d08cdb6f9cd01ff393a454ce3993394c0a77a5",
+  "scanned_at_utc": "2026-09-28T23:00:55.172119+00:00",
+  "sha256": "ce9411b123d4b4b012552e14cfdc8fa399b3e970e00e4f75adc2c605402656d3",
+  "stage_code_sha256": "ff89ce4a818d20d0c16f9ea4b7b92d4e9162c48f176cea272adb79560494193a"
+}

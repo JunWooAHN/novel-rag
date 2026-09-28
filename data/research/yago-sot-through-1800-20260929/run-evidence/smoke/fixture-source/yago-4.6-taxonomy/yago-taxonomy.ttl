@@ -1,0 +1,2 @@
+@prefix yago: <http://yago-knowledge.org/resource/> .
+schema:Person	rdfs:subClassOf	schema:Thing	.

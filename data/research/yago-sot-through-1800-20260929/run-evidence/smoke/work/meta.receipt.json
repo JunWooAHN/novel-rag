@@ -1,0 +1,14 @@
+{
+  "bytes": 442,
+  "counts": {
+    "all_lines": 6,
+    "excluded_header": 1,
+    "mapped_meta": 5
+  },
+  "expected_sha256": "65684527c1d37d953009c76fc49d0ff13f67bf27530a84449012649efadf7bb1",
+  "file": "/home/work/novel-toy-tune/reality-yago46-through-1899-smoke-20260929/fixture-source/yago-4.6-meta/yago-meta.ttl",
+  "ledger_sha256": "85b990bdaef31733a245df9378adb82baec2337182b2cc37fb4e222950f68332",
+  "scanned_at_utc": "2026-09-28T22:58:57.799672+00:00",
+  "sha256": "65684527c1d37d953009c76fc49d0ff13f67bf27530a84449012649efadf7bb1",
+  "stage_code_sha256": "489c32818c1885843f50098ed85daa062acd51d6fead213882c149079d5d2010"
+}

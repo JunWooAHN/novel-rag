@@ -13,6 +13,7 @@ tags:
 - H200
 - A40
 - Supabase
+canon: true
 ---
 # 프로젝트 자원 현황
 

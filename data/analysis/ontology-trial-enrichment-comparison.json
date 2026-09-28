@@ -1,0 +1,88 @@
+{
+  "status": "candidate_trial_complete_ontology_release_not_ready",
+  "date": "2026-09-27",
+  "baseline_packet_sha256": "e47b8e0785d55d5928bce4766f80d65a5195f7e86c62333c2c621aa541f99918",
+  "model": "google/gemma-4-31B-it",
+  "model_revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+  "selected_excerpt_count": 5,
+  "baseline": {
+    "candidates": 27,
+    "exact_quote_linked_unreviewed": 25,
+    "held": 2,
+    "verified_path": "data/analysis/private/ontology-trial/verified.json"
+  },
+  "diagnosis": {
+    "parsed_units": 5,
+    "model_search_questions": 7,
+    "summary_path": "data/analysis/private/ontology-trial/enrichment/diagnosis/summary.json",
+    "summary_sha256": "6e4a72b4d714fe08fbf2d9bbbfce999e98ba4cab3bf9e2e60fa66f7567d9ff6f",
+    "boundary": "Questions and model memory are hypotheses, not evidence. The model flagged a reign/creation confusion but missed the absent independent Hangul K object. The museum and UNESCO source locations were investigated by the root from a previously known issue before diagnosis; this is not a fully autonomous search evaluation."
+  },
+  "added_evidence": {
+    "path": "data/analysis/private/ontology-trial/enrichment/extra-evidence.json",
+    "sha256": "7b2009fed318380239f689bbfdbc7549adf694f1a0d7ea1b68667197ceefe598",
+    "same_revision_wiki_excerpt_count": 6,
+    "directly_read_web_excerpt_count": 4,
+    "captured_excerpt_bytes": 2810,
+    "retrieved_date": "2026-09-27",
+    "web_sources": [
+      "https://www.hangeul.go.kr/exhi/dailyExhibition.do?curr_menu_cd=0102010000",
+      "https://www.unesco.org/en/memory-world/hunminjeongum-manuscript?hub=1081"
+    ],
+    "boundary": "Web excerpt hashes establish integrity of captured strings, not a replayable live-page snapshot. The museum and UNESCO institutional descriptions are not counted as independent primary historical sources."
+  },
+  "paired_modes": {
+    "wiki_only": {
+      "parsed_units": 5,
+      "candidates": 30,
+      "exact_quote_linked_unreviewed": 21,
+      "held": 9,
+      "held_quote_reasons": {"wikitext_markup_changed_or_omitted": 5, "invented_ellipsis_join": 4},
+      "verified_path": "data/analysis/private/ontology-trial/enrichment/wiki_only/verified.json",
+      "verified_sha256": "3729b3dc3e2508609c243f447857ec8f9f02fa4068010915e13cfbfb6e1f85be"
+    },
+    "enriched": {
+      "parsed_units": 5,
+      "candidates": 32,
+      "exact_quote_linked_unreviewed": 26,
+      "held": 6,
+      "verified_path": "data/analysis/private/ontology-trial/enrichment/enriched/verified.json",
+      "verified_sha256": "2d0d5ae1afc75515277b3d26b3239c1caaa26bf68f0c424001ec0eceb794cb68",
+      "candidate_evidence_links": {"baseline_wiki": 17, "same_revision_wiki": 8, "external_web": 1}
+    }
+  },
+  "comparison_limits": [
+    "Baseline and paired modes use different prompt/schema; count differences are not quality or retrieval-only gains.",
+    "The paired modes share prompt/model/revision and baseline five excerpts, but enriched adds six wiki and four web excerpts together. Web-only causal contribution was not isolated.",
+    "Exact quote/span matching is mechanical and does not approve meaning, entity identity, relations, or a reality release.",
+    "No raw model output was edited after generation. No ontology database or reality release was published."
+  ],
+  "independent_semantic_review": {
+    "baseline_observations": [
+      "Munjong death event H missing despite date in selected source.",
+      "Hangul regnal interval 1418-1450 used as creation time.",
+      "No independent Hangul K object.",
+      "Generic bloomery forging process classified as historical B rather than K.",
+      "Danjong death relation used the same actor and affected entity.",
+      "The short quote 'moved to create' alone did not directly support the completed-act wording; broader selected context permits an inference, so the earlier categorical falsehood assessment was withdrawn."
+    ],
+    "wiki_only_observations": [
+      "Munjong death H remains absent.",
+      "Hangul regnal interval is separately represented and an independent K candidate appears, but its definition quote is weak.",
+      "Generic bloomery forging process moves to K; one B links to a held K and is not a usable bridge.",
+      "Danjong self-object relation is replaced by unknown actor and affected Danjong.",
+      "Hangul announcement is misclassified as publication; Sejo birth/death interval is misused as reign interval in a held candidate."
+    ],
+    "enriched_observations": [
+      "Munjong death H is recovered with same-revision wiki evidence; Hangul announcement relation changes to transmission.",
+      "Hangul K, separate regnal H, bloomery forging K, and Danjong actor/affected separation persist.",
+      "Bloomery B still references a held K; Sejo birth/death interval is still mislabeled as reign interval in a held candidate.",
+      "Munjong source's Grand Prince Seyong conflicts with Sejo source's Suyang; identity/typo is unverified, but the model promotes the conflicting name into a definite affected role.",
+      "Danjong death H asserts Sejo as actor despite conflicting death accounts and a separate unresolved item.",
+      "Hangul 1443 B cites a UNESCO fragment lacking its antecedent; an explicit museum excerpt was available but not cited. This is partly an evidence selection/linking limitation.",
+      "Hangul script K2 is separate, but K3 combines the Hunminjeongeum introductory text and Haerye commentary. Publication B3 targets book K3 while its quote describes official publication of script K2 through two writings; a late-19th-century reception date is overjoined to elite/commoner adoption."
+    ],
+    "review_status": "independent_sample_reviewed_not_semantically_accepted"
+  },
+  "next_small_change": "Use fixed sentence/source-unit IDs with parser-computed spans instead of retyped model quotes; check actor/affected roles, K bridge target status, script-versus-book identity, and time-role labels before release."
+}

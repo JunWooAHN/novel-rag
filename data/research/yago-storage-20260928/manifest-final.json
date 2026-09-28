@@ -1,0 +1,256 @@
+{
+  "release": "YAGO 4.6",
+  "kind": "original_upstream_unchanged",
+  "base_url": "https://yago-knowledge.org/data/yago4.6/",
+  "created_at": "2026-09-28T05:48:55.522267Z",
+  "mount": {
+    "target": "/home/work/novel-toy-tune",
+    "source": "192.168.1.201:/aitrain_data_ib/c32636f52b6f408ca0bef46460f4fb49/d1/cd/2862c17f4a898c5ba10864068a3f",
+    "fstype": "nfs",
+    "options": "rw,relatime,vers=3,rsize=1048576,wsize=1048576,namlen=255,hard,rdirplus=force,forcerdirplus,proto=rdma,nconnect=8,port=20049,timeo=600,retrans=2,sec=sys,mountaddr=192.168.1.201,mountvers=3,mountproto=tcp,local_lock=none,localports=192.168.1.3-192.168.1.4,localports_failover,remoteports=192.168.1.201-192.168.1.208,noidlexprt,addr=192.168.1.205"
+  },
+  "status": "complete",
+  "files": {
+    "yago-4.6-schema.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-schema.zip",
+      "received_at": "2026-09-28T05:48:57.705842Z",
+      "etag": "\"6a700554-4c0f\"",
+      "last_modified": "Mon, 03 Aug 2026 03:04:52 GMT",
+      "compressed_bytes": 19471,
+      "uncompressed_bytes": 117074,
+      "sha256": "01a4f4fd80a04ce38375163993644e8370da3b6761b3e8cc703be97cc5a3d07a",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-schema.ttl",
+          "bytes": 117074,
+          "crc32": "a690d9d5",
+          "sha256": "b3f185f27c21e0e2b561dc92f7f9e3d54ccd6f4acac01e9ae97c2d42ef3b636f",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-taxonomy.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-taxonomy.zip",
+      "received_at": "2026-09-28T06:17:53.224056Z",
+      "etag": "\"6a700553-2798b46\"",
+      "last_modified": "Mon, 03 Aug 2026 03:04:51 GMT",
+      "compressed_bytes": 41519942,
+      "uncompressed_bytes": 218444322,
+      "sha256": "6cc9f409ee96208dbba79d571e0471b69efc73d0f2384c3250e8b27942a95278",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-taxonomy.ttl",
+          "bytes": 218444322,
+          "crc32": "840f92d0",
+          "sha256": "c0a9a4c24f0acfe0fd44c285bdc2db32fdb91d8d5936a7d4162cd149924fd238",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-facts.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-facts.zip",
+      "received_at": "2026-09-28T06:25:43.125303Z",
+      "etag": "\"6a700552-316edca3\"",
+      "last_modified": "Mon, 03 Aug 2026 03:04:50 GMT",
+      "compressed_bytes": 829349027,
+      "uncompressed_bytes": 5087821943,
+      "sha256": "f9b57f355f0b1f8bf5b968ac20f33778fce2b521c675c5a7d28f0afd4f1c14b1",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-facts.ttl",
+          "bytes": 5087821943,
+          "crc32": "e28f1174",
+          "sha256": "17da906cefea15aa076ccfd5ce0bd2956b2e95ae06b225cca18059bbaf5eb1e4",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-labels.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-labels.zip",
+      "received_at": "2026-09-28T06:43:26.910431Z",
+      "etag": "\"6a700569-826de097\"",
+      "last_modified": "Mon, 03 Aug 2026 03:05:13 GMT",
+      "compressed_bytes": 2188238999,
+      "uncompressed_bytes": 13868829973,
+      "sha256": "aa189157fd48892a4b63d3063a838be03c09de65fe320374d774252bbee1774e",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-labels.ttl",
+          "bytes": 13868829973,
+          "crc32": "dc3dc7ef",
+          "sha256": "d30c76fa7ec5f1aa59df175229d7ab220222a2a6f4a87ec255d9a277e1ab17ff",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-beyond-wikipedia.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-beyond-wikipedia.zip",
+      "received_at": "2026-09-28T06:59:43.620129Z",
+      "etag": "\"6a7005a4-97219fa3\"",
+      "last_modified": "Mon, 03 Aug 2026 03:06:12 GMT",
+      "compressed_bytes": 2535563171,
+      "uncompressed_bytes": 17209268126,
+      "sha256": "783e39eb3b2bee6ede00beec11a00d8ec632e9f2242b960f20579336f3e59180",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-beyond-wikipedia.ttl",
+          "bytes": 17209268126,
+          "crc32": "cc6695b5",
+          "sha256": "15cd804c1f5ab52f3766766886a44270f68cef8cfc5ebbc4240bb20c0d4b4b3b",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-beyond-wikipedia-labels.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-beyond-wikipedia-labels.zip",
+      "received_at": "2026-09-28T07:22:20.806561Z",
+      "etag": "\"6a700589-d10b8e22\"",
+      "last_modified": "Mon, 03 Aug 2026 03:05:45 GMT",
+      "compressed_bytes": 3507195426,
+      "uncompressed_bytes": 31891847744,
+      "sha256": "474c20b402d204cbd854318dee70f52d4a1b9f60a8321faef50ac56d2723ec81",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-beyond-wikipedia-labels.ttl",
+          "bytes": 31891847744,
+          "crc32": "71343fdc",
+          "sha256": "b117710759e18046e9213a92eb1a76e81d9fb86def233aeca702a374985a6463",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-meta.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-meta.zip",
+      "received_at": "2026-09-28T09:24:06.761031Z",
+      "etag": "\"6a70054b-651b802\"",
+      "last_modified": "Mon, 03 Aug 2026 03:04:43 GMT",
+      "compressed_bytes": 106018818,
+      "uncompressed_bytes": 720870838,
+      "sha256": "d551720dc88efa941378d0edf374e8308db62f0d87b2bf235d92dc202591c964",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-meta.ttl",
+          "bytes": 720870838,
+          "crc32": "8f3bc0ba",
+          "sha256": "d6ddcf0803a13fcf69f3b32df2c6f817fc6a807c27bd9cae429287dbc460c020",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-fact-log.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-fact-log.zip",
+      "received_at": "2026-09-28T09:26:07.342134Z",
+      "etag": "\"6a70058d-18aa7996\"",
+      "last_modified": "Mon, 03 Aug 2026 03:05:49 GMT",
+      "compressed_bytes": 413825430,
+      "uncompressed_bytes": 7572779392,
+      "sha256": "7af4fc24c467d6ff38b2a88ca1fdce139ecd5b6a1f3f006ba3d89bb40f21931c",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-fact-log.ttl",
+          "bytes": 7572779392,
+          "crc32": "259a3b0c",
+          "sha256": "da5f31dbc96d60bf1a987af59809d97b1fcb56982c7231ebe62f4e906cccc2c2",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-range-log.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-range-log.zip",
+      "received_at": "2026-09-28T09:26:30.359963Z",
+      "etag": "\"6a70056a-3705a45\"",
+      "last_modified": "Mon, 03 Aug 2026 03:05:14 GMT",
+      "compressed_bytes": 57694789,
+      "uncompressed_bytes": 729031816,
+      "sha256": "977b3cb8b96b32ba86fe8790a6c9b768856373609e121524ab06f635094cd37f",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-range-log.ttl",
+          "bytes": 729031816,
+          "crc32": "7b003212",
+          "sha256": "7bec5fc280e15c9ea17dab2b7fcd035804a079e7896e6fd2347e706123b0aa23",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-taxonomy-log.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-taxonomy-log.zip",
+      "received_at": "2026-09-28T09:26:38.002313Z",
+      "etag": "\"6a70054a-26019\"",
+      "last_modified": "Mon, 03 Aug 2026 03:04:42 GMT",
+      "compressed_bytes": 155673,
+      "uncompressed_bytes": 1845569,
+      "sha256": "bbcdf526fc04fda3d3fbe13ce630eb027b444dc61aebbb89da0947e098b39ef9",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-taxonomy-log.ttl",
+          "bytes": 1845569,
+          "crc32": "637ba45e",
+          "sha256": "a8626b319cdbc12e05d36a57f9a6f9493120d76d6d437b6ce6ee15f3837d3668",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-4.6-tiny.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-4.6-tiny.zip",
+      "received_at": "2026-09-28T09:27:06.812556Z",
+      "etag": "\"6a7005a5-56f6e7e\"",
+      "last_modified": "Mon, 03 Aug 2026 03:06:13 GMT",
+      "compressed_bytes": 91188862,
+      "uncompressed_bytes": 504647241,
+      "sha256": "0cb8805ea3d555b3c0487891498cf9042962b0e96caca701e83926c4418a0f81",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-tiny.ttl",
+          "bytes": 504647241,
+          "crc32": "c6b221cc",
+          "sha256": "7951772a1ec318785233211f0653b0e2659ba49e8b5d3998abd0941c5f515993",
+          "mode": "0444"
+        }
+      ]
+    },
+    "yago-entities.jsonl.zip": {
+      "url": "https://yago-knowledge.org/data/yago4.6/yago-entities.jsonl.zip",
+      "received_at": "2026-09-28T09:27:49.162395Z",
+      "etag": "\"6a7005a7-824f3f2\"",
+      "last_modified": "Mon, 03 Aug 2026 03:06:15 GMT",
+      "compressed_bytes": 136639474,
+      "uncompressed_bytes": 620993453,
+      "sha256": "5b2967409d1fc910f541ce24df26b52adb76aea8ff9d181c089a41cd5af8468c",
+      "zip_crc_verified": true,
+      "zip_mode": "0444",
+      "entries": [
+        {
+          "path": "yago-entities.jsonl",
+          "bytes": 620993453,
+          "crc32": "79fbbd01",
+          "sha256": "95d5336765288f521764b713d90327c1e75a901b931c410c9a854ab85debe85e",
+          "mode": "0444"
+        }
+      ]
+    }
+  },
+  "completed_at": "2026-09-28T09:27:49.346395Z"
+}

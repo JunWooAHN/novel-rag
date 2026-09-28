@@ -1,0 +1,235 @@
+{
+  "trial_status": "31b_inference_complete_candidate_only",
+  "snapshot_id": "enwiki-2026-09-01",
+  "scope": "five selected main-slot wikitext excerpts, not whole pages or full dump",
+  "model": "google/gemma-4-31B-it",
+  "model_revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+  "runtime": "owned H200, single GPU, BF16 inference, batch size 1, deterministic do_sample=false",
+  "packet_path": "data/analysis/private/ontology-trial/trial-packet.json",
+  "packet_sha256": "e47b8e0785d55d5928bce4766f80d65a5195f7e86c62333c2c621aa541f99918",
+  "packet_bytes": 6759,
+  "selected_source_bytes": 3414,
+  "verified_path": "data/analysis/private/ontology-trial/verified.json",
+  "verified_sha256": "6e6129519bb0f641e79cf5ea36cf69f5b1a4e1ae69d5c4065976374c5c954252",
+  "counts": {
+    "selected_pages": 5,
+    "source_units": 5,
+    "F_provenance_records": 5,
+    "model_candidates": 27,
+    "H_candidates": 14,
+    "K_candidates": 4,
+    "B_candidates": 9,
+    "exact_quote_linked_unreviewed": 25,
+    "held_evidence_or_structure": 2
+  },
+  "per_page": [
+    {
+      "page_title": "Bloomery",
+      "page_id": 1473011,
+      "revision_id": "1368649607",
+      "revision_timestamp": "2026-08-10T08:01:19Z",
+      "shard_file": "enwiki-2026-09-01-p1118753p3886836.xml.bz2",
+      "shard_sha256": "f67e4b184c1ef1ce74cd9783cacda595bd2b00bb398971ccf68628aaebfeab7b",
+      "source_unit_id": "wiki-8c300a495239783d124d",
+      "slot_role": "main",
+      "slot_text_sha256": "ca4262db3573f5fcfa0e9ca471d757b475c7e4278e46e4e85ae137d4b09d3564",
+      "slot_span_utf8": [
+        312,
+        837
+      ],
+      "source_unit_bytes": 525,
+      "source_unit_sha256": "651bd9fcc604970c608595916d71acae26599bff2a6178f28f5d2e6417f2df7a",
+      "model_result_sha256": "6ceefb8930544e15262a0796ea8542e76deec9a26a8b83a61418762b84871d36",
+      "prompt_sha256": "df41cb29737a94173d80b246821dc5bdd86d4c9329aace1d455b30ea49f95fc0",
+      "input_tokens": 626,
+      "generated_tokens": 606,
+      "candidates_by_layer": {
+        "H": 1,
+        "K": 3,
+        "B": 2
+      },
+      "quote_linked_unreviewed": 6,
+      "held_evidence_or_structure": 0,
+      "F_provenance_record": true
+    },
+    {
+      "page_title": "Munjong of Joseon",
+      "page_id": 2402602,
+      "revision_id": "1372422388",
+      "revision_timestamp": "2026-08-31T17:46:05Z",
+      "shard_file": "enwiki-2026-09-01-p1118753p3886836.xml.bz2",
+      "shard_sha256": "f67e4b184c1ef1ce74cd9783cacda595bd2b00bb398971ccf68628aaebfeab7b",
+      "source_unit_id": "wiki-374e5c726db0ff503a9b",
+      "slot_role": "main",
+      "slot_text_sha256": "b9c1c10b64e7ad371b41b378faae290246335b4c5730691292162dc09075f433",
+      "slot_span_utf8": [
+        3158,
+        3598
+      ],
+      "source_unit_bytes": 440,
+      "source_unit_sha256": "b3aa810667875cab99cb782ede2fd6f8d53904e6b646032105ff48eaa679dfec",
+      "model_result_sha256": "2d953192bee8a80c225938c9499bf1a6a18bbb4dc73f5da95a94e89d32a5d279",
+      "prompt_sha256": "f0d6c56ec9bd9c39dbadb9f3b9e987f172c60ce90dd1a78aad42fc45e36644c2",
+      "input_tokens": 648,
+      "generated_tokens": 354,
+      "candidates_by_layer": {
+        "H": 3,
+        "K": 0,
+        "B": 0
+      },
+      "quote_linked_unreviewed": 2,
+      "held_evidence_or_structure": 1,
+      "F_provenance_record": true
+    },
+    {
+      "page_title": "Danjong of Joseon",
+      "page_id": 3121209,
+      "revision_id": "1372056324",
+      "revision_timestamp": "2026-08-30T02:26:34Z",
+      "shard_file": "enwiki-2026-09-01-p1118753p3886836.xml.bz2",
+      "shard_sha256": "f67e4b184c1ef1ce74cd9783cacda595bd2b00bb398971ccf68628aaebfeab7b",
+      "source_unit_id": "wiki-11f53a05bb852f2d74dd",
+      "slot_role": "main",
+      "slot_text_sha256": "80d4feb2bdb3602b687bae6f0f742553f15b5c35e8efe5b4336a3319f2603078",
+      "slot_span_utf8": [
+        3314,
+        3968
+      ],
+      "source_unit_bytes": 654,
+      "source_unit_sha256": "243a10f838c1600c124386725c23d012a0ad781b8c254e4520917e7c1f8a8364",
+      "model_result_sha256": "345b632c8f7bdf354bd8cdb86d685a69885b5a15c0b1ec54c864efd061566792",
+      "prompt_sha256": "3c3eeaabd392d2be31a50083c54dcf803a1011db4db660718ee9b2b790d11129",
+      "input_tokens": 699,
+      "generated_tokens": 467,
+      "candidates_by_layer": {
+        "H": 4,
+        "K": 0,
+        "B": 0
+      },
+      "quote_linked_unreviewed": 3,
+      "held_evidence_or_structure": 1,
+      "F_provenance_record": true
+    },
+    {
+      "page_title": "Sejo of Joseon",
+      "page_id": 3131532,
+      "revision_id": "1372056369",
+      "revision_timestamp": "2026-08-30T02:26:58Z",
+      "shard_file": "enwiki-2026-09-01-p1118753p3886836.xml.bz2",
+      "shard_sha256": "f67e4b184c1ef1ce74cd9783cacda595bd2b00bb398971ccf68628aaebfeab7b",
+      "source_unit_id": "wiki-45806706a542781feeb3",
+      "slot_role": "main",
+      "slot_text_sha256": "c5792984f208eefb75c3253f472fa83fb2a35796e01dfa265bf04e42df35e811",
+      "slot_span_utf8": [
+        3947,
+        4981
+      ],
+      "source_unit_bytes": 1034,
+      "source_unit_sha256": "202f64438254b8e7dfb880e7508ea501fb6ab876b2997154995acf39d84f5bed",
+      "model_result_sha256": "925e029499d6be2771c8f9c9276cc48f4ebf19e3ae2a9b37634f97942ed00a18",
+      "prompt_sha256": "92026bcff84050bd7f5dbe6550b3687802807fdbdb45b8f760a2b616444e080f",
+      "input_tokens": 787,
+      "generated_tokens": 770,
+      "candidates_by_layer": {
+        "H": 5,
+        "K": 1,
+        "B": 2
+      },
+      "quote_linked_unreviewed": 8,
+      "held_evidence_or_structure": 0,
+      "F_provenance_record": true
+    },
+    {
+      "page_title": "Hangul",
+      "page_id": 42538288,
+      "revision_id": "1371795093",
+      "revision_timestamp": "2026-08-28T13:55:46Z",
+      "shard_file": "enwiki-2026-09-01-p38896231p43536673.xml.bz2",
+      "shard_sha256": "c940460852c81818250a7f1b976f41e600e88b3f22ff107a0e1e97c34b3b383c",
+      "source_unit_id": "wiki-91bba42cd92c8bb3d8ec",
+      "slot_role": "main",
+      "slot_text_sha256": "0773f764b4d0461a562b66761cff2eceb66e42d3b6949b1f7463c47617377b52",
+      "slot_span_utf8": [
+        2781,
+        3542
+      ],
+      "source_unit_bytes": 761,
+      "source_unit_sha256": "e6de60fa78c0d24070137aae93ae9a3b6073d8b9e9eedf2870cb10aa22b00075",
+      "model_result_sha256": "cf9975d3e8a1a2251a315bb09d883c76827c9d6bf6bcc4e0b3d1195612c67e0c",
+      "prompt_sha256": "8ec08646a388c4ac860628b5ea7aa53af73a3dbcf94d608c700d3fc5c07c9174",
+      "input_tokens": 690,
+      "generated_tokens": 675,
+      "candidates_by_layer": {
+        "H": 1,
+        "K": 0,
+        "B": 5
+      },
+      "quote_linked_unreviewed": 6,
+      "held_evidence_or_structure": 0,
+      "F_provenance_record": true
+    }
+  ],
+  "representative_unreviewed_examples": [
+    {
+      "page_title": "Bloomery",
+      "layer": "K",
+      "subject": "bloomery",
+      "predicate": "is a type of",
+      "object": "metallurgical furnace",
+      "time_text": null,
+      "evidence_quote": "'''bloomery''' is a type of [[metallurgical furnace]]",
+      "slot_span_utf8": [
+        312,
+        365
+      ],
+      "status": "candidate_unreviewed"
+    },
+    {
+      "page_title": "Hangul",
+      "layer": "B",
+      "subject": "Hangul",
+      "predicate": "officially published via",
+      "object": "Hunminjeongeum and Hunminjeongeum Haerye",
+      "time_text": "1446",
+      "evidence_quote": "officially published in 1446 via the text ''[[Hunminjeongeum]]'' and its companion commentary ''[[Hunminjeongeum Haerye]]''",
+      "slot_span_utf8": [
+        3225,
+        3348
+      ],
+      "status": "candidate_unreviewed"
+    }
+  ],
+  "held_cases": [
+    {
+      "page_title": "Munjong of Joseon",
+      "problem": [
+        "evidence_quote_not_unique_in_unit"
+      ],
+      "raw_quote": "'''Munjong''' ... was the fifth monarch of [[Joseon]]"
+    },
+    {
+      "page_title": "Danjong of Joseon",
+      "problem": [
+        "evidence_quote_not_unique_in_unit"
+      ],
+      "raw_quote": "'''Danjong''' ... was the sixth monarch of [[Joseon]]"
+    }
+  ],
+  "independent_review": {
+    "status": "source_pin_and_exact_quote_sample_checked; semantic_quality_not_accepted",
+    "findings": [
+      "Hangul creation candidate overstates source moved to create; 1418-1450 is Sejong reign, not creation date.",
+      "Bloomery sponge-iron forging is general process knowledge but was labelled historical B.",
+      "Hangul independent K identity/content object is absent despite several B claims.",
+      "Danjong death candidate has a self-object relation and is not usable as a historical edge.",
+      "Munjong death event is absent even though the selected source has its date; anchor coverage is incomplete."
+    ]
+  },
+  "release_status": "no_reality_baseline_no_work_overlay_no_canon",
+  "limits": [
+    "Quote and span validation is mechanical and does not establish historical truth or correct ontology typing.",
+    "Only one selected excerpt per page was processed.",
+    "No semantic correction or automatic retry altered the five raw model outputs.",
+    "The 1950 boundary was used as an approximate selection target; no strict date cutoff was imposed."
+  ]
+}

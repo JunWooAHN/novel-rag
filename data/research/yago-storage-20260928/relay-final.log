@@ -1,0 +1,67 @@
+already recorded on H200: yago-4.6-schema.zip
+already recorded on H200: yago-4.6-taxonomy.zip
+already recorded on H200: yago-4.6-facts.zip
+already recorded on H200: yago-4.6-labels.zip
+already recorded on H200: yago-4.6-beyond-wikipedia.zip
+already recorded on H200: yago-4.6-beyond-wikipedia-labels.zip
+download yago-4.6-meta.zip: 26/26 ranges
+local ZIP verified yago-4.6-meta.zip sha256=d551720dc88efa941378d0edf374e8308db62f0d87b2bf235d92dc202591c964
+relay yago-4.6-meta.zip: resume at 0/106018818
+H200: staged yago-4.6-meta.zip sha256=d551720dc88efa941378d0edf374e8308db62f0d87b2bf235d92dc202591c964
+H200: processing yago-4.6-meta.zip
+H200: stored yago-4.6-meta.zip
+H200: stored 7/12 archives
+download yago-4.6-fact-log.zip: 62/99 ranges
+download yago-4.6-fact-log.zip: 99/99 ranges
+local ZIP verified yago-4.6-fact-log.zip sha256=7af4fc24c467d6ff38b2a88ca1fdce139ecd5b6a1f3f006ba3d89bb40f21931c
+relay yago-4.6-fact-log.zip: resume at 0/413825430
+H200: staged yago-4.6-fact-log.zip sha256=7af4fc24c467d6ff38b2a88ca1fdce139ecd5b6a1f3f006ba3d89bb40f21931c
+H200: processing yago-4.6-fact-log.zip
+H200: stored yago-4.6-fact-log.zip
+H200: stored 8/12 archives
+download yago-4.6-range-log.zip: 14/14 ranges
+local ZIP verified yago-4.6-range-log.zip sha256=977b3cb8b96b32ba86fe8790a6c9b768856373609e121524ab06f635094cd37f
+relay yago-4.6-range-log.zip: resume at 0/57694789
+H200: staged yago-4.6-range-log.zip sha256=977b3cb8b96b32ba86fe8790a6c9b768856373609e121524ab06f635094cd37f
+H200: processing yago-4.6-range-log.zip
+H200: stored yago-4.6-range-log.zip
+H200: stored 9/12 archives
+download yago-4.6-taxonomy-log.zip: 1/1 ranges
+local ZIP verified yago-4.6-taxonomy-log.zip sha256=bbcdf526fc04fda3d3fbe13ce630eb027b444dc61aebbb89da0947e098b39ef9
+relay yago-4.6-taxonomy-log.zip: resume at 0/155673
+H200: staged yago-4.6-taxonomy-log.zip sha256=bbcdf526fc04fda3d3fbe13ce630eb027b444dc61aebbb89da0947e098b39ef9
+H200: processing yago-4.6-taxonomy-log.zip
+H200: stored yago-4.6-taxonomy-log.zip
+H200: stored 10/12 archives
+download yago-4.6-tiny.zip: 22/22 ranges
+local ZIP verified yago-4.6-tiny.zip sha256=0cb8805ea3d555b3c0487891498cf9042962b0e96caca701e83926c4418a0f81
+relay yago-4.6-tiny.zip: resume at 0/91188862
+H200: staged yago-4.6-tiny.zip sha256=0cb8805ea3d555b3c0487891498cf9042962b0e96caca701e83926c4418a0f81
+H200: processing yago-4.6-tiny.zip
+H200: stored yago-4.6-tiny.zip
+H200: stored 11/12 archives
+download yago-entities.jsonl.zip: 33/33 ranges
+local ZIP verified yago-entities.jsonl.zip sha256=5b2967409d1fc910f541ce24df26b52adb76aea8ff9d181c089a41cd5af8468c
+relay yago-entities.jsonl.zip: resume at 0/136639474
+H200: staged yago-entities.jsonl.zip sha256=5b2967409d1fc910f541ce24df26b52adb76aea8ff9d181c089a41cd5af8468c
+H200: processing yago-entities.jsonl.zip
+H200: stored yago-entities.jsonl.zip
+H200: verified yago-4.6-schema.zip
+H200: verified yago-4.6-taxonomy.zip
+H200: verified yago-4.6-facts.zip
+H200: verified yago-4.6-labels.zip
+H200: verified yago-4.6-beyond-wikipedia.zip
+H200: verified yago-4.6-beyond-wikipedia-labels.zip
+H200: verified yago-4.6-meta.zip
+H200: verified yago-4.6-fact-log.zip
+H200: verified yago-4.6-range-log.zip
+H200: verified yago-4.6-taxonomy-log.zip
+H200: verified yago-4.6-tiny.zip
+H200: verified yago-entities.jsonl.zip
+H200: {
+H200:   "verified_at": "2026-09-28T09:32:43.394637Z",
+H200:   "zip_count": 12,
+H200:   "compressed_bytes": 9907409082,
+H200:   "uncompressed_bytes": 78426497491
+H200: }
+ALL 12 ORIGINAL YAGO ZIPs VERIFIED ON H200

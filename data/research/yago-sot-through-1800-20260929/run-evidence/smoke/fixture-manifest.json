@@ -1,0 +1,46 @@
+{
+  "files": {
+    "yago-4.6-meta.zip": {
+      "entries": [
+        {
+          "sha256": "65684527c1d37d953009c76fc49d0ff13f67bf27530a84449012649efadf7bb1"
+        }
+      ]
+    },
+    "yago-4.6-facts.zip": {
+      "entries": [
+        {
+          "sha256": "ce9411b123d4b4b012552e14cfdc8fa399b3e970e00e4f75adc2c605402656d3"
+        }
+      ]
+    },
+    "yago-4.6-beyond-wikipedia.zip": {
+      "entries": [
+        {
+          "sha256": "befa17900062992e510c91da92cb459a7552925ee6a8509ef90a8018a2796d36"
+        }
+      ]
+    },
+    "yago-4.6-taxonomy.zip": {
+      "entries": [
+        {
+          "sha256": "93f98eacaccfd1fd3b80787c221322612ebc13b362dcf7f791270d2226cb28aa"
+        }
+      ]
+    },
+    "yago-4.6-labels.zip": {
+      "entries": [
+        {
+          "sha256": "778354793e404b2e3b02ac9e5258e4af7eb861b0ce9c8e690da5aa605b62acf0"
+        }
+      ]
+    },
+    "yago-4.6-beyond-wikipedia-labels.zip": {
+      "entries": [
+        {
+          "sha256": "58844807658c1a7238fbddcad0ef2e89757f7b67b79025356166c1648c0de325"
+        }
+      ]
+    }
+  }
+}

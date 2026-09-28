@@ -1,18 +1,19 @@
 ---
 category_id: document-harness
 lineage_id: legacy-6bd92436-f517-55b1-9748-f4eab1ea92cb
-document_id: doc-e1f44b00-ee5d-4e7b-a715-0aee51c5b093
+document_id: doc-9e964391-e39e-41ae-969a-a3deae5343bf
 parent_lineage_id: null
 abstract: 문서 계통, 판 식별자, canon 선택과 수동 정리 도구를 이해할 때 읽는다.
-version: 0.0.2
-created_at: null
-updated_at: '2026-09-25T01:10:50Z'
+version: 2.0.1
+created_at: '2026-09-25T01:10:17.000000Z'
+updated_at: '2026-09-28T00:23:01Z'
 tags:
 - 하네스
+canon: true
 ---
 # 문서 계통과 확정 이력 설계
 
-상태: **로컬 CLI와 전용 SQLite 초기 구현**. 사용법은 [도구 안내](../../tools/document_harness/README.md)에 있다. Markdown은 본문·문서 메타데이터의 편집 입력이고 SQLite에는 과거·향후 개정판을 누적한다. **실제 적용 여부의 정본은 누적 SQLite 판 행의 `canon`**이며 문서의 나이·Git 최신 여부와 무관하다. 검색 인덱스는 누적판에서 다시 만들 수 있어도 누적판과 `canon` 선택을 Markdown·Git만으로 완전히 복원할 수 있다고 주장하지 않는다. Git commit은 작업 결과 이력이며 외부 게시나 작가 승인이 아니다. 기존 [시스템 설계](../systems/README.md)의 승인·작품 캐논 원장을 이 문서 상태로 대체하지 않는다. 2026-09-25에 `docs/`·`plan/` Markdown 99개를 파일별 독립 legacy 계통·`canon=false`로 비파괴 초기 적재했다. 이는 과거 개정판 전체 복원이나 99개 문서의 일괄 현행 채택이 아니다. [초기 적재 manifest](../../data/document_harness/initial-import-manifest.json)에 파일별 SHA-256을 보존한다.
+상태: **로컬 CLI와 전용 SQLite 운영, 2026-09-28 메타데이터 보수 반영**. 사용법은 [도구 안내](../../tools/document_harness/README.md)에 있다. Markdown은 본문·문서 메타데이터의 편집 입력이고 SQLite에는 과거·향후 개정판을 누적한다. **실제 적용 여부의 정본은 누적 SQLite 판 행의 `canon`**이며 문서의 나이·Git 최신 여부와 무관하다. 검색 인덱스는 누적판에서 다시 만들 수 있어도 누적판과 `canon` 선택을 Markdown·Git만으로 완전히 복원할 수 있다고 주장하지 않는다. Git commit은 작업 결과 이력이며 외부 게시나 작가 승인이 아니다. 기존 [시스템 설계](../systems/README.md)의 승인·작품 캐논 원장을 이 문서 상태로 대체하지 않는다. 2026-09-25에 `docs/`·`plan/` Markdown 99개를 파일별 독립 legacy 계통·`canon=false`로 비파괴 초기 적재했다. 이는 과거 개정판 전체 복원이나 99개 문서의 일괄 현행 채택이 아니다. [초기 적재 manifest](../../data/document_harness/initial-import-manifest.json)에 파일별 SHA-256을 보존한다.
 
 ## 정본과 식별자
 
@@ -25,12 +26,12 @@ tags:
 | `commit_id` | 문서·SQL 기록 담당자가 작업 시점에 **관측한 Git HEAD**. 그 판의 본문이 해당 commit에 들어 있다는 증명이나 수정 시각이 아니다. 작업 후 만들어지는 Git commit은 결과 이력으로 별개다. Git 부모 관계는 문서 트리에 모델링하지 않는다. |
 | 문서 개정판 | `document_id`로 식별하고 `lineage_id`로 같은 계통의 판을 묶어 SQLite에 누적한다. 과거 판의 본문도 보존·조회한다. 삭제된 파일의 본문·ID는 기존 적재판과, 이력이 남아 있다면 Git에서 찾는다. |
 | `version` | 계통별 `MAJOR.MINOR.PATCH` 문자열. 같은 `lineage_id`에서 증가하며 `document_id`·Git `commit_id`와 별개다. 신규 관리 계통은 `0.0.1`로 시작한다. |
-| `created_at` | 문서 계통의 최초 생성 시각. 개정판이 바뀌어도 고정한다. 근거를 모르는 기존 문서는 `null`로 두고 파일 mtime·수입 시각·Git 첫 등록 시각으로 과거를 꾸미지 않는다. |
+| `created_at` | 하네스가 확인한 **최초 비공백 본문 저장판**의 시각. 제목 한 줄도 내용이며 YAML 머리말·공백만 있으면 `null`이다. 내용이 생긴 판부터 계통에서 고정한다. 기존 관리판의 `null`은 보존된 최초 내용판 `updated_at`으로 한 번 보완하고 근거를 기록한다. 이는 옛 파일의 실제 탄생 시각 발견이 아니다. 근거 없는 legacy 원자료는 `null`로 둔다. |
 | `updated_at` | 그 문서의 본문·관리 메타데이터를 **실제로 수정한 시각**. 신규 문서는 `created_at`과 같다. 과거판의 실제 수정 시각이 불명이면 `null`로 두며 Git commit·재색인·수입 시각에서 추론하지 않는다. |
 | `tags` | 탐색용 문자열 배열. Markdown 머리말에서 편집하고 SQLite에는 JSONB 논리값으로 파생 저장한다. |
-| `canon` | 누적 SQLite에서 그 `document_id` 판이 실제 적용 중인지 표시하는 현재 선택값(정수 `0/1`의 논리 불리언). 신규·미분류는 `false`, 명시적으로 채택한 판만 `true`다. 계통당 현재 `true`는 최대 한 판이며 오래된 판도 선택할 수 있다. |
+| `canon` | **SQLite가 선택 정본**이고 관리 Markdown의 YAML `canon: true/false`는 그 파일이 가리키는 `document_id` 판의 표시다. 신규·미분류는 `false`, 명시적으로 채택한 판만 `true`다. 계통당 현재 `true`는 최대 한 판이며 오래된 판도 선택할 수 있다. |
 
-문서의 편집 메타데이터는 해당 Markdown의 **YAML front matter 한 곳**에 둔다. 신규 관리 문서의 필수 필드는 `category_id`, `lineage_id`, `document_id`, `parent_lineage_id`, `abstract`, `version`, `created_at`, `updated_at`, `tags`다. `purpose`(규범·계획·조사·실행 근거·검토 등)는 필요할 때 명시한다. `canon`은 YAML에 중복 기록하지 않고 SQLite의 현재 적용 선택값으로 관리하며 별도 `lifecycle` 필드도 두지 않는다. `canon=true`는 문서의 사실성·검토 완료·사용자 승인·역사표 잠금·작품 캐논을 뜻하지 않으며 기존 권위 순서를 바꾸지 않는다. 이 형식은 앞으로 관리 대상으로 들일 문서의 계약이다. 이 문서도 관리판으로 등록했다.
+문서의 편집 메타데이터는 해당 Markdown의 **YAML front matter 한 곳**에 둔다. 관리 문서의 필수 필드는 `category_id`, `lineage_id`, `document_id`, `parent_lineage_id`, `abstract`, `version`, `created_at`, `updated_at`, `tags`, 불리언 `canon`이다. `purpose`(규범·계획·조사·실행 근거·검토 등)는 필요할 때 명시한다. `canon`은 중복 표시이며 선택권은 SQLite와 명시적 `finalize`에만 있다. 수동 YAML 변경으로 채택할 수 없고 일반 수입·최종화에서 파일·DB 불일치는 거부한다. 기존 필드 없는 관리판은 DB 판과 본문·다른 메타데이터가 일치할 때 표시를 추가하고, 표시값만 다른 파일은 명시적 `sync-metadata`에서 DB값으로 복구·기록할 수 있다. 별도 `lifecycle` 필드는 두지 않는다. `canon=true`는 문서의 사실성·검토 완료·사용자 승인·역사표 잠금·작품 캐논을 뜻하지 않으며 기존 권위 순서를 바꾸지 않는다.
 
 ```yaml
 ---
@@ -43,10 +44,11 @@ version: "0.0.1"
 created_at: "2026-09-24T09:00:00Z"
 updated_at: "2026-09-24T09:00:00Z"
 tags: ["역사", "온톨로지"]
+canon: false
 ---
 ```
 
-위 시각은 형식 예시다. 시각은 UTC ISO 8601 문자열로 적고, 알려진 두 값에는 `created_at <= updated_at`을 검사한다. 기존 원자료의 최초 생성 시각을 확인할 수 없으면 `created_at: null`, 과거판의 실제 수정 시각을 확인할 수 없으면 `updated_at: null`로 두며 신뢰 가능한 근거가 생길 때만 채운다. 수입·관측·Git commit 시각을 `updated_at`으로 가장하지 않는다.
+위 시각은 형식 예시다. 시각은 UTC ISO 8601 문자열로 적고, 알려진 두 값에는 `created_at <= updated_at`을 검사한다. `create`는 제목을 처음 저장하므로 두 값을 같게 시작한다. `manage`는 본문이 있는 파일에 관리판을 실제 저장한 시각을 최초 확인 시각으로 기록한다. 직접 작성한 관리판의 `import`는 비어 있지 않은 본문에 `created_at`이 없으면 그 판의 유효한 `updated_at`을 사용하고, 그마저 없으면 실제 등록 시각을 두 값에 기록한다. 이전의 빈 판은 `created_at: null`로 남는다. 기존 원자료의 최초 생성 시각과 과거판의 수정 시각에 근거가 없으면 `null`을 유지하며 파일 mtime·Git commit에서 추정하지 않는다.
 
 | 변경 등급 | 해당 문서의 다음 `version` | 최소 판정 |
 |---|---|---|
@@ -54,7 +56,7 @@ tags: ["역사", "온톨로지"]
 | 중간 변경 | `0.3.4 → 0.4.0` | 기존 정의와 양립하는 내용·절 추가; PATCH를 0으로 재설정 |
 | 큰 변경 | `0.3.4 → 1.0.0` | 핵심 정의·규칙·적용 절차 변경; MINOR와 PATCH를 0으로 재설정 |
 
-이는 이 프로젝트의 문서 개정 규칙이며 일반 SemVer API 호환성을 주장하지 않는다. 한 변경 묶음에서 같은 계통은 가장 높은 등급으로 **한 번만** 올리고 다른 계통은 독립적으로 판단한다. `lineage_id`는 유지하고 실제 새 본문·관리 메타데이터 판에는 새 `document_id`를 발급한다. `canon` 선택만 바꾸는 일은 새 문서 판이 아니므로 ID·`version`·`updated_at`을 올리지 않는다. 문서를 실제 수정할 때 그 수정 시각을 기록한다. 재색인·단순 수입·Git commit 시각만으로 버전이나 문서 시각을 올리지 않는다.
+이는 이 프로젝트의 문서 개정 규칙이며 일반 SemVer API 호환성을 주장하지 않는다. 한 변경 묶음에서 같은 계통은 가장 높은 등급으로 **한 번만** 올리고 다른 계통은 독립적으로 판단한다. `lineage_id`는 유지하고 실제 새 본문·관리 메타데이터 판에는 새 `document_id`를 발급한다. `canon` 표시 동기화·최초 내용 시각의 근거 있는 1회 보완은 새 본문판이 아니므로 ID·`version`·`updated_at`을 올리지 않는다. 보완은 이전 날짜·파일 hash, 첫 내용판 ID·`updated_at`을 작업 기록과 사전 백업에 남긴다. `source_hash`는 파일 표시 변경 때 그 파일을 가리키는 판에서 바뀔 수 있으나, 누적 `body`와 FTS 본문은 그대로 둔다. 과거판의 원래 hash는 작업 기록에 남긴다. 문서를 실제 수정할 때 그 수정 시각을 기록한다. 재색인·단순 수입·Git commit 시각만으로 버전이나 문서 시각을 올리지 않는다.
 
 `tags`는 임의 JSON 객체가 아닌 문자열 배열로 시작한다. 각 태그는 NFC 정규화와 앞뒤 공백 제거 후 빈 값과 중복을 버리고, 없으면 `[]`로 적는다. 의미를 추론해 자동 분류하거나 문서 간 그래프 관계를 만들지 않는다. SQLite의 `version`, `created_at`, `updated_at`은 각각 문자열 컬럼(두 시각은 미상일 때 NULL), `canon`은 현재 선택값을 담는 정수 `0/1`, `tags`는 JSONB 논리 컬럼이다. SQLite 3.45.0부터의 JSONB는 내부 **BLOB** 형식이며 PostgreSQL JSONB와 바이너리 호환되지 않는다. 실제 적재는 `jsonb()`로 만든 BLOB이고 선언 타입 이름만으로 형식을 보장하지 않는다. `json_each(tags)`로 정확한 배열 멤버십을 조회할 수 있다. JSONB 자체가 자동 검색 인덱스나 빠른 멤버십 조회를 보장하지 않는다. 운영 SQLite 버전과 JSONB 지원은 구현 전에 확인한다. [SQLite JSON 함수](https://www.sqlite.org/json1.html#jsonb)
 
@@ -78,6 +80,12 @@ WHERE d.canon = 1
 
 `500단어`를 LLM 독해 한계로 볼 근거도 없다. 이를 주장하는 [SEO Engico 글](https://seoengico.com/blog/chatgpt-citations-first-500-words-study-2026)은 본문에서 해당 수치의 1차 자료를 추적하지 못했고 500단어를 경험칙이라고 설명한다. [Kevin Indig의 공개 글](https://www.linkedin.com/posts/kevinindig_for-two-decades-seo-strategies-prioritized-activity-7429151317702397952-uIEI)은 18,012개 인용 중 44.2%가 본문 **앞 30%**에 있다고 보고하므로 고정 500단어 규칙과 다르며 방법·데이터 재현은 별도 검증하지 않았다. [Lost in the Middle](https://arxiv.org/abs/2307.03172)의 실험은 관련 정보가 앞이나 뒤에 있을 때 성능이 높고 중간에서 낮아질 수 있음을 보였지, 500자·500단어를 넘으면 읽지 못한다는 결과가 아니다. 실제 목록의 최초 문서 찾기 성공률과 [모델별 입력 토큰 수](https://ai.google.dev/gemini-api/docs/tokens)를 측정해 300자 제안을 조정한다.
 
+## `canon` 선별 기준
+
+기본은 적용 계통을 늘리지 않는 것이다. 문서의 생성·완료·검토 통과·장기 보존이나 PRD·설계·운영 규칙이라는 이름만으로 `canon=true`가 되지 않는다. 후속 판단이나 실행에서 반복 적용할 기준으로 필요하고, 독립 계통으로 유지할 효용이 기본 검색 노출·판 동기화·모순 관리 비용을 감수할 이유가 있을 때 채택한다. 연수·문서 수 상한이나 점수 임계치로 기계적으로 결정하지 않는다.
+
+새 계통을 채택하기 전에 기존 적용 계통의 개정 또는 핵심 결정 통합과 원문 링크로 충분한지 본다. 단, 서로 다른 책임과 변경 주기를 한 문서에 무리하게 합쳐 기준을 흐리게 만들지 않는다. 별도 적용 계통이 필요하면 그 경계와 이유를 짧게 설명한다. 실행 계획·단발 감사·일회성 작업 체크포인트는 보통 `canon=false`로 보존하고, 반복 사용할 결론만 적합한 기존 기준에 반영한다. `canon=false` 문서도 원문과 검토 근거로 직접 조회할 수 있으며, 보존 필요성과 기본 캐논 검색 노출은 다른 판단이다. 사용자의 명시적 선택을 우선하고 이미 승인된 범위의 가역 작업을 다시 묻지 않는다. 기존 `finalize` 이력의 message와 완료 보고에 선택 이유를 짧게 남기면 충분하며, 이 기준을 이유로 기존 문서를 일괄 재분류하지 않는다.
+
 ## 트리와 변경
 
 ```mermaid
@@ -95,7 +103,7 @@ flowchart TD
 
 1. 소유자는 같은 `lineage_id`의 Markdown을 수정해 새 `document_id`·`version`을 부여하고, 실제 수정 시각을 `updated_at`에 쓴다. 날짜별 별도 사본과 매번 새 변경 로그·ADR·보고서 파일을 만들지 않는다.
 2. 문서·SQL 기록을 다룰 때 작업자가 그 시점의 Git HEAD를 `commit_id`로 관측한다. 이 값으로 `canon`이나 수정 시각을 추론하지 않는다. 한 변경 묶음의 Git commit은 작업 결과이며 한 줄 변경 설명이면 충분하다. 예: `문서 태그 검색 기준 추가`, `현행 역사 설계 문서 교체`, `작가 분석 링크 수정`. [Git 변경 기록](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
-3. 단일 writer가 Markdown에서 본문·메타데이터를 받아 판별 ID로 SQLite에 누적한다. `canon` 교체는 한 SQLite 트랜잭션에서 이전 판 `0`·새 판 `1`로 전환한다. 본문 재수입 실패는 지난 성공 상태를 `stale`로 드러내고 직접 Markdown·기존 적재판을 확인하게 한다. 누적판은 검색 재생성 때 삭제하지 않는다.
+3. 단일 writer가 Markdown에서 본문·메타데이터를 받아 판별 ID로 SQLite에 누적한다. `canon` 교체는 한 SQLite 트랜잭션에서 이전 판 `0`·새 판 `1`로 전환하고, 파일이 현재 가리키는 판의 YAML 표시만 갱신한다. 다른 판이 같은 경로에 있거나 파일이 없으면 과거 본문을 파일에 덮지 않는다. 파일 내용·ID·비표시 메타데이터가 DB와 다르면 동기화를 멈춘다. 명시적 `sync-metadata`만 표시값 불일치를 DB 선택으로 복구하며, 날짜 근거가 없으면 날짜만 보류하고 표시 복구는 계속한다. `finalize`와 동일 ID 재수입에서 `source_hash`가 바뀌면 선택 로그에 이전·새 해시를 같은 DB 트랜잭션으로 기록하고, 선택 유지 중의 표시 변경도 로그로 남긴다. 파일 쓰기 실패는 가능한 원본 복원과 DB rollback으로 처리하지만 파일시스템과 SQLite의 완전한 원자성을 주장하지 않는다. 본문 재수입 실패는 지난 성공 상태를 `stale`로 드러내고 직접 Markdown·기존 적재판을 확인하게 한다. 누적판은 검색 재생성 때 삭제하지 않는다.
 4. 기본 조회는 누적판의 `canon=1`만 보여준다. 비정본·과거판 조회는 따로 제공하고 그 지위를 표시한다. 목록 도구는 요청 필드 전체와 잘림 여부·실제 반환 토큰 예산을 밝힌다. abstract로 문서를 고른 뒤 필요한 본문 절을 확인한다.
 
 관리 대상 문서를 생성·개정·가져오는 **모든 작업**은 그 작업의 산출 문서 목록을 적재한 뒤 `canon` 최종화와 DB 재조회를 완료 조건으로 둔다. 이는 각 작업의 필수 후처리이며 독립 문서 묶음마다 진행할 수 있다. 새 부모와 자식을 만들 때는 부모 생성·적용 선택을 먼저 마친 뒤 그 `canon=1` 부모를 기준으로 자식을 작성한다. 생성 담당 Sol/Luna는 각 `document_id`·`lineage_id`와 채택 또는 기존 선택 유지의 근거를 보고한다. 루트는 기존 권한 범위에서 작업 대상만 취합하고, 단일 DB writer가 최종화한다. 새 판은 자동 채택하지 않는다. 여러 문서와 같은 계통의 여러 후보가 있어도 채택은 계통당 최대 한 판이며, 초안 `0`과 기존 판 `1`의 유지도 유효한 결과다. 이 단계가 저장소 전체 재분류나 새 사용자 승인 절차는 아니다.

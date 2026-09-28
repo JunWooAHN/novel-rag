@@ -5,10 +5,11 @@ document_id: doc-d96362b7-91e0-4f88-9afa-10b6785eec26
 parent_lineage_id: null
 abstract: 프로젝트 문서의 SQLite 우선 탐색과 에이전트 역할 배정을 시작할 때 읽는다.
 version: 0.0.1
-created_at: null
+created_at: '2026-09-25T01:30:17.000000Z'
 updated_at: '2026-09-25T01:30:17Z'
 tags:
 - 하네스
+canon: true
 ---
 # 프로젝트 문서 탐색
 

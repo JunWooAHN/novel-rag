@@ -1,0 +1,46 @@
+{
+  "recorded_at_utc": "2026-09-28T22:37:34.215520+00:00",
+  "document_lifecycle": {
+    "report": {
+      "path": "docs/research/20260929-wikidata-h200-original-setup.md",
+      "document_id": "doc-2b97339f-f9fd-4abb-b04f-c334fa841652",
+      "lineage_id": "lin-573998c1-5624-4a92-978e-3a2a74d0889b",
+      "version": "0.0.1",
+      "canon": false,
+      "finalization": "retain",
+      "file_sha256": "eaef02137e1b8a6694f33e208a51747035ad75f6dc62935f2e279caa67ab4e5e"
+    },
+    "checkpoint": {
+      "path": "docs/harness/current-checkpoint.md",
+      "document_id": "doc-00aad22b-c199-4e3d-9828-076127fd58da",
+      "lineage_id": "legacy-40925fad-cbff-589b-9799-6cc13abe142b",
+      "version": "0.0.31",
+      "canon": true,
+      "finalization": "adopt",
+      "previous_canon_document_id": "doc-7b7518f7-9c72-412f-8385-66c611479be7",
+      "file_sha256": "93ded1c8ece4f901bfa1e8d1465a90887acb96d9e87cbed22d038c284a4e5f06"
+    },
+    "verify_files": {
+      "integrity": "ok",
+      "checked": 39,
+      "missing": [],
+      "problems": []
+    },
+    "selection_reason": "One-off H200 source acquisition report retained as non-canon evidence; existing current-checkpoint lineage updated for restart."
+  },
+  "evidence_sha256": {
+    "preflight": "b7ad007b21f422863ad6ca17291ae84b33628129b311b2e10e0a00a929705079",
+    "launch": "b7d02e7ef87d1ccabd09b97236378e308c943847eb929808b47efbfa71016b76",
+    "progress": "7a143173eb1f379760002a5d3ebe0541ded595ac9f6d8087f035fca92a302578",
+    "downloader": "0103f1158f2c5d61b65bf8cdf4ed69beb31ff84bb42b4f744e3c36bb3fddd9d0"
+  },
+  "acquisition_status": "downloading_unverified",
+  "completion_pending": [
+    "exact final file size",
+    "official SHA1",
+    "local SHA256",
+    "three JSON entity sample",
+    "manifest complete readback",
+    "independent final acceptance"
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "artifact": "CIDOC CRM 7.1.3 term registry source manifest",
+  "generated_at_utc": "2026-09-25T10:29:36Z",
+  "version": "7.1.3",
+  "official_release_status": "Official (ISO Correspondence)",
+  "official_release_page": "https://cidoc-crm.org/get-last-official-release",
+  "versions_page": "https://cidoc-crm.org/versions-of-the-cidoc-crm",
+  "iso_correspondence": {
+    "standard": "ISO 21127:2023",
+    "iso_status_source": "https://www.iso.org/standard/85100.html",
+    "cidoc_correspondence_source": "https://cidoc-crm.org/node/8920",
+    "relation": "CIDOC CRM states that ISO 21127:2023 content corresponds to community version 7.1.3 and that the ISO standard is a distinct product."
+  },
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+    "attribution": "CIDOC CRM 7.1.3; individual contributors to CIDOC CRM 7.1.3; source RDFS implementation credits FORTH-ICS.",
+    "evidence": "The retrieved official RDFS files state CC BY 4.0 and link to the license."
+  },
+  "namespace_policy": {
+    "crm_term_namespace": "http://www.cidoc-crm.org/cidoc-crm/",
+    "xml_base_resolution": "Resolve relative RDF identifiers against the XML Base stated in each downloaded file, retaining the resulting source URI exactly.",
+    "version_iri_handling": "Record ontology versionIRI as source metadata; do not append the version path to unversioned CRM term URIs.",
+    "external_terms": "Preserve external subject declarations in their source module and mark them as outside the CIDOC CRM namespace."
+  },
+  "registry": {
+    "path": "docs/plans/wikipedia-history-sot-mapping/crm-base-registry.csv",
+    "columns": [
+      "term_id",
+      "kind",
+      "label",
+      "uri",
+      "domain",
+      "range",
+      "superterms",
+      "inverse",
+      "deprecated",
+      "notes",
+      "module",
+      "source_file",
+      "version",
+      "ontology_layer",
+      "formal_id",
+      "direction",
+      "encoding_status",
+      "encoding_target",
+      "formal_superterms",
+      "formal_reference",
+      "resolved_label",
+      "resolved_label_source"
+    ],
+    "row_count": 436,
+    "key": "(module, kind, term_id, uri); source-specific encoding declarations and formal-only entries are distinct rows.",
+    "counts_by_module": {
+      "main": {
+        "class_declarations": 76,
+        "property_declarations": 309,
+        "total_declarations": 385,
+        "cidoc_namespace_declarations": 385,
+        "external_namespace_declarations": 0,
+        "deprecated_true": 0,
+        "missing_english_label": 0
+      },
+      "pc": {
+        "class_declarations": 17,
+        "property_declarations": 22,
+        "total_declarations": 39,
+        "cidoc_namespace_declarations": 39,
+        "external_namespace_declarations": 0,
+        "deprecated_true": 0,
+        "missing_english_label": 0
+      },
+      "supplementary": {
+        "class_declarations": 0,
+        "property_declarations": 4,
+        "total_declarations": 4,
+        "cidoc_namespace_declarations": 3,
+        "external_namespace_declarations": 1,
+        "deprecated_true": 0,
+        "missing_english_label": 4
+      },
+      "formal_model": {
+        "class_definitions": 6,
+        "property_definitions": 2,
+        "total_definitions": 8,
+        "uri_present": 0
+      }
+    },
+    "main_base_counts": {
+      "class_declarations": 76,
+      "property_declarations": 309,
+      "total_declarations": 385,
+      "cidoc_namespace_declarations": 385,
+      "external_namespace_declarations": 0,
+      "deprecated_true": 0,
+      "missing_english_label": 0
+    },
+    "source_supplement_duplicates_by_uri": [
+      "http://www.cidoc-crm.org/cidoc-crm/P168_place_is_defined_by",
+      "http://www.cidoc-crm.org/cidoc-crm/P169i_spacetime_volume_is_defined_by",
+      "http://www.cidoc-crm.org/cidoc-crm/P170i_time_is_defined_by"
+    ],
+    "field_encoding": {
+      "domain": "compact JSON array of resolved absolute URIs",
+      "range": "compact JSON array of resolved absolute URIs",
+      "superterms": "compact JSON array of resolved absolute URIs; subClassOf for class, subPropertyOf for property",
+      "inverse": "compact JSON array of explicitly declared owl:inverseOf URIs; inverse declarations are separate term rows when declared",
+      "deprecated": "true only when owl:deprecated has a true-like value; otherwise false",
+      "notes": "Only short mechanical/module notes; source scope-note prose is intentionally not copied.",
+      "empty_relationship": "[] means the source module row has no declaration for that relationship; it is not a semantic negative assertion.",
+      "resolved_label": "Source English label when present; if supplementary row lacks a label but repeats a main-module URI, the main label is copied into this separate field.",
+      "resolved_label_source": "URI/provenance of source declaration; supplementary duplicate labels identify the main source row used."
+    },
+    "source_scope_note": "main declarations are RDFS encoding terms, not counts of formal CIDOC CRM concepts; formal_model rows cover formal definitions without a direct main RDFS term URI.",
+    "resolved_supplementary_labels": {
+      "P168_place_is_defined_by": {
+        "label": "place is defined by",
+        "source": "data/document_harness/reference-cache/cidoc-7.1.3/CIDOC_CRM_v7.1.3.rdfs#P168_place_is_defined_by (same URI; main module English label)"
+      },
+      "P169i_spacetime_volume_is_defined_by": {
+        "label": "spacetime volume is defined by",
+        "source": "data/document_harness/reference-cache/cidoc-7.1.3/CIDOC_CRM_v7.1.3.rdfs#P169i_spacetime_volume_is_defined_by (same URI; main module English label)"
+      },
+      "P170i_time_is_defined_by": {
+        "label": "time is defined by",
+        "source": "data/document_harness/reference-cache/cidoc-7.1.3/CIDOC_CRM_v7.1.3.rdfs#P170i_time_is_defined_by (same URI; main module English label)"
+      }
+    }
+  },
+  "sources": [
+    {
+      "module": "main",
+      "role": "core/base RDFS implementation",
+      "requested_url_from_official_release_page": "https://cidoc-crm.org/rdfs/7.1.3/CIDOC_CRM_v7.1.3.rdfs",
+      "final_download_url": "https://cidoc-crm.org/rdfs/7.1.3/CIDOC_CRM_v7.1.3.rdf",
+      "redirected_from_requested_url": true,
+      "retrieved_file_write_time_utc": "2026-09-25T10:11:06.698517Z",
+      "local_file": "data/document_harness/reference-cache/cidoc-7.1.3/CIDOC_CRM_v7.1.3.rdfs",
+      "content_type": "application/rdf+xml",
+      "http_status": 200,
+      "bytes": 434213,
+      "sha256": "ff214757a58164438fc78becfbb11bc1223f9a3a03db0a381cb94303f170e69a",
+      "xml_base": "http://www.cidoc-crm.org/cidoc-crm/",
+      "ontology_version_iri": [
+        "http://www.cidoc-crm.org/cidoc-crm/7.1.3/"
+      ],
+      "ontology_version_info": [
+        "RDFs Implementation (February 2024) of CIDOC-CRM 7.1.3"
+      ],
+      "direct_top_level_declaration_counts": {
+        "class": 76,
+        "property": 309,
+        "total": 385
+      },
+      "cidoc_namespace_declaration_count": 385,
+      "external_namespace_declaration_count": 0,
+      "non_term_top_level_elements": [
+        "Ontology"
+      ],
+      "parse_scope": "Direct top-level rdfs:Class/owl:Class and rdf:Property/owl:ObjectProperty/owl:DatatypeProperty/owl:AnnotationProperty declarations; rdf:about/rdf:ID and rdf:resource resolved against XML Base; English rdfs:label, direct domain/range, class/property superterms, owl:inverseOf, and owl:deprecated captured. Human rdfs:comment scope notes are not copied.",
+      "verified_local_bytes": 434213,
+      "verified_local_sha256": "ff214757a58164438fc78becfbb11bc1223f9a3a03db0a381cb94303f170e69a"
+    },
+    {
+      "module": "pc",
+      "role": "properties-of-properties (.1) RDFS implementation module",
+      "requested_url_from_official_release_page": "https://cidoc-crm.org/rdfs/7.1.3/CIDOC_CRM_v7.1.3_PC.rdfs",
+      "final_download_url": "https://cidoc-crm.org/rdfs/7.1.3/CIDOC_CRM_v7.1.3_PC.rdf",
+      "redirected_from_requested_url": true,
+      "retrieved_file_write_time_utc": "2026-09-25T10:11:08.914387Z",
+      "local_file": "data/document_harness/reference-cache/cidoc-7.1.3/CIDOC_CRM_v7.1.3_PC.rdfs",
+      "content_type": "application/rdf+xml",
+      "http_status": 200,
+      "bytes": 30721,
+      "sha256": "122442d5a2f549a9c4b035ca0459a4a86177646b58dc9c0f4f6d9e789f219708",
+      "xml_base": "http://www.cidoc-crm.org/cidoc-crm/",
+      "ontology_version_iri": [],
+      "ontology_version_info": [],
+      "direct_top_level_declaration_counts": {
+        "class": 17,
+        "property": 22,
+        "total": 39
+      },
+      "cidoc_namespace_declaration_count": 39,
+      "external_namespace_declaration_count": 0,
+      "non_term_top_level_elements": [],
+      "parse_scope": "Direct top-level rdfs:Class/owl:Class and rdf:Property/owl:ObjectProperty/owl:DatatypeProperty/owl:AnnotationProperty declarations; rdf:about/rdf:ID and rdf:resource resolved against XML Base; English rdfs:label, direct domain/range, class/property superterms, owl:inverseOf, and owl:deprecated captured. Human rdfs:comment scope notes are not copied.",
+      "verified_local_bytes": 30721,
+      "verified_local_sha256": "122442d5a2f549a9c4b035ca0459a4a86177646b58dc9c0f4f6d9e789f219708"
+    },
+    {
+      "module": "supplementary",
+      "role": "supplementary RDFS assertions",
+      "requested_url_from_official_release_page": "https://cidoc-crm.org/rdfs/7.1.3/CIDOC_CRM_v7.1.3_Supplement.rdfs",
+      "final_download_url": "https://cidoc-crm.org/rdfs/7.1.3/CIDOC_CRM_v7.1.3_Supplement.rdf",
+      "redirected_from_requested_url": true,
+      "retrieved_file_write_time_utc": "2026-09-25T10:11:10.853364Z",
+      "local_file": "data/document_harness/reference-cache/cidoc-7.1.3/CIDOC_CRM_v7.1.3_Supplement.rdfs",
+      "content_type": "application/rdf+xml",
+      "http_status": 200,
+      "bytes": 3400,
+      "sha256": "d04cfb12bf1709799396bdd7d383040d6269041e5462b6e69ae354da89e0f521",
+      "xml_base": "http://www.cidoc-crm.org/cidoc-crm/",
+      "ontology_version_iri": [],
+      "ontology_version_info": [],
+      "direct_top_level_declaration_counts": {
+        "class": 0,
+        "property": 4,
+        "total": 4
+      },
+      "cidoc_namespace_declaration_count": 3,
+      "external_namespace_declaration_count": 1,
+      "non_term_top_level_elements": [],
+      "parse_scope": "Direct top-level rdfs:Class/owl:Class and rdf:Property/owl:ObjectProperty/owl:DatatypeProperty/owl:AnnotationProperty declarations; rdf:about/rdf:ID and rdf:resource resolved against XML Base; English rdfs:label, direct domain/range, class/property superterms, owl:inverseOf, and owl:deprecated captured. Human rdfs:comment scope notes are not copied.",
+      "verified_local_bytes": 3400,
+      "verified_local_sha256": "d04cfb12bf1709799396bdd7d383040d6269041e5462b6e69ae354da89e0f521"
+    },
+    {
+      "module": "formal_model_table",
+      "role": "authoritative formal Classes and Properties IDs/short labels for comparison with the RDFS implementation",
+      "requested_url": "https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html",
+      "final_url": "https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html",
+      "retrieved_at_utc": "2026-09-25T10:29:36Z",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes": 1472925,
+      "sha256": "123efabc59c3b07441bf3cdb1718815919673b5c71d6358289dc56983ba5ca5a",
+      "cached_body": false,
+      "local_file": null,
+      "parsed_scope": "In-memory first Table of Classes & Properties: formal IDs and short labels; no scope-note prose copied."
+    }
+  ],
+  "parse_and_validation": {
+    "parser": "Python 3.14.3 xml.etree.ElementTree",
+    "xml_well_formed": true,
+    "xml_errors": [],
+    "duplicate_module_kind_uri_keys": [],
+    "unresolved_cidoc_namespace_references": [],
+    "main_or_pc_subject_namespace_violations": [],
+    "versioned_subject_uris": [],
+    "missing_english_labels": [
+      {
+        "module": "supplementary",
+        "term_id": "rdfs:label"
+      },
+      {
+        "module": "supplementary",
+        "term_id": "P168_place_is_defined_by"
+      },
+      {
+        "module": "supplementary",
+        "term_id": "P169i_spacetime_volume_is_defined_by"
+      },
+      {
+        "module": "supplementary",
+        "term_id": "P170i_time_is_defined_by"
+      }
+    ],
+    "main_base_term_counts_not_mixed_with_modules": true,
+    "pc_dot_one_property_count": 16,
+    "scope": "This is a declaration registry extracted from the three version 7.1.3 RDFS files, not a parse of the 234-page authoritative definition PDF and not a claim of full semantic coverage. No wiki dump content was read or parsed.",
+    "errors_and_limitations": [
+      "RDFS files are an implementation encoding, not the authoritative definition; consult the version 7.1.3 definition for semantic interpretation.",
+      "Supplementary module rows intentionally preserve its additional subPropertyOf declarations as separate rows and do not merge them into main rows.",
+      "Supplementary relation-only rows have no local English labels, domains, or ranges; those fields remain empty for that source row.",
+      "PC module .1 properties are RDF representations of properties-of-properties, not direct main module properties; their term IDs and module remain separate."
+    ]
+  },
+  "formal_model_comparison": {
+    "source_url": "https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html",
+    "final_url": "https://cidoc-crm.org/html/cidoc_crm_v7.1.3.html",
+    "retrieved_at_utc": "2026-09-25T10:29:36Z",
+    "http_status": 200,
+    "content_type": "text/html",
+    "bytes": 1472925,
+    "sha256": "123efabc59c3b07441bf3cdb1718815919673b5c71d6358289dc56983ba5ca5a",
+    "cached_body": false,
+    "extraction": "In-memory parse of the official Table of Classes & Properties, retaining formal IDs and short labels only; no scope-note prose copied.",
+    "formal_counts": {
+      "classes": 81,
+      "properties": 160
+    },
+    "main_rdfs_class_comparison": {
+      "declared_class_rows": 76,
+      "formal_class_ids_represented": 75,
+      "formal_class_ids_absent": [
+        "E59",
+        "E60",
+        "E61",
+        "E62",
+        "E94",
+        "E95"
+      ],
+      "encoding_only_class_rows": [
+        "E33_E41_Linguistic_Appellation"
+      ]
+    },
+    "main_rdfs_property_declaration_split": {
+      "all_property_rows": 309,
+      "forward_uri_rows": 158,
+      "explicit_inverse_uri_rows": 145,
+      "encoding_auxiliary_rows": 6,
+      "qualified_property_rows": 0
+    },
+    "formal_property_forward_comparison": {
+      "formal_property_ids": 160,
+      "direct_forward_ids_represented": 158,
+      "formal_ids_without_direct_forward_uri": [
+        "P169",
+        "P170"
+      ],
+      "main_inverse_ids_are_separate_encoding_uris": 145,
+      "main_inverse_ids_are_not_assumed_for_every_formal_property": true
+    },
+    "expected_implementation_difference_evidence": "The downloaded main RDFS header explicitly states that primitive values become rdfs:Literal, lists E59/E60/E61/E62/E94/E95 as omitted RDFS classes, omits their IsA relationships, and states that inverse declarations cannot be represented when the range is literal. It declares P169i/P170i with rdfs:Literal ranges but no P169/P170 forward term URIs.",
+    "formal_primitive_superterms": {
+      "E59": [
+        "E1"
+      ],
+      "E60": [
+        "E59"
+      ],
+      "E61": [
+        "E41",
+        "E59"
+      ],
+      "E62": [
+        "E59"
+      ],
+      "E94": [
+        "E41",
+        "E59"
+      ],
+      "E95": [
+        "E41",
+        "E59"
+      ]
+    }
+  }
+}

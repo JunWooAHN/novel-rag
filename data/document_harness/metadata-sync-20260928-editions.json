@@ -1,0 +1,246 @@
+[
+  {
+    "path": "docs/harness/document-lifecycle.md",
+    "revision": {
+      "document_id": "doc-4da8ffa9-aa39-4a40-bd78-c5448eff6f12",
+      "lineage_id": "legacy-6bd92436-f517-55b1-9748-f4eab1ea92cb",
+      "status": "imported",
+      "finalization": "retain",
+      "canon_document_id": "doc-7b3c286f-5401-42c5-a759-a2a870eff262",
+      "document_canon": false
+    },
+    "selection": {
+      "lineage_id": "legacy-6bd92436-f517-55b1-9748-f4eab1ea92cb",
+      "canon_document_id": "doc-4da8ffa9-aa39-4a40-bd78-c5448eff6f12",
+      "action": "adopt",
+      "status": "changed",
+      "file_mirrors": [
+        {
+          "source_path": "docs/harness/document-lifecycle.md",
+          "document_id": "doc-4da8ffa9-aa39-4a40-bd78-c5448eff6f12",
+          "old_canon_display": false,
+          "new_canon_display": true,
+          "old_source_hash": "bda128fe96b586304a3f5456efe56d801ee77992dc21231af94f2f3af2c5e6bd",
+          "new_source_hash": "91e9b21034156f47a8dae2022364894fc2b43c9735fcfee68044838324522ea8",
+          "old_file_hash": "bda128fe96b586304a3f5456efe56d801ee77992dc21231af94f2f3af2c5e6bd",
+          "new_file_hash": "91e9b21034156f47a8dae2022364894fc2b43c9735fcfee68044838324522ea8"
+        }
+      ]
+    }
+  },
+  {
+    "path": "docs/harness/session-decisions.md",
+    "revision": {
+      "document_id": "doc-cfc4183f-b2a3-441f-b664-08a1c867f478",
+      "lineage_id": "legacy-6d5cb571-6639-5237-929c-467101dd73ac",
+      "status": "imported",
+      "finalization": "retain",
+      "canon_document_id": "doc-2e03f3b4-d89d-444b-925a-504122800fc6",
+      "document_canon": false
+    },
+    "selection": {
+      "lineage_id": "legacy-6d5cb571-6639-5237-929c-467101dd73ac",
+      "canon_document_id": "doc-cfc4183f-b2a3-441f-b664-08a1c867f478",
+      "action": "adopt",
+      "status": "changed",
+      "file_mirrors": [
+        {
+          "source_path": "docs/harness/session-decisions.md",
+          "document_id": "doc-cfc4183f-b2a3-441f-b664-08a1c867f478",
+          "old_canon_display": false,
+          "new_canon_display": true,
+          "old_source_hash": "d1a219594d0ddb0a9deaa5ebbec30f6a469762ffeb3a0cd0cb674680dd2258bd",
+          "new_source_hash": "c51d0dc7c23719a4225c77a4ffdd24ef7056423d2524e23ae888989f8200937d",
+          "old_file_hash": "d1a219594d0ddb0a9deaa5ebbec30f6a469762ffeb3a0cd0cb674680dd2258bd",
+          "new_file_hash": "c51d0dc7c23719a4225c77a4ffdd24ef7056423d2524e23ae888989f8200937d"
+        }
+      ]
+    }
+  },
+  {
+    "path": "docs/harness/README.md",
+    "revision": {
+      "document_id": "doc-714009f3-08b3-4750-8c6e-ffbf522f5918",
+      "lineage_id": "legacy-d64e962c-5e59-556f-b516-44f7d9856f7a",
+      "status": "imported",
+      "finalization": "retain",
+      "canon_document_id": "doc-b8919fd7-faa0-4030-a8f2-762d39fef820",
+      "document_canon": false
+    },
+    "selection": {
+      "lineage_id": "legacy-d64e962c-5e59-556f-b516-44f7d9856f7a",
+      "canon_document_id": "doc-714009f3-08b3-4750-8c6e-ffbf522f5918",
+      "action": "adopt",
+      "status": "changed",
+      "file_mirrors": [
+        {
+          "source_path": "docs/harness/README.md",
+          "document_id": "doc-714009f3-08b3-4750-8c6e-ffbf522f5918",
+          "old_canon_display": false,
+          "new_canon_display": true,
+          "old_source_hash": "253d95ffd50633da2cdbd1440921dff22a3ad563d6c62dc68226879c8d731edd",
+          "new_source_hash": "74a5801b8090a5d561ea198268bc2a080d9f4fa37be8be60e3cd26e6864bf8a8",
+          "old_file_hash": "253d95ffd50633da2cdbd1440921dff22a3ad563d6c62dc68226879c8d731edd",
+          "new_file_hash": "74a5801b8090a5d561ea198268bc2a080d9f4fa37be8be60e3cd26e6864bf8a8"
+        }
+      ]
+    }
+  },
+  {
+    "path": "docs/harness/portability.md",
+    "revision": {
+      "document_id": "doc-c98676b2-e02d-4fd2-9f5c-128598b25300",
+      "lineage_id": "lin-1775c6a6-15c0-437a-bf69-1736c105759a",
+      "status": "imported",
+      "finalization": "retain",
+      "canon_document_id": "doc-cab2e9cb-f4da-4db1-bdc4-8d5e1a8fed44",
+      "document_canon": false
+    },
+    "selection": {
+      "lineage_id": "lin-1775c6a6-15c0-437a-bf69-1736c105759a",
+      "canon_document_id": "doc-c98676b2-e02d-4fd2-9f5c-128598b25300",
+      "action": "adopt",
+      "status": "changed",
+      "file_mirrors": [
+        {
+          "source_path": "docs/harness/portability.md",
+          "document_id": "doc-c98676b2-e02d-4fd2-9f5c-128598b25300",
+          "old_canon_display": false,
+          "new_canon_display": true,
+          "old_source_hash": "eea29b9b707c2b5cc40632847c3085d98712d74ef9f916a5a1dd47905f57fead",
+          "new_source_hash": "dc444c6cf6f0a7bc0043a753178c26934c87777a34ee53a74e9a09d1c4575a9b",
+          "old_file_hash": "eea29b9b707c2b5cc40632847c3085d98712d74ef9f916a5a1dd47905f57fead",
+          "new_file_hash": "dc444c6cf6f0a7bc0043a753178c26934c87777a34ee53a74e9a09d1c4575a9b"
+        }
+      ]
+    }
+  },
+  {
+    "path": "tools/wiki_ontology_trial/README.md",
+    "revision": {
+      "document_id": "doc-c68c52d1-fd77-4dc0-a663-df1bc64543de",
+      "lineage_id": "lin-7ce34941-b635-4550-8ee3-f6f8ad0b0c66",
+      "status": "imported",
+      "finalization": "retain",
+      "canon_document_id": null,
+      "document_canon": false
+    },
+    "selection": null
+  },
+  {
+    "path": "tools/document_harness/README.md",
+    "revision": {
+      "document_id": "doc-2e57b3be-9cd5-475b-93c5-6015fda29359",
+      "lineage_id": "lin-9de47fd1-ad99-4e44-9e39-edb5e9196375",
+      "status": "imported",
+      "finalization": "retain",
+      "canon_document_id": "doc-22c3ecee-559b-4872-bf30-9723f41a2f21",
+      "document_canon": false
+    },
+    "selection": {
+      "lineage_id": "lin-9de47fd1-ad99-4e44-9e39-edb5e9196375",
+      "canon_document_id": "doc-2e57b3be-9cd5-475b-93c5-6015fda29359",
+      "action": "adopt",
+      "status": "changed",
+      "file_mirrors": [
+        {
+          "source_path": "tools/document_harness/README.md",
+          "document_id": "doc-2e57b3be-9cd5-475b-93c5-6015fda29359",
+          "old_canon_display": false,
+          "new_canon_display": true,
+          "old_source_hash": "fcfbda3012ae83faee07a8bde4fa8a8708b605f1b6b6d458ea28e371e47fa010",
+          "new_source_hash": "7bba425855e02bf304b95f02e9fbbf2b881f738356bb3df629b29f3d0afc1b4e",
+          "old_file_hash": "fcfbda3012ae83faee07a8bde4fa8a8708b605f1b6b6d458ea28e371e47fa010",
+          "new_file_hash": "7bba425855e02bf304b95f02e9fbbf2b881f738356bb3df629b29f3d0afc1b4e"
+        }
+      ]
+    }
+  },
+  {
+    "path": "docs/harness/portability.md",
+    "revision": {
+      "document_id": "doc-2b7108d4-a0c9-41b8-9f0a-ff64af427052",
+      "lineage_id": "lin-1775c6a6-15c0-437a-bf69-1736c105759a",
+      "status": "imported",
+      "finalization": "retain",
+      "canon_document_id": "doc-c98676b2-e02d-4fd2-9f5c-128598b25300",
+      "document_canon": false
+    },
+    "selection": {
+      "lineage_id": "lin-1775c6a6-15c0-437a-bf69-1736c105759a",
+      "canon_document_id": "doc-2b7108d4-a0c9-41b8-9f0a-ff64af427052",
+      "action": "adopt",
+      "status": "changed",
+      "file_mirrors": [
+        {
+          "source_path": "docs/harness/portability.md",
+          "document_id": "doc-2b7108d4-a0c9-41b8-9f0a-ff64af427052",
+          "old_canon_display": false,
+          "new_canon_display": true,
+          "old_source_hash": "50774c4324fe91551afb08cd26c0acb2425a8213baa6b3d36a512f533b36db1c",
+          "new_source_hash": "ee9cf4fca078931dcc8844dd5888934c740d723a5bf16f9d92be73a6a54e6225",
+          "old_file_hash": "50774c4324fe91551afb08cd26c0acb2425a8213baa6b3d36a512f533b36db1c",
+          "new_file_hash": "ee9cf4fca078931dcc8844dd5888934c740d723a5bf16f9d92be73a6a54e6225"
+        }
+      ]
+    }
+  },
+  {
+    "path": "docs/harness/document-lifecycle.md",
+    "revision": {
+      "document_id": "doc-9e964391-e39e-41ae-969a-a3deae5343bf",
+      "lineage_id": "legacy-6bd92436-f517-55b1-9748-f4eab1ea92cb",
+      "status": "imported",
+      "finalization": "retain",
+      "canon_document_id": "doc-4da8ffa9-aa39-4a40-bd78-c5448eff6f12",
+      "document_canon": false
+    },
+    "selection": {
+      "lineage_id": "legacy-6bd92436-f517-55b1-9748-f4eab1ea92cb",
+      "canon_document_id": "doc-9e964391-e39e-41ae-969a-a3deae5343bf",
+      "action": "adopt",
+      "status": "changed",
+      "file_mirrors": [
+        {
+          "source_path": "docs/harness/document-lifecycle.md",
+          "document_id": "doc-9e964391-e39e-41ae-969a-a3deae5343bf",
+          "old_canon_display": false,
+          "new_canon_display": true,
+          "old_source_hash": "c231d9d512e6942e2abe9e4059510799c1de4899d9ef0a2431cfc0a328a6956f",
+          "new_source_hash": "351387df6948a654d95f342d831062f51d5a2c6512e0bb567624e461d062b909",
+          "old_file_hash": "c231d9d512e6942e2abe9e4059510799c1de4899d9ef0a2431cfc0a328a6956f",
+          "new_file_hash": "351387df6948a654d95f342d831062f51d5a2c6512e0bb567624e461d062b909"
+        }
+      ]
+    }
+  },
+  {
+    "path": "docs/harness/session-decisions.md",
+    "revision": {
+      "document_id": "doc-688b2989-d92f-46f1-b875-35ac9b3f0789",
+      "lineage_id": "legacy-6d5cb571-6639-5237-929c-467101dd73ac",
+      "status": "imported",
+      "finalization": "retain",
+      "canon_document_id": "doc-cfc4183f-b2a3-441f-b664-08a1c867f478",
+      "document_canon": false
+    },
+    "selection": {
+      "lineage_id": "legacy-6d5cb571-6639-5237-929c-467101dd73ac",
+      "canon_document_id": "doc-688b2989-d92f-46f1-b875-35ac9b3f0789",
+      "action": "adopt",
+      "status": "changed",
+      "file_mirrors": [
+        {
+          "source_path": "docs/harness/session-decisions.md",
+          "document_id": "doc-688b2989-d92f-46f1-b875-35ac9b3f0789",
+          "old_canon_display": false,
+          "new_canon_display": true,
+          "old_source_hash": "54dcb7fd3e704bf99f5d311e7cdb6b29d2bdd5d7bef594b6f0c744e7ed74b229",
+          "new_source_hash": "7f497ce2a133548e76e0498f7a890e2cd2b4f9f2013b47f6af1346e1d3cabe6c",
+          "old_file_hash": "54dcb7fd3e704bf99f5d311e7cdb6b29d2bdd5d7bef594b6f0c744e7ed74b229",
+          "new_file_hash": "7f497ce2a133548e76e0498f7a890e2cd2b4f9f2013b47f6af1346e1d3cabe6c"
+        }
+      ]
+    }
+  }
+]

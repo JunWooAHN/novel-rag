@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "novel-factory"
+version = "0.1.0"
+description = "Bounded novel analysis workflow"
+requires-python = ">=3.11"
+
+[project.scripts]
+novel-factory = "novel_factory.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

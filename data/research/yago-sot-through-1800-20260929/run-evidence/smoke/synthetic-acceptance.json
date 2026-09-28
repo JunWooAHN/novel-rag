@@ -1,0 +1,14 @@
+{
+  "accepted": true,
+  "code_sha256": "ad4f94668b380e4344c391deaaecc8b2ec104291100b0b4544879063a8534932",
+  "manifest_sha256": "e52b154af76e5df801ed2d519fb5a270b6a235e35b88f9e669f712a1827ef9bd",
+  "readback_sha256": "160a0f7a49719478ae8d50d7169ce8e7eb2e9a78cf2738e8a8359a6fcc4c22dc",
+  "receipt_bundle_sha256": "1e861dac72c41ee9554df758ee87d116e964a463221c4b295778c4d6a271c0f6",
+  "row_counts": {
+    "auxiliary": 10,
+    "claim": 7,
+    "context_anchor": 1,
+    "meta_evidence": 4
+  },
+  "synthetic_fixture_only": true
+}

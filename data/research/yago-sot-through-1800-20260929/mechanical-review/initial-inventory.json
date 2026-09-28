@@ -1,0 +1,515 @@
+{
+  "schema": "yago-history-sot-mechanical-preliminary-inventory-v1",
+  "task_id": "YAGO-SOT-THROUGH-1800-20260929",
+  "created_at_utc": "2026-09-28T22:47:22.196729+00:00",
+  "role": "mechanical reviewer",
+  "result": "inventory_only",
+  "release_acceptance": "not_attempted; no new extraction/build evidence in scope at inventory time",
+  "scope": {
+    "cutoff_year_inclusive": 1899,
+    "cutoff_end_exclusive_year": 1900,
+    "earliest_year": "unbounded by task card; preserve signed raw source years and calendar uncertainty",
+    "source": "YAGO 4.6 preserved original on H200 persistent Storage",
+    "release_kind": "source-grounded foundation, not independently validated historical truth or work canon"
+  },
+  "local_access_limit": {
+    "recorded_h200_original_root": "/home/work/novel-toy-tune/sources/original/yago/4.6",
+    "path_mounted_in_this_local_checkout": false,
+    "access_basis": "saved manifests, verification log and reconnect metadata only",
+    "full_original_rehash_or_rescan_performed": false,
+    "reason": "task card forbids repeating the 78 GB source scan; H200 storage path is not locally mounted"
+  },
+  "original_yago_inventory": {
+    "manifest_copy_path": "data/research/yago-storage-20260928/manifest-final.json",
+    "manifest_copy_sha256": "da0d761331e3ccb070bfebbc5ecf4ad5db4165eac0ef5bc619444d95f78a70bb",
+    "manifest_status": "complete",
+    "release": "YAGO 4.6",
+    "archive_count": 12,
+    "extracted_entry_count": 12,
+    "archive_bytes_sum": 9907409082,
+    "extracted_bytes_sum": 78426497491,
+    "manifest_file_inventory": [
+      {
+        "archive_name": "yago-4.6-schema.zip",
+        "archive_bytes": 19471,
+        "archive_sha256": "01a4f4fd80a04ce38375163993644e8370da3b6761b3e8cc703be97cc5a3d07a",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-schema.ttl",
+            "bytes": 117074,
+            "sha256": "b3f185f27c21e0e2b561dc92f7f9e3d54ccd6f4acac01e9ae97c2d42ef3b636f",
+            "crc32": "a690d9d5",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-taxonomy.zip",
+        "archive_bytes": 41519942,
+        "archive_sha256": "6cc9f409ee96208dbba79d571e0471b69efc73d0f2384c3250e8b27942a95278",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-taxonomy.ttl",
+            "bytes": 218444322,
+            "sha256": "c0a9a4c24f0acfe0fd44c285bdc2db32fdb91d8d5936a7d4162cd149924fd238",
+            "crc32": "840f92d0",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-facts.zip",
+        "archive_bytes": 829349027,
+        "archive_sha256": "f9b57f355f0b1f8bf5b968ac20f33778fce2b521c675c5a7d28f0afd4f1c14b1",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-facts.ttl",
+            "bytes": 5087821943,
+            "sha256": "17da906cefea15aa076ccfd5ce0bd2956b2e95ae06b225cca18059bbaf5eb1e4",
+            "crc32": "e28f1174",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-labels.zip",
+        "archive_bytes": 2188238999,
+        "archive_sha256": "aa189157fd48892a4b63d3063a838be03c09de65fe320374d774252bbee1774e",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-labels.ttl",
+            "bytes": 13868829973,
+            "sha256": "d30c76fa7ec5f1aa59df175229d7ab220222a2a6f4a87ec255d9a277e1ab17ff",
+            "crc32": "dc3dc7ef",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-beyond-wikipedia.zip",
+        "archive_bytes": 2535563171,
+        "archive_sha256": "783e39eb3b2bee6ede00beec11a00d8ec632e9f2242b960f20579336f3e59180",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-beyond-wikipedia.ttl",
+            "bytes": 17209268126,
+            "sha256": "15cd804c1f5ab52f3766766886a44270f68cef8cfc5ebbc4240bb20c0d4b4b3b",
+            "crc32": "cc6695b5",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-beyond-wikipedia-labels.zip",
+        "archive_bytes": 3507195426,
+        "archive_sha256": "474c20b402d204cbd854318dee70f52d4a1b9f60a8321faef50ac56d2723ec81",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-beyond-wikipedia-labels.ttl",
+            "bytes": 31891847744,
+            "sha256": "b117710759e18046e9213a92eb1a76e81d9fb86def233aeca702a374985a6463",
+            "crc32": "71343fdc",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-meta.zip",
+        "archive_bytes": 106018818,
+        "archive_sha256": "d551720dc88efa941378d0edf374e8308db62f0d87b2bf235d92dc202591c964",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-meta.ttl",
+            "bytes": 720870838,
+            "sha256": "d6ddcf0803a13fcf69f3b32df2c6f817fc6a807c27bd9cae429287dbc460c020",
+            "crc32": "8f3bc0ba",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-fact-log.zip",
+        "archive_bytes": 413825430,
+        "archive_sha256": "7af4fc24c467d6ff38b2a88ca1fdce139ecd5b6a1f3f006ba3d89bb40f21931c",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-fact-log.ttl",
+            "bytes": 7572779392,
+            "sha256": "da5f31dbc96d60bf1a987af59809d97b1fcb56982c7231ebe62f4e906cccc2c2",
+            "crc32": "259a3b0c",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-range-log.zip",
+        "archive_bytes": 57694789,
+        "archive_sha256": "977b3cb8b96b32ba86fe8790a6c9b768856373609e121524ab06f635094cd37f",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-range-log.ttl",
+            "bytes": 729031816,
+            "sha256": "7bec5fc280e15c9ea17dab2b7fcd035804a079e7896e6fd2347e706123b0aa23",
+            "crc32": "7b003212",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-taxonomy-log.zip",
+        "archive_bytes": 155673,
+        "archive_sha256": "bbcdf526fc04fda3d3fbe13ce630eb027b444dc61aebbb89da0947e098b39ef9",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-taxonomy-log.ttl",
+            "bytes": 1845569,
+            "sha256": "a8626b319cdbc12e05d36a57f9a6f9493120d76d6d437b6ce6ee15f3837d3668",
+            "crc32": "637ba45e",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-4.6-tiny.zip",
+        "archive_bytes": 91188862,
+        "archive_sha256": "0cb8805ea3d555b3c0487891498cf9042962b0e96caca701e83926c4418a0f81",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-tiny.ttl",
+            "bytes": 504647241,
+            "sha256": "7951772a1ec318785233211f0653b0e2659ba49e8b5d3998abd0941c5f515993",
+            "crc32": "c6b221cc",
+            "mode": "0444"
+          }
+        ]
+      },
+      {
+        "archive_name": "yago-entities.jsonl.zip",
+        "archive_bytes": 136639474,
+        "archive_sha256": "5b2967409d1fc910f541ce24df26b52adb76aea8ff9d181c089a41cd5af8468c",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-entities.jsonl",
+            "bytes": 620993453,
+            "sha256": "95d5336765288f521764b713d90327c1e75a901b931c410c9a854ab85debe85e",
+            "crc32": "79fbbd01",
+            "mode": "0444"
+          }
+        ]
+      }
+    ],
+    "completion_evidence": {
+      "relay_log_path": "data/research/yago-storage-20260928/relay-final.log",
+      "relay_log_sha256": "d385215846a7018461aa8dc4d42f1c1982ad0db3875d02dc2315d70164c2662b",
+      "relay_exit_path": "data/research/yago-storage-20260928/relay-final.exit",
+      "relay_exit_value": "0",
+      "relay_exit_file_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "manifest_reported_verified_at": "2026-09-28T09:32:43.394637Z",
+      "post_reconnect_json_path": "data/research/yago-storage-20260928/post-reconnect-check.json",
+      "post_reconnect_json_sha256": "92f568636c32e0673cad40f3b109f4384d710544c0a2ed34fde8d4990c969da6",
+      "post_reconnect_zip_count": 12,
+      "post_reconnect_extracted_file_count": 12,
+      "post_reconnect_problems": [],
+      "post_reconnect_check_type": "metadata names/sizes/mode/marker; full content hashes were not repeated",
+      "post_reconnect_manifest_matches": "recorded as matching archive/extracted names and sizes"
+    },
+    "relevant_source_files": {
+      "facts": {
+        "archive_name": "yago-4.6-facts.zip",
+        "archive_bytes": 829349027,
+        "archive_sha256": "f9b57f355f0b1f8bf5b968ac20f33778fce2b521c675c5a7d28f0afd4f1c14b1",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-facts.ttl",
+            "bytes": 5087821943,
+            "sha256": "17da906cefea15aa076ccfd5ce0bd2956b2e95ae06b225cca18059bbaf5eb1e4",
+            "crc32": "e28f1174",
+            "mode": "0444"
+          }
+        ]
+      },
+      "meta": {
+        "archive_name": "yago-4.6-meta.zip",
+        "archive_bytes": 106018818,
+        "archive_sha256": "d551720dc88efa941378d0edf374e8308db62f0d87b2bf235d92dc202591c964",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-meta.ttl",
+            "bytes": 720870838,
+            "sha256": "d6ddcf0803a13fcf69f3b32df2c6f817fc6a807c27bd9cae429287dbc460c020",
+            "crc32": "8f3bc0ba",
+            "mode": "0444"
+          }
+        ]
+      },
+      "beyond_wikipedia": {
+        "archive_name": "yago-4.6-beyond-wikipedia.zip",
+        "archive_bytes": 2535563171,
+        "archive_sha256": "783e39eb3b2bee6ede00beec11a00d8ec632e9f2242b960f20579336f3e59180",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-beyond-wikipedia.ttl",
+            "bytes": 17209268126,
+            "sha256": "15cd804c1f5ab52f3766766886a44270f68cef8cfc5ebbc4240bb20c0d4b4b3b",
+            "crc32": "cc6695b5",
+            "mode": "0444"
+          }
+        ]
+      },
+      "labels": {
+        "archive_name": "yago-4.6-labels.zip",
+        "archive_bytes": 2188238999,
+        "archive_sha256": "aa189157fd48892a4b63d3063a838be03c09de65fe320374d774252bbee1774e",
+        "archive_zip_crc_verified": true,
+        "archive_mode": "0444",
+        "extracted_entries": [
+          {
+            "path": "yago-labels.ttl",
+            "bytes": 13868829973,
+            "sha256": "d30c76fa7ec5f1aa59df175229d7ab220222a2a6f4a87ec255d9a277e1ab17ff",
+            "crc32": "dc3dc7ef",
+            "mode": "0444"
+          }
+        ]
+      }
+    }
+  },
+  "prior_five_target_r3_evidence": {
+    "note": "previous pilot evidence only; it is not a full-history scan denominator or this task release",
+    "release_id": "reality:yago46:five:640261c0eea9d3b0:r3",
+    "readback_path": "data/analysis/private/yago-sot-temporal-20260929/pg-readback.json",
+    "readback_sha256": "71161cba74d438dc7f0bef10875ba4f8022048fd9cb7316e0b43e649f7d60ed2",
+    "readback_release_scope": "five selected YAGO 4.6 entities only",
+    "readback_scope_counts": {
+      "entities": 5,
+      "excluded_statements": 22,
+      "linked_meta": 24,
+      "source_meta": 40,
+      "source_statements": 152,
+      "structural_claims": 50
+    },
+    "readback_collection_counts": {
+      "claims": 50,
+      "decisions": 50,
+      "entities": 5,
+      "member_ids": 50,
+      "source_meta": 40,
+      "source_statements": 152
+    },
+    "source_kind_counts": {
+      "yago_fact": 116,
+      "yago_taxonomy": 36
+    },
+    "fact_source_hashes_in_readback": [
+      "17da906cefea15aa076ccfd5ce0bd2956b2e95ae06b225cca18059bbaf5eb1e4",
+      "c0a9a4c24f0acfe0fd44c285bdc2db32fdb91d8d5936a7d4162cd149924fd238"
+    ],
+    "meta_source_hashes_in_readback": [
+      "d6ddcf0803a13fcf69f3b32df2c6f817fc6a807c27bd9cae429287dbc460c020"
+    ],
+    "meta_link_status_counts": {
+      "incoming_observation": 11,
+      "linked": 24,
+      "outgoing_orphan": 5
+    },
+    "prior_input_inventory": {
+      "path": "data/analysis/private/yago-sot-pilot-20260929/mechanical-review/input-inventory.json",
+      "sha256": "1c37627a1e4b98c684df379212e78d14a76ef648bea7c8c662e8e4b58f882416",
+      "actual_counts": {
+        "entities": 5,
+        "source_statements": 152,
+        "mapped": 130,
+        "mapped_entity_alias": 70,
+        "mapped_external_identity": 10,
+        "structural_assertions": 50,
+        "excluded": 22,
+        "unmapped": 0,
+        "meta_total": 40,
+        "meta_linked": 24,
+        "meta_outgoing_orphan": 5,
+        "meta_incoming_observation": 11
+      },
+      "count_comparisons_all_match": true,
+      "scope_limit": "fixed five selected entities and captured source rows only"
+    },
+    "foundation_sqlite": {
+      "path": "data/analysis/private/yago-foundation-100-20260928/foundation.sqlite3",
+      "actual_sha256": "640261c0eea9d3b064aba865f78c6d3c905098d63635fb8ea3deebfc0d551b14",
+      "prior_release_declared_sha256": "640261c0eea9d3b064aba865f78c6d3c905098d63635fb8ea3deebfc0d551b14",
+      "sha256_matches_release": true,
+      "bytes": 139264,
+      "read_only_quick_check": "ok"
+    },
+    "r3_receipts": {
+      "execution_receipt_path": "data/analysis/private/yago-sot-temporal-20260929/execution-receipt.json",
+      "execution_receipt_sha256": "79d800e6850c9fa2b331b56a22b400407100bd04f40df1e57871fae56d7b309b",
+      "execution_status": "actual_pg_published_and_verified",
+      "execution_source_foundation_sha256": "640261c0eea9d3b064aba865f78c6d3c905098d63635fb8ea3deebfc0d551b14",
+      "execution_pg_readback_sha256": "71161cba74d438dc7f0bef10875ba4f8022048fd9cb7316e0b43e649f7d60ed2",
+      "prior_pg_verification_path": "data/analysis/private/yago-sot-temporal-20260929/pg-verification.json",
+      "prior_pg_verification_sha256": "1986c1ade3d5c112c55d7d0aa93b0b0148ba75eb688c628990ea6c7b6475802b",
+      "exact_r3_rerun_created": false,
+      "prior_global_pg_counts": {
+        "sot_claim": 74,
+        "sot_decision": 74,
+        "sot_entity": 5,
+        "sot_member": 150,
+        "sot_release": 3,
+        "sot_release_scope": 3,
+        "sot_source_meta": 40,
+        "sot_source_statement": 152
+      },
+      "idempotence_path": "data/analysis/private/yago-sot-temporal-20260929/idempotence.json",
+      "idempotence_sha256": "a43390715332e8a4cf867ce2ff33c4bfd26eef235d335c687e3249c3517b4e78",
+      "idempotence_created": false,
+      "immutable_mutation_result": "prior receipt records SQLSTATE P0001 for r3 claim update, decision delete, late member insert and shared source update"
+    },
+    "r3_narrow_cutoff_example": {
+      "path": "data/analysis/private/yago-sot-temporal-20260929/era-1890.json",
+      "sha256": "f2e71dd912a9c2420519b3d74d0256b55836026c4531c7c8f3b4358a9856fabc",
+      "result_counts": {
+        "contextual_era_match": 0,
+        "explicit_dated_overlap": 0,
+        "inferred_occurrence_candidate": 0,
+        "no_temporal_basis": 0,
+        "outside_period": 41
+      },
+      "limit": "query over 23 contextual claims in the five-target pilot; not a 1899 boundary or full corpus leakage test"
+    },
+    "mechanical_review_of_r3_artifact": {
+      "path": "data/analysis/private/yago-sot-temporal-20260929/mechanical-review/final-output-check.json",
+      "sha256": "bb3d092e86acd4698c9b55da3ede11d7c1758833dab009b26a03581af0d2175b",
+      "status": "scope_pass",
+      "failure_count": 0,
+      "scope_counts": {
+        "inventory_contexts": 23,
+        "inventory_events": 6,
+        "json_ledger_rows": 23,
+        "markdown_data_rows": 23
+      },
+      "not_checked": [
+        "common 27 claim/decision payloads and source/meta immutability (independent Sol evidence)",
+        "four era query counts and query semantics (independent Sol evidence)",
+        "historical/semantic truth, live PostgreSQL, original source files, prior benchmark"
+      ]
+    }
+  },
+  "new_pipeline_checks_pending": [
+    "For every declared selected input, confirm the exact manifest pin and source size/hash; include all selected facts, meta, and any declared beyond-Wikipedia stream.",
+    "Reconcile the full declared scan denominator to disjoint mapped, excluded, unknown, and failed/parser/type/mapping categories; separately report unique triples and dedup keys before and after dedup.",
+    "Confirm every retained and excluded row preserves stable source identity, file hash, line/byte coordinate, raw triple, and exact RDF term/literal.",
+    "Reconcile Meta total to linked parents, outgoing orphans, incoming observations, and parse failures; do not silently drop unmatched parents.",
+    "Check raw signed years, date precision, calendar uncertainty, BCE handling, intervals and cutoff boundaries; 1899 is included, 1900 is excluded under exclusive end year 1900.",
+    "Detect post-cutoff facts leaking into accepted pre-cutoff claims, including facts attached to an entity born before cutoff; keep source valid time separate from entity life/context bounds.",
+    "For undated claims, accept only explicit or defensible separate context bounds and preserve unknown valid time; do not invent event dates or promote every claim across a person life.",
+    "Read back the newly published immutable PostgreSQL release from a fresh process and reconcile actual rows, release members, source anchors and output hashes against the run evidence."
+  ],
+  "not_verified_or_not_claimed": [
+    "The new 1899-inclusive global SoT build, its actual H200 PostgreSQL rows, and its output counts.",
+    "A denominator for all YAGO facts/meta or for the new run’s selected full streams.",
+    "The current remote H200 source files by direct read or a new full content rehash.",
+    "Historical truth, independent corroboration, work-specific history approval, or publication."
+  ],
+  "evidence_files_sha256": [
+    {
+      "path": "data/research/yago-storage-20260928/relay-final.log",
+      "bytes": 3492,
+      "sha256": "d385215846a7018461aa8dc4d42f1c1982ad0db3875d02dc2315d70164c2662b"
+    },
+    {
+      "path": "data/research/yago-storage-20260928/relay-final.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "data/research/yago-storage-20260928/manifest-final.json",
+      "bytes": 9748,
+      "sha256": "da0d761331e3ccb070bfebbc5ecf4ad5db4165eac0ef5bc619444d95f78a70bb"
+    },
+    {
+      "path": "data/research/yago-storage-20260928/post-reconnect-check.json",
+      "bytes": 2106,
+      "sha256": "92f568636c32e0673cad40f3b109f4384d710544c0a2ed34fde8d4990c969da6"
+    },
+    {
+      "path": "data/research/yago-storage-20260928/checkpoint.json",
+      "bytes": 1578,
+      "sha256": "da143abbd63b5fba0725f6f49dae49d020e5f69e6926115cd45ed931951f9292"
+    },
+    {
+      "path": "data/analysis/private/yago-sot-pilot-20260929/mechanical-review/input-inventory.json",
+      "bytes": 151189,
+      "sha256": "1c37627a1e4b98c684df379212e78d14a76ef648bea7c8c662e8e4b58f882416"
+    },
+    {
+      "path": "data/analysis/private/yago-foundation-100-20260928/foundation.sqlite3",
+      "bytes": 139264,
+      "sha256": "640261c0eea9d3b064aba865f78c6d3c905098d63635fb8ea3deebfc0d551b14"
+    },
+    {
+      "path": "data/analysis/private/yago-sot-temporal-20260929/pg-readback.json",
+      "bytes": 187004,
+      "sha256": "71161cba74d438dc7f0bef10875ba4f8022048fd9cb7316e0b43e649f7d60ed2"
+    },
+    {
+      "path": "data/analysis/private/yago-sot-temporal-20260929/execution-receipt.json",
+      "bytes": 2741,
+      "sha256": "79d800e6850c9fa2b331b56a22b400407100bd04f40df1e57871fae56d7b309b"
+    },
+    {
+      "path": "data/analysis/private/yago-sot-temporal-20260929/pg-verification.json",
+      "bytes": 1021,
+      "sha256": "1986c1ade3d5c112c55d7d0aa93b0b0148ba75eb688c628990ea6c7b6475802b"
+    },
+    {
+      "path": "data/analysis/private/yago-sot-temporal-20260929/idempotence.json",
+      "bytes": 116,
+      "sha256": "a43390715332e8a4cf867ce2ff33c4bfd26eef235d335c687e3249c3517b4e78"
+    },
+    {
+      "path": "data/analysis/private/yago-sot-temporal-20260929/mechanical-review/final-output-check.json",
+      "bytes": 41699,
+      "sha256": "bb3d092e86acd4698c9b55da3ede11d7c1758833dab009b26a03581af0d2175b"
+    },
+    {
+      "path": "data/analysis/private/yago-sot-temporal-20260929/era-1890.json",
+      "bytes": 136883,
+      "sha256": "f2e71dd912a9c2420519b3d74d0256b55836026c4531c7c8f3b4358a9856fabc"
+    },
+    {
+      "path": "data/analysis/private/yago-sot-temporal-20260929/ledgers.json",
+      "bytes": 37107,
+      "sha256": "7d4a967cfc0340016d224ef20114c8e1feeda40780fe97f22150703a0882c279"
+    }
+  ]
+}

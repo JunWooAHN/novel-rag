@@ -1,18 +1,19 @@
 ---
 category_id: document-harness
 lineage_id: lin-1775c6a6-15c0-437a-bf69-1736c105759a
-document_id: doc-cab2e9cb-f4da-4db1-bdc4-8d5e1a8fed44
+document_id: doc-2b7108d4-a0c9-41b8-9f0a-ff64af427052
 parent_lineage_id: null
 abstract: 다른 프로젝트에 문서 생애주기 CLI를 이식하고 운영할 때 읽는다
-version: 0.0.3
-created_at: null
-updated_at: '2026-09-25T02:52:23Z'
+version: 0.1.1
+created_at: '2026-09-25T02:48:58.000000Z'
+updated_at: '2026-09-28T00:23:00Z'
 tags:
 - 하네스
+canon: true
 ---
 # 문서 하네스 이식 가이드
 
-기준: **2026-09-25 로컬 `dev` HEAD `bff644087cb75d8691fa2f92f9b7552734ff982d`**의 [CLI 구현](../../tools/document_harness/harness.py)과 [테스트](../../tools/document_harness/test_harness.py). 이 문서는 현재 구현을 다른 저장소에 적용하는 방법이다. 같은 날짜 새 프로젝트 임시 경로에서 `create → adopt → revise(retain) → adopt → search/show → health/verify → backup/restore`와 테스트 7건을 확인했다. 이는 해당 경로의 실행 검증이며 모든 운영 환경·자료의 이식 완료를 뜻하지 않는다. 소설 프로젝트의 역사표 승인·작품 캐논, Astra/Sol/Luna 역할 배정, 세션 결정은 이 문서 하네스의 필수 구성요소가 아니다.
+기준: 현재 [CLI 구현](../../tools/document_harness/harness.py)과 [테스트](../../tools/document_harness/test_harness.py). 2026-09-25 로컬 `dev` HEAD `bff644087cb75d8691fa2f92f9b7552734ff982d`에서 새 프로젝트 임시 경로의 `create → adopt → revise(retain) → adopt → search/show → health/verify → backup/restore`와 **당시** 테스트 7건을 확인했다. 2026-09-28에는 최초 내용 시각과 YAML `canon` 표시 보수를 독립 검토·18건 테스트·격리 사본 전환으로 확인했다. 이 문서는 현재 구현을 다른 저장소에 적용하는 방법이지만 모든 운영 환경·자료의 이식 완료를 뜻하지 않는다. 소설 프로젝트의 역사표 승인·작품 캐논, Astra/Sol/Luna 역할 배정, 세션 결정은 이 문서 하네스의 필수 구성요소가 아니다.
 
 ## 최소 구성과 데이터 흐름
 
@@ -34,10 +35,10 @@ Markdown은 작성·수정 입력이며, **누적 본문판과 현재 `canon` �
 | `lineage_id` | 한 문서 계통의 불변 ID. 제목·경로·상위가 바뀌어도 유지한다. |
 | `document_id` | 개정판 하나의 고유 ID. 새 판마다 새로 발급한다. |
 | `parent_lineage_id` | 그 판을 작성할 때의 직계 상위 **계통** ID. 루트는 `null`; 상위에는 채택판이 필요하다. |
-| `abstract`, `version`, `created_at`, `updated_at`, `tags` | 탐색 요약(1~300자), 계통별 `MAJOR.MINOR.PATCH`, UTC 작성·수정 시각 또는 미상 `null`, 문자열 태그 배열. 신규 관리 계통은 `0.0.1`로 시작한다. |
-| `canon` | YAML 필드가 아닌 SQLite의 현재 선택값. 한 `lineage_id`에서 `1`은 최대 한 판이며 0판도 가능하다. |
+| `abstract`, `version`, `created_at`, `updated_at`, `tags` | 탐색 요약(1~300자), 계통별 `MAJOR.MINOR.PATCH`, UTC 최초 비공백 내용판·수정 시각 또는 근거가 없을 때 `null`, 문자열 태그 배열. 신규 관리 계통은 `0.0.1`로 시작한다. |
+| `canon` | SQLite가 선택 정본이고 YAML의 필수 `true/false`는 해당 파일 판의 표시. 한 `lineage_id`에서 `1`은 최대 한 판이며 0판도 가능하다. |
 
-관리 Markdown의 YAML 머리말에는 위 표의 `canon`을 제외한 필드가 들어간다. CLI의 `create`·`manage`·`revise`가 ID·판·시각을 발급하고, `import`는 기존 머리말을 검사한다. 같은 `document_id`에 다른 본문이나 경로를 덮어씌울 수 없다. 새 판 등록은 기존 채택판을 자동 교체하지 않는다.
+관리 Markdown의 YAML 머리말에는 위 표의 모든 필드가 들어간다. CLI의 `create`·`manage`·`revise`가 ID·판·시각을 발급하고, `import`는 기존 머리말을 검사한다. 옛 파일에 `canon`이 없으면 같은 DB 판의 다른 메타데이터·본문이 일치할 때만 표시를 추가한다. 표시값만 잘못된 파일은 명시적 `sync-metadata`에서 DB값으로 복구할 수 있으나 YAML을 손으로 바꾸어 채택할 수 없다. 같은 `document_id`에 다른 본문이나 경로를 덮어씌울 수 없다. 새 판 등록은 기존 채택판을 자동 교체하지 않는다.
 
 ## 새 저장소에서 시작하기
 
@@ -83,7 +84,7 @@ python3 tools/document_harness/harness.py manage docs/old-note.md --category not
 python3 tools/document_harness/harness.py list --all
 ```
 
-각 등록 결과의 `lineage_id`·`document_id`·`finalization`·`canon_document_id`를 확인하고 `list --all`로 재조회한다. 등록은 기존 선택을 **유지(`retain`)**하며, 새 판은 `canon=false`다. 관련 본문과 이전 판을 확인하고 채택·기존 선택 유지·철회를 명시적으로 결정한다. 등록 시 자동 `retain`과 `finalize --action retain`은 `selection_log`에 행을 쓰지 않는다. 유지 결정의 근거는 CLI 출력과 작업 기록에 남긴다. 선택이 실제 바뀌는 `adopt`·`withdraw`만 선택 로그에 기록된다. 아래 셸 변수에는 **실제 출력의 ID**를 넣는다. 채택·철회 시 `--expected-current`는 직전 조회에서 본 ID 또는 선택이 없을 때 `none`이다. 다른 작업이 먼저 선택을 바꾸면 명령이 실패하므로 다시 조회한다.
+각 등록 결과의 `lineage_id`·`document_id`·`finalization`·`canon_document_id`를 확인하고 `list --all`로 재조회한다. 등록은 기존 선택을 **유지(`retain`)**하며, 새 판은 `canon=false`다. 관련 본문과 이전 판을 확인하고 채택·기존 선택 유지·철회를 명시적으로 결정한다. 등록 시 자동 `retain`은 `selection_log`에 행을 쓰지 않는다. 명시적 `finalize --action retain`과 동일 ID 재수입은 파일 표시·`source_hash` 변경이 없으면 로그를 쓰지 않고, 변경이 있으면 원·신 해시를 같은 DB 트랜잭션에 기록한다. 선택이 실제 바뀌는 `adopt`·`withdraw`도 선택 로그에 기록하며 표시 변경 해시를 함께 남긴다. 아래 셸 변수에는 **실제 출력의 ID**를 넣는다. 채택·철회 시 `--expected-current`는 직전 조회에서 본 ID 또는 선택이 없을 때 `none`이다. 다른 작업이 먼저 선택을 바꾸면 명령이 실패하므로 다시 조회한다.
 
 ```sh
 LINEAGE_ID='실제 lineage_id'
@@ -135,6 +136,6 @@ python3 tools/document_harness/harness.py --db data/document_harness/restored.sq
 python3 tools/document_harness/harness.py --db data/document_harness/restored.sqlite3 verify
 ```
 
-`health`와 `verify`는 현재 같은 검사다. SQLite `integrity_check`, 계통별 `canon` 중복, JSONB 태그 유효성, 문서판 수와 FTS 행 수 일치를 확인한다. 원본 Markdown의 현재 hash와 DB의 동기화, 삭제·이동 여부, FTS 본문의 일치, 문서 주장·승인 상태는 검사하지 않는다. 원본을 삭제해도 기존 DB 판 본문은 남지만 파일을 통한 후속 개정에는 원본이 필요하다. `backup`은 **SQLite만** 복사하고 Markdown·Git·코드는 포함하지 않는다. `restore`는 다른, 아직 없는 DB 경로에 복사하므로 뒤이어 `verify`와 실제 `search`로 확인한다. 기존 백업·복원 목적지는 덮어쓰지 않는다.
+`health`와 기본 `verify`는 SQLite `integrity_check`, 계통별 `canon` 중복, JSONB 태그 유효성, 문서판 수와 FTS 행·본문·제목 일치를 확인한다. `verify --files`는 존재하는 관리 Markdown의 현재 판 ID·메타데이터·본문·YAML `canon`·전체 파일 SHA를 DB와 대조하고 없는 파일을 열거한다. `sync-metadata --report NEW.json`은 관리 계통의 과거 날짜 보완 근거·기존 hash·충돌을 기록하며 현재 파일에 표시를 반영한다. 운영 전 SQLite 백업과 사본 리허설을 권장한다. 미관리 legacy 본문과 근거 없는 날짜는 자동 보완하지 않는다. 원본을 삭제해도 기존 DB 판 본문은 남지만 파일을 통한 후속 개정에는 원본이 필요하다. `backup`은 **SQLite만** 복사하고 Markdown·Git·코드는 포함하지 않는다. `restore`는 다른, 아직 없는 DB 경로에 복사하므로 뒤이어 `verify`와 실제 `search`로 확인한다. 기존 백업·복원 목적지는 덮어쓰지 않는다.
 
 이 저장소는 `.gitignore`에서 `data/document_harness/**/*.sqlite3`와 `*.sqlite3-*`를 제외한다. 대상 프로젝트도 DB를 Git에서 제외한다면 별도 백업을 보존해야 한다. Git clone이나 Markdown만으로 누적판·채택 선택을 완전히 복구할 수 없다. 초기 구현에는 파일 변경 감시, 자동 재적재·자동 채택, 프로젝트 간 DB 병합, 백업 보존 일정이 없다. 새 프로젝트의 채택 권한·legacy 선별 범위·백업 정책은 이식 시 결정할 사항이다.

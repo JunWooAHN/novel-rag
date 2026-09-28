@@ -130,6 +130,7 @@ def windows_for(wid, work, bands, text):
 
 
 def freeze(_args):
+    raise ValueError('legacy freeze is archived; use DB workflow commands')
     manifest = collect()
     old = read(ROOT / 'data/training/reverse-20260925/source-manifest.json')
     for wid, work in manifest['works'].items():
@@ -255,27 +256,16 @@ def validate_review(window, review, raw, manifest, policy):
 
 
 def show(args):
-    manifest, policy = frozen()
-    w = window_at(args.work,args.band,args.slot)
-    if not args.inspect:
-        require_prior_reviews(args.work,args.band,args.slot)
-    part = 'alternative' if args.alternative else 'primary'
-    if args.alternative:
-        path = OUT / 'private/reviews' / (w['window_id'] + '.json')
-        require(path.exists() and (read(path)['attempts'][0]['status'] == 'hold' or
-                read(path)['attempts'][0]['portion'] == 'alternative'),
-                'alternative requires saved primary hold or alternative review')
-    text = source(manifest['works'][args.work])
-    require(sha(text[w['start_cp']:w['end_cp']].encode('utf-8')) == w['window_sha256'],
-            'window source changed')
-    bounds = w[part]
-    print(json.dumps({'window_id':w['window_id'],'portion':part,'split':w['split'],
-                      'source_sha256':w['source_sha256'],'start_cp':bounds['start_cp'],
-                      'end_cp':bounds['end_cp'],'section_orders':bounds['section_orders'],
-                      'text':text[bounds['start_cp']:bounds['end_cp']]},ensure_ascii=False))
+    from novel_factory.style.legacy_import import IMPORT_ID
+    from novel_factory.style.legacy_sqlite import SQLiteLegacyStore
+    result = SQLiteLegacyStore(getattr(args, 'db', DB)).get_legacy_window(
+        IMPORT_ID, args.work, args.band, args.slot,
+        alternative=args.alternative, inspect=args.inspect)
+    print(json.dumps(result, ensure_ascii=False))
 
 
 def init_review(args):
+    raise ValueError('legacy review packet is archived; use DB submit/review')
     manifest, policy = frozen()
     w = window_at(args.work,args.band,args.slot)
     require_prior_reviews(args.work,args.band,args.slot)
@@ -295,6 +285,7 @@ def init_review(args):
 
 
 def save(args):
+    raise ValueError('legacy review file writing is archived; use DB submit/review')
     manifest, policy = frozen()
     w = window_at(args.work,args.band,args.slot)
     require_prior_reviews(args.work,args.band,args.slot)
@@ -348,6 +339,7 @@ def save(args):
 
 
 def checkpoint(args):
+    raise ValueError('legacy checkpoint file writing is archived; use DB resume')
     manifest,policy=frozen()
     require(args.work in manifest['works'], 'unknown work')
     saved=[]
@@ -379,75 +371,28 @@ def checkpoint(args):
 
 
 def export(args):
-    manifest,policy=frozen()
-    outputs={}; report={'schema_version':1,'pool':'previously_observed_development_only',
-                       'final_unseen_test':False,'works':{}}
-    seen_targets=set()
-    for wid,work in manifest['works'].items():
-        text=source(work); seen_ranges=[]; report['works'][wid]={}
-        for split in ('train','development_validation','development_holdout'):
-            rows=[]; counts={'attempted_windows':0,'proposed_candidates':0,'accepted':0,'held':0,'rejected':0,'window_holds':0}
-            for band in policy['works'][wid]['bands']:
-                if band['split']!=split: continue
-                for slot in range(1,SLOTS+1):
-                    w=window_at(wid,band['band'],slot)
-                    raw=(OUT/'private/reviews'/(w['window_id']+'.json')).read_bytes()
-                    review=json.loads(raw); validate_review(w,review,raw,manifest,policy)
-                    decision=read(OUT/'private/decisions'/(w['window_id']+'.json'))
-                    require((decision.get('schema_version'),decision.get('window_id'),decision.get('review_sha256'))==
-                            (2,w['window_id'],sha(raw)) and bool(decision.get('reviewer')),
-                            'independent decision identity/hash mismatch')
-                    by_id={c['candidate_id']:c for c in review['candidates']}
-                    accepted=decision.get('accepted_candidate_ids',[])
-                    held=decision.get('hold_candidate_ids',[])
-                    rejected=decision.get('rejected_candidate_ids',[])
-                    require(all(isinstance(v,list) for v in (accepted,held,rejected)) and
-                            len(accepted+held+rejected)==len(set(accepted+held+rejected)) and
-                            set(accepted+held+rejected)==set(by_id),'decision incomplete')
-                    counts['attempted_windows']+=1;counts['proposed_candidates']+=len(by_id)
-                    counts['accepted']+=len(accepted);counts['held']+=len(held);counts['rejected']+=len(rejected)
-                    counts['window_holds']+=review['attempts'][0]['status']=='hold'
-                    for cid in accepted:
-                        c=by_id[cid];a,b=c['answer_start_cp'],c['answer_end_cp']
-                        require(all(b<=x or a>=y for x,y in seen_ranges),'accepted targets overlap')
-                        ensure_unique_target(text[a:b],wid+'/'+split,seen_targets)
-                        seen_ranges.append((a,b))
-                        model_input=c['writer_input'] if work['role']=='gemma_style' else c['planner_input']
-                        answer=text[a:b] if work['role']=='gemma_style' else json.dumps(c['plan_target'],ensure_ascii=False,sort_keys=True)
-                        user=json.dumps(model_input,ensure_ascii=False,sort_keys=True)
-                        require(answer not in user,'target leaked into input')
-                        rows.append({'sample_id':cid,'messages':[{'role':'user','content':user},
-                                     {'role':'assistant','content':answer}],
-                                     'metadata':{'work_id':wid,'role':work['role'],'split':split,
-                                     'source_sha256':work['source_sha256'],'segmentation_id':work['segmentation_id'],
-                                     'answer_start_cp':a,'answer_end_cp':b,
-                                     'answer_sha256':sha(text[a:b].encode('utf-8')),
-                                     'target_basis':'observed_exact_source_slice' if work['role']=='gemma_style' else
-                                     'reviewed_reconstruction_not_author_intent','reviewed_by':decision['reviewer'],
-                                     'truncated':False,'token_validation':'not_run'}})
-            path=OUT/'private/export'/wid/(split+'.jsonl')
-            data=''.join(json.dumps(r,ensure_ascii=False,sort_keys=True)+'\n' for r in rows).encode('utf-8')
-            outputs[path]=data
-            report['works'][wid][split]={**counts,'jsonl_sha256':sha(data),'truncated':False}
-    for path,data in outputs.items():
-        path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(data)
-    (OUT/'quality-report.json').write_bytes(serialized(report))
-    print(json.dumps({'quality_report':str(OUT/'quality-report.json')}))
+    from novel_factory.style.legacy_import import IMPORT_ID
+    from export import export_release
+    output_dir = getattr(args, 'output_dir', None) or (
+        ROOT / 'data/training/db-derived' / IMPORT_ID / 'private/export')
+    print(json.dumps(export_release(getattr(args, 'db', DB), IMPORT_ID, output_dir),
+                     ensure_ascii=False))
 
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     subs=parser.add_subparsers(dest='command',required=True)
     subs.add_parser('freeze')
-    p=subs.add_parser('show-window');p.add_argument('work',choices=sorted(ROLES));p.add_argument('band',type=int);p.add_argument('slot',type=int);p.add_argument('--alternative',action='store_true');p.add_argument('--inspect',action='store_true')
+    p=subs.add_parser('show-window');p.add_argument('work',choices=sorted(ROLES));p.add_argument('band',type=int);p.add_argument('slot',type=int);p.add_argument('--alternative',action='store_true');p.add_argument('--inspect',action='store_true');p.add_argument('--db',type=Path,default=DB)
     p=subs.add_parser('init-review');p.add_argument('work',choices=sorted(ROLES));p.add_argument('band',type=int);p.add_argument('slot',type=int);p.add_argument('--alternative',action='store_true')
     p=subs.add_parser('save-review');p.add_argument('work',choices=sorted(ROLES));p.add_argument('band',type=int);p.add_argument('slot',type=int);p.add_argument('input');p.add_argument('--replace-review-sha');p.add_argument('--correction-reason')
     p=subs.add_parser('checkpoint');p.add_argument('work',choices=sorted(ROLES))
-    subs.add_parser('export')
+    e=subs.add_parser('export');e.add_argument('--db',type=Path,default=DB);e.add_argument('--output-dir',type=Path)
     args=parser.parse_args()
     try:
-        {'freeze':freeze,'show-window':show,'init-review':init_review,'save-review':save,'checkpoint':checkpoint,
-         'export':export}[args.command](args)
+        if args.command in ('freeze', 'init-review', 'save-review', 'checkpoint'):
+            raise ValueError('legacy file review writer is archived; use novel-factory DB workflow')
+        {'show-window': show, 'export': export}[args.command](args)
     except (ValueError,KeyError,TypeError,OSError,sqlite3.Error) as exc:
         parser.exit(1,f'error: {exc}\n')
 

@@ -1,0 +1,8 @@
+start_utc=2026-09-28T03:42:14.454357+00:00
+end_utc=2026-09-28T03:42:15.324601+00:00
+elapsed_seconds=0.870
+method=HEAD
+url=https://yago-knowledge.org/data/yago4.6/yago-4.6-schema.zip
+http_status=200
+headers={'Server': 'nginx/1.24.0 (Ubuntu)', 'Date': 'Mon, 28 Sep 2026 03:42:15 GMT', 'Content-Type': 'application/zip', 'Content-Length': '19471', 'Last-Modified': 'Mon, 03 Aug 2026 03:04:52 GMT', 'Connection': 'close', 'ETag': '"6a700554-4c0f"', 'Accept-Ranges': 'bytes'}
+body=

@@ -1,0 +1,18 @@
+{
+  "release": "YAGO 4.6",
+  "base_url": "https://yago-knowledge.org/data/yago4.6/",
+  "files": [
+    {"name": "yago-4.6-schema.zip", "compressed_bytes": 19471, "uncompressed_bytes": 117074},
+    {"name": "yago-4.6-taxonomy.zip", "compressed_bytes": 41519942, "uncompressed_bytes": 218444322},
+    {"name": "yago-4.6-facts.zip", "compressed_bytes": 829349027, "uncompressed_bytes": 5087821943},
+    {"name": "yago-4.6-labels.zip", "compressed_bytes": 2188238999, "uncompressed_bytes": 13868829973},
+    {"name": "yago-4.6-beyond-wikipedia.zip", "compressed_bytes": 2535563171, "uncompressed_bytes": 17209268126},
+    {"name": "yago-4.6-beyond-wikipedia-labels.zip", "compressed_bytes": 3507195426, "uncompressed_bytes": 31891847744},
+    {"name": "yago-4.6-meta.zip", "compressed_bytes": 106018818, "uncompressed_bytes": 720870838},
+    {"name": "yago-4.6-fact-log.zip", "compressed_bytes": 413825430, "uncompressed_bytes": 7572779392},
+    {"name": "yago-4.6-range-log.zip", "compressed_bytes": 57694789, "uncompressed_bytes": 729031816},
+    {"name": "yago-4.6-taxonomy-log.zip", "compressed_bytes": 155673, "uncompressed_bytes": 1845569},
+    {"name": "yago-4.6-tiny.zip", "compressed_bytes": 91188862, "uncompressed_bytes": 504647241},
+    {"name": "yago-entities.jsonl.zip", "compressed_bytes": 136639474, "uncompressed_bytes": 620993453}
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "schema": "yago-history-sot-initial-draft-mechanical-check-v1",
+  "task_id": "YAGO-SOT-THROUGH-1800-20260929",
+  "status": "preliminary_initial_draft_check_only",
+  "release_acceptance": "not_attempted; facts scan and later attach-meta/context/auxiliary phases are still running or pending",
+  "code": {
+    "path": "tools/yago_history_sot/build.py",
+    "actual_sha256": "ad4f94668b380e4344c391deaaecc8b2ec104291100b0b4544879063a8534932",
+    "expected_ad4f9466_sha256": "ad4f94668b380e4344c391deaaecc8b2ec104291100b0b4544879063a8534932",
+    "matches_expected": true
+  },
+  "receipt_manifest_crosscheck": {
+    "receipt_path": "data/research/yago-sot-through-1800-20260929/run-evidence/first-attempt/meta.receipt.first-run.json",
+    "receipt_sha256": "c8036e0a751584da8a4ecebe746397b135acbaf351ed867f700267a680a6fa2a",
+    "receipt_bytes": 720870838,
+    "manifest_copy_path": "data/research/yago-storage-20260928/manifest-final.json",
+    "manifest_copy_sha256": "da0d761331e3ccb070bfebbc5ecf4ad5db4165eac0ef5bc619444d95f78a70bb",
+    "manifest_entry": {
+      "path": "yago-meta.ttl",
+      "bytes": 720870838,
+      "sha256": "d6ddcf0803a13fcf69f3b32df2c6f817fc6a807c27bd9cae429287dbc460c020"
+    },
+    "receipt_file": "/home/work/novel-toy-tune/sources/original/yago/4.6/extracted/yago-4.6-meta/yago-meta.ttl",
+    "receipt_expected_sha256": "d6ddcf0803a13fcf69f3b32df2c6f817fc6a807c27bd9cae429287dbc460c020",
+    "receipt_actual_sha256": "d6ddcf0803a13fcf69f3b32df2c6f817fc6a807c27bd9cae429287dbc460c020",
+    "byte_count_matches": true,
+    "sha256_matches_manifest": true,
+    "line_counts": {
+      "all_lines": 6221779,
+      "excluded_header": 34,
+      "mapped_meta": 6221745
+    },
+    "line_accounting_matches": true,
+    "line_equation": "6,221,779 = 6,221,745 mapped_meta + 34 excluded_header",
+    "bloom_verification_path": "data/research/yago-sot-through-1800-20260929/run-evidence/first-attempt/meta-bloom-verification.json",
+    "bloom_verification_sha256": "238073a1d56f52c0c160fe40095cf8eccb7b9f946ad4b6c7c447dd92a5d362aa",
+    "bloom_verification": {
+      "distinct_parent_keys": 4800887,
+      "original_receipt_sha256": "c8036e0a751584da8a4ecebe746397b135acbaf351ed867f700267a680a6fa2a",
+      "reconstructed_bloom_sha256": "1150aa65c46a14f2c4e037b58bfd91d52557deb7d0ed1becc4555bd988edd833",
+      "stage": "meta",
+      "stage_code_sha256": "e46070d3ef8336caefa7145c5b41e6b1be4c03cf6c5ccff58161f886bc2b1eaf"
+    },
+    "receipt_ledger_sha256_reported_only": "d7217bcd3e645a693be624ead125575fa7d631747cf8f4b883b333b3c8d957b1",
+    "receipt_limit": "this receipt verifies only the Meta stage; first attempt then exited 1 during facts scan",
+    "scan_exit": "1",
+    "scan_exit_file_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "scan_log_sha256": "0d279c47d5bda9e363e2704c131bcd29a5bfabb4c8cf282d3b640d95a70c817a",
+    "scan_log_terminal_error": "UnboundLocalError in scan_fact_file at time.monotonic; not evidence of whole-run success"
+  },
+  "source_manifest_facts": {
+    "path": "yago-facts.ttl",
+    "bytes": 5087821943,
+    "sha256": "17da906cefea15aa076ccfd5ce0bd2956b2e95ae06b225cca18059bbaf5eb1e4",
+    "source_file_stat_bytes_on_h200": 5087821943
+  },
+  "read_only_snapshots": [
+    {
+      "db": "reality_yago46_through_1899_20260929",
+      "snapshot_at": "2026-09-29 08:14:22.842957+09",
+      "snapshot_id": "3493:3493:",
+      "transaction": "REPEATABLE READ READ ONLY; statement_timeout 12s; lock_timeout 1s",
+      "query_scope": "claim where source_file='facts' and line_no<=7000000",
+      "claim_row_count": 93967,
+      "min_line_no": 44,
+      "max_line_no": 6999987,
+      "lane_counts": {
+        "H_boundary": 14704,
+        "H_event": 67681,
+        "H_state": 1918,
+        "K_taxonomy_timed": 5784,
+        "dated_boundary_candidate": 610,
+        "dated_observation_candidate": 1700,
+        "dated_other_candidate": 569,
+        "dated_relation_candidate": 1001
+      },
+      "temporal_checks": {
+        "H_event_post_1899": 0,
+        "any_explicit_point_year_post_1899": 0,
+        "H_event_missing_year": 0,
+        "H_state_start_year_post_1899": 0,
+        "H_state_end_year_crosses_1899": 694,
+        "H_state_scope_end_not_1899": 0,
+        "H_state_missing_bound": 0,
+        "context_payload_or_context_lane": 0
+      },
+      "phase_counts": {
+        "meta_evidence_rows": 0,
+        "context_anchor_rows": 0,
+        "auxiliary_rows": 0,
+        "release_rows": 0
+      },
+      "orphan_check": "not assessed: attach-meta is pending and this snapshot has no stored meta_evidence rows; zero is not a final orphan count",
+      "byte_sample_checks": [
+        {
+          "line_no": 44,
+          "byte_offset": 2327,
+          "subject": "yago:Belgium",
+          "predicate": "schema:startDate",
+          "object": "\"1830-10-04\"^^xsd:date",
+          "lane": "H_boundary",
+          "raw_sha256": "8ef2d42f2d9fa588c3e0a0c5e2ddbffbd2ccccfc668dc9ac794045402c6ff887",
+          "raw_equal_at_offset": true,
+          "preceding_byte_is_line_boundary": true,
+          "following_terminator_valid": true,
+          "line_number_verified_short_prefix": true,
+          "prefix_bytes_read": 2327
+        },
+        {
+          "line_no": 166,
+          "byte_offset": 9716,
+          "subject": "yago:George_Washington",
+          "predicate": "schema:nationality",
+          "object": "yago:Kingdom_of_Great_Britain",
+          "lane": "dated_relation_candidate",
+          "raw_sha256": "dbbc97d51239111ad6ecf63e3ba37bd12cb5ae7e708bdab077aefcd1ecbf3cd8",
+          "raw_equal_at_offset": true,
+          "preceding_byte_is_line_boundary": true,
+          "following_terminator_valid": true,
+          "line_number_verified_short_prefix": true,
+          "prefix_bytes_read": 9716
+        },
+        {
+          "line_no": 175,
+          "byte_offset": 10216,
+          "subject": "yago:George_Washington",
+          "predicate": "rdf:type",
+          "object": "yago:Chair_officer",
+          "lane": "K_taxonomy_timed",
+          "raw_sha256": "584e45dfe5940ade3845a4bb1cb6f5aff48d5fb4da1f0c9ce37080aa34c99a3d",
+          "raw_equal_at_offset": true,
+          "preceding_byte_is_line_boundary": true,
+          "following_terminator_valid": true,
+          "line_number_verified_short_prefix": true,
+          "prefix_bytes_read": 10216
+        },
+        {
+          "line_no": 6995469,
+          "byte_offset": 474707336,
+          "subject": "yago:Myōan-ji",
+          "predicate": "schema:startDate",
+          "object": "\"1335\"^^xsd:gYear",
+          "lane": "H_boundary",
+          "raw_sha256": "b53e701eaeea8d16d6c5f00cf26b785a7af19262be6f991f259d981712bcc589",
+          "raw_equal_at_offset": true,
+          "preceding_byte_is_line_boundary": true,
+          "following_terminator_valid": true,
+          "line_number_verified_short_prefix": null,
+          "prefix_bytes_read": null
+        },
+        {
+          "line_no": 6995717,
+          "byte_offset": 474724813,
+          "subject": "yago:Jim_McCoy",
+          "predicate": "schema:birthDate",
+          "object": "\"1875-08-29\"^^xsd:date",
+          "lane": "H_event",
+          "raw_sha256": "35f33fda3544ab3a9cc68e523647476f43b1e5bd6f6536d135dc4f0a90f45170",
+          "raw_equal_at_offset": true,
+          "preceding_byte_is_line_boundary": true,
+          "following_terminator_valid": true,
+          "line_number_verified_short_prefix": null,
+          "prefix_bytes_read": null
+        },
+        {
+          "line_no": 6995913,
+          "byte_offset": 474737762,
+          "subject": "yago:Joe_Canavan",
+          "predicate": "schema:birthDate",
+          "object": "\"1880-11-04\"^^xsd:date",
+          "lane": "H_event",
+          "raw_sha256": "04c7a540a6a136484e9cf5c1bea40c6533c136dede37ad710c5778bf3aa0a5ce",
+          "raw_equal_at_offset": true,
+          "preceding_byte_is_line_boundary": true,
+          "following_terminator_valid": true,
+          "line_number_verified_short_prefix": null,
+          "prefix_bytes_read": null
+        }
+      ]
+    },
+    {
+      "db": "reality_yago46_through_1899_20260929",
+      "snapshot_at": "2026-09-29 08:16:56.313854+09",
+      "snapshot_id": "3505:3505:",
+      "transaction": "REPEATABLE READ READ ONLY; statement_timeout 12s; lock_timeout 1s",
+      "query_scope": "claim where source_file='facts' and line_no<=7000000",
+      "cutoff_crossing_H_state_samples": [
+        {
+          "line_no": 20743,
+          "byte_offset": 1346135,
+          "subject": "yago:Westphalia",
+          "predicate": "schema:location",
+          "raw": "yago:Westphalia\tschema:location\tyago:Kingdom_of_Prussia\t.",
+          "source_start_year": 1815,
+          "source_end_year": 1918,
+          "scope_end_year": 1899,
+          "reason": "meta_interval_nominal_crossing",
+          "raw_equal_at_offset": true,
+          "line_boundary_before": true,
+          "line_terminator_valid": true
+        },
+        {
+          "line_no": 28552,
+          "byte_offset": 1856394,
+          "subject": "yago:Ottoman_Empire",
+          "predicate": "yago:capital",
+          "raw": "yago:Ottoman_Empire\tyago:capital\tyago:Constantinople\t.",
+          "source_start_year": 1453,
+          "source_end_year": 1922,
+          "scope_end_year": 1899,
+          "reason": "meta_interval_nominal_crossing",
+          "raw_equal_at_offset": true,
+          "line_boundary_before": true,
+          "line_terminator_valid": true
+        },
+        {
+          "line_no": 36634,
+          "byte_offset": 2375716,
+          "subject": "yago:Émile_Durkheim",
+          "predicate": "schema:worksFor",
+          "raw": "yago:Émile_Durkheim\tschema:worksFor\tyago:University_of_Bordeaux\t.",
+          "source_start_year": 1886,
+          "source_end_year": 1902,
+          "scope_end_year": 1899,
+          "reason": "meta_interval_nominal_crossing",
+          "raw_equal_at_offset": true,
+          "line_boundary_before": true,
+          "line_terminator_valid": true
+        },
+        {
+          "line_no": 42184,
+          "byte_offset": 2747440,
+          "subject": "yago:Korea",
+          "predicate": "schema:location",
+          "raw": "yago:Korea\tschema:location\tyago:Korean_Empire\t.",
+          "source_start_year": 1897,
+          "source_end_year": 1910,
+          "scope_end_year": 1899,
+          "reason": "meta_interval_nominal_crossing",
+          "raw_equal_at_offset": true,
+          "line_boundary_before": true,
+          "line_terminator_valid": true
+        },
+        {
+          "line_no": 47877,
+          "byte_offset": 3124202,
+          "subject": "yago:Birkenwald",
+          "predicate": "schema:location",
+          "raw": "yago:Birkenwald\tschema:location\tyago:Unterelsaß\t.",
+          "source_start_year": 1871,
+          "source_end_year": 1920,
+          "scope_end_year": 1899,
+          "reason": "meta_interval_nominal_crossing",
+          "raw_equal_at_offset": true,
+          "line_boundary_before": true,
+          "line_terminator_valid": true
+        }
+      ],
+      "precutoff_birth_postcutoff_death_pairs_found_in_indexed_claims": 0,
+      "pair_query_limit": "up to first five subject pairs, limited to mapped H_event birthDate/deathDate claims in facts line_no<=7000000; not the full source",
+      "known_future_death_place_regression": "not executed: no such pair was found in this scanned slice; keep 1880/1905 deathPlace context exclusion as a post-context regression",
+      "facts_source_stat_bytes": 5087821943
+    }
+  ],
+  "interpretation": {
+    "sampled_point_date_cutoff": "No stored mapped point claim in this <=7,000,000 line snapshot has year >1899; this is a bounded snapshot result, not a full-stream proof.",
+    "crossing_intervals": "694 H_state rows carry a raw end year after 1899 while start year is <=1899; all sampled rows and counts carry scope_end_year=1899. Treat this as a boundary-cap follow-up for final query/readback, not an event-leak finding in the current draft.",
+    "context": "No context lane/payload or context anchors were stored yet; the context phase has not run, so context coverage/validity is pending.",
+    "meta_orphans": "No attached Meta evidence existed at this phase. Pending Meta parents can refer to not-yet-scanned facts; do not label them orphaned.",
+    "unknown_rows": "The claim table contains mapped lanes only; excluded/unknown/failed denominators await full stream receipts and separate stage ledger checks.",
+    "original_sample_scope": "11 small raw facts rows were read with pread around fixed byte offsets; all raw bytes, line boundaries and terminators matched. Line numbers were independently newline-counted only for three early rows using prefixes <=10,216 bytes; later rows were raw/offset checks, not full line-count revalidation.",
+    "remote_access": "No source file full rehash or scan was performed; remote reads were limited to indexed SQL predicates and the listed byte-offset samples."
+  },
+  "pending_checks": [
+    "Full receipt denominators after completion.",
+    "Attach-meta linked/orphan/incoming accounting after that phase completes.",
+    "Context bounds and 1880-born/1905-died deathPlace exclusion after context pass; retain raw claim valid-time unknown.",
+    "Final release/query must honor scope_end_year=1899 for crossing H_state intervals.",
+    "Auxiliary label/context phases and immutable publication/readback remain pending."
+  ],
+  "evidence_file_hashes": {
+    "data/research/yago-storage-20260928/manifest-final.json": {
+      "bytes": 9748,
+      "sha256": "da0d761331e3ccb070bfebbc5ecf4ad5db4165eac0ef5bc619444d95f78a70bb"
+    },
+    "data/research/yago-sot-through-1800-20260929/run-evidence/first-attempt/meta.receipt.first-run.json": {
+      "bytes": 539,
+      "sha256": "c8036e0a751584da8a4ecebe746397b135acbaf351ed867f700267a680a6fa2a"
+    },
+    "data/research/yago-sot-through-1800-20260929/run-evidence/first-attempt/meta-bloom-verification.json": {
+      "bytes": 345,
+      "sha256": "238073a1d56f52c0c160fe40095cf8eccb7b9f946ad4b6c7c447dd92a5d362aa"
+    },
+    "data/research/yago-sot-through-1800-20260929/run-evidence/first-attempt/scan.exit": {
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    "data/research/yago-sot-through-1800-20260929/run-evidence/first-attempt/scan.log": {
+      "bytes": 1265,
+      "sha256": "0d279c47d5bda9e363e2704c131bcd29a5bfabb4c8cf282d3b640d95a70c817a"
+    },
+    "tools/yago_history_sot/build.py": {
+      "bytes": 48251,
+      "sha256": "ad4f94668b380e4344c391deaaecc8b2ec104291100b0b4544879063a8534932"
+    }
+  }
+}

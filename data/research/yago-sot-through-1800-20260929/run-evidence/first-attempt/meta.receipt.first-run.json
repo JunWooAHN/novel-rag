@@ -1,0 +1,13 @@
+{
+  "bytes": 720870838,
+  "counts": {
+    "all_lines": 6221779,
+    "excluded_header": 34,
+    "mapped_meta": 6221745
+  },
+  "expected_sha256": "d6ddcf0803a13fcf69f3b32df2c6f817fc6a807c27bd9cae429287dbc460c020",
+  "file": "/home/work/novel-toy-tune/sources/original/yago/4.6/extracted/yago-4.6-meta/yago-meta.ttl",
+  "ledger_sha256": "d7217bcd3e645a693be624ead125575fa7d631747cf8f4b883b333b3c8d957b1",
+  "scanned_at_utc": "2026-09-28T22:55:27.596813+00:00",
+  "sha256": "d6ddcf0803a13fcf69f3b32df2c6f817fc6a807c27bd9cae429287dbc460c020"
+}

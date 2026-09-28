@@ -1,0 +1,175 @@
+{
+  "card": "I1-MIGRATE-20260927",
+  "checked_at_utc": "2026-09-27T03:05:56.634305+00:00",
+  "derived": {
+    "browser_interaction_tested": false,
+    "combined_jsonl_byte_parity_9_of_9": true,
+    "export_dir": "data/training/db-derived/reverse-20260925-i1/private/export",
+    "export_files": {
+      "gogjong/development_holdout.jsonl": {
+        "byte_equal_initial_plus_full": true,
+        "records": 18,
+        "sha256": "8098393dd02cb1aff2fcf6104fbc65ca719ab0bf0c8cd1c5411aaf1f6ff9057a"
+      },
+      "gogjong/development_validation.jsonl": {
+        "byte_equal_initial_plus_full": true,
+        "records": 16,
+        "sha256": "7a56f08269c080c784dabe73ed549d3d13474514e78070f3dc33f6d338b145db"
+      },
+      "gogjong/train.jsonl": {
+        "byte_equal_initial_plus_full": true,
+        "records": 56,
+        "sha256": "ee8fb05db65ae7ca9932b34eae8388595f6717a3f8b5607c4a42351946c2750d"
+      },
+      "goryeo/development_holdout.jsonl": {
+        "byte_equal_initial_plus_full": true,
+        "records": 14,
+        "sha256": "1443fe561e707051cedd5de5cf680f546e4e4a38e53f724109a92fbfeef4165e"
+      },
+      "goryeo/development_validation.jsonl": {
+        "byte_equal_initial_plus_full": true,
+        "records": 18,
+        "sha256": "fa11b608ab8ef32e1885dd9773005adaedb1624d22dcddff68400a791d0aeeda"
+      },
+      "goryeo/train.jsonl": {
+        "byte_equal_initial_plus_full": true,
+        "records": 64,
+        "sha256": "382ca06fabe55bf12365bb2d1482f92797c3dea7e450c43791df45a9cffe8a64"
+      },
+      "poland/development_holdout.jsonl": {
+        "byte_equal_initial_plus_full": true,
+        "records": 16,
+        "sha256": "9d3c81cc4d81ec1fec7f89a201d7a226116134787be83786e2405590618a8f41"
+      },
+      "poland/development_validation.jsonl": {
+        "byte_equal_initial_plus_full": true,
+        "records": 17,
+        "sha256": "e8cd020f20d3830c0914b9aaafe79ac071ebd59778025d163a03455d1c6a44f1"
+      },
+      "poland/train.jsonl": {
+        "byte_equal_initial_plus_full": true,
+        "records": 53,
+        "sha256": "1d6888d6dc4c3fe4ef93819068e817a1b3378fdf4160d3fc57e2c62ec2ad3998"
+      }
+    },
+    "export_records": 272,
+    "independent_luna_272_html_source_answer_equal_to_pinned_db_span": true,
+    "viewer": "data/training/db-derived/reverse-20260925-i1/private/viewer/index.html",
+    "viewer_records": 272,
+    "viewer_sha256": "48badfe6a3c778d171c81ae27a1aa4d231291bc85a5a27645600a37e7c99fb66"
+  },
+  "execution": {
+    "backup_db": "data/analysis/novel-corpus-before-i1-20260927.sqlite3",
+    "backup_sha256": "0ba66b1235aedf2a6d4fc120a4c3ac95b5d02ebb6f2016c13b6b46301703aaef",
+    "first_import": {
+      "accepted": 272,
+      "created": true
+    },
+    "operational_db": "data/analysis/novel-corpus.sqlite3",
+    "operational_db_sha256": "ab69f9dd7e7136fa3e34a1fbdd77fff9f57ee53f46f65cd53189f6b53f5439b1",
+    "restore_check_db": "data/analysis/novel-corpus-i1-restore-check.sqlite3",
+    "restore_check_sha256": "0ba66b1235aedf2a6d4fc120a4c3ac95b5d02ebb6f2016c13b6b46301703aaef",
+    "same_input_retry": {
+      "accepted": 272,
+      "created": false
+    }
+  },
+  "import_id": "reverse-20260925-i1",
+  "normalized_import": {
+    "accepted_by_release": {
+      "full": 122,
+      "initial": 150
+    },
+    "accepted_by_role": {
+      "gemma_style": 90,
+      "sota_planning": 182
+    },
+    "accepted_by_split": {
+      "development_holdout": 48,
+      "development_validation": 51,
+      "train": 173
+    },
+    "analysis_tables_synthetic_rows": 0,
+    "attempt_status": {
+      "hold": 5,
+      "proposed": 289
+    },
+    "candidate_decisions": {
+      "accepted": 272,
+      "hold": 21
+    },
+    "counts": {
+      "analysis_reviews": 0,
+      "analysis_submissions": 0,
+      "analysis_tasks": 0,
+      "analysis_windows": 0,
+      "legacy_artifacts": 990,
+      "legacy_attempts": 294,
+      "legacy_candidates": 293,
+      "legacy_export_rows": 272,
+      "legacy_review_revisions": 88,
+      "legacy_selections": 174,
+      "segmentations": 17,
+      "segments": 5233,
+      "source_revisions": 7,
+      "works": 7
+    },
+    "fingerprint": "1f5519ec2644b8865503dd8f5e0ea64cadff6c64909e996e646d96f02ed5f01b",
+    "independent_luna_link_mismatches": 0
+  },
+  "runtime_code": {
+    "definition": "SHA256 of UTF-8 path:per-file-SHA256 lines in listed order, each terminated by LF",
+    "files": {
+      "src/novel_factory/__init__.py": "93b934e1bb66e396fb94b0f583414231d679208b6e2884a958e8d5bfc595478d",
+      "src/novel_factory/cli.py": "2a8870cd7178d9b40375909bf371aff091d7a1fa53e68aa72c77738deb67b8dc",
+      "src/novel_factory/composition.py": "0d5e1d40fe21db840f56402fc680791e859ee363b25e5216cc6f39a47b2f3cd4",
+      "src/novel_factory/contracts/__init__.py": "7cfe8b92c5ac8d57edc83b7dfbc42df38a0896e02cd34ad75fee17139b2085f6",
+      "src/novel_factory/style/__init__.py": "271303941000ee799260ee8827d15123e19e51f2536b6a26634b63766bff0e51",
+      "src/novel_factory/style/legacy_import.py": "55f3546041bf2230d4685001dcd265bede05d738514602c6caa91716d1024593",
+      "src/novel_factory/style/legacy_release.py": "4dcae4c858f6acde0c8093b7728b4563f4dac72e089cb6164b627879e6612b4c",
+      "src/novel_factory/style/legacy_sqlite.py": "00546a5eb6df1811f50c952442bdec34d0110495e436ad123800cc40a180b650",
+      "src/novel_factory/style/sqlite_store.py": "19dc4328abda7443ed9a5bbd092e9df767e817c231dcc39a29ebf20845ed8e2f",
+      "src/novel_factory/style/workflow.py": "a8a51eb06d259b76eb99b2d483e87ba1038609eb94262a695d4c78a447beb6b1",
+      "tools/reverse_dataset/build.py": "174ac353f7687b24e74c4753999e2c0d2ea5e689f4e872428f8ac15f9b710a96",
+      "tools/reverse_dataset/export.py": "7ae86c1265abb815d74475c10188d71b19d1bdc55f9dba21eae7734e66303d9f",
+      "tools/reverse_dataset/full.py": "2aa71d2ba370615b5890f4392636fb56f5657bccf9008f729b907051b62c36f7",
+      "tools/reverse_dataset/viewer.py": "327a1a69827ce8d1189976a1b74e62dda2981bf42c05457d13001a0dfd30c771"
+    },
+    "manifest_sha256": "3d6d0b358f7044ed6a45ec5abd41a1ff537e5bc8d7b4fe849fba30774f30bec0"
+  },
+  "scope_limitations": [
+    "The imported reverse dataset is not 350 chapter analysis, a training adoption, or story canon.",
+    "Historical held selections are read-only; resolving one requires a new pinned DB task and review.",
+    "The generated viewer was checked as an artifact, not interacted with in a browser."
+  ],
+  "source_protection": {
+    "all_991_legacy_files_unchanged_by_path_bytes_sha256": true,
+    "baseline_report": "/private/tmp/novel-i1-baseline.json",
+    "baseline_report_sha256": "f11eef6a5912b4eaff7c733e77f08c1596ea7a0175d89540222b2dccfa27ba70",
+    "db_artifacts_990_equal_legacy_raw_bytes_sha256": true,
+    "foreign_key_violations": 0,
+    "four_source_tables_equal_to_preimport_backup_by_full_row_digest": true,
+    "independent_luna_991_legacy_file_path_bytes_sha256_equal_to_baseline": true,
+    "independent_luna_source_table_row_hash_equal_to_baseline": true,
+    "preimport_backup_restore_source_rows_equal": true,
+    "quick_check": "ok",
+    "source_table_rows": {
+      "segmentations": 17,
+      "segments": 5233,
+      "source_revisions": 7,
+      "works": 7
+    }
+  },
+  "tests": {
+    "independent_sol_code_and_fixed_copy_review": "accepted",
+    "independent_sol_operational_db_review": "accepted",
+    "luna_fixed_copy_comparison": "accepted",
+    "luna_independent_report": "/private/tmp/novel-i1-final-verification.json",
+    "luna_independent_report_sha256": "2692e67a13495c3c59322398d26bef46bbc4418ad9f4c2df74288c5ef3b3564d",
+    "luna_post_import_comparison": "accepted",
+    "luna_source_baseline": "completed",
+    "novel_corpus_unittest": 8,
+    "product_unittest": 11,
+    "reverse_dataset_unittest": 30
+  }
+}

@@ -1,41 +1,61 @@
 import contextlib
 import io
 import json
-import tempfile
+import subprocess
+import sys
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
+from unittest.mock import patch
 
 import build
 
 
 class SequentialInputTest(unittest.TestCase):
-    def test_show_unit_exposes_current_only_by_default(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            old = build.OUT
-            build.OUT = Path(tmp)
-            try:
-                path = build.OUT / 'private/sections/gogjong-001.json'
-                path.parent.mkdir(parents=True)
-                packet = {'work_id': 'gogjong', 'batch_id': 'gogjong-001-005',
-                          'source_sha256': 'a' * 64, 'segmentation_id': 1,
-                          'excerpt_start_cp': 0, 'excerpt_end_cp': 10,
-                          'excerpt': 'priorCURNT',
-                          'excerpt_sha256': build.sha(b'priorCURNT'),
-                          'current_unit': {'section_order': 1, 'start_cp': 5, 'end_cp': 10}}
-                path.write_text(json.dumps(packet), encoding='utf-8')
-                output = io.StringIO()
-                with contextlib.redirect_stdout(output):
-                    build.show_unit(SimpleNamespace(work='gogjong', order=1, prior_start_cp=None))
-                shown = json.loads(output.getvalue())
-                self.assertEqual(shown['section_text'], 'CURNT')
-                self.assertNotIn('prior_text', shown)
-                output = io.StringIO()
-                with contextlib.redirect_stdout(output):
-                    build.show_unit(SimpleNamespace(work='gogjong', order=1, prior_start_cp=2))
-                self.assertEqual(json.loads(output.getvalue())['prior_text'], 'ior')
-            finally:
-                build.OUT = old
+    def test_archived_cli_writer_is_blocked_without_touching_legacy_files(self):
+        result = subprocess.run([sys.executable, str(Path(build.__file__)), 'freeze'],
+                                capture_output=True, text=True, check=False)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('legacy file input writer is archived', result.stderr)
+
+    def test_legacy_writers_are_unconditionally_archived(self):
+        args = SimpleNamespace(work='gogjong', start=1, end=1)
+        with patch('novel_factory.style.legacy_sqlite.SQLiteLegacyStore.has_import_schema',
+                   return_value=False), patch.object(build, 'collect',
+                   side_effect=AssertionError('legacy source read')):
+            for operation in (build.freeze, build.batch):
+                with self.subTest(operation=operation.__name__):
+                    with self.assertRaisesRegex(ValueError, 'archived'):
+                        operation(args)
+
+    def test_show_unit_uses_only_imported_db_section(self):
+        args = SimpleNamespace(work='gogjong', order=1, prior_start_cp=None, db='copy.db')
+        with patch('novel_factory.style.legacy_sqlite.SQLiteLegacyStore') as adapter:
+            adapter.return_value.get_legacy_section.return_value = {
+                'work_id': 'gogjong', 'section_order': 1, 'section_text': 'CURNT',
+                'import_id': 'reverse-20260925-i1', 'task_id': None}
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output):
+                build.show_unit(args)
+            adapter.assert_called_once_with('copy.db')
+            adapter.return_value.get_legacy_section.assert_called_once_with(
+                'reverse-20260925-i1', 'gogjong', 1)
+        shown = json.loads(output.getvalue())
+        self.assertEqual(shown['section_text'], 'CURNT')
+        self.assertIsNone(shown['task_id'])
+
+    def test_prior_context_needs_separate_approval(self):
+        args = SimpleNamespace(work='gogjong', order=1, prior_start_cp=0, db='copy.db')
+        with self.assertRaisesRegex(ValueError, 'explicitly approved'):
+            build.show_unit(args)
+
+    def test_missing_imported_section_fails_closed(self):
+        args = SimpleNamespace(work='gogjong', order=1, prior_start_cp=None, db='copy.db')
+        with patch('novel_factory.style.legacy_sqlite.SQLiteLegacyStore') as adapter:
+            adapter.return_value.get_legacy_section.side_effect = ValueError('not imported')
+            with self.assertRaisesRegex(ValueError, 'not imported'):
+                build.show_unit(args)
+
 
 
 if __name__ == '__main__':

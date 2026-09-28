@@ -1,0 +1,14 @@
+{
+  "accounting": "secondary related evidence; not added to base denominator or H validity",
+  "counts": {
+    "all_lines": 4,
+    "context_hint": 3,
+    "not_context": 1
+  },
+  "expected_sha256": "befa17900062992e510c91da92cb459a7552925ee6a8509ef90a8018a2796d36",
+  "file": "/home/work/novel-toy-tune/reality-yago46-through-1899-smoke-20260929/fixture-source/yago-4.6-beyond-wikipedia/yago-beyond-wikipedia.ttl",
+  "ledger_sha256": "33516950cc9a6be44b403e5cee4f5180fd65c427e0177a1c1c3dd8e198618f22",
+  "scanned_at_utc": "2026-09-28T23:00:55.256496+00:00",
+  "sha256": "befa17900062992e510c91da92cb459a7552925ee6a8509ef90a8018a2796d36",
+  "stage_code_sha256": "ff89ce4a818d20d0c16f9ea4b7b92d4e9162c48f176cea272adb79560494193a"
+}

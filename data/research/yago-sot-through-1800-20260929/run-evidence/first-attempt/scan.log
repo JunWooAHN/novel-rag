@@ -1,0 +1,15 @@
+{"stage": "meta", "lines": 1000000, "bytes": 115201601, "elapsed_sec": 6.7, "lines_per_sec": 150250, "max_rss_mib": 72}
+{"stage": "meta", "lines": 2000000, "bytes": 231298861, "elapsed_sec": 13.4, "lines_per_sec": 148954, "max_rss_mib": 72}
+{"stage": "meta", "lines": 3000000, "bytes": 347049144, "elapsed_sec": 20.2, "lines_per_sec": 148409, "max_rss_mib": 72}
+{"stage": "meta", "lines": 4000000, "bytes": 462474830, "elapsed_sec": 26.9, "lines_per_sec": 148531, "max_rss_mib": 72}
+{"stage": "meta", "lines": 5000000, "bytes": 578485953, "elapsed_sec": 33.8, "lines_per_sec": 147868, "max_rss_mib": 72}
+{"stage": "meta", "lines": 6000000, "bytes": 695332206, "elapsed_sec": 40.6, "lines_per_sec": 147936, "max_rss_mib": 72}
+Traceback (most recent call last):
+  File "/home/work/novel-toy-tune/reality-yago46-through-1899-20260929/build.py", line 823, in <module>
+    main()
+  File "/home/work/novel-toy-tune/reality-yago46-through-1899-20260929/build.py", line 784, in main
+    scan_fact_file(kind, manifest)
+  File "/home/work/novel-toy-tune/reality-yago46-through-1899-20260929/build.py", line 393, in scan_fact_file
+    started = time.monotonic()
+              ^^^^
+UnboundLocalError: cannot access local variable 'time' where it is not associated with a value

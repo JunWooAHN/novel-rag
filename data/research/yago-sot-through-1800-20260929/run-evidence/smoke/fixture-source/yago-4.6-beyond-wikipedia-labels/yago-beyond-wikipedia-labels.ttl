@@ -1,0 +1,2 @@
+@prefix yago: <http://yago-knowledge.org/resource/> .
+yago:War	rdfs:label	"War event"@en	.

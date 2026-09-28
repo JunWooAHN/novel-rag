@@ -1,7 +1,42 @@
 import unittest
 import json
+import hashlib
+from argparse import Namespace
+from pathlib import Path
+import tempfile
+from unittest.mock import patch
 
-from export import digest, ensure_unique_target, validate_batch
+from export import build, checked_release, digest, ensure_unique_target, render_jsonl_files, validate_batch
+
+
+def synthetic_release(count=272):
+    """Synthetic records for output and browser tests; no novel text is read."""
+    works = ('gogjong', 'goryeo', 'poland')
+    splits = ('train', 'development_validation', 'development_holdout')
+    rows = []
+    for index in range(count):
+        work, split = works[index % 3], splits[(index // 3) % 3]
+        role = 'gemma_style' if work == 'gogjong' else 'sota_planning'
+        answer = '</script> & 특수검색 __COUNT__ __PROVENANCE__' if index == 0 else f'합성 근거 {index}'
+        user = json.dumps({'scene_spec': {'purpose': '특수검색' if index == 0 else f'목표 {index}'}},
+                          ensure_ascii=False, sort_keys=True)
+        assistant = answer if role == 'gemma_style' else json.dumps(
+            {'virtual_history': [{'event': f'합성 사건 {index}'}]}, ensure_ascii=False, sort_keys=True)
+        record = {'sample_id': f'fixture-{index:03d}',
+                  'messages': [{'role': 'user', 'content': user},
+                               {'role': 'assistant', 'content': assistant}],
+                  'metadata': {'work_id': work, 'split': split, 'role': role,
+                               'answer_start_cp': 0, 'answer_end_cp': len(answer),
+                               'answer_sha256': hashlib.sha256(answer.encode()).hexdigest(),
+                               'target_basis': 'observed_exact_source_slice' if role == 'gemma_style'
+                                               else 'reviewed_reconstruction_not_author_intent',
+                               'reviewed_by': 'fixture-reviewer', 'token_validation': 'not_run'}}
+        rows.append({'release': 'initial' if index < 100 else 'full', 'record': record,
+                     'raw_line': json.dumps(record, ensure_ascii=False, sort_keys=True),
+                     'source_answer': answer})
+    return {'release_id': 'fixture-reviewed', 'accepted_count': count,
+            'source_hashes': {'fixture': '0' * 64},
+            'selection_policy_hashes': {'fixture': '1' * 64}, 'rows': rows}
 
 
 class ExportContractTest(unittest.TestCase):
@@ -178,6 +213,49 @@ class ExportContractTest(unittest.TestCase):
         ensure_unique_target('같은\r\n 문장', 'train', seen)
         with self.assertRaisesRegex(ValueError, 'duplicate normalized target'):
             ensure_unique_target('같은 문장', 'development_holdout', seen)
+
+
+class DerivedExportTest(unittest.TestCase):
+    def test_nine_files_preserve_accepted_raw_line_order(self):
+        release = synthetic_release()
+        files = render_jsonl_files(release)
+        self.assertEqual(len(files), 9)
+        self.assertEqual(sum(len(data.splitlines()) for data in files.values()), 272)
+        self.assertEqual(files[('gogjong', 'train')].splitlines()[0].decode(),
+                         release['rows'][0]['raw_line'])
+        self.assertEqual({json.loads(line)['sample_id'] for data in files.values()
+                          for line in data.splitlines()},
+                         {item['record']['sample_id'] for item in release['rows']})
+
+    def test_rejects_changed_source_or_raw_json(self):
+        release = synthetic_release(1)
+        release['rows'][0]['source_answer'] = 'different'
+        with self.assertRaisesRegex(ValueError, 'DB source span'):
+            checked_release(release)
+        release = synthetic_release(1)
+        release['rows'][0]['raw_line'] = '{}'
+        with self.assertRaisesRegex(ValueError, 'stored JSONL line'):
+            checked_release(release)
+        release = synthetic_release(1)
+        release['accepted_count'] = 2
+        with self.assertRaisesRegex(ValueError, 'accepted release count'):
+            checked_release(release)
+
+    def test_cli_builder_writes_derived_manifest_not_legacy_inputs(self):
+        release = synthetic_release()
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / 'release'
+            args = Namespace(db=Path(directory) / 'corpus.sqlite3',
+                             import_id='fixture-import', output_dir=output)
+            with patch('export.read_release', return_value=release):
+                build(args)
+            manifest = json.loads((output / 'release-manifest.json').read_text())
+            self.assertEqual(manifest['kind'], 'derived_from_analysis_db')
+            self.assertEqual(manifest['count'], 272)
+            self.assertEqual(manifest['release_id'], 'fixture-reviewed')
+            self.assertEqual(len(manifest['files']), 9)
+            self.assertEqual((output / 'gogjong/train.jsonl').read_bytes(),
+                             render_jsonl_files(release)[('gogjong', 'train')])
 
 
 if __name__ == '__main__':

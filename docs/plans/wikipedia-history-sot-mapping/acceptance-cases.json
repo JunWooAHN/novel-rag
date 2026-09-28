@@ -1,0 +1,298 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_kind": "hand_authored_design_examples_not_dump_extraction",
+  "status": "proposed_unexecuted",
+  "common_expectations": [
+    "Every extracted claim retains source snapshot, page ID, revision ID, source span, parser version, claim status and review decision separately.",
+    "Missing evidence remains unknown and never becomes a negative fact.",
+    "Project candidates and approved work records never overwrite the shared original-history release."
+  ],
+  "cases": [
+    {
+      "case_id": "AC-IRON-01",
+      "scenario": "청동기시대 작품 주인공의 미래 철기 지식 조기 도입",
+      "synthetic_inputs": [
+        "공용 원역사의 해당 지역 기술 상태는 작품과 분리한다",
+        "작품 설정은 주인공의 지식 범위와 도입 시점을 명시한다",
+        "철 관련 원리·재료·절차와 지역 자원·설비 주장은 각각 근거 상태가 다르다"
+      ],
+      "expected_domains": [
+        "SD-SCI-01",
+        "SD-TECH-02",
+        "SD-TECH-03",
+        "SD-MATERIAL-01",
+        "SD-MATERIAL-02"
+      ],
+      "expected_relations": [
+        "RM-TECH-07",
+        "RM-TECH-04",
+        "RM-TECH-02",
+        "RM-TECH-06",
+        "RM-BRANCH-01",
+        "RM-TECH-08",
+        "RM-TECH-09",
+        "RM-CAUSE-04"
+      ],
+      "acceptance_checks": [
+        "근본 지식은 원역사의 해당 시대 검색 기간 때문에 삭제되지 않는다",
+        "주인공의 인지는 공용 사실이 아닌 작품 설정 전표로 나타난다",
+        "안다·시제품·재현 생산·확산은 별도 결과 상태이며 순서가 강제 승인 단계는 아니다",
+        "실제 제작이 확인되기 전에는 P108 완성품을 생성하지 않는다",
+        "관련 후속 사건만 유지·변형·취소·지연·대체 검토 대상으로 남긴다",
+        "작품의 공개 여부는 주인공의 인지 또는 작업 가용성과 별도 판단한다"
+      ],
+      "must_not_infer": [
+        "전 세계의 철기 보급",
+        "제철 절차를 알기만 하면 생산 가능",
+        "원역사 릴리스 변경",
+        "기계적 개연성 점수"
+      ]
+    },
+    {
+      "case_id": "AC-ANCHOR-02",
+      "scenario": "문종 죽음과 단종 즉위 사이의 앵커 연결 설계",
+      "synthetic_inputs": [
+        "두 앵커의 사실·시각·고정 범위는 검토될 때까지 미확정",
+        "계승 제도·사상 설명과 당시 조정의 구체 행동을 나누어 입력한다"
+      ],
+      "expected_domains": [
+        "SD-POLITY-04",
+        "SD-LAW-01",
+        "SD-IDEA-01"
+      ],
+      "expected_relations": [
+        "RM-TIME-01",
+        "RM-PERSON-02",
+        "RM-POWER-01",
+        "RM-CAUSE-02",
+        "RM-BRANCH-01",
+        "RM-PERSON-08",
+        "RM-TIME-02"
+      ],
+      "acceptance_checks": [
+        "앵커 날짜를 이 fixture만으로 확정하지 않는다",
+        "계승 개념의 존재와 특정 인물의 수용·행동을 분리한다",
+        "필요조건의 충족·부족·충돌·미확인을 근거와 함께 남긴다",
+        "중간 사건은 승인 전 작품 후보로만 남긴다",
+        "실제 복원 평가에서는 중간 사건과 정답 서술을 입력·검색 근거에서 가린 blind split을 별도로 만든다"
+      ],
+      "must_not_infer": [
+        "앞뒤 시간순만으로 인과 확정",
+        "출처 없는 동기",
+        "후대 인물의 지식이 선행 인물에게 전달됨",
+        "평가 정답을 후보 검색 또는 역설계의 입력 근거로 누출"
+      ]
+    },
+    {
+      "case_id": "AC-DOCTRINE-03",
+      "scenario": "종교 교리의 서로 다른 판본과 상충하는 지역별 수용",
+      "synthetic_inputs": [
+        "같은 이름의 교리 설명 두 판본",
+        "서로 반대되는 수용 주장 두 출처",
+        "조직과 의례 자료"
+      ],
+      "expected_domains": [
+        "SD-REL-01",
+        "SD-REL-02",
+        "SD-REL-03",
+        "SD-REL-04"
+      ],
+      "expected_relations": [
+        "RM-PART-02",
+        "RM-REL-01",
+        "RM-REL-02",
+        "RM-CLAIM-01",
+        "RM-CLAIM-02",
+        "RM-REL-03",
+        "RM-REL-04"
+      ],
+      "acceptance_checks": [
+        "교리 내용·경전 표현·교단 조직·실천 행위가 다른 ID를 가진다",
+        "두 해석판과 상충 수용 주장이 함께 남는다",
+        "출처별 수용과 검토 채택 상태를 분리한다"
+      ],
+      "must_not_infer": [
+        "교단 소속이면 모든 교리를 믿음",
+        "교리가 시대 밖에서 불변 진리로 증명됨"
+      ]
+    },
+    {
+      "case_id": "AC-POLITY-04",
+      "scenario": "국가 행위체와 영토 변경·주권 주장 분리",
+      "synthetic_inputs": [
+        "국가명과 정부명",
+        "두 시기의 경계 지도",
+        "서로 다른 영유 인정 주장"
+      ],
+      "expected_domains": [
+        "SD-POLITY-01",
+        "SD-POLITY-02",
+        "SD-POLITY-03",
+        "SD-GEO-02"
+      ],
+      "expected_relations": [
+        "RM-PLACE-01",
+        "RM-POWER-02",
+        "RM-POWER-03",
+        "RM-CLAIM-01",
+        "RM-BRANCH-01"
+      ],
+      "acceptance_checks": [
+        "국가 행위체 ID와 장소·관할 판을 분리한다",
+        "지도 경계의 시기·축척·발행판을 보존한다",
+        "영유 주장과 실효 지배를 별도 상태로 기록한다"
+      ],
+      "must_not_infer": [
+        "같은 이름이면 같은 정부",
+        "하나의 지도로 전 시대 경계 확정",
+        "한쪽 주장을 상대국 승인으로 승격"
+      ]
+    },
+    {
+      "case_id": "AC-BIO-05",
+      "scenario": "생물 종 분류와 단일 개체·표본 구별",
+      "synthetic_inputs": [
+        "종 이름과 분류체계 판",
+        "해당 종으로 분류된 한 표본의 소장 ID"
+      ],
+      "expected_domains": [
+        "SD-BIO-01",
+        "SD-BIO-02"
+      ],
+      "expected_relations": [
+        "RM-ID-02",
+        "RM-CONCEPT-02",
+        "RM-CLAIM-01"
+      ],
+      "acceptance_checks": [
+        "종 분류는 E55 계열이고 표본은 물리 개체로 식별한다",
+        "재분류는 표본의 발생 또는 물리 변화로 기록하지 않는다",
+        "분류 출처와 표본 식별자·채집 시점을 따로 보존한다"
+      ],
+      "must_not_infer": [
+        "종 전체가 표본 하나와 동일",
+        "분류명 변경은 개체 생존기간 변경"
+      ]
+    },
+    {
+      "case_id": "AC-SCIENCE-06",
+      "scenario": "과학 원리·인간 이론판·발견·표현·실제 구현 구별",
+      "synthetic_inputs": [
+        "자연 현상 설명",
+        "서로 다른 시대의 이론판",
+        "발표 문서와 실험 기록"
+      ],
+      "expected_domains": [
+        "SD-SCI-01",
+        "SD-SCI-02",
+        "SD-SCI-03",
+        "SD-TECH-03"
+      ],
+      "expected_relations": [
+        "RM-CONCEPT-01",
+        "RM-CONCEPT-05",
+        "RM-CLAIM-01",
+        "RM-TECH-07",
+        "RM-CONCEPT-06",
+        "RM-CONCEPT-08"
+      ],
+      "acceptance_checks": [
+        "자연 법칙 자체를 인간이 창조한 E28로 매핑하지 않는다",
+        "명제 내용과 수식·문헌판을 분리한다",
+        "발견·발표·수용·지역 구현 시점을 구별한다"
+      ],
+      "must_not_infer": [
+        "현대 출처 작성일을 원리 발생연도로 사용",
+        "과거 인물의 자동 인지",
+        "낡은 이론판을 삭제하여 상충 증거 소실"
+      ]
+    },
+    {
+      "case_id": "AC-FICTION-07",
+      "scenario": "가상 인물과 동명이인 실존 인물 분리",
+      "synthetic_inputs": [
+        "소설의 가상 인물 설명",
+        "동일 이름의 실존 인물 전기",
+        "작품 분기 속 가상 인물 설정"
+      ],
+      "expected_domains": [
+        "SD-FICTION-01",
+        "SD-PEOPLE-01",
+        "SD-LIST-03"
+      ],
+      "expected_relations": [
+        "RM-ID-01",
+        "RM-ID-03",
+        "RM-BRANCH-01"
+      ],
+      "acceptance_checks": [
+        "가상 인물을 공용 원역사의 실존 E21 인물로 등록하지 않는다",
+        "동명 표제는 자동 동일성의 근거가 아니다",
+        "작품 내 시간과 출판 시점을 분리한다"
+      ],
+      "must_not_infer": [
+        "이름 일치로 두 인물을 병합",
+        "가상 인물의 행위를 원역사 사건으로 수용"
+      ]
+    },
+    {
+      "case_id": "AC-UNCERTAINTY-08",
+      "scenario": "날짜 불명·부정문·수치 단위·상충 귀속",
+      "synthetic_inputs": [
+        "연대 불명 사건 주장",
+        "그 사건은 발생하지 않았다는 별도 출처",
+        "서로 다른 단위와 값의 수량표"
+      ],
+      "expected_domains": [
+        "SD-TIME-01",
+        "SD-QUANT-01",
+        "SD-SOURCE-01"
+      ],
+      "expected_relations": [
+        "RM-TIME-01",
+        "RM-CLAIM-01",
+        "RM-CLAIM-02",
+        "RM-CLAIM-03",
+        "RM-CLAIM-04",
+        "RM-CLAIM-05"
+      ],
+      "acceptance_checks": [
+        "미상 날짜는 임의 중간값으로 채우지 않는다",
+        "명시적 부정과 기록 부재를 다르게 저장한다",
+        "원래 수치·단위·범위와 환산판을 병존시킨다",
+        "상충 주장 둘과 각각의 출처·검토 상태를 유지한다"
+      ],
+      "must_not_infer": [
+        "빈 날짜=사건 없음",
+        "상충 평균값이 정답",
+        "출처 없는 단위 환산"
+      ]
+    },
+    {
+      "case_id": "AC-UNMAPPED-09",
+      "scenario": "알 수 없는 템플릿과 파서 손실의 무손실 보존",
+      "synthetic_inputs": [
+        "해석되지 않은 중첩 템플릿",
+        "표 셀 하나의 추출 실패",
+        "나머지 본문은 정상 추출"
+      ],
+      "expected_domains": [
+        "SD-UNKNOWN-01",
+        "SD-LIST-01"
+      ],
+      "expected_relations": [
+        "RM-SOURCE-01"
+      ],
+      "acceptance_checks": [
+        "미해석 구간의 원형 wikitext·page/revision/span/hash·실패코드가 남는다",
+        "부분 실패가 문서 전체의 조용한 삭제로 이어지지 않는다",
+        "파서판 교체 후 동일 source 키로 재처리와 차이를 대조한다"
+      ],
+      "must_not_infer": [
+        "추출 실패를 역사적 부재로 취급",
+        "원문 없이 요약만 저장",
+        "근거 없는 정상 처리 표시"
+      ]
+    }
+  ]
+}

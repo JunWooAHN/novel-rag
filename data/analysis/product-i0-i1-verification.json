@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-27",
+  "scope": "I0-I1 first bounded analysis workflow only",
+  "runtime_code_sha256": "958389d1605a94229affa66cea730b5398999f8522d53e763c2282a1dcdd8fd5",
+  "runtime_code_sha_definition": "SHA256 of the listed path:per-file-SHA256 lines in code_files order; excludes managed Markdown frontmatter",
+  "code_files": [
+    "pyproject.toml",
+    "src/novel_factory/__init__.py",
+    "src/novel_factory/contracts/__init__.py",
+    "src/novel_factory/style/__init__.py",
+    "src/novel_factory/style/workflow.py",
+    "src/novel_factory/style/sqlite_store.py",
+    "src/novel_factory/composition.py",
+    "src/novel_factory/cli.py",
+    "tests/novel_factory/test_analysis_workflow.py",
+    "tools/reverse_dataset/build.py",
+    "tools/reverse_dataset/full.py",
+    "tools/reverse_dataset/test_build.py",
+    "tools/reverse_dataset/test_full.py"
+  ],
+  "tests": {
+    "product_unittest": 7,
+    "novel_corpus_unittest": 8,
+    "reverse_dataset_unittest": 23,
+    "corpus_verify": "pass",
+    "git_diff_check": "pass",
+    "editable_cli_install": "pass"
+  },
+  "independent_review": {
+    "sol": "first-slice code and CRLF/result-read amendments accepted",
+    "luna": "copy source/span/hash and synthetic isolation accepted"
+  },
+  "cutover": {
+    "cutover": "empty_analysis_schema_only",
+    "operational_db": "/Users/ahnjunwoo/dev/novel/data/analysis/novel-corpus.sqlite3",
+    "backup_db": "/Users/ahnjunwoo/dev/novel/data/analysis/novel-corpus-before-i0-20260927.sqlite3",
+    "operational_file_sha256_before": "bbe2d564eba8ca6a9af3878a3cf877ef2ca1f4365547abdefd3fb359e40faf89",
+    "operational_file_sha256_after": "78a4d71cb51263078757dbf23d91b4355ab355885b12664920acadcf5e29d187",
+    "backup_file_sha256": "8b4e8ffea15edf66b48a4711ce3a5fa2043da58d36a24621ecdb8a980a45dfc9",
+    "source_tables": {
+      "works": {
+        "count": 7,
+        "sha256": "104a3d28ca4abe6b94f3c2de28acddb1aa751120023affc33c44e7c9e58995cd"
+      },
+      "source_revisions": {
+        "count": 7,
+        "sha256": "5b3540811a51e5418a0018b5b011588e2318a9e3ad6a16719af970ae129af8b1"
+      },
+      "segmentations": {
+        "count": 17,
+        "sha256": "d80297a5761065ea1e827017a2b6e6946d712bcb129383a43ffa92d6cd7f5442"
+      },
+      "segments": {
+        "count": 5233,
+        "sha256": "8072f9513073b9db3e00ab0e479a3934c7a67de78c18b2c7c04587fa633d24cd"
+      }
+    },
+    "analysis_counts": {
+      "analysis_windows": 0,
+      "analysis_tasks": 0,
+      "analysis_submissions": 0,
+      "analysis_reviews": 0
+    },
+    "integrity_check": "ok",
+    "foreign_key_errors": 0,
+    "pinned_read": {
+      "work_id": "poland",
+      "source_revision_id": 7,
+      "segmentation_id": 16,
+      "chapter": 1,
+      "start_cp": 0,
+      "end_cp": 6830,
+      "text_sha256": "59a2f46f68bdcf7cdfc0f0997df62bbb3f62699a500ac5add30b70f221be6d8c"
+    },
+    "source_rows_match_before_after": true,
+    "backup_rows_match_pre_cutover": true,
+    "restore_dry_run": {
+      "integrity_check": "ok",
+      "foreign_key_errors": 0,
+      "source_counts": {
+        "works": 7,
+        "source_revisions": 7,
+        "segmentations": 17,
+        "segments": 5233
+      }
+    }
+  },
+  "copy_smoke": {
+    "copy_db": "/Users/ahnjunwoo/dev/novel/data/analysis/novel-corpus-i0-smoke.sqlite3",
+    "original_db_sha256_unchanged": "bbe2d564eba8ca6a9af3878a3cf877ef2ca1f4365547abdefd3fb359e40faf89",
+    "chapter_task_id": "analysis:098856379b3c23f4f3cd49452e817d65f4eea46fb75cf8c14ea276c247365711",
+    "chapter_span": {
+      "work_id": "poland",
+      "source_revision_id": 7,
+      "source_sha256": "483360b0f19e6d1c702fe3aec2b338331c9907fb2de796aa1c16ff5526ba9832",
+      "segmentation_id": 16,
+      "start_cp": 0,
+      "end_cp": 6830,
+      "text_sha256": "59a2f46f68bdcf7cdfc0f0997df62bbb3f62699a500ac5add30b70f221be6d8c"
+    },
+    "chapter_body_length_cp": 6830,
+    "window_task_id": "analysis:21ea96b17dcdcdbce96a86746ccf81cce90e5fb91535afd0f56b2abf2d52b28a",
+    "window_span": {
+      "work_id": "poland",
+      "source_revision_id": 7,
+      "source_sha256": "483360b0f19e6d1c702fe3aec2b338331c9907fb2de796aa1c16ff5526ba9832",
+      "segmentation_id": 16,
+      "start_cp": 40451,
+      "end_cp": 42280,
+      "text_sha256": "506b3af370a48eb9acaabdffe06265cb64ccf9f021691115d12614262408329c"
+    },
+    "window_body_length_cp": 1829,
+    "window_role": "sota_planning",
+    "window_split": "train",
+    "window_approval_ref": "decision:poland-006-010:d7ae35af663fed78f16bdcaca2bcce42dd2b0d2357d0e8b2c0881e382bf7e18f",
+    "synthetic_submission_sha256": "1f47adbb928c666daf36e4bdc9ba5daf0c7231825b2c76ef654c6404b7ef6992",
+    "synthetic_review_sha256": "9f53a322c6fd3dddaf350810d0afd0509937b5ccf10b4a5a73d790b083359447",
+    "states": [
+      "needs_review",
+      "complete"
+    ],
+    "integrity_check": "ok",
+    "foreign_key_errors": 0,
+    "legacy_show_unit": {
+      "selection_id": "poland-section-006",
+      "span": [
+        37339,
+        45699
+      ],
+      "text_sha256": "7ada384221e56dd381d7f92c1431a1809476905be2508df390f6610ed23f8a2a",
+      "task_id": "analysis:42f8f30d9f7344f2f950e5535784ef5b70984620b829c2dcc50fca6ba77d2a93"
+    },
+    "legacy_show_window": {
+      "selection_id": "poland-b01-w01:primary",
+      "span": [
+        413676,
+        428179
+      ],
+      "text_sha256": "7ca40355b37bf10fe3e5f529fe7e4d962d745476db9ecbc4c160f634caa471dd",
+      "task_id": "analysis:7a2c5e5bcdb928a71110399c42f61b418ad10b4161afa76fab4735f3210e7ef3",
+      "approval_ref": "smoke:frozen-window-selection"
+    }
+  },
+  "result_read_smoke": {
+    "copy_db": "/Users/ahnjunwoo/dev/novel/data/analysis/novel-corpus-i0-result-smoke.sqlite3",
+    "task_id": "analysis:098856379b3c23f4f3cd49452e817d65f4eea46fb75cf8c14ea276c247365711",
+    "source_span": {
+      "work_id": "poland",
+      "source_revision_id": 7,
+      "source_sha256": "483360b0f19e6d1c702fe3aec2b338331c9907fb2de796aa1c16ff5526ba9832",
+      "segmentation_id": 16,
+      "start_cp": 0,
+      "end_cp": 6830,
+      "text_sha256": "59a2f46f68bdcf7cdfc0f0997df62bbb3f62699a500ac5add30b70f221be6d8c"
+    },
+    "synthetic_submission_id": "smoke-crlf",
+    "payload_sha256": "d5b12e1326c6f127221f81578c028415f322b76ed933d427655c6a0be3161270",
+    "stored_payload_byte_equal": true,
+    "review_sha256": "f3eed682a3d467202552567cae4a99aac7864fae5c5a39496e2190eb861a9004",
+    "states": [
+      "needs_review",
+      "complete"
+    ],
+    "operational_db_synthetic_rows": 0
+  },
+  "not_done": [
+    "272 legacy reverse results not migrated",
+    "350 official chapter analysis cards not produced",
+    "legacy 272-record HTML viewer/export remains file-based",
+    "no GPU training, history release, or writing canon"
+  ]
+}

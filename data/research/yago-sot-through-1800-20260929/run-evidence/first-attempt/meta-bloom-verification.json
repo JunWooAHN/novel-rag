@@ -1,0 +1,7 @@
+{
+  "distinct_parent_keys": 4800887,
+  "original_receipt_sha256": "c8036e0a751584da8a4ecebe746397b135acbaf351ed867f700267a680a6fa2a",
+  "reconstructed_bloom_sha256": "1150aa65c46a14f2c4e037b58bfd91d52557deb7d0ed1becc4555bd988edd833",
+  "stage": "meta",
+  "stage_code_sha256": "e46070d3ef8336caefa7145c5b41e6b1be4c03cf6c5ccff58161f886bc2b1eaf"
+}

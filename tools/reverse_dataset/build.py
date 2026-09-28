@@ -4,9 +4,11 @@ import argparse
 import hashlib
 import json
 import sqlite3
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'src'))  # direct legacy CLI can reach the local product package
 DB = ROOT / 'data/analysis/novel-corpus.sqlite3'
 OUT = ROOT / 'data/training/reverse-20260925'
 ROLES = {'gogjong': 'gemma_style', 'goryeo': 'sota_planning', 'poland': 'sota_planning'}
@@ -96,6 +98,7 @@ def policy_for(manifest):
 
 
 def freeze(_args):
+    raise ValueError('legacy freeze is archived; use DB workflow commands')
     manifest = collect()
     write_frozen(OUT / 'source-manifest.json', manifest)
     write_frozen(OUT / 'split-policy.json', policy_for(manifest))
@@ -104,6 +107,7 @@ def freeze(_args):
 
 
 def batch(args):
+    raise ValueError('legacy batch file writing is archived; use DB workflow commands')
     if not (1 <= args.start <= args.end <= 50):
         raise ValueError('batch section order must be within 1–50')
     manifest_bytes = (OUT / 'source-manifest.json').read_bytes()
@@ -154,25 +158,12 @@ def batch(args):
 
 
 def show_unit(args):
-    path = OUT / 'private/sections' / f'{args.work}-{args.order:03d}.json'
-    section = json.loads(path.read_text(encoding='utf-8'))
-    unit = section['current_unit']
-    if section['work_id'] != args.work or unit['section_order'] != args.order:
-        raise ValueError('section identity mismatch')
-    excerpt = section['excerpt']
-    if sha(excerpt.encode('utf-8')) != section['excerpt_sha256'] or len(excerpt) != section['excerpt_end_cp'] - section['excerpt_start_cp']:
-        raise ValueError('section excerpt hash/range mismatch')
-    start = section['excerpt_start_cp']
-    result = {'batch_id': section['batch_id'], 'work_id': args.work, 'section_order': args.order,
-              'source_sha256': section['source_sha256'], 'segmentation_id': section['segmentation_id'],
-              'section_start_cp': unit['start_cp'], 'section_end_cp': unit['end_cp'],
-              'section_text': excerpt[unit['start_cp'] - start:unit['end_cp'] - start]}
     if args.prior_start_cp is not None:
-        if not start <= args.prior_start_cp <= unit['start_cp']:
-            raise ValueError('prior start is outside allowed earlier excerpt')
-        result['prior_start_cp'] = args.prior_start_cp
-        result['prior_end_cp'] = unit['start_cp']
-        result['prior_text'] = excerpt[args.prior_start_cp - start:unit['start_cp'] - start]
+        raise ValueError('prior context requires its own explicitly approved DB window')
+    from novel_factory.style.legacy_import import IMPORT_ID
+    from novel_factory.style.legacy_sqlite import SQLiteLegacyStore
+    result = SQLiteLegacyStore(getattr(args, 'db', DB)).get_legacy_section(
+        IMPORT_ID, args.work, args.order)
     print(json.dumps(result, ensure_ascii=False))
 
 
@@ -188,9 +179,12 @@ def main():
     u.add_argument('work', choices=sorted(ROLES))
     u.add_argument('order', type=int)
     u.add_argument('--prior-start-cp', type=int)
+    u.add_argument('--db', type=Path, default=DB)
     args = parser.parse_args()
     try:
-        {'freeze': freeze, 'batch': batch, 'show-unit': show_unit}[args.command](args)
+        if args.command != 'show-unit':
+            raise ValueError('legacy file input writer is archived; use novel-factory DB workflow')
+        show_unit(args)
     except (ValueError, OSError, sqlite3.Error) as exc:
         parser.exit(1, f'error: {exc}\n')
 

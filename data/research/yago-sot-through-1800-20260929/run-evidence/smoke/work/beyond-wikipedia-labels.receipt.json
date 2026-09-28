@@ -1,0 +1,16 @@
+{
+  "bytes": 91,
+  "counts": {
+    "all_lines": 2,
+    "excluded": 1,
+    "header_or_blank": 1,
+    "mapped": 1,
+    "related_auxiliary_only": 1
+  },
+  "expected_sha256": "58844807658c1a7238fbddcad0ef2e89757f7b67b79025356166c1648c0de325",
+  "file": "/home/work/novel-toy-tune/reality-yago46-through-1899-smoke-20260929/fixture-source/yago-4.6-beyond-wikipedia-labels/yago-beyond-wikipedia-labels.ttl",
+  "ledger_sha256": "429be57d1b456d6e6534d3e92e49c3f206e8d2e2148c43606a47c4e3723be353",
+  "scanned_at_utc": "2026-09-28T23:00:55.509748+00:00",
+  "sha256": "58844807658c1a7238fbddcad0ef2e89757f7b67b79025356166c1648c0de325",
+  "stage_code_sha256": "ff89ce4a818d20d0c16f9ea4b7b92d4e9162c48f176cea272adb79560494193a"
+}

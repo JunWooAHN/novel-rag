@@ -1,0 +1,6 @@
+@prefix yago: <http://yago-knowledge.org/resource/> .
+<<	yago:State	schema:memberOf	yago:Empire	>>	schema:startDate	"1890"^^xsd:gYear	.
+<<	yago:State	schema:memberOf	yago:Empire	>>	schema:endDate	"1910"^^xsd:gYear	.
+<<	yago:Ghost	schema:memberOf	yago:Empire	>>	schema:startDate	"1800"^^xsd:gYear	.
+<<	yago:A	rdf:type	schema:Person	>>	schema:startDate	"1800"^^xsd:gYear	.
+<<	yago:A	rdf:type	schema:Person	>>	schema:endDate	"1880"^^xsd:gYear	.

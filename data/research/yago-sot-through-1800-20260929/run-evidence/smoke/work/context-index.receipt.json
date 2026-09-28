@@ -1,0 +1,12 @@
+{
+  "anchored_subjects": 1,
+  "basis": "unique same-subject explicit birth and death anchors; context_only",
+  "context_bloom_sha256": "1a6efeb052b82e5691a68376e45ed77b83cae79843151d0df0ed82fec4275590",
+  "held": {
+    "bounded_context_subjects": 1,
+    "missing_or_conflicting_life_anchors": 1
+  },
+  "related_bloom_sha256": "f4be030c294f6de0ca802fafb06686494a5ecb2d60729a872f758590b6bc397a",
+  "related_claim_subjects": 5,
+  "stage_code_sha256": "ff89ce4a818d20d0c16f9ea4b7b92d4e9162c48f176cea272adb79560494193a"
+}

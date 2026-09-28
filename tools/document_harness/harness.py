@@ -26,7 +26,7 @@ DEFAULT_DB = ROOT / "data/document_harness/documents.sqlite3"
 SCHEMA_VERSION = 1
 FIELDS = (
     "category_id", "lineage_id", "document_id", "parent_lineage_id", "abstract",
-    "version", "created_at", "updated_at", "tags",
+    "version", "created_at", "updated_at", "tags", "canon",
 )
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS meta(key TEXT PRIMARY KEY, value TEXT NOT NULL);
@@ -189,8 +189,8 @@ def encode_markdown(data: dict, body: str) -> bytes:
     return ("---\n" + header + "---\n" + body).encode("utf-8")
 
 
-def validate_metadata(data: dict) -> dict:
-    missing = [key for key in FIELDS if key not in data]
+def validate_metadata(data: dict, *, old_canon: bool = False) -> dict:
+    missing = [key for key in FIELDS if key not in data and not (old_canon and key == "canon")]
     if missing:
         raise HarnessError("missing front matter: " + ", ".join(missing))
     for key in ("category_id", "lineage_id", "document_id"):
@@ -209,7 +209,264 @@ def validate_metadata(data: dict) -> dict:
     if data["created_at"] and data["updated_at"] and data["created_at"] > data["updated_at"]:
         raise HarnessError("created_at is later than updated_at")
     data["tags"] = normalize_tags(data["tags"])
+    if "canon" in data and type(data["canon"]) is not bool:
+        raise HarnessError("canon must be a YAML boolean")
     return data
+
+
+def has_content(body: str) -> bool:
+    """A heading or other non-whitespace body is the first saved document content."""
+    return bool(body.strip())
+
+
+def patch_display(raw: bytes, *, canon: bool | None = None,
+                  created_at: str | None = None, set_created: bool = False,
+                  updated_at: str | None = None) -> bytes:
+    """Change only derived front-matter fields; leave body bytes untouched."""
+    text = raw.decode("utf-8")
+    match = re.match(r"\A(---\r?\n)(.*?)(\r?\n---\r?\n)", text, re.S)
+    if not match:
+        raise HarnessError("managed document requires YAML front matter")
+    lines = match.group(2).splitlines()
+    def replace(key: str, value: str):
+        hits = [i for i, line in enumerate(lines) if re.match(rf"^{re.escape(key)}\s*:", line)]
+        if len(hits) > 1:
+            raise HarnessError(f"duplicate {key} front matter")
+        ending = "\r\n" if "\r\n" in match.group(1) else "\n"
+        entry = f"{key}: {value}"
+        if hits:
+            lines[hits[0]] = entry
+        else:
+            lines.append(entry)
+    if set_created:
+        replace("created_at", yaml.safe_dump(created_at, default_flow_style=True).strip() if created_at else "null")
+    if updated_at is not None:
+        replace("updated_at", yaml.safe_dump(updated_at, default_flow_style=True).strip())
+    if canon is not None:
+        replace("canon", "true" if canon else "false")
+    ending = "\r\n" if "\r\n" in match.group(1) else "\n"
+    return (match.group(1) + ending.join(lines) + match.group(3) + text[match.end():]).encode("utf-8")
+
+
+def write_bytes(path: Path, raw: bytes) -> None:
+    with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as handle:
+        handle.write(raw)
+        temp = Path(handle.name)
+    try:
+        os.replace(temp, path)
+    finally:
+        temp.unlink(missing_ok=True)
+
+
+def restore_files(originals: dict[Path, bytes]) -> None:
+    for path, raw in reversed(list(originals.items())):
+        if path.read_bytes() != raw:
+            write_bytes(path, raw)
+
+
+def log_file_mirrors(con: sqlite3.Connection, lineage: str, message: str,
+                     mirrors: list[dict], *, selection_changed: bool = False) -> None:
+    if not mirrors:
+        return
+    logged = json.dumps({"message": message, "file_mirrors": mirrors}, ensure_ascii=False)
+    if selection_changed:
+        con.execute("UPDATE selection_log SET message=? WHERE id=(SELECT max(id) FROM selection_log WHERE lineage_id=?)",
+                    (logged, lineage))
+    else:
+        selected = current(con, lineage)
+        selected_id = selected["document_id"] if selected else None
+        con.execute("INSERT INTO selection_log(lineage_id,previous_document_id,selected_document_id,action,message,observed_commit_id,recorded_at) VALUES (?,?,?,?,?,?,?)",
+                    (lineage, selected_id, selected_id, "retain", logged, observed_head(), now()))
+
+
+def row_matches_file(con: sqlite3.Connection, row: sqlite3.Row, raw: bytes,
+                     *, allow_body_change: bool = False,
+                     allow_repaired_date: bool = False,
+                     allow_canon_repair: bool = False) -> tuple[dict, str]:
+    data, body = parse_markdown(raw)
+    data = validate_metadata(data, old_canon=True)
+    expected = {key: row[key] for key in FIELDS if key not in ("tags", "canon")}
+    expected["tags"] = json.loads(con.execute("SELECT json(tags) FROM documents WHERE document_id=?", (row["document_id"],)).fetchone()[0])
+    for key, value in expected.items():
+        if key == "created_at" and allow_repaired_date and data[key] is None and value is not None:
+            continue
+        if data[key] != value:
+            raise HarnessError(f"file/DB {key} mismatch for {row['document_id']}")
+    if "canon" in data and data["canon"] != bool(row["canon"]) and not allow_canon_repair:
+        raise HarnessError(f"file/DB canon mismatch for {row['document_id']}; use finalize")
+    if not allow_body_change and body != row["body"]:
+        raise HarnessError(f"file/DB body mismatch for {row['document_id']}")
+    return data, body
+
+
+def mirror_lineage(con: sqlite3.Connection, lineage: str, originals: dict[Path, bytes],
+                   old_created: dict[str, str | None] | None = None,
+                   skip_paths: set[Path] | None = None,
+                   mirrors: list[dict] | None = None) -> None:
+    """Mirror only the edition actually present at each path, never another edition."""
+    paths = con.execute("SELECT DISTINCT source_path FROM documents WHERE lineage_id=?", (lineage,)).fetchall()
+    for item in paths:
+        path = ROOT / item[0]
+        if skip_paths and path in skip_paths:
+            continue
+        if not path.is_file():
+            continue
+        raw = path.read_bytes()
+        try:
+            data, _ = parse_markdown(raw)
+        except HarnessError:
+            continue  # A legacy source may have no managed front matter.
+        row = con.execute("SELECT * FROM documents WHERE document_id=?", (data.get("document_id"),)).fetchone()
+        if not row or row["source_path"] != item[0]:
+            raise HarnessError(f"unregistered or moved managed file: {item[0]}")
+        if row["lineage_id"] != lineage:
+            continue  # A path reused by another lineage is not ours to edit.
+        # Selection just changed in this transaction, so compare other fields only.
+        observed = dict(row)
+        observed["canon"] = data.get("canon", bool(row["canon"]))
+        if old_created and row["document_id"] in old_created:
+            observed["created_at"] = old_created[row["document_id"]]
+        row_matches_file(con, observed, raw)
+        updated = patch_display(raw, canon=bool(row["canon"]), created_at=row["created_at"],
+                                set_created=bool(old_created and row["document_id"] in old_created))
+        changed_file = updated != raw
+        changed_hash = row["source_hash"] != digest(updated)
+        if changed_file:
+            originals.setdefault(path, raw)
+            write_bytes(path, updated)
+        if changed_file or changed_hash:
+            if mirrors is not None:
+                mirrors.append({"source_path": item[0], "document_id": row["document_id"],
+                                "old_canon_display": data.get("canon"),
+                                "new_canon_display": bool(row["canon"]),
+                                "old_source_hash": row["source_hash"],
+                                "new_source_hash": digest(updated),
+                                "old_file_hash": digest(raw), "new_file_hash": digest(updated)})
+            con.execute("UPDATE documents SET source_hash=? WHERE document_id=?", (digest(updated), row["document_id"]))
+
+
+def check_lineage_files(con: sqlite3.Connection, lineage: str,
+                        *, allow_body_change: bool = False,
+                        allow_canon_repair: bool = False) -> set[Path]:
+    dirty = set()
+    paths = con.execute("SELECT DISTINCT source_path FROM documents WHERE lineage_id=?", (lineage,)).fetchall()
+    for item in paths:
+        path = ROOT / item[0]
+        if not path.is_file():
+            continue
+        raw = path.read_bytes()
+        try:
+            data, _ = parse_markdown(raw)
+        except HarnessError:
+            continue
+        row = con.execute("SELECT * FROM documents WHERE document_id=?", (data.get("document_id"),)).fetchone()
+        if not row or row["source_path"] != item[0]:
+            raise HarnessError(f"unregistered or moved managed file: {item[0]}")
+        if row["lineage_id"] == lineage:
+            _, body = row_matches_file(con, row, raw, allow_body_change=allow_body_change,
+                                       allow_canon_repair=allow_canon_repair)
+            if body != row["body"]:
+                dirty.add(path)
+    return dirty
+
+
+def prepare_import(con: sqlite3.Connection, path: Path, originals: dict[Path, bytes]) -> None:
+    raw = path.read_bytes()
+    data, body = parse_markdown(raw)
+    data = validate_metadata(data, old_canon=True)
+    prior = con.execute("SELECT * FROM documents WHERE document_id=?", (data["document_id"],)).fetchone()
+    if prior:
+        if prior["source_path"] != source_path(path):
+            raise HarnessError("document_id already identifies a different source path")
+        row_matches_file(con, prior, raw)
+        desired_canon = bool(prior["canon"])
+        updated = patch_display(raw, canon=desired_canon)
+    else:
+        if data.get("canon", False) is not False:
+            raise HarnessError("new edition must have canon: false; use finalize")
+        created = data["created_at"]
+        updated_time = data["updated_at"]
+        if has_content(body) and created is None:
+            created = updated_time or now()
+            updated_time = updated_time or created
+        if not has_content(body) and created is not None:
+            earlier = con.execute("SELECT body,created_at FROM documents WHERE lineage_id=? AND version IS NOT NULL", (data["lineage_id"],)).fetchall()
+            if not any(has_content(row["body"]) and row["created_at"] == created for row in earlier):
+                raise HarnessError("empty first edition cannot have created_at")
+        updated = patch_display(raw, canon=False, created_at=created,
+                                set_created=created != data["created_at"],
+                                updated_at=updated_time if updated_time != data["updated_at"] else None)
+    if updated != raw:
+        originals.setdefault(path, raw)
+        write_bytes(path, updated)
+
+
+def sync_metadata(con: sqlite3.Connection, originals: dict[Path, bytes]) -> dict:
+    """One-time date repair plus safe canon mirror for registered managed files."""
+    repaired, skipped, dirty_files, mirrors = [], [], [], []
+    lineages = [r[0] for r in con.execute("SELECT DISTINCT lineage_id FROM documents WHERE legacy=0 ORDER BY lineage_id")]
+    for lineage in lineages:
+        try:
+            dirty = check_lineage_files(con, lineage, allow_body_change=True,
+                                        allow_canon_repair=True)
+        except HarnessError as exc:
+            skipped.append({"lineage_id": lineage, "reason": str(exc)})
+            continue
+        rows = con.execute("SELECT * FROM documents WHERE lineage_id=? AND legacy=0", (lineage,)).fetchall()
+        ordered = sorted(rows, key=lambda r: tuple(map(int, r["version"].split("."))))
+        first_content = next((r for r in ordered if has_content(r["body"])), None)
+        old_created: dict[str, str | None] = {}
+        if first_content and first_content["created_at"] is None:
+            anchor = first_content["updated_at"]
+            date_problem = None
+            if anchor is None:
+                date_problem = "first content edition has no updated_at"
+            else:
+                later = ordered[ordered.index(first_content):]
+                if any(r["updated_at"] is not None and r["updated_at"] < anchor for r in later):
+                    date_problem = "later edition predates first content"
+                elif any(r["created_at"] not in (None, anchor) for r in later):
+                    date_problem = "conflicting existing created_at"
+            if date_problem:
+                skipped.append({"lineage_id": lineage, "reason": date_problem})
+            else:
+                for row in later:
+                    if row["created_at"] is None:
+                        old_created[row["document_id"]] = None
+                        repaired.append({"lineage_id": lineage, "document_id": row["document_id"],
+                                         "old_created_at": None, "old_source_hash": row["source_hash"],
+                                         "first_content_document_id": first_content["document_id"],
+                                         "first_content_updated_at": anchor})
+                        con.execute("UPDATE documents SET created_at=? WHERE document_id=?", (anchor, row["document_id"]))
+        dirty_files.extend(sorted(source_path(path) for path in dirty))
+        mirror_lineage(con, lineage, originals, old_created, skip_paths=dirty, mirrors=mirrors)
+    return {"repaired": repaired, "skipped": skipped,
+            "dirty_files_not_mirrored": dirty_files, "mirrors": mirrors}
+
+
+def file_diagnostics(con: sqlite3.Connection) -> dict:
+    checked, missing, problems = 0, [], []
+    paths = [r[0] for r in con.execute("SELECT DISTINCT source_path FROM documents WHERE legacy=0 ORDER BY source_path")]
+    for spath in paths:
+        path = ROOT / spath
+        if not path.is_file():
+            missing.append(spath)
+            continue
+        try:
+            raw = path.read_bytes()
+            data, _ = parse_markdown(raw)
+            if "canon" not in data:
+                raise HarnessError("managed file lacks canon display")
+            row = con.execute("SELECT * FROM documents WHERE document_id=?", (data.get("document_id"),)).fetchone()
+            if not row or row["source_path"] != spath:
+                raise HarnessError("file document_id is unregistered or belongs to another path")
+            row_matches_file(con, row, raw)
+            if row["source_hash"] != digest(raw):
+                raise HarnessError("file/source_hash mismatch")
+            checked += 1
+        except (HarnessError, UnicodeError, OSError, yaml.YAMLError) as exc:
+            problems.append({"path": spath, "reason": str(exc)})
+    return {"checked": checked, "missing": missing, "problems": problems}
 
 
 def current(con: sqlite3.Connection, lineage: str) -> sqlite3.Row | None:
@@ -234,7 +491,8 @@ def assert_parent(con: sqlite3.Connection, parent: str | None, lineage: str) -> 
 
 
 def record(con: sqlite3.Connection, path: Path, *, legacy: bool = False,
-           category: str | None = None) -> dict:
+           category: str | None = None, old_file_hash: str | None = None,
+           old_canon_display: bool | None = None) -> dict:
     raw = path.read_bytes()
     spath = source_path(path)
     content_hash = digest(raw)
@@ -264,18 +522,35 @@ def record(con: sqlite3.Connection, path: Path, *, legacy: bool = False,
         data = validate_metadata(data)
         prior = con.execute("SELECT * FROM documents WHERE document_id=?", (data["document_id"],)).fetchone()
         if prior:
-            if prior["source_hash"] != content_hash or prior["source_path"] != spath:
-                raise HarnessError("document_id already identifies different content; create a revision")
+            if prior["source_path"] != spath:
+                raise HarnessError("document_id already identifies a different source path")
+            row_matches_file(con, prior, raw)
+            if prior["source_hash"] != content_hash:
+                con.execute("UPDATE documents SET source_hash=? WHERE document_id=?", (content_hash, prior["document_id"]))
+                log_file_mirrors(con, prior["lineage_id"], "Existing edition file synchronized by import", [{
+                    "source_path": spath, "document_id": prior["document_id"],
+                    "old_canon_display": old_canon_display, "new_canon_display": bool(prior["canon"]),
+                    "old_source_hash": prior["source_hash"], "new_source_hash": content_hash,
+                    "old_file_hash": old_file_hash or content_hash,
+                    "new_file_hash": content_hash,
+                }])
             return {"document_id": prior["document_id"], "lineage_id": prior["lineage_id"], "status": "unchanged"}
+        if data["canon"] is not False:
+            raise HarnessError("new edition must have canon: false; use finalize for selection")
+        if has_content(body) and data["created_at"] is None:
+            raise HarnessError("first content edition needs created_at")
         previous_rows = con.execute(
-            "SELECT version, created_at FROM documents WHERE lineage_id=? AND version IS NOT NULL",
+            "SELECT version, created_at, body FROM documents WHERE lineage_id=? AND version IS NOT NULL",
             (data["lineage_id"],),
         ).fetchall()
         if previous_rows:
             previous = max(previous_rows, key=lambda row: tuple(map(int, row["version"].split("."))))
             if tuple(map(int, data["version"].split("."))) <= tuple(map(int, previous["version"].split("."))):
                 raise HarnessError("new revision version must increase")
-            if previous["created_at"] != data["created_at"]:
+            content_rows = [row for row in previous_rows if has_content(row["body"])]
+            if content_rows and any(row["created_at"] is None for row in content_rows):
+                raise HarnessError("existing content edition lacks created_at; backfill first")
+            if content_rows and any(row["created_at"] != data["created_at"] for row in content_rows):
                 raise HarnessError("created_at must stay fixed in a lineage")
         elif data["version"] != "0.0.1":
             raise HarnessError("new managed lineage must start at version 0.0.1")
@@ -431,8 +706,12 @@ def cli(argv=None) -> int:
     fin.add_argument("--document-id")
     fin.add_argument("--expected-current", help="ID or literal 'none'; required for adopt")
     fin.add_argument("--message", default="Manual document selection")
+    sync = sub.add_parser("sync-metadata")
+    sync.add_argument("--report", type=Path, required=True,
+                      help="new JSON record of date repairs, old hashes, and skipped lineages")
     sub.add_parser("health")
-    sub.add_parser("verify")
+    verify = sub.add_parser("verify")
+    verify.add_argument("--files", action="store_true", help="also check present managed source files")
     backup = sub.add_parser("backup")
     backup.add_argument("destination", type=Path)
     restore = sub.add_parser("restore")
@@ -465,7 +744,7 @@ def cli(argv=None) -> int:
                 data = {"category_id": args.category, "lineage_id": "lin-"+str(uuid.uuid4()),
                         "document_id": "doc-"+str(uuid.uuid4()), "parent_lineage_id": args.parent_lineage,
                         "abstract": check_abstract(args.abstract), "version": "0.0.1", "created_at": stamp,
-                        "updated_at": stamp, "tags": normalize_tags(args.tag)}
+                        "updated_at": stamp, "tags": normalize_tags(args.tag), "canon": False}
                 raw = encode_markdown(data, "# "+args.title+"\n")
                 path.parent.mkdir(parents=True, exist_ok=True)
                 with path.open("xb") as handle:
@@ -484,26 +763,31 @@ def cli(argv=None) -> int:
                 spath = source_path(path)
                 original = path.read_bytes()
                 data, body = parse_markdown(original)
-                data = validate_metadata(data)
+                data = validate_metadata(data, old_canon=True)
                 prior = con.execute("SELECT * FROM documents WHERE document_id=?", (data["document_id"],)).fetchone()
                 if not prior or prior["source_path"] != spath or prior["lineage_id"] != data["lineage_id"] or prior["version"] != data["version"]:
                     raise HarnessError("revise requires an imported document_id, lineage, version, and source path")
+                row_matches_file(con, prior, original, allow_body_change=True, allow_repaired_date=True)
+                if data["created_at"] is None and prior["created_at"] is not None:
+                    data["created_at"] = prior["created_at"]
+                if prior["created_at"] is None and has_content(body):
+                    old_bodies = con.execute("SELECT body FROM documents WHERE lineage_id=? AND version IS NOT NULL", (data["lineage_id"],)).fetchall()
+                    if any(has_content(row["body"]) for row in old_bodies):
+                        raise HarnessError("existing content edition lacks created_at; backfill first")
+                    data["created_at"] = now()
                 data["document_id"] = "doc-"+str(uuid.uuid4())
                 data["version"] = bump(data["version"], args.bump)
                 data["updated_at"] = now()
+                data["canon"] = False
                 updated = encode_markdown(data, body)
-                with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as handle:
-                    handle.write(updated); temp = Path(handle.name)
-                os.replace(temp, path)
+                write_bytes(path, updated)
                 try:
                     con.execute("BEGIN IMMEDIATE")
                     result = record(con, path)
                     con.commit()
                 except Exception:
                     con.rollback()
-                    with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as handle:
-                        handle.write(original); restore = Path(handle.name)
-                    os.replace(restore, path)
+                    write_bytes(path, original)
                     raise
                 print_json(finalized_result(con, result)); return 0
             if args.command == "manage":
@@ -522,33 +806,42 @@ def cli(argv=None) -> int:
                 data = {"category_id": args.category, "lineage_id": lineage,
                         "document_id": "doc-"+str(uuid.uuid4()), "parent_lineage_id": parent,
                         "abstract": check_abstract(args.abstract), "version": "0.0.1",
-                        "created_at": legacy["created_at"] if legacy else None,
-                        "updated_at": stamp, "tags": normalize_tags(args.tag)}
+                        "created_at": stamp if has_content(original.decode("utf-8")) else None,
+                        "updated_at": stamp, "tags": normalize_tags(args.tag), "canon": False}
                 updated = encode_markdown(data, original.decode("utf-8"))
-                with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as handle:
-                    handle.write(updated); temp = Path(handle.name)
-                os.replace(temp, path)
+                write_bytes(path, updated)
                 try:
                     con.execute("BEGIN IMMEDIATE")
                     result = record(con, path)
                     con.commit()
                 except Exception:
                     con.rollback()
-                    with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as handle:
-                        handle.write(original); restore = Path(handle.name)
-                    os.replace(restore, path)
+                    write_bytes(path, original)
                     raise
                 print_json(finalized_result(con, result)); return 0
             if args.command == "import":
                 if args.category and not args.legacy:
                     raise HarnessError("--category applies only to legacy imports")
                 results = []
-                con.execute("BEGIN IMMEDIATE")
-                for path in args.paths:
-                    if path.suffix.lower() != ".md":
-                        raise HarnessError("only Markdown files can be imported")
-                    results.append(record(con, path.resolve(), legacy=args.legacy, category=args.category))
-                con.commit()
+                originals: dict[Path, bytes] = {}
+                try:
+                    con.execute("BEGIN IMMEDIATE")
+                    for path in args.paths:
+                        if path.suffix.lower() != ".md":
+                            raise HarnessError("only Markdown files can be imported")
+                        path = path.resolve()
+                        if not args.legacy:
+                            prepare_import(con, path, originals)
+                        original_raw = originals.get(path, path.read_bytes())
+                        old_display = parse_markdown(original_raw)[0].get("canon") if not args.legacy else None
+                        results.append(record(con, path, legacy=args.legacy, category=args.category,
+                                              old_file_hash=digest(original_raw),
+                                              old_canon_display=old_display))
+                    con.commit()
+                except Exception:
+                    con.rollback()
+                    restore_files(originals)
+                    raise
                 print_json([finalized_result(con, item) for item in results]); return 0
             if args.command in ("list", "search"):
                 where = [] if args.all or (args.command == "list" and args.history) else ["d.canon=1"]
@@ -605,22 +898,63 @@ def cli(argv=None) -> int:
                 if args.action == "withdraw" and args.document_id:
                     raise HarnessError("withdraw does not accept --document-id")
                 expected = None if args.expected_current == "none" else args.expected_current
-                con.execute("BEGIN IMMEDIATE")
-                result = finalize(con,args.lineage_id,args.document_id,args.action,args.message,expected)
-                con.commit()
+                originals: dict[Path, bytes] = {}
+                try:
+                    con.execute("BEGIN IMMEDIATE")
+                    check_lineage_files(con, args.lineage_id)
+                    result = finalize(con,args.lineage_id,args.document_id,args.action,args.message,expected)
+                    mirrors: list[dict] = []
+                    mirror_lineage(con, args.lineage_id, originals, mirrors=mirrors)
+                    log_file_mirrors(con, args.lineage_id, args.message, mirrors,
+                                     selection_changed=result["status"] == "changed")
+                    result["file_mirrors"] = mirrors
+                    con.commit()
+                except Exception:
+                    con.rollback()
+                    restore_files(originals)
+                    raise
                 actual = current(con,args.lineage_id)
                 if (actual["document_id"] if actual else None) != result["canon_document_id"]:
                     raise HarnessError("post-commit selection re-read failed")
                 print_json(result); return 0
+            if args.command == "sync-metadata":
+                report_path = args.report.resolve()
+                if report_path.exists():
+                    raise HarnessError("sync report already exists")
+                originals: dict[Path, bytes] = {}
+                try:
+                    con.execute("BEGIN IMMEDIATE")
+                    report = sync_metadata(con, originals)
+                    report["recorded_at"] = now()
+                    report["database"] = str(db)
+                    report_path.parent.mkdir(parents=True, exist_ok=True)
+                    with report_path.open("x", encoding="utf-8") as handle:
+                        json.dump(report, handle, ensure_ascii=False, indent=2)
+                        handle.write("\n")
+                    con.commit()
+                except Exception:
+                    con.rollback()
+                    restore_files(originals)
+                    report_path.unlink(missing_ok=True)
+                    raise
+                print_json({"report": str(report_path), "repaired": len(report["repaired"]),
+                            "skipped": report["skipped"]}); return 0
             if args.command in ("health", "verify"):
                 integrity = con.execute("PRAGMA integrity_check").fetchone()[0]
                 duplicate = con.execute("SELECT lineage_id FROM documents WHERE canon=1 GROUP BY lineage_id HAVING count(*)>1").fetchall()
                 fts_count = con.execute("SELECT count(*) FROM documents_fts").fetchone()[0]
                 document_count = con.execute("SELECT count(*) FROM documents").fetchone()[0]
                 json_bad = con.execute("SELECT count(*) FROM documents WHERE json_valid(tags,8)=0").fetchone()[0]
+                fts_bad = con.execute("""SELECT count(*) FROM documents d LEFT JOIN documents_fts f
+                                         ON f.document_id=d.document_id
+                                         WHERE f.document_id IS NULL OR f.body<>d.body OR f.title<>d.title""").fetchone()[0]
                 result = {"integrity":integrity,"documents":document_count,"canon":con.execute("SELECT count(*) FROM documents WHERE canon=1").fetchone()[0],
                           "duplicate_canon_lineages":len(duplicate),"invalid_tags":json_bad,"fts_rows":fts_count,
-                          "ok":integrity=="ok" and not duplicate and not json_bad and fts_count==document_count}
+                          "fts_mismatches":fts_bad,
+                          "ok":integrity=="ok" and not duplicate and not json_bad and not fts_bad and fts_count==document_count}
+                if args.command == "verify" and args.files:
+                    result["files"] = file_diagnostics(con)
+                    result["ok"] = result["ok"] and not result["files"]["problems"]
                 print_json(result)
                 return 0 if result["ok"] else 1
             if args.command == "backup":

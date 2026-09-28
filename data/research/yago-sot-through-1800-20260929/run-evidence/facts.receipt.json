@@ -1,0 +1,32 @@
+{
+  "bytes": 5087821943,
+  "counts": {
+    "all_lines": 74497030,
+    "date_predicate_requires_semantic_review": 5209,
+    "dated_taxonomy_separate_from_history": 49952,
+    "excluded": 4170181,
+    "explicit_date_after_1899": 2783684,
+    "explicit_entity_boundary": 134251,
+    "explicit_event_date": 683682,
+    "header_or_blank": 34,
+    "mapped": 918825,
+    "meta_interval_nominal": 10724,
+    "meta_interval_nominal_crossing": 6083,
+    "meta_interval_starts_after_1899": 262578,
+    "meta_observation_after_1899": 1123885,
+    "no_statement_time": 69345700,
+    "observation_predicate_requires_semantic_review": 14573,
+    "only_post_cutoff_end_no_start": 62174,
+    "reversed_interval_held": 146,
+    "single_meta_bound_no_state_validity": 5413,
+    "state_predicate_requires_semantic_review": 8938,
+    "unknown": 69408024,
+    "unsupported_or_invalid_meta_time": 4
+  },
+  "expected_sha256": "17da906cefea15aa076ccfd5ce0bd2956b2e95ae06b225cca18059bbaf5eb1e4",
+  "file": "/home/work/novel-toy-tune/sources/original/yago/4.6/extracted/yago-4.6-facts/yago-facts.ttl",
+  "ledger_sha256": "2ade4a1444bfe7961ed8bb2d586692a16f3746a523fa80b3b1ffbe08a0bc3235",
+  "scanned_at_utc": "2026-09-28T23:28:20.721437+00:00",
+  "sha256": "17da906cefea15aa076ccfd5ce0bd2956b2e95ae06b225cca18059bbaf5eb1e4",
+  "stage_code_sha256": "ad4f94668b380e4344c391deaaecc8b2ec104291100b0b4544879063a8534932"
+}

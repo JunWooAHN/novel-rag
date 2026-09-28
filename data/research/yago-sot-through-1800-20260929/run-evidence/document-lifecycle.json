@@ -1,0 +1,47 @@
+{
+  "status": "running_handoff_facts_completed_beyond_pending",
+  "report": {
+    "path": "docs/research/20260929-yago-history-sot-through-1899.md",
+    "document_id": "doc-d21a5daa-765c-4e03-885d-932a92c7c615",
+    "lineage_id": "lin-29a57b9b-1f6c-4747-b478-6e7fb790629e",
+    "version": "0.0.4",
+    "sha256": "391450cb6ad652ad57ddf2ad5421b886cf25097aae49d8a1b47a2b3918bfbe08",
+    "previous_document_id": "doc-e19ebb62-5d32-492a-bbf5-aafc4c2c44b1",
+    "canon": false,
+    "finalization": "retain"
+  },
+  "checkpoint": {
+    "path": "docs/harness/current-checkpoint.md",
+    "document_id": "doc-b61838df-c43b-4522-a443-8dd62817daf1",
+    "lineage_id": "legacy-40925fad-cbff-589b-9799-6cc13abe142b",
+    "version": "0.0.35",
+    "sha256": "7468c5cab0ca69423215753c8656545347fec596b523d5b92544bc622f9c69d6",
+    "canon": true,
+    "previous_document_id": "doc-12821256-5511-46dd-b796-49f9bbbd192b",
+    "finalization": "adopt"
+  },
+  "verify_files": {
+    "integrity": "ok",
+    "documents": 290,
+    "canon": 12,
+    "files_checked": 40,
+    "problems": 0
+  },
+  "facts_stage": {
+    "receipt_path": "data/research/yago-sot-through-1800-20260929/run-evidence/facts.receipt.json",
+    "receipt_sha256": "a1a20000092e3a49e859d813475d44547e0683d3eaaa84a2894e2c66453d9f81",
+    "all_lines": 74497030,
+    "mapped": 918825,
+    "excluded": 4170181,
+    "unknown": 69408024,
+    "failed": 0,
+    "pg_facts_claim_rows": 918825
+  },
+  "beyond_last_observation": {
+    "observed_around": "2026-09-29 08:37 KST",
+    "lines": 33000000,
+    "bytes": 2157461609,
+    "receipt_complete": false
+  },
+  "note": "Interim running handoff only; context/auxiliary, full output review, immutable release and restore remain pending. Wikidata download is a separate running job."
+}

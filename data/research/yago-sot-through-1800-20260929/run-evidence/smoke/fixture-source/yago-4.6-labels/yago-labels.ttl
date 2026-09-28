@@ -1,0 +1,4 @@
+@prefix yago: <http://yago-knowledge.org/resource/> .
+yago:State	rdfs:label	"State"@en	.
+yago:Work	rdfs:label	"Work"@en	.
+yago:Unrelated	rdfs:label	"Unrelated"@en	.

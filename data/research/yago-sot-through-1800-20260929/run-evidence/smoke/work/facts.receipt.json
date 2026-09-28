@@ -1,0 +1,23 @@
+{
+  "bytes": 537,
+  "counts": {
+    "all_lines": 13,
+    "dated_knowledge_or_publication": 1,
+    "dated_taxonomy_separate_from_history": 1,
+    "excluded": 3,
+    "explicit_date_after_1899": 2,
+    "explicit_entity_boundary": 1,
+    "explicit_event_date": 3,
+    "header_or_blank": 1,
+    "mapped": 7,
+    "meta_interval_nominal_crossing": 1,
+    "no_statement_time": 3,
+    "unknown": 3
+  },
+  "expected_sha256": "ce9411b123d4b4b012552e14cfdc8fa399b3e970e00e4f75adc2c605402656d3",
+  "file": "/home/work/novel-toy-tune/reality-yago46-through-1899-smoke-20260929/fixture-source/yago-4.6-facts/yago-facts.ttl",
+  "ledger_sha256": "d822ae82b732974c25c64c44a8ffc24d0b57b6c4e750ae9b78460bfd43e2bb64",
+  "scanned_at_utc": "2026-09-28T23:00:54.748349+00:00",
+  "sha256": "ce9411b123d4b4b012552e14cfdc8fa399b3e970e00e4f75adc2c605402656d3",
+  "stage_code_sha256": "ff89ce4a818d20d0c16f9ea4b7b92d4e9162c48f176cea272adb79560494193a"
+}

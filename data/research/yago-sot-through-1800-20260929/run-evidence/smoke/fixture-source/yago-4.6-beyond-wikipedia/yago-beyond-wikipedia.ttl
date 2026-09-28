@@ -1,0 +1,4 @@
+@prefix yago: <http://yago-knowledge.org/resource/> .
+yago:A	schema:birthPlace	yago:P	.
+yago:A	schema:deathPlace	yago:Q	.
+yago:War	rdfs:label	"War"@en	.

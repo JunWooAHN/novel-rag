@@ -5,11 +5,12 @@ document_id: doc-bbdb12ee-ddc7-4778-899b-643cb4c11118
 parent_lineage_id: null
 abstract: 소설 코퍼스의 회차 구간 적재, 내부 순서 조회, 원문 무손실 검증 명령을 사용할 때 읽는다.
 version: 0.0.1
-created_at: null
+created_at: '2026-09-25T04:05:13.000000Z'
 updated_at: '2026-09-25T04:05:13Z'
 tags:
 - 원문코퍼스
 - 회차경계
+canon: false
 ---
 # 원문 코퍼스 SQLite
 

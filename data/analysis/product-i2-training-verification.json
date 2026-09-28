@@ -1,0 +1,156 @@
+{
+  "card": "I2-CPU-H200-20260927",
+  "chapter_1": {
+    "decision": "accepted",
+    "end_cp": 6830,
+    "prior_v1_review": "hold_preserved",
+    "review_id": "sol-poland-ch01-i2-r2",
+    "review_sha256": "76e9790a94e05945d4a0bbb78ba4d344be4389da537784db31bd3636b4d10d29",
+    "segment_id": 4599,
+    "segmentation_id": 16,
+    "source_revision_id": 7,
+    "span_sha256": "59a2f46f68bdcf7cdfc0f0997df62bbb3f62699a500ac5add30b70f221be6d8c",
+    "start_cp": 0,
+    "submission_id": "poland-ch01-i2-luna-v2",
+    "submission_sha256": "70f756aefc1bff5d88cf0958785de10b7ec54316e98290c8e4f831f6304ec64a",
+    "task_id": "analysis:098856379b3c23f4f3cd49452e817d65f4eea46fb75cf8c14ea276c247365711"
+  },
+  "checked_at_utc": "2026-09-27T04:40:05.437214+00:00",
+  "checks": {
+    "luna_cpu_audit": "passed; /private/tmp/novel-i2-cpu-verification.json sha256 4d06390ae3793730700daadbcf2196cc71d66b2003d91ac38128995d2778b431",
+    "operating_demo_runs": 0,
+    "operating_release_idempotent": true,
+    "product_tests": "19 passed; real sidecar evidence gate and selected train ID checks",
+    "sol_actual_result_review": "accepted actual a2 2-step adapter save/fresh-process reload; scope limited to small trial, not style quality or adoption",
+    "sol_code_review": "fixed training source 5de784db… and separate reload source 91e8f52a… independently accepted; product real evidence gate f918191d… independently accepted",
+    "sol_operating_db_review": "accepted a1 failed and a2 completed candidate/writing_eligible=0, quick_check ok/FK0",
+    "source_and_legacy_tables_after_import": "11/11 full row equality to pre-candidate backup",
+    "toy_tune_tests": "42 passed; selection, actual processor shape and reload CLI branch regressions"
+  },
+  "limits": [
+    "Actual H200 tokenization and 2-step LoRA trial prove this small pipeline ran, not that prose style improved.",
+    "The model artifact is a candidate with writing_eligible=false; no adoption, story canon, or external publication occurred.",
+    "The accepted Poland chapter card is analysis evidence, not story canon. SOTA planning samples were excluded from style training.",
+    "Sidecar checks establish internal request/report/archive consistency; actual H200 execution is supported by separate Sol review of run metadata and copied artifacts."
+  ],
+  "operating_db": {
+    "backup_path": "data/analysis/novel-corpus-before-i2-release-20260927.sqlite3",
+    "backup_sha256": "da0d04cd47b9f991f5ccf09e9786d5b4e13ada7b9713965dc9ab78fc0cdca716",
+    "changed_source_or_legacy_tables": 0,
+    "dataset_items": 272,
+    "dataset_releases": [
+      {
+        "counts": {
+          "development_holdout": 18,
+          "development_validation": 16,
+          "train": 56
+        },
+        "fingerprint": "a1e745929adcaf879446ad42d15c8998b97d92da1dc118d65f68ae4cbc7e9399",
+        "purpose": "style_training_candidate",
+        "release_id": "ds-gemma-style-a1e745929adcaf879446ad42",
+        "role": "gemma_style"
+      },
+      {
+        "counts": {
+          "development_holdout": 30,
+          "development_validation": 35,
+          "train": 117
+        },
+        "fingerprint": "d55cd8d4e7820b9bf479e997ac2bd0235540a50ee17fdd1d5409340f00a43c33",
+        "purpose": "planning_research_only",
+        "release_id": "ds-sota-planning-d55cd8d4e7820b9bf479e997",
+        "role": "sota_planning"
+      }
+    ],
+    "foreign_key_errors": 0,
+    "legacy_accepted": 272,
+    "model_artifact_id": "model-f2638e4194ec1c3057276497",
+    "model_artifact_sha256": "99988871b5e62b279ce40fc5b85a7ba579ae4673551cbdebcd603029ab5b8e77",
+    "model_artifact_writing_eligible": false,
+    "model_artifacts": 1,
+    "path": "data/analysis/novel-corpus.sqlite3",
+    "pre_candidate_backup_path": "data/analysis/novel-corpus-before-i2-model-candidate-20260927.sqlite3",
+    "pre_candidate_backup_sha256": "30dfcc5b6b9ca808486aa1548123a88ba36143c58b916f4837847e68d48c5ef5",
+    "pre_real_run_backup_path": "data/analysis/novel-corpus-before-i2-real-run-20260927.sqlite3",
+    "pre_real_run_backup_sha256": "4d3e6f346ddded53e2825db33f6ba4386a912a6fef02994b817582c616affd03",
+    "quick_check": "ok",
+    "real_attempt_id": "h200-a2",
+    "real_attempt_state": "a1 failed before optimizer; a2 completed; idempotent reimport created=false",
+    "real_result_sha256": "01e829dd88bdf7894eb862ae3b63c8f51b6e1ab7fa67d16fbf73bf5b5be02879",
+    "real_run_id": "i2-gemma4-e2b-h200-20260927",
+    "sha256": "a02e0aedf1053f3033c8fc733be16ab3b9c26bb2ae0c9d5fb0a77af82fb0ae17",
+    "source_and_legacy_tables_compared": 11,
+    "source_counts": {
+      "segmentations": 17,
+      "segments": 5233,
+      "source_revisions": 7,
+      "works": 7
+    },
+    "training_attempts": 2,
+    "training_runs": 1
+  },
+  "remote": {
+    "actual_tokenizer": "90/90 actual Gemma4Processor text chat prefixes exact and answer labels nonempty; train56/development_validation16/development_holdout18; 49 exceed 2048 tokens; max 7162; tokenizer audit only; optimizer execution is recorded under attempt_a2",
+    "adapter_reload": "passed separate SSH/Python process after train-lora exited; 3 generated token IDs from synthetic prompt, no generated prose logged",
+    "attempt_a1": "failed before optimizer: E2B direct text q/v Linear not selected by first wrapper-only source; DB failed/no artifact",
+    "attempt_a1_failed_result_sha256": "efee84d5fda07555280a35f3266776c95d471ac468442989edd87c48276151ab",
+    "attempt_a2": "completed_training_and_fresh_process_reload; result accepted by independent Sol and imported as non-writing candidate",
+    "attempt_a2_adapter_sha256": "99988871b5e62b279ce40fc5b85a7ba579ae4673551cbdebcd603029ab5b8e77",
+    "attempt_a2_changed_lora_elements": 669696,
+    "attempt_a2_finite_losses": true,
+    "attempt_a2_generated_token_count": 3,
+    "attempt_a2_local_result_sha256": "01e829dd88bdf7894eb862ae3b63c8f51b6e1ab7fa67d16fbf73bf5b5be02879",
+    "attempt_a2_optimizer_steps": 2,
+    "attempt_a2_reload_report_sha256": "6be9ff4002325c167a43cab47e979e6ad022e9bb12efd433879a805a74cd7436",
+    "attempt_a2_reload_source_id": "src-7834303e2e803df1fd4e5a85",
+    "attempt_a2_reload_source_sha256": "91e8f52affffa86c4d449a4469c6efa0ee82138049c4291bf924a259ec48489a",
+    "attempt_a2_remote_result_sha256": "75ee0f19982f9c7fe130578a1fe121a973d36244641fc5d732329c4b59f7d168",
+    "attempt_a2_request_sha256": "b75a4480342071a34fc047c18b011d296ac5f2855191ccce9978edbf0365b04a",
+    "attempt_a2_train_report_sha256": "089f53f28e3f1969cc04ce783ffd1120c6ab9c7c4937628ef83bc6ebe1bf00a5",
+    "attempt_a2_training_source_id": "src-662eb0deb33a7cc3317f05f9",
+    "attempt_a2_training_source_sha256": "5de784db91e51c3f62b3055f27ecee815a9a065971a2c46aec7630ff4d3b96b8",
+    "cuda_matmul": "root observed successful",
+    "engine_source_id": "src-7834303e2e803df1fd4e5a85",
+    "engine_source_path": "data/analysis/private/i2/hf-engine-source/src-7834303e2e803df1fd4e5a85.tar",
+    "engine_source_review": "training source 5de784db… and reload-only CLI correction 91e8f52a… independently accepted",
+    "engine_source_sha256": "91e8f52affffa86c4d449a4469c6efa0ee82138049c4291bf924a259ec48489a",
+    "engine_source_transfer": "user explicitly approved code/config/request transfer to own AI Nexus H200; approved fixed archives and request hashes matched remotely; prior auto-review rejection was before that approval",
+    "h200_session": "RUNNING; root UI observation",
+    "lora_training": "passed selected train 2/56 only, 2 optimizer steps, 2 finite losses, 669696 changed LoRA parameter elements; no development split optimizer use",
+    "model_repository": "google/gemma-4-E2B-it",
+    "packet_transfer": "user explicitly approved fixed 90-sample packet transfer to own AI Nexus H200 session; scp succeeded; remote sha256 matches 0933b27524205b86bb6898a7537f2cd0bf6125f644fe65c04c38d4f0aa2aaf49",
+    "pinned_revision": "3e22461f65e89153144f8adb70e3b8c2cc9845a7",
+    "prepared_manifest_persistent_path": "data/analysis/private/i2/prepared-style-dataset/manifest.json",
+    "real_model_registered": true,
+    "request_path": "data/analysis/private/i2/real-run-request-a2.json",
+    "request_sha256": "b75a4480342071a34fc047c18b011d296ac5f2855191ccce9978edbf0365b04a",
+    "result_local_path": "data/analysis/private/i2/remote-results/h200-a2",
+    "selected_train_full_token_counts": [
+      773,
+      440
+    ],
+    "selected_train_sample_ids": [
+      "gogjong-001-005",
+      "gogjong-009-001"
+    ],
+    "train_samples_within_2048": 22,
+    "venv_install": "completed; system Torch 2.10.0a0+nv25.11 retained; Transformers 5.17.0, PEFT 0.18.0, huggingface-hub 1.5.0, tokenizers 0.23.1, safetensors 0.8.0",
+    "writing_eligible": false
+  },
+  "style_packet": {
+    "actual_tokenizer_prefix_or_mask_failures": 0,
+    "actual_tokenizer_samples_checked": 90,
+    "loss_mask_validation": "pending_real_tokenizer_in_immutable_cpu_manifest; runtime_90_of_90_passed_separately",
+    "max_full_tokens": 7162,
+    "over_2048_tokens": 49,
+    "path": "data/analysis/private/i2/operating-gemma-style-packet.json",
+    "prepared_dataset_id": "ds-fcdce4cdb8ff8cb6a15190b7",
+    "prepared_manifest_path": "/private/tmp/novel-i2-operating-cpu-artifacts/datasets/ds-fcdce4cdb8ff8cb6a15190b7/manifest.json",
+    "prepared_manifest_sha256": "994b223add315d5f6be6ac0baa434874f6fe810d1b248375204c7f318c4dedf8",
+    "remote_sha256_verified": true,
+    "samples": 90,
+    "sha256": "0933b27524205b86bb6898a7537f2cd0bf6125f644fe65c04c38d4f0aa2aaf49",
+    "token_validation": "pending_real_tokenizer_in_immutable_cpu_manifest; runtime_90_of_90_passed_separately",
+    "verify_dataset": true
+  }
+}

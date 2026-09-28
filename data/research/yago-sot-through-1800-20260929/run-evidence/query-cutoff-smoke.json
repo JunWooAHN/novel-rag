@@ -1,0 +1,55 @@
+{
+  "build_code_sha256": "ad4f94668b380e4344c391deaaecc8b2ec104291100b0b4544879063a8534932",
+  "database": "reality_yago46_through_1899_smoke_20260929",
+  "fixture": "synthetic_only",
+  "queries": {
+    "1899": {
+      "claims": [
+        {
+          "lane": "H_state",
+          "line": 7,
+          "raw": "yago:State\tschema:memberOf\tyago:Empire\t.",
+          "reason": "meta_interval_nominal_crossing",
+          "source_file": "facts",
+          "time": {
+            "calendar": "unknown",
+            "end_year": 1910,
+            "endpoint_inclusivity": "source_unspecified",
+            "kind": "interval",
+            "meta": {
+              "schema:endDate": [
+                {
+                  "meta_raw": "<<\tyago:State\tschema:memberOf\tyago:Empire\t>>\tschema:endDate\t\"1910\"^^xsd:gYear\t.",
+                  "raw": "\"1910\"^^xsd:gYear",
+                  "status": "nominal_calendar_unknown",
+                  "year": 1910
+                }
+              ],
+              "schema:startDate": [
+                {
+                  "meta_raw": "<<\tyago:State\tschema:memberOf\tyago:Empire\t>>\tschema:startDate\t\"1890\"^^xsd:gYear\t.",
+                  "raw": "\"1890\"^^xsd:gYear",
+                  "status": "nominal_calendar_unknown",
+                  "year": 1890
+                }
+              ]
+            },
+            "scope_end_year": 1899,
+            "start_year": 1890
+          }
+        }
+      ],
+      "release_id": "reality:yago46:world:through1899:5a115b4620d0d801",
+      "subject": "yago:State",
+      "year": 1899
+    },
+    "1900": {
+      "claims": [],
+      "release_id": "reality:yago46:world:through1899:5a115b4620d0d801",
+      "subject": "yago:State",
+      "year": 1900
+    }
+  },
+  "year_1899_h_state_matches": 1,
+  "year_1900_claims": 0
+}

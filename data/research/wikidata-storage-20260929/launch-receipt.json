@@ -1,0 +1,37 @@
+{
+  "at_utc": "2026-09-28T22:33:31.266903+00:00",
+  "pid": 38511,
+  "ps": "38511   38510 S          01:19 Tue Sep 29 07:32:11 2026 python3 fetch_original.py",
+  "part_bytes": 360710144,
+  "manifest": {
+    "destination": "/home/work/novel-toy-tune/sources/original/wikidata/20260922/wikidata-20260922-all.json.bz2",
+    "downloaded_bytes": 293601280,
+    "format": "Wikidata full current-entity JSON, bzip2 compressed; not truthy RDF or revision history",
+    "license": {
+      "structured_data": "CC0 1.0",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+    },
+    "official_checksum": {
+      "etag": "\"6ab4c046-dd\"",
+      "last_modified": "Thu, 24 Sep 2026 06:16:38 GMT",
+      "sha256": "44382742fb74de5328a9848b94f0a11e0ffc10b970fb987475fc0d3265dc5dc7",
+      "url": "https://dumps.wikimedia.org/wikidatawiki/entities/20260921/wikidata-20260922-sha1sums.txt"
+    },
+    "original_designation": "ORIGINAL_UPSTREAM.txt",
+    "relationship_to_yago_4_6": "Separate 2026-09-22 Wikidata input snapshot for future enrichment; individual YAGO 4.6 source statement revisions have not been matched.",
+    "reserve_bytes": 100000000000,
+    "source": {
+      "directory_date": "2026-09-21",
+      "etag": "\"6ab4b319-18088aa0e8\"",
+      "filename": "wikidata-20260922-all.json.bz2",
+      "last_modified": "Thu, 24 Sep 2026 05:20:25 GMT",
+      "sha1": "c5bfd59f16c6cdf906ead1190d99729108e961be",
+      "size_bytes": 103222517992,
+      "snapshot_date": "2026-09-22",
+      "url": "https://dumps.wikimedia.org/wikidatawiki/entities/20260921/wikidata-20260922-all.json.bz2"
+    },
+    "status": "downloading",
+    "updated_at_utc": "2026-09-28T22:33:16.043708+00:00"
+  },
+  "log_tail": "{\"event\": \"progress\", \"at_utc\": \"2026-09-28T22:33:16.043564+00:00\", \"bytes\": 293601280, \"total\": 103222517992}\n"
+}

@@ -31,6 +31,8 @@ src/toy_tune/adapters/outbound/environment.py
 src/toy_tune/adapters/outbound/files/__init__.py
 src/toy_tune/adapters/outbound/files/sources.py
 src/toy_tune/adapters/outbound/files/storage.py
+src/toy_tune/adapters/outbound/files/atomic.py
+src/toy_tune/adapters/outbound/hf_peft.py
 src/toy_tune/application/__init__.py
 src/toy_tune/application/ports/__init__.py
 src/toy_tune/application/ports/engines.py
@@ -39,9 +41,12 @@ src/toy_tune/application/ports/sources.py
 src/toy_tune/application/ports/stores.py
 src/toy_tune/application/services/__init__.py
 src/toy_tune/application/services/dataset_builder.py
+src/toy_tune/application/services/frozen_packet.py
+src/toy_tune/application/services/chat_labels.py
 src/toy_tune/application/use_cases/__init__.py
 src/toy_tune/application/use_cases/preflight.py
 src/toy_tune/application/use_cases/prepare_dataset.py
+src/toy_tune/application/use_cases/train_lora.py
 src/toy_tune/bootstrap.py
 src/toy_tune/configuration.py
 src/toy_tune/domain/__init__.py
@@ -61,3 +66,6 @@ tests/integration/test_cli.py
 tests/integration/test_publication.py
 tests/unit/__init__.py
 tests/unit/test_dataset.py
+tests/unit/test_frozen_packet.py
+tests/unit/test_chat_labels.py
+tests/unit/test_train_lora.py

@@ -1,0 +1,104 @@
+{
+  "status": "read_only_preflight_complete_postgresql_not_installed",
+  "observed_at_utc": "2026-09-27T06:44:48.984941Z",
+  "scope": "Existing H200 session and connected vfolder metadata only. No installation, apt update, file write, database initialization/start, GPU work, port opening, or backup was performed.",
+  "observation_sources": [
+    {
+      "kind": "remote_ssh_read_only",
+      "description": "Previously verified user session; OS, executable/package metadata, sudo listing, cgroup, /proc, and filesystem stat/mount information. Credentials and environment variables were not read or recorded."
+    },
+    {
+      "kind": "portal_dom_read_only_by_root",
+      "urls": ["https://www.ainexus.ktcloud.com/session", "https://www.ainexus.ktcloud.com/data"],
+      "observed_date": "2026-09-27",
+      "description": "Session RUNNING with 12 CPU / 240 GiB / 1 GPU; user storage allocation 2 TB, displayed use 192.91 GB (9.65%); novel-toy-tune vfolder READY and R/W. Storage figures are for the user allocation, not a measured per-folder quota."
+    }
+  ],
+  "remote_environment": {
+    "os": "Ubuntu 24.04 family, Linux 6.8.0-100-generic",
+    "architecture": "x86_64",
+    "user": "work",
+    "uid": 1100,
+    "gid": 1100,
+    "pid1_comm": "docker-init",
+    "systemctl_executable_present": true,
+    "systemd_service_manager_verified": false,
+    "cgroup_memory_max_bytes": 257698037760,
+    "visible_cpu_count": 12,
+    "cgroup_cpu_max": "max 100000",
+    "noninteractive_sudo_list_returncode": 0,
+    "noninteractive_sudo_rule": "(ALL : ALL) NOPASSWD: ALL",
+    "sudo_is_technical_capability_not_install_authorization": true
+  },
+  "postgresql_inventory": {
+    "pg_config": {
+      "path": "/usr/bin/pg_config",
+      "version": "PostgreSQL 16.11 (Ubuntu 16.11-0ubuntu0.24.04.1)",
+      "bindir_reported": "/usr/lib/postgresql/16/bin",
+      "sharedir_reported": "/usr/share/postgresql/16"
+    },
+    "libpq_dev_installed_version": "16.11-0ubuntu0.24.04.1",
+    "libpq5_installed_version": "16.11-0ubuntu0.24.04.1",
+    "postgres_executable_found": false,
+    "psql_executable_found": false,
+    "initdb_executable_found": false,
+    "pg_ctl_executable_found": false,
+    "postgresql_16_server_package_installed": false,
+    "postgresql_client_16_package_installed": false,
+    "pgvector_control_or_library_found": false,
+    "postgresql_16_pgvector_package_installed": false,
+    "apt_get_present": true,
+    "gcc_present": true,
+    "make_present": true,
+    "apt_cache_policy_query_returncode": 0,
+    "apt_cache_policy_query_output": "empty",
+    "package_download_availability_verified": false,
+    "postgres_process_name_count": 0,
+    "port_5432_proc_net_listen_count": 0,
+    "ss_executable_present": false
+  },
+  "storage": {
+    "connected_vfolder": {
+      "path": "/home/work/novel-toy-tune",
+      "exists": true,
+      "owner_uid": 1100,
+      "owner_gid": 1100,
+      "mode": "0755",
+      "os_access_write": true,
+      "os_access_execute": true,
+      "actual_write_test_performed": false,
+      "mount_type": "nfs",
+      "nfs_version": "3",
+      "mount_options_observed": ["rw", "hard", "proto=rdma", "local_lock=none", "timeo=600", "retrans=2"],
+      "statvfs_total_bytes": 2000000385024,
+      "statvfs_available_bytes": 1807090712576,
+      "quota_tool_present": false,
+      "server_export_sync_verified": false,
+      "pgdata_locking_fsync_persistence_verified": false
+    },
+    "tmp": {
+      "path": "/tmp",
+      "mount_type": "overlay",
+      "distinct_from_connected_vfolder": true,
+      "session_persistence_not_assumed": true
+    }
+  },
+  "technical_assessment": {
+    "conclusion": "A PostgreSQL 16 and pgvector setup is technically plausible: noninteractive sudo, apt-get, build tools, and a writable hard-mounted NFS vfolder are visible. PostgreSQL server/client and pgvector are not installed; database start, storage durability, restart, and restore have not been tested. This is not confirmation that a PostgreSQL database currently stores data on H200.",
+    "systemd_absence_not_a_blocker": "PID 1 is docker-init; systemctl presence does not establish usable systemd. PostgreSQL can be started with pg_ctl in a later authorized test.",
+    "remaining_unknowns": [
+      "Package availability after a later authorized repository check or package download",
+      "PostgreSQL server and matching server development headers / pgvector install",
+      "NFS server-side sync export and actual PGDATA locking/fsync behavior",
+      "Vfolder persistence after session restart or recreation and quota enforcement",
+      "Consistent database-plus-related-files backup to A40 and tested restore"
+    ]
+  },
+  "proposed_next_small_test_not_executed": "In a later installation test, install a matching PostgreSQL server/pgvector in the H200 environment, use a dedicated vfolder subdirectory and local-only socket for a small cluster, insert and read a pinned text/vector sample, restart only the PostgreSQL process and reread the same PGDATA, then verify a separate database dump and restore. Confirm vfolder persistence across session replacement during a later planned migration without ending the current session for this test. Do not open external port 5432 by default.",
+  "reference_links": [
+    "https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-NFS",
+    "https://www.postgresql.org/docs/current/server-start.html",
+    "https://github.com/pgvector/pgvector",
+    "https://docs.backend.ai/en/25.14/client/cli/storage.html"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "old_document_count": 237,
+  "new_document_count": 248,
+  "old_body_changed_ids": [],
+  "legacy_rows_identical": true,
+  "legacy_count": 142,
+  "canon_before": 11,
+  "canon_after": 11,
+  "managed_content_created_null": 0,
+  "plan": {
+    "document_id": "doc-eb6cf282-d534-4e32-bb67-41be57430de8",
+    "version": "0.2.0",
+    "created_at": "2026-09-27T06:23:18.000000Z",
+    "canon": 0,
+    "source_hash": "7a6561c9192b73dfa9ddc4c6459706c55a85cc7babaa81485cab42adb0f9724e"
+  },
+  "managed_file_count": 29,
+  "fts_rows": 248,
+  "integrity": "ok",
+  "checkpoint": {
+    "document_id": "doc-90fb53e5-7c25-48f5-8217-15ff93bb8534",
+    "version": "0.0.23",
+    "canon": 1
+  },
+  "artifact_sha256": {
+    "backup": "f08ad133da659822d6c0190a3663d6847f7386a9feebfe94d906e027eb918a1c",
+    "preflight": "a3f22537dd24ee9f88c740dfbcbe05fa61d84fb371069d45347d10bc9baa875f",
+    "sync_report": "a15a64c9d14e736b1ef8886ea7638c51b8c241dc3cda31cc69e0c7dda8c420cc",
+    "editions": "db80bc6470d02619e9695fed94df93bb55c4ee6f56d4d3c24bfd08a8ae1bdc7d"
+  },
+  "code_sha256": "1e3c7deee855ed57dda12672041dd2a74d2fef9937dbf7f34bbc6b0a1b7424a7",
+  "tests_sha256": "8da831994e0bedc1e03b652d1e9bc2b411dcd48af1eca605535429955f29a219"
+}

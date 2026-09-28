@@ -1,0 +1,14 @@
+start_utc=2026-09-28T03:41:45.058345+00:00
+end_utc=2026-09-28T03:41:45.982904+00:00
+elapsed_seconds=0.924
+request_url=https://yago-knowledge.org/sparql/qlever?query=PREFIX+schema%3A+%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+ys%3A+%3Chttp%3A%2F%2Fyago-knowledge.org%2Fschema%23%3E%0ASELECT+%3Fp+%3Fo+%3Flabel+WHERE+%7B%0A++VALUES+%3Fp+%7B+schema%3AbirthDate+schema%3AdeathDate+schema%3Anationality+schema%3AhasOccupation+schema%3AjobTitle+schema%3AbirthPlace+schema%3AdeathPlace+ys%3Aoccupation+%7D%0A++%3Chttp%3A%2F%2Fyago-knowledge.org%2Fresource%2FGeorge_Washington%3E+%3Fp+%3Fo+.%0A++OPTIONAL+%7B+%3Fo+rdfs%3Alabel+%3Flabel+FILTER%28LANG%28%3Flabel%29+%3D+%22en%22%29+%7D%0A%7D+LIMIT+10&format=json
+query=PREFIX schema: <http://schema.org/>
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+  PREFIX ys: <http://yago-knowledge.org/schema#>
+  SELECT ?p ?o ?label WHERE {
+    VALUES ?p { schema:birthDate schema:deathDate schema:nationality schema:hasOccupation schema:jobTitle schema:birthPlace schema:deathPlace ys:occupation }
+    <http://yago-knowledge.org/resource/George_Washington> ?p ?o .
+    OPTIONAL { ?o rdfs:label ?label FILTER(LANG(?label) = "en") }
+  } LIMIT 10
+http_status=200
+response_body={"head":{"vars":["p","o","label"]},"results":{"bindings":[{"p":{"type":"uri","value":"http://schema.org/nationality"},"o":{"type":"uri","value":"http://yago-knowledge.org/resource/Kingdom_of_Great_Britain"},"label":{"type":"literal","value":"Kingdom of Great Britain","xml:lang":"en"}},{"p":{"type":"uri","value":"http://schema.org/deathPlace"},"o":{"type":"uri","value":"http://yago-knowledge.org/resource/Mount_Vernon"},"label":{"type":"literal","value":"Mount Vernon","xml:lang":"en"}},{"p":{"type":"uri","value":"http://schema.org/nationality"},"o":{"type":"uri","value":"http://yago-knowledge.org/resource/United_States"},"label":{"type":"literal","value":"United States of America","xml:lang":"en"}},{"p":{"type":"uri","value":"http://schema.org/birthPlace"},"o":{"type":"uri","value":"http://yago-knowledge.org/resource/Westmoreland_County_Virginia"},"label":{"type":"literal","value":"Westmoreland County, Virginia","xml:lang":"en"}},{"p":{"type":"uri","value":"http://schema.org/birthDate"},"o":{"datatype":"http://www.w3.org/2001/XMLSchema#date","type":"literal","value":"1732-02-22"}},{"p":{"type":"uri","value":"http://schema.org/deathDate"},"o":{"datatype":"http://www.w3.org/2001/XMLSchema#date","type":"literal","value":"1799-12-14"}}]},"meta":{"query-time-ms":21,"result-size-total":6}}

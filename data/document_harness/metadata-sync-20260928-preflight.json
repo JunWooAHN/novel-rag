@@ -1,0 +1,137 @@
+{
+  "backup_sha256": "f08ad133da659822d6c0190a3663d6847f7386a9feebfe94d906e027eb918a1c",
+  "managed_files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "1f057f37b5e9b904e4fb5516da6668d806a317f69137f90418e9d7f18ebd0a64"
+    },
+    {
+      "path": "docs/PRD.md",
+      "sha256": "bf4ae6cc693fdf5d0a46bfd4a749672567f62a488c3709236549d9903acef89d"
+    },
+    {
+      "path": "docs/harness/README.md",
+      "sha256": "9166fabf7d766b0feeef5bcc08c0b0489d363ccde2c1cae3cabe702170f16b26"
+    },
+    {
+      "path": "docs/harness/current-checkpoint.md",
+      "sha256": "44b074d3b35b1c2bf742aa97ca54ffc3670d9df308645265e4814bd64c657fae"
+    },
+    {
+      "path": "docs/harness/document-lifecycle.md",
+      "sha256": "167e275ff5837ebcc49308d8b7d629dfef97294ec15c799535d9fd8764191916"
+    },
+    {
+      "path": "docs/harness/portability.md",
+      "sha256": "10f2da0af9b813b9f7e02bfa1d96046841e78585d60e54196e8c032fbfdef4ab"
+    },
+    {
+      "path": "docs/harness/session-decisions.md",
+      "sha256": "14dc8295a4124af6a07a29656c79f870b04ad3600de3178fc7f15c9e2517d314"
+    },
+    {
+      "path": "docs/harness/task-template.md",
+      "sha256": "331d6e4e619f34bbf2a0f8248f43ff732031af2f37112b58d0fdadf78169cf75"
+    },
+    {
+      "path": "docs/plans/20260918-current-system-execution-plan-v0-1.md",
+      "sha256": "9cf0c84a3013cbc658e87f99cf2ef1f5e7c9011795b1053cff2a73d2531656c0"
+    },
+    {
+      "path": "docs/plans/20260924-first-50-episode-analysis-method.md",
+      "sha256": "90bf13c6ee3fbc933de55662be989f6f96cd94b332b9e2678d0063f58a974aa2"
+    },
+    {
+      "path": "docs/plans/20260927-wikipedia-multilingual-remediation-plan.md",
+      "sha256": "2bfee5bc7cd1e8cda2ec90ad724903a1432eb8b1d65afce8af5497e23d4e2444"
+    },
+    {
+      "path": "docs/plans/README.md",
+      "sha256": "edce74c584ed217f8aa57e32da07c36f3ec6bfd80956e12e09ee1dfd84669e55"
+    },
+    {
+      "path": "docs/plans/wikipedia-history-sot-mapping.md",
+      "sha256": "65f41a70b21df9591cd4a910dc9a790e68e80d288284b74a924315dc7f3a4194"
+    },
+    {
+      "path": "docs/plans/wikipedia-history-sot-mapping/ingestion-contract.md",
+      "sha256": "2384aca6654e3b22d66557f24c56cfa884f66a49b6dcfffff2b413a59e46350e"
+    },
+    {
+      "path": "docs/plans/wikipedia-reality-sot-build-plan.md",
+      "sha256": "e020c3f0f6b4705ad295d5ee9b8d01034d2292bb3cbfa3a5d14c965385e4692f"
+    },
+    {
+      "path": "docs/prd/wikipedia-history-ontology.md",
+      "sha256": "0c8c7cd12df6380b615c25c4db45c674c7a35ecee0e882f7f21dbfe9db5172d2"
+    },
+    {
+      "path": "docs/research/20260927-gemma4-31b-wikipedia-ontology-trial.md",
+      "sha256": "b90fdc9804f0cad93d154a49656a46a61aa3b636847deb6a2196e54e5efe3fd0"
+    },
+    {
+      "path": "docs/research/20260927-wikipedia-multilingual-db-trial.md",
+      "sha256": "942137b0b25a17a2b0ab86d285ce3575e2ffe78675e1ba00b61e95d8a572bcc3"
+    },
+    {
+      "path": "docs/research/20260928-wikipedia-ontology-result-audit.md",
+      "sha256": "503483275b09f16617ae94de12c4e299e6fbdeb3c27ea29f0a1276845969fcaa"
+    },
+    {
+      "path": "docs/research/wikipedia-history-ontology-prd-audit.md",
+      "sha256": "345a250d8e965b03da76b17d8eeeaf57d1f2460f50ba35bc97445a942ef823b5"
+    },
+    {
+      "path": "docs/systems/README.md",
+      "sha256": "9611849916a83f1c0d2d87abd6f3e6730688c3d7f9bf8ef401aeabc1fd75afb5"
+    },
+    {
+      "path": "docs/systems/infrastructure.md",
+      "sha256": "67d5b3cee2bc7b289cb197e1de4b7beb2ed2265a42a36928ec0d0c7a4d6fa820"
+    },
+    {
+      "path": "src/novel_factory/README.md",
+      "sha256": "6ffac5c85cd0a4b6206d75c20423a1aea3c9d1c233158d1c6b4a2e841f7d78df"
+    },
+    {
+      "path": "tools/document_harness/README.md",
+      "sha256": "d69ba582467d0b37bf03b6dc03c562355ce39ce6b22c578ec3c1e6c1b16acbf7"
+    },
+    {
+      "path": "tools/novel_corpus/README.md",
+      "sha256": "c43bad73e1cc824c47e2742069fdb6d66f199a520dc9fe952f7abcec732fa11b"
+    },
+    {
+      "path": "tools/reverse_dataset/README.md",
+      "sha256": "3202bca59fa1a3e4a74610b4bcc19db18f7f530f3effc6629ab5aec132a41b74"
+    },
+    {
+      "path": "tools/wiki_ontology_trial/README.md",
+      "sha256": "4cb6efb236b31128c7663434e5144f35ecb0f0de180430a4f364d212f4482ff2"
+    },
+    {
+      "path": "tools/wiki_ontology_trial/multilingual/README.md",
+      "sha256": "0f5359500495a125aa33d25ef939dd477464f81403bced56e9e26b8e8a4335ab"
+    },
+    {
+      "path": "toy-tune/README.md",
+      "sha256": "03c463125cbe8501ed87e1106831c7cb26c1cd271fa84ffa1d8b87a7112eb5d2"
+    }
+  ],
+  "canon_document_ids": [
+    "doc-22c3ecee-559b-4872-bf30-9723f41a2f21",
+    "doc-2e03f3b4-d89d-444b-925a-504122800fc6",
+    "doc-4eac4a3b-0683-4bf0-871a-90c58112c76b",
+    "doc-760bfe18-7d3d-4f75-9f41-996dda1b2bca",
+    "doc-7b3c286f-5401-42c5-a759-a2a870eff262",
+    "doc-88ed53ce-6219-4b34-9817-ada59864d017",
+    "doc-a8e86d33-88df-48f9-9158-a5e5f5534bae",
+    "doc-b8919fd7-faa0-4030-a8f2-762d39fef820",
+    "doc-cab2e9cb-f4da-4db1-bdc4-8d5e1a8fed44",
+    "doc-d96362b7-91e0-4f88-9afa-10b6785eec26",
+    "doc-f9077fee-2511-4caa-b516-198e25a3d287"
+  ],
+  "document_count": 237,
+  "legacy_count": 142,
+  "inventory_sha256": "3d348f1f9ef43363a171362b020ca953ee6ea078d0977173a09a5b78f5f22233"
+}

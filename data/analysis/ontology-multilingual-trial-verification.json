@@ -1,0 +1,202 @@
+{
+  "approved_transfer": {
+    "bundle_path": "data/analysis/private/ontology-multilingual-trial/trial-source.tar.gz",
+    "bytes": 112766,
+    "content": "trial code, seven mapping CSVs, two public Wikipedia fixtures; no novel data or keys",
+    "sha256": "faf0bacdb336eaab8fea9d9185c47e34e879eeeae1473513371ca2c6b71c42ff"
+  },
+  "dump_restore": {
+    "all_five_table_row_digests_equal": true,
+    "digest_method": "md5 of newline-joined row_to_json ordered by table primary key; functional parity check, not cryptographic archive authentication",
+    "dump_bytes": 33108,
+    "dump_sha256": "e4985910c6bc6d40d6f225126703f1e4f5546df989d204186a905ae00b9eca20",
+    "format": "pg_dump -Fc",
+    "ordered_row_digests": {
+      "reality_candidates": "d6a3794c77e6d4a0ff35fc7ac7bb8092",
+      "reality_embeddings": "aaadc73a23794069bde96ec7230ebf4b",
+      "reality_extract_attempts": "77c85d833e9d1fab882214c7fc6d2227",
+      "reality_source_pages": "613d6790fec5fb85d18fdfe42e3ba4e0",
+      "reality_source_units": "d2bf57eb16e4ca4795fdf1c44e937149"
+    },
+    "original_and_restore_verify_problems": [],
+    "remote_dump_path": "/home/work/novel-toy-tune/ontology-multilingual-trial/ontology_trial.dump",
+    "restore_db": "ontology_trial_restore",
+    "restored_counts": {
+      "attempts": 2,
+      "candidates": 5,
+      "embeddings": 2,
+      "pages": 2,
+      "units": 2
+    }
+  },
+  "evidence_files": {
+    "actual_review": {
+      "bytes": 10169,
+      "path": "data/analysis/private/ontology-multilingual-trial/actual-review.json",
+      "sha256": "7425a76585764baa8adb148f516e64898c22ed06b3276bec896eac93acfb501d"
+    },
+    "execution_evidence": {
+      "bytes": 1369,
+      "contents": "raw non-body replay/status/verify output for original and restore DB plus matching ordered-row digests",
+      "path": "data/analysis/private/ontology-multilingual-trial/execution-evidence.txt",
+      "sha256": "586cfeef62a3b9f12be0d2db53bbab74125d90ee32cbcf262ea60f179d7ab3c9"
+    },
+    "search_results": {
+      "bytes": 3298,
+      "path": "data/analysis/private/ontology-multilingual-trial/search-results.jsonl",
+      "sha256": "66cbe4ac9f7fd2e673c21260e714e3df1d2599492a514ddf2ff7643a627de11e"
+    }
+  },
+  "execution": {
+    "candidate_counts": [
+      {
+        "count": 4,
+        "language": "en",
+        "layer": "H",
+        "status": "candidate_unreviewed"
+      },
+      {
+        "count": 1,
+        "language": "ko",
+        "layer": "H",
+        "status": "candidate_unreviewed"
+      }
+    ],
+    "candidate_rows": 5,
+    "completed_attempts": 2,
+    "embeddings": 2,
+    "machine_held": 0,
+    "machine_verify_problems": 0,
+    "raw_responses_stored": 2,
+    "reality_release": null,
+    "semantic_review": "independent source/span review completed with no linkage mismatch; three meaning issues recorded; all five DB candidates remain candidate_unreviewed",
+    "source_pages": 2,
+    "source_units": 2
+  },
+  "limitations": [
+    "All five H candidates remain candidate_unreviewed; exact quote/span and DB consistency do not establish historical meaning.",
+    "Selected death/succession units provide no independent K evidence, so K/B linkage was not exercised.",
+    "Korean lunar month and English 10 June 1452 date expression remain source-specific; the English calendar basis is not stated in the selected source, so no silent conversion or equivalence is asserted.",
+    "English Grand Prince Seyong spelling is in the pinned source; identity is unresolved and not automatically corrected.",
+    "English forced abdication qualifier and Korean death-place object need semantic review.",
+    "A new compute session with the same Storage, A40 backup, NFS server-side sync and crash durability were not tested.",
+    "Search attaches only the first candidate quote per unit, irrespective of query; source-unit retrieval and span traceability passed, but query-specific evidence selection did not."
+  ],
+  "postgres_restart": {
+    "action": "dedicated postmaster fast stop then start on same PGDATA; H200 compute session not restarted",
+    "post_restart_counts": {
+      "attempts": 2,
+      "candidates": 5,
+      "embeddings": 2,
+      "pages": 2,
+      "units": 2
+    },
+    "post_restart_pgvector": "0.6.0"
+  },
+  "recorded_at_utc": "2026-09-27T07:41:04.723835+00:00",
+  "replay": {
+    "embed_new_results": 0,
+    "extract_model_loaded": false,
+    "extract_requested": 0,
+    "final_counts": {
+      "attempts": 2,
+      "candidates": 5,
+      "embeddings": 2,
+      "pages": 2,
+      "units": 2
+    }
+  },
+  "runtime": {
+    "db": "ontology_trial",
+    "embedding_cpu_after_gpu": true,
+    "embedding_dimension": 384,
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "extractor_model": "google/gemma-4-31B-it",
+    "extractor_revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "host": "user-owned H200 session novel-toy-i2-20260927",
+    "listen_addresses": "",
+    "pgdata": "/home/work/novel-toy-tune/ontology-multilingual-trial/pgdata",
+    "pgvector": "0.6.0",
+    "port": 55432,
+    "postgresql": "16.15",
+    "socket": "/tmp/novel-ontology-pg-1100",
+    "storage_root": "/home/work/novel-toy-tune/ontology-multilingual-trial"
+  },
+  "scope": {
+    "all_sitelinks_processed": false,
+    "entire_pages_processed": false,
+    "selected_pages": 2,
+    "selected_units": 2,
+    "wiki_ids": [
+      "enwiki",
+      "kowiki"
+    ],
+    "world_catalog_processed": false
+  },
+  "search_interpretation": "Both queries returned ko then en. The succession query ranked the Korean death-only unit above the English unit with succession. Search operates at source-unit level, and each hit currently exposes the first candidate quote in that unit; the English succession hit therefore returns a death quote, not a query-matched succession evidence packet. Two units cannot establish retrieval quality.",
+  "searches": [
+    {
+      "query": "문종은 언제 세상을 떠났나?",
+      "ranked_hits": [
+        {
+          "candidate_count_on_unit": 1,
+          "distance": 0.2279326455552949,
+          "unit_id": "kowiki:11019:41388548:main:unit-01",
+          "wiki_id": "kowiki"
+        },
+        {
+          "candidate_count_on_unit": 4,
+          "distance": 0.26236486434936523,
+          "unit_id": "enwiki:2402602:1372422388:main:unit-01",
+          "wiki_id": "enwiki"
+        }
+      ]
+    },
+    {
+      "query": "문종 다음으로 왕위를 물려받은 사람은 누구인가?",
+      "ranked_hits": [
+        {
+          "candidate_count_on_unit": 1,
+          "distance": 0.21829505075782696,
+          "unit_id": "kowiki:11019:41388548:main:unit-01",
+          "wiki_id": "kowiki"
+        },
+        {
+          "candidate_count_on_unit": 4,
+          "distance": 0.2506633400917053,
+          "unit_id": "enwiki:2402602:1372422388:main:unit-01",
+          "wiki_id": "enwiki"
+        }
+      ]
+    }
+  ],
+  "source_units": [
+    {
+      "body_sha256": "b9c1c10b64e7ad371b41b378faae290246335b4c5730691292162dc09075f433",
+      "end_byte": 6589,
+      "language": "en",
+      "page_id": 2402602,
+      "revision_id": 1372422388,
+      "slot": "main",
+      "start_byte": 6154,
+      "text_sha256": "8cfd248047678e6100925b470d5c077818552a3e65cda5cf84266ae4a373e970",
+      "unit_id": "enwiki:2402602:1372422388:main:unit-01",
+      "wiki_id": "enwiki"
+    },
+    {
+      "body_sha256": "52a6a0e2184330048d1bcd5b8fd30a045519f8346dc0df1a2860b3952718c041",
+      "end_byte": 7189,
+      "language": "ko",
+      "page_id": 11019,
+      "revision_id": 41388548,
+      "slot": "main",
+      "start_byte": 7043,
+      "text_sha256": "334e3c5e2fd32eb933f11adb605c27ec84fae184ee7ff04bbd83196c96c5019a",
+      "unit_id": "kowiki:11019:41388548:main:unit-01",
+      "wiki_id": "kowiki"
+    }
+  ],
+  "status": "bounded_trial_complete; ontology_release_not_created",
+  "task": "WIKI-MULTILINGUAL-DB-FIRST-TRIAL-20260927"
+}

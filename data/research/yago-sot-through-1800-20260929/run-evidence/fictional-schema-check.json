@@ -1,0 +1,32 @@
+{
+  "scope": "read_only_small_yago46_schema_check_not_full_facts_or_taxonomy_scan",
+  "source": "/home/work/novel-toy-tune/sources/original/yago/4.6/extracted/yago-4.6-schema/yago-schema.ttl",
+  "source_bytes": 117074,
+  "source_lines": 2210,
+  "source_sha256": "b3f185f27c21e0e2b561dc92f7f9e3d54ccd6f4acac01e9ae97c2d42ef3b636f",
+  "manifest_expected_sha256": "b3f185f27c21e0e2b561dc92f7f9e3d54ccd6f4acac01e9ae97c2d42ef3b636f",
+  "matches": [
+    {"line": 254, "raw": "yago:FictionalEntity a sh:NodeShape ;"},
+    {"line": 255, "raw": "\trdfs:subClassOf schema:Thing ;"},
+    {"line": 256, "raw": "\trdfs:label \"Fictional entity\"@en ;"},
+    {"line": 257, "raw": "\tys:fromClass wd:Q21070598, wd:Q115537581, wd:Q64728693, wd:Q18706315, wd:Q14897293 ;"},
+    {"line": 1330, "raw": "\tsh:or ([ sh:class yago:FictionalEntity ][ sh:class schema:Person])."},
+    {"line": 1511, "raw": "\tsh:or ([ sh:class yago:FictionalEntity ][ sh:class schema:Person])."}
+  ],
+  "person_shape": {
+    "lines": [44, 49],
+    "birth_and_death_property_refs_present": true,
+    "person_disjoint_list_line": 46,
+    "fictional_entity_in_person_disjoint_list": false
+  },
+  "fictional_shape": {
+    "lines": [254, 259],
+    "birth_and_death_property_refs_present": false,
+    "person_disjoint_declaration_present": false
+  },
+  "birth_date_property_lines": [1548, 1558],
+  "death_date_property_lines": [1584, 1594],
+  "birth_death_property_comment": "The date of birth/death of a Person",
+  "schema_wide_targetClass_domain_range_or_fictional_person_disjoint_matches": 0,
+  "inference_limit": "Person shape references birth/death properties; FictionalEntity shape does not and is not declared disjoint with Person here. The schema alone does not establish which fact subjects are fictional, whether YAGO facts emit both types, or whether any pre-1900 selected claim should be held. No production filter changed."
+}
